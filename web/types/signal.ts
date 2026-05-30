@@ -4,12 +4,12 @@
 export type SafePosition = "눌림목" | "저점";
 export type MarketStatus = SafePosition | "과다상승" | "분석불가";
 
-/** CEO APPROVED 배포 데이터 */
+/** 게시 분석 데이터 (스크리너 + AI 분석 결과, 참고용) */
 export interface PublishData {
   status: "PUBLISHED";
   target_stock: string;
-  signal_probability: string; // "88%"
-  position_type: SafePosition; // 승인 게이트상 눌림목/저점만
+  signal_probability: string; // "45%"
+  position_type: MarketStatus; // 실제 국면(과다상승/분석불가 포함) 정직 표기
   headline: string;
   published_at: string;
 }

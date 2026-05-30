@@ -30,9 +30,10 @@ export default async function Home({
   return (
     <main className="container py-12">
       <header className="mb-8 space-y-1">
-        <h1 className="text-3xl font-bold tracking-tight">매매 시그널</h1>
+        <h1 className="text-3xl font-bold tracking-tight">시그널 분석</h1>
         <p className="text-sm text-muted-foreground">
-          CEO 승인(상승확률 ≥ 85% · 안전 타점)된 시그널만 게시됩니다.
+          스크리너(거래량·상승 이력 + 재료 + 3분봉 골든크로스) + AI 분석 결과 ·
+          <span className="text-warning"> 투자 참고용, 매수 추천 아님</span>
           <span className="tabular-nums"> · 총 {pagination.total}건</span>
         </p>
       </header>

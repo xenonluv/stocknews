@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { MarketStatusBadge } from "./MarketStatusBadge";
 import { ProbabilityGauge } from "./ProbabilityGauge";
 import { DisclaimerNote } from "./DisclaimerNote";
-import type { SafePosition, SignalPost } from "@/types/signal";
+import type { MarketStatus, SignalPost } from "@/types/signal";
 
 /** SignalPost(API/스키마) → SignalCard props 매핑 */
 export function toSignalCardProps(s: SignalPost): SignalCardProps {
@@ -27,8 +27,8 @@ export function toSignalCardProps(s: SignalPost): SignalCardProps {
 
 export interface SignalCardProps {
   targetStock: string;
-  signalProbability: string; // "88%"
-  positionType: SafePosition; // 눌림목 | 저점
+  signalProbability: string; // "45%"
+  positionType: MarketStatus; // 저점 | 눌림목 | 과다상승 | 분석불가
   headline: string;
   summary: string;
   disclaimer?: string;
@@ -53,7 +53,7 @@ export function SignalCard({
       <CardHeader className="gap-3 pb-4">
         <div className="flex items-center justify-between gap-2">
           <div className="flex items-center gap-2">
-            <Badge variant="up">발행</Badge>
+            <Badge variant="neutral">분석</Badge>
             <MarketStatusBadge status={positionType} />
           </div>
           <span className="flex items-center gap-1 text-xs text-muted-foreground">
