@@ -95,7 +95,7 @@ export function SignalCard({
         "relative overflow-hidden h-full transition-shadow",
         isSignal
           ? // 시그널: 세련된 블루 서리유리(backdrop-blur로 뒤 색블롭 굴절) + 블루 오라 + 상단 하이라이트
-            "border border-[rgba(125,176,255,0.38)] bg-gradient-to-br from-[rgba(59,130,246,0.15)] to-[rgba(255,255,255,0.04)] backdrop-blur-2xl backdrop-saturate-150 shadow-[inset_0_1px_0_rgba(255,255,255,0.4),0_0_0_1px_rgba(59,130,246,0.45),0_0_32px_2px_rgba(59,130,246,0.45),0_26px_58px_-22px_rgba(59,130,246,0.5)] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_0_0_1px_rgba(59,130,246,0.6),0_0_48px_6px_rgba(59,130,246,0.62),0_32px_70px_-18px_rgba(59,130,246,0.7)]"
+            "border border-[rgba(125,176,255,0.45)] bg-transparent bg-gradient-to-br from-[rgba(59,130,246,0.16)] to-[rgba(255,255,255,0.04)] backdrop-blur-2xl backdrop-saturate-150 shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_0_0_1px_rgba(59,130,246,0.7),0_0_18px_1px_rgba(59,130,246,0.6),0_0_48px_8px_rgba(59,130,246,0.42),0_24px_55px_-22px_rgba(59,130,246,0.45)] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.55),0_0_0_1px_rgba(59,130,246,0.85),0_0_26px_3px_rgba(59,130,246,0.78),0_0_64px_14px_rgba(59,130,246,0.5),0_34px_72px_-18px_rgba(59,130,246,0.7)]"
           : // 후보: 무광 뉴트럴 평면 (블루·발광 없음 → 시그널과 확실히 구분)
             "border border-white/10 bg-white/[0.045] backdrop-blur-md shadow-none"
       )}
