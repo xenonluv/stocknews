@@ -87,6 +87,9 @@ def compute_context(code, name=None):
             hint = "저점"
         elif last < ma20 and ma20 >= ma60 and last > ma60:
             hint = "눌림목"
+        elif last > ma20 and ma20 >= ma60 and disparity20 < 115:
+            # 정배열 + 종가 ma20 위 + 과열(115%) 직전 = 강세 추세 지속(진입 스위트스팟)
+            hint = "상승추세"
 
     return {
         "ticker_code": code,

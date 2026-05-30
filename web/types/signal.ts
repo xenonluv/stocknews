@@ -2,7 +2,7 @@
 // schemas/06_CEO.schema.json 의 publish_data 와 정합.
 
 export type SafePosition = "눌림목" | "저점";
-export type MarketStatus = SafePosition | "과다상승" | "분석불가";
+export type MarketStatus = SafePosition | "상승추세" | "과다상승" | "분석불가";
 
 /** 종목 관련 뉴스 (스크리너 재료필터 통과분, 네이버 종목뉴스 링크) */
 export interface NewsItem {

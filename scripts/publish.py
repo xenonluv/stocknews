@@ -23,7 +23,7 @@ SIGNALS = os.path.join(REPO, "web", "data", "signals.json")
 DISCLAIMER = "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다."
 
 # 결정론 스코어 가중치 (투명)
-PHASE_ADJ = {"저점": 12, "눌림목": 10, "박스": 0, "과다상승": -12, "분석불가": -5}
+PHASE_ADJ = {"저점": 12, "눌림목": 10, "상승추세": 8, "박스": 0, "과다상승": -12, "분석불가": -5}
 
 
 def run_screener(extra_args):
