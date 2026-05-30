@@ -13,6 +13,7 @@
 
 출력: stdout JSON 배열. 각 원소 = {ticker_name, ticker_code, news[], consensus{}, chart{}}
 """
+import re
 import sys
 import json
 import urllib.parse
@@ -23,6 +24,24 @@ from team3_price_context import compute_context  # 동일 scripts/ 디렉터리
 UA = {"User-Agent": "Mozilla/5.0", "Referer": "https://m.stock.naver.com/"}
 # 랭킹 정렬키 매핑 (네이버 m.stock api/stocks/{sort}/{market})
 SORT = {"상승률": "up", "거래대금": "transactionAmount", "거래량": "tradingVolume"}
+# ETF/ETN 브랜드 패턴 (개별 종목만 남기기 위해 제외)
+ETF_PAT = re.compile(
+    r"KODEX|TIGER|KBSTAR|ARIRANG|HANARO|SOL |ACE |KOSEF|TIMEFOLIO|RISE|PLUS |"
+    r"1Q |KIWOOM|히어로즈|마이다스|레버리지|인버스|ETN|국고채|채권액티브|TIMEF"
+)
+
+
+def is_individual_stock(name, code, end_type=None):
+    """ETF/ETN/우선주 제외 → 개별 보통주만 True."""
+    if not name or not code:
+        return False
+    if end_type and end_type != "stock":
+        return False              # ETF/ETN 등
+    if not code.endswith("0"):
+        return False              # 우선주(…5/…7) 제외, 보통주는 …0
+    if ETF_PAT.search(name):
+        return False
+    return True
 
 
 def _get(url):
@@ -49,11 +68,17 @@ def resolve_code(name):
 
 def top_ranking(sort_key, market, n):
     sort = SORT.get(sort_key, "transactionAmount")
-    url = f"https://m.stock.naver.com/api/stocks/{sort}/{market}?page=1&pageSize={n}"
+    # 필터로 일부 빠지므로 넉넉히 받아서 n개 채움
+    url = f"https://m.stock.naver.com/api/stocks/{sort}/{market}?page=1&pageSize={n * 3}"
     d = _get(url)
     out = []
-    for s in d.get("stocks", [])[:n]:
-        out.append({"name": s.get("stockName"), "code": s.get("itemCode") or s.get("reutersCode")})
+    for s in d.get("stocks", []):
+        name, code = s.get("stockName"), s.get("itemCode") or s.get("reutersCode")
+        if not is_individual_stock(name, code, s.get("stockEndType")):
+            continue
+        out.append({"name": name, "code": code})
+        if len(out) >= n:
+            break
     return out
 
 
@@ -65,11 +90,14 @@ def fetch_news(code, k=5):
         groups = d if isinstance(d, list) else [d]
         for g in groups:
             for it in g.get("items", []):
+                oid, aid = it.get("officeId"), it.get("articleId")
+                url = f"https://n.news.naver.com/mnews/article/{oid}/{aid}" if oid and aid else None
                 items.append({
                     "title": it.get("title", "").strip(),
                     "summary": (it.get("body", "") or "").strip()[:140],
                     "office": it.get("officeName"),
                     "datetime": it.get("datetime"),
+                    "url": url,
                 })
                 if len(items) >= k:
                     return items
