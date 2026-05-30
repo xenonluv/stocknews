@@ -1,24 +1,86 @@
 [
   {
-    "post_id": "POST_20260529_242040",
+    "post_id": "POST_20260530_242040",
     "status": "PUBLISHED",
+    "tier": "signal",
     "target_stock": "나무기술",
-    "signal_probability": "45%",
+    "signal_probability": "56%",
     "position_type": "과다상승",
-    "headline": "1Q 매출 370억·AI 투자 — 3분봉 단기 골든크로스 (일봉 과열)",
-    "summary": "호재 강도는 높으나 20일 이격도 168.6%로 극단 과열. 추격매수보다 8,300~8,500원 눌림 후 재상승 확인 시 소액 분할, 손절 8,100원 이탈. (3분봉 단기 진입 신호 / 일봉 과열 주의)",
+    "headline": "나무기술, 1분기 매출 370억원…가상화·클라우드 전환 수요에 수익성...",
+    "summary": "[시그널] 일봉 과다상승 · 3분봉 갓 골든크로스(이격도 0.574%) · 재료 호재(중요도 7.0). 일봉 국면도 함께 확인.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-05-30 (5/29 종가 기준)"
+    "published_at": "2026-05-30 23:57 KST"
   },
   {
-    "post_id": "POST_20260529_018880",
+    "post_id": "POST_20260530_189330",
     "status": "PUBLISHED",
-    "target_stock": "한온시스템",
-    "signal_probability": "38%",
-    "position_type": "분석불가",
-    "headline": "장초반 12% 급등·2030 매출목표 — 3분봉 갓 골든크로스 (일봉 고점권)",
-    "summary": "단기 3분봉 신호는 있으나 일봉 고점권·컨센서스 상승여력 -9.7%로 상충. 신규 진입 보류, 5,400~5,500원 지지 확인 후 단기 대응만, 손절 5,300원 이탈.",
+    "tier": "candidate",
+    "target_stock": "씨이랩",
+    "signal_probability": "53%",
+    "position_type": "과다상승",
+    "headline": "씨이랩, 1분기 수주잔고 3배 껑충...매출 11억 42% 늘어",
+    "summary": "[후보] 재료+거래대금 포착(중요도 10.0, 호재) · 일봉 과다상승. 3분봉 골든크로스 진입신호는 아직 대기 중.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-05-30 (5/29 종가 기준)"
+    "published_at": "2026-05-30 23:57 KST"
+  },
+  {
+    "post_id": "POST_20260530_317770",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "엑스페릭스",
+    "signal_probability": "75%",
+    "position_type": "눌림목",
+    "headline": "바이셀스탠다드, 50억 시리즈A 클로징…SK증권 합류",
+    "summary": "[후보] 재료+거래대금 포착(중요도 10.0, 호재) · 일봉 눌림목. 3분봉 골든크로스 진입신호는 아직 대기 중.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-05-30 23:57 KST"
+  },
+  {
+    "post_id": "POST_20260530_000150",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "두산",
+    "signal_probability": "53%",
+    "position_type": "과다상승",
+    "headline": "두산, SK실트론 6월에 인수한다…‘반도체 기업’ 전환 임박 [시그널]",
+    "summary": "[후보] 재료+거래대금 포착(중요도 10.0, 호재) · 일봉 과다상승. 3분봉 골든크로스 진입신호는 아직 대기 중.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-05-30 23:57 KST"
+  },
+  {
+    "post_id": "POST_20260530_222420",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "쎄노텍",
+    "signal_probability": "75%",
+    "position_type": "눌림목",
+    "headline": "[쎄노텍 줌인]① 부채비율 낮췄지만 곳간 텅텅…단기 상환 압박",
+    "summary": "[후보] 재료+거래대금 포착(중요도 10.0, 호재) · 일봉 눌림목. 3분봉 골든크로스 진입신호는 아직 대기 중.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-05-30 23:57 KST"
+  },
+  {
+    "post_id": "POST_20260530_950190",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "고스트스튜디오",
+    "signal_probability": "59%",
+    "position_type": "분석불가",
+    "headline": "고스트스튜디오, 1분기 영업익 43억…전년비 6.3% 증가",
+    "summary": "[후보] 재료+거래대금 포착(중요도 9.5, 호재) · 일봉 분석불가. 3분봉 골든크로스 진입신호는 아직 대기 중.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-05-30 23:57 KST"
+  },
+  {
+    "post_id": "POST_20260530_216080",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "제테마",
+    "signal_probability": "76%",
+    "position_type": "저점",
+    "headline": "제테마, 보툴리눔 톡신 중국 임상 3상 CSR 승인",
+    "summary": "[후보] 재료+거래대금 포착(중요도 9.0, 호재) · 일봉 저점. 3분봉 골든크로스 진입신호는 아직 대기 중.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-05-30 23:57 KST"
   }
 ]
