@@ -54,12 +54,11 @@ def _post(r, tier, stamp_full, today):
     news = r.get("news", [])
     headline = (news[0]["title"][:60] if news else f"{name} 스크리너 포착")
     if tier == "signal":
-        gc_txt = "갓 골든크로스" if c.get("gc_recent") else "정배열"
-        summary = (f"[시그널] 일봉 {phase} · 3분봉 {gc_txt}(이격도 {disp}%) · "
-                   f"재료 {r.get('sentiment')}(중요도 {r.get('importance')}). 일봉 국면도 함께 확인.")
+        summary = (f"[시그널] 일봉 {phase} · "
+                   f"재료 {r.get('sentiment')}(중요도 {r.get('importance')}). 일봉 국면을 함께 확인.")
     else:
         summary = (f"[후보] 재료+거래대금 포착(중요도 {r.get('importance')}, {r.get('sentiment')}) · "
-                   f"일봉 {phase}. 3분봉 골든크로스 진입신호는 아직 대기 중.")
+                   f"일봉 {phase}.")
     return {
         "post_id": f"POST_{today}_{code}",
         "status": "PUBLISHED",

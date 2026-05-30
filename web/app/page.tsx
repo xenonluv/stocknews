@@ -68,7 +68,7 @@ export default async function Home({
       <header className="mb-8 space-y-1">
         <h1 className="text-3xl font-bold tracking-tight">시그널 분석</h1>
         <p className="text-sm text-muted-foreground">
-          스크리너(거래량·상승 이력 + 재료 + 3분봉 골든크로스) + AI 분석 결과 ·
+          스크리너(거래량·상승 이력 + 재료) + AI 분석 결과 ·
           <span className="text-warning"> 투자 참고용, 매수 추천 아님</span>
           <span className="tabular-nums"> · 총 {pagination.total}건</span>
         </p>
@@ -82,12 +82,12 @@ export default async function Home({
         <>
           <Section
             title="📌 시그널"
-            desc="3조건 통과 (거래량 이력 + 재료 + 3분봉 골든크로스)"
+            desc="거래량·상승 이력 + 재료 포착"
             items={signals.filter((s) => s.tier !== "candidate")}
           />
           <Section
             title="👀 후보 종목군"
-            desc="재료 + 거래대금 포착, 3분봉 진입신호 대기 중"
+            desc="재료 + 거래대금 포착"
             items={signals.filter((s) => s.tier === "candidate")}
           />
         </>

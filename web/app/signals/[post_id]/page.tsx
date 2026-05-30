@@ -48,7 +48,8 @@ export default async function SignalDetailPage({
         <ArrowLeft className="size-4" aria-hidden />
         목록으로
       </Link>
-      <SignalCard {...toSignalCardProps(signal)} />
+      {/* 상세에선 카드 내 뉴스 미리보기를 끄고(news=[]) 아래 전체 NewsList로 노출 */}
+      <SignalCard {...toSignalCardProps(signal)} news={[]} />
       <NewsList news={signal.news} />
     </main>
   );
