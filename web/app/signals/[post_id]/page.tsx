@@ -3,18 +3,24 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 
-import { signalService } from "@/services/signal.service";
+import { getSignal, allSignalIds } from "@/lib/signals/repository";
 import { SignalCard, toSignalCardProps } from "@/components/signal/SignalCard";
 import { NewsList } from "@/components/signal/NewsList";
 
-export const dynamic = "force-dynamic";
+// 모든 시그널 상세를 빌드 시 정적 생성. 미생성 id는 정적 404(함수 0회).
+// 데이터는 배포마다 갱신되므로 유효 id는 항상 현재 배포에 포함된다.
+export const dynamicParams = false;
 
-export async function generateMetadata({
+export function generateStaticParams() {
+  return allSignalIds().map((post_id) => ({ post_id }));
+}
+
+export function generateMetadata({
   params,
 }: {
   params: { post_id: string };
-}): Promise<Metadata> {
-  const signal = await signalService.getById(params.post_id);
+}): Metadata {
+  const signal = getSignal(params.post_id);
   if (!signal) return { title: "시그널을 찾을 수 없음" };
   const title = `${signal.target_stock} ${signal.signal_probability} · ${signal.position_type}`;
   return {
@@ -31,12 +37,12 @@ export async function generateMetadata({
   };
 }
 
-export default async function SignalDetailPage({
+export default function SignalDetailPage({
   params,
 }: {
   params: { post_id: string };
 }) {
-  const signal = await signalService.getById(params.post_id);
+  const signal = getSignal(params.post_id);
   if (!signal) notFound();
 
   return (

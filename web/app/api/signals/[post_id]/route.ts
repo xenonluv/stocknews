@@ -4,7 +4,8 @@ import { getSignal } from "@/lib/signals/repository";
 import type { ApiItemResponse, ApiErrorResponse } from "@/types/api";
 import type { SignalPost } from "@/types/signal";
 
-export const dynamic = "force-dynamic";
+// 엣지 캐시(목록 라우트와 동일 정책). 새 배포 시 자동 무효화.
+const CACHE_HEADER = "public, s-maxage=30, stale-while-revalidate=300";
 
 /**
  * GET /api/signals/{post_id}
@@ -24,5 +25,7 @@ export async function GET(
   }
 
   const body: ApiItemResponse<SignalPost> = { data: signal };
-  return NextResponse.json(body);
+  return NextResponse.json(body, {
+    headers: { "Cache-Control": CACHE_HEADER },
+  });
 }

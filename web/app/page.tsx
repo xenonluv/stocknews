@@ -1,67 +1,14 @@
-import Link from "next/link";
+import { listSignals } from "@/lib/signals/repository";
+import { LiveSignals } from "@/components/signal/LiveSignals";
 
-import { signalService } from "@/services/signal.service";
-import { SignalCard, toSignalCardProps } from "@/components/signal/SignalCard";
-import type { SignalPost } from "@/types/signal";
+// 정적 생성: 데이터는 signals.json(빌드 시 import)에서 오므로 배포마다 갱신된다.
+// 방문자는 CDN 정적 페이지를 받으므로 동시접속이 늘어도 서버 함수 호출이 없다.
+// 열린 탭의 실시간 갱신은 LiveSignals(클라이언트 폴링)가 담당한다.
 
-export const dynamic = "force-dynamic";
+const LIMIT = 50;
 
-function Section({
-  title,
-  desc,
-  items,
-}: {
-  title: string;
-  desc: string;
-  items: SignalPost[];
-}) {
-  if (items.length === 0) return null;
-  return (
-    <section className="mb-10">
-      <div className="mb-4">
-        <h2 className="text-xl font-bold tracking-tight">
-          {title}{" "}
-          <span className="text-sm font-normal text-muted-foreground tabular-nums">
-            {items.length}
-          </span>
-        </h2>
-        <p className="text-xs text-muted-foreground">{desc}</p>
-      </div>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((s) => (
-          <Link
-            key={s.post_id}
-            href={`/signals/${s.post_id}`}
-            className="block rounded-lg transition-transform hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-          >
-            <SignalCard {...toSignalCardProps(s)} />
-          </Link>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-const DEFAULT_LIMIT = 50;
-
-function parseIntParam(raw: string | string[] | undefined, fallback: number): number {
-  const v = Array.isArray(raw) ? raw[0] : raw;
-  const n = v ? parseInt(v, 10) : NaN;
-  return Number.isNaN(n) || n < 1 ? fallback : n;
-}
-
-export default async function Home({
-  searchParams,
-}: {
-  searchParams: { page?: string; limit?: string };
-}) {
-  const page = parseIntParam(searchParams.page, 1);
-  const limit = parseIntParam(searchParams.limit, DEFAULT_LIMIT);
-
-  const { data: signals, pagination } = await signalService.getList({
-    page,
-    limit,
-  });
+export default function Home() {
+  const { items, total } = listSignals({ page: 1, limit: LIMIT });
 
   return (
     <main className="container py-12">
@@ -70,28 +17,11 @@ export default async function Home({
         <p className="text-sm text-muted-foreground">
           스크리너(거래량·상승 이력 + 재료) + AI 분석 결과 ·
           <span className="text-warning"> 투자 참고용, 매수 추천 아님</span>
-          <span className="tabular-nums"> · 총 {pagination.total}건</span>
+          <span className="tabular-nums"> · 총 {total}건</span>
         </p>
       </header>
 
-      {signals.length === 0 ? (
-        <div className="flex min-h-48 items-center justify-center rounded-lg border border-dashed border-border text-sm text-muted-foreground">
-          아직 게시된 시그널이 없습니다.
-        </div>
-      ) : (
-        <>
-          <Section
-            title="📌 시그널"
-            desc="거래량·상승 이력 + 재료 포착"
-            items={signals.filter((s) => s.tier !== "candidate")}
-          />
-          <Section
-            title="👀 후보 종목군"
-            desc="재료 + 거래대금 포착"
-            items={signals.filter((s) => s.tier === "candidate")}
-          />
-        </>
-      )}
+      <LiveSignals initialSignals={items} />
     </main>
   );
 }

@@ -29,3 +29,8 @@ export function listSignals({ stock, page = 1, limit = 20 }: ListParams) {
 export function getSignal(postId: string): SignalPost | null {
   return PUBLISHED.find((s) => s.post_id === postId) ?? null;
 }
+
+/** 현재 배포의 모든 post_id (상세페이지 정적 사전생성용). */
+export function allSignalIds(): string[] {
+  return PUBLISHED.map((s) => s.post_id);
+}

@@ -4,7 +4,9 @@ import { listSignals } from "@/lib/signals/repository";
 import type { ApiListResponse, ApiErrorResponse } from "@/types/api";
 import type { SignalPost } from "@/types/signal";
 
-export const dynamic = "force-dynamic";
+// 엣지 캐시: 1000명+ 동시 폴링도 CDN이 응답, 실제 함수는 ~30초당 1회.
+// 새 배포 시 Vercel이 캐시를 자동 무효화하므로 데이터는 배포 즉시 신선.
+const CACHE_HEADER = "public, s-maxage=30, stale-while-revalidate=300";
 
 /**
  * GET /api/signals
@@ -28,7 +30,9 @@ export async function GET(req: NextRequest) {
         totalPages: Math.max(1, Math.ceil(total / limit)),
       },
     };
-    return NextResponse.json(body);
+    return NextResponse.json(body, {
+      headers: { "Cache-Control": CACHE_HEADER },
+    });
   } catch {
     const err: ApiErrorResponse = {
       error: { code: "INTERNAL_ERROR", message: "시그널 목록 조회 중 오류가 발생했습니다." },
