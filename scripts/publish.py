@@ -108,12 +108,22 @@ def main():
     news_min = int(args[args.index("--news-min") + 1]) if "--news-min" in args else 2
     # 스크리너에 전달할 임계값(기본: 느슨)
     passthru = []
-    for k in ("--vol-x", "--gain", "--news-min", "--gc-window", "--disp-max", "--topn"):
+    for k in ("--vol-x", "--gain", "--news-min", "--gc-window", "--disp-max", "--topn", "--min-value"):
         if k in args:
             passthru += [k, args[args.index(k) + 1]]
     if not passthru:
         passthru = ["--vol-x", "1.5", "--gain", "3.0", "--news-min", "2",
                     "--gc-window", "40", "--disp-max", "2.0", "--topn", "20"]
+    # 관심종목(watchlist)을 스크리너 유니버스에 포함 (랭킹에 안 잡혀도 평가)
+    if "--names" in args:
+        i = args.index("--names")
+        names = []
+        for nm in args[i + 1:]:
+            if nm.startswith("--"):
+                break
+            names.append(nm)
+        if names:
+            passthru += ["--names"] + names
 
     scr = run_screener(passthru)
     posts = build_posts(scr, maxn, max_cand, news_min)

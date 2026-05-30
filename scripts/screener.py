@@ -27,6 +27,7 @@ from team2_relevance import score_news, make_aliases
 UA = {"User-Agent": "Mozilla/5.0", "Referer": "https://m.stock.naver.com/"}
 
 # ---- 임계값 (기본값, 결과 보며 튜닝) ----
+MIN_TRADING_VALUE = 50_000_000_000  # A: 최근 5일 일봉 거래대금 최대치 ≥ 500억 (잡주 제외)
 HIST_VOL_X = 2.0      # A: 거래량 급증 배수(20일 평균 대비)
 HIST_GAIN = 5.0       # A: 강한 상승(%)
 NEWS_MIN = 3          # B: 최소 재료 뉴스 수
@@ -69,12 +70,18 @@ def filter_A(code):
         return {"hit": False, "reason": "데이터부족"}
     closes = [x["close"] for x in d]
     vols = [x["volume"] for x in d]
+    # 거래대금 게이트: 최근 5거래일 일봉 거래대금(종가×거래량) 최대치 ≥ 기준
+    val5 = [closes[i] * vols[i] for i in range(len(d) - 5, len(d))]
+    max_val = max(val5)
+    if max_val < MIN_TRADING_VALUE:
+        return {"hit": False, "reason": "거래대금미달", "value_eok": round(max_val / 1e8)}
     for i in range(len(d) - 1, max(len(d) - 6, 0), -1):  # 최근 5거래일
         vavg = sum(vols[max(0, i - 20):i]) / max(1, len(vols[max(0, i - 20):i]))
         vol_x = vols[i] / vavg if vavg else 0
         chg = (closes[i] / closes[i - 1] - 1) * 100 if i > 0 else 0
         if vol_x >= HIST_VOL_X and chg >= HIST_GAIN:
-            return {"hit": True, "date": d[i]["date"], "vol_x": round(vol_x, 1), "gain": round(chg, 1)}
+            return {"hit": True, "date": d[i]["date"], "vol_x": round(vol_x, 1),
+                    "gain": round(chg, 1), "value_eok": round(max_val / 1e8)}
     return {"hit": False}
 
 
@@ -143,10 +150,11 @@ def fetch_sector(code):
 
 
 def main():
-    global HIST_VOL_X, HIST_GAIN, NEWS_MIN, GC_WINDOW, DISP_MAX, DISP_MIN
+    global HIST_VOL_X, HIST_GAIN, NEWS_MIN, GC_WINDOW, DISP_MAX, DISP_MIN, MIN_TRADING_VALUE
     args = sys.argv[1:]
     topn = int(_arg(args, "--topn", 20, int))
     # 임계값 오버라이드
+    MIN_TRADING_VALUE = _arg(args, "--min-value", MIN_TRADING_VALUE)
     HIST_VOL_X = _arg(args, "--vol-x", HIST_VOL_X)
     HIST_GAIN = _arg(args, "--gain", HIST_GAIN)
     NEWS_MIN = _arg(args, "--news-min", NEWS_MIN, int)
