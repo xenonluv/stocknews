@@ -1,5 +1,6 @@
 import { Clock, Newspaper } from "lucide-react";
 
+import { cn } from "@/lib/utils";
 import {
   Card,
   CardContent,
@@ -10,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { MarketStatusBadge } from "./MarketStatusBadge";
 import { ProbabilityGauge } from "./ProbabilityGauge";
 import { DisclaimerNote } from "./DisclaimerNote";
-import type { MarketStatus, SignalPost } from "@/types/signal";
+import type { MarketStatus, SignalPost, SignalTier } from "@/types/signal";
 
 /** 카드에 간략 노출할 뉴스 (제목 + 감성). 링크는 상세 NewsList에서 제공. */
 export interface CardNewsItem {
@@ -24,6 +25,7 @@ const CARD_NEWS_LIMIT = 2;
 export function toSignalCardProps(s: SignalPost): SignalCardProps {
   const news = (s.news ?? []).filter((n) => n.title);
   return {
+    tier: s.tier,
     targetStock: s.target_stock,
     signalProbability: s.signal_probability,
     positionType: s.position_type,
@@ -40,6 +42,7 @@ export function toSignalCardProps(s: SignalPost): SignalCardProps {
 }
 
 export interface SignalCardProps {
+  tier?: SignalTier; // signal=글래스(강조) / candidate=무광
   targetStock: string;
   signalProbability: string; // "45%"
   positionType: MarketStatus; // 저점 | 눌림목 | 과다상승 | 분석불가
@@ -63,6 +66,7 @@ function sentimentDotClass(sentiment?: string | null) {
  * 디자이너 SSOT 컴포넌트. 팀원5는 승인 데이터를 props로 바인딩만 한다.
  */
 export function SignalCard({
+  tier,
   targetStock,
   signalProbability,
   positionType,
@@ -73,8 +77,24 @@ export function SignalCard({
   newsCount = 0,
   news = [],
 }: SignalCardProps) {
+  const isSignal = tier !== "candidate";
   return (
-    <Card className="overflow-hidden">
+    <Card
+      className={cn(
+        "relative overflow-hidden h-full transition-shadow",
+        isSignal
+          ? // 시그널: 서리유리(backdrop-blur) + 은은한 레드 오라 + 상단 하이라이트
+            "border border-white/15 bg-transparent bg-gradient-to-br from-white/[0.10] to-white/[0.03] backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,0.22),0_0_0_1px_rgba(242,54,69,0.20),0_24px_55px_-22px_rgba(242,54,69,0.45)]"
+          : // 후보: 무광 평면 (발광·유리감 없음 → 시그널과 구분)
+            "border border-white/[0.07] bg-white/[0.022] shadow-none"
+      )}
+    >
+      {isSignal && (
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-up to-up/30"
+          aria-hidden
+        />
+      )}
       <CardHeader className="gap-3 pb-4">
         <div className="flex items-center justify-between gap-2">
           <div className="flex items-center gap-2">
@@ -103,7 +123,7 @@ export function SignalCard({
         </div>
 
         {news.length > 0 && (
-          <div className="rounded-md border border-border bg-card/50 p-3">
+          <div className="rounded-md border border-white/10 bg-white/[0.04] p-3">
             <p className="mb-2 flex items-center gap-1 text-xs font-medium text-muted-foreground">
               <Newspaper className="size-3" aria-hidden />
               관련 뉴스 <span className="tabular-nums">{newsCount}</span>
@@ -126,7 +146,7 @@ export function SignalCard({
         )}
       </CardContent>
 
-      <CardFooter className="border-t border-border pt-4">
+      <CardFooter className="border-t border-white/10 pt-4">
         <DisclaimerNote text={disclaimer} />
       </CardFooter>
     </Card>
