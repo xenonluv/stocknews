@@ -156,7 +156,17 @@ def main():
     open(SIGNALS, "w", encoding="utf-8").write(new)
     git("add", "web/data/signals.json")
     git("commit", "-q", "-m", f"data: 시그널 자동 게시 ({len(posts)}건)")
-    pr = git("push", "-q", "origin", "main")
+    # push 전 원격 변경(다른 머신/PC의 web 코드 등) 먼저 통합 → 다중 머신 공존.
+    # signals.json과 다른 파일이라 보통 충돌 없이 rebase됨.
+    pl = git("pull", "--rebase", "--autostash", "origin", "main")
+    if pl.returncode != 0:
+        sys.stderr.write("pull --rebase 실패(충돌 가능) — 수동 확인 필요:\n" + pl.stderr[-500:])
+        git("rebase", "--abort")
+        sys.exit(1)
+    pr = git("push", "origin", "main")
+    if pr.returncode != 0:
+        sys.stderr.write("push 실패:\n" + pr.stderr[-500:])
+        sys.exit(1)
     print(f"게시 완료: {len(posts)}건 push (exit {pr.returncode})")
     for p in posts:
         print(f"  - {p['target_stock']} {p['signal_probability']} {p['position_type']}")
