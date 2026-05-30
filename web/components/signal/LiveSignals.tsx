@@ -5,11 +5,59 @@ import { useEffect, useRef, useState } from "react";
 
 import { SignalCard, toSignalCardProps } from "@/components/signal/SignalCard";
 import { signalClientService } from "@/services/signal.client";
+import { isMarketOpenKST } from "@/lib/market";
 import type { SignalPost } from "@/types/signal";
 
 /** 자동 갱신 주기(ms). 장중 데이터는 15분마다 바뀌므로 60초면 충분. */
 const POLL_MS = 60_000;
 const LIMIT = 50;
+
+/** 자동 갱신 상태 바 — 장중/장외를 정직하게 구분 표시 + 데이터 기준 시각. */
+function LiveStatusBar({
+  dataAsOf,
+  justUpdated,
+}: {
+  dataAsOf?: string;
+  justUpdated: boolean;
+}) {
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    const tick = () => setOpen(isMarketOpenKST());
+    tick();
+    const id = setInterval(tick, 60_000);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <div className="mb-6 flex flex-wrap items-center gap-x-3 gap-y-1 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-2.5 text-sm">
+      <span className="flex items-center gap-2 font-medium">
+        <span className="relative flex size-2.5">
+          {open && (
+            <span
+              className={`absolute inline-flex size-full rounded-full bg-up/70 ${justUpdated ? "animate-ping" : "animate-[ping_2.5s_ease-in-out_infinite]"}`}
+              aria-hidden
+            />
+          )}
+          <span
+            className={`relative inline-flex size-2.5 rounded-full ${open ? "bg-up" : "bg-muted-foreground/50"}`}
+            aria-hidden
+          />
+        </span>
+        {open ? (
+          <span className="text-up">실시간 갱신 중 · 15분마다 자동 업데이트</span>
+        ) : (
+          <span className="text-muted-foreground">장 마감 · 다음 거래일 자동 갱신</span>
+        )}
+      </span>
+      {dataAsOf && (
+        <span className="text-xs text-muted-foreground tabular-nums">
+          데이터 기준: {dataAsOf}
+        </span>
+      )}
+      <span className="text-xs text-warning">투자 참고용 · 매매 타점 변동 유의</span>
+    </div>
+  );
+}
 
 function Section({
   title,
@@ -58,6 +106,7 @@ export function LiveSignals({
   initialSignals: SignalPost[];
 }) {
   const [signals, setSignals] = useState<SignalPost[]>(initialSignals);
+  const [justUpdated, setJustUpdated] = useState(false);
   const lastJson = useRef<string>(JSON.stringify(initialSignals));
 
   useEffect(() => {
@@ -71,6 +120,8 @@ export function LiveSignals({
         if (nextJson !== lastJson.current) {
           lastJson.current = nextJson;
           setSignals(next); // 실제 변경 시에만 갱신 → 불필요한 리렌더 방지
+          setJustUpdated(true); // 방금 갱신됨 → 점 강조 펄스
+          setTimeout(() => alive && setJustUpdated(false), 4000);
         }
       } catch {
         // 폴링 실패는 조용히 무시(다음 주기 재시도)
@@ -101,6 +152,7 @@ export function LiveSignals({
 
   return (
     <>
+      <LiveStatusBar dataAsOf={signals[0]?.published_at} justUpdated={justUpdated} />
       <Section
         title="📌 시그널"
         desc="거래량·상승 이력 + 재료 포착"
