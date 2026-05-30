@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "news_id": { "type": "string" },
+          "ticker_name": { "type": "string" },
+          "market_status": { "type": "string", "enum": ["과다상승", "눌림목", "저점", "분석불가"] },
+          "probability_of_rise": { "type": "string", "pattern": "^[0-9]{1,3}%$" },
+          "trading_strategy": { "type": "string" }
+        },
+        "required": ["news_id", "ticker_name", "market_status", "probability_of_rise", "trading_strategy"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["results"],
+  "additionalProperties": false
+}

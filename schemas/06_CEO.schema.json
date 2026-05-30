@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "approval_status": { "type": "string", "enum": ["APPROVED", "REJECTED"] },
+    "reject_reason": { "type": "string" },
+    "publish_data": {
+      "type": ["object", "null"],
+      "properties": {
+        "status": { "type": "string", "enum": ["PUBLISHED"] },
+        "target_stock": { "type": "string" },
+        "signal_probability": { "type": "string", "pattern": "^[0-9]{1,3}%$" },
+        "position_type": { "type": "string", "enum": ["눌림목", "저점"] },
+        "headline": { "type": "string" },
+        "published_at": { "type": "string" }
+      },
+      "required": ["status", "target_stock", "signal_probability", "position_type", "headline", "published_at"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["approval_status", "publish_data"],
+  "additionalProperties": false
+}

@@ -1,0 +1,64 @@
+/* Pretendard 한글 웹폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  디자인 토큰 — 다크 금융 대시보드 (Single Source of Truth)
+  값은 shadcn/ui 규격(공백 구분 HSL)으로 정의. hsl(var(--token))로 사용.
+  ⚠️ 한국 시장 색 관례: 상승=빨강(--up), 하락=파랑(--down). 미국과 반대.
+*/
+@layer base {
+  :root {
+    /* ===== 기본(다크) 표면 ===== */
+    --background: 222 29% 6%;        /* #0B0E14 */
+    --foreground: 224 26% 92%;       /* #E6E9EF */
+    --card: 218 25% 11%;             /* #151A23 */
+    --card-foreground: 224 26% 92%;
+    --popover: 218 25% 11%;
+    --popover-foreground: 224 26% 92%;
+
+    --muted: 219 21% 17%;            /* #232A36 */
+    --muted-foreground: 214 14% 65%; /* #9AA4B2 */
+    --accent: 219 21% 17%;
+    --accent-foreground: 224 26% 92%;
+
+    --border: 219 21% 17%;           /* #232A36 */
+    --input: 219 21% 17%;
+    --ring: 355 88% 58%;             /* 포커스 링 = 상승 레드 */
+
+    /* ===== 브랜드/시맨틱 ===== */
+    --primary: 355 88% 58%;          /* #F23645 상승 레드 = 브랜드 메인 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 219 21% 17%;
+    --secondary-foreground: 224 26% 92%;
+    --destructive: 355 88% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* ===== 시그널 색 코드 (한국 관례) ===== */
+    --up: 355 88% 58%;               /* #F23645 상승/긍정 = 빨강 */
+    --up-foreground: 0 0% 100%;
+    --down: 223 100% 58%;            /* #2962FF 하락/부정 = 파랑 */
+    --down-foreground: 0 0% 100%;
+    --warning: 40 100% 56%;          /* #FFB020 과열/경고 = 앰버 */
+    --warning-foreground: 222 29% 6%;
+    --neutral: 220 9% 46%;           /* #6B7280 분석불가 = 그레이 */
+    --neutral-foreground: 0 0% 100%;
+    --safe: 152 60% 45%;             /* 눌림목/저점 안전 진입 = 그린 */
+    --safe-foreground: 0 0% 100%;
+
+    --radius: 1rem;                  /* rounded-2xl 기준 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "tnum" on; /* 수치 정렬용 tabular-nums */
+  }
+}

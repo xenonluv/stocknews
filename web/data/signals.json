@@ -1,0 +1,24 @@
+[
+  {
+    "post_id": "POST_20260530_001",
+    "status": "PUBLISHED",
+    "target_stock": "삼성전자",
+    "signal_probability": "88%",
+    "position_type": "눌림목",
+    "headline": "차세대 HBM 대형 고객사 공급계약 체결",
+    "summary": "신규 공급계약으로 실적 가시성이 확대됐고, 상승 추세 중 건강한 조정 구간에 진입했습니다. 거래량 동반 반등 시 분할 접근이 유효합니다.",
+    "disclaimer": "본 정보는 투자 참고용이며, 투자 판단과 그 책임은 전적으로 본인에게 있습니다.",
+    "published_at": "2026-05-30 14:00:00"
+  },
+  {
+    "post_id": "POST_20260530_002",
+    "status": "PUBLISHED",
+    "target_stock": "현대로템",
+    "signal_probability": "86%",
+    "position_type": "저점",
+    "headline": "대규모 방산 수출 계약 기대감 부각",
+    "summary": "낙폭과대 후 저점 반등 초기 신호. 수주 모멘텀이 재료로 작용하며 매물대 돌파 시 추세 전환 가능성이 있습니다.",
+    "disclaimer": "본 정보는 투자 참고용이며, 투자 판단과 그 책임은 전적으로 본인에게 있습니다.",
+    "published_at": "2026-05-30 13:42:00"
+  }
+]

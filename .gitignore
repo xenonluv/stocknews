@@ -1,0 +1,24 @@
+# 환경변수 / 시크릿
+.env
+.env.*
+!.env.example
+
+# 의존성
+node_modules/
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# 빌드 산출물
+dist/
+build/
+.next/
+out/
+
+# 로그 / 임시
+*.log
+.DS_Store
+
+# 로컬 도구 상태 (bkit)
+.bkit/

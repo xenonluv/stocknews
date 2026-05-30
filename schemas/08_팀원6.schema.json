@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "publish_status": { "type": "string", "enum": ["PUBLISHED", "FAILED"] },
+    "post_id": { "type": "string" },
+    "endpoint": { "type": "string" },
+    "published_at": { "type": "string" }
+  },
+  "required": ["publish_status", "post_id", "endpoint", "published_at"],
+  "additionalProperties": false
+}
