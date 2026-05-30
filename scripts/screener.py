@@ -23,6 +23,7 @@ from collections import defaultdict
 from team3_price_context import fetch_daily, ma
 from team1_collect import resolve_code, fetch_news, top_ranking
 from team2_relevance import score_news, make_aliases
+from net import get_text  # 정중한 간격 + 재시도
 
 UA = {"User-Agent": "Mozilla/5.0", "Referer": "https://m.stock.naver.com/"}
 
@@ -39,9 +40,7 @@ DISP_MIN = 0.0        # C: 이격도 하한(정배열)
 def fetch_min3_closes(code, count=1500):
     """fchart 1분봉 → 3분봉 종가 시계열."""
     url = f"https://fchart.stock.naver.com/sise.nhn?symbol={code}&timeframe=minute&count={count}&requestType=0"
-    req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=20) as r:
-        x = r.read().decode("utf-8", "ignore")
+    x = get_text(url, UA, timeout=20)
     rows = re.findall(r'data="(\d{12})\|([^|]*)\|([^|]*)\|([^|]*)\|([^|]*)\|(\d*)"', x)
     # (dt, open, high, low, close, vol) — close 사용
     bars = []
@@ -134,17 +133,10 @@ def fetch_sector(code):
     """업종명 (네이버 데스크톱 종목 페이지에서 추출)."""
     try:
         url = f"https://finance.naver.com/item/main.naver?code={code}"
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        raw = urllib.request.urlopen(req, timeout=10).read()
-        for enc in ("utf-8", "cp949"):
-            try:
-                html = raw.decode(enc)
-            except Exception:
-                continue
-            m = re.search(r'type=upjong&no=\d+">([^<]+)', html)
-            if m:
-                return m.group(1).strip()
-        return "기타"
+        html = get_text(url, {"User-Agent": "Mozilla/5.0"}, timeout=10,
+                        encodings=("utf-8", "cp949"))
+        m = re.search(r'type=upjong&no=\d+">([^<]+)', html)
+        return m.group(1).strip() if m else "기타"
     except Exception:
         return "기타"
 
@@ -189,8 +181,9 @@ def main():
     passed = []
     by_sector = defaultdict(list)
     for code, name in uni.items():
-        sector = fetch_sector(code)
         a = filter_A(code)
+        # 업종은 표시용 → A 통과 종목만 조회(A탈락 다수의 불필요한 HTTP 제거)
+        sector = fetch_sector(code) if a.get("hit") else "기타"
         rec = {"name": name, "code": code, "sector": sector, "A_hit": a.get("hit")}
         if a.get("hit"):
             rec["A"] = a

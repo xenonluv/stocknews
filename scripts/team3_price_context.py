@@ -10,6 +10,8 @@ import json
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
+from net import get_text  # 정중한 간격 + 재시도
+
 KST = timezone(timedelta(hours=9))
 
 
@@ -25,9 +27,7 @@ def fetch_daily(code, days=120):
         + end
         + "&timeframe=day"
     )
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=15) as r:
-        raw = r.read().decode("utf-8", "ignore")
+    raw = get_text(url, {"User-Agent": "Mozilla/5.0"}, timeout=15)
     # 응답은 파이썬 리스트형 텍스트(작은따옴표) → JSON 정규화
     raw = raw.strip().replace("'", '"')
     rows = json.loads(raw)

@@ -20,6 +20,7 @@ import urllib.parse
 import urllib.request
 
 from team3_price_context import compute_context  # 동일 scripts/ 디렉터리
+from net import get_bytes  # 정중한 간격 + 재시도
 
 UA = {"User-Agent": "Mozilla/5.0", "Referer": "https://m.stock.naver.com/"}
 # 랭킹 정렬키 매핑 (네이버 m.stock api/stocks/{sort}/{market})
@@ -45,9 +46,7 @@ def is_individual_stock(name, code, end_type=None):
 
 
 def _get(url):
-    req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=15) as r:
-        return json.load(r)
+    return json.loads(get_bytes(url, UA))
 
 
 def resolve_code(name):

@@ -107,6 +107,18 @@ def git(*args):
 
 def main():
     args = sys.argv[1:]
+    # 동시 실행 방지: 겹친 cron 회차의 git race 차단 (Mac/Linux flock)
+    lock_fh = None
+    try:
+        import fcntl
+        lock_fh = open("/tmp/stocknews_publish.lock", "w")
+        try:
+            fcntl.flock(lock_fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            print("이미 실행 중(다른 publish 진행 중) — skip")
+            return
+    except ImportError:
+        pass  # fcntl 없는 환경은 락 생략
     dry = "--dry-run" in args
     maxn = int(args[args.index("--max") + 1]) if "--max" in args else 6
     max_cand = int(args[args.index("--max-candidates") + 1]) if "--max-candidates" in args else 8
