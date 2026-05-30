@@ -18,6 +18,7 @@ export interface PublishData {
   target_stock: string;
   signal_probability: string; // "45%"
   position_type: MarketStatus; // 실제 국면(과다상승/분석불가 포함) 정직 표기
+  day_change?: number | null; // 당일 등락률(%) — 종목명 옆 표시
   headline: string;
   published_at: string;
   news?: NewsItem[]; // 종목별 관련 뉴스 (카드 클릭 시 상세에서 노출)

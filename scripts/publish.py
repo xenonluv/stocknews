@@ -66,6 +66,7 @@ def _post(r, tier, stamp_full, today):
         "target_stock": name,
         "signal_probability": f"{prob}%",
         "position_type": phase,
+        "day_change": ctx.get("change_pct_day"),
         "headline": headline,
         "summary": summary,
         "disclaimer": DISCLAIMER,

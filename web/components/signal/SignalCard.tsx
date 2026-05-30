@@ -27,6 +27,7 @@ export function toSignalCardProps(s: SignalPost): SignalCardProps {
   return {
     tier: s.tier,
     targetStock: s.target_stock,
+    dayChange: s.day_change ?? null,
     signalProbability: s.signal_probability,
     positionType: s.position_type,
     headline: s.headline,
@@ -44,6 +45,7 @@ export function toSignalCardProps(s: SignalPost): SignalCardProps {
 export interface SignalCardProps {
   tier?: SignalTier; // signal=글래스(강조) / candidate=무광
   targetStock: string;
+  dayChange?: number | null; // 당일 등락률(%)
   signalProbability: string; // "45%"
   positionType: MarketStatus; // 저점 | 눌림목 | 과다상승 | 분석불가
   headline: string;
@@ -65,9 +67,18 @@ function sentimentDotClass(sentiment?: string | null) {
  * 매매 시그널 게시 카드 — 다크 금융 대시보드.
  * 디자이너 SSOT 컴포넌트. 팀원5는 승인 데이터를 props로 바인딩만 한다.
  */
+/** 당일 등락률 표기 (한국 색 관례: 상승=빨강 up, 하락=파랑 down) */
+function fmtChange(v?: number | null) {
+  if (v === null || v === undefined) return null;
+  const sign = v > 0 ? "+" : "";
+  const cls = v > 0 ? "text-up" : v < 0 ? "text-down" : "text-muted-foreground";
+  return { text: `${sign}${v.toFixed(2)}%`, cls };
+}
+
 export function SignalCard({
   tier,
   targetStock,
+  dayChange,
   signalProbability,
   positionType,
   headline,
@@ -108,8 +119,16 @@ export function SignalCard({
             </time>
           </span>
         </div>
-        <h2 className="text-2xl font-bold tracking-tight text-foreground">
-          {targetStock}
+        <h2 className="flex items-baseline gap-2 text-2xl font-bold tracking-tight text-foreground">
+          <span>{targetStock}</span>
+          {(() => {
+            const c = fmtChange(dayChange);
+            return c ? (
+              <span className={`text-base font-semibold tabular-nums ${c.cls}`}>
+                {c.text}
+              </span>
+            ) : null;
+          })()}
         </h2>
         <p className="text-sm font-medium text-muted-foreground">{headline}</p>
       </CardHeader>
