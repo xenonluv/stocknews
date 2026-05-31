@@ -25,7 +25,37 @@ from sentiment import analyze as analyze_news  # noqa: E402
 KST = timezone(timedelta(hours=9))
 REPO = os.path.join(HERE, "..")
 PRED = os.path.join(REPO, "web", "data", "predictions.json")
+STATE = os.path.join(HERE, "state")
+HIST = os.path.join(STATE, "history")
 DISCLAIMER = "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요."
+
+
+def load_json(path, default=None):
+    try:
+        return json.load(open(path, encoding="utf-8"))
+    except Exception:
+        return default
+
+
+def apply_calibration(raw, calib):
+    """백테스트 보정표가 있으면 raw 점수를 실제 적중률(검증된 확률)로 치환."""
+    if not calib:
+        return raw
+    for b in calib.get("bins", []):
+        if b["lo"] <= raw < b["hi"] and b.get("n", 0) >= 5:
+            return round(b["actual_rate"])
+    return raw
+
+
+def record_history(closing_bet, now):
+    """그날 종가베팅 후보를 이력에 기록(익일 백테스트용). raw 점수 보존."""
+    os.makedirs(HIST, exist_ok=True)
+    rec = {"date": now.strftime("%Y%m%d"), "as_of": now.strftime("%Y-%m-%d %H:%M KST"),
+           "bets": [{"code": b["code"], "ticker": b["ticker"], "entry": b["entry"],
+                     "target": b["target"], "raw": b.get("_raw"), "prob": b["tomorrow_up_prob"]}
+                    for b in closing_bet]}
+    json.dump(rec, open(os.path.join(HIST, f"{rec['date']}.json"), "w", encoding="utf-8"),
+              ensure_ascii=False, indent=2)
 
 
 def score(ind, sent, persist):
@@ -81,17 +111,19 @@ def build(top, bet_n):
     uni = collect_mod.fetch_universe()
     state, _ = collect_mod.accumulate(uni, now)
     cand = uni[:top]  # API 확률 상위만 심화분석(호출 통제)
+    calib = load_json(os.path.join(STATE, "calibration.json"))  # 백테스트 보정표(있으면)
 
     rows = []
     for u in cand:
         ind = compute_indicators(u["code"], u["name"])
         sent = analyze_news(u["code"], u["name"])
         persist = state.get(u["code"], {})
-        prob, reasons, risks = score(ind, sent, persist)
+        raw, reasons, risks = score(ind, sent, persist)
+        prob = apply_calibration(raw, calib)  # 검증된 확률로 치환(데이터 누적 후)
         last = ind.get("last_close")
         rows.append({
             "ticker": u["name"], "code": u["code"],
-            "tomorrow_up_prob": f"{prob}%", "_p": prob,
+            "tomorrow_up_prob": f"{prob}%", "_p": prob, "_raw": raw,
             "entry": last,
             "target": round(last * 1.05) if last else None,
             "stop": round(last * 0.97) if last else None,
@@ -102,15 +134,17 @@ def build(top, bet_n):
         })
     rows.sort(key=lambda r: -r["_p"])
     closing = [r for r in rows if r["_p"] >= 55][:bet_n]  # 확신 일정 이상만 종가베팅
-    for r in rows:
+    record_history(closing, now)  # 익일 백테스트용 이력 기록(_raw 보존)
+    for r in rows:                # 출력 전 내부 필드 제거
         r.pop("_p", None)
+        r.pop("_raw", None)
 
     return {
         "as_of": now.strftime("%Y-%m-%d %H:%M KST"),
         "intraday_rank": rows,      # 잠정 랭킹(전체)
         "closing_bet": closing,     # 종가베팅 후보(상위·확신)
         "disclaimer": DISCLAIMER,
-        "backtest": None,           # backtest.py가 채움
+        "backtest": load_json(os.path.join(STATE, "backtest.json")),  # 적중률 요약(누적 후 채워짐)
     }
 
 
