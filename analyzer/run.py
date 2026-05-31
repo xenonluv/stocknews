@@ -1,0 +1,150 @@
+#!/usr/bin/env python3
+"""최종 오케스트레이터 — 수집(팀원1)+기술(팀원2)+재료(팀원3)를 confluence로 종합.
+
+24h 자동화 안정성을 위해 결정론 스코어(LLM 미사용). 산출물:
+  - intraday_rank: 현재 시각 기준 잠정 랭킹(15분)
+  - closing_bet:   내일 상승 확률 높은 종가베팅 후보(14:20 확정용)
+→ web/data/predictions.json (기존 signals.json 불변) → push 시 Vercel 노출.
+
+사용:
+  python3 analyzer/run.py --dry-run        # /tmp 미리보기, push 안 함
+  python3 analyzer/run.py [--push] [--top 12] [--bet 5]
+"""
+import os
+import sys
+import json
+import subprocess
+from datetime import datetime, timezone, timedelta
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import collect as collect_mod          # noqa: E402
+from indicators import compute_indicators  # noqa: E402
+from sentiment import analyze as analyze_news  # noqa: E402
+
+KST = timezone(timedelta(hours=9))
+REPO = os.path.join(HERE, "..")
+PRED = os.path.join(REPO, "web", "data", "predictions.json")
+DISCLAIMER = "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요."
+
+
+def score(ind, sent, persist):
+    """익일 상승확률 결정론 confluence (0~100). 투명 가중치."""
+    if ind.get("error"):
+        return 0, [], ["지표 없음"]
+    p = 40.0
+    pros, cons = [], []
+    cs = ind.get("close_strength")
+    if cs is not None and cs >= 0.7:
+        p += 8; pros.append(f"강세마감({cs})")
+    elif cs is not None and cs < 0.4:
+        p -= 4; cons.append("약한 마감")
+    if ind.get("ma_aligned"):
+        p += 6; pros.append("정배열")
+    macd = ind.get("macd") or {}
+    if macd.get("golden_cross") or (macd.get("above_zero") and macd.get("bullish")):
+        p += 7; pros.append("MACD강세")
+    rsi = ind.get("rsi") or {}
+    rv = rsi.get("rsi")
+    if rv is not None:
+        if rv >= 80:
+            p -= 12; cons.append(f"RSI{rv} 과매수")
+        elif 50 <= rv < 70:
+            p += 5; pros.append(f"RSI{rv} 강세")
+    st = ind.get("stochastic_slow") or {}
+    if st.get("golden_cross") and not st.get("overbought"):
+        p += 5; pros.append("Stoch골든")
+    elif st.get("overbought"):
+        p -= 6; cons.append("Stoch 과매수")
+    ich = ind.get("ichimoku") or {}
+    if ich.get("available") and ich.get("above_cloud") and ich.get("tenkan_gt_kijun"):
+        p += 7; pros.append("일목 구름위")
+    if (ind.get("volume_vs_20d") or 0) >= 1.5:
+        p += 4; pros.append(f"거래량{ind['volume_vs_20d']}배")
+    # 재료
+    s = sent or {}
+    if s.get("sentiment") == "호재":
+        p += 6; pros.append("호재")
+    elif s.get("sentiment") == "악재":
+        p -= 12; cons.append("악재")
+    p += min(6.0, (s.get("importance") or 0) * 0.7)
+    # 지속성(장중 반복 등장)
+    ap = persist.get("appearances", 1) if persist else 1
+    p += min(8.0, ap * 1.0)
+    if ap >= 3:
+        pros.append(f"장중 {ap}회 지속")
+    return max(5, min(95, round(p))), pros[:3], cons[:2]
+
+
+def build(top, bet_n):
+    now = datetime.now(KST)
+    uni = collect_mod.fetch_universe()
+    state, _ = collect_mod.accumulate(uni, now)
+    cand = uni[:top]  # API 확률 상위만 심화분석(호출 통제)
+
+    rows = []
+    for u in cand:
+        ind = compute_indicators(u["code"], u["name"])
+        sent = analyze_news(u["code"], u["name"])
+        persist = state.get(u["code"], {})
+        prob, reasons, risks = score(ind, sent, persist)
+        last = ind.get("last_close")
+        rows.append({
+            "ticker": u["name"], "code": u["code"],
+            "tomorrow_up_prob": f"{prob}%", "_p": prob,
+            "entry": last,
+            "target": round(last * 1.05) if last else None,
+            "stop": round(last * 0.97) if last else None,
+            "confidence": "상" if prob >= 70 else "중" if prob >= 55 else "하",
+            "reasons": reasons or ["근거 부족"],
+            "risk": ", ".join(risks) if risks else "특이 위험 낮음",
+            "day_change": u["day_change"],
+        })
+    rows.sort(key=lambda r: -r["_p"])
+    closing = [r for r in rows if r["_p"] >= 55][:bet_n]  # 확신 일정 이상만 종가베팅
+    for r in rows:
+        r.pop("_p", None)
+
+    return {
+        "as_of": now.strftime("%Y-%m-%d %H:%M KST"),
+        "intraday_rank": rows,      # 잠정 랭킹(전체)
+        "closing_bet": closing,     # 종가베팅 후보(상위·확신)
+        "disclaimer": DISCLAIMER,
+        "backtest": None,           # backtest.py가 채움
+    }
+
+
+def git(*a):
+    return subprocess.run(["git", *a], cwd=REPO, capture_output=True, text=True)
+
+
+def main():
+    args = sys.argv[1:]
+    dry = "--dry-run" in args
+    top = int(args[args.index("--top") + 1]) if "--top" in args else 12
+    bet = int(args[args.index("--bet") + 1]) if "--bet" in args else 5
+
+    out = build(top, bet)
+    text = json.dumps(out, ensure_ascii=False, indent=2)
+
+    if dry:
+        open("/tmp/predictions_preview.json", "w", encoding="utf-8").write(text)
+        print(f"[DRY-RUN] /tmp/predictions_preview.json  (as_of {out['as_of']})")
+        print(f"종가베팅 후보 {len(out['closing_bet'])} / 잠정랭킹 {len(out['intraday_rank'])}")
+        for r in out["closing_bet"]:
+            print(f"  🎯 {r['ticker']} {r['tomorrow_up_prob']} 진입{r['entry']} 손절{r['stop']} [{r['confidence']}] {r['reasons']}")
+        return
+
+    open(PRED, "w", encoding="utf-8").write(text)
+    if "--push" in args:
+        git("add", "web/data/predictions.json")
+        git("commit", "-q", "-m", f"data: 내일상승 예측 갱신 (종가베팅 {len(out['closing_bet'])})")
+        pl = git("pull", "--rebase", "--autostash", "origin", "main")
+        if pl.returncode != 0:
+            git("rebase", "--abort"); sys.stderr.write("pull 실패\n"); sys.exit(1)
+        git("push", "origin", "main")
+    print(f"predictions.json 작성 (as_of {out['as_of']}, 종가베팅 {len(out['closing_bet'])})")
+
+
+if __name__ == "__main__":
+    main()

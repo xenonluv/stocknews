@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
 import { listSignals } from "@/lib/signals/repository";
 import { LiveSignals } from "@/components/signal/LiveSignals";
 
@@ -20,6 +23,19 @@ export default function Home() {
           <span className="tabular-nums"> · 총 {total}건</span>
         </p>
       </header>
+
+      <Link
+        href="/forecast"
+        className="mb-8 flex items-center justify-between gap-3 rounded-lg border border-[rgba(125,176,255,0.35)] bg-gradient-to-br from-[rgba(59,130,246,0.16)] to-[rgba(255,255,255,0.03)] px-5 py-4 backdrop-blur-xl transition-shadow hover:shadow-[0_0_28px_2px_rgba(59,130,246,0.35)]"
+      >
+        <div>
+          <p className="text-base font-bold">🎯 내일 상승 예측 · 종가베팅</p>
+          <p className="text-xs text-muted-foreground">
+            오늘 종가 매수 시 내일 오를 확률 높은 종목 보기
+          </p>
+        </div>
+        <ArrowRight className="size-5 shrink-0 text-up" aria-hidden />
+      </Link>
 
       <LiveSignals initialSignals={items} />
     </main>
