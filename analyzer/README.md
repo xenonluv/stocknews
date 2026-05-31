@@ -24,7 +24,14 @@ python3 analyzer/run.py --dry-run            # 미리보기(/tmp)
 python3 analyzer/run.py --top 12 --bet 5 --push   # predictions.json 작성 + push(배포)
 ```
 
-## 장중 자동화 (cron, 기존 publish와 독립)
+## 장중 자동화 (cron) — 원클릭 설치
+```bash
+git pull && bash scripts/install_cron.sh        # publish + analyzer + backtest cron 일괄 설치(idempotent)
+bash scripts/install_cron.sh --dry-run          # 설치 전 미리보기
+```
+> publish·analyzer 두 푸셔를 **7분 시차**로 배치해 동시 git push 충돌을 막는다. 재실행하면 최신 스케줄로 안전 갱신.
+
+### 수동 cron (참고, 기존 publish와 독립)
 ```
 # 장중 15분: 예측 생성·게시 (run.py가 이력 기록 + 보정표 적용 + 백테스트 요약 임베드)
 */15 9-15 * * 1-5  cd ~/stocknews && /usr/bin/python3 analyzer/run.py --push >> /tmp/forecast.log 2>&1
