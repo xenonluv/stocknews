@@ -46,8 +46,8 @@ export function ForecastList({
     };
   }, []);
 
-  // 14:20 이후/마감엔 종가베팅 확정 강조, 그 전엔 잠정 랭킹
-  const showClosing = phase === "locked" || phase === "closed";
+  // 장중(09:00~14:20)만 잠정 랭킹 우선. 개장 전에는 전일 확정 후보를 유지 노출.
+  const showClosing = phase !== "intraday";
   const status = PHASE_MSG[phase];
   const bet = data.closing_bet ?? [];
   const rank = data.intraday_rank ?? [];
