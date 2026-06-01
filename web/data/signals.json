@@ -1,40 +1,61 @@
 [
   {
-    "post_id": "POST_20260601_128940",
+    "post_id": "POST_20260601_006660",
     "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "한미약품",
-    "signal_probability": "51%",
+    "tier": "signal",
+    "target_stock": "삼성공조",
+    "signal_probability": "52%",
     "position_type": "과다상승",
-    "day_change": 8.35,
-    "headline": "실속 챙긴 한미약품…'단장증후군 신약' 1.9조 잭팟",
-    "summary": "[후보] 재료+거래대금 포착(중요도 8.5, 호재) · 일봉 과다상승.",
+    "day_change": 12.25,
+    "headline": "삼성공조, 지난해 영업익 32억…전년비 49.9% ↓",
+    "summary": "[시그널] 일봉 과다상승 · 재료 호재(중요도 4.0). 일봉 국면을 함께 확인.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:15 KST",
+    "published_at": "2026-06-01 10:30 KST",
     "news": [
       {
-        "title": "실속 챙긴 한미약품…'단장증후군 신약' 1.9조 잭팟",
-        "url": "https://n.news.naver.com/mnews/article/119/0003096489",
-        "office": "데일리안",
-        "sentiment": "호재"
-      },
-      {
-        "title": "한미약품, 美 릴리와 1.9조원 기술이전 계약…GLP-2 신약 글로벌 개발",
-        "url": "https://n.news.naver.com/mnews/article/123/0002383942",
-        "office": "조세일보",
-        "sentiment": "호재"
-      },
-      {
-        "title": "체중 감량시 근육 손실 해결 ‘신개념 비만치료제’ 첫 공개",
-        "url": "https://n.news.naver.com/mnews/article/021/0002794734",
-        "office": "문화일보",
-        "sentiment": "악재"
-      },
-      {
-        "title": "셀트리온·한미약품, ‘근육 손실 막는 비만약’ 임상시험 속도전",
-        "url": "https://n.news.naver.com/mnews/article/029/0003029346",
-        "office": "디지털타임스",
+        "title": "삼성공조, 지난해 영업익 32억…전년비 49.9% ↓",
+        "url": "https://n.news.naver.com/mnews/article/016/0002604432",
+        "office": "헤럴드경제",
         "sentiment": "혼재"
+      },
+      {
+        "title": "기업 공시[12월 8일]",
+        "url": "https://n.news.naver.com/mnews/article/011/0004564827",
+        "office": "서울경제",
+        "sentiment": "호재"
+      }
+    ]
+  },
+  {
+    "post_id": "POST_20260601_035420",
+    "status": "PUBLISHED",
+    "tier": "signal",
+    "target_stock": "NAVER",
+    "signal_probability": "45%",
+    "position_type": "과다상승",
+    "day_change": 10.04,
+    "headline": "젠슨 황 만나는 이해진 ‘AI 승부수’…네이버 ‘국방-피지컬AI-인프라...",
+    "summary": "[시그널] 일봉 과다상승 · 재료 호재(중요도 4.5). 일봉 국면을 함께 확인.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-01 10:30 KST",
+    "news": [
+      {
+        "title": "젠슨 황 만나는 이해진 ‘AI 승부수’…네이버 ‘국방-피지컬AI-인프라...",
+        "url": "https://n.news.naver.com/mnews/article/016/0002650534",
+        "office": "헤럴드경제",
+        "sentiment": "호재"
+      },
+      {
+        "title": "네이버, 드론 전문 기업 ‘유비파이’ 투자…피지컬 AI 생태계 확대",
+        "url": "https://n.news.naver.com/mnews/article/011/0004626488",
+        "office": "서울경제",
+        "sentiment": "호재"
+      },
+      {
+        "title": "팔도·hy, 방탄소년단 협업 브랜드 ‘아리’ 국내 출시",
+        "url": "https://n.news.naver.com/mnews/article/092/0002424846",
+        "office": "지디넷코리아",
+        "sentiment": "호재"
       }
     ]
   },
@@ -45,11 +66,11 @@
     "target_stock": "NHN",
     "signal_probability": "50%",
     "position_type": "과다상승",
-    "day_change": 8.64,
+    "day_change": 6.68,
     "headline": "NHN, 이틀째 강세 ‘19%↑’…클라우드 사업 기대감",
     "summary": "[후보] 재료+거래대금 포착(중요도 8.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:15 KST",
+    "published_at": "2026-06-01 10:30 KST",
     "news": [
       {
         "title": "NHN, 이틀째 강세 ‘19%↑’…클라우드 사업 기대감",
@@ -84,11 +105,11 @@
     "target_stock": "SKC",
     "signal_probability": "45%",
     "position_type": "과다상승",
-    "day_change": 19.96,
+    "day_change": 21.9,
     "headline": "신영증권 &quot;SKC, 적자폭 축소 지속…2027년 흑자전환 예상&quot;",
     "summary": "[후보] 재료+거래대금 포착(중요도 8.0, 혼재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:15 KST",
+    "published_at": "2026-06-01 10:30 KST",
     "news": [
       {
         "title": "신영증권 &quot;SKC, 적자폭 축소 지속…2027년 흑자전환 예상&quot;",
@@ -117,17 +138,56 @@
     ]
   },
   {
+    "post_id": "POST_20260601_003550",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "LG",
+    "signal_probability": "49%",
+    "position_type": "과다상승",
+    "day_change": 19.03,
+    "headline": "대만서 젠슨 황 만나는 삼성·SK·현대차·LG...AI 주도권 격돌",
+    "summary": "[후보] 재료+거래대금 포착(중요도 7.5, 호재) · 일봉 과다상승.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-01 10:30 KST",
+    "news": [
+      {
+        "title": "대만서 젠슨 황 만나는 삼성·SK·현대차·LG...AI 주도권 격돌",
+        "url": "https://n.news.naver.com/mnews/article/374/0000513313",
+        "office": "SBS Biz",
+        "sentiment": "호재"
+      },
+      {
+        "title": "젠슨 황 방한에 LG그룹株 들썩…LG전자 24% 급등 [종목Pick]",
+        "url": "https://n.news.naver.com/mnews/article/016/0002650528",
+        "office": "헤럴드경제",
+        "sentiment": "호재"
+      },
+      {
+        "title": "삼성SDS·LG CNS 주가 '불기둥'…AI 인프라 성장 기대감 고조",
+        "url": "https://n.news.naver.com/mnews/article/138/0002229495",
+        "office": "디지털데일리",
+        "sentiment": "호재"
+      },
+      {
+        "title": "[속보]‘젠슨 황 효과 이 정도?’ LG전자 또 29.8%↑상한가, 그룹주 일...",
+        "url": "https://n.news.naver.com/mnews/article/021/0002794761",
+        "office": "문화일보",
+        "sentiment": "호재"
+      }
+    ]
+  },
+  {
     "post_id": "POST_20260601_242040",
     "status": "PUBLISHED",
     "tier": "candidate",
     "target_stock": "나무기술",
     "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 23.12,
+    "day_change": 25.63,
     "headline": "나무기술, 1분기 매출 370억원…가상화·클라우드 전환 수요에 수익성...",
     "summary": "[후보] 재료+거래대금 포착(중요도 7.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:15 KST",
+    "published_at": "2026-06-01 10:30 KST",
     "news": [
       {
         "title": "나무기술, 1분기 매출 370억원…가상화·클라우드 전환 수요에 수익성...",
@@ -166,7 +226,7 @@
     "headline": "노타, 퀄컴 엣지 디바이스서 '피지컬 AI' 속도 7배 높였다",
     "summary": "[후보] 재료+거래대금 포착(중요도 7.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:15 KST",
+    "published_at": "2026-06-01 10:30 KST",
     "news": [
       {
         "title": "노타, 퀄컴 엣지 디바이스서 '피지컬 AI' 속도 7배 높였다",
@@ -195,17 +255,50 @@
     ]
   },
   {
+    "post_id": "POST_20260601_066570",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "LG전자",
+    "signal_probability": "48%",
+    "position_type": "과다상승",
+    "day_change": 27.47,
+    "headline": "젠슨 황 방한에 LG그룹株 들썩…LG전자 24% 급등 [종목Pick]",
+    "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 과다상승.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-01 10:30 KST",
+    "news": [
+      {
+        "title": "젠슨 황 방한에 LG그룹株 들썩…LG전자 24% 급등 [종목Pick]",
+        "url": "https://n.news.naver.com/mnews/article/016/0002650528",
+        "office": "헤럴드경제",
+        "sentiment": "호재"
+      },
+      {
+        "title": "LG전자, 1분기 올레드TV 점유율 50.5%…14년 연속 1위 청신호",
+        "url": "https://n.news.naver.com/mnews/article/029/0003029452",
+        "office": "디지털타임스",
+        "sentiment": "호재"
+      },
+      {
+        "title": "LG전자, 넷플릭스와 손잡고 'TV+OTT 구독' 꺼내",
+        "url": "https://n.news.naver.com/mnews/article/031/0001032105",
+        "office": "아이뉴스24",
+        "sentiment": "호재"
+      }
+    ]
+  },
+  {
     "post_id": "POST_20260601_000150",
     "status": "PUBLISHED",
     "tier": "candidate",
     "target_stock": "두산",
     "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 15.97,
+    "day_change": 15.31,
     "headline": "[특징주] 젠슨 황 방한 기대감에 로봇주 급등…두산로보틱스 26% ↑",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:15 KST",
+    "published_at": "2026-06-01 10:30 KST",
     "news": [
       {
         "title": "[특징주] 젠슨 황 방한 기대감에 로봇주 급등…두산로보틱스 26% ↑",
@@ -234,11 +327,11 @@
     "target_stock": "한온시스템",
     "signal_probability": "75%",
     "position_type": "상승추세",
-    "day_change": -6.04,
+    "day_change": -4.44,
     "headline": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 상승추세.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:15 KST",
+    "published_at": "2026-06-01 10:30 KST",
     "news": [
       {
         "title": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
@@ -250,39 +343,6 @@
         "title": "한온시스템 “2030년 매출 14조 7000억원, 영업이익률 9% 달성”",
         "url": "https://n.news.naver.com/mnews/article/011/0004624552",
         "office": "서울경제",
-        "sentiment": "호재"
-      }
-    ]
-  },
-  {
-    "post_id": "POST_20260601_003550",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "LG",
-    "signal_probability": "46%",
-    "position_type": "과다상승",
-    "day_change": 18.21,
-    "headline": "[속보]‘젠슨 황 효과 이 정도?’ LG전자 또 29.8%↑상한가, 그룹주 일...",
-    "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 호재) · 일봉 과다상승.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:15 KST",
-    "news": [
-      {
-        "title": "[속보]‘젠슨 황 효과 이 정도?’ LG전자 또 29.8%↑상한가, 그룹주 일...",
-        "url": "https://n.news.naver.com/mnews/article/021/0002794761",
-        "office": "문화일보",
-        "sentiment": "호재"
-      },
-      {
-        "title": "이번엔 “최강두산” 젠슨황 시구설에 두산 ‘불기둥’…두산로보틱...",
-        "url": "https://n.news.naver.com/mnews/article/081/0003648471",
-        "office": "서울신문",
-        "sentiment": "호재"
-      },
-      {
-        "title": "&quot;구글 AI 프로 구독 시 유튜브 프리미엄이 '덤'&quot;…LG유플, 국내 최초 출...",
-        "url": "https://n.news.naver.com/mnews/article/008/0005365403",
-        "office": "머니투데이",
         "sentiment": "호재"
       }
     ]
