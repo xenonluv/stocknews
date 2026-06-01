@@ -4,14 +4,20 @@
     "status": "PUBLISHED",
     "tier": "signal",
     "target_stock": "노타",
-    "signal_probability": "56%",
+    "signal_probability": "57%",
     "position_type": "과다상승",
-    "day_change": 3.77,
-    "headline": "노타, 퀄컴 엣지 디바이스서 '피지컬 AI' 속도 7배 높였다",
-    "summary": "[시그널] 일봉 과다상승 · 재료 호재(중요도 7.0). 일봉 국면을 함께 확인.",
+    "day_change": 5.45,
+    "headline": "노타, 영상관제 AI 현장 적용 확대…엔비디아와 협력",
+    "summary": "[시그널] 일봉 과다상승 · 재료 호재(중요도 7.5). 일봉 국면을 함께 확인.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 13:45 KST",
+    "published_at": "2026-06-01 14:00 KST",
     "news": [
+      {
+        "title": "노타, 영상관제 AI 현장 적용 확대…엔비디아와 협력",
+        "url": "https://n.news.naver.com/mnews/article/003/0013979735",
+        "office": "뉴시스",
+        "sentiment": "호재"
+      },
       {
         "title": "노타, 퀄컴 엣지 디바이스서 '피지컬 AI' 속도 7배 높였다",
         "url": "https://n.news.naver.com/mnews/article/092/0002424676",
@@ -29,12 +35,6 @@
         "url": "https://n.news.naver.com/mnews/article/018/0006284528",
         "office": "이데일리",
         "sentiment": "호재"
-      },
-      {
-        "title": "노타, 모빌린트와 AI 최적화 기술 공급 계약",
-        "url": "https://n.news.naver.com/mnews/article/025/0003521682",
-        "office": "중앙일보",
-        "sentiment": "호재"
       }
     ]
   },
@@ -45,11 +45,11 @@
     "target_stock": "NHN",
     "signal_probability": "50%",
     "position_type": "과다상승",
-    "day_change": 24.95,
+    "day_change": 25.64,
     "headline": "NHN, 이틀째 강세 ‘19%↑’…클라우드 사업 기대감",
     "summary": "[후보] 재료+거래대금 포착(중요도 8.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 13:45 KST",
+    "published_at": "2026-06-01 14:00 KST",
     "news": [
       {
         "title": "NHN, 이틀째 강세 ‘19%↑’…클라우드 사업 기대감",
@@ -82,13 +82,13 @@
     "status": "PUBLISHED",
     "tier": "candidate",
     "target_stock": "SKC",
-    "signal_probability": "45%",
-    "position_type": "과다상승",
-    "day_change": 20.39,
+    "signal_probability": "65%",
+    "position_type": "상승추세",
+    "day_change": 18.16,
     "headline": "신영증권 &quot;SKC, 적자폭 축소 지속…2027년 흑자전환 예상&quot;",
-    "summary": "[후보] 재료+거래대금 포착(중요도 8.0, 혼재) · 일봉 과다상승.",
+    "summary": "[후보] 재료+거래대금 포착(중요도 8.0, 혼재) · 일봉 상승추세.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 13:45 KST",
+    "published_at": "2026-06-01 14:00 KST",
     "news": [
       {
         "title": "신영증권 &quot;SKC, 적자폭 축소 지속…2027년 흑자전환 예상&quot;",
@@ -123,11 +123,11 @@
     "target_stock": "두산",
     "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 19.07,
+    "day_change": 18.76,
     "headline": "'젠슨황 시구설'에 두산그룹주 급등…두산로보틱스 상한가",
     "summary": "[후보] 재료+거래대금 포착(중요도 7.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 13:45 KST",
+    "published_at": "2026-06-01 14:00 KST",
     "news": [
       {
         "title": "'젠슨황 시구설'에 두산그룹주 급등…두산로보틱스 상한가",
@@ -166,7 +166,7 @@
     "headline": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 상승추세.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 13:45 KST",
+    "published_at": "2026-06-01 14:00 KST",
     "news": [
       {
         "title": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
@@ -189,28 +189,28 @@
     "target_stock": "NAVER",
     "signal_probability": "45%",
     "position_type": "과다상승",
-    "day_change": 26.5,
-    "headline": "방한 임박 젠슨 황 CEO…서울 핫플서 '깐부회동' 재현되나(종합)",
+    "day_change": 29.49,
+    "headline": "젠슨 황, 8일 네이버 사옥 '1784' 방문 유력…피지컬 AI 동맹 넓히나",
     "summary": "[후보] 재료+거래대금 포착(중요도 4.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 13:45 KST",
+    "published_at": "2026-06-01 14:00 KST",
     "news": [
       {
-        "title": "방한 임박 젠슨 황 CEO…서울 핫플서 '깐부회동' 재현되나(종합)",
-        "url": "https://n.news.naver.com/mnews/article/001/0016111827",
-        "office": "연합뉴스",
+        "title": "젠슨 황, 8일 네이버 사옥 '1784' 방문 유력…피지컬 AI 동맹 넓히나",
+        "url": "https://n.news.naver.com/mnews/article/003/0013979750",
+        "office": "뉴시스",
+        "sentiment": "호재"
+      },
+      {
+        "title": "젠슨 황, 8일 네이버 ‘1784’ 찾는다…산업용 피지컬 AI 동맹 강화",
+        "url": "https://n.news.naver.com/mnews/article/018/0006295351",
+        "office": "이데일리",
         "sentiment": "호재"
       },
       {
         "title": "네이버, 드론 자율비행 플랫폼 기업 '유비파이'에 투자",
         "url": "https://n.news.naver.com/mnews/article/031/0001032162",
         "office": "아이뉴스24",
-        "sentiment": "호재"
-      },
-      {
-        "title": "젠슨 황, 방한 때 네이버 사옥 방문 예정…AI 협력 논의 전망",
-        "url": "https://n.news.naver.com/mnews/article/055/0001360734",
-        "office": "SBS",
         "sentiment": "호재"
       }
     ]
@@ -222,11 +222,11 @@
     "target_stock": "LG",
     "signal_probability": "45%",
     "position_type": "과다상승",
-    "day_change": 21.28,
+    "day_change": 21.76,
     "headline": "&quot;엔솔 분할 뒤 주가 3분의 1토막&quot;…LG화학 해외주주 달래기",
     "summary": "[후보] 재료+거래대금 포착(중요도 4.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 13:45 KST",
+    "published_at": "2026-06-01 14:00 KST",
     "news": [
       {
         "title": "&quot;엔솔 분할 뒤 주가 3분의 1토막&quot;…LG화학 해외주주 달래기",
@@ -255,11 +255,11 @@
     "target_stock": "삼성에스디에스",
     "signal_probability": "44%",
     "position_type": "과다상승",
-    "day_change": 27.93,
+    "day_change": 28.76,
     "headline": "엠로, 신임 대표에 조상원 삼성SDS 상무 내정",
     "summary": "[후보] 재료+거래대금 포착(중요도 4.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 13:45 KST",
+    "published_at": "2026-06-01 14:00 KST",
     "news": [
       {
         "title": "엠로, 신임 대표에 조상원 삼성SDS 상무 내정",
@@ -286,7 +286,7 @@
     "headline": "&quot;엔비디아 측 좌석 대거 확보&quot;...젠슨 황 시구설 이어 두산로보틱스 ...",
     "summary": "[후보] 재료+거래대금 포착(중요도 4.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 13:45 KST",
+    "published_at": "2026-06-01 14:00 KST",
     "news": [
       {
         "title": "&quot;엔비디아 측 좌석 대거 확보&quot;...젠슨 황 시구설 이어 두산로보틱스 ...",
