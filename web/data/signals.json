@@ -1,54 +1,21 @@
 [
   {
-    "post_id": "POST_20260601_035420",
-    "status": "PUBLISHED",
-    "tier": "signal",
-    "target_stock": "NAVER",
-    "signal_probability": "53%",
-    "position_type": "과다상승",
-    "day_change": 11.54,
-    "headline": "&quot;혼자 먹기 좋은 밀키트 찾아볼까요?&quot;…먼저 대화 건네는 네이버 쇼핑...",
-    "summary": "[시그널] 일봉 과다상승 · 재료 호재(중요도 4.5). 일봉 국면을 함께 확인.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:00 KST",
-    "news": [
-      {
-        "title": "&quot;혼자 먹기 좋은 밀키트 찾아볼까요?&quot;…먼저 대화 건네는 네이버 쇼핑...",
-        "url": "https://n.news.naver.com/mnews/article/277/0005770214",
-        "office": "아시아경제",
-        "sentiment": "호재"
-      },
-      {
-        "title": "네이버 AI, 하늘 날아오른다…글로벌 드론 강자 '유비파이' 전격 투자",
-        "url": "https://n.news.naver.com/mnews/article/008/0005365405",
-        "office": "머니투데이",
-        "sentiment": "호재"
-      },
-      {
-        "title": "네이버클라우드, 국방 AI 전담 조직 띄운다…군 특화 AX 시장 정조준",
-        "url": "https://n.news.naver.com/mnews/article/092/0002424838",
-        "office": "지디넷코리아",
-        "sentiment": "호재"
-      }
-    ]
-  },
-  {
     "post_id": "POST_20260601_128940",
     "status": "PUBLISHED",
     "tier": "candidate",
     "target_stock": "한미약품",
-    "signal_probability": "53%",
+    "signal_probability": "51%",
     "position_type": "과다상승",
-    "day_change": 11.0,
-    "headline": "한미약품, 릴리에 1.9조원 규모 신약후보 기술수출",
-    "summary": "[후보] 재료+거래대금 포착(중요도 10.0, 호재) · 일봉 과다상승.",
+    "day_change": 8.35,
+    "headline": "실속 챙긴 한미약품…'단장증후군 신약' 1.9조 잭팟",
+    "summary": "[후보] 재료+거래대금 포착(중요도 8.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:00 KST",
+    "published_at": "2026-06-01 10:15 KST",
     "news": [
       {
-        "title": "한미약품, 릴리에 1.9조원 규모 신약후보 기술수출",
-        "url": "https://n.news.naver.com/mnews/article/031/0001032081",
-        "office": "아이뉴스24",
+        "title": "실속 챙긴 한미약품…'단장증후군 신약' 1.9조 잭팟",
+        "url": "https://n.news.naver.com/mnews/article/119/0003096489",
+        "office": "데일리안",
         "sentiment": "호재"
       },
       {
@@ -58,55 +25,16 @@
         "sentiment": "호재"
       },
       {
-        "title": "한미약품, 릴리에 1조9000억 규모 신약 기술이전",
-        "url": "https://n.news.naver.com/mnews/article/293/0000085596",
-        "office": "블로터",
-        "sentiment": "호재"
-      },
-      {
         "title": "체중 감량시 근육 손실 해결 ‘신개념 비만치료제’ 첫 공개",
         "url": "https://n.news.naver.com/mnews/article/021/0002794734",
         "office": "문화일보",
         "sentiment": "악재"
-      }
-    ]
-  },
-  {
-    "post_id": "POST_20260601_011790",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "SKC",
-    "signal_probability": "45%",
-    "position_type": "과다상승",
-    "day_change": 24.19,
-    "headline": "신영증권 &quot;SKC, 적자폭 축소 지속…2027년 흑자전환 예상&quot;",
-    "summary": "[후보] 재료+거래대금 포착(중요도 8.0, 혼재) · 일봉 과다상승.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:00 KST",
-    "news": [
+      },
       {
-        "title": "신영증권 &quot;SKC, 적자폭 축소 지속…2027년 흑자전환 예상&quot;",
-        "url": "https://n.news.naver.com/mnews/article/001/0016103428",
-        "office": "연합뉴스",
+        "title": "셀트리온·한미약품, ‘근육 손실 막는 비만약’ 임상시험 속도전",
+        "url": "https://n.news.naver.com/mnews/article/029/0003029346",
+        "office": "디지털타임스",
         "sentiment": "혼재"
-      },
-      {
-        "title": "SK넥실리스 美 특허소송서 완승…후발주자 기술 모방에 제동",
-        "url": "https://n.news.naver.com/mnews/article/011/0004625197",
-        "office": "서울경제",
-        "sentiment": "혼재"
-      },
-      {
-        "title": "SKC, 주주배정 유상증자 납입 완료…1.1조 규모",
-        "url": "https://n.news.naver.com/mnews/article/293/0000085182",
-        "office": "블로터",
-        "sentiment": "악재"
-      },
-      {
-        "title": "SKC, 주주배정 유상증자 청약률 333% 찍었다",
-        "url": "https://n.news.naver.com/mnews/article/293/0000085098",
-        "office": "블로터",
-        "sentiment": "악재"
       }
     ]
   },
@@ -117,11 +45,11 @@
     "target_stock": "NHN",
     "signal_probability": "50%",
     "position_type": "과다상승",
-    "day_change": 9.43,
+    "day_change": 8.64,
     "headline": "NHN, 이틀째 강세 ‘19%↑’…클라우드 사업 기대감",
     "summary": "[후보] 재료+거래대금 포착(중요도 8.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:00 KST",
+    "published_at": "2026-06-01 10:15 KST",
     "news": [
       {
         "title": "NHN, 이틀째 강세 ‘19%↑’…클라우드 사업 기대감",
@@ -150,17 +78,56 @@
     ]
   },
   {
+    "post_id": "POST_20260601_011790",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "SKC",
+    "signal_probability": "45%",
+    "position_type": "과다상승",
+    "day_change": 19.96,
+    "headline": "신영증권 &quot;SKC, 적자폭 축소 지속…2027년 흑자전환 예상&quot;",
+    "summary": "[후보] 재료+거래대금 포착(중요도 8.0, 혼재) · 일봉 과다상승.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-01 10:15 KST",
+    "news": [
+      {
+        "title": "신영증권 &quot;SKC, 적자폭 축소 지속…2027년 흑자전환 예상&quot;",
+        "url": "https://n.news.naver.com/mnews/article/001/0016103428",
+        "office": "연합뉴스",
+        "sentiment": "혼재"
+      },
+      {
+        "title": "SK넥실리스 美 특허소송서 완승…후발주자 기술 모방에 제동",
+        "url": "https://n.news.naver.com/mnews/article/011/0004625197",
+        "office": "서울경제",
+        "sentiment": "혼재"
+      },
+      {
+        "title": "SKC, 주주배정 유상증자 납입 완료…1.1조 규모",
+        "url": "https://n.news.naver.com/mnews/article/293/0000085182",
+        "office": "블로터",
+        "sentiment": "악재"
+      },
+      {
+        "title": "SKC, 주주배정 유상증자 청약률 333% 찍었다",
+        "url": "https://n.news.naver.com/mnews/article/293/0000085098",
+        "office": "블로터",
+        "sentiment": "악재"
+      }
+    ]
+  },
+  {
     "post_id": "POST_20260601_242040",
     "status": "PUBLISHED",
     "tier": "candidate",
     "target_stock": "나무기술",
     "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 22.89,
+    "day_change": 23.12,
     "headline": "나무기술, 1분기 매출 370억원…가상화·클라우드 전환 수요에 수익성...",
     "summary": "[후보] 재료+거래대금 포착(중요도 7.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:00 KST",
+    "published_at": "2026-06-01 10:15 KST",
     "news": [
       {
         "title": "나무기술, 1분기 매출 370억원…가상화·클라우드 전환 수요에 수익성...",
@@ -195,11 +162,11 @@
     "target_stock": "노타",
     "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 2.08,
+    "day_change": 3.64,
     "headline": "노타, 퀄컴 엣지 디바이스서 '피지컬 AI' 속도 7배 높였다",
     "summary": "[후보] 재료+거래대금 포착(중요도 7.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:00 KST",
+    "published_at": "2026-06-01 10:15 KST",
     "news": [
       {
         "title": "노타, 퀄컴 엣지 디바이스서 '피지컬 AI' 속도 7배 높였다",
@@ -234,11 +201,11 @@
     "target_stock": "두산",
     "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 12.12,
+    "day_change": 15.97,
     "headline": "[특징주] 젠슨 황 방한 기대감에 로봇주 급등…두산로보틱스 26% ↑",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:00 KST",
+    "published_at": "2026-06-01 10:15 KST",
     "news": [
       {
         "title": "[특징주] 젠슨 황 방한 기대감에 로봇주 급등…두산로보틱스 26% ↑",
@@ -267,11 +234,11 @@
     "target_stock": "한온시스템",
     "signal_probability": "75%",
     "position_type": "상승추세",
-    "day_change": -4.8,
+    "day_change": -6.04,
     "headline": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 상승추세.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:00 KST",
+    "published_at": "2026-06-01 10:15 KST",
     "news": [
       {
         "title": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
@@ -288,28 +255,34 @@
     ]
   },
   {
-    "post_id": "POST_20260601_018260",
+    "post_id": "POST_20260601_003550",
     "status": "PUBLISHED",
     "tier": "candidate",
-    "target_stock": "삼성에스디에스",
-    "signal_probability": "44%",
+    "target_stock": "LG",
+    "signal_probability": "46%",
     "position_type": "과다상승",
-    "day_change": 14.55,
-    "headline": "엠로, 신임 대표에 조상원 삼성SDS 상무 내정",
-    "summary": "[후보] 재료+거래대금 포착(중요도 4.0, 호재) · 일봉 과다상승.",
+    "day_change": 18.21,
+    "headline": "[속보]‘젠슨 황 효과 이 정도?’ LG전자 또 29.8%↑상한가, 그룹주 일...",
+    "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 10:00 KST",
+    "published_at": "2026-06-01 10:15 KST",
     "news": [
       {
-        "title": "엠로, 신임 대표에 조상원 삼성SDS 상무 내정",
-        "url": "https://n.news.naver.com/mnews/article/016/0002650492",
-        "office": "헤럴드경제",
+        "title": "[속보]‘젠슨 황 효과 이 정도?’ LG전자 또 29.8%↑상한가, 그룹주 일...",
+        "url": "https://n.news.naver.com/mnews/article/021/0002794761",
+        "office": "문화일보",
         "sentiment": "호재"
       },
       {
-        "title": "[비즈톡톡] 삼성SDS가 두나무 지분에 1532억원 투자한 이유는",
-        "url": "https://n.news.naver.com/mnews/article/366/0001168408",
-        "office": "조선비즈",
+        "title": "이번엔 “최강두산” 젠슨황 시구설에 두산 ‘불기둥’…두산로보틱...",
+        "url": "https://n.news.naver.com/mnews/article/081/0003648471",
+        "office": "서울신문",
+        "sentiment": "호재"
+      },
+      {
+        "title": "&quot;구글 AI 프로 구독 시 유튜브 프리미엄이 '덤'&quot;…LG유플, 국내 최초 출...",
+        "url": "https://n.news.naver.com/mnews/article/008/0005365403",
+        "office": "머니투데이",
         "sentiment": "호재"
       }
     ]
