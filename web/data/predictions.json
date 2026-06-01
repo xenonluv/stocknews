@@ -1,261 +1,263 @@
 {
-  "as_of": "2026-06-01 09:22 KST",
+  "as_of": "2026-06-01 09:37 KST",
   "intraday_rank": [
     {
-      "ticker": "제닉스로보틱스",
-      "code": "381620",
-      "tomorrow_up_prob": "76%",
-      "entry": 12720.0,
-      "target": 13356,
-      "stop": 12338,
+      "ticker": "LG",
+      "code": "003550",
+      "tomorrow_up_prob": "82%",
+      "entry": 178600.0,
+      "target": 187530,
+      "stop": 173242,
       "confidence": "상",
       "reasons": [
+        "강세마감(0.77)",
         "정배열",
-        "MACD강세",
-        "RSI58.0 강세"
+        "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 11.46
+      "day_change": 21.62
     },
     {
       "ticker": "한온시스템",
       "code": "018880",
-      "tomorrow_up_prob": "73%",
-      "entry": 5330.0,
-      "target": 5596,
-      "stop": 5170,
+      "tomorrow_up_prob": "74%",
+      "entry": 5340.0,
+      "target": 5607,
+      "stop": 5180,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI57.5 강세"
+        "RSI57.6 강세"
       ],
       "risk": "약한 마감",
-      "day_change": -6.22
+      "day_change": -4.8
     },
     {
-      "ticker": "LG",
-      "code": "003550",
+      "ticker": "제닉스로보틱스",
+      "code": "381620",
       "tomorrow_up_prob": "73%",
-      "entry": 175100.0,
-      "target": 183855,
-      "stop": 169847,
+      "entry": 12480.0,
+      "target": 13104,
+      "stop": 12106,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "일목 구름위"
+        "RSI56.9 강세"
       ],
-      "risk": "특이 위험 낮음",
-      "day_change": 22.1
+      "risk": "약한 마감",
+      "day_change": 10.16
     },
     {
       "ticker": "두산",
       "code": "000150",
-      "tomorrow_up_prob": "72%",
-      "entry": 2241000.0,
-      "target": 2353050,
-      "stop": 2173770,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 15.42
-    },
-    {
-      "ticker": "NHN",
-      "code": "181710",
-      "tomorrow_up_prob": "63%",
-      "entry": 55700.0,
-      "target": 58485,
-      "stop": 54029,
+      "tomorrow_up_prob": "69%",
+      "entry": 2206000.0,
+      "target": 2316300,
+      "stop": 2139820,
       "confidence": "중",
       "reasons": [
         "정배열",
         "MACD강세",
         "일목 구름위"
       ],
-      "risk": "약한 마감, Stoch 과매수",
-      "day_change": 14.93
-    },
-    {
-      "ticker": "LG전자",
-      "code": "066570",
-      "tomorrow_up_prob": "56%",
-      "entry": 371500.0,
-      "target": 390075,
-      "stop": 360355,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "RSI82.1 과매수, Stoch 과매수",
-      "day_change": 28.33
+      "risk": "약한 마감",
+      "day_change": 11.41
     },
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "55%",
-      "entry": 248500.0,
-      "target": 260925,
-      "stop": 241045,
+      "tomorrow_up_prob": "68%",
+      "entry": 257500.0,
+      "target": 270375,
+      "stop": 249775,
       "confidence": "중",
       "reasons": [
+        "강세마감(0.9)",
         "MACD강세",
         "호재"
       ],
-      "risk": "약한 마감",
-      "day_change": 7.48
-    },
-    {
-      "ticker": "노타",
-      "code": "486990",
-      "tomorrow_up_prob": "54%",
-      "entry": 39200.0,
-      "target": 41160,
-      "stop": 38024,
-      "confidence": "하",
-      "reasons": [
-        "RSI63.6 강세",
-        "호재"
-      ],
-      "risk": "약한 마감",
-      "day_change": 5.32
-    },
-    {
-      "ticker": "삼성에스디에스",
-      "code": "018260",
-      "tomorrow_up_prob": "53%",
-      "entry": 353000.0,
-      "target": 370650,
-      "stop": 342410,
-      "confidence": "하",
-      "reasons": [
-        "강세마감(0.72)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "RSI85.3 과매수, Stoch 과매수",
-      "day_change": 19.57
-    },
-    {
-      "ticker": "나무기술",
-      "code": "242040",
-      "tomorrow_up_prob": "49%",
-      "entry": 10460.0,
-      "target": 10983,
-      "stop": 10146,
-      "confidence": "하",
-      "reasons": [
-        "강세마감(0.76)",
-        "MACD강세",
-        "호재"
-      ],
-      "risk": "RSI85.7 과매수, Stoch 과매수",
-      "day_change": 17.31
-    },
-    {
-      "ticker": "삼성전기",
-      "code": "009150",
-      "tomorrow_up_prob": "48%",
-      "entry": 1999000.0,
-      "target": 2098950,
-      "stop": 1939030,
-      "confidence": "하",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "약한 마감, RSI85.0 과매수",
-      "day_change": -4.94
-    }
-  ],
-  "closing_bet": [
-    {
-      "ticker": "제닉스로보틱스",
-      "code": "381620",
-      "tomorrow_up_prob": "76%",
-      "entry": 12720.0,
-      "target": 13356,
-      "stop": 12338,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI58.0 강세"
-      ],
       "risk": "특이 위험 낮음",
-      "day_change": 11.46
-    },
-    {
-      "ticker": "한온시스템",
-      "code": "018880",
-      "tomorrow_up_prob": "73%",
-      "entry": 5330.0,
-      "target": 5596,
-      "stop": 5170,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI57.5 강세"
-      ],
-      "risk": "약한 마감",
-      "day_change": -6.22
-    },
-    {
-      "ticker": "LG",
-      "code": "003550",
-      "tomorrow_up_prob": "73%",
-      "entry": 175100.0,
-      "target": 183855,
-      "stop": 169847,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 22.1
-    },
-    {
-      "ticker": "두산",
-      "code": "000150",
-      "tomorrow_up_prob": "72%",
-      "entry": 2241000.0,
-      "target": 2353050,
-      "stop": 2173770,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 15.42
+      "day_change": 7.91
     },
     {
       "ticker": "NHN",
       "code": "181710",
-      "tomorrow_up_prob": "63%",
-      "entry": 55700.0,
-      "target": 58485,
-      "stop": 54029,
+      "tomorrow_up_prob": "68%",
+      "entry": 56300.0,
+      "target": 59115,
+      "stop": 54611,
       "confidence": "중",
       "reasons": [
         "정배열",
         "MACD강세",
         "일목 구름위"
       ],
-      "risk": "약한 마감, Stoch 과매수",
-      "day_change": 14.93
+      "risk": "Stoch 과매수",
+      "day_change": 9.63
+    },
+    {
+      "ticker": "한미약품",
+      "code": "128940",
+      "tomorrow_up_prob": "67%",
+      "entry": 561000.0,
+      "target": 589050,
+      "stop": 544170,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.84)",
+        "MACD강세",
+        "RSI67.9 강세"
+      ],
+      "risk": "Stoch 과매수",
+      "day_change": 11.61
+    },
+    {
+      "ticker": "LG전자",
+      "code": "066570",
+      "tomorrow_up_prob": "65%",
+      "entry": 375500.0,
+      "target": 394275,
+      "stop": 364235,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.71)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "RSI82.3 과매수, Stoch 과매수",
+      "day_change": 28.33
+    },
+    {
+      "ticker": "노타",
+      "code": "486990",
+      "tomorrow_up_prob": "55%",
+      "entry": 39200.0,
+      "target": 41160,
+      "stop": 38024,
+      "confidence": "중",
+      "reasons": [
+        "RSI63.6 강세",
+        "호재",
+        "장중 3회 지속"
+      ],
+      "risk": "약한 마감",
+      "day_change": 0.65
+    },
+    {
+      "ticker": "나무기술",
+      "code": "242040",
+      "tomorrow_up_prob": "50%",
+      "entry": 10620.0,
+      "target": 11151,
+      "stop": 10301,
+      "confidence": "하",
+      "reasons": [
+        "강세마감(0.84)",
+        "MACD강세",
+        "호재"
+      ],
+      "risk": "RSI86.1 과매수, Stoch 과매수",
+      "day_change": 19.59
+    },
+    {
+      "ticker": "삼성전기",
+      "code": "009150",
+      "tomorrow_up_prob": "50%",
+      "entry": 2001000.0,
+      "target": 2101050,
+      "stop": 1940970,
+      "confidence": "하",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "일목 구름위"
+      ],
+      "risk": "약한 마감, RSI85.1 과매수",
+      "day_change": -5.88
+    }
+  ],
+  "closing_bet": [
+    {
+      "ticker": "LG",
+      "code": "003550",
+      "tomorrow_up_prob": "82%",
+      "entry": 178600.0,
+      "target": 187530,
+      "stop": 173242,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.77)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 21.62
+    },
+    {
+      "ticker": "한온시스템",
+      "code": "018880",
+      "tomorrow_up_prob": "74%",
+      "entry": 5340.0,
+      "target": 5607,
+      "stop": 5180,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI57.6 강세"
+      ],
+      "risk": "약한 마감",
+      "day_change": -4.8
+    },
+    {
+      "ticker": "제닉스로보틱스",
+      "code": "381620",
+      "tomorrow_up_prob": "73%",
+      "entry": 12480.0,
+      "target": 13104,
+      "stop": 12106,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI56.9 강세"
+      ],
+      "risk": "약한 마감",
+      "day_change": 10.16
+    },
+    {
+      "ticker": "두산",
+      "code": "000150",
+      "tomorrow_up_prob": "69%",
+      "entry": 2206000.0,
+      "target": 2316300,
+      "stop": 2139820,
+      "confidence": "중",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "일목 구름위"
+      ],
+      "risk": "약한 마감",
+      "day_change": 11.41
+    },
+    {
+      "ticker": "NAVER",
+      "code": "035420",
+      "tomorrow_up_prob": "68%",
+      "entry": 257500.0,
+      "target": 270375,
+      "stop": 249775,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.9)",
+        "MACD강세",
+        "호재"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 7.91
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
