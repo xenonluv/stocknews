@@ -52,14 +52,17 @@ def _post(r, tier, stamp_full, today):
     disp = c.get("disparity_pct")
     prob = score(r.get("importance"), phase, c.get("gc_recent"), disp, r.get("sentiment"))
     news = r.get("news", [])
-    headline = (news[0]["title"][:60] if news else f"{name} 스크리너 포착")
+    cause_news = r.get("cause_news") or []
+    headline_source = cause_news[0] if cause_news else (news[0] if news else None)
+    headline = (headline_source["title"][:60] if headline_source and headline_source.get("title")
+                else f"{name} 스크리너 포착")
     if tier == "signal":
         summary = (f"[시그널] 일봉 {phase} · "
                    f"재료 {r.get('sentiment')}(중요도 {r.get('importance')}). 일봉 국면을 함께 확인.")
     else:
         summary = (f"[후보] 재료+거래대금 포착(중요도 {r.get('importance')}, {r.get('sentiment')}) · "
                    f"일봉 {phase}.")
-    return {
+    post = {
         "post_id": f"POST_{today}_{code}",
         "status": "PUBLISHED",
         "tier": tier,
@@ -77,6 +80,19 @@ def _post(r, tier, stamp_full, today):
             for n in news[:6] if n.get("title")
         ],
     }
+    if cause_news:
+        post["cause_news"] = [
+            {"title": n.get("title"), "url": n.get("url"),
+             "office": n.get("office"), "sentiment": n.get("sentiment"),
+             "cause_score": n.get("cause_score", 0),
+             "cause_reason": n.get("cause_reason", "")}
+            for n in cause_news[:3] if n.get("title")
+        ]
+        if r.get("cause_confidence"):
+            post["cause_confidence"] = r.get("cause_confidence")
+        if r.get("cause_summary"):
+            post["cause_summary"] = r.get("cause_summary")
+    return post
 
 
 def build_posts(scr, maxn, max_cand, news_min):

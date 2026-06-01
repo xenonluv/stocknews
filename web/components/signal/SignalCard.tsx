@@ -23,7 +23,8 @@ const CARD_NEWS_LIMIT = 2;
 
 /** SignalPost(API/스키마) → SignalCard props 매핑 */
 export function toSignalCardProps(s: SignalPost): SignalCardProps {
-  const news = (s.news ?? []).filter((n) => n.title);
+  const hasCauseNews = Boolean(s.cause_news?.length);
+  const news = (hasCauseNews ? s.cause_news ?? [] : s.news ?? []).filter((n) => n.title);
   return {
     tier: s.tier,
     targetStock: s.target_stock,
@@ -35,6 +36,7 @@ export function toSignalCardProps(s: SignalPost): SignalCardProps {
     disclaimer: s.disclaimer,
     publishedAt: s.published_at,
     newsCount: news.length,
+    newsLabel: hasCauseNews ? "상승 원인 뉴스" : "관련 뉴스",
     news: news.slice(0, CARD_NEWS_LIMIT).map((n) => ({
       title: n.title,
       sentiment: n.sentiment,
@@ -53,6 +55,7 @@ export interface SignalCardProps {
   disclaimer?: string;
   publishedAt: string;
   newsCount?: number; // 관련 뉴스 총 건수
+  newsLabel?: string;
   news?: CardNewsItem[]; // 카드에 간략 노출(상위 2건). 비링크 텍스트.
 }
 
@@ -86,6 +89,7 @@ export function SignalCard({
   disclaimer,
   publishedAt,
   newsCount = 0,
+  newsLabel = "관련 뉴스",
   news = [],
 }: SignalCardProps) {
   const isSignal = tier !== "candidate";
@@ -145,7 +149,7 @@ export function SignalCard({
           <div className="rounded-md border border-white/10 bg-white/[0.04] p-3">
             <p className="mb-2 flex items-center gap-1 text-xs font-medium text-muted-foreground">
               <Newspaper className="size-3" aria-hidden />
-              관련 뉴스 <span className="tabular-nums">{newsCount}</span>
+              {newsLabel} <span className="tabular-nums">{newsCount}</span>
             </p>
             <ul className="space-y-1.5">
               {news.map((n, i) => (

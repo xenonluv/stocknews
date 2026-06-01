@@ -14,7 +14,13 @@ function sentimentBadge(sentiment?: string | null) {
  * 종목별 관련 뉴스 목록 — 카드 클릭 후 상세에서 노출.
  * 스크리너 재료필터 통과분(네이버 종목뉴스). 링크는 새 탭으로.
  */
-export function NewsList({ news }: { news?: NewsItem[] }) {
+export function NewsList({
+  news,
+  label = "관련 뉴스",
+}: {
+  news?: NewsItem[];
+  label?: string;
+}) {
   const items = (news ?? []).filter((n) => n.title);
   if (items.length === 0) return null;
 
@@ -22,7 +28,7 @@ export function NewsList({ news }: { news?: NewsItem[] }) {
     <section className="mt-6">
       <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
         <Newspaper className="size-4" aria-hidden />
-        관련 뉴스
+        {label}
         <span className="text-xs font-normal text-muted-foreground tabular-nums">
           {items.length}
         </span>

@@ -21,8 +21,8 @@ import urllib.request
 from collections import defaultdict
 
 from team3_price_context import fetch_daily, ma
-from team1_collect import resolve_code, fetch_news, top_ranking
-from team2_relevance import score_news, make_aliases
+from team1_collect import resolve_code, fetch_news, fetch_cause_candidates, top_ranking
+from team2_relevance import score_news, score_cause_news, make_aliases
 from net import get_text  # 정중한 간격 + 재시도
 
 UA = {"User-Agent": "Mozilla/5.0", "Referer": "https://m.stock.naver.com/"}
@@ -87,13 +87,22 @@ def filter_A(code):
 def filter_B(code, name):
     """팀원2 자동 재료 필터: 시황/일반 제거 + 종목명(별칭) 언급 검사 후 '관련 재료'만."""
     news = [n for n in fetch_news(code, 12) if n.get("title")]
-    res = score_news(news, make_aliases(name))
+    aliases = make_aliases(name)
+    res = score_news(news, aliases)
+    try:
+        cause_candidates = fetch_cause_candidates(code, name, base_news=news, k=12)
+        cause = score_cause_news(cause_candidates, aliases)
+    except Exception:
+        cause = {"cause_news": [], "cause_confidence": "낮음", "cause_summary": ""}
     return {"hit": res["relevant_count"] >= NEWS_MIN,
             "count": res["relevant_count"],
             "news": res["relevant"],
             "importance": res["importance_score"],
             "impact": res["impact_level"],
-            "sentiment": res["sentiment"]}
+            "sentiment": res["sentiment"],
+            "cause_news": cause.get("cause_news", []),
+            "cause_confidence": cause.get("cause_confidence"),
+            "cause_summary": cause.get("cause_summary")}
 
 
 def filter_C(code):
@@ -196,6 +205,14 @@ def main():
             rec["news"] = [{"title": n["title"], "url": n.get("url"),
                             "office": n.get("office"), "sentiment": n.get("sentiment")}
                            for n in b.get("news", [])[:4]]
+            rec["cause_news"] = [
+                {"title": n.get("title"), "url": n.get("url"),
+                 "office": n.get("office"), "sentiment": n.get("sentiment"),
+                 "cause_score": n.get("cause_score"), "cause_reason": n.get("cause_reason")}
+                for n in b.get("cause_news", [])[:3] if n.get("title")
+            ]
+            rec["cause_confidence"] = b.get("cause_confidence")
+            rec["cause_summary"] = b.get("cause_summary")
             rec["C"] = {k: c.get(k) for k in ("aligned", "gc_recent", "disparity_pct", "cross_ago_bars")}
             if a["hit"] and b["hit"] and c["hit"]:
                 rec["tier"] = "✅통과"

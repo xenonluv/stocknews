@@ -12,6 +12,13 @@ export interface NewsItem {
   sentiment?: string | null; // 호재 | 악재 | 중립
 }
 
+/** 상승 원인 후보 뉴스 (기존 NewsItem과 호환, 원인 점수 메타데이터만 추가). */
+export interface CauseNewsItem extends NewsItem {
+  cause_score?: number;
+  cause_reason?: string;
+  datetime?: string | null;
+}
+
 /** 게시 분석 데이터 (스크리너 + AI 분석 결과, 참고용) */
 export interface PublishData {
   status: "PUBLISHED";
@@ -22,6 +29,9 @@ export interface PublishData {
   headline: string;
   published_at: string;
   news?: NewsItem[]; // 종목별 관련 뉴스 (카드 클릭 시 상세에서 노출)
+  cause_news?: CauseNewsItem[]; // 급등/강세 원인 후보 뉴스
+  cause_confidence?: "높음" | "중간" | "낮음";
+  cause_summary?: string;
 }
 
 /** 게시 등급: 시그널(A+B+C 통과) / 후보(A+B, C 대기) */

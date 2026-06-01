@@ -16,15 +16,23 @@
 import re
 import sys
 import json
+import os
+import html
+from datetime import datetime, timezone, timedelta
 import urllib.parse
 import urllib.request
 
 from team3_price_context import compute_context  # 동일 scripts/ 디렉터리
 from net import get_bytes  # 정중한 간격 + 재시도
+from team1_fetch_news import fetch as fetch_search_news
+from team1_fetch_news import load_env, source_from_link, strip_html
 
 UA = {"User-Agent": "Mozilla/5.0", "Referer": "https://m.stock.naver.com/"}
+KST = timezone(timedelta(hours=9))
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 랭킹 정렬키 매핑 (네이버 m.stock api/stocks/{sort}/{market})
 SORT = {"상승률": "up", "거래대금": "transactionAmount", "거래량": "tradingVolume"}
+CAUSE_QUERIES = ("{n} 급등", "{n} 강세", "{n} 특징주", "{n} 수혜")
 # ETF/ETN 브랜드 패턴 (개별 종목만 남기기 위해 제외)
 ETF_PAT = re.compile(
     r"KODEX|TIGER|KBSTAR|ARIRANG|HANARO|SOL |ACE |KOSEF|TIMEFOLIO|RISE|PLUS |"
@@ -103,6 +111,71 @@ def fetch_news(code, k=5):
         return items
     except Exception as e:
         return [{"error": str(e)}]
+
+
+def _normalize_title(title):
+    return re.sub(r"\s+", " ", html.unescape(strip_html(title or ""))).strip()
+
+
+def _search_datetime(pub_date):
+    try:
+        dt = datetime.strptime(pub_date, "%a, %d %b %Y %H:%M:%S %z")
+        return dt.astimezone(KST).strftime("%Y-%m-%d %H:%M:%S KST")
+    except Exception:
+        return None
+
+
+def fetch_cause_candidates(code, name, base_news=None, k=12, per_query=3):
+    """종목 피드 + 검색 API 원인 후보. 검색 실패 시 기존 피드만 조용히 반환."""
+    base = [n for n in (base_news or []) if n.get("title")]
+    out = []
+    try:
+        load_env(os.path.join(REPO, ".env"))
+        cid = os.environ.get("NAVER_CLIENT_ID")
+        secret = os.environ.get("NAVER_CLIENT_SECRET")
+        if cid and secret:
+            for query_tpl in CAUSE_QUERIES:
+                query = query_tpl.format(n=name)
+                try:
+                    data = fetch_search_news(query, cid, secret, display=per_query * 2)
+                except Exception:
+                    continue
+                for it in data.get("items", [])[:per_query * 2]:
+                    title = _normalize_title(it.get("title", ""))
+                    if not title:
+                        continue
+                    link = it.get("originallink") or it.get("link")
+                    out.append({
+                        "title": title,
+                        "summary": strip_html(it.get("description", ""))[:200],
+                        "office": source_from_link(link or ""),
+                        "datetime": _search_datetime(it.get("pubDate", "")),
+                        "url": link,
+                        "query": query,
+                    })
+    except Exception:
+        pass
+
+    out.extend(base)
+
+    seen_urls, seen_titles, deduped = set(), set(), []
+    for item in out:
+        url = item.get("url")
+        title = _normalize_title(item.get("title", ""))
+        if not title:
+            continue
+        title_key = title.lower()
+        if (url and url in seen_urls) or title_key in seen_titles:
+            continue
+        if url:
+            seen_urls.add(url)
+        seen_titles.add(title_key)
+        item2 = dict(item)
+        item2["title"] = title
+        deduped.append(item2)
+        if len(deduped) >= k:
+            break
+    return deduped
 
 
 def fetch_consensus(code):

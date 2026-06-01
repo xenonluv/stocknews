@@ -40,7 +40,7 @@ export function newsByStockCode(): Record<string, NewsItem[]> {
 
   for (const s of PUBLISHED) {
     const code = codeFromPostId(s.post_id);
-    const news = s.news ?? [];
+    const news = s.cause_news?.length ? s.cause_news : (s.news ?? []);
 
     if (code && news.length > 0 && !map[code]) {
       map[code] = news;

@@ -44,6 +44,8 @@ export default function SignalDetailPage({
 }) {
   const signal = getSignal(params.post_id);
   if (!signal) notFound();
+  const hasCauseNews = Boolean(signal.cause_news?.length);
+  const detailNews = hasCauseNews ? signal.cause_news : signal.news;
 
   return (
     <main className="container max-w-2xl py-12">
@@ -56,7 +58,7 @@ export default function SignalDetailPage({
       </Link>
       {/* 상세에선 카드 내 뉴스 미리보기를 끄고(news=[]) 아래 전체 NewsList로 노출 */}
       <SignalCard {...toSignalCardProps(signal)} news={[]} />
-      <NewsList news={signal.news} />
+      <NewsList news={detailNews} label={hasCauseNews ? "상승 원인 뉴스" : "관련 뉴스"} />
     </main>
   );
 }

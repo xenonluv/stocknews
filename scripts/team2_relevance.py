@@ -10,6 +10,10 @@
   - 종목명 별칭 문제를 피하려 '제거(blacklist) + 재료(whitelist)' 방식 사용.
 """
 import re
+from datetime import datetime, timezone, timedelta
+from email.utils import parsedate_to_datetime
+
+KST = timezone(timedelta(hours=9))
 
 # 종목명 별칭 (공식명 ↔ 뉴스 통용 표기). 영문/약어 종목 위주로 수동 보강.
 MANUAL_ALIAS = {
@@ -21,6 +25,7 @@ MANUAL_ALIAS = {
     "LG이노텍": ["엘지이노텍"],
     "LG": ["엘지"],
     "삼성전자": ["삼전"],
+    "SK텔레콤": ["SKT", "SK 텔레콤", "에스케이텔레콤"],
     "SK하이닉스": ["하이닉스", "SK 하이닉스"],
     "카카오뱅크": ["카뱅"],
     "현대차": ["현대자동차"],
@@ -66,6 +71,17 @@ NEG = re.compile(
 STRONG = re.compile(
     r"실적|영업이익|순이익|매출|흑자|적자|수주|계약|공급|신고가|상한가|급등|급락|"
     r"수출|유치|인수|합병|목표주가|승인|허가|임상|특허|1위|최대 수주"
+)
+LIST_NOISE = re.compile(
+    r"\[종합\]|종합\)|TOP\s*\d|외\s*\d+\s*종목|급등주|상승주|주목할|"
+    r"오늘의\s*특징주|특징주\s*\[|증시\s*특징주|테마주"
+)
+CAUSE_STRONG = re.compile(
+    r"소식에|기대감에|언급에|수혜주로|상한가|급등|강세|특징주|왜\s*(올랐|상승)"
+)
+CAUSE_MATERIAL = re.compile(
+    r"계약|공급|수주|실적|영업이익|흑자|승인|허가|임상|인수|합병|투자|"
+    r"유치|제휴|협력|엔비디아|젠슨\s*황|AI|반도체|로봇|데이터센터"
 )
 
 
@@ -135,6 +151,121 @@ def score_news(news, aliases=None):
     return {"relevant": relevant, "dropped": dropped,
             "importance_score": importance, "impact_level": impact,
             "sentiment": overall, "relevant_count": len(relevant)}
+
+
+def _age_days(dt_text):
+    if not dt_text:
+        return None
+    s = str(dt_text).strip()
+    candidates = (
+        "%Y-%m-%d %H:%M:%S KST",
+        "%Y-%m-%d %H:%M:%S",
+        "%Y.%m.%d %H:%M",
+        "%Y.%m.%d. %H:%M",
+        "%Y-%m-%dT%H:%M:%S%z",
+    )
+    try:
+        dt = parsedate_to_datetime(s)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=KST)
+        return (datetime.now(KST) - dt.astimezone(KST)).total_seconds() / 86400
+    except Exception:
+        pass
+    for fmt in candidates:
+        try:
+            dt = datetime.strptime(s, fmt)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=KST)
+            return (datetime.now(KST) - dt.astimezone(KST)).total_seconds() / 86400
+        except Exception:
+            continue
+    return None
+
+
+def _alias_is_subject(title_lower, aliases):
+    for alias in aliases or []:
+        if title_lower.startswith(alias):
+            return True
+        for suffix in (",", "이", "가", "은", "는", "도", "·"):
+            if f"{alias}{suffix}" in title_lower:
+                return True
+    return False
+
+
+def score_cause_news(news, aliases=None, max_age_days=2):
+    """급등 원인 후보 뉴스 점수화. 실패/원인 없음은 빈 cause_news로 fallback."""
+    try:
+        scored = []
+        for item in news:
+            title = item.get("title", "") or ""
+            summary = item.get("summary", "") or ""
+            text = f"{title} {summary}"
+            title_lower = title.lower()
+            score = 0
+            reasons = []
+
+            if not title or HARD.search(title) or not mentions(text, aliases):
+                continue
+            title_mentions = mentions(title, aliases)
+            if not title_mentions:
+                continue
+            score += 3
+            reasons.append("제목 언급")
+            if _alias_is_subject(title_lower, aliases):
+                score += 2
+                reasons.append("주어")
+            if CAUSE_STRONG.search(title):
+                score += 3
+                reasons.append("원인표현")
+            if re.search(r"소식에|기대감에|언급에|수혜", text):
+                score += 4
+                reasons.append("인과표현")
+            if CAUSE_MATERIAL.search(text):
+                score += 2
+                reasons.append("재료")
+            if item.get("query") and CAUSE_STRONG.search(title):
+                score += 1
+                reasons.append("검색맥락")
+            if NEG.search(text):
+                score -= 3
+                reasons.append("악재")
+            if LIST_NOISE.search(title):
+                score -= 5
+                reasons.append("리스트감점")
+            if score > 0 and not CAUSE_STRONG.search(title) and not re.search(r"소식에|기대감에|언급에|수혜", text):
+                score -= 2
+                reasons.append("일반뉴스")
+
+            age = _age_days(item.get("datetime"))
+            if age is not None:
+                if age <= 1:
+                    score += 2
+                    reasons.append("당일")
+                elif age > max_age_days:
+                    score -= 4
+                    reasons.append("오래됨")
+
+            item2 = dict(item)
+            item2["cause_score"] = score
+            item2["cause_reason"] = ", ".join(reasons)
+            item2["sentiment"] = "악재" if NEG.search(text) else "호재"
+            scored.append(item2)
+
+        scored.sort(key=lambda x: -x.get("cause_score", 0))
+        top = [x for x in scored if x.get("cause_score", 0) >= 5][:3]
+        if top and top[0].get("cause_score", 0) >= 8:
+            confidence = "높음"
+        elif top:
+            confidence = "중간"
+        else:
+            confidence = "낮음"
+        return {
+            "cause_news": top,
+            "cause_confidence": confidence,
+            "cause_summary": top[0]["title"][:80] if top else "",
+        }
+    except Exception:
+        return {"cause_news": [], "cause_confidence": "낮음", "cause_summary": ""}
 
 
 if __name__ == "__main__":
