@@ -1,17 +1,39 @@
-import { Target, Shield, TrendingUp } from "lucide-react";
+"use client";
+
+import { useId, useState } from "react";
+import { Newspaper, Shield, Target, TrendingUp } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ProbabilityGauge } from "@/components/signal/ProbabilityGauge";
 import type { ForecastItem } from "@/types/prediction";
+import type { NewsItem } from "@/types/signal";
 
 const won = (n: number | null) => (n == null ? "-" : n.toLocaleString("ko-KR"));
 
+function sentimentDotClass(sentiment?: string | null) {
+  if (sentiment === "호재") return "bg-up";
+  if (sentiment === "악재") return "bg-down";
+  return "bg-muted-foreground/50";
+}
+
 /** 내일 상승 예측 카드 — 진입(종가)·목표·손절·근거. 확신 '상'이면 블루 글래스 강조. */
-export function ForecastCard({ item, rank }: { item: ForecastItem; rank?: number }) {
+export function ForecastCard({
+  item,
+  rank,
+  news = [],
+}: {
+  item: ForecastItem;
+  rank?: number;
+  news?: NewsItem[];
+}) {
+  const [newsOpen, setNewsOpen] = useState(false);
+  const newsPanelId = useId();
   const strong = item.confidence === "상";
   const chg = item.day_change;
+  const hasNews = news.length > 0;
+
   return (
     <Card
       className={cn(
@@ -76,6 +98,50 @@ export function ForecastCard({ item, rank }: { item: ForecastItem; rank?: number
           ))}
         </ul>
         <p className="text-[11px] text-warning">⚠ {item.risk}</p>
+        {hasNews && (
+          <button
+            type="button"
+            onClick={() => setNewsOpen((open) => !open)}
+            aria-expanded={newsOpen}
+            aria-controls={newsPanelId}
+            className="mt-1 inline-flex items-center gap-1 rounded-sm text-xs font-medium text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          >
+            <Newspaper className="size-3" aria-hidden />
+            관련 뉴스 {news.length}
+          </button>
+        )}
+        {hasNews && newsOpen && (
+          <div
+            id={newsPanelId}
+            className="mt-2 w-full rounded-md border border-white/10 bg-white/[0.04] p-3"
+          >
+            <ul className="space-y-1.5">
+              {news.slice(0, 3).map((n, i) => (
+                <li
+                  key={`${n.title}-${i}`}
+                  className="flex items-start gap-2 text-sm text-foreground/90"
+                >
+                  <span
+                    className={`mt-1.5 size-1.5 shrink-0 rounded-full ${sentimentDotClass(n.sentiment)}`}
+                    aria-hidden
+                  />
+                  {n.url ? (
+                    <a
+                      href={n.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="line-clamp-1 hover:underline"
+                    >
+                      {n.title}
+                    </a>
+                  ) : (
+                    <span className="line-clamp-1">{n.title}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </CardFooter>
     </Card>
   );

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { ForecastCard } from "./ForecastCard";
 import { marketPhaseKST, type MarketPhase } from "@/lib/market";
 import type { Predictions } from "@/types/prediction";
+import type { NewsItem } from "@/types/signal";
 
 const POLL_MS = 60_000;
 
@@ -15,7 +16,13 @@ const PHASE_MSG: Record<MarketPhase, { dot: string; text: string }> = {
   closed: { dot: "bg-muted-foreground/50", text: "장 마감 · 다음 거래일 갱신" },
 };
 
-export function ForecastList({ initial }: { initial: Predictions }) {
+export function ForecastList({
+  initial,
+  newsByCode,
+}: {
+  initial: Predictions;
+  newsByCode: Record<string, NewsItem[]>;
+}) {
   const [data, setData] = useState<Predictions>(initial);
   const [phase, setPhase] = useState<MarketPhase>("closed");
 
@@ -69,7 +76,12 @@ export function ForecastList({ initial }: { initial: Predictions }) {
           </p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {bet.map((it, i) => (
-              <ForecastCard key={it.code} item={it} rank={i + 1} />
+              <ForecastCard
+                key={it.code}
+                item={it}
+                rank={i + 1}
+                news={newsByCode[it.code] ?? []}
+              />
             ))}
           </div>
         </section>

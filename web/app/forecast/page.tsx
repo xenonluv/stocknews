@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 
 import { getPredictions } from "@/lib/predictions/repository";
+import { newsByStockCode } from "@/lib/signals/repository";
 import { ForecastList } from "@/components/forecast/ForecastList";
 
 export const dynamic = "force-static";
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
 
 export default function ForecastPage() {
   const data = getPredictions();
+  const newsByCode = newsByStockCode();
   return (
     <main className="container py-12">
       <Link
@@ -31,7 +33,7 @@ export default function ForecastPage() {
           <span className="text-warning"> 확률은 합치 점수 기반 추정(백테스트로 검증 중)</span>
         </p>
       </header>
-      <ForecastList initial={data} />
+      <ForecastList initial={data} newsByCode={newsByCode} />
     </main>
   );
 }

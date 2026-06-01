@@ -1,5 +1,5 @@
 import signalsData from "@/data/signals.json";
-import type { SignalPost } from "@/types/signal";
+import type { NewsItem, SignalPost } from "@/types/signal";
 
 /**
  * 시그널 저장소 (단일 출처).
@@ -28,6 +28,26 @@ export function listSignals({ stock, page = 1, limit = 20 }: ListParams) {
 
 export function getSignal(postId: string): SignalPost | null {
   return PUBLISHED.find((s) => s.post_id === postId) ?? null;
+}
+
+function codeFromPostId(postId: string): string {
+  return postId.split("_").pop() ?? "";
+}
+
+/** 종목코드 -> 최신 게시물의 관련 뉴스. /forecast 종가베팅 카드에서 재사용한다. */
+export function newsByStockCode(): Record<string, NewsItem[]> {
+  const map: Record<string, NewsItem[]> = {};
+
+  for (const s of PUBLISHED) {
+    const code = codeFromPostId(s.post_id);
+    const news = s.news ?? [];
+
+    if (code && news.length > 0 && !map[code]) {
+      map[code] = news;
+    }
+  }
+
+  return map;
 }
 
 /** 현재 배포의 모든 post_id (상세페이지 정적 사전생성용). */
