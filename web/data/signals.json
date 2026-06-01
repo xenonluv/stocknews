@@ -6,11 +6,11 @@
     "target_stock": "NHN",
     "signal_probability": "50%",
     "position_type": "과다상승",
-    "day_change": 11.98,
+    "day_change": 12.18,
     "headline": "NHN, 이틀째 강세 ‘19%↑’…클라우드 사업 기대감",
     "summary": "[후보] 재료+거래대금 포착(중요도 8.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 12:30 KST",
+    "published_at": "2026-06-01 12:45 KST",
     "news": [
       {
         "title": "NHN, 이틀째 강세 ‘19%↑’…클라우드 사업 기대감",
@@ -45,11 +45,11 @@
     "target_stock": "SKC",
     "signal_probability": "45%",
     "position_type": "과다상승",
-    "day_change": 18.27,
+    "day_change": 19.53,
     "headline": "신영증권 &quot;SKC, 적자폭 축소 지속…2027년 흑자전환 예상&quot;",
     "summary": "[후보] 재료+거래대금 포착(중요도 8.0, 혼재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 12:30 KST",
+    "published_at": "2026-06-01 12:45 KST",
     "news": [
       {
         "title": "신영증권 &quot;SKC, 적자폭 축소 지속…2027년 흑자전환 예상&quot;",
@@ -78,50 +78,17 @@
     ]
   },
   {
-    "post_id": "POST_20260601_066570",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "LG전자",
-    "signal_probability": "49%",
-    "position_type": "과다상승",
-    "day_change": 29.86,
-    "headline": "젠슨 황·구광모 회동 앞두고 LG전자 주가 상한가…LG계열사 주가 급등",
-    "summary": "[후보] 재료+거래대금 포착(중요도 7.5, 호재) · 일봉 과다상승.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 12:30 KST",
-    "news": [
-      {
-        "title": "젠슨 황·구광모 회동 앞두고 LG전자 주가 상한가…LG계열사 주가 급등",
-        "url": "https://n.news.naver.com/mnews/article/020/0003723678",
-        "office": "동아일보",
-        "sentiment": "호재"
-      },
-      {
-        "title": "LG전자 OLED TV, 1분기 글로벌시장 점유율 50.5%로 1위",
-        "url": "https://n.news.naver.com/mnews/article/021/0002794835",
-        "office": "문화일보",
-        "sentiment": "호재"
-      },
-      {
-        "title": "AI·반도체 슈퍼위크…글로벌 대형 이벤트에 관련주 ‘급등’",
-        "url": "https://n.news.naver.com/mnews/article/016/0002650684",
-        "office": "헤럴드경제",
-        "sentiment": "호재"
-      }
-    ]
-  },
-  {
     "post_id": "POST_20260601_242040",
     "status": "PUBLISHED",
     "tier": "candidate",
     "target_stock": "나무기술",
     "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 19.02,
+    "day_change": 3.76,
     "headline": "나무기술, 1분기 매출 370억원…가상화·클라우드 전환 수요에 수익성...",
     "summary": "[후보] 재료+거래대금 포착(중요도 7.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 12:30 KST",
+    "published_at": "2026-06-01 12:45 KST",
     "news": [
       {
         "title": "나무기술, 1분기 매출 370억원…가상화·클라우드 전환 수요에 수익성...",
@@ -156,11 +123,11 @@
     "target_stock": "노타",
     "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 6.88,
+    "day_change": 3.77,
     "headline": "노타, 퀄컴 엣지 디바이스서 '피지컬 AI' 속도 7배 높였다",
     "summary": "[후보] 재료+거래대금 포착(중요도 7.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 12:30 KST",
+    "published_at": "2026-06-01 12:45 KST",
     "news": [
       {
         "title": "노타, 퀄컴 엣지 디바이스서 '피지컬 AI' 속도 7배 높였다",
@@ -189,56 +156,17 @@
     ]
   },
   {
-    "post_id": "POST_20260601_003550",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "LG",
-    "signal_probability": "48%",
-    "position_type": "과다상승",
-    "day_change": 24.69,
-    "headline": "젠슨 황·구광모 회동 앞두고 LG전자 주가 상한가…LG계열사 주가 급등",
-    "summary": "[후보] 재료+거래대금 포착(중요도 7.0, 호재) · 일봉 과다상승.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 12:30 KST",
-    "news": [
-      {
-        "title": "젠슨 황·구광모 회동 앞두고 LG전자 주가 상한가…LG계열사 주가 급등",
-        "url": "https://n.news.naver.com/mnews/article/020/0003723678",
-        "office": "동아일보",
-        "sentiment": "호재"
-      },
-      {
-        "title": "유라클, AI 표준 플랫폼 시장 선도…현대건설, 한국평가데이터 등 표...",
-        "url": "https://n.news.naver.com/mnews/article/030/0003433185",
-        "office": "전자신문",
-        "sentiment": "호재"
-      },
-      {
-        "title": "AI·반도체 슈퍼위크…글로벌 대형 이벤트에 관련주 ‘급등’",
-        "url": "https://n.news.naver.com/mnews/article/016/0002650684",
-        "office": "헤럴드경제",
-        "sentiment": "호재"
-      },
-      {
-        "title": "LG, AI·로봇 역량 부각에 순자산가치 역대 최고…삼성전기, AI 부품 '...",
-        "url": "https://n.news.naver.com/mnews/article/014/0005528933",
-        "office": "파이낸셜뉴스",
-        "sentiment": "호재"
-      }
-    ]
-  },
-  {
     "post_id": "POST_20260601_000150",
     "status": "PUBLISHED",
     "tier": "candidate",
     "target_stock": "두산",
     "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 24.14,
+    "day_change": 23.33,
     "headline": "'젠슨황 시구설'에 두산그룹주 급등…두산로보틱스 상한가",
     "summary": "[후보] 재료+거래대금 포착(중요도 7.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 12:30 KST",
+    "published_at": "2026-06-01 12:45 KST",
     "news": [
       {
         "title": "'젠슨황 시구설'에 두산그룹주 급등…두산로보틱스 상한가",
@@ -267,40 +195,100 @@
     ]
   },
   {
-    "post_id": "POST_20260601_035420",
+    "post_id": "POST_20260601_066570",
     "status": "PUBLISHED",
     "tier": "candidate",
-    "target_stock": "NAVER",
-    "signal_probability": "47%",
+    "target_stock": "LG전자",
+    "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 14.74,
-    "headline": "젠슨 황, 이해진 의장 만나고 네이버 1784로?…&quot;8일 유력&quot;",
-    "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
+    "day_change": 29.86,
+    "headline": "젠슨 황·구광모 회동 예고에…LG 계열사 주가 일제히 강세",
+    "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-01 12:30 KST",
+    "published_at": "2026-06-01 12:45 KST",
     "news": [
       {
-        "title": "젠슨 황, 이해진 의장 만나고 네이버 1784로?…&quot;8일 유력&quot;",
-        "url": "https://n.news.naver.com/mnews/article/138/0002229526",
-        "office": "디지털데일리",
+        "title": "젠슨 황·구광모 회동 예고에…LG 계열사 주가 일제히 강세",
+        "url": "https://n.news.naver.com/mnews/article/020/0003723678",
+        "office": "동아일보",
         "sentiment": "호재"
       },
       {
-        "title": "네이버, ‘BTS 드론쇼’ 기업 유비파이에 투자…피지컬 AI 사업 확장",
-        "url": "https://n.news.naver.com/mnews/article/028/0002807567",
-        "office": "한겨레",
-        "sentiment": "호재"
-      },
-      {
-        "title": "젠슨 황 만나는 이해진 ‘AI 승부수’…네이버, AX부터 국방까지 광폭...",
-        "url": "https://n.news.naver.com/mnews/article/016/0002650685",
-        "office": "헤럴드경제",
+        "title": "LG전자 OLED TV, 1분기 글로벌시장 점유율 50.5%로 1위",
+        "url": "https://n.news.naver.com/mnews/article/021/0002794835",
+        "office": "문화일보",
         "sentiment": "호재"
       },
       {
         "title": "AI·반도체 슈퍼위크…글로벌 대형 이벤트에 관련주 ‘급등’",
         "url": "https://n.news.naver.com/mnews/article/016/0002650684",
         "office": "헤럴드경제",
+        "sentiment": "호재"
+      }
+    ]
+  },
+  {
+    "post_id": "POST_20260601_003550",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "LG",
+    "signal_probability": "47%",
+    "position_type": "과다상승",
+    "day_change": 24.73,
+    "headline": "젠슨 황·구광모 회동 예고에…LG 계열사 주가 일제히 강세",
+    "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-01 12:45 KST",
+    "news": [
+      {
+        "title": "젠슨 황·구광모 회동 예고에…LG 계열사 주가 일제히 강세",
+        "url": "https://n.news.naver.com/mnews/article/020/0003723678",
+        "office": "동아일보",
+        "sentiment": "호재"
+      },
+      {
+        "title": "젠슨 황 한국 또 온다…'2차 깐부 회동' 누구와?",
+        "url": "https://n.news.naver.com/mnews/article/586/0000130395",
+        "office": "시사저널",
+        "sentiment": "호재"
+      },
+      {
+        "title": "유라클, AI 표준 플랫폼 시장 선도…현대건설, 한국평가데이터 등 표...",
+        "url": "https://n.news.naver.com/mnews/article/030/0003433185",
+        "office": "전자신문",
+        "sentiment": "호재"
+      },
+      {
+        "title": "AI·반도체 슈퍼위크…글로벌 대형 이벤트에 관련주 ‘급등’",
+        "url": "https://n.news.naver.com/mnews/article/016/0002650684",
+        "office": "헤럴드경제",
+        "sentiment": "호재"
+      }
+    ]
+  },
+  {
+    "post_id": "POST_20260601_018880",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "한온시스템",
+    "signal_probability": "67%",
+    "position_type": "상승추세",
+    "day_change": -5.15,
+    "headline": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
+    "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 상승추세.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-01 12:45 KST",
+    "news": [
+      {
+        "title": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
+        "url": "https://n.news.naver.com/mnews/article/015/0005291673",
+        "office": "한국경제",
+        "sentiment": "호재"
+      },
+      {
+        "title": "한온시스템 “2030년 매출 14조 7000억원, 영업이익률 9% 달성”",
+        "url": "https://n.news.naver.com/mnews/article/011/0004624552",
+        "office": "서울경제",
         "sentiment": "호재"
       }
     ]
