@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""팀원1 — 기존 공개 REST API에서 종목군 수집 + 장중 시계열 누적.
+"""팀원1 — forecast 후보군 수집 + 장중 시계열 누적.
 
-네이버 직접 호출 0 (기존 시스템이 이미 15분마다 분석한 결과를 재사용).
-실행마다 /api/signals 스냅샷을 받아 종목별 장중 이력(등장횟수·확률추이·생존)을
-analyzer/state/intraday_YYYYMMDD.json 에 누적한다.
+기존 /api/signals 스냅샷을 우선 사용하되, forecast가 signals 누락 종목을 놓치지 않도록
+거래대금/상승률 상위 종목을 보강한다. 실행마다 종목별 장중 이력
+(등장횟수·확률추이·생존)을 analyzer/state/intraday_YYYYMMDD.json 에 누적한다.
 """
 import os
 import sys
@@ -12,10 +12,12 @@ from datetime import datetime, timezone, timedelta
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
 from net import get_bytes  # noqa: E402  (요청간격+백오프)
+from team1_collect import top_ranking  # noqa: E402
 
 KST = timezone(timedelta(hours=9))
 API = os.environ.get("SIGNALS_API", "https://stocknews-cyan.vercel.app/api/signals")
 STATE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "state")
+SUPPLEMENT_N = int(os.environ.get("FORECAST_SUPPLEMENT_N", "20"))
 
 
 def code_from_post_id(post_id):
@@ -24,24 +26,51 @@ def code_from_post_id(post_id):
 
 
 def fetch_universe():
-    """기존 API → 종목군 [{code, name, tier, prob, day_change}]."""
+    """signals API + 랭킹 보강 → 종목군 [{code, name, tier, prob, day_change}]."""
     data = json.loads(get_bytes(f"{API}?limit=50"))
     out = []
+    seen = set()
     for s in data.get("data", []):
         prob = s.get("signal_probability", "")
         try:
             prob_n = int(str(prob).replace("%", ""))
         except ValueError:
             prob_n = None
+        code = code_from_post_id(s.get("post_id"))
+        if not code or code in seen:
+            continue
+        seen.add(code)
         out.append({
-            "code": code_from_post_id(s.get("post_id")),
+            "code": code,
             "name": s.get("target_stock"),
             "tier": s.get("tier"),
             "position": s.get("position_type"),
             "prob": prob_n,
             "day_change": s.get("day_change"),
+            "source": "signals",
         })
-    return [x for x in out if x["code"]]
+
+    for sort_key in ("거래대금", "상승률"):
+        for market in ("KOSPI", "KOSDAQ"):
+            try:
+                ranked = top_ranking(sort_key, market, SUPPLEMENT_N)
+            except Exception:
+                continue
+            for r in ranked:
+                code = r.get("code")
+                if not code or code in seen:
+                    continue
+                seen.add(code)
+                out.append({
+                    "code": code,
+                    "name": r.get("name"),
+                    "tier": "supplement",
+                    "position": sort_key,
+                    "prob": None,
+                    "day_change": None,
+                    "source": f"ranking:{sort_key}:{market}",
+                })
+    return [x for x in out if x["code"] and x["name"]]
 
 
 def accumulate(universe, now=None):

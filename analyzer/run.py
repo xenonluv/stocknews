@@ -8,7 +8,7 @@
 
 사용:
   python3 analyzer/run.py --dry-run        # /tmp 미리보기, push 안 함
-  python3 analyzer/run.py [--push] [--top 12] [--bet 5]
+  python3 analyzer/run.py [--push] [--top 30] [--bet 5]
 """
 import os
 import sys
@@ -171,7 +171,7 @@ def git(*a):
 def main():
     args = sys.argv[1:]
     dry = "--dry-run" in args
-    top = int(args[args.index("--top") + 1]) if "--top" in args else 12
+    top = int(args[args.index("--top") + 1]) if "--top" in args else 30
     bet = int(args[args.index("--bet") + 1]) if "--bet" in args else 5
 
     out = build(top, bet)
