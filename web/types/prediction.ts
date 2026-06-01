@@ -19,6 +19,7 @@ export interface ForecastItem {
   risk: string;
   day_change?: number | null;
   cause_news?: ForecastNewsItem[];
+  related_news?: ForecastNewsItem[];
   cause_confidence?: "높음" | "중간" | "낮음";
   cause_summary?: string;
 }

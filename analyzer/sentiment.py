@@ -28,6 +28,7 @@ def analyze(code, name, k=12):
             "sentiment": res["sentiment"],            # 호재/악재/혼재/중립
             "count": res["relevant_count"],
             "top_titles": [n["title"] for n in res["relevant"][:3]],
+            "related_news": res["relevant"][:3],
             "cause_news": cause.get("cause_news", []),
             "cause_confidence": cause.get("cause_confidence"),
             "cause_summary": cause.get("cause_summary"),

@@ -138,6 +138,7 @@ def build(top, bet_n):
             "day_change": u["day_change"],
         }
         cause_news = sent.get("cause_news") or []
+        related_news = sent.get("related_news") or []
         if cause_news:
             cause_items = [
                 {"title": n.get("title"), "url": n.get("url"),
@@ -152,6 +153,14 @@ def build(top, bet_n):
                     row["cause_confidence"] = sent.get("cause_confidence")
                 if sent.get("cause_summary"):
                     row["cause_summary"] = sent.get("cause_summary")
+        elif related_news:
+            related_items = [
+                {"title": n.get("title"), "url": n.get("url"),
+                 "office": n.get("office"), "sentiment": n.get("sentiment")}
+                for n in related_news[:3] if n.get("title")
+            ]
+            if related_items:
+                row["related_news"] = related_items
         rows.append(row)
     rows.sort(key=lambda r: -r["_p"])
     closing = [r for r in rows if r["_p"] >= 55][:bet_n]  # 확신 일정 이상만 종가베팅

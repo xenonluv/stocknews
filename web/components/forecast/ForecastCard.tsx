@@ -24,13 +24,15 @@ export function ForecastCard({
   rank,
   news = [],
   newsLabel = "관련 뉴스",
+  defaultNewsOpen = false,
 }: {
   item: ForecastItem;
   rank?: number;
   news?: NewsItem[];
   newsLabel?: string;
+  defaultNewsOpen?: boolean;
 }) {
-  const [newsOpen, setNewsOpen] = useState(false);
+  const [newsOpen, setNewsOpen] = useState(defaultNewsOpen);
   const newsPanelId = useId();
   const strong = item.confidence === "상";
   const chg = item.day_change;
