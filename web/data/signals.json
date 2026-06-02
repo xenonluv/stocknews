@@ -2,15 +2,15 @@
   {
     "post_id": "POST_20260602_486990",
     "status": "PUBLISHED",
-    "tier": "signal",
+    "tier": "candidate",
     "target_stock": "노타",
-    "signal_probability": "56%",
+    "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 0.0,
+    "day_change": -0.66,
     "headline": "엔비디아와 영상 AI 에이전트 시장 공략…노타 5%↑[특징주]",
-    "summary": "[시그널] 일봉 과다상승 · 재료 호재(중요도 6.5). 일봉 국면을 함께 확인.",
+    "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-02 09:00 KST",
+    "published_at": "2026-06-02 09:15 KST",
     "news": [
       {
         "title": "노타, 엔비디아 아태 파트너데이 ‘한국 유일’ 패널 참여…“피지컬...",
@@ -73,11 +73,11 @@
     "target_stock": "한온시스템",
     "signal_probability": "67%",
     "position_type": "상승추세",
-    "day_change": -1.15,
+    "day_change": 1.53,
     "headline": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 상승추세.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-02 09:00 KST",
+    "published_at": "2026-06-02 09:15 KST",
     "news": [
       {
         "title": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
@@ -106,17 +106,151 @@
     "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
   },
   {
+    "post_id": "POST_20260602_131400",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "이브이첨단소재",
+    "signal_probability": "66%",
+    "position_type": "상승추세",
+    "day_change": 21.43,
+    "headline": "EV첨단소재 투자사 프롤로지움 나스닥 상장",
+    "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 호재) · 일봉 상승추세.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-02 09:15 KST",
+    "news": [
+      {
+        "title": "EV첨단소재 투자사 프롤로지움 나스닥 상장",
+        "url": "https://n.news.naver.com/mnews/article/031/0001031452",
+        "office": "아이뉴스24",
+        "sentiment": "호재"
+      },
+      {
+        "title": "EV첨단소재 투자사 플로로지움 &quot;양산 가능성이 핵심 경쟁력&quot;",
+        "url": "https://n.news.naver.com/mnews/article/031/0001029288",
+        "office": "아이뉴스24",
+        "sentiment": "호재"
+      },
+      {
+        "title": "이브이첨단소재 1분기 영업익 4억 '흑자 전환'",
+        "url": "https://n.news.naver.com/mnews/article/031/0001028858",
+        "office": "아이뉴스24",
+        "sentiment": "호재"
+      }
+    ]
+  },
+  {
+    "post_id": "POST_20260602_017670",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "SK텔레콤",
+    "signal_probability": "46%",
+    "position_type": "과다상승",
+    "day_change": 12.12,
+    "headline": "젠슨황 “피지컬 AI 협력사”…SK텔레콤 ‘신고가’[특징주]",
+    "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-02 09:15 KST",
+    "news": [
+      {
+        "title": "젠슨황 “피지컬 AI 협력사”…SK텔레콤 ‘신고가’[특징주]",
+        "url": "https://n.news.naver.com/mnews/article/018/0006295811",
+        "office": "이데일리",
+        "sentiment": "호재"
+      },
+      {
+        "title": "SK텔레콤, 엔비디아 AI 도구 활용… 하이닉스 공장 디지털 트윈 구현",
+        "url": "https://n.news.naver.com/mnews/article/023/0003979676",
+        "office": "조선일보",
+        "sentiment": "호재"
+      }
+    ],
+    "cause_news": [
+      {
+        "title": "젠슨황 “피지컬 AI 협력사”…SK텔레콤 ‘신고가’[특징주]",
+        "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03096326645477784",
+        "office": "edaily",
+        "sentiment": "호재",
+        "cause_score": 11,
+        "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
+      },
+      {
+        "title": "[1일 특징주] 젠슨 황이 파트너사 '콕' 찝었다…SKT '신고가'",
+        "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=842510",
+        "office": "newsworks",
+        "sentiment": "호재",
+        "cause_score": 11,
+        "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
+      }
+    ],
+    "cause_confidence": "높음",
+    "cause_summary": "젠슨황 “피지컬 AI 협력사”…SK텔레콤 ‘신고가’[특징주]"
+  },
+  {
+    "post_id": "POST_20260602_373220",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "LG에너지솔루션",
+    "signal_probability": "66%",
+    "position_type": "상승추세",
+    "day_change": 7.36,
+    "headline": "LS證 “LG에너지솔루션, EV 점유율 하락·美 ESS 시장은 경쟁 치열…목...",
+    "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 상승추세.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-02 09:15 KST",
+    "news": [
+      {
+        "title": "LS證 “LG에너지솔루션, EV 점유율 하락·美 ESS 시장은 경쟁 치열…목...",
+        "url": "https://n.news.naver.com/mnews/article/366/0001168703",
+        "office": "조선비즈",
+        "sentiment": "혼재"
+      },
+      {
+        "title": "“2차전지, 하반기 수주 쏟아진다…LG엔솔 최선호”",
+        "url": "https://n.news.naver.com/mnews/article/018/0006295706",
+        "office": "이데일리",
+        "sentiment": "호재"
+      }
+    ]
+  },
+  {
+    "post_id": "POST_20260602_043260",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "성호전자",
+    "signal_probability": "52%",
+    "position_type": "분석불가",
+    "day_change": 5.07,
+    "headline": "박성재 부회장, 성호전자 지분 추가 매입…“주가 여전히 져평가” [...",
+    "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 분석불가.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-02 09:15 KST",
+    "news": [
+      {
+        "title": "박성재 부회장, 성호전자 지분 추가 매입…“주가 여전히 져평가” [...",
+        "url": "https://n.news.naver.com/mnews/article/011/0004622845",
+        "office": "서울경제",
+        "sentiment": "호재"
+      },
+      {
+        "title": "엔비디아·브로드컴 이어 코닝까지... 성호전자, 광통신 장비 수주 '봇...",
+        "url": "https://n.news.naver.com/mnews/article/008/0005359846",
+        "office": "머니투데이",
+        "sentiment": "호재"
+      }
+    ]
+  },
+  {
     "post_id": "POST_20260602_009150",
     "status": "PUBLISHED",
     "tier": "candidate",
     "target_stock": "삼성전기",
     "signal_probability": "45%",
     "position_type": "과다상승",
-    "day_change": 0.0,
+    "day_change": -9.13,
     "headline": "삼성전기, AI 수요 확대 기대 속 강세…화요일 성적 촉각",
     "summary": "[후보] 재료+거래대금 포착(중요도 4.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-02 09:00 KST",
+    "published_at": "2026-06-02 09:15 KST",
     "news": [
       {
         "title": "&quot;300만원 간다더니 한달 수익률 82.32%&quot;…삼성전기 담은 반도체 ETF '훨...",
