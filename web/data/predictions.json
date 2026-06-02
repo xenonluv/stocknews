@@ -1,21 +1,21 @@
 {
-  "as_of": "2026-06-02 11:37 KST",
+  "as_of": "2026-06-02 11:52 KST",
   "intraday_rank": [
     {
       "ticker": "네이처셀",
       "code": "007390",
-      "tomorrow_up_prob": "86%",
-      "entry": 30400.0,
-      "target": 31920,
-      "stop": 29488,
+      "tomorrow_up_prob": "87%",
+      "entry": 30900.0,
+      "target": 32445,
+      "stop": 29973,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI67.2 강세"
+        "RSI67.9 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 11.72,
+      "day_change": 13,
       "cause_news": [
         {
           "title": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가",
@@ -30,12 +30,84 @@
       "cause_summary": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가"
     },
     {
+      "ticker": "성호전자",
+      "code": "043260",
+      "tomorrow_up_prob": "86%",
+      "entry": 46950.0,
+      "target": 49298,
+      "stop": 45542,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.83)",
+        "MACD강세",
+        "RSI56.5 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 22.31,
+      "cause_news": [
+        {
+          "title": "[특징주] 성호전자, 삼성전자 개발 파트너 낙점.. 16%대 '급등'",
+          "url": "https://www.g-enews.com/view.php?ud=20260602104342527244093b5d4e_1",
+          "office": "g-enews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        },
+        {
+          "title": "숨어있는 프리미엄 가전 강자…성호전자, 공기청정기 부품 공급 잭팟 터...",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457062",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+        },
+        {
+          "title": "성호전자 10%대↑…삼성전자 기술개발 파트너사로 부각",
+          "url": "https://www.mt.co.kr/stock/2026/06/02/2026060210375075066",
+          "office": "mt",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 성호전자, 삼성전자 개발 파트너 낙점.. 16%대 '급등'"
+    },
+    {
+      "ticker": "이브이첨단소재",
+      "code": "131400",
+      "tomorrow_up_prob": "81%",
+      "entry": 1833.0,
+      "target": 1925,
+      "stop": 1778,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.82)",
+        "정배열",
+        "RSI55.4 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 21.3,
+      "cause_news": [
+        {
+          "title": "이브이첨단소재, 전고체 배터리 핵심 소재 개발 가속… 차세대 배터리 ...",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457084",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "이브이첨단소재, 전고체 배터리 핵심 소재 개발 가속… 차세대 배터리 ..."
+    },
+    {
       "ticker": "SK텔레콤",
       "code": "017670",
-      "tomorrow_up_prob": "82%",
-      "entry": 124500.0,
-      "target": 130725,
-      "stop": 120765,
+      "tomorrow_up_prob": "81%",
+      "entry": 127200.0,
+      "target": 133560,
+      "stop": 123384,
       "confidence": "상",
       "reasons": [
         "정배열",
@@ -43,7 +115,7 @@
         "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 10.7,
+      "day_change": 10.43,
       "cause_news": [
         {
           "title": "SK텔레콤, 젠슨 황 '피지컬AI 협력' 언급에 장중 7%대 급등[특징주]",
@@ -74,40 +146,12 @@
       "cause_summary": "SK텔레콤, 젠슨 황 '피지컬AI 협력' 언급에 장중 7%대 급등[특징주]"
     },
     {
-      "ticker": "이브이첨단소재",
-      "code": "131400",
-      "tomorrow_up_prob": "81%",
-      "entry": 1815.0,
-      "target": 1906,
-      "stop": 1761,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.78)",
-        "정배열",
-        "RSI55.0 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 19.53,
-      "cause_news": [
-        {
-          "title": "이브이첨단소재, 전고체 배터리 핵심 소재 개발 가속… 차세대 배터리 ...",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457084",
-          "office": "pinpointnews",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "이브이첨단소재, 전고체 배터리 핵심 소재 개발 가속… 차세대 배터리 ..."
-    },
-    {
       "ticker": "두산로보틱스",
       "code": "454910",
-      "tomorrow_up_prob": "81%",
-      "entry": 158800.0,
-      "target": 166740,
-      "stop": 154036,
+      "tomorrow_up_prob": "80%",
+      "entry": 156900.0,
+      "target": 164745,
+      "stop": 152193,
       "confidence": "상",
       "reasons": [
         "정배열",
@@ -130,47 +174,17 @@
       "cause_summary": "[특징주] 젠슨 황 발언에 로봇주 '급등'…두산로보틱스 8%↑"
     },
     {
-      "ticker": "한온시스템",
-      "code": "018880",
-      "tomorrow_up_prob": "79%",
-      "entry": 5100.0,
-      "target": 5355,
-      "stop": 4947,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI53.7 강세"
-      ],
-      "risk": "약한 마감",
-      "day_change": -2.68,
-      "related_news": [
-        {
-          "title": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
-          "url": "https://n.news.naver.com/mnews/article/015/0005291673",
-          "office": "한국경제",
-          "sentiment": "호재"
-        },
-        {
-          "title": "한온시스템 “2030년 매출 14조 7000억원, 영업이익률 9% 달성”",
-          "url": "https://n.news.naver.com/mnews/article/011/0004624552",
-          "office": "서울경제",
-          "sentiment": "호재"
-        }
-      ]
-    },
-    {
       "ticker": "LG디스플레이",
       "code": "034220",
       "tomorrow_up_prob": "79%",
-      "entry": 16950.0,
-      "target": 17798,
-      "stop": 16442,
+      "entry": 16810.0,
+      "target": 17650,
+      "stop": 16306,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI64.9 강세"
+        "RSI64.4 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -192,16 +206,46 @@
           "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
         },
         {
-          "title": "'칩플레이션'에도 웃는 LGD…프리미엄 OLED로 中 맹추격 따돌렸다",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=456850",
-          "office": "pinpointnews",
+          "title": "LG디스플레이 주가, 웃음꽃... 왜?",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1161536",
+          "office": "ggilbo",
           "sentiment": "호재",
           "cause_score": 5,
-          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "높음",
       "cause_summary": "LG디스플레이, 자동차SW 국제표준인증에 장초반 6%대 상승"
+    },
+    {
+      "ticker": "한온시스템",
+      "code": "018880",
+      "tomorrow_up_prob": "72%",
+      "entry": 5080.0,
+      "target": 5334,
+      "stop": 4928,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "RSI53.4 강세",
+        "일목 구름위"
+      ],
+      "risk": "약한 마감",
+      "day_change": -2.49,
+      "related_news": [
+        {
+          "title": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
+          "url": "https://n.news.naver.com/mnews/article/015/0005291673",
+          "office": "한국경제",
+          "sentiment": "호재"
+        },
+        {
+          "title": "한온시스템 “2030년 매출 14조 7000억원, 영업이익률 9% 달성”",
+          "url": "https://n.news.naver.com/mnews/article/011/0004624552",
+          "office": "서울경제",
+          "sentiment": "호재"
+        }
+      ]
     },
     {
       "ticker": "로보스타",
@@ -235,13 +279,13 @@
       "ticker": "동양고속",
       "code": "084670",
       "tomorrow_up_prob": "72%",
-      "entry": 44000.0,
-      "target": 46200,
-      "stop": 42680,
+      "entry": 43500.0,
+      "target": 45675,
+      "stop": 42195,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.84)",
-        "RSI52.0 강세",
+        "강세마감(0.79)",
+        "RSI51.5 강세",
         "Stoch골든"
       ],
       "risk": "특이 위험 낮음",
@@ -262,18 +306,18 @@
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "70%",
-      "entry": 256500.0,
-      "target": 269325,
-      "stop": 248805,
-      "confidence": "상",
+      "tomorrow_up_prob": "68%",
+      "entry": 262500.0,
+      "target": 275625,
+      "stop": 254625,
+      "confidence": "중",
       "reasons": [
         "MACD강세",
-        "RSI67.6 강세",
-        "거래량2.28배"
+        "거래량2.35배",
+        "호재"
       ],
-      "risk": "약한 마감",
-      "day_change": -6.45,
+      "risk": "특이 위험 낮음",
+      "day_change": -4.79,
       "cause_news": [
         {
           "title": "[특징주] LG전자-NAVER, 젠슨 황 회동 기대감 '급등'",
@@ -307,17 +351,17 @@
       "ticker": "노타",
       "code": "486990",
       "tomorrow_up_prob": "67%",
-      "entry": 35250.0,
-      "target": 37012,
-      "stop": 34192,
+      "entry": 35100.0,
+      "target": 36855,
+      "stop": 34047,
       "confidence": "중",
       "reasons": [
         "MACD강세",
-        "RSI54.9 강세",
+        "RSI54.6 강세",
         "호재"
       ],
       "risk": "약한 마감",
-      "day_change": -7,
+      "day_change": -7.27,
       "cause_news": [
         {
           "title": "엔비디아와 영상 AI 에이전트 시장 공략…노타 5%↑[특징주]",
@@ -351,12 +395,12 @@
       "ticker": "가온전선",
       "code": "000500",
       "tomorrow_up_prob": "66%",
-      "entry": 393000.0,
-      "target": 412650,
-      "stop": 381210,
+      "entry": 399000.0,
+      "target": 418950,
+      "stop": 387030,
       "confidence": "중",
       "reasons": [
-        "RSI56.6 강세",
+        "RSI57.1 강세",
         "일목 구름위",
         "호재"
       ],
@@ -392,60 +436,16 @@
       "cause_summary": "[특징주] 가온전선, 빅테크향 대규모 배전설비 수주 기대감에 강세"
     },
     {
-      "ticker": "삼성전기",
-      "code": "009150",
-      "tomorrow_up_prob": "63%",
-      "entry": 1799000.0,
-      "target": 1888950,
-      "stop": 1745030,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "Stoch 과매수",
-      "day_change": -11.52,
-      "cause_news": [
-        {
-          "title": "삼성전기 주가 장중 13%대 내려, 차익실현 압력에 이틀째 약세",
-          "url": "https://www.businesspost.co.kr/BP?command=article_view&num=439088",
-          "office": "businesspost",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
-        },
-        {
-          "title": "[핫스탁] 삼성전기·삼성SDS·LG이노텍, 차익물량에 두자릿수 폭락",
-          "url": "https://biz.newdaily.co.kr/site/data/html/2026/06/02/2026060200094.html",
-          "office": "biz",
-          "sentiment": "악재",
-          "cause_score": 10,
-          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 악재, 당일"
-        },
-        {
-          "title": "[특징주]삼성전기, '680% 급등' 뒤 16% 폭락…숨고르기 들어간 AI 대장주",
-          "url": "https://www.namdonews.com/news/articleView.html?idxno=912325",
-          "office": "namdonews",
-          "sentiment": "악재",
-          "cause_score": 10,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "삼성전기 주가 장중 13%대 내려, 차익실현 압력에 이틀째 약세"
-    },
-    {
       "ticker": "롯데에너지머티리얼즈",
       "code": "020150",
       "tomorrow_up_prob": "62%",
-      "entry": 69000.0,
-      "target": 72450,
-      "stop": 66930,
+      "entry": 69700.0,
+      "target": 73185,
+      "stop": 67609,
       "confidence": "중",
       "reasons": [
-        "RSI60.7 강세",
-        "거래량1.76배",
+        "RSI61.3 강세",
+        "거래량1.83배",
         "호재"
       ],
       "risk": "약한 마감",
@@ -467,16 +467,16 @@
       "ticker": "LG헬로비전",
       "code": "037560",
       "tomorrow_up_prob": "55%",
-      "entry": 3375.0,
-      "target": 3544,
-      "stop": 3274,
+      "entry": 3365.0,
+      "target": 3533,
+      "stop": 3264,
       "confidence": "중",
       "reasons": [
         "MACD강세",
-        "거래량13.94배",
+        "거래량14.08배",
         "호재"
       ],
-      "risk": "RSI84.7 과매수",
+      "risk": "RSI84.6 과매수",
       "day_change": null,
       "related_news": [
         {
@@ -492,18 +492,18 @@
     {
       "ticker": "네이처셀",
       "code": "007390",
-      "tomorrow_up_prob": "86%",
-      "entry": 30400.0,
-      "target": 31920,
-      "stop": 29488,
+      "tomorrow_up_prob": "87%",
+      "entry": 30900.0,
+      "target": 32445,
+      "stop": 29973,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI67.2 강세"
+        "RSI67.9 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 11.72,
+      "day_change": 13,
       "cause_news": [
         {
           "title": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가",
@@ -518,12 +518,84 @@
       "cause_summary": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가"
     },
     {
+      "ticker": "성호전자",
+      "code": "043260",
+      "tomorrow_up_prob": "86%",
+      "entry": 46950.0,
+      "target": 49298,
+      "stop": 45542,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.83)",
+        "MACD강세",
+        "RSI56.5 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 22.31,
+      "cause_news": [
+        {
+          "title": "[특징주] 성호전자, 삼성전자 개발 파트너 낙점.. 16%대 '급등'",
+          "url": "https://www.g-enews.com/view.php?ud=20260602104342527244093b5d4e_1",
+          "office": "g-enews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        },
+        {
+          "title": "숨어있는 프리미엄 가전 강자…성호전자, 공기청정기 부품 공급 잭팟 터...",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457062",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+        },
+        {
+          "title": "성호전자 10%대↑…삼성전자 기술개발 파트너사로 부각",
+          "url": "https://www.mt.co.kr/stock/2026/06/02/2026060210375075066",
+          "office": "mt",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 성호전자, 삼성전자 개발 파트너 낙점.. 16%대 '급등'"
+    },
+    {
+      "ticker": "이브이첨단소재",
+      "code": "131400",
+      "tomorrow_up_prob": "81%",
+      "entry": 1833.0,
+      "target": 1925,
+      "stop": 1778,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.82)",
+        "정배열",
+        "RSI55.4 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 21.3,
+      "cause_news": [
+        {
+          "title": "이브이첨단소재, 전고체 배터리 핵심 소재 개발 가속… 차세대 배터리 ...",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457084",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "이브이첨단소재, 전고체 배터리 핵심 소재 개발 가속… 차세대 배터리 ..."
+    },
+    {
       "ticker": "SK텔레콤",
       "code": "017670",
-      "tomorrow_up_prob": "82%",
-      "entry": 124500.0,
-      "target": 130725,
-      "stop": 120765,
+      "tomorrow_up_prob": "81%",
+      "entry": 127200.0,
+      "target": 133560,
+      "stop": 123384,
       "confidence": "상",
       "reasons": [
         "정배열",
@@ -531,7 +603,7 @@
         "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 10.7,
+      "day_change": 10.43,
       "cause_news": [
         {
           "title": "SK텔레콤, 젠슨 황 '피지컬AI 협력' 언급에 장중 7%대 급등[특징주]",
@@ -562,40 +634,12 @@
       "cause_summary": "SK텔레콤, 젠슨 황 '피지컬AI 협력' 언급에 장중 7%대 급등[특징주]"
     },
     {
-      "ticker": "이브이첨단소재",
-      "code": "131400",
-      "tomorrow_up_prob": "81%",
-      "entry": 1815.0,
-      "target": 1906,
-      "stop": 1761,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.78)",
-        "정배열",
-        "RSI55.0 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 19.53,
-      "cause_news": [
-        {
-          "title": "이브이첨단소재, 전고체 배터리 핵심 소재 개발 가속… 차세대 배터리 ...",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457084",
-          "office": "pinpointnews",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "이브이첨단소재, 전고체 배터리 핵심 소재 개발 가속… 차세대 배터리 ..."
-    },
-    {
       "ticker": "두산로보틱스",
       "code": "454910",
-      "tomorrow_up_prob": "81%",
-      "entry": 158800.0,
-      "target": 166740,
-      "stop": 154036,
+      "tomorrow_up_prob": "80%",
+      "entry": 156900.0,
+      "target": 164745,
+      "stop": 152193,
       "confidence": "상",
       "reasons": [
         "정배열",
@@ -616,36 +660,6 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "[특징주] 젠슨 황 발언에 로봇주 '급등'…두산로보틱스 8%↑"
-    },
-    {
-      "ticker": "한온시스템",
-      "code": "018880",
-      "tomorrow_up_prob": "79%",
-      "entry": 5100.0,
-      "target": 5355,
-      "stop": 4947,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI53.7 강세"
-      ],
-      "risk": "약한 마감",
-      "day_change": -2.68,
-      "related_news": [
-        {
-          "title": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
-          "url": "https://n.news.naver.com/mnews/article/015/0005291673",
-          "office": "한국경제",
-          "sentiment": "호재"
-        },
-        {
-          "title": "한온시스템 “2030년 매출 14조 7000억원, 영업이익률 9% 달성”",
-          "url": "https://n.news.naver.com/mnews/article/011/0004624552",
-          "office": "서울경제",
-          "sentiment": "호재"
-        }
-      ]
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
