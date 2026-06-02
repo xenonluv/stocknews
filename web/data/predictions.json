@@ -1,10 +1,10 @@
 {
-  "as_of": "2026-06-02 15:37 KST",
+  "as_of": "2026-06-02 15:52 KST",
   "intraday_rank": [
     {
       "ticker": "신세계",
       "code": "004170",
-      "tomorrow_up_prob": "93%",
+      "tomorrow_up_prob": "92%",
       "entry": 569000.0,
       "target": 597450,
       "stop": 551930,
@@ -15,18 +15,18 @@
         "RSI69.0 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 10.08,
+      "day_change": 10.27,
       "related_news": [
+        {
+          "title": "신세계, 고배당·CAPEX·이자비용 '삼중 부담'…재무 압박 커진다",
+          "url": "https://n.news.naver.com/mnews/article/293/0000085687",
+          "office": "블로터",
+          "sentiment": "호재"
+        },
         {
           "title": "백화점 3사 주가 동반 강세…4월 매출 전년비 21%↑",
           "url": "https://n.news.naver.com/mnews/article/015/0005294007",
           "office": "한국경제",
-          "sentiment": "호재"
-        },
-        {
-          "title": "'지갑 열리네' 백화점주, 4월 매출 뛰면서 동반 상승",
-          "url": "https://n.news.naver.com/mnews/article/008/0005366026",
-          "office": "머니투데이",
           "sentiment": "호재"
         }
       ]
@@ -89,7 +89,7 @@
         "RSI57.1 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 21.8,
+      "day_change": 20.41,
       "cause_news": [
         {
           "title": "[특징주] 성호전자, 삼성전자 개발 파트너 낙점.. 16%대 '급등'",
@@ -134,14 +134,34 @@
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
-      "related_news": [
+      "cause_news": [
         {
-          "title": "적자에도 두산로보틱스 시가총액 10조 돌파…‘젠슨 황 효과’",
-          "url": "https://n.news.naver.com/mnews/article/011/0004627007",
-          "office": "서울경제",
-          "sentiment": "혼재"
+          "title": "[특징주] 두산로보틱스, '젠슨 황 효과' 업고 15% 가까이 상승",
+          "url": "https://www.joongangenews.com/news/articleView.html?idxno=523282",
+          "office": "joongangenews",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] 두산로보틱스, 젠슨 황 \"한국 로보틱스 중요\" 한마디에 신고가",
+          "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1711064",
+          "office": "ebn",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] 젠슨 황 발언에 로봇주 '급등'…두산로보틱스 8%↑",
+          "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=842556",
+          "office": "newsworks",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
         }
-      ]
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 두산로보틱스, '젠슨 황 효과' 업고 15% 가까이 상승"
     },
     {
       "ticker": "NC",
@@ -157,7 +177,7 @@
         "MACD강세"
       ],
       "risk": "Stoch 과매수",
-      "day_change": null,
+      "day_change": 14.38,
       "cause_news": [
         {
           "title": "NC, 5거래일 연속 상승에 9% 급등...32만원선 재돌파",
@@ -190,7 +210,7 @@
     {
       "ticker": "SK텔레콤",
       "code": "017670",
-      "tomorrow_up_prob": "81%",
+      "tomorrow_up_prob": "82%",
       "entry": 125200.0,
       "target": 131460,
       "stop": 121444,
@@ -201,7 +221,7 @@
         "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 12.39,
+      "day_change": null,
       "cause_news": [
         {
           "title": "[특징주] SK텔레콤, 젠슨 황 \"피지컬 AI 협력사\" 언급에 장중 52주 최고가...",
@@ -212,20 +232,20 @@
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "SK텔레콤, 젠슨 황 '피지컬AI 협력' 언급에 장중 7%대 급등[특징주]",
-          "url": "https://www.newsway.co.kr/news/view?ud=2026060210531958321",
-          "office": "newsway",
+          "title": "SKT, 주가 11% 급등…엔비디아 '제조 피지컬 AI' 동맹 부각",
+          "url": "http://www.itdaily.kr/news/articleView.html?idxno=239627",
+          "office": "itdaily",
           "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[ET특징주] 젠슨황 “피지컬 AI 협력사” 언급에 SK텔레콤 신고가",
-          "url": "https://www.etnews.com/20260602000157",
-          "office": "etnews",
+          "title": "[특징주] SK텔레콤 '엔비디아 파트너' 부각 영향 +10%대 상승",
+          "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1261535",
+          "office": "jeonmae",
           "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
@@ -245,7 +265,7 @@
         "일목 구름위"
       ],
       "risk": "약한 마감",
-      "day_change": -3.83,
+      "day_change": -4.21,
       "cause_news": [
         {
           "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
@@ -301,7 +321,7 @@
         "거래량1.53배"
       ],
       "risk": "약한 마감",
-      "day_change": -7.66,
+      "day_change": -7.79,
       "cause_news": [
         {
           "title": "엔비디아와 영상 AI 에이전트 시장 공략…노타 5%↑[특징주]",
@@ -389,19 +409,19 @@
         "일목 구름위"
       ],
       "risk": "RSI83.4 과매수, Stoch 과매수",
-      "day_change": 3.55,
+      "day_change": 3.15,
       "cause_news": [
         {
-          "title": "[특징주] 나인테크, LG전자와 254억원 공급계약… 주가 15% 급등",
-          "url": "http://www.biztribune.co.kr/news/articleView.html?idxno=354333",
-          "office": "biztribune",
+          "title": "[특징주] 나인테크, LG전자와 254억 규모 디스플레이 장비 공급계약",
+          "url": "https://www.newstnt.com/news/articleView.html?idxno=704974",
+          "office": "newstnt",
           "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 나인테크, LG전자와 254억원 공급계약… 주가 15% 급등"
+      "cause_summary": "[특징주] 나인테크, LG전자와 254억 규모 디스플레이 장비 공급계약"
     },
     {
       "ticker": "동양고속",
@@ -414,7 +434,7 @@
       "reasons": [
         "거래량2.37배",
         "호재",
-        "장중 26회 지속"
+        "장중 27회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -477,7 +497,7 @@
       "confidence": "중",
       "reasons": [
         "MACD강세",
-        "거래량15.32배",
+        "거래량15.33배",
         "호재"
       ],
       "risk": "RSI82.4 과매수",
@@ -496,7 +516,7 @@
     {
       "ticker": "신세계",
       "code": "004170",
-      "tomorrow_up_prob": "93%",
+      "tomorrow_up_prob": "92%",
       "entry": 569000.0,
       "target": 597450,
       "stop": 551930,
@@ -507,18 +527,18 @@
         "RSI69.0 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 10.08,
+      "day_change": 10.27,
       "related_news": [
+        {
+          "title": "신세계, 고배당·CAPEX·이자비용 '삼중 부담'…재무 압박 커진다",
+          "url": "https://n.news.naver.com/mnews/article/293/0000085687",
+          "office": "블로터",
+          "sentiment": "호재"
+        },
         {
           "title": "백화점 3사 주가 동반 강세…4월 매출 전년비 21%↑",
           "url": "https://n.news.naver.com/mnews/article/015/0005294007",
           "office": "한국경제",
-          "sentiment": "호재"
-        },
-        {
-          "title": "'지갑 열리네' 백화점주, 4월 매출 뛰면서 동반 상승",
-          "url": "https://n.news.naver.com/mnews/article/008/0005366026",
-          "office": "머니투데이",
           "sentiment": "호재"
         }
       ]
@@ -581,7 +601,7 @@
         "RSI57.1 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 21.8,
+      "day_change": 20.41,
       "cause_news": [
         {
           "title": "[특징주] 성호전자, 삼성전자 개발 파트너 낙점.. 16%대 '급등'",
@@ -626,14 +646,34 @@
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
-      "related_news": [
+      "cause_news": [
         {
-          "title": "적자에도 두산로보틱스 시가총액 10조 돌파…‘젠슨 황 효과’",
-          "url": "https://n.news.naver.com/mnews/article/011/0004627007",
-          "office": "서울경제",
-          "sentiment": "혼재"
+          "title": "[특징주] 두산로보틱스, '젠슨 황 효과' 업고 15% 가까이 상승",
+          "url": "https://www.joongangenews.com/news/articleView.html?idxno=523282",
+          "office": "joongangenews",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] 두산로보틱스, 젠슨 황 \"한국 로보틱스 중요\" 한마디에 신고가",
+          "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1711064",
+          "office": "ebn",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] 젠슨 황 발언에 로봇주 '급등'…두산로보틱스 8%↑",
+          "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=842556",
+          "office": "newsworks",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
         }
-      ]
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 두산로보틱스, '젠슨 황 효과' 업고 15% 가까이 상승"
     },
     {
       "ticker": "NC",
@@ -649,7 +689,7 @@
         "MACD강세"
       ],
       "risk": "Stoch 과매수",
-      "day_change": null,
+      "day_change": 14.38,
       "cause_news": [
         {
           "title": "NC, 5거래일 연속 상승에 9% 급등...32만원선 재돌파",
