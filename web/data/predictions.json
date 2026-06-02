@@ -1,18 +1,18 @@
 {
-  "as_of": "2026-06-02 15:07 KST",
+  "as_of": "2026-06-02 15:22 KST",
   "intraday_rank": [
     {
       "ticker": "신세계",
       "code": "004170",
       "tomorrow_up_prob": "89%",
-      "entry": 567000.0,
-      "target": 595350,
-      "stop": 549990,
+      "entry": 568000.0,
+      "target": 596400,
+      "stop": 550960,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.96)",
+        "강세마감(0.95)",
         "정배열",
-        "RSI68.7 강세"
+        "RSI68.9 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -32,20 +32,64 @@
       ]
     },
     {
+      "ticker": "네이처셀",
+      "code": "007390",
+      "tomorrow_up_prob": "88%",
+      "entry": 30750.0,
+      "target": 32288,
+      "stop": 29828,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI67.7 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 12.82,
+      "cause_news": [
+        {
+          "title": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가",
+          "url": "https://www.biotimes.co.kr/news/articleView.html?idxno=31995",
+          "office": "biotimes",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+        },
+        {
+          "title": "네이처셀 주가 다시 반등...'조인트스템' 美 허가 신청 기대감",
+          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3598547",
+          "office": "gukjenews",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+        },
+        {
+          "title": "네이처셀, 줄기세포 치료제 가치 재조명…차세대 바이오 시장서 부각",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457146",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가"
+    },
+    {
       "ticker": "성호전자",
       "code": "043260",
       "tomorrow_up_prob": "86%",
-      "entry": 47750.0,
-      "target": 50138,
-      "stop": 46318,
+      "entry": 48050.0,
+      "target": 50452,
+      "stop": 46608,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.81)",
+        "강세마감(0.84)",
         "MACD강세",
-        "RSI57.3 강세"
+        "RSI57.6 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 19.9,
+      "day_change": 21.93,
       "cause_news": [
         {
           "title": "[특징주] 성호전자, 삼성전자 개발 파트너 낙점.. 16%대 '급등'",
@@ -79,37 +123,33 @@
       "ticker": "두산로보틱스",
       "code": "454910",
       "tomorrow_up_prob": "83%",
-      "entry": 162700.0,
-      "target": 170835,
-      "stop": 157819,
+      "entry": 165100.0,
+      "target": 173355,
+      "stop": 160147,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.77)",
+        "강세마감(0.84)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
-      "cause_news": [
+      "related_news": [
         {
-          "title": "[특징주] 두산로보틱스, '젠슨 황 효과' 업고 15% 가까이 상승",
-          "url": "https://www.joongangenews.com/news/articleView.html?idxno=523282",
-          "office": "joongangenews",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+          "title": "적자에도 두산로보틱스 시가총액 10조 돌파…‘젠슨 황 효과’",
+          "url": "https://n.news.naver.com/mnews/article/011/0004627007",
+          "office": "서울경제",
+          "sentiment": "혼재"
         }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 두산로보틱스, '젠슨 황 효과' 업고 15% 가까이 상승"
+      ]
     },
     {
       "ticker": "SK텔레콤",
       "code": "017670",
       "tomorrow_up_prob": "82%",
-      "entry": 123700.0,
-      "target": 129885,
-      "stop": 119989,
+      "entry": 126100.0,
+      "target": 132405,
+      "stop": 122317,
       "confidence": "상",
       "reasons": [
         "정배열",
@@ -117,7 +157,7 @@
         "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 9.89,
+      "day_change": 10.78,
       "cause_news": [
         {
           "title": "[특징주] SK텔레콤, 젠슨 황 \"피지컬 AI 협력사\" 언급에 장중 52주 최고가...",
@@ -151,12 +191,12 @@
       "ticker": "NC",
       "code": "036570",
       "tomorrow_up_prob": "82%",
-      "entry": 332000.0,
-      "target": 348600,
-      "stop": 322040,
+      "entry": 336000.0,
+      "target": 352800,
+      "stop": 325920,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.8)",
+        "강세마감(0.87)",
         "정배열",
         "MACD강세"
       ],
@@ -195,17 +235,17 @@
       "ticker": "한온시스템",
       "code": "018880",
       "tomorrow_up_prob": "72%",
-      "entry": 5005.0,
-      "target": 5255,
-      "stop": 4855,
+      "entry": 5020.0,
+      "target": 5271,
+      "stop": 4869,
       "confidence": "상",
       "reasons": [
         "정배열",
-        "RSI52.3 강세",
+        "RSI52.5 강세",
         "일목 구름위"
       ],
       "risk": "약한 마감",
-      "day_change": -4.21,
+      "day_change": -3.83,
       "cause_news": [
         {
           "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
@@ -251,17 +291,17 @@
       "ticker": "노타",
       "code": "486990",
       "tomorrow_up_prob": "71%",
-      "entry": 34800.0,
-      "target": 36540,
-      "stop": 33756,
+      "entry": 34950.0,
+      "target": 36698,
+      "stop": 33902,
       "confidence": "상",
       "reasons": [
         "MACD강세",
-        "RSI54.0 강세",
-        "거래량1.51배"
+        "RSI54.3 강세",
+        "거래량1.53배"
       ],
       "risk": "약한 마감",
-      "day_change": -7.66,
+      "day_change": -7.79,
       "cause_news": [
         {
           "title": "엔비디아와 영상 AI 에이전트 시장 공략…노타 5%↑[특징주]",
@@ -294,7 +334,7 @@
     {
       "ticker": "SK네트웍스",
       "code": "001740",
-      "tomorrow_up_prob": "70%",
+      "tomorrow_up_prob": "71%",
       "entry": 12840.0,
       "target": 13482,
       "stop": 12455,
@@ -336,17 +376,45 @@
       "cause_summary": "[특징주] SK네트웍스, AI·로봇 기대에 22%대 급등…업스테이지 지분가치..."
     },
     {
+      "ticker": "삼성물산",
+      "code": "028260",
+      "tomorrow_up_prob": "71%",
+      "entry": 490000.0,
+      "target": 514500,
+      "stop": 475300,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.86)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "삼성물산, 잠원동에 49층 한강뷰 랜드마크 짓는다",
+          "url": "https://www.polinews.co.kr/news/articleView.html?idxno=732789",
+          "office": "polinews",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "삼성물산, 잠원동에 49층 한강뷰 랜드마크 짓는다"
+    },
+    {
       "ticker": "동양고속",
       "code": "084670",
       "tomorrow_up_prob": "61%",
-      "entry": 40000.0,
-      "target": 42000,
-      "stop": 38800,
+      "entry": 38750.0,
+      "target": 40688,
+      "stop": 37588,
       "confidence": "중",
       "reasons": [
-        "거래량2.34배",
+        "거래량2.37배",
         "호재",
-        "장중 24회 지속"
+        "장중 25회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -375,32 +443,32 @@
       "ticker": "삼성생명",
       "code": "032830",
       "tomorrow_up_prob": "60%",
-      "entry": 457000.0,
-      "target": 479850,
-      "stop": 443290,
+      "entry": 471000.0,
+      "target": 494550,
+      "stop": 456870,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.96)",
+        "강세마감(0.81)",
         "정배열",
         "MACD강세"
       ],
-      "risk": "RSI84.9 과매수, Stoch 과매수",
+      "risk": "RSI85.9 과매수, Stoch 과매수",
       "day_change": null
     },
     {
       "ticker": "LG헬로비전",
       "code": "037560",
       "tomorrow_up_prob": "51%",
-      "entry": 3050.0,
-      "target": 3202,
-      "stop": 2958,
+      "entry": 3140.0,
+      "target": 3297,
+      "stop": 3046,
       "confidence": "하",
       "reasons": [
         "MACD강세",
-        "거래량15.26배",
+        "거래량15.31배",
         "호재"
       ],
-      "risk": "약한 마감, RSI80.8 과매수",
+      "risk": "약한 마감, RSI82.0 과매수",
       "day_change": null,
       "related_news": [
         {
@@ -417,14 +485,14 @@
       "ticker": "신세계",
       "code": "004170",
       "tomorrow_up_prob": "89%",
-      "entry": 567000.0,
-      "target": 595350,
-      "stop": 549990,
+      "entry": 568000.0,
+      "target": 596400,
+      "stop": 550960,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.96)",
+        "강세마감(0.95)",
         "정배열",
-        "RSI68.7 강세"
+        "RSI68.9 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -444,20 +512,64 @@
       ]
     },
     {
+      "ticker": "네이처셀",
+      "code": "007390",
+      "tomorrow_up_prob": "88%",
+      "entry": 30750.0,
+      "target": 32288,
+      "stop": 29828,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI67.7 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 12.82,
+      "cause_news": [
+        {
+          "title": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가",
+          "url": "https://www.biotimes.co.kr/news/articleView.html?idxno=31995",
+          "office": "biotimes",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+        },
+        {
+          "title": "네이처셀 주가 다시 반등...'조인트스템' 美 허가 신청 기대감",
+          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3598547",
+          "office": "gukjenews",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+        },
+        {
+          "title": "네이처셀, 줄기세포 치료제 가치 재조명…차세대 바이오 시장서 부각",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457146",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가"
+    },
+    {
       "ticker": "성호전자",
       "code": "043260",
       "tomorrow_up_prob": "86%",
-      "entry": 47750.0,
-      "target": 50138,
-      "stop": 46318,
+      "entry": 48050.0,
+      "target": 50452,
+      "stop": 46608,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.81)",
+        "강세마감(0.84)",
         "MACD강세",
-        "RSI57.3 강세"
+        "RSI57.6 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 19.9,
+      "day_change": 21.93,
       "cause_news": [
         {
           "title": "[특징주] 성호전자, 삼성전자 개발 파트너 낙점.. 16%대 '급등'",
@@ -491,37 +603,33 @@
       "ticker": "두산로보틱스",
       "code": "454910",
       "tomorrow_up_prob": "83%",
-      "entry": 162700.0,
-      "target": 170835,
-      "stop": 157819,
+      "entry": 165100.0,
+      "target": 173355,
+      "stop": 160147,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.77)",
+        "강세마감(0.84)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
-      "cause_news": [
+      "related_news": [
         {
-          "title": "[특징주] 두산로보틱스, '젠슨 황 효과' 업고 15% 가까이 상승",
-          "url": "https://www.joongangenews.com/news/articleView.html?idxno=523282",
-          "office": "joongangenews",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+          "title": "적자에도 두산로보틱스 시가총액 10조 돌파…‘젠슨 황 효과’",
+          "url": "https://n.news.naver.com/mnews/article/011/0004627007",
+          "office": "서울경제",
+          "sentiment": "혼재"
         }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 두산로보틱스, '젠슨 황 효과' 업고 15% 가까이 상승"
+      ]
     },
     {
       "ticker": "SK텔레콤",
       "code": "017670",
       "tomorrow_up_prob": "82%",
-      "entry": 123700.0,
-      "target": 129885,
-      "stop": 119989,
+      "entry": 126100.0,
+      "target": 132405,
+      "stop": 122317,
       "confidence": "상",
       "reasons": [
         "정배열",
@@ -529,7 +637,7 @@
         "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 9.89,
+      "day_change": 10.78,
       "cause_news": [
         {
           "title": "[특징주] SK텔레콤, 젠슨 황 \"피지컬 AI 협력사\" 언급에 장중 52주 최고가...",
@@ -558,50 +666,6 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "[특징주] SK텔레콤, 젠슨 황 \"피지컬 AI 협력사\" 언급에 장중 52주 최고가..."
-    },
-    {
-      "ticker": "NC",
-      "code": "036570",
-      "tomorrow_up_prob": "82%",
-      "entry": 332000.0,
-      "target": 348600,
-      "stop": 322040,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.8)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "Stoch 과매수",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "NC, 5거래일 연속 상승에 9% 급등...32만원선 재돌파",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439187",
-          "office": "econonews",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] NC, 현대로템과 '국방 AI' 개발 소식에 강세…장중 신고가",
-          "url": "https://www.ajunews.com/view/20260528143823536",
-          "office": "ajunews",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "[특징주] NC, 현대로템과 국방 피지컬 AI 개발 소식에 4% 상승",
-          "url": "https://biz.chosun.com/stock/stock_general/2026/05/28/Z7EE4GY7VRDVHGM47V6H5BEAMU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-          "office": "biz",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "NC, 5거래일 연속 상승에 9% 급등...32만원선 재돌파"
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
