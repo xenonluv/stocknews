@@ -1,21 +1,85 @@
 {
-  "as_of": "2026-06-02 12:52 KST",
+  "as_of": "2026-06-02 13:07 KST",
   "intraday_rank": [
+    {
+      "ticker": "네이처셀",
+      "code": "007390",
+      "tomorrow_up_prob": "88%",
+      "entry": 30450.0,
+      "target": 31972,
+      "stop": 29536,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI67.3 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 11.9,
+      "cause_news": [
+        {
+          "title": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가",
+          "url": "https://www.biotimes.co.kr/news/articleView.html?idxno=31995",
+          "office": "biotimes",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+        },
+        {
+          "title": "네이처셀 주가 다시 반등...'조인트스템' 美 허가 신청 기대감",
+          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3598547",
+          "office": "gukjenews",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가"
+    },
+    {
+      "ticker": "이브이첨단소재",
+      "code": "131400",
+      "tomorrow_up_prob": "81%",
+      "entry": 1805.0,
+      "target": 1895,
+      "stop": 1751,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.75)",
+        "정배열",
+        "RSI54.7 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 18.87,
+      "cause_news": [
+        {
+          "title": "이브이첨단소재, 전고체 배터리 핵심 소재 개발 가속… 차세대 배터리 ...",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457084",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "이브이첨단소재, 전고체 배터리 핵심 소재 개발 가속… 차세대 배터리 ..."
+    },
     {
       "ticker": "SK텔레콤",
       "code": "017670",
-      "tomorrow_up_prob": "89%",
-      "entry": 133600.0,
-      "target": 140280,
-      "stop": 129592,
+      "tomorrow_up_prob": "81%",
+      "entry": 129600.0,
+      "target": 136080,
+      "stop": 125712,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.78)",
         "정배열",
-        "MACD강세"
+        "MACD강세",
+        "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 18.98,
+      "day_change": 14.53,
       "cause_news": [
         {
           "title": "SK텔레콤, 젠슨 황 '피지컬AI 협력' 언급에 장중 7%대 급등[특징주]",
@@ -46,56 +110,84 @@
       "cause_summary": "SK텔레콤, 젠슨 황 '피지컬AI 협력' 언급에 장중 7%대 급등[특징주]"
     },
     {
-      "ticker": "네이처셀",
-      "code": "007390",
-      "tomorrow_up_prob": "88%",
-      "entry": 30700.0,
-      "target": 32235,
-      "stop": 29779,
+      "ticker": "두산로보틱스",
+      "code": "454910",
+      "tomorrow_up_prob": "80%",
+      "entry": 155400.0,
+      "target": 163170,
+      "stop": 150738,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI67.6 강세"
+        "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 11.72,
+      "day_change": null,
       "cause_news": [
         {
-          "title": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가",
-          "url": "https://www.biotimes.co.kr/news/articleView.html?idxno=31995",
-          "office": "biotimes",
+          "title": "[특징주] 젠슨 황 발언에 로봇주 '급등'…두산로보틱스 8%↑",
+          "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=842556",
+          "office": "newsworks",
           "sentiment": "호재",
           "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "네이처셀 주가 다시 반등...'조인트스템' 美 허가 신청 기대감",
-          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3598547",
-          "office": "gukjenews",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가"
+      "cause_summary": "[특징주] 젠슨 황 발언에 로봇주 '급등'…두산로보틱스 8%↑"
+    },
+    {
+      "ticker": "동양고속",
+      "code": "084670",
+      "tomorrow_up_prob": "79%",
+      "entry": 43550.0,
+      "target": 45728,
+      "stop": 42244,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.8)",
+        "RSI51.5 강세",
+        "Stoch골든"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "천일·동양고속, 지방선거 앞두고 20%대 급등",
+          "url": "https://www.newsis.com/view/NISX20260602_0003653382",
+          "office": "newsis",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "지방선거 D-1...천일고속·동양고속 '고터 관련주 강세'",
+          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3598323",
+          "office": "gukjenews",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "천일·동양고속, 지방선거 앞두고 20%대 급등"
     },
     {
       "ticker": "성호전자",
       "code": "043260",
-      "tomorrow_up_prob": "86%",
-      "entry": 46500.0,
-      "target": 48825,
-      "stop": 45105,
+      "tomorrow_up_prob": "78%",
+      "entry": 45400.0,
+      "target": 47670,
+      "stop": 44038,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.78)",
         "MACD강세",
-        "RSI56.1 강세"
+        "RSI54.9 강세",
+        "Stoch골든"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 18.76,
+      "day_change": 16.35,
       "cause_news": [
         {
           "title": "[특징주] 성호전자, 삼성전자 개발 파트너 낙점.. 16%대 '급등'",
@@ -126,108 +218,16 @@
       "cause_summary": "[특징주] 성호전자, 삼성전자 개발 파트너 낙점.. 16%대 '급등'"
     },
     {
-      "ticker": "이브이첨단소재",
-      "code": "131400",
-      "tomorrow_up_prob": "81%",
-      "entry": 1813.0,
-      "target": 1904,
-      "stop": 1759,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.77)",
-        "정배열",
-        "RSI54.9 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 19.46,
-      "cause_news": [
-        {
-          "title": "이브이첨단소재, 전고체 배터리 핵심 소재 개발 가속… 차세대 배터리 ...",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457084",
-          "office": "pinpointnews",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "이브이첨단소재, 전고체 배터리 핵심 소재 개발 가속… 차세대 배터리 ..."
-    },
-    {
-      "ticker": "두산로보틱스",
-      "code": "454910",
-      "tomorrow_up_prob": "80%",
-      "entry": 157300.0,
-      "target": 165165,
-      "stop": 152581,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] 젠슨 황 발언에 로봇주 '급등'…두산로보틱스 8%↑",
-          "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=842556",
-          "office": "newsworks",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 젠슨 황 발언에 로봇주 '급등'…두산로보틱스 8%↑"
-    },
-    {
-      "ticker": "동양고속",
-      "code": "084670",
-      "tomorrow_up_prob": "79%",
-      "entry": 44550.0,
-      "target": 46778,
-      "stop": 43214,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.88)",
-        "RSI52.6 강세",
-        "Stoch골든"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "천일·동양고속, 지방선거 앞두고 20%대 급등",
-          "url": "https://www.newsis.com/view/NISX20260602_0003653382",
-          "office": "newsis",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "지방선거 D-1...천일고속·동양고속 '고터 관련주 강세'",
-          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3598323",
-          "office": "gukjenews",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "천일·동양고속, 지방선거 앞두고 20%대 급등"
-    },
-    {
       "ticker": "신세계",
       "code": "004170",
-      "tomorrow_up_prob": "75%",
-      "entry": 547000.0,
-      "target": 574350,
-      "stop": 530590,
+      "tomorrow_up_prob": "76%",
+      "entry": 545000.0,
+      "target": 572250,
+      "stop": 528650,
       "confidence": "상",
       "reasons": [
         "정배열",
-        "RSI66.1 강세",
+        "RSI65.8 강세",
         "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
@@ -317,17 +317,17 @@
       "ticker": "노타",
       "code": "486990",
       "tomorrow_up_prob": "67%",
-      "entry": 34100.0,
-      "target": 35805,
-      "stop": 33077,
+      "entry": 34900.0,
+      "target": 36645,
+      "stop": 33853,
       "confidence": "중",
       "reasons": [
         "MACD강세",
-        "RSI52.6 강세",
+        "RSI54.2 강세",
         "호재"
       ],
       "risk": "약한 마감",
-      "day_change": -10.3,
+      "day_change": -8.45,
       "cause_news": [
         {
           "title": "엔비디아와 영상 AI 에이전트 시장 공략…노타 5%↑[특징주]",
@@ -358,15 +358,71 @@
       "cause_summary": "엔비디아와 영상 AI 에이전트 시장 공략…노타 5%↑[특징주]"
     },
     {
+      "ticker": "NC",
+      "code": "036570",
+      "tomorrow_up_prob": "67%",
+      "entry": 313000.0,
+      "target": 328650,
+      "stop": 303610,
+      "confidence": "중",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "일목 구름위"
+      ],
+      "risk": "Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "포스코DX, 전날 이어 23% 급등…NC AI와 로봇 AI 개발 협력",
+          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439135",
+          "office": "econonews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "포스코DX, 전날 이어 23% 급등…NC AI와 로봇 AI 개발 협력"
+    },
+    {
+      "ticker": "롯데에너지머티리얼즈",
+      "code": "020150",
+      "tomorrow_up_prob": "66%",
+      "entry": 70200.0,
+      "target": 73710,
+      "stop": 68094,
+      "confidence": "중",
+      "reasons": [
+        "RSI61.8 강세",
+        "거래량1.95배",
+        "호재"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "롯데에너지머티리얼즈, 적자 개선에 장중 급등…AI 회로박 기대감↑[특...",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026051114453324378",
+          "office": "newsway",
+          "sentiment": "악재",
+          "cause_score": 8,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 악재, 오래됨"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "롯데에너지머티리얼즈, 적자 개선에 장중 급등…AI 회로박 기대감↑[특..."
+    },
+    {
       "ticker": "가온전선",
       "code": "000500",
       "tomorrow_up_prob": "66%",
-      "entry": 388500.0,
-      "target": 407925,
-      "stop": 376845,
+      "entry": 390000.0,
+      "target": 409500,
+      "stop": 378300,
       "confidence": "중",
       "reasons": [
-        "RSI56.1 강세",
+        "RSI56.3 강세",
         "일목 구름위",
         "호재"
       ],
@@ -402,47 +458,63 @@
       "cause_summary": "[특징주] 가온전선, 빅테크향 대규모 배전설비 수주 기대감에 강세"
     },
     {
-      "ticker": "롯데에너지머티리얼즈",
-      "code": "020150",
-      "tomorrow_up_prob": "62%",
-      "entry": 69400.0,
-      "target": 72870,
-      "stop": 67318,
+      "ticker": "SK네트웍스",
+      "code": "001740",
+      "tomorrow_up_prob": "64%",
+      "entry": 12790.0,
+      "target": 13430,
+      "stop": 12406,
       "confidence": "중",
       "reasons": [
-        "RSI61.0 강세",
-        "거래량1.92배",
-        "호재"
+        "강세마감(1.0)",
+        "정배열",
+        "MACD강세"
       ],
-      "risk": "약한 마감",
+      "risk": "RSI80.2 과매수",
       "day_change": null,
       "cause_news": [
         {
-          "title": "롯데에너지머티리얼즈, 적자 개선에 장중 급등…AI 회로박 기대감↑[특...",
-          "url": "https://www.newsway.co.kr/news/view?ud=2026051114453324378",
-          "office": "newsway",
-          "sentiment": "악재",
-          "cause_score": 8,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 악재, 오래됨"
+          "title": "[특징주] SK네트웍스, AI·로봇 기대에 22%대 급등…업스테이지 지분가치...",
+          "url": "https://www.tokenpost.kr/news/economy/363473",
+          "office": "tokenpost",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        },
+        {
+          "title": "[특징주] SK네트웍스, 장 초반 21%대 급등…52주 신고가 경신",
+          "url": "https://www.etoday.co.kr/news/view/2588099",
+          "office": "etoday",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        },
+        {
+          "title": "업스테이지 바라기들...KT, 카카오, SK네트웍스",
+          "url": "http://www.fntimes.com/html/view.php?ud=2026060210021879237fd637f543_18",
+          "office": "fntimes",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
         }
       ],
-      "cause_confidence": "높음",
-      "cause_summary": "롯데에너지머티리얼즈, 적자 개선에 장중 급등…AI 회로박 기대감↑[특..."
+      "cause_confidence": "중간",
+      "cause_summary": "[특징주] SK네트웍스, AI·로봇 기대에 22%대 급등…업스테이지 지분가치..."
     },
     {
       "ticker": "LG헬로비전",
       "code": "037560",
       "tomorrow_up_prob": "55%",
-      "entry": 3260.0,
-      "target": 3423,
-      "stop": 3162,
+      "entry": 3310.0,
+      "target": 3476,
+      "stop": 3211,
       "confidence": "중",
       "reasons": [
         "MACD강세",
-        "거래량14.54배",
+        "거래량14.72배",
         "호재"
       ],
-      "risk": "RSI83.5 과매수",
+      "risk": "RSI84.1 과매수",
       "day_change": null,
       "related_news": [
         {
@@ -452,24 +524,110 @@
           "sentiment": "호재"
         }
       ]
+    },
+    {
+      "ticker": "S-Oil",
+      "code": "010950",
+      "tomorrow_up_prob": "52%",
+      "entry": 110100.0,
+      "target": 115605,
+      "stop": 106797,
+      "confidence": "하",
+      "reasons": [
+        "강세마감(0.9)"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "related_news": [
+        {
+          "title": "&quot;에쓰오일, 중동전쟁 끝나도 정제마진 강세 계속&quot;-신한",
+          "url": "https://n.news.naver.com/mnews/article/008/0005365972",
+          "office": "머니투데이",
+          "sentiment": "혼재"
+        }
+      ]
     }
   ],
   "closing_bet": [
     {
-      "ticker": "SK텔레콤",
-      "code": "017670",
-      "tomorrow_up_prob": "89%",
-      "entry": 133600.0,
-      "target": 140280,
-      "stop": 129592,
+      "ticker": "네이처셀",
+      "code": "007390",
+      "tomorrow_up_prob": "88%",
+      "entry": 30450.0,
+      "target": 31972,
+      "stop": 29536,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.78)",
         "정배열",
-        "MACD강세"
+        "MACD강세",
+        "RSI67.3 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 18.98,
+      "day_change": 11.9,
+      "cause_news": [
+        {
+          "title": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가",
+          "url": "https://www.biotimes.co.kr/news/articleView.html?idxno=31995",
+          "office": "biotimes",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+        },
+        {
+          "title": "네이처셀 주가 다시 반등...'조인트스템' 美 허가 신청 기대감",
+          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3598547",
+          "office": "gukjenews",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가"
+    },
+    {
+      "ticker": "이브이첨단소재",
+      "code": "131400",
+      "tomorrow_up_prob": "81%",
+      "entry": 1805.0,
+      "target": 1895,
+      "stop": 1751,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.75)",
+        "정배열",
+        "RSI54.7 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 18.87,
+      "cause_news": [
+        {
+          "title": "이브이첨단소재, 전고체 배터리 핵심 소재 개발 가속… 차세대 배터리 ...",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457084",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "이브이첨단소재, 전고체 배터리 핵심 소재 개발 가속… 차세대 배터리 ..."
+    },
+    {
+      "ticker": "SK텔레콤",
+      "code": "017670",
+      "tomorrow_up_prob": "81%",
+      "entry": 129600.0,
+      "target": 136080,
+      "stop": 125712,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "일목 구름위"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 14.53,
       "cause_news": [
         {
           "title": "SK텔레콤, 젠슨 황 '피지컬AI 협력' 언급에 장중 7%대 급등[특징주]",
@@ -500,120 +658,12 @@
       "cause_summary": "SK텔레콤, 젠슨 황 '피지컬AI 협력' 언급에 장중 7%대 급등[특징주]"
     },
     {
-      "ticker": "네이처셀",
-      "code": "007390",
-      "tomorrow_up_prob": "88%",
-      "entry": 30700.0,
-      "target": 32235,
-      "stop": 29779,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI67.6 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 11.72,
-      "cause_news": [
-        {
-          "title": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가",
-          "url": "https://www.biotimes.co.kr/news/articleView.html?idxno=31995",
-          "office": "biotimes",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "네이처셀 주가 다시 반등...'조인트스템' 美 허가 신청 기대감",
-          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3598547",
-          "office": "gukjenews",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가"
-    },
-    {
-      "ticker": "성호전자",
-      "code": "043260",
-      "tomorrow_up_prob": "86%",
-      "entry": 46500.0,
-      "target": 48825,
-      "stop": 45105,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.78)",
-        "MACD강세",
-        "RSI56.1 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 18.76,
-      "cause_news": [
-        {
-          "title": "[특징주] 성호전자, 삼성전자 개발 파트너 낙점.. 16%대 '급등'",
-          "url": "https://www.g-enews.com/view.php?ud=20260602104342527244093b5d4e_1",
-          "office": "g-enews",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "숨어있는 프리미엄 가전 강자…성호전자, 공기청정기 부품 공급 잭팟 터...",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457062",
-          "office": "pinpointnews",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-        },
-        {
-          "title": "성호전자 10%대↑…삼성전자 기술개발 파트너사로 부각",
-          "url": "https://www.mt.co.kr/stock/2026/06/02/2026060210375075066",
-          "office": "mt",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 성호전자, 삼성전자 개발 파트너 낙점.. 16%대 '급등'"
-    },
-    {
-      "ticker": "이브이첨단소재",
-      "code": "131400",
-      "tomorrow_up_prob": "81%",
-      "entry": 1813.0,
-      "target": 1904,
-      "stop": 1759,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.77)",
-        "정배열",
-        "RSI54.9 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 19.46,
-      "cause_news": [
-        {
-          "title": "이브이첨단소재, 전고체 배터리 핵심 소재 개발 가속… 차세대 배터리 ...",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457084",
-          "office": "pinpointnews",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "이브이첨단소재, 전고체 배터리 핵심 소재 개발 가속… 차세대 배터리 ..."
-    },
-    {
       "ticker": "두산로보틱스",
       "code": "454910",
       "tomorrow_up_prob": "80%",
-      "entry": 157300.0,
-      "target": 165165,
-      "stop": 152581,
+      "entry": 155400.0,
+      "target": 163170,
+      "stop": 150738,
       "confidence": "상",
       "reasons": [
         "정배열",
@@ -634,6 +684,42 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "[특징주] 젠슨 황 발언에 로봇주 '급등'…두산로보틱스 8%↑"
+    },
+    {
+      "ticker": "동양고속",
+      "code": "084670",
+      "tomorrow_up_prob": "79%",
+      "entry": 43550.0,
+      "target": 45728,
+      "stop": 42244,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.8)",
+        "RSI51.5 강세",
+        "Stoch골든"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "천일·동양고속, 지방선거 앞두고 20%대 급등",
+          "url": "https://www.newsis.com/view/NISX20260602_0003653382",
+          "office": "newsis",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "지방선거 D-1...천일고속·동양고속 '고터 관련주 강세'",
+          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3598323",
+          "office": "gukjenews",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "천일·동양고속, 지방선거 앞두고 20%대 급등"
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
