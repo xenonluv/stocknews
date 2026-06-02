@@ -1,16 +1,116 @@
 [
   {
+    "post_id": "POST_20260602_131400",
+    "status": "PUBLISHED",
+    "tier": "signal",
+    "target_stock": "이브이첨단소재",
+    "signal_probability": "74%",
+    "position_type": "상승추세",
+    "day_change": 17.49,
+    "headline": "EV첨단소재 투자사 프롤로지움 나스닥 상장",
+    "summary": "[시그널] 일봉 상승추세 · 재료 호재(중요도 5.5). 일봉 국면을 함께 확인.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-02 09:30 KST",
+    "news": [
+      {
+        "title": "EV첨단소재 투자사 프롤로지움 나스닥 상장",
+        "url": "https://n.news.naver.com/mnews/article/031/0001031452",
+        "office": "아이뉴스24",
+        "sentiment": "호재"
+      },
+      {
+        "title": "EV첨단소재 투자사 플로로지움 &quot;양산 가능성이 핵심 경쟁력&quot;",
+        "url": "https://n.news.naver.com/mnews/article/031/0001029288",
+        "office": "아이뉴스24",
+        "sentiment": "호재"
+      },
+      {
+        "title": "이브이첨단소재 1분기 영업익 4억 '흑자 전환'",
+        "url": "https://n.news.naver.com/mnews/article/031/0001028858",
+        "office": "아이뉴스24",
+        "sentiment": "호재"
+      }
+    ]
+  },
+  {
+    "post_id": "POST_20260602_017670",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "SK텔레콤",
+    "signal_probability": "52%",
+    "position_type": "과다상승",
+    "day_change": 9.45,
+    "headline": "SK텔레콤, 젠슨황 '피지컬 AI 협력' 언급에 12%↑…신고가",
+    "summary": "[후보] 재료+거래대금 포착(중요도 9.0, 호재) · 일봉 과다상승.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-02 09:30 KST",
+    "news": [
+      {
+        "title": "'젠슨 황 효과에…' 이틀새 40% 급등한 종목",
+        "url": "https://n.news.naver.com/mnews/article/008/0005366001",
+        "office": "머니투데이",
+        "sentiment": "호재"
+      },
+      {
+        "title": "[특징주] SKT, '엔비디아 파트너' 부각에 장 초반 10%대 급등",
+        "url": "https://n.news.naver.com/mnews/article/001/0016113179",
+        "office": "연합뉴스",
+        "sentiment": "호재"
+      },
+      {
+        "title": "[특징주] 젠슨황 ‘피지컬 AI 협력사’ 언급에…SK텔레콤 12%대 급등",
+        "url": "https://n.news.naver.com/mnews/article/366/0001168710",
+        "office": "조선비즈",
+        "sentiment": "호재"
+      },
+      {
+        "title": "젠슨황 “피지컬 AI 협력사”…SK텔레콤 ‘신고가’[특징주]",
+        "url": "https://n.news.naver.com/mnews/article/018/0006295811",
+        "office": "이데일리",
+        "sentiment": "호재"
+      }
+    ],
+    "cause_news": [
+      {
+        "title": "SK텔레콤, 젠슨황 '피지컬 AI 협력' 언급에 12%↑…신고가",
+        "url": "https://www.newsis.com/view/NISX20260602_0003652936",
+        "office": "newsis",
+        "sentiment": "호재",
+        "cause_score": 17,
+        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+      },
+      {
+        "title": "SK텔레콤, 젠슨 황 언급에 주가 11%대 급등",
+        "url": "https://www.gukjenews.com/news/articleView.html?idxno=3598300",
+        "office": "gukjenews",
+        "sentiment": "호재",
+        "cause_score": 17,
+        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+      },
+      {
+        "title": "[특징주] 젠슨황 ‘피지컬 AI 협력사’ 언급에…SK텔레콤 12%대 급등",
+        "url": "https://biz.chosun.com/stock/stock_general/2026/06/02/U3LQTDET6NFV7NVXS34C33GUMI/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+        "office": "biz",
+        "sentiment": "호재",
+        "cause_score": 15,
+        "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+      }
+    ],
+    "cause_confidence": "높음",
+    "cause_summary": "SK텔레콤, 젠슨황 '피지컬 AI 협력' 언급에 12%↑…신고가"
+  },
+  {
     "post_id": "POST_20260602_486990",
     "status": "PUBLISHED",
     "tier": "candidate",
     "target_stock": "노타",
-    "signal_probability": "48%",
-    "position_type": "과다상승",
-    "day_change": -0.66,
+    "signal_probability": "55%",
+    "position_type": "분석불가",
+    "day_change": -5.42,
     "headline": "엔비디아와 영상 AI 에이전트 시장 공략…노타 5%↑[특징주]",
-    "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 과다상승.",
+    "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 분석불가.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-02 09:15 KST",
+    "published_at": "2026-06-02 09:30 KST",
     "news": [
       {
         "title": "노타, 엔비디아 아태 파트너데이 ‘한국 유일’ 패널 참여…“피지컬...",
@@ -43,8 +143,8 @@
         "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=02673206645477456",
         "office": "edaily",
         "sentiment": "호재",
-        "cause_score": 15,
-        "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        "cause_score": 13,
+        "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락"
       },
       {
         "title": "[주간e종목] 노타, 엔비디아의 대만 피지컬AI 행사 초청 소식에 '上'",
@@ -73,11 +173,11 @@
     "target_stock": "한온시스템",
     "signal_probability": "67%",
     "position_type": "상승추세",
-    "day_change": 1.53,
+    "day_change": -3.07,
     "headline": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 상승추세.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-02 09:15 KST",
+    "published_at": "2026-06-02 09:30 KST",
     "news": [
       {
         "title": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
@@ -106,84 +206,49 @@
     "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
   },
   {
-    "post_id": "POST_20260602_131400",
+    "post_id": "POST_20260602_454910",
     "status": "PUBLISHED",
     "tier": "candidate",
-    "target_stock": "이브이첨단소재",
-    "signal_probability": "66%",
-    "position_type": "상승추세",
-    "day_change": 21.43,
-    "headline": "EV첨단소재 투자사 프롤로지움 나스닥 상장",
-    "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 호재) · 일봉 상승추세.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-02 09:15 KST",
-    "news": [
-      {
-        "title": "EV첨단소재 투자사 프롤로지움 나스닥 상장",
-        "url": "https://n.news.naver.com/mnews/article/031/0001031452",
-        "office": "아이뉴스24",
-        "sentiment": "호재"
-      },
-      {
-        "title": "EV첨단소재 투자사 플로로지움 &quot;양산 가능성이 핵심 경쟁력&quot;",
-        "url": "https://n.news.naver.com/mnews/article/031/0001029288",
-        "office": "아이뉴스24",
-        "sentiment": "호재"
-      },
-      {
-        "title": "이브이첨단소재 1분기 영업익 4억 '흑자 전환'",
-        "url": "https://n.news.naver.com/mnews/article/031/0001028858",
-        "office": "아이뉴스24",
-        "sentiment": "호재"
-      }
-    ]
-  },
-  {
-    "post_id": "POST_20260602_017670",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "SK텔레콤",
+    "target_stock": "두산로보틱스",
     "signal_probability": "46%",
     "position_type": "과다상승",
-    "day_change": 12.12,
-    "headline": "젠슨황 “피지컬 AI 협력사”…SK텔레콤 ‘신고가’[특징주]",
-    "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
+    "day_change": 11.27,
+    "headline": "두산로보틱스ㆍ로보티즈ㆍ유일로보틱스 급등 반해 레인보우로보틱스ㆍ...",
+    "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-02 09:15 KST",
+    "published_at": "2026-06-02 09:30 KST",
     "news": [
       {
-        "title": "젠슨황 “피지컬 AI 협력사”…SK텔레콤 ‘신고가’[특징주]",
-        "url": "https://n.news.naver.com/mnews/article/018/0006295811",
-        "office": "이데일리",
+        "title": "새 ‘젠슨 픽’은 두산?…로보틱스 투자 언급에 직접 시구까지 [GTC 타...",
+        "url": "https://n.news.naver.com/mnews/article/016/0002651025",
+        "office": "헤럴드경제",
         "sentiment": "호재"
       },
       {
-        "title": "SK텔레콤, 엔비디아 AI 도구 활용… 하이닉스 공장 디지털 트윈 구현",
-        "url": "https://n.news.naver.com/mnews/article/023/0003979676",
-        "office": "조선일보",
+        "title": "젠슨 황 &quot;한국 로보틱스 주목&quot;… '두산·LG 파트너' 세아메카닉스 밸류...",
+        "url": "https://n.news.naver.com/mnews/article/008/0005366003",
+        "office": "머니투데이",
+        "sentiment": "호재"
+      },
+      {
+        "title": "'젠슨 황 효과에…' 이틀새 40% 급등한 종목",
+        "url": "https://n.news.naver.com/mnews/article/008/0005366001",
+        "office": "머니투데이",
         "sentiment": "호재"
       }
     ],
     "cause_news": [
       {
-        "title": "젠슨황 “피지컬 AI 협력사”…SK텔레콤 ‘신고가’[특징주]",
-        "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03096326645477784",
-        "office": "edaily",
+        "title": "두산로보틱스ㆍ로보티즈ㆍ유일로보틱스 급등 반해 레인보우로보틱스ㆍ...",
+        "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439161",
+        "office": "econonews",
         "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
-      },
-      {
-        "title": "[1일 특징주] 젠슨 황이 파트너사 '콕' 찝었다…SKT '신고가'",
-        "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=842510",
-        "office": "newsworks",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
+        "cause_score": 13,
+        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
       }
     ],
     "cause_confidence": "높음",
-    "cause_summary": "젠슨황 “피지컬 AI 협력사”…SK텔레콤 ‘신고가’[특징주]"
+    "cause_summary": "두산로보틱스ㆍ로보티즈ㆍ유일로보틱스 급등 반해 레인보우로보틱스ㆍ..."
   },
   {
     "post_id": "POST_20260602_373220",
@@ -192,11 +257,11 @@
     "target_stock": "LG에너지솔루션",
     "signal_probability": "66%",
     "position_type": "상승추세",
-    "day_change": 7.36,
-    "headline": "LS證 “LG에너지솔루션, EV 점유율 하락·美 ESS 시장은 경쟁 치열…목...",
+    "day_change": 4.4,
+    "headline": "나트륨이온 배터리 상용화 기대감 폭발…LG에너지솔루션·에코프로 동반...",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 상승추세.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-02 09:15 KST",
+    "published_at": "2026-06-02 09:30 KST",
     "news": [
       {
         "title": "LS證 “LG에너지솔루션, EV 점유율 하락·美 ESS 시장은 경쟁 치열…목...",
@@ -210,94 +275,57 @@
         "office": "이데일리",
         "sentiment": "호재"
       }
-    ]
+    ],
+    "cause_news": [
+      {
+        "title": "나트륨이온 배터리 상용화 기대감 폭발…LG에너지솔루션·에코프로 동반...",
+        "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457052",
+        "office": "pinpointnews",
+        "sentiment": "호재",
+        "cause_score": 11,
+        "cause_reason": "제목 언급, 주어, 인과표현, 당일"
+      }
+    ],
+    "cause_confidence": "높음",
+    "cause_summary": "나트륨이온 배터리 상용화 기대감 폭발…LG에너지솔루션·에코프로 동반..."
   },
   {
-    "post_id": "POST_20260602_043260",
+    "post_id": "POST_20260602_066570",
     "status": "PUBLISHED",
     "tier": "candidate",
-    "target_stock": "성호전자",
-    "signal_probability": "52%",
-    "position_type": "분석불가",
-    "day_change": 5.07,
-    "headline": "박성재 부회장, 성호전자 지분 추가 매입…“주가 여전히 져평가” [...",
-    "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 분석불가.",
+    "target_stock": "LG전자",
+    "signal_probability": "46%",
+    "position_type": "과다상승",
+    "day_change": -3.68,
+    "headline": "'젠슨 황 효과'에 LG전자 연일 급등…LG그룹주 들썩",
+    "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-02 09:15 KST",
+    "published_at": "2026-06-02 09:30 KST",
     "news": [
       {
-        "title": "박성재 부회장, 성호전자 지분 추가 매입…“주가 여전히 져평가” [...",
-        "url": "https://n.news.naver.com/mnews/article/011/0004622845",
-        "office": "서울경제",
-        "sentiment": "호재"
-      },
-      {
-        "title": "엔비디아·브로드컴 이어 코닝까지... 성호전자, 광통신 장비 수주 '봇...",
-        "url": "https://n.news.naver.com/mnews/article/008/0005359846",
+        "title": "젠슨 황 &quot;한국 로보틱스 주목&quot;… '두산·LG 파트너' 세아메카닉스 밸류...",
+        "url": "https://n.news.naver.com/mnews/article/008/0005366003",
         "office": "머니투데이",
         "sentiment": "호재"
-      }
-    ]
-  },
-  {
-    "post_id": "POST_20260602_009150",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "삼성전기",
-    "signal_probability": "45%",
-    "position_type": "과다상승",
-    "day_change": -9.13,
-    "headline": "삼성전기, AI 수요 확대 기대 속 강세…화요일 성적 촉각",
-    "summary": "[후보] 재료+거래대금 포착(중요도 4.5, 호재) · 일봉 과다상승.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-02 09:15 KST",
-    "news": [
-      {
-        "title": "&quot;300만원 간다더니 한달 수익률 82.32%&quot;…삼성전기 담은 반도체 ETF '훨...",
-        "url": "https://n.news.naver.com/mnews/article/014/0005529389",
-        "office": "파이낸셜뉴스",
-        "sentiment": "호재"
       },
       {
-        "title": "삼성전기 280만원 가능하다…미래에셋證 “LTA로 기판·MLCC 중장기 성...",
-        "url": "https://n.news.naver.com/mnews/article/366/0001168694",
-        "office": "조선비즈",
-        "sentiment": "호재"
-      },
-      {
-        "title": "‘85만전자·300만전기’ 파격 전망 속…SK하닉은 ‘250만 vs 400만’ 엇...",
-        "url": "https://n.news.naver.com/mnews/article/016/0002650901",
-        "office": "헤럴드경제",
-        "sentiment": "호재"
+        "title": "'젠슨 황 효과'에 LG전자 연일 급등…LG그룹주 들썩",
+        "url": "https://n.news.naver.com/mnews/article/243/0000098581",
+        "office": "이코노미스트",
+        "sentiment": "혼재"
       }
     ],
     "cause_news": [
       {
-        "title": "삼성전기, AI 수요 확대 기대 속 강세…화요일 성적 촉각",
-        "url": "https://www.cbci.co.kr/news/articleView.html?idxno=578791",
-        "office": "cbci",
+        "title": "'젠슨 황 효과'에 LG전자 연일 급등…LG그룹주 들썩",
+        "url": "https://economist.co.kr/article/view/ecn202606020007",
+        "office": "economist",
         "sentiment": "호재",
-        "cause_score": 13,
-        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-      },
-      {
-        "title": "[특징주] 삼성전기, 증권가 목표가 280만원 제시에도 3%대 약세…AI 서버...",
-        "url": "https://www.tokenpost.kr/news/economy/364959",
-        "office": "tokenpost",
-        "sentiment": "호재",
-        "cause_score": 13,
-        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-      },
-      {
-        "title": "[특징주] 삼성전기, AI 부품 공급망 병목·판가 인상 전망…목표주가 11...",
-        "url": "https://www.newstnt.com/news/articleView.html?idxno=704702",
-        "office": "newstnt",
-        "sentiment": "호재",
-        "cause_score": 13,
-        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        "cause_score": 11,
+        "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
       }
     ],
     "cause_confidence": "높음",
-    "cause_summary": "삼성전기, AI 수요 확대 기대 속 강세…화요일 성적 촉각"
+    "cause_summary": "'젠슨 황 효과'에 LG전자 연일 급등…LG그룹주 들썩"
   }
 ]
