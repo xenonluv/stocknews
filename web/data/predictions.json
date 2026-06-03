@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-06-03 14:22 KST",
+  "as_of": "2026-06-03 14:37 KST",
   "intraday_rank": [
     {
       "ticker": "신세계",
@@ -27,12 +27,6 @@
           "title": "'탈팡'은 실패했는데…'탈벅'은 성공할까",
           "url": "https://n.news.naver.com/mnews/article/648/0000047672",
           "office": "비즈워치",
-          "sentiment": "호재"
-        },
-        {
-          "title": "신세계, 고배당·CAPEX·이자비용 '삼중 부담'…재무 압박 커진다",
-          "url": "https://n.news.naver.com/mnews/article/293/0000085687",
-          "office": "블로터",
           "sentiment": "호재"
         }
       ]
@@ -148,7 +142,7 @@
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "84%",
+      "tomorrow_up_prob": "83%",
       "entry": 280500.0,
       "target": 294525,
       "stop": 272085,
@@ -195,16 +189,8 @@
         "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null,
+      "day_change": 11.59,
       "cause_news": [
-        {
-          "title": "[특징주] SK텔레콤, 젠슨 황 \"피지컬 AI 협력사\" 언급에 장중 52주 최고가...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=295065",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락"
-        },
         {
           "title": "[특징주] SKT, '엔비디아 파트너' 부각에 11% 급등 마감(종합)",
           "url": "https://www.yna.co.kr/view/AKR20260602041951008?input=1195m",
@@ -215,7 +201,7 @@
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] SK텔레콤, 젠슨 황 \"피지컬 AI 협력사\" 언급에 장중 52주 최고가..."
+      "cause_summary": "[특징주] SKT, '엔비디아 파트너' 부각에 11% 급등 마감(종합)"
     },
     {
       "ticker": "NC",
@@ -410,40 +396,32 @@
       "cause_summary": "삼성생명·삼성물산, 주주환원 확대·밸류업 기대감에 동반 강세[특징주..."
     },
     {
-      "ticker": "LG전자",
-      "code": "066570",
+      "ticker": "로보스타",
+      "code": "090360",
       "tomorrow_up_prob": "64%",
-      "entry": 392500.0,
-      "target": 412125,
-      "stop": 380725,
+      "entry": 158800.0,
+      "target": 166740,
+      "stop": 154036,
       "confidence": "중",
       "reasons": [
+        "강세마감(1.0)",
         "정배열",
-        "MACD강세",
-        "일목 구름위"
+        "MACD강세"
       ],
-      "risk": "RSI83.4 과매수, Stoch 과매수",
-      "day_change": 3.15,
+      "risk": "RSI82.3 과매수, Stoch 과매수",
+      "day_change": null,
       "cause_news": [
         {
-          "title": "AI 다음은 로봇?…LG전자 327%·두산로보틱스 114% 뛰었다",
-          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=02151686645478112",
-          "office": "edaily",
+          "title": "로보스타, 투자주의종목 지정→소수계좌 매수 집중 주의",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16078556",
+          "office": "topstarnews",
           "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
-        },
-        {
-          "title": "젠슨 황 방한 앞두고 LG전자와 현대차의 패러다임 전환 주목돼",
-          "url": "https://www.news2day.co.kr/article/20260603500016",
-          "office": "news2day",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "중간",
-      "cause_summary": "AI 다음은 로봇?…LG전자 327%·두산로보틱스 114% 뛰었다"
+      "cause_summary": "로보스타, 투자주의종목 지정→소수계좌 매수 집중 주의"
     },
     {
       "ticker": "동양고속",
@@ -456,7 +434,7 @@
       "reasons": [
         "거래량2.37배",
         "호재",
-        "장중 22회 지속"
+        "장중 23회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -492,7 +470,7 @@
       "reasons": [
         "MACD강세",
         "거래량15.33배",
-        "장중 22회 지속"
+        "장중 23회 지속"
       ],
       "risk": "RSI82.4 과매수",
       "day_change": null
@@ -525,12 +503,6 @@
           "title": "'탈팡'은 실패했는데…'탈벅'은 성공할까",
           "url": "https://n.news.naver.com/mnews/article/648/0000047672",
           "office": "비즈워치",
-          "sentiment": "호재"
-        },
-        {
-          "title": "신세계, 고배당·CAPEX·이자비용 '삼중 부담'…재무 압박 커진다",
-          "url": "https://n.news.naver.com/mnews/article/293/0000085687",
-          "office": "블로터",
           "sentiment": "호재"
         }
       ]
@@ -646,7 +618,7 @@
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "84%",
+      "tomorrow_up_prob": "83%",
       "entry": 280500.0,
       "target": 294525,
       "stop": 272085,
