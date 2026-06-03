@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-06-03 13:07 KST",
+  "as_of": "2026-06-03 13:22 KST",
   "intraday_rank": [
     {
       "ticker": "신세계",
@@ -51,7 +51,7 @@
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null,
+      "day_change": 20.45,
       "cause_news": [
         {
           "title": "[특징주] 두산로보틱스, 젠슨 황 \"한국 로보틱스 중요\" 방한 앞두고 로...",
@@ -219,15 +219,15 @@
         "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 11.59,
+      "day_change": null,
       "cause_news": [
         {
           "title": "[특징주] SK텔레콤, 젠슨 황 \"피지컬 AI 협력사\" 언급에 장중 52주 최고가...",
           "url": "https://www.widedaily.com/news/articleView.html?idxno=295065",
           "office": "widedaily",
           "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락"
         },
         {
           "title": "[특징주] SK텔레콤 '엔비디아 파트너' 부각 영향 +10%대 상승",
@@ -488,7 +488,7 @@
       "reasons": [
         "거래량2.37배",
         "호재",
-        "장중 17회 지속"
+        "장중 18회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -524,7 +524,7 @@
       "reasons": [
         "MACD강세",
         "거래량15.33배",
-        "장중 17회 지속"
+        "장중 18회 지속"
       ],
       "risk": "RSI82.4 과매수",
       "day_change": null
@@ -581,7 +581,7 @@
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null,
+      "day_change": 20.45,
       "cause_news": [
         {
           "title": "[특징주] 두산로보틱스, 젠슨 황 \"한국 로보틱스 중요\" 방한 앞두고 로...",
