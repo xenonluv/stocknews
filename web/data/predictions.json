@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-06-03 12:37 KST",
+  "as_of": "2026-06-03 12:52 KST",
   "intraday_rank": [
     {
       "ticker": "신세계",
@@ -164,7 +164,7 @@
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "82%",
+      "tomorrow_up_prob": "84%",
       "entry": 280500.0,
       "target": 294525,
       "stop": 272085,
@@ -208,7 +208,7 @@
     {
       "ticker": "SK텔레콤",
       "code": "017670",
-      "tomorrow_up_prob": "82%",
+      "tomorrow_up_prob": "81%",
       "entry": 125200.0,
       "target": 131460,
       "stop": 121444,
@@ -488,7 +488,7 @@
       "reasons": [
         "거래량2.37배",
         "호재",
-        "장중 15회 지속"
+        "장중 16회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -524,7 +524,7 @@
       "reasons": [
         "MACD강세",
         "거래량15.33배",
-        "장중 15회 지속"
+        "장중 16회 지속"
       ],
       "risk": "RSI82.4 과매수",
       "day_change": null
@@ -694,7 +694,7 @@
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "82%",
+      "tomorrow_up_prob": "84%",
       "entry": 280500.0,
       "target": 294525,
       "stop": 272085,
