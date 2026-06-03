@@ -10,7 +10,7 @@
     "headline": "[특징주] 삼성전기, 차익실현 매물에 12%대 급락",
     "summary": "[시그널] 일봉 과다상승 · 재료 호재(중요도 6.5). 일봉 국면을 함께 확인.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-03 09:30 KST",
+    "published_at": "2026-06-03 09:45 KST",
     "news": [
       {
         "title": "“200만원 넘자마자 14% 빠졌다”…삼성전기 급락에 투자자 ‘술렁’",
@@ -69,7 +69,7 @@
     "headline": "[특징주] 네이처셀, 미 FDA 허가 기대감에 상한가",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-03 09:30 KST",
+    "published_at": "2026-06-03 09:45 KST",
     "news": [
       {
         "title": "네이처셀, 연이틀 상한가…디앤디파마텍도 간생검 공개 앞두고 ‘강세...",
@@ -130,7 +130,7 @@
     "headline": "[특징주] 노타, 퀄컴 AI 디바이스 최적화 성공에 19%대 강세",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 분석불가.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-03 09:30 KST",
+    "published_at": "2026-06-03 09:45 KST",
     "news": [
       {
         "title": "노타, 엔비디아 아태 파트너데이 ‘한국 유일’ 패널 참여…“피지컬...",
@@ -197,7 +197,7 @@
     "headline": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 눌림목.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-03 09:30 KST",
+    "published_at": "2026-06-03 09:45 KST",
     "news": [
       {
         "title": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
@@ -236,12 +236,12 @@
     "headline": "로봇주 올해 평균 155% 상승…현대차·LG전자 강세",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-03 09:30 KST",
+    "published_at": "2026-06-03 09:45 KST",
     "news": [
       {
-        "title": "S&amp;P, LG전자 신용등급 BBB+ 상향…&quot;주력사업 성장세&quot;",
-        "url": "https://n.news.naver.com/mnews/article/018/0006296450",
-        "office": "이데일리",
+        "title": "S&amp;P, LG전자 신용등급 상향…“주력 사업 성장”",
+        "url": "https://n.news.naver.com/mnews/article/030/0003433959",
+        "office": "전자신문",
         "sentiment": "호재"
       },
       {
@@ -279,6 +279,14 @@
         "sentiment": "호재",
         "cause_score": 11,
         "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
+      },
+      {
+        "title": "S&P, LG전자 신용등급 12년 만에 상향…BBB+로 올려",
+        "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=842681",
+        "office": "newsworks",
+        "sentiment": "호재",
+        "cause_score": 5,
+        "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
       }
     ],
     "cause_confidence": "높음",
@@ -295,7 +303,7 @@
     "headline": "[특징주] SK텔레콤, 젠슨 황 \"피지컬 AI 협력사\" 언급에 장중 52주 최고가...",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-03 09:30 KST",
+    "published_at": "2026-06-03 09:45 KST",
     "news": [
       {
         "title": "앤스로픽, AI ‘미토스’ 15개국 150곳으로 확대…&quot;韓 삼성도 포함&quot;",
@@ -362,7 +370,7 @@
     "headline": "[특징주] 성호전자, 삼성전자 개발 파트너 낙점.. 16%대 '급등'",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 분석불가.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-03 09:30 KST",
+    "published_at": "2026-06-03 09:45 KST",
     "news": [
       {
         "title": "[단독] 세아FSI 인수 우협에 성호전자 모회사... 매각가 2000억대",
@@ -387,20 +395,20 @@
         "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
       },
       {
-        "title": "숨어있는 프리미엄 가전 강자…성호전자, 공기청정기 부품 공급 잭팟 터...",
-        "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457062",
-        "office": "pinpointnews",
-        "sentiment": "호재",
-        "cause_score": 7,
-        "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-      },
-      {
         "title": "성호전자 10%대↑…삼성전자 기술개발 파트너사로 부각",
         "url": "https://www.mt.co.kr/stock/2026/06/02/2026060210375075066",
         "office": "mt",
         "sentiment": "호재",
         "cause_score": 5,
         "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+      },
+      {
+        "title": "숨어있는 프리미엄 가전 강자…성호전자, 공기청정기 부품 공급 잭팟 터...",
+        "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457062",
+        "office": "pinpointnews",
+        "sentiment": "호재",
+        "cause_score": 5,
+        "cause_reason": "제목 언급, 주어, 재료, 일반뉴스"
       }
     ],
     "cause_confidence": "높음",
@@ -417,7 +425,7 @@
     "headline": "“양극화에도 수혜가?”…신세계, 백화점 날개 달고 역대 최대 실적 전...",
     "summary": "[후보] 재료+거래대금 포착(중요도 4.5, 호재) · 일봉 상승추세.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-03 09:30 KST",
+    "published_at": "2026-06-03 09:45 KST",
     "news": [
       {
         "title": "신세계백화점, 21일까지 '5메이징 카드 위크' 연다",
@@ -462,7 +470,7 @@
     "headline": "NAVER네이버, 30만원 돌파 후 숨고르기…AI·클라우드 기대감에 재평가 ...",
     "summary": "[후보] 재료+거래대금 포착(중요도 4.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-03 09:30 KST",
+    "published_at": "2026-06-03 09:45 KST",
     "news": [
       {
         "title": "‘젠슨 황 효과’ LG·로보틱스·네이버 주가 ↑",
@@ -477,9 +485,9 @@
         "sentiment": "호재"
       },
       {
-        "title": "젠슨 황 방한 D-1… 5년 물린 네이버 주주들, ‘전원 구조’ 가능할까...",
-        "url": "https://n.news.naver.com/mnews/article/011/0004627176",
-        "office": "서울경제",
+        "title": "네이버, AI 안전성 거버넌스 개편…CRO 산하 'AI 세이프티 센터' 신설",
+        "url": "https://n.news.naver.com/mnews/article/030/0003433918",
+        "office": "전자신문",
         "sentiment": "호재"
       }
     ],
