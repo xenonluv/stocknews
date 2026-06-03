@@ -11,11 +11,13 @@ import os
 import sys
 import json
 import glob
+import subprocess
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
 from team3_price_context import fetch_daily  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+REPO = os.path.join(HERE, "..")
 STATE = os.path.join(HERE, "state")
 HIST = os.path.join(STATE, "history")
 
@@ -85,5 +87,50 @@ def evaluate():
     return summary
 
 
+def git(*args):
+    return subprocess.run(["git", *args], cwd=REPO, capture_output=True, text=True)
+
+
+def push_state():
+    """백테스트 산출물만 커밋/푸시. 변경이 없어도 이전 미푸시 커밋 회수를 위해 push 시도."""
+    files = sorted(glob.glob(os.path.join(HIST, "*.json")))
+    for name in ("backtest.json", "calibration.json"):
+        path = os.path.join(STATE, name)
+        if os.path.exists(path):
+            files.append(path)
+
+    rel_files = [os.path.relpath(path, REPO) for path in files]
+    if rel_files:
+        add = git("add", "--", *rel_files)
+        if add.returncode != 0:
+            sys.stderr.write("git add 실패:\n" + add.stderr[-1000:])
+            sys.exit(1)
+
+    diff = git("diff", "--cached", "--quiet", "--", *rel_files) if rel_files else None
+    if diff and diff.returncode == 1:
+        cm = git("commit", "-q", "-m", "data: update forecast backtest", "--", *rel_files)
+        if cm.returncode != 0:
+            sys.stderr.write("commit 실패:\n" + cm.stderr[-1000:])
+            sys.exit(1)
+    elif diff and diff.returncode != 0:
+        sys.stderr.write("diff 확인 실패:\n" + diff.stderr[-1000:])
+        sys.exit(1)
+    else:
+        print("백테스트 변경 없음 — commit skip, pull/push 확인")
+
+    pl = git("pull", "--rebase", "--autostash", "origin", "main")
+    if pl.returncode != 0:
+        git("rebase", "--abort")
+        sys.stderr.write("pull --rebase 실패 — abort 후 종료:\n" + pl.stderr[-1000:])
+        sys.exit(1)
+
+    ps = git("push", "origin", "main")
+    if ps.returncode != 0:
+        sys.stderr.write("push 실패:\n" + ps.stderr[-1000:])
+        sys.exit(1)
+
+
 if __name__ == "__main__":
     evaluate()
+    if "--push" in sys.argv[1:]:
+        push_state()

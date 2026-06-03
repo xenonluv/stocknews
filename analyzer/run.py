@@ -43,7 +43,7 @@ def apply_calibration(raw, calib):
     if not calib:
         return raw
     for b in calib.get("bins", []):
-        if b["lo"] <= raw < b["hi"] and b.get("n", 0) >= 5:
+        if b["lo"] <= raw < b["hi"] and b.get("n", 0) >= 20:
             return round(b["actual_rate"])
     return raw
 
@@ -107,10 +107,10 @@ def score(ind, sent, persist):
     return max(5, min(95, round(p))), pros[:3], cons[:2]
 
 
-def build(top, bet_n):
+def build(top, bet_n, record=True):
     now = datetime.now(KST)
     uni = collect_mod.fetch_universe()
-    state, _ = collect_mod.accumulate(uni, now)
+    state, _ = collect_mod.accumulate(uni, now, write=record)
     cand = uni[:top]  # API 확률 상위만 심화분석(호출 통제)
     calib = load_json(os.path.join(STATE, "calibration.json"))  # 백테스트 보정표(있으면)
 
@@ -164,7 +164,8 @@ def build(top, bet_n):
         rows.append(row)
     rows.sort(key=lambda r: -r["_p"])
     closing = [r for r in rows if r["_p"] >= 55][:bet_n]  # 확신 일정 이상만 종가베팅
-    record_history(closing, now)  # 익일 백테스트용 이력 기록(_raw 보존)
+    if record:
+        record_history(closing, now)  # 익일 백테스트용 이력 기록(_raw 보존)
     for r in rows:                # 출력 전 내부 필드 제거
         r.pop("_p", None)
         r.pop("_raw", None)
@@ -188,7 +189,7 @@ def main():
     top = int(args[args.index("--top") + 1]) if "--top" in args else 30
     bet = int(args[args.index("--bet") + 1]) if "--bet" in args else 5
 
-    out = build(top, bet)
+    out = build(top, bet, record=not dry)
     text = json.dumps(out, ensure_ascii=False, indent=2)
 
     if dry:

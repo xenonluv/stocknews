@@ -29,6 +29,11 @@ out/
 # 디자인 시안 미리보기 (참고용, 코드 아님)
 mock/
 
-# analyzer 런타임 상태(장중 누적·예측 기록) — 코드 아님
-analyzer/state/
+# analyzer 런타임 상태 — history/backtest/calibration만 추적, intraday 등 임시파일 제외
+analyzer/state/*
+!analyzer/state/history/
+!analyzer/state/history/*.json
+!analyzer/state/backtest.json
+!analyzer/state/calibration.json
+analyzer/state/intraday_*.json
 analyzer/out/

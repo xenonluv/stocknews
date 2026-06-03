@@ -20,7 +20,7 @@ TOP=30; BET=5
 # 두 푸셔(publish·analyzer)를 7분 시차로 분리 → 동시 git push 충돌 방지
 L_PUBLISH="0,15,30,45 9-15 * * 1-5 cd $REPO && $PY scripts/publish.py --max-candidates 8 --names $WATCH >> /tmp/publish.log 2>&1"
 L_FORECAST="7,22,37,52 9-15 * * 1-5 cd $REPO && $PY analyzer/run.py --push --top $TOP --bet $BET >> /tmp/forecast.log 2>&1"
-L_BACKTEST="50 8 * * 1-5 cd $REPO && $PY analyzer/backtest.py >> /tmp/backtest.log 2>&1"
+L_BACKTEST="10 17 * * 1-5 cd $REPO && $PY analyzer/backtest.py --push >> /tmp/backtest.log 2>&1"
 
 NEW_CRON="$(
   crontab -l 2>/dev/null | grep -v -E "scripts/publish.py|analyzer/run.py|analyzer/backtest.py|^PATH=/usr/local/bin:/usr/bin:/bin$" || true

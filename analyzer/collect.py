@@ -73,15 +73,17 @@ def fetch_universe():
     return [x for x in out if x["code"] and x["name"]]
 
 
-def accumulate(universe, now=None):
+def accumulate(universe, now=None, write=True):
     """장중 시계열 누적 → state 파일. 종목별 등장횟수·확률추이·최근tier 갱신."""
     now = now or datetime.now(KST)
-    os.makedirs(STATE_DIR, exist_ok=True)
     path = os.path.join(STATE_DIR, f"intraday_{now.strftime('%Y%m%d')}.json")
     state = {}
     if os.path.exists(path):
         state = json.load(open(path, encoding="utf-8"))
+    if not write:
+        return state, path
 
+    os.makedirs(STATE_DIR, exist_ok=True)
     hhmm = now.strftime("%H:%M")
     for u in universe:
         c = u["code"]
