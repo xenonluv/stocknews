@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-06-03 13:52 KST",
+  "as_of": "2026-06-03 14:07 KST",
   "intraday_rank": [
     {
       "ticker": "신세계",
@@ -156,7 +156,7 @@
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "84%",
+      "tomorrow_up_prob": "83%",
       "entry": 280500.0,
       "target": 294525,
       "stop": 272085,
@@ -392,6 +392,14 @@
           "sentiment": "호재",
           "cause_score": 7,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        },
+        {
+          "title": "[특징주] SK네트웍스, 장 초반 21%대 급등…52주 신고가 경신",
+          "url": "https://www.etoday.co.kr/news/view/2588099",
+          "office": "etoday",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
         }
       ],
       "cause_confidence": "중간",
@@ -472,7 +480,7 @@
       "reasons": [
         "거래량2.37배",
         "호재",
-        "장중 20회 지속"
+        "장중 21회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -508,7 +516,7 @@
       "reasons": [
         "MACD강세",
         "거래량15.33배",
-        "장중 20회 지속"
+        "장중 21회 지속"
       ],
       "risk": "RSI82.4 과매수",
       "day_change": null
@@ -670,7 +678,7 @@
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "84%",
+      "tomorrow_up_prob": "83%",
       "entry": 280500.0,
       "target": 294525,
       "stop": 272085,
