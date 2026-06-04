@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-06-04 14:37 KST",
+  "as_of": "2026-06-04 14:52 KST",
   "intraday_rank": [
     {
       "ticker": "유진테크",
@@ -15,7 +15,7 @@
         "RSI62.2 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 29.97,
+      "day_change": null,
       "cause_news": [
         {
           "title": "[특징주] 유진테크, '上'…반도체 소부장 투자심리 개선에 매수세 집중",
@@ -49,47 +49,45 @@
       "ticker": "브이엠",
       "code": "089970",
       "tomorrow_up_prob": "93%",
-      "entry": 68800.0,
-      "target": 72240,
-      "stop": 66736,
+      "entry": 68300.0,
+      "target": 71715,
+      "stop": 66251,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.87)",
+        "강세마감(0.83)",
         "정배열",
-        "RSI63.2 강세"
+        "RSI62.8 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 27.31,
-      "related_news": [
+      "day_change": 27.68,
+      "cause_news": [
         {
-          "title": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
-          "url": "https://n.news.naver.com/mnews/article/015/0005290112",
-          "office": "한국경제",
-          "sentiment": "호재"
-        },
-        {
-          "title": "&quot;브이엠, 올해 역대급 실적 전망…목표가↑&quot;-하나",
-          "url": "https://n.news.naver.com/mnews/article/015/0005275582",
-          "office": "한국경제",
-          "sentiment": "호재"
+          "title": "브이엠 주가, 6월 4일 장중 69,100원 27.49% 상승 상한가 70,400원 도달",
+          "url": "https://www.joongangenews.com/news/articleView.html?idxno=523671",
+          "office": "joongangenews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         }
-      ]
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "브이엠 주가, 6월 4일 장중 69,100원 27.49% 상승 상한가 70,400원 도달"
     },
     {
       "ticker": "현대백화점",
       "code": "069960",
       "tomorrow_up_prob": "90%",
-      "entry": 139000.0,
-      "target": 145950,
-      "stop": 134830,
+      "entry": 139100.0,
+      "target": 146055,
+      "stop": 134927,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.91)",
+        "강세마감(0.92)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 14.29,
+      "day_change": 15.27,
       "cause_news": [
         {
           "title": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가",
@@ -123,18 +121,34 @@
       "ticker": "신세계",
       "code": "004170",
       "tomorrow_up_prob": "87%",
-      "entry": 676000.0,
-      "target": 709800,
-      "stop": 655720,
+      "entry": 668000.0,
+      "target": 701400,
+      "stop": 647960,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.96)",
+        "강세마감(0.88)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 17.4,
+      "day_change": 17.57,
       "cause_news": [
+        {
+          "title": "[특징주] 신세계, 18%대 급등…백화점 업황 개선 기대감 '쑥'",
+          "url": "https://www.ajunews.com/view/20260604140418212",
+          "office": "ajunews",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        },
+        {
+          "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
+          "url": "https://www.newsis.com/view/NISX20260604_0003656199",
+          "office": "newsis",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        },
         {
           "title": "[특징주] 신세계, 자산가 소비 확대 기대에 17%대 급등…장중 67만1000원...",
           "url": "https://www.tokenpost.kr/news/economy/366168",
@@ -142,78 +156,26 @@
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
-          "url": "https://www.newsis.com/view/NISX20260604_0003656199",
-          "office": "newsis",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] '차이나 머니 재등장' 설레는 신세계, 장중 15%↑ 신고가",
-          "url": "https://www.financialpost.co.kr/news/articleView.html?idxno=261455",
-          "office": "financialpost",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 신세계, 자산가 소비 확대 기대에 17%대 급등…장중 67만1000원..."
-    },
-    {
-      "ticker": "NAVER",
-      "code": "035420",
-      "tomorrow_up_prob": "86%",
-      "entry": 274250.0,
-      "target": 287962,
-      "stop": 266022,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.99)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": -2.32,
-      "cause_news": [
-        {
-          "title": "초고수들, 삼성전자·NAVER ‘젠슨 황 깐부주’ 담았다 [주식 초고수는...",
-          "url": "https://www.sedaily.com/article/20051757?ref=naver",
-          "office": "sedaily",
-          "sentiment": "악재",
-          "cause_score": 8,
-          "cause_reason": "제목 언급, 인과표현, 재료, 악재, 당일"
-        },
-        {
-          "title": "새벽 2시 '부정선거' 구글 검색 폭등…네이버·다음은 조용",
-          "url": "https://www.mt.co.kr/tech/2026/06/04/2026060409335995189",
-          "office": "mt",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "초고수들, 삼성전자·NAVER ‘젠슨 황 깐부주’ 담았다 [주식 초고수는..."
+      "cause_summary": "[특징주] 신세계, 18%대 급등…백화점 업황 개선 기대감 '쑥'"
     },
     {
       "ticker": "롯데쇼핑",
       "code": "023530",
-      "tomorrow_up_prob": "86%",
-      "entry": 171600.0,
-      "target": 180180,
-      "stop": 166452,
+      "tomorrow_up_prob": "87%",
+      "entry": 171200.0,
+      "target": 179760,
+      "stop": 166064,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.86)",
-        "RSI66.3 강세",
+        "강세마감(0.84)",
+        "RSI66.1 강세",
         "Stoch골든"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null,
+      "day_change": 12.26,
       "related_news": [
         {
           "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
@@ -236,15 +198,51 @@
       ]
     },
     {
+      "ticker": "NAVER",
+      "code": "035420",
+      "tomorrow_up_prob": "85%",
+      "entry": 269000.0,
+      "target": 282450,
+      "stop": 260930,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.7)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": -3.65,
+      "cause_news": [
+        {
+          "title": "초고수들, 삼성전자·NAVER ‘젠슨 황 깐부주’ 담았다 [주식 초고수는...",
+          "url": "https://www.sedaily.com/article/20051757?ref=naver",
+          "office": "sedaily",
+          "sentiment": "악재",
+          "cause_score": 8,
+          "cause_reason": "제목 언급, 인과표현, 재료, 악재, 당일"
+        },
+        {
+          "title": "새벽 2시 '부정선거' 구글 검색 폭등…네이버·다음은 조용",
+          "url": "https://www.mt.co.kr/tech/2026/06/04/2026060409335995189",
+          "office": "mt",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "초고수들, 삼성전자·NAVER ‘젠슨 황 깐부주’ 담았다 [주식 초고수는..."
+    },
+    {
       "ticker": "코리아써키트",
       "code": "007810",
       "tomorrow_up_prob": "83%",
-      "entry": 123500.0,
-      "target": 129675,
-      "stop": 119795,
+      "entry": 123000.0,
+      "target": 129150,
+      "stop": 119310,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.75)",
+        "강세마감(0.72)",
         "정배열",
         "MACD강세"
       ],
@@ -280,17 +278,61 @@
       "cause_summary": "고다층에 패키징까지… 코리아써키트, AI·반도체 고도화의 최대 수혜주..."
     },
     {
+      "ticker": "노타",
+      "code": "486990",
+      "tomorrow_up_prob": "82%",
+      "entry": 39450.0,
+      "target": 41422,
+      "stop": 38266,
+      "confidence": "상",
+      "reasons": [
+        "MACD강세",
+        "RSI61.3 강세",
+        "일목 구름위"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 12.03,
+      "cause_news": [
+        {
+          "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
+          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03070086645478440",
+          "office": "edaily",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "노타, 3거래일만에 14% 급등…4만원선 회복 눈앞",
+          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439220",
+          "office": "econonews",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] 노타, 퀄컴 AI 디바이스 최적화 성공에 19%대 강세",
+          "url": "https://www.ajunews.com/view/20260529143910133",
+          "office": "ajunews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]"
+    },
+    {
       "ticker": "한화비전",
       "code": "489790",
       "tomorrow_up_prob": "81%",
-      "entry": 79700.0,
-      "target": 83685,
-      "stop": 77309,
+      "entry": 78200.0,
+      "target": 82110,
+      "stop": 75854,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.86)",
+        "강세마감(0.77)",
         "MACD강세",
-        "RSI55.9 강세"
+        "RSI54.5 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -360,78 +402,6 @@
       "cause_summary": "주성엔 25만원 돌파·원익IPS 상한가…반도체 소부장주 폭등 [칩칩폭폭..."
     },
     {
-      "ticker": "노타",
-      "code": "486990",
-      "tomorrow_up_prob": "78%",
-      "entry": 38850.0,
-      "target": 40792,
-      "stop": 37684,
-      "confidence": "상",
-      "reasons": [
-        "MACD강세",
-        "RSI60.5 강세",
-        "일목 구름위"
-      ],
-      "risk": "약한 마감",
-      "day_change": 11.6,
-      "cause_news": [
-        {
-          "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
-          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03070086645478440",
-          "office": "edaily",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "노타, 3거래일만에 14% 급등…4만원선 회복 눈앞",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439220",
-          "office": "econonews",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] 노타, 퀄컴 AI 디바이스 최적화 성공에 19%대 강세",
-          "url": "https://www.ajunews.com/view/20260529143910133",
-          "office": "ajunews",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]"
-    },
-    {
-      "ticker": "한온시스템",
-      "code": "018880",
-      "tomorrow_up_prob": "76%",
-      "entry": 4880.0,
-      "target": 5124,
-      "stop": 4734,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "RSI50.3 강세",
-        "일목 구름위"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": -2.9,
-      "cause_news": [
-        {
-          "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
-    },
-    {
       "ticker": "덕산하이메탈",
       "code": "077360",
       "tomorrow_up_prob": "76%",
@@ -468,21 +438,101 @@
       "cause_summary": "반도체 재료·부품株 전방위 랠리…덕산하이메탈 17% 폭등"
     },
     {
+      "ticker": "한온시스템",
+      "code": "018880",
+      "tomorrow_up_prob": "71%",
+      "entry": 4845.0,
+      "target": 5087,
+      "stop": 4700,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "일목 구름위",
+        "호재"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": -2.8,
+      "cause_news": [
+        {
+          "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
+    },
+    {
+      "ticker": "삼성물산",
+      "code": "028260",
+      "tomorrow_up_prob": "71%",
+      "entry": 535000.0,
+      "target": 561750,
+      "stop": 518950,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "일목 구름위"
+      ],
+      "risk": "Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "삼성생명·삼성물산, 주주환원 확대·밸류업 기대감에 동반 강세[특징주...",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026060215284911488",
+          "office": "newsway",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락"
+        },
+        {
+          "title": "삼성물산, 5거래일 연속 상승에 12% 급등…54만원선 재돌파",
+          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439234",
+          "office": "econonews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        },
+        {
+          "title": "[핫타임] 삼성물산, 장중 56만5000원 신고가…5거래일 연속 상승세",
+          "url": "https://www.ajunews.com/view/20260604143410320",
+          "office": "ajunews",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "삼성생명·삼성물산, 주주환원 확대·밸류업 기대감에 동반 강세[특징주..."
+    },
+    {
       "ticker": "삼성화재",
       "code": "000810",
       "tomorrow_up_prob": "64%",
-      "entry": 728000.0,
-      "target": 764400,
-      "stop": 706160,
+      "entry": 722000.0,
+      "target": 758100,
+      "stop": 700340,
       "confidence": "중",
       "reasons": [
         "정배열",
         "MACD강세",
         "일목 구름위"
       ],
-      "risk": "RSI85.5 과매수, Stoch 과매수",
-      "day_change": 12.79,
+      "risk": "RSI85.2 과매수, Stoch 과매수",
+      "day_change": 14.2,
       "cause_news": [
+        {
+          "title": "삼성화재·삼성생명, 장중 주가 '희비'…주주환원 여력 온도차[특징주]",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026060414452943290",
+          "office": "newsway",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        },
         {
           "title": "삼성화재, 신고가 경신… 금리 인상 수혜주 부각",
           "url": "https://www.mt.co.kr/stock/2026/06/04/2026060409071429453",
@@ -498,62 +548,10 @@
           "sentiment": "호재",
           "cause_score": 9,
           "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] 삼성화재 실적 발표에 엇갈린 증권가…\"배당 매력 충분\" vs \"성...",
-          "url": "https://www.newstnt.com/news/articleView.html?idxno=702604",
-          "office": "newstnt",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 오래됨"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "삼성화재, 신고가 경신… 금리 인상 수혜주 부각"
-    },
-    {
-      "ticker": "SKC",
-      "code": "011790",
-      "tomorrow_up_prob": "58%",
-      "entry": 156100.0,
-      "target": 163905,
-      "stop": 151417,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "RSI58.5 강세",
-        "일목 구름위"
-      ],
-      "risk": "악재",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "SKC, 유증 흥행·실적 기대감에 강세…목표가도 '쑥'[특징주]",
-          "url": "https://www.newsway.co.kr/news/view?ud=2026060110341987884",
-          "office": "newsway",
-          "sentiment": "악재",
-          "cause_score": 8,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 악재, 오래됨"
-        },
-        {
-          "title": "[특징주] SKC, 유증 흥행·실적 개선 기대에 27% ↑",
-          "url": "https://www.newspim.com/news/view/20260601000242",
-          "office": "newspim",
-          "sentiment": "악재",
-          "cause_score": 8,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 악재, 오래됨"
-        },
-        {
-          "title": "SKC 주가, 6월 4일 장중 152,400원 8.70% 상승",
-          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16079537",
-          "office": "topstarnews",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "SKC, 유증 흥행·실적 기대감에 강세…목표가도 '쑥'[특징주]"
+      "cause_summary": "삼성화재·삼성생명, 장중 주가 '희비'…주주환원 여력 온도차[특징주]"
     }
   ],
   "closing_bet": [
@@ -571,7 +569,7 @@
         "RSI62.2 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 29.97,
+      "day_change": null,
       "cause_news": [
         {
           "title": "[특징주] 유진테크, '上'…반도체 소부장 투자심리 개선에 매수세 집중",
@@ -605,47 +603,45 @@
       "ticker": "브이엠",
       "code": "089970",
       "tomorrow_up_prob": "93%",
-      "entry": 68800.0,
-      "target": 72240,
-      "stop": 66736,
+      "entry": 68300.0,
+      "target": 71715,
+      "stop": 66251,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.87)",
+        "강세마감(0.83)",
         "정배열",
-        "RSI63.2 강세"
+        "RSI62.8 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 27.31,
-      "related_news": [
+      "day_change": 27.68,
+      "cause_news": [
         {
-          "title": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
-          "url": "https://n.news.naver.com/mnews/article/015/0005290112",
-          "office": "한국경제",
-          "sentiment": "호재"
-        },
-        {
-          "title": "&quot;브이엠, 올해 역대급 실적 전망…목표가↑&quot;-하나",
-          "url": "https://n.news.naver.com/mnews/article/015/0005275582",
-          "office": "한국경제",
-          "sentiment": "호재"
+          "title": "브이엠 주가, 6월 4일 장중 69,100원 27.49% 상승 상한가 70,400원 도달",
+          "url": "https://www.joongangenews.com/news/articleView.html?idxno=523671",
+          "office": "joongangenews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         }
-      ]
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "브이엠 주가, 6월 4일 장중 69,100원 27.49% 상승 상한가 70,400원 도달"
     },
     {
       "ticker": "현대백화점",
       "code": "069960",
       "tomorrow_up_prob": "90%",
-      "entry": 139000.0,
-      "target": 145950,
-      "stop": 134830,
+      "entry": 139100.0,
+      "target": 146055,
+      "stop": 134927,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.91)",
+        "강세마감(0.92)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 14.29,
+      "day_change": 15.27,
       "cause_news": [
         {
           "title": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가",
@@ -679,18 +675,34 @@
       "ticker": "신세계",
       "code": "004170",
       "tomorrow_up_prob": "87%",
-      "entry": 676000.0,
-      "target": 709800,
-      "stop": 655720,
+      "entry": 668000.0,
+      "target": 701400,
+      "stop": 647960,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.96)",
+        "강세마감(0.88)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 17.4,
+      "day_change": 17.57,
       "cause_news": [
+        {
+          "title": "[특징주] 신세계, 18%대 급등…백화점 업황 개선 기대감 '쑥'",
+          "url": "https://www.ajunews.com/view/20260604140418212",
+          "office": "ajunews",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        },
+        {
+          "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
+          "url": "https://www.newsis.com/view/NISX20260604_0003656199",
+          "office": "newsis",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        },
         {
           "title": "[특징주] 신세계, 자산가 소비 확대 기대에 17%대 급등…장중 67만1000원...",
           "url": "https://www.tokenpost.kr/news/economy/366168",
@@ -698,62 +710,46 @@
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
-          "url": "https://www.newsis.com/view/NISX20260604_0003656199",
-          "office": "newsis",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] '차이나 머니 재등장' 설레는 신세계, 장중 15%↑ 신고가",
-          "url": "https://www.financialpost.co.kr/news/articleView.html?idxno=261455",
-          "office": "financialpost",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 신세계, 자산가 소비 확대 기대에 17%대 급등…장중 67만1000원..."
+      "cause_summary": "[특징주] 신세계, 18%대 급등…백화점 업황 개선 기대감 '쑥'"
     },
     {
-      "ticker": "NAVER",
-      "code": "035420",
-      "tomorrow_up_prob": "86%",
-      "entry": 274250.0,
-      "target": 287962,
-      "stop": 266022,
+      "ticker": "롯데쇼핑",
+      "code": "023530",
+      "tomorrow_up_prob": "87%",
+      "entry": 171200.0,
+      "target": 179760,
+      "stop": 166064,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.99)",
-        "정배열",
-        "MACD강세"
+        "강세마감(0.84)",
+        "RSI66.1 강세",
+        "Stoch골든"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": -2.32,
-      "cause_news": [
+      "day_change": 12.26,
+      "related_news": [
         {
-          "title": "초고수들, 삼성전자·NAVER ‘젠슨 황 깐부주’ 담았다 [주식 초고수는...",
-          "url": "https://www.sedaily.com/article/20051757?ref=naver",
-          "office": "sedaily",
-          "sentiment": "악재",
-          "cause_score": 8,
-          "cause_reason": "제목 언급, 인과표현, 재료, 악재, 당일"
+          "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
+          "url": "https://n.news.naver.com/mnews/article/003/0013986773",
+          "office": "뉴시스",
+          "sentiment": "호재"
         },
         {
-          "title": "새벽 2시 '부정선거' 구글 검색 폭등…네이버·다음은 조용",
-          "url": "https://www.mt.co.kr/tech/2026/06/04/2026060409335995189",
-          "office": "mt",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+          "title": "'불장'에 지갑도 열리나…백화점주 동반 강세",
+          "url": "https://n.news.naver.com/mnews/article/374/0000513953",
+          "office": "SBS Biz",
+          "sentiment": "악재"
+        },
+        {
+          "title": "&quot;성과급 받아 명품관으로&quot;…삼전닉스 효과에 백화점주 '들썩' [종목+]",
+          "url": "https://n.news.naver.com/mnews/article/015/0005294774",
+          "office": "한국경제",
+          "sentiment": "호재"
         }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "초고수들, 삼성전자·NAVER ‘젠슨 황 깐부주’ 담았다 [주식 초고수는..."
+      ]
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
