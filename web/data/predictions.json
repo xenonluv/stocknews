@@ -1,49 +1,13 @@
 {
-  "as_of": "2026-06-04 13:52 KST",
+  "as_of": "2026-06-04 14:07 KST",
   "intraday_rank": [
-    {
-      "ticker": "현대백화점",
-      "code": "069960",
-      "tomorrow_up_prob": "95%",
-      "entry": 138500.0,
-      "target": 145425,
-      "stop": 134345,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.89)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 14.53,
-      "cause_news": [
-        {
-          "title": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가",
-          "url": "https://www.ajunews.com/view/20260604101353789",
-          "office": "ajunews",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "현대백화점 “나무 5만3천그루 살렸다”",
-          "url": "https://www.naeil.com/news/read/590759?ref=naver",
-          "office": "naeil",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가"
-    },
     {
       "ticker": "유진테크",
       "code": "084370",
       "tomorrow_up_prob": "94%",
-      "entry": 155600.0,
-      "target": 163380,
-      "stop": 150932,
+      "entry": 155700.0,
+      "target": 163485,
+      "stop": 151029,
       "confidence": "상",
       "reasons": [
         "강세마감(1.0)",
@@ -51,7 +15,7 @@
         "RSI62.2 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 29.47,
+      "day_change": null,
       "cause_news": [
         {
           "title": "[특징주] 유진테크, '上'…반도체 소부장 투자심리 개선에 매수세 집중",
@@ -85,17 +49,17 @@
       "ticker": "브이엠",
       "code": "089970",
       "tomorrow_up_prob": "93%",
-      "entry": 69300.0,
-      "target": 72765,
-      "stop": 67221,
+      "entry": 68900.0,
+      "target": 72345,
+      "stop": 66833,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.91)",
+        "강세마감(0.88)",
         "정배열",
-        "RSI63.6 강세"
+        "RSI63.3 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 27.68,
+      "day_change": 27.31,
       "related_news": [
         {
           "title": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
@@ -112,15 +76,95 @@
       ]
     },
     {
+      "ticker": "현대백화점",
+      "code": "069960",
+      "tomorrow_up_prob": "90%",
+      "entry": 140400.0,
+      "target": 147420,
+      "stop": 136188,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.97)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 14.12,
+      "cause_news": [
+        {
+          "title": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가",
+          "url": "https://www.ajunews.com/view/20260604101353789",
+          "office": "ajunews",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "현대백화점 “나무 5만3천그루 살렸다”",
+          "url": "https://www.naeil.com/news/read/590759?ref=naver",
+          "office": "naeil",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가"
+    },
+    {
+      "ticker": "신세계",
+      "code": "004170",
+      "tomorrow_up_prob": "87%",
+      "entry": 661000.0,
+      "target": 694050,
+      "stop": 641170,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.89)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 16.17,
+      "cause_news": [
+        {
+          "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
+          "url": "https://www.newsis.com/view/NISX20260604_0003656199",
+          "office": "newsis",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "‘부의 효과’ 기대에 백화점株 질주…신세계 16% 급등[줍줍리포트]",
+          "url": "https://www.sedaily.com/article/20051795?ref=naver",
+          "office": "sedaily",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] '부의 효과' 타고 백화점주 질주…신세계 장중 최고가 경신",
+          "url": "https://www.ziksir.com/news/articleView.html?idxno=135778",
+          "office": "ziksir",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세"
+    },
+    {
       "ticker": "코리아써키트",
       "code": "007810",
       "tomorrow_up_prob": "83%",
-      "entry": 125400.0,
-      "target": 131670,
-      "stop": 121638,
+      "entry": 124500.0,
+      "target": 130725,
+      "stop": 120765,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.84)",
+        "강세마감(0.79)",
         "정배열",
         "MACD강세"
       ],
@@ -151,17 +195,17 @@
       "ticker": "노타",
       "code": "486990",
       "tomorrow_up_prob": "82%",
-      "entry": 39500.0,
-      "target": 41475,
-      "stop": 38315,
+      "entry": 39250.0,
+      "target": 41212,
+      "stop": 38072,
       "confidence": "상",
       "reasons": [
         "MACD강세",
-        "RSI61.4 강세",
+        "RSI61.1 강세",
         "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 13.61,
+      "day_change": 13.18,
       "cause_news": [
         {
           "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
@@ -200,7 +244,7 @@
       "stop": 78085,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.98)",
+        "강세마감(0.91)",
         "MACD강세",
         "RSI56.6 강세"
       ],
@@ -214,65 +258,29 @@
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[속보] 한화비전 VI 발동, 주가 19% 도약…8만원선 돌파",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=579496",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "높음",
       "cause_summary": "한화비전 주가, 급등세... 왜?"
     },
     {
-      "ticker": "신세계",
-      "code": "004170",
-      "tomorrow_up_prob": "81%",
-      "entry": 659000.0,
-      "target": 691950,
-      "stop": 639230,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.87)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
-          "url": "https://www.newsis.com/view/NISX20260604_0003656199",
-          "office": "newsis",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "‘부의 효과’ 기대에 백화점株 질주…신세계 16% 급등[줍줍리포트]",
-          "url": "https://www.sedaily.com/article/20051795?ref=naver",
-          "office": "sedaily",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] '부의 효과' 타고 백화점주 질주…신세계 장중 최고가 경신",
-          "url": "https://www.ziksir.com/news/articleView.html?idxno=135778",
-          "office": "ziksir",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세"
-    },
-    {
       "ticker": "삼성물산",
       "code": "028260",
       "tomorrow_up_prob": "79%",
-      "entry": 545000.0,
-      "target": 572250,
-      "stop": 528650,
+      "entry": 542000.0,
+      "target": 569100,
+      "stop": 525740,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.75)",
+        "강세마감(0.71)",
         "정배열",
         "MACD강세"
       ],
@@ -306,6 +314,34 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "'지분가치 75조 급등' 삼성물산, 주주 환원 확대 기대감…\"삼성전기, 주..."
+    },
+    {
+      "ticker": "한온시스템",
+      "code": "018880",
+      "tomorrow_up_prob": "76%",
+      "entry": 4870.0,
+      "target": 5114,
+      "stop": 4724,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "RSI50.2 강세",
+        "일목 구름위"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": -2.5,
+      "cause_news": [
+        {
+          "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
     },
     {
       "ticker": "덕산하이메탈",
@@ -388,45 +424,17 @@
       "cause_summary": "주성엔 25만원 돌파·원익IPS 상한가…반도체 소부장주 폭등 [칩칩폭폭..."
     },
     {
-      "ticker": "한온시스템",
-      "code": "018880",
-      "tomorrow_up_prob": "76%",
-      "entry": 4885.0,
-      "target": 5129,
-      "stop": 4738,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "RSI50.4 강세",
-        "일목 구름위"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": -2.5,
-      "cause_news": [
-        {
-          "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
-    },
-    {
       "ticker": "동양고속",
       "code": "084670",
       "tomorrow_up_prob": "67%",
-      "entry": 43500.0,
-      "target": 45675,
-      "stop": 42195,
+      "entry": 43550.0,
+      "target": 45728,
+      "stop": 42244,
       "confidence": "중",
       "reasons": [
         "RSI51.9 강세",
         "Stoch골든",
-        "거래량1.5배"
+        "거래량1.51배"
       ],
       "risk": "약한 마감",
       "day_change": null,
@@ -463,17 +471,17 @@
       "ticker": "삼성화재",
       "code": "000810",
       "tomorrow_up_prob": "60%",
-      "entry": 717000.0,
-      "target": 752850,
-      "stop": 695490,
+      "entry": 718000.0,
+      "target": 753900,
+      "stop": 696460,
       "confidence": "중",
       "reasons": [
         "정배열",
         "MACD강세",
         "일목 구름위"
       ],
-      "risk": "RSI84.9 과매수, Stoch 과매수",
-      "day_change": null,
+      "risk": "RSI85.0 과매수, Stoch 과매수",
+      "day_change": 12.01,
       "cause_news": [
         {
           "title": "삼성화재, 신고가 경신… 금리 인상 수혜주 부각",
@@ -507,17 +515,17 @@
       "ticker": "SKC",
       "code": "011790",
       "tomorrow_up_prob": "58%",
-      "entry": 156100.0,
-      "target": 163905,
-      "stop": 151417,
+      "entry": 156700.0,
+      "target": 164535,
+      "stop": 151999,
       "confidence": "중",
       "reasons": [
         "정배열",
-        "RSI58.5 강세",
+        "RSI58.7 강세",
         "일목 구름위"
       ],
       "risk": "악재",
-      "day_change": 11.55,
+      "day_change": 11.2,
       "cause_news": [
         {
           "title": "SKC, 유증 흥행·실적 기대감에 강세…목표가도 '쑥'[특징주]",
@@ -550,48 +558,12 @@
   ],
   "closing_bet": [
     {
-      "ticker": "현대백화점",
-      "code": "069960",
-      "tomorrow_up_prob": "95%",
-      "entry": 138500.0,
-      "target": 145425,
-      "stop": 134345,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.89)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 14.53,
-      "cause_news": [
-        {
-          "title": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가",
-          "url": "https://www.ajunews.com/view/20260604101353789",
-          "office": "ajunews",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "현대백화점 “나무 5만3천그루 살렸다”",
-          "url": "https://www.naeil.com/news/read/590759?ref=naver",
-          "office": "naeil",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가"
-    },
-    {
       "ticker": "유진테크",
       "code": "084370",
       "tomorrow_up_prob": "94%",
-      "entry": 155600.0,
-      "target": 163380,
-      "stop": 150932,
+      "entry": 155700.0,
+      "target": 163485,
+      "stop": 151029,
       "confidence": "상",
       "reasons": [
         "강세마감(1.0)",
@@ -599,7 +571,7 @@
         "RSI62.2 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 29.47,
+      "day_change": null,
       "cause_news": [
         {
           "title": "[특징주] 유진테크, '上'…반도체 소부장 투자심리 개선에 매수세 집중",
@@ -633,17 +605,17 @@
       "ticker": "브이엠",
       "code": "089970",
       "tomorrow_up_prob": "93%",
-      "entry": 69300.0,
-      "target": 72765,
-      "stop": 67221,
+      "entry": 68900.0,
+      "target": 72345,
+      "stop": 66833,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.91)",
+        "강세마감(0.88)",
         "정배열",
-        "RSI63.6 강세"
+        "RSI63.3 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 27.68,
+      "day_change": 27.31,
       "related_news": [
         {
           "title": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
@@ -660,15 +632,95 @@
       ]
     },
     {
+      "ticker": "현대백화점",
+      "code": "069960",
+      "tomorrow_up_prob": "90%",
+      "entry": 140400.0,
+      "target": 147420,
+      "stop": 136188,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.97)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 14.12,
+      "cause_news": [
+        {
+          "title": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가",
+          "url": "https://www.ajunews.com/view/20260604101353789",
+          "office": "ajunews",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "현대백화점 “나무 5만3천그루 살렸다”",
+          "url": "https://www.naeil.com/news/read/590759?ref=naver",
+          "office": "naeil",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가"
+    },
+    {
+      "ticker": "신세계",
+      "code": "004170",
+      "tomorrow_up_prob": "87%",
+      "entry": 661000.0,
+      "target": 694050,
+      "stop": 641170,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.89)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 16.17,
+      "cause_news": [
+        {
+          "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
+          "url": "https://www.newsis.com/view/NISX20260604_0003656199",
+          "office": "newsis",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "‘부의 효과’ 기대에 백화점株 질주…신세계 16% 급등[줍줍리포트]",
+          "url": "https://www.sedaily.com/article/20051795?ref=naver",
+          "office": "sedaily",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] '부의 효과' 타고 백화점주 질주…신세계 장중 최고가 경신",
+          "url": "https://www.ziksir.com/news/articleView.html?idxno=135778",
+          "office": "ziksir",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세"
+    },
+    {
       "ticker": "코리아써키트",
       "code": "007810",
       "tomorrow_up_prob": "83%",
-      "entry": 125400.0,
-      "target": 131670,
-      "stop": 121638,
+      "entry": 124500.0,
+      "target": 130725,
+      "stop": 120765,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.84)",
+        "강세마감(0.79)",
         "정배열",
         "MACD강세"
       ],
@@ -694,50 +746,6 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "[ET특징주]코리아써키트, PCB 업황 개선 수혜 기대감에 상승세"
-    },
-    {
-      "ticker": "노타",
-      "code": "486990",
-      "tomorrow_up_prob": "82%",
-      "entry": 39500.0,
-      "target": 41475,
-      "stop": 38315,
-      "confidence": "상",
-      "reasons": [
-        "MACD강세",
-        "RSI61.4 강세",
-        "일목 구름위"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 13.61,
-      "cause_news": [
-        {
-          "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
-          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03070086645478440",
-          "office": "edaily",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "노타, 3거래일만에 14% 급등…4만원선 회복 눈앞",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439220",
-          "office": "econonews",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] 노타, 퀄컴 AI 디바이스 최적화 성공에 19%대 강세",
-          "url": "https://www.ajunews.com/view/20260529143910133",
-          "office": "ajunews",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]"
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
