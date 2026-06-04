@@ -10,7 +10,7 @@
     "headline": "반도체 재료·부품株 전방위 랠리…덕산하이메탈 17% 폭등",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 눌림목.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 13:30 KST",
+    "published_at": "2026-06-04 13:45 KST",
     "news": [
       {
         "title": "중복상장 모회사 주주 … 자회사 상장안 첫 승인",
@@ -59,11 +59,11 @@
     "target_stock": "노타",
     "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 11.32,
+    "day_change": 13.61,
     "headline": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 13:30 KST",
+    "published_at": "2026-06-04 13:45 KST",
     "news": [
       {
         "title": "노타, 엔비디아 아태 파트너데이 ‘한국 유일’ 패널 참여…“피지컬...",
@@ -120,6 +120,65 @@
     "cause_summary": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]"
   },
   {
+    "post_id": "POST_20260604_069960",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "현대백화점",
+    "signal_probability": "47%",
+    "position_type": "과다상승",
+    "day_change": 14.53,
+    "headline": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가",
+    "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-04 13:45 KST",
+    "news": [
+      {
+        "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
+        "url": "https://n.news.naver.com/mnews/article/003/0013986773",
+        "office": "뉴시스",
+        "sentiment": "호재"
+      },
+      {
+        "title": "'불장'에 지갑도 열리나…백화점주 동반 강세",
+        "url": "https://n.news.naver.com/mnews/article/374/0000513953",
+        "office": "SBS Biz",
+        "sentiment": "악재"
+      },
+      {
+        "title": "&quot;성과급 받아 명품관으로&quot;…삼전닉스 효과에 백화점주 '들썩' [종목+]",
+        "url": "https://n.news.naver.com/mnews/article/015/0005294774",
+        "office": "한국경제",
+        "sentiment": "호재"
+      },
+      {
+        "title": "현대홈쇼핑 &quot;4050 발길 잡자&quot; 뷰티 편집숍 확대",
+        "url": "https://n.news.naver.com/mnews/article/009/0005688742",
+        "office": "매일경제",
+        "sentiment": "호재"
+      }
+    ],
+    "cause_news": [
+      {
+        "title": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가",
+        "url": "https://www.ajunews.com/view/20260604101353789",
+        "office": "ajunews",
+        "sentiment": "호재",
+        "cause_score": 17,
+        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+      },
+      {
+        "title": "현대백화점 “나무 5만3천그루 살렸다”",
+        "url": "https://www.naeil.com/news/read/590759?ref=naver",
+        "office": "naeil",
+        "sentiment": "호재",
+        "cause_score": 5,
+        "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+      }
+    ],
+    "cause_confidence": "높음",
+    "cause_summary": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가"
+  },
+  {
     "post_id": "POST_20260604_240810",
     "status": "PUBLISHED",
     "tier": "candidate",
@@ -130,7 +189,7 @@
     "headline": "주성엔 25만원 돌파·원익IPS 상한가…반도체 소부장주 폭등 [칩칩폭폭...",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 분석불가.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 13:30 KST",
+    "published_at": "2026-06-04 13:45 KST",
     "news": [
       {
         "title": "주성엔 25만원 돌파·원익IPS 상한가…반도체 소부장주 폭등 [칩칩폭폭...",
@@ -181,11 +240,11 @@
     "target_stock": "브이엠",
     "signal_probability": "47%",
     "position_type": "과다상승",
-    "day_change": 27.86,
+    "day_change": 27.68,
     "headline": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 13:30 KST",
+    "published_at": "2026-06-04 13:45 KST",
     "news": [
       {
         "title": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
@@ -208,11 +267,11 @@
     "target_stock": "한온시스템",
     "signal_probability": "69%",
     "position_type": "눌림목",
-    "day_change": -2.7,
+    "day_change": -2.5,
     "headline": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 눌림목.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 13:30 KST",
+    "published_at": "2026-06-04 13:45 KST",
     "news": [
       {
         "title": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
@@ -247,11 +306,11 @@
     "target_stock": "SKC",
     "signal_probability": "51%",
     "position_type": "상승추세",
-    "day_change": 11.27,
+    "day_change": 11.55,
     "headline": "SKC, 유증 흥행·실적 기대감에 강세…목표가도 '쑥'[특징주]",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 악재) · 일봉 상승추세.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 13:30 KST",
+    "published_at": "2026-06-04 13:45 KST",
     "news": [
       {
         "title": "신영증권 &quot;SKC, 적자폭 축소 지속…2027년 흑자전환 예상&quot;",
@@ -314,11 +373,11 @@
     "target_stock": "유진테크",
     "signal_probability": "46%",
     "position_type": "과다상승",
-    "day_change": 29.97,
+    "day_change": 29.47,
     "headline": "[특징주] 유진테크, '上'…반도체 소부장 투자심리 개선에 매수세 집중",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 13:30 KST",
+    "published_at": "2026-06-04 13:45 KST",
     "news": [
       {
         "title": "반도체 ‘투 톱’ 쉬자 장비株 질주…유진테크·원익IPS 상한가 ‘눈앞...",
@@ -361,44 +420,5 @@
     ],
     "cause_confidence": "높음",
     "cause_summary": "[특징주] 유진테크, '上'…반도체 소부장 투자심리 개선에 매수세 집중"
-  },
-  {
-    "post_id": "POST_20260604_009150",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "삼성전기",
-    "signal_probability": "46%",
-    "position_type": "과다상승",
-    "day_change": -3.42,
-    "headline": "AI 부품 수혜 삼성전기 200만원대 안착 실패…단기 차익실현매물에 주가...",
-    "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 13:30 KST",
-    "news": [
-      {
-        "title": "초고수들, 삼성전자·NAVER ‘젠슨 황 깐부주’ 담았다 [주식 초고수는...",
-        "url": "https://n.news.naver.com/mnews/article/011/0004627643",
-        "office": "서울경제",
-        "sentiment": "호재"
-      },
-      {
-        "title": "'지분가치 75조 급등' 삼성물산, 주주 환원 확대 기대감…&quot;삼성전기, ...",
-        "url": "https://n.news.naver.com/mnews/article/014/0005530477",
-        "office": "파이낸셜뉴스",
-        "sentiment": "호재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "AI 부품 수혜 삼성전기 200만원대 안착 실패…단기 차익실현매물에 주가...",
-        "url": "http://www.newsworker.co.kr/news/articleView.html?idxno=429635",
-        "office": "newsworker",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 인과표현, 재료, 당일"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "AI 부품 수혜 삼성전기 200만원대 안착 실패…단기 차익실현매물에 주가..."
   }
 ]
