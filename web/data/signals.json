@@ -10,7 +10,7 @@
     "headline": "반도체 재료·부품株 전방위 랠리…덕산하이메탈 17% 폭등",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 눌림목.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 13:15 KST",
+    "published_at": "2026-06-04 13:30 KST",
     "news": [
       {
         "title": "중복상장 모회사 주주 … 자회사 상장안 첫 승인",
@@ -59,11 +59,11 @@
     "target_stock": "노타",
     "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 11.6,
+    "day_change": 11.32,
     "headline": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 13:15 KST",
+    "published_at": "2026-06-04 13:30 KST",
     "news": [
       {
         "title": "노타, 엔비디아 아태 파트너데이 ‘한국 유일’ 패널 참여…“피지컬...",
@@ -130,7 +130,7 @@
     "headline": "주성엔 25만원 돌파·원익IPS 상한가…반도체 소부장주 폭등 [칩칩폭폭...",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 분석불가.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 13:15 KST",
+    "published_at": "2026-06-04 13:30 KST",
     "news": [
       {
         "title": "주성엔 25만원 돌파·원익IPS 상한가…반도체 소부장주 폭등 [칩칩폭폭...",
@@ -163,9 +163,9 @@
         "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
       },
       {
-        "title": "반도체 장비주 급등…테스·원익IPS 상한가",
-        "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439225",
-        "office": "econonews",
+        "title": "반도체 소부장 강세…유진테크·원익IPS '상한가'[특징주]",
+        "url": "https://www.newsway.co.kr/news/view?ud=2026060411170986586",
+        "office": "newsway",
         "sentiment": "호재",
         "cause_score": 11,
         "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
@@ -185,7 +185,7 @@
     "headline": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 13:15 KST",
+    "published_at": "2026-06-04 13:30 KST",
     "news": [
       {
         "title": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
@@ -212,7 +212,7 @@
     "headline": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 눌림목.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 13:15 KST",
+    "published_at": "2026-06-04 13:30 KST",
     "news": [
       {
         "title": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
@@ -241,45 +241,6 @@
     "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
   },
   {
-    "post_id": "POST_20260604_066570",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "LG전자",
-    "signal_probability": "47%",
-    "position_type": "과다상승",
-    "day_change": -13.5,
-    "headline": "젠슨 황 수혜주 급락, 왜?…LG전자 14% ↓",
-    "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 13:15 KST",
-    "news": [
-      {
-        "title": "'젠슨 황 효과' 끝났나…급등했던 관련주 동반 약세",
-        "url": "https://n.news.naver.com/mnews/article/586/0000130688",
-        "office": "시사저널",
-        "sentiment": "호재"
-      },
-      {
-        "title": "젠슨 황 수혜주 급락, 왜?…LG전자 14% ↓",
-        "url": "https://n.news.naver.com/mnews/article/018/0006297163",
-        "office": "이데일리",
-        "sentiment": "혼재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "젠슨 황 수혜주 급락, 왜?…LG전자 14% ↓",
-        "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03562086645478440",
-        "office": "edaily",
-        "sentiment": "악재",
-        "cause_score": 8,
-        "cause_reason": "제목 언급, 인과표현, 재료, 악재, 당일"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "젠슨 황 수혜주 급락, 왜?…LG전자 14% ↓"
-  },
-  {
     "post_id": "POST_20260604_011790",
     "status": "PUBLISHED",
     "tier": "candidate",
@@ -290,7 +251,7 @@
     "headline": "SKC, 유증 흥행·실적 기대감에 강세…목표가도 '쑥'[특징주]",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 악재) · 일봉 상승추세.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 13:15 KST",
+    "published_at": "2026-06-04 13:30 KST",
     "news": [
       {
         "title": "신영증권 &quot;SKC, 적자폭 축소 지속…2027년 흑자전환 예상&quot;",
@@ -357,7 +318,7 @@
     "headline": "[특징주] 유진테크, '上'…반도체 소부장 투자심리 개선에 매수세 집중",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 13:15 KST",
+    "published_at": "2026-06-04 13:30 KST",
     "news": [
       {
         "title": "반도체 ‘투 톱’ 쉬자 장비株 질주…유진테크·원익IPS 상한가 ‘눈앞...",
@@ -400,5 +361,44 @@
     ],
     "cause_confidence": "높음",
     "cause_summary": "[특징주] 유진테크, '上'…반도체 소부장 투자심리 개선에 매수세 집중"
+  },
+  {
+    "post_id": "POST_20260604_009150",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "삼성전기",
+    "signal_probability": "46%",
+    "position_type": "과다상승",
+    "day_change": -3.42,
+    "headline": "AI 부품 수혜 삼성전기 200만원대 안착 실패…단기 차익실현매물에 주가...",
+    "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-04 13:30 KST",
+    "news": [
+      {
+        "title": "초고수들, 삼성전자·NAVER ‘젠슨 황 깐부주’ 담았다 [주식 초고수는...",
+        "url": "https://n.news.naver.com/mnews/article/011/0004627643",
+        "office": "서울경제",
+        "sentiment": "호재"
+      },
+      {
+        "title": "'지분가치 75조 급등' 삼성물산, 주주 환원 확대 기대감…&quot;삼성전기, ...",
+        "url": "https://n.news.naver.com/mnews/article/014/0005530477",
+        "office": "파이낸셜뉴스",
+        "sentiment": "호재"
+      }
+    ],
+    "cause_news": [
+      {
+        "title": "AI 부품 수혜 삼성전기 200만원대 안착 실패…단기 차익실현매물에 주가...",
+        "url": "http://www.newsworker.co.kr/news/articleView.html?idxno=429635",
+        "office": "newsworker",
+        "sentiment": "호재",
+        "cause_score": 11,
+        "cause_reason": "제목 언급, 인과표현, 재료, 당일"
+      }
+    ],
+    "cause_confidence": "높음",
+    "cause_summary": "AI 부품 수혜 삼성전기 200만원대 안착 실패…단기 차익실현매물에 주가..."
   }
 ]
