@@ -6,11 +6,11 @@
     "target_stock": "동양고속",
     "signal_probability": "67%",
     "position_type": "상승추세",
-    "day_change": 15.04,
+    "day_change": 14.91,
     "headline": "천일·동양고속, 吳 공약 '고터 재개발' 기대감에 10%대 급등",
     "summary": "[시그널] 일봉 상승추세 · 재료 호재(중요도 6.0). 일봉 국면을 함께 확인.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 11:15 KST",
+    "published_at": "2026-06-04 11:30 KST",
     "news": [
       {
         "title": "오세훈 역전승에 ‘고터 테마주 상한가’…동양고속, 천일고속 두자릿...",
@@ -55,70 +55,17 @@
     "cause_summary": "천일·동양고속, 吳 공약 '고터 재개발' 기대감에 10%대 급등"
   },
   {
-    "post_id": "POST_20260604_066570",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "LG전자",
-    "signal_probability": "49%",
-    "position_type": "과다상승",
-    "day_change": -15.41,
-    "headline": "젠슨 황 수혜주 급락, 왜?…LG전자 14% ↓",
-    "summary": "[후보] 재료+거래대금 포착(중요도 7.5, 호재) · 일봉 과다상승.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 11:15 KST",
-    "news": [
-      {
-        "title": "'젠슨 황 효과' 끝났나…급등했던 관련주 동반 약세",
-        "url": "https://n.news.naver.com/mnews/article/586/0000130688",
-        "office": "시사저널",
-        "sentiment": "호재"
-      },
-      {
-        "title": "젠슨 황 수혜주 급락, 왜?…LG전자 14% ↓",
-        "url": "https://n.news.naver.com/mnews/article/018/0006297163",
-        "office": "이데일리",
-        "sentiment": "혼재"
-      },
-      {
-        "title": "'젠슨 황' 기대 떨어졌나…LG그룹주 일제히 급락",
-        "url": "https://n.news.naver.com/mnews/article/015/0005294851",
-        "office": "한국경제",
-        "sentiment": "혼재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "젠슨 황 수혜주 급락, 왜?…LG전자 14% ↓",
-        "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03562086645478440",
-        "office": "edaily",
-        "sentiment": "악재",
-        "cause_score": 8,
-        "cause_reason": "제목 언급, 인과표현, 재료, 악재, 당일"
-      },
-      {
-        "title": "[특징주] LG전자, 15% 급락…단기간 2배 뛴 주가에 차익실현 매물 출회",
-        "url": "https://www.ajunews.com/view/20260604100851772",
-        "office": "ajunews",
-        "sentiment": "악재",
-        "cause_score": 8,
-        "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 악재, 당일"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "젠슨 황 수혜주 급락, 왜?…LG전자 14% ↓"
-  },
-  {
     "post_id": "POST_20260604_077360",
     "status": "PUBLISHED",
     "tier": "candidate",
     "target_stock": "덕산하이메탈",
     "signal_probability": "70%",
     "position_type": "눌림목",
-    "day_change": 29.52,
-    "headline": "[N2 특징주] 덕산하이메탈, MSB ‘슈퍼 사이클’ 진입 전망에 11%대 급등",
+    "day_change": 29.09,
+    "headline": "반도체 재료·부품株 전방위 랠리…덕산하이메탈 17% 폭등",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 눌림목.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 11:15 KST",
+    "published_at": "2026-06-04 11:30 KST",
     "news": [
       {
         "title": "중복상장 모회사 주주 … 자회사 상장안 첫 승인",
@@ -141,14 +88,6 @@
     ],
     "cause_news": [
       {
-        "title": "[N2 특징주] 덕산하이메탈, MSB ‘슈퍼 사이클’ 진입 전망에 11%대 급등",
-        "url": "https://www.news2day.co.kr/article/20260422500021",
-        "office": "news2day",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-      },
-      {
         "title": "반도체 재료·부품株 전방위 랠리…덕산하이메탈 17% 폭등",
         "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457445",
         "office": "pinpointnews",
@@ -165,8 +104,8 @@
         "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 오래됨"
       }
     ],
-    "cause_confidence": "높음",
-    "cause_summary": "[N2 특징주] 덕산하이메탈, MSB ‘슈퍼 사이클’ 진입 전망에 11%대 급등"
+    "cause_confidence": "중간",
+    "cause_summary": "반도체 재료·부품株 전방위 랠리…덕산하이메탈 17% 폭등"
   },
   {
     "post_id": "POST_20260604_486990",
@@ -175,11 +114,11 @@
     "target_stock": "노타",
     "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 9.31,
+    "day_change": 12.46,
     "headline": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 11:15 KST",
+    "published_at": "2026-06-04 11:30 KST",
     "news": [
       {
         "title": "노타, 엔비디아 아태 파트너데이 ‘한국 유일’ 패널 참여…“피지컬...",
@@ -242,11 +181,11 @@
     "target_stock": "브이엠",
     "signal_probability": "47%",
     "position_type": "과다상승",
-    "day_change": 29.52,
+    "day_change": 28.97,
     "headline": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 11:15 KST",
+    "published_at": "2026-06-04 11:30 KST",
     "news": [
       {
         "title": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
@@ -269,11 +208,11 @@
     "target_stock": "한온시스템",
     "signal_probability": "69%",
     "position_type": "눌림목",
-    "day_change": -3.1,
+    "day_change": -2.8,
     "headline": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 눌림목.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 11:15 KST",
+    "published_at": "2026-06-04 11:30 KST",
     "news": [
       {
         "title": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
@@ -302,59 +241,59 @@
     "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
   },
   {
-    "post_id": "POST_20260604_004170",
+    "post_id": "POST_20260604_066570",
     "status": "PUBLISHED",
     "tier": "candidate",
-    "target_stock": "신세계",
-    "signal_probability": "40%",
+    "target_stock": "LG전자",
+    "signal_probability": "47%",
     "position_type": "과다상승",
-    "day_change": 13.88,
-    "headline": "[특징주] 신세계, 불장 속 부의 효과 수혜 '상승'",
-    "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 혼재) · 일봉 과다상승.",
+    "day_change": -14.78,
+    "headline": "LG전자 주가 장중 14%대 내려, '젠슨 황 기대감' 급등 뒤 차익실현 매물...",
+    "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 11:15 KST",
+    "published_at": "2026-06-04 11:30 KST",
     "news": [
       {
-        "title": "'불장'에 지갑도 열리나…백화점주 동반 강세",
-        "url": "https://n.news.naver.com/mnews/article/374/0000513953",
-        "office": "SBS Biz",
-        "sentiment": "악재"
+        "title": "'젠슨 황 효과' 끝났나…급등했던 관련주 동반 약세",
+        "url": "https://n.news.naver.com/mnews/article/586/0000130688",
+        "office": "시사저널",
+        "sentiment": "호재"
       },
       {
-        "title": "신세계, 장 초반 5%대 급등…&quot;백화점 구매력 초강세&quot;",
-        "url": "https://n.news.naver.com/mnews/article/015/0005294839",
-        "office": "한국경제",
-        "sentiment": "호재"
+        "title": "젠슨 황 수혜주 급락, 왜?…LG전자 14% ↓",
+        "url": "https://n.news.naver.com/mnews/article/018/0006297163",
+        "office": "이데일리",
+        "sentiment": "혼재"
       }
     ],
     "cause_news": [
       {
-        "title": "[특징주] 신세계, 불장 속 부의 효과 수혜 '상승'",
-        "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1262151",
-        "office": "jeonmae",
+        "title": "LG전자 주가 장중 14%대 내려, '젠슨 황 기대감' 급등 뒤 차익실현 매물...",
+        "url": "https://www.businesspost.co.kr/BP?command=article_view&num=439247",
+        "office": "businesspost",
         "sentiment": "호재",
-        "cause_score": 15,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        "cause_score": 17,
+        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
       },
       {
-        "title": "신세계, 장 초반 5%대 급등…\"백화점 구매력 초강세\"",
-        "url": "https://www.hankyung.com/article/2026060465936",
-        "office": "hankyung",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        "title": "젠슨 황 수혜주 급락, 왜?…LG전자 14% ↓",
+        "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03562086645478440",
+        "office": "edaily",
+        "sentiment": "악재",
+        "cause_score": 8,
+        "cause_reason": "제목 언급, 인과표현, 재료, 악재, 당일"
       },
       {
-        "title": "[특징주] '부의 효과' 타고 백화점주 질주…신세계 장중 최고가 경신",
-        "url": "https://www.ziksir.com/news/articleView.html?idxno=135778",
-        "office": "ziksir",
-        "sentiment": "호재",
-        "cause_score": 9,
-        "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+        "title": "[특징주] LG전자, 15% 급락…단기간 2배 뛴 주가에 차익실현 매물 출회",
+        "url": "https://www.ajunews.com/view/20260604100851772",
+        "office": "ajunews",
+        "sentiment": "악재",
+        "cause_score": 8,
+        "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 악재, 당일"
       }
     ],
     "cause_confidence": "높음",
-    "cause_summary": "[특징주] 신세계, 불장 속 부의 효과 수혜 '상승'"
+    "cause_summary": "LG전자 주가 장중 14%대 내려, '젠슨 황 기대감' 급등 뒤 차익실현 매물..."
   },
   {
     "post_id": "POST_20260604_035420",
@@ -363,11 +302,11 @@
     "target_stock": "NAVER",
     "signal_probability": "46%",
     "position_type": "과다상승",
-    "day_change": -8.56,
+    "day_change": -7.31,
     "headline": "[특징주] LG전자-NAVER, 젠슨 황 회동 기대감 '급등'",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 11:15 KST",
+    "published_at": "2026-06-04 11:30 KST",
     "news": [
       {
         "title": "'젠슨 황 효과' 끝났나…급등했던 관련주 동반 약세",
@@ -392,15 +331,76 @@
         "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
       },
       {
-        "title": "[특징주] 네이버, 엔비디아 '하트' 동맹에 상한가",
-        "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1710851",
-        "office": "ebn",
+        "title": "새벽 2시 '부정선거' 구글 검색 폭등…네이버·다음은 조용",
+        "url": "https://www.mt.co.kr/tech/2026/06/04/2026060409335995189",
+        "office": "mt",
         "sentiment": "호재",
-        "cause_score": 7,
-        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        "cause_score": 5,
+        "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
       }
     ],
     "cause_confidence": "높음",
     "cause_summary": "[특징주] LG전자-NAVER, 젠슨 황 회동 기대감 '급등'"
+  },
+  {
+    "post_id": "POST_20260604_004170",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "신세계",
+    "signal_probability": "28%",
+    "position_type": "과다상승",
+    "day_change": 13.53,
+    "headline": "[특징주] 신세계, 불장 속 부의 효과 수혜 '상승'",
+    "summary": "[후보] 재료+거래대금 포착(중요도 3.5, 악재) · 일봉 과다상승.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-04 11:30 KST",
+    "news": [
+      {
+        "title": "사과도 통하지 않았다…스타벅스 논란 2주만에 결제액 107억 감소",
+        "url": "https://n.news.naver.com/mnews/article/003/0013986774",
+        "office": "뉴시스",
+        "sentiment": "악재"
+      },
+      {
+        "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
+        "url": "https://n.news.naver.com/mnews/article/003/0013986773",
+        "office": "뉴시스",
+        "sentiment": "호재"
+      },
+      {
+        "title": "'불장'에 지갑도 열리나…백화점주 동반 강세",
+        "url": "https://n.news.naver.com/mnews/article/374/0000513953",
+        "office": "SBS Biz",
+        "sentiment": "악재"
+      }
+    ],
+    "cause_news": [
+      {
+        "title": "[특징주] 신세계, 불장 속 부의 효과 수혜 '상승'",
+        "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1262151",
+        "office": "jeonmae",
+        "sentiment": "호재",
+        "cause_score": 15,
+        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+      },
+      {
+        "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
+        "url": "https://www.newsis.com/view/NISX20260604_0003656199",
+        "office": "newsis",
+        "sentiment": "호재",
+        "cause_score": 13,
+        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+      },
+      {
+        "title": "[특징주] '부의 효과' 타고 백화점주 질주…신세계 장중 최고가 경신",
+        "url": "https://www.ziksir.com/news/articleView.html?idxno=135778",
+        "office": "ziksir",
+        "sentiment": "호재",
+        "cause_score": 9,
+        "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+      }
+    ],
+    "cause_confidence": "높음",
+    "cause_summary": "[특징주] 신세계, 불장 속 부의 효과 수혜 '상승'"
   }
 ]
