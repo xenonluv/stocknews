@@ -10,7 +10,7 @@
     "headline": "반도체 재료·부품株 전방위 랠리…덕산하이메탈 17% 폭등",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 눌림목.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 12:00 KST",
+    "published_at": "2026-06-04 12:15 KST",
     "news": [
       {
         "title": "중복상장 모회사 주주 … 자회사 상장안 첫 승인",
@@ -59,11 +59,11 @@
     "target_stock": "노타",
     "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 11.75,
+    "day_change": 11.17,
     "headline": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 12:00 KST",
+    "published_at": "2026-06-04 12:15 KST",
     "news": [
       {
         "title": "노타, 엔비디아 아태 파트너데이 ‘한국 유일’ 패널 참여…“피지컬...",
@@ -126,11 +126,11 @@
     "target_stock": "동양고속",
     "signal_probability": "67%",
     "position_type": "상승추세",
-    "day_change": 14.52,
+    "day_change": 15.3,
     "headline": "천일·동양고속, 吳 공약 '고터 재개발' 기대감에 10%대 급등",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 상승추세.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 12:00 KST",
+    "published_at": "2026-06-04 12:15 KST",
     "news": [
       {
         "title": "오세훈 역전승에 ‘고터 테마주 상한가’…동양고속, 천일고속 두자릿...",
@@ -181,11 +181,11 @@
     "target_stock": "브이엠",
     "signal_probability": "47%",
     "position_type": "과다상승",
-    "day_change": 29.7,
+    "day_change": 29.43,
     "headline": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 12:00 KST",
+    "published_at": "2026-06-04 12:15 KST",
     "news": [
       {
         "title": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
@@ -208,11 +208,11 @@
     "target_stock": "한온시스템",
     "signal_probability": "69%",
     "position_type": "눌림목",
-    "day_change": -2.4,
+    "day_change": -2.3,
     "headline": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 눌림목.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 12:00 KST",
+    "published_at": "2026-06-04 12:15 KST",
     "news": [
       {
         "title": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
@@ -247,11 +247,11 @@
     "target_stock": "LG전자",
     "signal_probability": "47%",
     "position_type": "과다상승",
-    "day_change": -13.25,
+    "day_change": -12.48,
     "headline": "LG전자 주가 장중 14%대 내려, '젠슨 황 기대감' 급등 뒤 차익실현 매물...",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 12:00 KST",
+    "published_at": "2026-06-04 12:15 KST",
     "news": [
       {
         "title": "'젠슨 황 효과' 끝났나…급등했던 관련주 동반 약세",
@@ -274,14 +274,6 @@
         "sentiment": "호재",
         "cause_score": 17,
         "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-      },
-      {
-        "title": "젠슨 황 수혜주 급락, 왜?…LG전자 14% ↓",
-        "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03562086645478440",
-        "office": "edaily",
-        "sentiment": "악재",
-        "cause_score": 8,
-        "cause_reason": "제목 언급, 인과표현, 재료, 악재, 당일"
       }
     ],
     "cause_confidence": "높음",
@@ -294,11 +286,11 @@
     "target_stock": "SKC",
     "signal_probability": "51%",
     "position_type": "상승추세",
-    "day_change": 10.77,
+    "day_change": 11.98,
     "headline": "SKC, 유증 흥행·실적 기대감에 강세…목표가도 '쑥'[특징주]",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 악재) · 일봉 상승추세.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 12:00 KST",
+    "published_at": "2026-06-04 12:15 KST",
     "news": [
       {
         "title": "신영증권 &quot;SKC, 적자폭 축소 지속…2027년 흑자전환 예상&quot;",
@@ -355,50 +347,58 @@
     "cause_summary": "SKC, 유증 흥행·실적 기대감에 강세…목표가도 '쑥'[특징주]"
   },
   {
-    "post_id": "POST_20260604_035420",
+    "post_id": "POST_20260604_084370",
     "status": "PUBLISHED",
     "tier": "candidate",
-    "target_stock": "NAVER",
+    "target_stock": "유진테크",
     "signal_probability": "46%",
     "position_type": "과다상승",
-    "day_change": -6.06,
-    "headline": "초고수들, 삼성전자·NAVER ‘젠슨 황 깐부주’ 담았다 [주식 초고수는...",
+    "day_change": 29.97,
+    "headline": "[특징주] 유진테크, '上'…반도체 소부장 투자심리 개선에 매수세 집중",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 12:00 KST",
+    "published_at": "2026-06-04 12:15 KST",
     "news": [
       {
-        "title": "초고수들, 삼성전자·NAVER ‘젠슨 황 깐부주’ 담았다 [주식 초고수는...",
-        "url": "https://n.news.naver.com/mnews/article/011/0004627643",
+        "title": "반도체 ‘투 톱’ 쉬자 장비株 질주…유진테크·원익IPS 상한가 ‘눈앞...",
+        "url": "https://n.news.naver.com/mnews/article/011/0004627584",
         "office": "서울경제",
         "sentiment": "호재"
       },
       {
-        "title": "'젠슨 황 효과' 끝났나…급등했던 관련주 동반 약세",
-        "url": "https://n.news.naver.com/mnews/article/586/0000130688",
-        "office": "시사저널",
+        "title": "유진테크 주식선물, 상승 방향 가격제한폭 20%로 확대",
+        "url": "https://n.news.naver.com/mnews/article/293/0000083998",
+        "office": "블로터",
         "sentiment": "호재"
       }
     ],
     "cause_news": [
       {
-        "title": "초고수들, 삼성전자·NAVER ‘젠슨 황 깐부주’ 담았다 [주식 초고수는...",
-        "url": "https://www.sedaily.com/article/20051757?ref=naver",
-        "office": "sedaily",
-        "sentiment": "악재",
-        "cause_score": 8,
-        "cause_reason": "제목 언급, 인과표현, 재료, 악재, 당일"
+        "title": "[특징주] 유진테크, '上'…반도체 소부장 투자심리 개선에 매수세 집중",
+        "url": "https://www.ajunews.com/view/20260604100335761",
+        "office": "ajunews",
+        "sentiment": "호재",
+        "cause_score": 17,
+        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
       },
       {
-        "title": "새벽 2시 '부정선거' 구글 검색 폭등…네이버·다음은 조용",
-        "url": "https://www.mt.co.kr/tech/2026/06/04/2026060409335995189",
-        "office": "mt",
+        "title": "[특징주] 유진테크, 반도체 메모리 투자 확대 수혜 기대에 상한가…LPCV...",
+        "url": "https://www.bizwork.co.kr/news/articleView.html?idxno=416176",
+        "office": "bizwork",
         "sentiment": "호재",
-        "cause_score": 5,
-        "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        "cause_score": 17,
+        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+      },
+      {
+        "title": "[특징주] 유진테크, 상한가 직행…반도체 대형주 숨고르기 속 소부장 매...",
+        "url": "https://www.tokenpost.kr/news/economy/366064",
+        "office": "tokenpost",
+        "sentiment": "호재",
+        "cause_score": 13,
+        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
       }
     ],
     "cause_confidence": "높음",
-    "cause_summary": "초고수들, 삼성전자·NAVER ‘젠슨 황 깐부주’ 담았다 [주식 초고수는..."
+    "cause_summary": "[특징주] 유진테크, '上'…반도체 소부장 투자심리 개선에 매수세 집중"
   }
 ]
