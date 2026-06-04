@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-06-04 15:22 KST",
+  "as_of": "2026-06-04 15:37 KST",
   "intraday_rank": [
     {
       "ticker": "유진테크",
@@ -49,17 +49,17 @@
       "ticker": "브이엠",
       "code": "089970",
       "tomorrow_up_prob": "93%",
-      "entry": 69400.0,
-      "target": 72870,
-      "stop": 67318,
+      "entry": 69500.0,
+      "target": 72975,
+      "stop": 67415,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.92)",
+        "강세마감(0.93)",
         "정배열",
-        "RSI63.7 강세"
+        "RSI63.8 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 28.97,
+      "day_change": 28.04,
       "cause_news": [
         {
           "title": "브이엠 주가, 6월 4일 장중 69,100원 27.49% 상승 상한가 70,400원 도달",
@@ -77,17 +77,17 @@
       "ticker": "신세계",
       "code": "004170",
       "tomorrow_up_prob": "92%",
-      "entry": 660000.0,
-      "target": 693000,
-      "stop": 640200,
+      "entry": 659000.0,
+      "target": 691950,
+      "stop": 639230,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.81)",
+        "강세마감(0.8)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 15.11,
+      "day_change": 15.99,
       "cause_news": [
         {
           "title": "[특징주] 신세계, 18%대 급등…백화점 업황 개선 기대감 '쑥'",
@@ -98,12 +98,12 @@
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
         },
         {
-          "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
-          "url": "https://www.newsis.com/view/NISX20260604_0003656199",
-          "office": "newsis",
+          "title": "‘부의 효과’ 기대에 백화점株 질주…신세계 16% 급등[줍줍리포트]",
+          "url": "https://www.sedaily.com/article/20051795?ref=naver",
+          "office": "sedaily",
           "sentiment": "호재",
           "cause_score": 15,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
           "title": "[특징주] 신세계, 자산가 소비 확대 기대에 17%대 급등…장중 67만1000원...",
@@ -121,26 +121,18 @@
       "ticker": "현대백화점",
       "code": "069960",
       "tomorrow_up_prob": "90%",
-      "entry": 140100.0,
-      "target": 147105,
-      "stop": 135897,
+      "entry": 139800.0,
+      "target": 146790,
+      "stop": 135606,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.96)",
+        "강세마감(0.95)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 14.2,
+      "day_change": 15.02,
       "cause_news": [
-        {
-          "title": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가",
-          "url": "https://www.ajunews.com/view/20260604101353789",
-          "office": "ajunews",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
         {
           "title": "\"지구 살리는 백화점\"...현대백화점, 유통가 ESG 주도하며 '초록빛 행보...",
           "url": "https://www.techm.kr/news/articleView.html?idxno=152346",
@@ -151,19 +143,63 @@
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가"
+      "cause_summary": "\"지구 살리는 백화점\"...현대백화점, 유통가 ESG 주도하며 '초록빛 행보..."
+    },
+    {
+      "ticker": "테스",
+      "code": "095610",
+      "tomorrow_up_prob": "88%",
+      "entry": 135900.0,
+      "target": 142695,
+      "stop": 131823,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(1.0)",
+        "정배열",
+        "RSI66.1 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "HBM·선단공정 투자 확대… 테스, 고부가 전공정 장비 수혜 본격화",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457557",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
+        },
+        {
+          "title": "유진테크 원익IPS 테스 주가 장중 상한가, 미국 반도체장비주 강세에 훈...",
+          "url": "https://www.businesspost.co.kr/BP?command=article_view&num=439245",
+          "office": "businesspost",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "테스 주가, 6월 4일 장중 상한가 135,900원 29.92% 상승",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16079584",
+          "office": "topstarnews",
+          "sentiment": "악재",
+          "cause_score": 10,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "HBM·선단공정 투자 확대… 테스, 고부가 전공정 장비 수혜 본격화"
     },
     {
       "ticker": "롯데쇼핑",
       "code": "023530",
       "tomorrow_up_prob": "87%",
-      "entry": 171500.0,
-      "target": 180075,
-      "stop": 166355,
+      "entry": 172000.0,
+      "target": 180600,
+      "stop": 166840,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.86)",
-        "RSI66.2 강세",
+        "강세마감(0.89)",
+        "RSI66.4 강세",
         "Stoch골든"
       ],
       "risk": "특이 위험 낮음",
@@ -203,7 +239,7 @@
         "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 11.32,
+      "day_change": 12.03,
       "cause_news": [
         {
           "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
@@ -237,14 +273,14 @@
       "ticker": "한화비전",
       "code": "489790",
       "tomorrow_up_prob": "81%",
-      "entry": 79600.0,
-      "target": 83580,
-      "stop": 77212,
+      "entry": 79500.0,
+      "target": 83475,
+      "stop": 77115,
       "confidence": "상",
       "reasons": [
         "강세마감(0.85)",
         "MACD강세",
-        "RSI55.8 강세"
+        "RSI55.7 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -312,42 +348,6 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "원익IPS 상한가·주성엔지니어링 주가 파죽지세…OLED 장비주에 돈 몰리..."
-    },
-    {
-      "ticker": "NAVER",
-      "code": "035420",
-      "tomorrow_up_prob": "77%",
-      "entry": 267500.0,
-      "target": 280875,
-      "stop": 259475,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": -4.72,
-      "cause_news": [
-        {
-          "title": "초고수들, 삼성전자·NAVER ‘젠슨 황 깐부주’ 담았다 [주식 초고수는...",
-          "url": "https://www.sedaily.com/article/20051757?ref=naver",
-          "office": "sedaily",
-          "sentiment": "악재",
-          "cause_score": 8,
-          "cause_reason": "제목 언급, 인과표현, 재료, 악재, 당일"
-        },
-        {
-          "title": "새벽 2시 '부정선거' 구글 검색 폭등…네이버·다음은 조용",
-          "url": "https://www.mt.co.kr/tech/2026/06/04/2026060409335995189",
-          "office": "mt",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "초고수들, 삼성전자·NAVER ‘젠슨 황 깐부주’ 담았다 [주식 초고수는..."
     },
     {
       "ticker": "덕산하이메탈",
@@ -432,10 +432,10 @@
     {
       "ticker": "삼성물산",
       "code": "028260",
-      "tomorrow_up_prob": "71%",
-      "entry": 538000.0,
-      "target": 564900,
-      "stop": 521860,
+      "tomorrow_up_prob": "75%",
+      "entry": 535000.0,
+      "target": 561750,
+      "stop": 518950,
       "confidence": "상",
       "reasons": [
         "정배열",
@@ -446,20 +446,20 @@
       "day_change": null,
       "cause_news": [
         {
-          "title": "삼성생명·삼성물산, 주주환원 확대·밸류업 기대감에 동반 강세[특징주...",
-          "url": "https://www.newsway.co.kr/news/view?ud=2026060215284911488",
-          "office": "newsway",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락"
-        },
-        {
           "title": "삼성물산, 5거래일 연속 상승에 12% 급등…54만원선 재돌파",
           "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439234",
           "office": "econonews",
           "sentiment": "호재",
           "cause_score": 11,
           "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        },
+        {
+          "title": "삼성생명·삼성물산, 주주환원 확대·밸류업 기대감에 동반 강세[특징주...",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026060215284911488",
+          "office": "newsway",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 오래됨"
         },
         {
           "title": "[핫타임] 삼성물산, 장중 56만5000원 신고가…5거래일 연속 상승세",
@@ -471,23 +471,23 @@
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "삼성생명·삼성물산, 주주환원 확대·밸류업 기대감에 동반 강세[특징주..."
+      "cause_summary": "삼성물산, 5거래일 연속 상승에 12% 급등…54만원선 재돌파"
     },
     {
       "ticker": "한미반도체",
       "code": "042700",
       "tomorrow_up_prob": "68%",
-      "entry": 306500.0,
-      "target": 321825,
-      "stop": 297305,
+      "entry": 304000.0,
+      "target": 319200,
+      "stop": 294880,
       "confidence": "중",
       "reasons": [
         "Stoch골든",
-        "거래량1.7배",
+        "거래량1.74배",
         "호재"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 10.53,
+      "day_change": 11.25,
       "cause_news": [
         {
           "title": "파두·한미반도체·피에스케이 급등, SK하이닉스·삼성전자는 약세…시...",
@@ -498,17 +498,17 @@
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "주성엔지니어링·한미반도체 급등…반도체 장비주 강세",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439226",
-          "office": "econonews",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
           "title": "한미반도체까지 뛰었다…전자파 차폐주 동반 함박웃음",
           "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457545",
           "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+        },
+        {
+          "title": "HBM주 엇갈린 흐름…삼성전자·SK하이닉스 약세, 한미반도체·이오테크...",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=579498",
+          "office": "cbci",
           "sentiment": "호재",
           "cause_score": 7,
           "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
@@ -521,9 +521,9 @@
       "ticker": "한온시스템",
       "code": "018880",
       "tomorrow_up_prob": "67%",
-      "entry": 4810.0,
-      "target": 5050,
-      "stop": 4666,
+      "entry": 4820.0,
+      "target": 5061,
+      "stop": 4675,
       "confidence": "중",
       "reasons": [
         "정배열",
@@ -531,7 +531,7 @@
         "호재"
       ],
       "risk": "약한 마감",
-      "day_change": -3.7,
+      "day_change": -3.8,
       "cause_news": [
         {
           "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
@@ -559,7 +559,7 @@
         "일목 구름위"
       ],
       "risk": "RSI85.6 과매수, Stoch 과매수",
-      "day_change": 12.95,
+      "day_change": 13.88,
       "cause_news": [
         {
           "title": "삼성화재·삼성생명, 장중 주가 '희비'…주주환원 여력 온도차[특징주]",
@@ -593,13 +593,13 @@
       "ticker": "SKC",
       "code": "011790",
       "tomorrow_up_prob": "62%",
-      "entry": 156100.0,
-      "target": 163905,
-      "stop": 151417,
+      "entry": 155900.0,
+      "target": 163695,
+      "stop": 151223,
       "confidence": "중",
       "reasons": [
         "정배열",
-        "RSI58.5 강세",
+        "RSI58.4 강세",
         "일목 구름위"
       ],
       "risk": "악재",
@@ -683,17 +683,17 @@
       "ticker": "브이엠",
       "code": "089970",
       "tomorrow_up_prob": "93%",
-      "entry": 69400.0,
-      "target": 72870,
-      "stop": 67318,
+      "entry": 69500.0,
+      "target": 72975,
+      "stop": 67415,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.92)",
+        "강세마감(0.93)",
         "정배열",
-        "RSI63.7 강세"
+        "RSI63.8 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 28.97,
+      "day_change": 28.04,
       "cause_news": [
         {
           "title": "브이엠 주가, 6월 4일 장중 69,100원 27.49% 상승 상한가 70,400원 도달",
@@ -711,17 +711,17 @@
       "ticker": "신세계",
       "code": "004170",
       "tomorrow_up_prob": "92%",
-      "entry": 660000.0,
-      "target": 693000,
-      "stop": 640200,
+      "entry": 659000.0,
+      "target": 691950,
+      "stop": 639230,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.81)",
+        "강세마감(0.8)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 15.11,
+      "day_change": 15.99,
       "cause_news": [
         {
           "title": "[특징주] 신세계, 18%대 급등…백화점 업황 개선 기대감 '쑥'",
@@ -732,12 +732,12 @@
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
         },
         {
-          "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
-          "url": "https://www.newsis.com/view/NISX20260604_0003656199",
-          "office": "newsis",
+          "title": "‘부의 효과’ 기대에 백화점株 질주…신세계 16% 급등[줍줍리포트]",
+          "url": "https://www.sedaily.com/article/20051795?ref=naver",
+          "office": "sedaily",
           "sentiment": "호재",
           "cause_score": 15,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
           "title": "[특징주] 신세계, 자산가 소비 확대 기대에 17%대 급등…장중 67만1000원...",
@@ -755,26 +755,18 @@
       "ticker": "현대백화점",
       "code": "069960",
       "tomorrow_up_prob": "90%",
-      "entry": 140100.0,
-      "target": 147105,
-      "stop": 135897,
+      "entry": 139800.0,
+      "target": 146790,
+      "stop": 135606,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.96)",
+        "강세마감(0.95)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 14.2,
+      "day_change": 15.02,
       "cause_news": [
-        {
-          "title": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가",
-          "url": "https://www.ajunews.com/view/20260604101353789",
-          "office": "ajunews",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
         {
           "title": "\"지구 살리는 백화점\"...현대백화점, 유통가 ESG 주도하며 '초록빛 행보...",
           "url": "https://www.techm.kr/news/articleView.html?idxno=152346",
@@ -785,43 +777,51 @@
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 현대백화점, 실적 개선 기대감에 7%대 상승…52주 신고가"
+      "cause_summary": "\"지구 살리는 백화점\"...현대백화점, 유통가 ESG 주도하며 '초록빛 행보..."
     },
     {
-      "ticker": "롯데쇼핑",
-      "code": "023530",
-      "tomorrow_up_prob": "87%",
-      "entry": 171500.0,
-      "target": 180075,
-      "stop": 166355,
+      "ticker": "테스",
+      "code": "095610",
+      "tomorrow_up_prob": "88%",
+      "entry": 135900.0,
+      "target": 142695,
+      "stop": 131823,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.86)",
-        "RSI66.2 강세",
-        "Stoch골든"
+        "강세마감(1.0)",
+        "정배열",
+        "RSI66.1 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
-      "related_news": [
+      "cause_news": [
         {
-          "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
-          "url": "https://n.news.naver.com/mnews/article/003/0013986773",
-          "office": "뉴시스",
-          "sentiment": "호재"
+          "title": "HBM·선단공정 투자 확대… 테스, 고부가 전공정 장비 수혜 본격화",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457557",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
         },
         {
-          "title": "'불장'에 지갑도 열리나…백화점주 동반 강세",
-          "url": "https://n.news.naver.com/mnews/article/374/0000513953",
-          "office": "SBS Biz",
-          "sentiment": "악재"
+          "title": "유진테크 원익IPS 테스 주가 장중 상한가, 미국 반도체장비주 강세에 훈...",
+          "url": "https://www.businesspost.co.kr/BP?command=article_view&num=439245",
+          "office": "businesspost",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "&quot;성과급 받아 명품관으로&quot;…삼전닉스 효과에 백화점주 '들썩' [종목+]",
-          "url": "https://n.news.naver.com/mnews/article/015/0005294774",
-          "office": "한국경제",
-          "sentiment": "호재"
+          "title": "테스 주가, 6월 4일 장중 상한가 135,900원 29.92% 상승",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16079584",
+          "office": "topstarnews",
+          "sentiment": "악재",
+          "cause_score": 10,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
         }
-      ]
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "HBM·선단공정 투자 확대… 테스, 고부가 전공정 장비 수혜 본격화"
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
