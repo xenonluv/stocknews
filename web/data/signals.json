@@ -1,16 +1,71 @@
 [
   {
+    "post_id": "POST_20260604_084670",
+    "status": "PUBLISHED",
+    "tier": "signal",
+    "target_stock": "동양고속",
+    "signal_probability": "67%",
+    "position_type": "상승추세",
+    "day_change": 15.04,
+    "headline": "천일·동양고속, 吳 공약 '고터 재개발' 기대감에 10%대 급등",
+    "summary": "[시그널] 일봉 상승추세 · 재료 호재(중요도 6.0). 일봉 국면을 함께 확인.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-04 11:15 KST",
+    "news": [
+      {
+        "title": "오세훈 역전승에 ‘고터 테마주 상한가’…동양고속, 천일고속 두자릿...",
+        "url": "https://n.news.naver.com/mnews/article/021/0002795411",
+        "office": "문화일보",
+        "sentiment": "호재"
+      },
+      {
+        "title": "천일·동양고속, 지방선거 앞두고 20%대 급등",
+        "url": "https://n.news.naver.com/mnews/article/003/0013981880",
+        "office": "뉴시스",
+        "sentiment": "호재"
+      }
+    ],
+    "cause_news": [
+      {
+        "title": "천일·동양고속, 吳 공약 '고터 재개발' 기대감에 10%대 급등",
+        "url": "https://www.newsis.com/view/NISX20260604_0003655981",
+        "office": "newsis",
+        "sentiment": "호재",
+        "cause_score": 15,
+        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+      },
+      {
+        "title": "[특징주] 동양고속·천일고속, '서울고터' 재개발 기대감에 ↑",
+        "url": "https://www.cstimes.com/news/articleView.html?idxno=708415",
+        "office": "cstimes",
+        "sentiment": "호재",
+        "cause_score": 15,
+        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+      },
+      {
+        "title": "천일고속·동양고속 급등…서울고속터미널 재개발 기대감",
+        "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439224",
+        "office": "econonews",
+        "sentiment": "호재",
+        "cause_score": 13,
+        "cause_reason": "제목 언급, 원인표현, 인과표현, 검색맥락, 당일"
+      }
+    ],
+    "cause_confidence": "높음",
+    "cause_summary": "천일·동양고속, 吳 공약 '고터 재개발' 기대감에 10%대 급등"
+  },
+  {
     "post_id": "POST_20260604_066570",
     "status": "PUBLISHED",
     "tier": "candidate",
     "target_stock": "LG전자",
     "signal_probability": "49%",
     "position_type": "과다상승",
-    "day_change": -15.03,
+    "day_change": -15.41,
     "headline": "젠슨 황 수혜주 급락, 왜?…LG전자 14% ↓",
     "summary": "[후보] 재료+거래대금 포착(중요도 7.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 11:00 KST",
+    "published_at": "2026-06-04 11:15 KST",
     "news": [
       {
         "title": "'젠슨 황 효과' 끝났나…급등했던 관련주 동반 약세",
@@ -25,9 +80,9 @@
         "sentiment": "혼재"
       },
       {
-        "title": "&quot;젠슨 형 언제와&quot; 깐부株 동반 급락…LG전자 14%↓ [핫종목]",
-        "url": "https://n.news.naver.com/mnews/article/421/0008984903",
-        "office": "뉴스1",
+        "title": "'젠슨 황' 기대 떨어졌나…LG그룹주 일제히 급락",
+        "url": "https://n.news.naver.com/mnews/article/015/0005294851",
+        "office": "한국경제",
         "sentiment": "혼재"
       }
     ],
@@ -53,37 +108,65 @@
     "cause_summary": "젠슨 황 수혜주 급락, 왜?…LG전자 14% ↓"
   },
   {
-    "post_id": "POST_20260604_089970",
+    "post_id": "POST_20260604_077360",
     "status": "PUBLISHED",
     "tier": "candidate",
-    "target_stock": "브이엠",
-    "signal_probability": "48%",
-    "position_type": "과다상승",
+    "target_stock": "덕산하이메탈",
+    "signal_probability": "70%",
+    "position_type": "눌림목",
     "day_change": 29.52,
-    "headline": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
-    "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 과다상승.",
+    "headline": "[N2 특징주] 덕산하이메탈, MSB ‘슈퍼 사이클’ 진입 전망에 11%대 급등",
+    "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 눌림목.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 11:00 KST",
+    "published_at": "2026-06-04 11:15 KST",
     "news": [
       {
-        "title": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
-        "url": "https://n.news.naver.com/mnews/article/015/0005290112",
-        "office": "한국경제",
+        "title": "중복상장 모회사 주주 … 자회사 상장안 첫 승인",
+        "url": "https://n.news.naver.com/mnews/article/009/0005686992",
+        "office": "매일경제",
         "sentiment": "호재"
       },
       {
-        "title": "&quot;브이엠, 올해 역대급 실적 전망…목표가↑&quot;-하나",
-        "url": "https://n.news.naver.com/mnews/article/015/0005275582",
-        "office": "한국경제",
+        "title": "檢, SK하이닉스 납품사 압수수색‥소재 담합 의혹",
+        "url": "https://n.news.naver.com/mnews/article/011/0004625773",
+        "office": "서울경제",
         "sentiment": "호재"
       },
       {
-        "title": "다올證 “브이엠, SK하이닉스 시설 투자 수혜로 성장 기대…목표가 7...",
-        "url": "https://n.news.naver.com/mnews/article/366/0001153941",
-        "office": "조선비즈",
+        "title": "&quot;본격적인 실적 개선 국면&quot;…덕산하이메탈 17%↑[특징주]",
+        "url": "https://n.news.naver.com/mnews/article/018/0006286589",
+        "office": "이데일리",
         "sentiment": "호재"
       }
-    ]
+    ],
+    "cause_news": [
+      {
+        "title": "[N2 특징주] 덕산하이메탈, MSB ‘슈퍼 사이클’ 진입 전망에 11%대 급등",
+        "url": "https://www.news2day.co.kr/article/20260422500021",
+        "office": "news2day",
+        "sentiment": "호재",
+        "cause_score": 11,
+        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+      },
+      {
+        "title": "반도체 재료·부품株 전방위 랠리…덕산하이메탈 17% 폭등",
+        "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457445",
+        "office": "pinpointnews",
+        "sentiment": "호재",
+        "cause_score": 5,
+        "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
+      },
+      {
+        "title": "\"본격적인 실적 개선 국면\"…덕산하이메탈 17%↑[특징주]",
+        "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=02922486645451216",
+        "office": "edaily",
+        "sentiment": "호재",
+        "cause_score": 5,
+        "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 오래됨"
+      }
+    ],
+    "cause_confidence": "높음",
+    "cause_summary": "[N2 특징주] 덕산하이메탈, MSB ‘슈퍼 사이클’ 진입 전망에 11%대 급등"
   },
   {
     "post_id": "POST_20260604_486990",
@@ -92,11 +175,11 @@
     "target_stock": "노타",
     "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 7.88,
+    "day_change": 9.31,
     "headline": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 11:00 KST",
+    "published_at": "2026-06-04 11:15 KST",
     "news": [
       {
         "title": "노타, 엔비디아 아태 파트너데이 ‘한국 유일’ 패널 참여…“피지컬...",
@@ -153,57 +236,31 @@
     "cause_summary": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]"
   },
   {
-    "post_id": "POST_20260604_035420",
+    "post_id": "POST_20260604_089970",
     "status": "PUBLISHED",
     "tier": "candidate",
-    "target_stock": "NAVER",
-    "signal_probability": "48%",
+    "target_stock": "브이엠",
+    "signal_probability": "47%",
     "position_type": "과다상승",
-    "day_change": -8.02,
-    "headline": "[특징주] LG전자-NAVER, 젠슨 황 회동 기대감 '급등'",
-    "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 과다상승.",
+    "day_change": 29.52,
+    "headline": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
+    "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 11:00 KST",
+    "published_at": "2026-06-04 11:15 KST",
     "news": [
       {
-        "title": "'젠슨 황 효과' 끝났나…급등했던 관련주 동반 약세",
-        "url": "https://n.news.naver.com/mnews/article/586/0000130688",
-        "office": "시사저널",
+        "title": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
+        "url": "https://n.news.naver.com/mnews/article/015/0005290112",
+        "office": "한국경제",
         "sentiment": "호재"
       },
       {
-        "title": "젠슨 황 만나는 네이버, 관건은 ‘AI 인프라 체력’",
-        "url": "https://n.news.naver.com/mnews/article/117/0004071207",
-        "office": "마이데일리",
+        "title": "&quot;브이엠, 올해 역대급 실적 전망…목표가↑&quot;-하나",
+        "url": "https://n.news.naver.com/mnews/article/015/0005275582",
+        "office": "한국경제",
         "sentiment": "호재"
-      },
-      {
-        "title": "&quot;젠슨 형 언제와&quot; 깐부株 동반 급락…LG전자 14%↓ [핫종목]",
-        "url": "https://n.news.naver.com/mnews/article/421/0008984903",
-        "office": "뉴스1",
-        "sentiment": "혼재"
       }
-    ],
-    "cause_news": [
-      {
-        "title": "[특징주] LG전자-NAVER, 젠슨 황 회동 기대감 '급등'",
-        "url": "https://www.asiatime.co.kr/article/20260601500273",
-        "office": "asiatime",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-      },
-      {
-        "title": "[특징주] 네이버, 엔비디아 '하트' 동맹에 상한가",
-        "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1710851",
-        "office": "ebn",
-        "sentiment": "호재",
-        "cause_score": 7,
-        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "[특징주] LG전자-NAVER, 젠슨 황 회동 기대감 '급등'"
+    ]
   },
   {
     "post_id": "POST_20260604_018880",
@@ -212,11 +269,11 @@
     "target_stock": "한온시스템",
     "signal_probability": "69%",
     "position_type": "눌림목",
-    "day_change": -3.9,
+    "day_change": -3.1,
     "headline": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 눌림목.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 11:00 KST",
+    "published_at": "2026-06-04 11:15 KST",
     "news": [
       {
         "title": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
@@ -249,13 +306,13 @@
     "status": "PUBLISHED",
     "tier": "candidate",
     "target_stock": "신세계",
-    "signal_probability": "46%",
+    "signal_probability": "40%",
     "position_type": "과다상승",
-    "day_change": 14.59,
+    "day_change": 13.88,
     "headline": "[특징주] 신세계, 불장 속 부의 효과 수혜 '상승'",
-    "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 호재) · 일봉 과다상승.",
+    "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 혼재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 11:00 KST",
+    "published_at": "2026-06-04 11:15 KST",
     "news": [
       {
         "title": "'불장'에 지갑도 열리나…백화점주 동반 강세",
@@ -266,12 +323,6 @@
       {
         "title": "신세계, 장 초반 5%대 급등…&quot;백화점 구매력 초강세&quot;",
         "url": "https://n.news.naver.com/mnews/article/015/0005294839",
-        "office": "한국경제",
-        "sentiment": "호재"
-      },
-      {
-        "title": "&quot;성과급 받아 명품관으로&quot;…삼전닉스 효과에 백화점주 '들썩' [종목+]",
-        "url": "https://n.news.naver.com/mnews/article/015/0005294774",
         "office": "한국경제",
         "sentiment": "호재"
       }
@@ -304,5 +355,52 @@
     ],
     "cause_confidence": "높음",
     "cause_summary": "[특징주] 신세계, 불장 속 부의 효과 수혜 '상승'"
+  },
+  {
+    "post_id": "POST_20260604_035420",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "NAVER",
+    "signal_probability": "46%",
+    "position_type": "과다상승",
+    "day_change": -8.56,
+    "headline": "[특징주] LG전자-NAVER, 젠슨 황 회동 기대감 '급등'",
+    "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-04 11:15 KST",
+    "news": [
+      {
+        "title": "'젠슨 황 효과' 끝났나…급등했던 관련주 동반 약세",
+        "url": "https://n.news.naver.com/mnews/article/586/0000130688",
+        "office": "시사저널",
+        "sentiment": "호재"
+      },
+      {
+        "title": "젠슨 황 만나는 네이버, 관건은 ‘AI 인프라 체력’",
+        "url": "https://n.news.naver.com/mnews/article/117/0004071207",
+        "office": "마이데일리",
+        "sentiment": "호재"
+      }
+    ],
+    "cause_news": [
+      {
+        "title": "[특징주] LG전자-NAVER, 젠슨 황 회동 기대감 '급등'",
+        "url": "https://www.asiatime.co.kr/article/20260601500273",
+        "office": "asiatime",
+        "sentiment": "호재",
+        "cause_score": 11,
+        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+      },
+      {
+        "title": "[특징주] 네이버, 엔비디아 '하트' 동맹에 상한가",
+        "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1710851",
+        "office": "ebn",
+        "sentiment": "호재",
+        "cause_score": 7,
+        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+      }
+    ],
+    "cause_confidence": "높음",
+    "cause_summary": "[특징주] LG전자-NAVER, 젠슨 황 회동 기대감 '급등'"
   }
 ]
