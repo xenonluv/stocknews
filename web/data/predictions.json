@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-06-05 15:07 KST",
+  "as_of": "2026-06-05 15:22 KST",
   "intraday_rank": [
     {
       "ticker": "한켐",
@@ -46,20 +46,76 @@
       "cause_summary": "[특징주] 한켐·코칩·키스트론, 삼성전기 FC-BGA 5조 투자 전망에 ↑......"
     },
     {
-      "ticker": "라이콤",
-      "code": "388790",
-      "tomorrow_up_prob": "82%",
-      "entry": 6240.0,
-      "target": 6552,
-      "stop": 6053,
+      "ticker": "한온시스템",
+      "code": "018880",
+      "tomorrow_up_prob": "80%",
+      "entry": 4710.0,
+      "target": 4946,
+      "stop": 4569,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.96)",
-        "MACD강세",
-        "RSI59.1 강세"
+        "강세마감(0.84)",
+        "정배열",
+        "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 25.46,
+      "day_change": -2.8,
+      "cause_news": [
+        {
+          "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
+    },
+    {
+      "ticker": "LG전자",
+      "code": "066570",
+      "tomorrow_up_prob": "80%",
+      "entry": 304500.0,
+      "target": 319725,
+      "stop": 295365,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI62.0 강세"
+      ],
+      "risk": "약한 마감",
+      "day_change": -7.24,
+      "cause_news": [
+        {
+          "title": "젠슨 황 방한 기대감에 급등하던 두산로보틱스·LG전자 '파란불' 켜졌다",
+          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3601053",
+          "office": "gukjenews",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "젠슨 황 방한 기대감에 급등하던 두산로보틱스·LG전자 '파란불' 켜졌다"
+    },
+    {
+      "ticker": "라이콤",
+      "code": "388790",
+      "tomorrow_up_prob": "74%",
+      "entry": 5800.0,
+      "target": 6090,
+      "stop": 5626,
+      "confidence": "상",
+      "reasons": [
+        "MACD강세",
+        "RSI56.3 강세",
+        "거래량9.03배"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 19.96,
       "cause_news": [
         {
           "title": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
@@ -90,73 +146,17 @@
       "cause_summary": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로..."
     },
     {
-      "ticker": "한온시스템",
-      "code": "018880",
-      "tomorrow_up_prob": "80%",
-      "entry": 4705.0,
-      "target": 4940,
-      "stop": 4564,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.83)",
-        "정배열",
-        "일목 구름위"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": -2.39,
-      "cause_news": [
-        {
-          "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
-    },
-    {
-      "ticker": "LG전자",
-      "code": "066570",
-      "tomorrow_up_prob": "80%",
-      "entry": 307500.0,
-      "target": 322875,
-      "stop": 298275,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI62.6 강세"
-      ],
-      "risk": "약한 마감",
-      "day_change": -6.1,
-      "cause_news": [
-        {
-          "title": "젠슨 황 방한 기대감에 급등하던 두산로보틱스·LG전자 '파란불' 켜졌다",
-          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3601053",
-          "office": "gukjenews",
-          "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "젠슨 황 방한 기대감에 급등하던 두산로보틱스·LG전자 '파란불' 켜졌다"
-    },
-    {
       "ticker": "신한지주",
       "code": "055550",
       "tomorrow_up_prob": "72%",
-      "entry": 106800.0,
-      "target": 112140,
-      "stop": 103596,
+      "entry": 106700.0,
+      "target": 112035,
+      "stop": 103499,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI69.4 강세"
+        "RSI69.2 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -177,17 +177,17 @@
       "ticker": "노타",
       "code": "486990",
       "tomorrow_up_prob": "71%",
-      "entry": 34800.0,
-      "target": 36540,
-      "stop": 33756,
+      "entry": 34700.0,
+      "target": 36435,
+      "stop": 33659,
       "confidence": "상",
       "reasons": [
         "MACD강세",
-        "RSI52.4 강세",
+        "RSI52.3 강세",
         "호재"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": -12.28,
+      "day_change": -11,
       "cause_news": [
         {
           "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
@@ -202,60 +202,16 @@
       "cause_summary": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]"
     },
     {
-      "ticker": "팸텍",
-      "code": "271830",
-      "tomorrow_up_prob": "53%",
-      "entry": 2505.0,
-      "target": 2630,
-      "stop": 2430,
-      "confidence": "하",
-      "reasons": [
-        "MACD강세",
-        "거래량10.92배",
-        "호재"
-      ],
-      "risk": "RSI80.1 과매수, Stoch 과매수",
-      "day_change": 11.02,
-      "cause_news": [
-        {
-          "title": "팸텍, 4거래일 연속 상승에 11% 급등…산업용 로봇 기업 인수",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439267",
-          "office": "econonews",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] 팸텍, 웨이퍼 로봇 기업 티아이에스 인수 소식에 4거래일 연속...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=295148",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "웨이퍼 로봇 기업 인수…팸텍, 3거래일 연속 급등[특징주]",
-          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03263606645478440",
-          "office": "edaily",
-          "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "팸텍, 4거래일 연속 상승에 11% 급등…산업용 로봇 기업 인수"
-    },
-    {
       "ticker": "제주은행",
       "code": "006220",
       "tomorrow_up_prob": "37%",
-      "entry": 10670.0,
-      "target": 11204,
-      "stop": 10350,
+      "entry": 10660.0,
+      "target": 11193,
+      "stop": 10340,
       "confidence": "하",
       "reasons": [
-        "거래량12.49배",
-        "장중 25회 지속"
+        "거래량12.55배",
+        "장중 26회 지속"
       ],
       "risk": "약한 마감, 악재",
       "day_change": null,
@@ -315,20 +271,76 @@
       "cause_summary": "[특징주] 한켐·코칩·키스트론, 삼성전기 FC-BGA 5조 투자 전망에 ↑......"
     },
     {
-      "ticker": "라이콤",
-      "code": "388790",
-      "tomorrow_up_prob": "82%",
-      "entry": 6240.0,
-      "target": 6552,
-      "stop": 6053,
+      "ticker": "한온시스템",
+      "code": "018880",
+      "tomorrow_up_prob": "80%",
+      "entry": 4710.0,
+      "target": 4946,
+      "stop": 4569,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.96)",
-        "MACD강세",
-        "RSI59.1 강세"
+        "강세마감(0.84)",
+        "정배열",
+        "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 25.46,
+      "day_change": -2.8,
+      "cause_news": [
+        {
+          "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
+    },
+    {
+      "ticker": "LG전자",
+      "code": "066570",
+      "tomorrow_up_prob": "80%",
+      "entry": 304500.0,
+      "target": 319725,
+      "stop": 295365,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI62.0 강세"
+      ],
+      "risk": "약한 마감",
+      "day_change": -7.24,
+      "cause_news": [
+        {
+          "title": "젠슨 황 방한 기대감에 급등하던 두산로보틱스·LG전자 '파란불' 켜졌다",
+          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3601053",
+          "office": "gukjenews",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "젠슨 황 방한 기대감에 급등하던 두산로보틱스·LG전자 '파란불' 켜졌다"
+    },
+    {
+      "ticker": "라이콤",
+      "code": "388790",
+      "tomorrow_up_prob": "74%",
+      "entry": 5800.0,
+      "target": 6090,
+      "stop": 5626,
+      "confidence": "상",
+      "reasons": [
+        "MACD강세",
+        "RSI56.3 강세",
+        "거래량9.03배"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 19.96,
       "cause_news": [
         {
           "title": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
@@ -359,73 +371,17 @@
       "cause_summary": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로..."
     },
     {
-      "ticker": "한온시스템",
-      "code": "018880",
-      "tomorrow_up_prob": "80%",
-      "entry": 4705.0,
-      "target": 4940,
-      "stop": 4564,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.83)",
-        "정배열",
-        "일목 구름위"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": -2.39,
-      "cause_news": [
-        {
-          "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
-    },
-    {
-      "ticker": "LG전자",
-      "code": "066570",
-      "tomorrow_up_prob": "80%",
-      "entry": 307500.0,
-      "target": 322875,
-      "stop": 298275,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI62.6 강세"
-      ],
-      "risk": "약한 마감",
-      "day_change": -6.1,
-      "cause_news": [
-        {
-          "title": "젠슨 황 방한 기대감에 급등하던 두산로보틱스·LG전자 '파란불' 켜졌다",
-          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3601053",
-          "office": "gukjenews",
-          "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "젠슨 황 방한 기대감에 급등하던 두산로보틱스·LG전자 '파란불' 켜졌다"
-    },
-    {
       "ticker": "신한지주",
       "code": "055550",
       "tomorrow_up_prob": "72%",
-      "entry": 106800.0,
-      "target": 112140,
-      "stop": 103596,
+      "entry": 106700.0,
+      "target": 112035,
+      "stop": 103499,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI69.4 강세"
+        "RSI69.2 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
