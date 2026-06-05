@@ -1,6 +1,6 @@
 {
-  "sample": 10,
-  "recent_hit_rate": "40% (n=10)",
-  "avg_return": -1.48,
-  "target_rate": "40%"
+  "sample": 15,
+  "recent_hit_rate": "47% (n=15)",
+  "avg_return": -0.69,
+  "target_rate": "60%"
 }

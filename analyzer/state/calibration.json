@@ -9,14 +9,14 @@
     {
       "lo": 80,
       "hi": 90,
-      "n": 5,
-      "actual_rate": 60
+      "n": 6,
+      "actual_rate": 67
     },
     {
       "lo": 90,
       "hi": 100,
-      "n": 1,
-      "actual_rate": 100
+      "n": 5,
+      "actual_rate": 60
     }
   ]
 }
