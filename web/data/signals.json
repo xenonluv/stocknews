@@ -1,77 +1,16 @@
 [
   {
-    "post_id": "POST_20260605_457370",
-    "status": "PUBLISHED",
-    "tier": "signal",
-    "target_stock": "한켐",
-    "signal_probability": "46%",
-    "position_type": "과다상승",
-    "day_change": 25.69,
-    "headline": "한켐 주가, 급등세... 삼성전기 수혜주",
-    "summary": "[시그널] 일봉 과다상승 · 재료 호재(중요도 5.5). 일봉 국면을 함께 확인.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 12:30 KST",
-    "news": [
-      {
-        "title": "한켐, 이상조 대표이사 '화학경영자상' 수상",
-        "url": "https://n.news.naver.com/mnews/article/003/0013565172",
-        "office": "뉴시스",
-        "sentiment": "호재"
-      },
-      {
-        "title": "한켐, 신규 첨단소재 개발 가속…“상반기 신규 양산소재 5종·파일럿...",
-        "url": "https://n.news.naver.com/mnews/article/018/0006124687",
-        "office": "이데일리",
-        "sentiment": "호재"
-      },
-      {
-        "title": "[특징주]한켐, '사상 최대' 실적 경신…OLED·촉매·의약·반도체 고른...",
-        "url": "https://n.news.naver.com/mnews/article/277/0005636773",
-        "office": "아시아경제",
-        "sentiment": "호재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "한켐 주가, 급등세... 삼성전기 수혜주",
-        "url": "https://www.ggilbo.com/news/articleView.html?idxno=1160965",
-        "office": "ggilbo",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-      },
-      {
-        "title": "[특징주] 한켐, MLCC 소재 '신규공장 가동' 소식에 장중 상한가",
-        "url": "https://www.startuptoday.co.kr/news/articleView.html?idxno=571731",
-        "office": "startuptoday",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-      },
-      {
-        "title": "[특징주] 한켐, 삼성전기 역대 최고가에 MLCC 소재 공급사 부각…수요 5...",
-        "url": "https://www.cstimes.com/news/articleView.html?idxno=707748",
-        "office": "cstimes",
-        "sentiment": "호재",
-        "cause_score": 7,
-        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "한켐 주가, 급등세... 삼성전기 수혜주"
-  },
-  {
     "post_id": "POST_20260605_009150",
     "status": "PUBLISHED",
     "tier": "signal",
     "target_stock": "삼성전기",
-    "signal_probability": "54%",
+    "signal_probability": "46%",
     "position_type": "과다상승",
-    "day_change": 3.5,
+    "day_change": 3.61,
     "headline": "AI 병목, GPU서 메모리·기판으로 이동...삼전·닉스, 삼성전기·LG이노텍...",
     "summary": "[시그널] 일봉 과다상승 · 재료 호재(중요도 5.0). 일봉 국면을 함께 확인.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 12:30 KST",
+    "published_at": "2026-06-05 12:45 KST",
     "news": [
       {
         "title": "삼성전기 5% 급락 후 5% 반등…'부품 병목' 지속 180만원 회복[핫종목...",
@@ -94,14 +33,6 @@
         "sentiment": "호재",
         "cause_score": 13,
         "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
-      },
-      {
-        "title": "[특징주] 삼성전기, 장외서 9%대 '뚝'... 증권가 \"목표주가 210만원 상향...",
-        "url": "https://www.ggilbo.com/news/articleView.html?idxno=1161975",
-        "office": "ggilbo",
-        "sentiment": "악재",
-        "cause_score": 8,
-        "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 악재, 당일"
       }
     ],
     "cause_confidence": "높음",
@@ -114,11 +45,11 @@
     "target_stock": "NHN",
     "signal_probability": "53%",
     "position_type": "과다상승",
-    "day_change": 6.5,
+    "day_change": 5.76,
     "headline": "[게임스톡] NHN, AI 클라우드 기대감에 급등",
     "summary": "[후보] 재료+거래대금 포착(중요도 10.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 12:30 KST",
+    "published_at": "2026-06-05 12:45 KST",
     "news": [
       {
         "title": "KB증권, NHN 목표주가 7만6000원으로 상향…GPUaaS 수익화 본격화 기대",
@@ -173,11 +104,11 @@
     "target_stock": "팸텍",
     "signal_probability": "53%",
     "position_type": "과다상승",
-    "day_change": 20.13,
+    "day_change": 20.34,
     "headline": "팸텍, 4거래일 연속 상승에 11% 급등…산업용 로봇 기업 인수",
     "summary": "[후보] 재료+거래대금 포착(중요도 10.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 12:30 KST",
+    "published_at": "2026-06-05 12:45 KST",
     "news": [
       {
         "title": "'上上上' 팸텍…매도 사이드카 발동에도 4거래일 연속 '급등'",
@@ -240,11 +171,11 @@
     "target_stock": "노타",
     "signal_probability": "55%",
     "position_type": "분석불가",
-    "day_change": -14.45,
+    "day_change": -14.58,
     "headline": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 분석불가.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 12:30 KST",
+    "published_at": "2026-06-05 12:45 KST",
     "news": [
       {
         "title": "노타, 엔비디아 아태 파트너데이 ‘한국 유일’ 패널 참여…“피지컬...",
@@ -291,11 +222,11 @@
     "target_stock": "한온시스템",
     "signal_probability": "70%",
     "position_type": "눌림목",
-    "day_change": -2.59,
+    "day_change": -2.9,
     "headline": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 눌림목.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 12:30 KST",
+    "published_at": "2026-06-05 12:45 KST",
     "news": [
       {
         "title": "[지배구조 리포트]한온시스템, 소액주주 늘었는데 '주주권 지표' 후퇴",
@@ -330,65 +261,65 @@
     "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
   },
   {
-    "post_id": "POST_20260605_403870",
+    "post_id": "POST_20260605_457370",
     "status": "PUBLISHED",
     "tier": "candidate",
-    "target_stock": "HPSP",
-    "signal_probability": "66%",
-    "position_type": "상승추세",
-    "day_change": 12.42,
-    "headline": "반도체 소부장주 강세…HPSP 12%·원익IPS 6%↑",
-    "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 호재) · 일봉 상승추세.",
+    "target_stock": "한켐",
+    "signal_probability": "46%",
+    "position_type": "과다상승",
+    "day_change": 22.59,
+    "headline": "한켐 주가, 급등세... 삼성전기 수혜주",
+    "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 12:30 KST",
+    "published_at": "2026-06-05 12:45 KST",
     "news": [
       {
-        "title": "예스티, HPSP 고압어닐링 ‘303 특허’ 무효 심판 승소",
-        "url": "https://n.news.naver.com/mnews/article/018/0006292874",
+        "title": "한켐, 이상조 대표이사 '화학경영자상' 수상",
+        "url": "https://n.news.naver.com/mnews/article/003/0013565172",
+        "office": "뉴시스",
+        "sentiment": "호재"
+      },
+      {
+        "title": "한켐, 신규 첨단소재 개발 가속…“상반기 신규 양산소재 5종·파일럿...",
+        "url": "https://n.news.naver.com/mnews/article/018/0006124687",
         "office": "이데일리",
         "sentiment": "호재"
       },
       {
-        "title": "[밸류업 진단] '기슬 고도화' HPSP, 해외 공략…주주환원도 확대",
-        "url": "https://n.news.naver.com/mnews/article/293/0000084446",
-        "office": "블로터",
-        "sentiment": "호재"
-      },
-      {
-        "title": "&quot;HPSP, TSMC·삼성·인텔 투자 수혜 본격화…목표가↑&quot;-NH",
-        "url": "https://n.news.naver.com/mnews/article/015/0005283399",
-        "office": "한국경제",
+        "title": "[특징주]한켐, '사상 최대' 실적 경신…OLED·촉매·의약·반도체 고른...",
+        "url": "https://n.news.naver.com/mnews/article/277/0005636773",
+        "office": "아시아경제",
         "sentiment": "호재"
       }
     ],
     "cause_news": [
       {
-        "title": "반도체 소부장주 강세…HPSP 12%·원익IPS 6%↑",
-        "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439290",
-        "office": "econonews",
+        "title": "한켐 주가, 급등세... 삼성전기 수혜주",
+        "url": "https://www.ggilbo.com/news/articleView.html?idxno=1160965",
+        "office": "ggilbo",
         "sentiment": "호재",
         "cause_score": 11,
-        "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
+        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
       },
       {
-        "title": "[특징주] HPSP, 삼성전자·SK하이닉스 급등에 동반 강세…AI 반도체 핵심...",
-        "url": "https://www.widedaily.com/news/articleView.html?idxno=290836",
-        "office": "widedaily",
+        "title": "[특징주] 한켐, MLCC 소재 '신규공장 가동' 소식에 장중 상한가",
+        "url": "https://www.startuptoday.co.kr/news/articleView.html?idxno=571731",
+        "office": "startuptoday",
         "sentiment": "호재",
-        "cause_score": 7,
-        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        "cause_score": 11,
+        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
       },
       {
-        "title": "[특징주] HPSP, 삼성전자·SK하이닉스 훈풍에 강세…AI 반도체 핵심 장비...",
-        "url": "https://www.widedaily.com/news/articleView.html?idxno=290511",
-        "office": "widedaily",
+        "title": "[특징주] 한켐, 삼성전기 역대 최고가에 MLCC 소재 공급사 부각…수요 5...",
+        "url": "https://www.cstimes.com/news/articleView.html?idxno=707748",
+        "office": "cstimes",
         "sentiment": "호재",
         "cause_score": 7,
         "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
       }
     ],
     "cause_confidence": "높음",
-    "cause_summary": "반도체 소부장주 강세…HPSP 12%·원익IPS 6%↑"
+    "cause_summary": "한켐 주가, 급등세... 삼성전기 수혜주"
   },
   {
     "post_id": "POST_20260605_388790",
@@ -397,11 +328,11 @@
     "target_stock": "라이콤",
     "signal_probability": "46%",
     "position_type": "과다상승",
-    "day_change": 16.29,
+    "day_change": 20.57,
     "headline": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 12:30 KST",
+    "published_at": "2026-06-05 12:45 KST",
     "news": [
       {
         "title": "라이콤, AI 데이터센터·방산 수혜 기대감에 19%↑[특징주]",
