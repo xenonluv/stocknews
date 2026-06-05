@@ -1,49 +1,21 @@
 {
-  "as_of": "2026-06-05 12:22 KST",
+  "as_of": "2026-06-05 12:37 KST",
   "intraday_rank": [
-    {
-      "ticker": "삼성전기",
-      "code": "009150",
-      "tomorrow_up_prob": "90%",
-      "entry": 1800000.0,
-      "target": 1890000,
-      "stop": 1746000,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.8)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 4.84,
-      "cause_news": [
-        {
-          "title": "AI 병목, GPU서 메모리·기판으로 이동...삼전·닉스, 삼성전기·LG이노텍...",
-          "url": "http://www.joseilbo.com/news/news_read.php?uid=569481&class=18&grp=",
-          "office": "joseilbo",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "AI 병목, GPU서 메모리·기판으로 이동...삼전·닉스, 삼성전기·LG이노텍..."
-    },
     {
       "ticker": "한켐",
       "code": "457370",
-      "tomorrow_up_prob": "89%",
-      "entry": 14000.0,
-      "target": 14700,
-      "stop": 13580,
+      "tomorrow_up_prob": "90%",
+      "entry": 14310.0,
+      "target": 15026,
+      "stop": 13881,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.96)",
+        "강세마감(0.95)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 17.27,
+      "day_change": 25.69,
       "cause_news": [
         {
           "title": "한켐 주가, 급등세... 삼성전기 수혜주",
@@ -74,20 +46,48 @@
       "cause_summary": "한켐 주가, 급등세... 삼성전기 수혜주"
     },
     {
-      "ticker": "NHN",
-      "code": "181710",
-      "tomorrow_up_prob": "88%",
-      "entry": 49450.0,
-      "target": 51922,
-      "stop": 47966,
+      "ticker": "삼성전기",
+      "code": "009150",
+      "tomorrow_up_prob": "90%",
+      "entry": 1786000.0,
+      "target": 1875300,
+      "stop": 1732420,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.8)",
+        "강세마감(0.74)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 5.33,
+      "day_change": 3.5,
+      "cause_news": [
+        {
+          "title": "AI 병목, GPU서 메모리·기판으로 이동...삼전·닉스, 삼성전기·LG이노텍...",
+          "url": "http://www.joseilbo.com/news/news_read.php?uid=569481&class=18&grp=",
+          "office": "joseilbo",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "AI 병목, GPU서 메모리·기판으로 이동...삼전·닉스, 삼성전기·LG이노텍..."
+    },
+    {
+      "ticker": "NHN",
+      "code": "181710",
+      "tomorrow_up_prob": "89%",
+      "entry": 50000.0,
+      "target": 52500,
+      "stop": 48500,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.87)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 6.5,
       "cause_news": [
         {
           "title": "[게임스톡] NHN, AI 클라우드 기대감에 급등",
@@ -110,48 +110,20 @@
       "cause_summary": "[게임스톡] NHN, AI 클라우드 기대감에 급등"
     },
     {
-      "ticker": "한온시스템",
-      "code": "018880",
-      "tomorrow_up_prob": "80%",
-      "entry": 4715.0,
-      "target": 4951,
-      "stop": 4574,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.86)",
-        "정배열",
-        "일목 구름위"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": -1.87,
-      "cause_news": [
-        {
-          "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
-    },
-    {
       "ticker": "라이콤",
       "code": "388790",
-      "tomorrow_up_prob": "74%",
-      "entry": 5660.0,
-      "target": 5943,
-      "stop": 5490,
+      "tomorrow_up_prob": "82%",
+      "entry": 5710.0,
+      "target": 5996,
+      "stop": 5539,
       "confidence": "상",
       "reasons": [
+        "강세마감(0.71)",
         "MACD강세",
-        "RSI55.4 강세",
-        "거래량6.0배"
+        "RSI55.7 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 14.66,
+      "day_change": 16.29,
       "cause_news": [
         {
           "title": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
@@ -182,9 +154,37 @@
       "cause_summary": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로..."
     },
     {
+      "ticker": "한온시스템",
+      "code": "018880",
+      "tomorrow_up_prob": "80%",
+      "entry": 4695.0,
+      "target": 4930,
+      "stop": 4554,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.8)",
+        "정배열",
+        "일목 구름위"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": -2.59,
+      "cause_news": [
+        {
+          "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
+    },
+    {
       "ticker": "HPSP",
       "code": "403870",
-      "tomorrow_up_prob": "73%",
+      "tomorrow_up_prob": "74%",
       "entry": 53400.0,
       "target": 56070,
       "stop": 51798,
@@ -192,11 +192,19 @@
       "reasons": [
         "강세마감(0.85)",
         "RSI53.6 강세",
-        "거래량2.33배"
+        "거래량2.39배"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 12.21,
+      "day_change": 12.42,
       "cause_news": [
+        {
+          "title": "반도체 소부장주 강세…HPSP 12%·원익IPS 6%↑",
+          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439290",
+          "office": "econonews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
+        },
         {
           "title": "[특징주] HPSP, 삼성전자·SK하이닉스 급등에 동반 강세…AI 반도체 핵심...",
           "url": "https://www.widedaily.com/news/articleView.html?idxno=290836",
@@ -214,21 +222,21 @@
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
         }
       ],
-      "cause_confidence": "중간",
-      "cause_summary": "[특징주] HPSP, 삼성전자·SK하이닉스 급등에 동반 강세…AI 반도체 핵심..."
+      "cause_confidence": "높음",
+      "cause_summary": "반도체 소부장주 강세…HPSP 12%·원익IPS 6%↑"
     },
     {
       "ticker": "신한지주",
       "code": "055550",
       "tomorrow_up_prob": "68%",
-      "entry": 106600.0,
-      "target": 111930,
-      "stop": 103402,
+      "entry": 106700.0,
+      "target": 112035,
+      "stop": 103499,
       "confidence": "중",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI69.1 강세"
+        "RSI69.2 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -265,17 +273,17 @@
       "ticker": "노타",
       "code": "486990",
       "tomorrow_up_prob": "67%",
-      "entry": 33650.0,
-      "target": 35332,
-      "stop": 32640,
+      "entry": 33500.0,
+      "target": 35175,
+      "stop": 32495,
       "confidence": "중",
       "reasons": [
         "MACD강세",
-        "RSI50.6 강세",
+        "RSI50.3 강세",
         "호재"
       ],
       "risk": "약한 마감",
-      "day_change": -13.55,
+      "day_change": -14.45,
       "cause_news": [
         {
           "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
@@ -293,17 +301,17 @@
       "ticker": "팸텍",
       "code": "271830",
       "tomorrow_up_prob": "61%",
-      "entry": 2840.0,
-      "target": 2982,
-      "stop": 2755,
+      "entry": 2855.0,
+      "target": 2998,
+      "stop": 2769,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.78)",
+        "강세마감(0.8)",
         "MACD강세",
-        "거래량9.64배"
+        "거래량9.72배"
       ],
-      "risk": "RSI83.4 과매수, Stoch 과매수",
-      "day_change": 22.25,
+      "risk": "RSI83.5 과매수, Stoch 과매수",
+      "day_change": 20.13,
       "cause_news": [
         {
           "title": "팸텍, 4거래일 연속 상승에 11% 급등…산업용 로봇 기업 인수",
@@ -337,13 +345,13 @@
       "ticker": "미래에셋생명",
       "code": "085620",
       "tomorrow_up_prob": "57%",
-      "entry": 21100.0,
-      "target": 22155,
-      "stop": 20467,
+      "entry": 20950.0,
+      "target": 21998,
+      "stop": 20322,
       "confidence": "중",
       "reasons": [
         "MACD강세",
-        "거래량10.65배",
+        "거래량10.7배",
         "호재"
       ],
       "risk": "약한 마감, Stoch 과매수",
@@ -381,14 +389,14 @@
       "ticker": "제주은행",
       "code": "006220",
       "tomorrow_up_prob": "53%",
-      "entry": 11430.0,
-      "target": 12002,
-      "stop": 11087,
+      "entry": 11360.0,
+      "target": 11928,
+      "stop": 11019,
       "confidence": "하",
       "reasons": [
         "MACD강세",
-        "RSI52.2 강세",
-        "거래량10.72배"
+        "RSI51.5 강세",
+        "거래량10.76배"
       ],
       "risk": "악재",
       "day_change": null,
@@ -404,48 +412,20 @@
   ],
   "closing_bet": [
     {
-      "ticker": "삼성전기",
-      "code": "009150",
-      "tomorrow_up_prob": "90%",
-      "entry": 1800000.0,
-      "target": 1890000,
-      "stop": 1746000,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.8)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 4.84,
-      "cause_news": [
-        {
-          "title": "AI 병목, GPU서 메모리·기판으로 이동...삼전·닉스, 삼성전기·LG이노텍...",
-          "url": "http://www.joseilbo.com/news/news_read.php?uid=569481&class=18&grp=",
-          "office": "joseilbo",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "AI 병목, GPU서 메모리·기판으로 이동...삼전·닉스, 삼성전기·LG이노텍..."
-    },
-    {
       "ticker": "한켐",
       "code": "457370",
-      "tomorrow_up_prob": "89%",
-      "entry": 14000.0,
-      "target": 14700,
-      "stop": 13580,
+      "tomorrow_up_prob": "90%",
+      "entry": 14310.0,
+      "target": 15026,
+      "stop": 13881,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.96)",
+        "강세마감(0.95)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 17.27,
+      "day_change": 25.69,
       "cause_news": [
         {
           "title": "한켐 주가, 급등세... 삼성전기 수혜주",
@@ -476,20 +456,48 @@
       "cause_summary": "한켐 주가, 급등세... 삼성전기 수혜주"
     },
     {
-      "ticker": "NHN",
-      "code": "181710",
-      "tomorrow_up_prob": "88%",
-      "entry": 49450.0,
-      "target": 51922,
-      "stop": 47966,
+      "ticker": "삼성전기",
+      "code": "009150",
+      "tomorrow_up_prob": "90%",
+      "entry": 1786000.0,
+      "target": 1875300,
+      "stop": 1732420,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.8)",
+        "강세마감(0.74)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 5.33,
+      "day_change": 3.5,
+      "cause_news": [
+        {
+          "title": "AI 병목, GPU서 메모리·기판으로 이동...삼전·닉스, 삼성전기·LG이노텍...",
+          "url": "http://www.joseilbo.com/news/news_read.php?uid=569481&class=18&grp=",
+          "office": "joseilbo",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "AI 병목, GPU서 메모리·기판으로 이동...삼전·닉스, 삼성전기·LG이노텍..."
+    },
+    {
+      "ticker": "NHN",
+      "code": "181710",
+      "tomorrow_up_prob": "89%",
+      "entry": 50000.0,
+      "target": 52500,
+      "stop": 48500,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.87)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 6.5,
       "cause_news": [
         {
           "title": "[게임스톡] NHN, AI 클라우드 기대감에 급등",
@@ -512,48 +520,20 @@
       "cause_summary": "[게임스톡] NHN, AI 클라우드 기대감에 급등"
     },
     {
-      "ticker": "한온시스템",
-      "code": "018880",
-      "tomorrow_up_prob": "80%",
-      "entry": 4715.0,
-      "target": 4951,
-      "stop": 4574,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.86)",
-        "정배열",
-        "일목 구름위"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": -1.87,
-      "cause_news": [
-        {
-          "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
-    },
-    {
       "ticker": "라이콤",
       "code": "388790",
-      "tomorrow_up_prob": "74%",
-      "entry": 5660.0,
-      "target": 5943,
-      "stop": 5490,
+      "tomorrow_up_prob": "82%",
+      "entry": 5710.0,
+      "target": 5996,
+      "stop": 5539,
       "confidence": "상",
       "reasons": [
+        "강세마감(0.71)",
         "MACD강세",
-        "RSI55.4 강세",
-        "거래량6.0배"
+        "RSI55.7 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 14.66,
+      "day_change": 16.29,
       "cause_news": [
         {
           "title": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
@@ -582,6 +562,34 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로..."
+    },
+    {
+      "ticker": "한온시스템",
+      "code": "018880",
+      "tomorrow_up_prob": "80%",
+      "entry": 4695.0,
+      "target": 4930,
+      "stop": 4554,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.8)",
+        "정배열",
+        "일목 구름위"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": -2.59,
+      "cause_news": [
+        {
+          "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
