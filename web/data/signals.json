@@ -1,129 +1,42 @@
 [
   {
-    "post_id": "POST_20260605_128940",
+    "post_id": "POST_20260605_035420",
     "status": "PUBLISHED",
     "tier": "candidate",
-    "target_stock": "한미약품",
-    "signal_probability": "56%",
-    "position_type": "분석불가",
-    "day_change": 6.82,
-    "headline": "한미약품, 릴리와 '깜짝' 기술이전 계약…\"추가 L/O 가능성\"",
-    "summary": "[후보] 재료+거래대금 포착(중요도 7.5, 호재) · 일봉 분석불가.",
+    "target_stock": "NAVER",
+    "signal_probability": "69%",
+    "position_type": "상승추세",
+    "day_change": -6.92,
+    "headline": "'깐부' 이어 '삼소'…젠슨 황, 오늘 홍대서 재계 총수 회동",
+    "summary": "[후보] 재료+거래대금 포착(중요도 7.5, 호재) · 일봉 상승추세.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 09:30 KST",
+    "published_at": "2026-06-05 09:45 KST",
     "news": [
       {
-        "title": "릴리의 GLP-2 베팅, 한미약품 파이프라인 재발견 [한국주식 원포인트...",
-        "url": "https://n.news.naver.com/mnews/article/009/0005689367",
-        "office": "매일경제",
-        "sentiment": "호재"
-      },
-      {
-        "title": "하루 3조원 ‘릴레이 잭팟’…K-바이오 질적 도약 입증",
-        "url": "https://n.news.naver.com/mnews/article/016/0002651986",
-        "office": "헤럴드경제",
-        "sentiment": "호재"
-      },
-      {
-        "title": "&quot;일라이릴리에 1조9000억원 기술이전&quot; 한미약품 목표가↑-한국투자證",
-        "url": "https://n.news.naver.com/mnews/article/014/0005530420",
+        "title": "'깐부' 이어 '삼소'…젠슨 황, 오늘 홍대서 재계 총수 회동",
+        "url": "https://n.news.naver.com/mnews/article/014/0005530929",
         "office": "파이낸셜뉴스",
         "sentiment": "호재"
       },
       {
-        "title": "한미약품·오스코텍 잇단 조 단위 계약…의장 나선 HLB도 강세 [바이오...",
-        "url": "https://n.news.naver.com/mnews/article/018/0006296929",
-        "office": "이데일리",
-        "sentiment": "호재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "한미약품, 릴리와 '깜짝' 기술이전 계약…\"추가 L/O 가능성\"",
-        "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4418177",
-        "office": "news",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 인과표현, 재료"
-      },
-      {
-        "title": "한미약품·오스코텍 잇단 조 단위 계약…의장 나선 HLB도 강세 [바이오맥...",
-        "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=02692886645478440",
-        "office": "edaily",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락"
-      },
-      {
-        "title": "비만·항암 신약 개발 경쟁 본격화… mRNA 관련주 한미약품 진원생명과...",
-        "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457735",
-        "office": "pinpointnews",
-        "sentiment": "호재",
-        "cause_score": 9,
-        "cause_reason": "제목 언급, 인과표현, 당일"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "한미약품, 릴리와 '깜짝' 기술이전 계약…\"추가 L/O 가능성\""
-  },
-  {
-    "post_id": "POST_20260605_486990",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "노타",
-    "signal_probability": "55%",
-    "position_type": "분석불가",
-    "day_change": -9.72,
-    "headline": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
-    "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 분석불가.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 09:30 KST",
-    "news": [
-      {
-        "title": "노타, 엔비디아 아태 파트너데이 ‘한국 유일’ 패널 참여…“피지컬...",
-        "url": "https://n.news.naver.com/mnews/article/018/0006295755",
+        "title": "자회사의 네이버클라우드향 공급 호재…M83 3일째 급등[특징주]",
+        "url": "https://n.news.naver.com/mnews/article/018/0006297954",
         "office": "이데일리",
         "sentiment": "호재"
       },
       {
-        "title": "노타, 영상관제 AI 현장 적용 확대…엔비디아와 협력",
-        "url": "https://n.news.naver.com/mnews/article/003/0013979735",
+        "title": "‘젠슨 황 데이’인데…LG·SK·네이버 등 수혜주 급락",
+        "url": "https://n.news.naver.com/mnews/article/032/0003450113",
+        "office": "경향신문",
+        "sentiment": "혼재"
+      },
+      {
+        "title": "젠슨황 수혜株 줄하락…두산로보틱스 15%↓NAVER 6%↓",
+        "url": "https://n.news.naver.com/mnews/article/003/0013988423",
         "office": "뉴시스",
-        "sentiment": "호재"
-      },
-      {
-        "title": "노타, 퀄컴 엣지 디바이스서 '피지컬 AI' 속도 7배 높였다",
-        "url": "https://n.news.naver.com/mnews/article/092/0002424676",
-        "office": "지디넷코리아",
-        "sentiment": "호재"
-      },
-      {
-        "title": "엔비디아, 피지컬AI 동맹에 노타 낙점",
-        "url": "https://n.news.naver.com/mnews/article/011/0004625067",
-        "office": "서울경제",
-        "sentiment": "호재"
+        "sentiment": "혼재"
       }
-    ],
-    "cause_news": [
-      {
-        "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
-        "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03070086645478440",
-        "office": "edaily",
-        "sentiment": "호재",
-        "cause_score": 15,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락"
-      },
-      {
-        "title": "노타, 3거래일만에 14% 급등…4만원선 회복 눈앞",
-        "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439220",
-        "office": "econonews",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]"
+    ]
   },
   {
     "post_id": "POST_20260605_018880",
@@ -132,11 +45,11 @@
     "target_stock": "한온시스템",
     "signal_probability": "70%",
     "position_type": "눌림목",
-    "day_change": -6.85,
+    "day_change": -7.16,
     "headline": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 눌림목.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 09:30 KST",
+    "published_at": "2026-06-05 09:45 KST",
     "news": [
       {
         "title": "[지배구조 리포트]한온시스템, 소액주주 늘었는데 '주주권 지표' 후퇴",
@@ -171,140 +84,81 @@
     "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
   },
   {
-    "post_id": "POST_20260605_377480",
+    "post_id": "POST_20260605_486990",
     "status": "PUBLISHED",
     "tier": "candidate",
-    "target_stock": "마음AI",
-    "signal_probability": "47%",
-    "position_type": "과다상승",
-    "day_change": 5.57,
-    "headline": "[특징주] 마음AI, UAE AI 사절단 투자처 협력 모색 방한에 상승…사업모...",
-    "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
+    "target_stock": "노타",
+    "signal_probability": "55%",
+    "position_type": "분석불가",
+    "day_change": -13.04,
+    "headline": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
+    "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 분석불가.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 09:30 KST",
+    "published_at": "2026-06-05 09:45 KST",
     "news": [
       {
-        "title": "두산밥캣, 마음AI와 협력해 건설장비 자율작업 기술 개발",
-        "url": "https://n.news.naver.com/mnews/article/629/0000504367",
-        "office": "더팩트",
+        "title": "노타, 엔비디아 아태 파트너데이 ‘한국 유일’ 패널 참여…“피지컬...",
+        "url": "https://n.news.naver.com/mnews/article/018/0006295755",
+        "office": "이데일리",
         "sentiment": "호재"
       },
       {
-        "title": "마음AI, 1분기 매출 감소·적자 확대…부진한 성적표",
-        "url": "https://n.news.naver.com/mnews/article/138/0002228262",
-        "office": "디지털데일리",
-        "sentiment": "혼재"
-      },
-      {
-        "title": "한국형 피지컬 AI 시동…LG전자 '월드모델'-KT '로봇모델' 개발한다",
-        "url": "https://n.news.naver.com/mnews/article/030/0003425773",
-        "office": "전자신문",
+        "title": "노타, 영상관제 AI 현장 적용 확대…엔비디아와 협력",
+        "url": "https://n.news.naver.com/mnews/article/003/0013979735",
+        "office": "뉴시스",
         "sentiment": "호재"
       },
       {
-        "title": "&quot;韓 피지컬 AI 1강 위해 데이터 공장 구축해야&quot;[NFF 2026]",
-        "url": "https://n.news.naver.com/mnews/article/421/0008932246",
-        "office": "뉴스1",
+        "title": "노타, 퀄컴 엣지 디바이스서 '피지컬 AI' 속도 7배 높였다",
+        "url": "https://n.news.naver.com/mnews/article/092/0002424676",
+        "office": "지디넷코리아",
+        "sentiment": "호재"
+      },
+      {
+        "title": "엔비디아, 피지컬AI 동맹에 노타 낙점",
+        "url": "https://n.news.naver.com/mnews/article/011/0004625067",
+        "office": "서울경제",
         "sentiment": "호재"
       }
     ],
     "cause_news": [
       {
-        "title": "[특징주] 마음AI, UAE AI 사절단 투자처 협력 모색 방한에 상승…사업모...",
-        "url": "https://www.cstimes.com/news/articleView.html?idxno=704750",
-        "office": "cstimes",
+        "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
+        "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03070086645478440",
+        "office": "edaily",
         "sentiment": "호재",
-        "cause_score": 7,
-        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-      },
-      {
-        "title": "[특징주] 마음AI, UAE 국부펀드·투자청 만나 AI 모델 소개한다…오일머...",
-        "url": "http://www.newsprime.co.kr/news/article.html?no=732670",
-        "office": "newsprime",
-        "sentiment": "호재",
-        "cause_score": 7,
-        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-      }
-    ],
-    "cause_confidence": "중간",
-    "cause_summary": "[특징주] 마음AI, UAE AI 사절단 투자처 협력 모색 방한에 상승…사업모..."
-  },
-  {
-    "post_id": "POST_20260605_066570",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "LG전자",
-    "signal_probability": "54%",
-    "position_type": "과다상승",
-    "day_change": -4.57,
-    "headline": "LG전자·네이버 파랗게 질렸는데…상한가 찍은 종목은?",
-    "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 09:30 KST",
-    "news": [
-      {
-        "title": "LG전자·네이버 파랗게 질렸는데…상한가 찍은 종목은?",
-        "url": "https://n.news.naver.com/mnews/article/374/0000514148",
-        "office": "SBS Biz",
-        "sentiment": "혼재"
-      },
-      {
-        "title": "젠슨 황 픽한 'LG전자'…엔비디아 차세대 핵심 파트너로 우뚝",
-        "url": "https://n.news.naver.com/mnews/article/417/0001146188",
-        "office": "동행미디어 시대",
-        "sentiment": "호재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "LG전자·네이버 파랗게 질렸는데…상한가 찍은 종목은?",
-        "url": "https://biz.sbs.co.kr/article_hub/20000314582?division=NAVER",
-        "office": "biz",
-        "sentiment": "악재",
-        "cause_score": 10,
-        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
+        "cause_score": 15,
+        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락"
       }
     ],
     "cause_confidence": "높음",
-    "cause_summary": "LG전자·네이버 파랗게 질렸는데…상한가 찍은 종목은?"
+    "cause_summary": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]"
   },
   {
-    "post_id": "POST_20260605_009150",
+    "post_id": "POST_20260605_069960",
     "status": "PUBLISHED",
     "tier": "candidate",
-    "target_stock": "삼성전기",
+    "target_stock": "현대백화점",
     "signal_probability": "46%",
     "position_type": "과다상승",
-    "day_change": -3.38,
-    "headline": "[특징주] 삼성전기, 장외서 9%대 '뚝'... 증권가 \"목표주가 210만원 상향...",
+    "day_change": 6.01,
+    "headline": "한화證 “현대백화점, 외국인 매출 성장 본격화…목표가 19만원”",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 09:30 KST",
+    "published_at": "2026-06-05 09:45 KST",
     "news": [
       {
-        "title": "“고점에 물렸는데 어떡하죠”…삼성전기 21%·LG이노텍 35% 급락",
-        "url": "https://n.news.naver.com/mnews/article/009/0005689613",
-        "office": "매일경제",
-        "sentiment": "혼재"
+        "title": "한화證 “현대백화점, 외국인 매출 성장 본격화…목표가 19만원”",
+        "url": "https://n.news.naver.com/mnews/article/366/0001169550",
+        "office": "조선비즈",
+        "sentiment": "호재"
       },
       {
-        "title": "빅테크 “선수금 줄테니, 반도체 기판 공장 증설을” 러브콜 쇄도",
-        "url": "https://n.news.naver.com/mnews/article/020/0003724590",
-        "office": "동아일보",
+        "title": "15% 불기둥 그린 신세계…백화점 3사 ‘훨훨’ [오늘, 이 종목]",
+        "url": "https://n.news.naver.com/mnews/article/024/0000106006",
+        "office": "매경이코노미",
         "sentiment": "호재"
       }
-    ],
-    "cause_news": [
-      {
-        "title": "[특징주] 삼성전기, 장외서 9%대 '뚝'... 증권가 \"목표주가 210만원 상향...",
-        "url": "https://www.ggilbo.com/news/articleView.html?idxno=1161975",
-        "office": "ggilbo",
-        "sentiment": "악재",
-        "cause_score": 8,
-        "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 악재, 당일"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "[특징주] 삼성전기, 장외서 9%대 '뚝'... 증권가 \"목표주가 210만원 상향..."
+    ]
   }
 ]
