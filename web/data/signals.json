@@ -1,17 +1,23 @@
 [
   {
-    "post_id": "POST_20260604_018880",
+    "post_id": "POST_20260605_018880",
     "status": "PUBLISHED",
     "tier": "signal",
     "target_stock": "한온시스템",
-    "signal_probability": "77%",
+    "signal_probability": "78%",
     "position_type": "눌림목",
-    "day_change": -3.6,
+    "day_change": 0.0,
     "headline": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
-    "summary": "[시그널] 일봉 눌림목 · 재료 호재(중요도 6.0). 일봉 국면을 함께 확인.",
+    "summary": "[시그널] 일봉 눌림목 · 재료 호재(중요도 6.5). 일봉 국면을 함께 확인.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 15:45 KST",
+    "published_at": "2026-06-05 09:00 KST",
     "news": [
+      {
+        "title": "[지배구조 리포트]한온시스템, 소액주주 늘었는데 '주주권 지표' 후퇴",
+        "url": "https://n.news.naver.com/mnews/article/293/0000085788",
+        "office": "블로터",
+        "sentiment": "혼재"
+      },
       {
         "title": "한온시스템, 장 초반 12%대 급등…한국타이어도 동반 상승",
         "url": "https://n.news.naver.com/mnews/article/015/0005291673",
@@ -39,257 +45,50 @@
     "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
   },
   {
-    "post_id": "POST_20260604_004170",
+    "post_id": "POST_20260605_035420",
     "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "신세계",
-    "signal_probability": "50%",
+    "tier": "signal",
+    "target_stock": "NAVER",
+    "signal_probability": "45%",
     "position_type": "과다상승",
-    "day_change": 15.82,
-    "headline": "[특징주] 신세계, 18%대 급등…백화점 업황 개선 기대감 '쑥'",
-    "summary": "[후보] 재료+거래대금 포착(중요도 8.0, 호재) · 일봉 과다상승.",
+    "day_change": 0.0,
+    "headline": "젠슨 황, 오늘 SK·LG·네이버 총수와 홍대서 '삼겹살' 회동",
+    "summary": "[시그널] 일봉 과다상승 · 재료 호재(중요도 4.5). 일봉 국면을 함께 확인.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 15:45 KST",
+    "published_at": "2026-06-05 09:00 KST",
     "news": [
       {
-        "title": "&quot;성과급 받아서 명품산다&quot; 신세계, 실적 개선에 '신고가' [핫종목]",
-        "url": "https://n.news.naver.com/mnews/article/421/0008985823",
-        "office": "뉴스1",
+        "title": "젠슨 황, 오늘 SK·LG·네이버 총수와 홍대서 '삼겹살' 회동",
+        "url": "https://n.news.naver.com/mnews/article/030/0003434583",
+        "office": "전자신문",
         "sentiment": "호재"
       },
       {
-        "title": "MZ 몰리는 압구정로데오로…신세계 자주, 패션 승부수 띄웠다",
-        "url": "https://n.news.naver.com/mnews/article/417/0001146135",
-        "office": "동행미디어 시대",
+        "title": "한국서 '형님' 찾는 젠슨 황…최태원·구광모·이해진 홍대서 본다",
+        "url": "https://n.news.naver.com/mnews/article/008/0005367480",
+        "office": "머니투데이",
         "sentiment": "호재"
       },
       {
-        "title": "‘부의 효과’ 기대에 백화점株 질주…신세계 16% 급등[줍줍리포트]",
-        "url": "https://n.news.naver.com/mnews/article/011/0004627670",
-        "office": "서울경제",
-        "sentiment": "호재"
-      },
-      {
-        "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
-        "url": "https://n.news.naver.com/mnews/article/003/0013986773",
-        "office": "뉴시스",
+        "title": "젠슨 황, 오늘 최태원·정의선·구광모·이해진과 '삼소회동'…7개월만...",
+        "url": "https://n.news.naver.com/mnews/article/448/0000617059",
+        "office": "TV조선",
         "sentiment": "호재"
       }
-    ],
-    "cause_news": [
-      {
-        "title": "[특징주] 신세계, 18%대 급등…백화점 업황 개선 기대감 '쑥'",
-        "url": "https://www.ajunews.com/view/20260604140418212",
-        "office": "ajunews",
-        "sentiment": "호재",
-        "cause_score": 15,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
-      },
-      {
-        "title": "‘부의 효과’ 기대에 백화점株 질주…신세계 16% 급등[줍줍리포트]",
-        "url": "https://www.sedaily.com/article/20051795?ref=naver",
-        "office": "sedaily",
-        "sentiment": "호재",
-        "cause_score": 15,
-        "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-      },
-      {
-        "title": "[특징주] 신세계, 자산가 소비 확대 기대에 17%대 급등…장중 67만1000원...",
-        "url": "https://www.tokenpost.kr/news/economy/366168",
-        "office": "tokenpost",
-        "sentiment": "호재",
-        "cause_score": 13,
-        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "[특징주] 신세계, 18%대 급등…백화점 업황 개선 기대감 '쑥'"
+    ]
   },
   {
-    "post_id": "POST_20260604_240810",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "원익IPS",
-    "signal_probability": "56%",
-    "position_type": "분석불가",
-    "day_change": 29.93,
-    "headline": "원익IPS 상한가·주성엔지니어링 주가 파죽지세…OLED 장비주에 돈 몰리...",
-    "summary": "[후보] 재료+거래대금 포착(중요도 7.5, 호재) · 일봉 분석불가.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 15:45 KST",
-    "news": [
-      {
-        "title": "[특징주] 반도체 장비株, '삼전·닉스 숨고르기' 속 급등(종합)",
-        "url": "https://n.news.naver.com/mnews/article/001/0016120239",
-        "office": "연합뉴스",
-        "sentiment": "호재"
-      },
-      {
-        "title": "주성엔 25만원 돌파·원익IPS 상한가…반도체 소부장주 폭등 [칩칩폭폭...",
-        "url": "https://n.news.naver.com/mnews/article/123/0002384115",
-        "office": "조세일보",
-        "sentiment": "호재"
-      },
-      {
-        "title": "반도체 ‘투 톱’ 쉬자 장비株 질주…유진테크·원익IPS 상한가 ‘눈앞...",
-        "url": "https://n.news.naver.com/mnews/article/011/0004627584",
-        "office": "서울경제",
-        "sentiment": "호재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "원익IPS 상한가·주성엔지니어링 주가 파죽지세…OLED 장비주에 돈 몰리...",
-        "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457578",
-        "office": "pinpointnews",
-        "sentiment": "호재",
-        "cause_score": 13,
-        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-      },
-      {
-        "title": "반도체 소부장 강세…유진테크·원익IPS '상한가'[특징주]",
-        "url": "https://www.newsway.co.kr/news/view?ud=2026060411170986586",
-        "office": "newsway",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "원익IPS 상한가·주성엔지니어링 주가 파죽지세…OLED 장비주에 돈 몰리..."
-  },
-  {
-    "post_id": "POST_20260604_042700",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "한미반도체",
-    "signal_probability": "56%",
-    "position_type": "분석불가",
-    "day_change": 10.34,
-    "headline": "파두·한미반도체·피에스케이 급등, SK하이닉스·삼성전자는 약세…시...",
-    "summary": "[후보] 재료+거래대금 포착(중요도 7.5, 호재) · 일봉 분석불가.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 15:45 KST",
-    "news": [
-      {
-        "title": "[컴퓨텍스 2026] 한미반도체 첫 참가… 글로벌 AI 반도체 공급망 정조...",
-        "url": "https://n.news.naver.com/mnews/article/138/0002229871",
-        "office": "디지털데일리",
-        "sentiment": "호재"
-      },
-      {
-        "title": "HBM4 투자 2분기 본격화… 한미반도체, 반등 기대",
-        "url": "https://n.news.naver.com/mnews/article/014/0005530112",
-        "office": "파이낸셜뉴스",
-        "sentiment": "호재"
-      },
-      {
-        "title": "HBM부터 피지컬 AI까지… 컴퓨텍스 2026서 존재감 커진 한국 기업",
-        "url": "https://n.news.naver.com/mnews/article/366/0001169095",
-        "office": "조선비즈",
-        "sentiment": "호재"
-      },
-      {
-        "title": "[단독] 곽동신 한미반도체 회장 “머스크 테라팹 장비 공급 노리는 중...",
-        "url": "https://n.news.naver.com/mnews/article/016/0002651390",
-        "office": "헤럴드경제",
-        "sentiment": "호재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "파두·한미반도체·피에스케이 급등, SK하이닉스·삼성전자는 약세…시...",
-        "url": "https://www.cbci.co.kr/news/articleView.html?idxno=579508",
-        "office": "cbci",
-        "sentiment": "호재",
-        "cause_score": 13,
-        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-      },
-      {
-        "title": "한미반도체까지 뛰었다…전자파 차폐주 동반 함박웃음",
-        "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457545",
-        "office": "pinpointnews",
-        "sentiment": "호재",
-        "cause_score": 7,
-        "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-      },
-      {
-        "title": "HBM주 엇갈린 흐름…삼성전자·SK하이닉스 약세, 한미반도체·이오테크...",
-        "url": "https://www.cbci.co.kr/news/articleView.html?idxno=579498",
-        "office": "cbci",
-        "sentiment": "호재",
-        "cause_score": 7,
-        "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "파두·한미반도체·피에스케이 급등, SK하이닉스·삼성전자는 약세…시..."
-  },
-  {
-    "post_id": "POST_20260604_077360",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "덕산하이메탈",
-    "signal_probability": "70%",
-    "position_type": "눌림목",
-    "day_change": 29.96,
-    "headline": "반도체 재료·부품株 전방위 랠리…덕산하이메탈 17% 폭등",
-    "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 눌림목.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 15:45 KST",
-    "news": [
-      {
-        "title": "중복상장 모회사 주주 … 자회사 상장안 첫 승인",
-        "url": "https://n.news.naver.com/mnews/article/009/0005686992",
-        "office": "매일경제",
-        "sentiment": "호재"
-      },
-      {
-        "title": "檢, SK하이닉스 납품사 압수수색‥소재 담합 의혹",
-        "url": "https://n.news.naver.com/mnews/article/011/0004625773",
-        "office": "서울경제",
-        "sentiment": "호재"
-      },
-      {
-        "title": "&quot;본격적인 실적 개선 국면&quot;…덕산하이메탈 17%↑[특징주]",
-        "url": "https://n.news.naver.com/mnews/article/018/0006286589",
-        "office": "이데일리",
-        "sentiment": "호재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "반도체 재료·부품株 전방위 랠리…덕산하이메탈 17% 폭등",
-        "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457445",
-        "office": "pinpointnews",
-        "sentiment": "호재",
-        "cause_score": 5,
-        "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
-      },
-      {
-        "title": "\"본격적인 실적 개선 국면\"…덕산하이메탈 17%↑[특징주]",
-        "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=02922486645451216",
-        "office": "edaily",
-        "sentiment": "호재",
-        "cause_score": 5,
-        "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 오래됨"
-      }
-    ],
-    "cause_confidence": "중간",
-    "cause_summary": "반도체 재료·부품株 전방위 랠리…덕산하이메탈 17% 폭등"
-  },
-  {
-    "post_id": "POST_20260604_486990",
+    "post_id": "POST_20260605_486990",
     "status": "PUBLISHED",
     "tier": "candidate",
     "target_stock": "노타",
     "signal_probability": "48%",
     "position_type": "과다상승",
-    "day_change": 12.03,
+    "day_change": 0.0,
     "headline": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 15:45 KST",
+    "published_at": "2026-06-05 09:00 KST",
     "news": [
       {
         "title": "노타, 엔비디아 아태 파트너데이 ‘한국 유일’ 패널 참여…“피지컬...",
@@ -334,160 +133,105 @@
         "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
       },
       {
-        "title": "[특징주] 노타, 퀄컴 AI 디바이스 최적화 성공에 19%대 강세",
-        "url": "https://www.ajunews.com/view/20260529143910133",
-        "office": "ajunews",
+        "title": "엔비디아와 영상 AI 에이전트 시장 공략…노타 5%↑[특징주]",
+        "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=02673206645477456",
+        "office": "edaily",
         "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+        "cause_score": 9,
+        "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
       }
     ],
     "cause_confidence": "높음",
     "cause_summary": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]"
   },
   {
-    "post_id": "POST_20260604_069960",
+    "post_id": "POST_20260605_066570",
     "status": "PUBLISHED",
     "tier": "candidate",
-    "target_stock": "현대백화점",
-    "signal_probability": "47%",
+    "target_stock": "LG전자",
+    "signal_probability": "56%",
     "position_type": "과다상승",
-    "day_change": 14.78,
-    "headline": "\"지구 살리는 백화점\"...현대백화점, 유통가 ESG 주도하며 '초록빛 행보...",
-    "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
+    "day_change": 0.0,
+    "headline": "LG전자·네이버 파랗게 질렸는데…상한가 찍은 종목은?",
+    "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 15:45 KST",
+    "published_at": "2026-06-05 09:00 KST",
     "news": [
       {
-        "title": "커피도 콘텐츠로…현대백화점, 자체 카페 확대",
-        "url": "https://n.news.naver.com/mnews/article/031/0001032972",
-        "office": "아이뉴스24",
-        "sentiment": "호재"
-      },
-      {
-        "title": "신세계, 장중 15% 급등 '신고가'…백화점株 동반 강세",
-        "url": "https://n.news.naver.com/mnews/article/003/0013986773",
-        "office": "뉴시스",
-        "sentiment": "호재"
-      },
-      {
-        "title": "'불장'에 지갑도 열리나…백화점주 동반 강세",
-        "url": "https://n.news.naver.com/mnews/article/374/0000513953",
+        "title": "LG전자·네이버 파랗게 질렸는데…상한가 찍은 종목은?",
+        "url": "https://n.news.naver.com/mnews/article/374/0000514148",
         "office": "SBS Biz",
-        "sentiment": "악재"
+        "sentiment": "혼재"
       },
       {
-        "title": "&quot;성과급 받아 명품관으로&quot;…삼전닉스 효과에 백화점주 '들썩' [종목+]",
-        "url": "https://n.news.naver.com/mnews/article/015/0005294774",
-        "office": "한국경제",
+        "title": "젠슨 황 픽한 'LG전자'…엔비디아 차세대 핵심 파트너로 우뚝",
+        "url": "https://n.news.naver.com/mnews/article/417/0001146188",
+        "office": "동행미디어 시대",
         "sentiment": "호재"
+      },
+      {
+        "title": "외인들 “잘 먹고 갑니다” 차익 실현에…LG전자 22% 급락",
+        "url": "https://n.news.naver.com/mnews/article/011/0004627843",
+        "office": "서울경제",
+        "sentiment": "혼재"
       }
     ],
     "cause_news": [
       {
-        "title": "\"지구 살리는 백화점\"...현대백화점, 유통가 ESG 주도하며 '초록빛 행보...",
-        "url": "https://www.techm.kr/news/articleView.html?idxno=152346",
-        "office": "techm",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 인과표현, 당일"
+        "title": "LG전자·네이버 파랗게 질렸는데…상한가 찍은 종목은?",
+        "url": "https://biz.sbs.co.kr/article_hub/20000314582?division=NAVER",
+        "office": "biz",
+        "sentiment": "악재",
+        "cause_score": 10,
+        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
       }
     ],
     "cause_confidence": "높음",
-    "cause_summary": "\"지구 살리는 백화점\"...현대백화점, 유통가 ESG 주도하며 '초록빛 행보..."
+    "cause_summary": "LG전자·네이버 파랗게 질렸는데…상한가 찍은 종목은?"
   },
   {
-    "post_id": "POST_20260604_089970",
+    "post_id": "POST_20260605_009150",
     "status": "PUBLISHED",
     "tier": "candidate",
-    "target_stock": "브이엠",
-    "signal_probability": "47%",
+    "target_stock": "삼성전기",
+    "signal_probability": "46%",
     "position_type": "과다상승",
-    "day_change": 28.23,
-    "headline": "브이엠 주가, 6월 4일 장중 69,100원 27.49% 상승 상한가 70,400원 도달",
-    "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
+    "day_change": 0.0,
+    "headline": "[특징주] 삼성전기, 장외서 9%대 '뚝'... 증권가 \"목표주가 210만원 상향...",
+    "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 15:45 KST",
+    "published_at": "2026-06-05 09:00 KST",
     "news": [
       {
-        "title": "브이엠, 반도체 고객사 증설 기대감…신고가 경신",
-        "url": "https://n.news.naver.com/mnews/article/015/0005290112",
-        "office": "한국경제",
+        "title": "“고점에 물렸는데 어떡하죠”…삼성전기 21%·LG이노텍 35% 급락",
+        "url": "https://n.news.naver.com/mnews/article/009/0005689613",
+        "office": "매일경제",
+        "sentiment": "혼재"
+      },
+      {
+        "title": "빅테크 “선수금 줄테니, 반도체 기판 공장 증설을” 러브콜 쇄도",
+        "url": "https://n.news.naver.com/mnews/article/020/0003724590",
+        "office": "동아일보",
         "sentiment": "호재"
       },
       {
-        "title": "&quot;브이엠, 올해 역대급 실적 전망…목표가↑&quot;-하나",
-        "url": "https://n.news.naver.com/mnews/article/015/0005275582",
-        "office": "한국경제",
+        "title": "LG이노텍·삼성전기, 베트남 반도체 기판 증설 투자 속도",
+        "url": "https://n.news.naver.com/mnews/article/014/0005530713",
+        "office": "파이낸셜뉴스",
         "sentiment": "호재"
       }
     ],
     "cause_news": [
       {
-        "title": "브이엠 주가, 6월 4일 장중 69,100원 27.49% 상승 상한가 70,400원 도달",
-        "url": "https://www.joongangenews.com/news/articleView.html?idxno=523671",
-        "office": "joongangenews",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        "title": "[특징주] 삼성전기, 장외서 9%대 '뚝'... 증권가 \"목표주가 210만원 상향...",
+        "url": "https://www.ggilbo.com/news/articleView.html?idxno=1161975",
+        "office": "ggilbo",
+        "sentiment": "악재",
+        "cause_score": 8,
+        "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 악재, 당일"
       }
     ],
     "cause_confidence": "높음",
-    "cause_summary": "브이엠 주가, 6월 4일 장중 69,100원 27.49% 상승 상한가 70,400원 도달"
-  },
-  {
-    "post_id": "POST_20260604_000810",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "삼성화재",
-    "signal_probability": "47%",
-    "position_type": "과다상승",
-    "day_change": 13.88,
-    "headline": "삼성화재·삼성생명, 장중 주가 '희비'…주주환원 여력 온도차[특징주]",
-    "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-04 15:45 KST",
-    "news": [
-      {
-        "title": "금리인상이 호재?…13% 급등에 신고가 ‘삼성화재’[오늘, 이 종목]",
-        "url": "https://n.news.naver.com/mnews/article/024/0000105995",
-        "office": "매경이코노미",
-        "sentiment": "호재"
-      },
-      {
-        "title": "삼성화재, 신고가 경신… 금리 인상 수혜주 부각",
-        "url": "https://n.news.naver.com/mnews/article/008/0005366960",
-        "office": "머니투데이",
-        "sentiment": "호재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "삼성화재·삼성생명, 장중 주가 '희비'…주주환원 여력 온도차[특징주]",
-        "url": "https://www.newsway.co.kr/news/view?ud=2026060414452943290",
-        "office": "newsway",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-      },
-      {
-        "title": "삼성화재, 신고가 경신… 금리 인상 수혜주 부각",
-        "url": "https://www.mt.co.kr/stock/2026/06/04/2026060409071429453",
-        "office": "mt",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 인과표현, 당일"
-      },
-      {
-        "title": "금리인상이 호재?…13% 급등에 신고가 ‘삼성화재’[오늘, 이 종목]",
-        "url": "https://www.mk.co.kr/article/12065667",
-        "office": "mk",
-        "sentiment": "호재",
-        "cause_score": 9,
-        "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "삼성화재·삼성생명, 장중 주가 '희비'…주주환원 여력 온도차[특징주]"
+    "cause_summary": "[특징주] 삼성전기, 장외서 9%대 '뚝'... 증권가 \"목표주가 210만원 상향..."
   }
 ]
