@@ -1,67 +1,16 @@
 [
   {
-    "post_id": "POST_20260605_001040",
-    "status": "PUBLISHED",
-    "tier": "signal",
-    "target_stock": "CJ",
-    "signal_probability": "52%",
-    "position_type": "분석불가",
-    "day_change": 5.14,
-    "headline": "CJ ENM, 장중 2%대 약세…티빙 개인정보 유출 여파[특징주]",
-    "summary": "[시그널] 일봉 분석불가 · 재료 호재(중요도 5.0). 일봉 국면을 함께 확인.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 14:45 KST",
-    "news": [
-      {
-        "title": "CJ ONE, 3200만 ‘생활 플랫폼’ 진화",
-        "url": "https://n.news.naver.com/mnews/article/016/0002652536",
-        "office": "헤럴드경제",
-        "sentiment": "호재"
-      },
-      {
-        "title": "“또 고개숙인 최주희” 티빙 개인정보 유출로 CJ ENM 발목",
-        "url": "https://n.news.naver.com/mnews/article/050/0000106921",
-        "office": "한경비즈니스",
-        "sentiment": "혼재"
-      },
-      {
-        "title": "티빙 개인정보 사고…‘안에선 유출·밖에선 해킹’ CJ 보안 또 ‘도마...",
-        "url": "https://n.news.naver.com/mnews/article/082/0001383630",
-        "office": "부산일보",
-        "sentiment": "호재"
-      },
-      {
-        "title": "CNN도 놀란 역대급 인파…&quot;새벽부터 줄섰다&quot;",
-        "url": "https://n.news.naver.com/mnews/article/374/0000513505",
-        "office": "SBS Biz",
-        "sentiment": "호재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "CJ ENM, 장중 2%대 약세…티빙 개인정보 유출 여파[특징주]",
-        "url": "https://www.newsway.co.kr/news/view?ud=2026060414041020703",
-        "office": "newsway",
-        "sentiment": "악재",
-        "cause_score": 6,
-        "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 악재"
-      }
-    ],
-    "cause_confidence": "중간",
-    "cause_summary": "CJ ENM, 장중 2%대 약세…티빙 개인정보 유출 여파[특징주]"
-  },
-  {
     "post_id": "POST_20260605_018880",
     "status": "PUBLISHED",
     "tier": "signal",
     "target_stock": "한온시스템",
     "signal_probability": "70%",
     "position_type": "눌림목",
-    "day_change": -1.56,
+    "day_change": -2.39,
     "headline": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
     "summary": "[시그널] 일봉 눌림목 · 재료 호재(중요도 6.5). 일봉 국면을 함께 확인.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 14:45 KST",
+    "published_at": "2026-06-05 15:00 KST",
     "news": [
       {
         "title": "[지배구조 리포트]한온시스템, 소액주주 늘었는데 '주주권 지표' 후퇴",
@@ -96,17 +45,68 @@
     "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
   },
   {
+    "post_id": "POST_20260605_066570",
+    "status": "PUBLISHED",
+    "tier": "signal",
+    "target_stock": "LG전자",
+    "signal_probability": "56%",
+    "position_type": "과다상승",
+    "day_change": -6.1,
+    "headline": "젠슨 황 방한 기대감에 급등하던 두산로보틱스·LG전자 '파란불' 켜졌다",
+    "summary": "[시그널] 일봉 과다상승 · 재료 호재(중요도 7.0). 일봉 국면을 함께 확인.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-05 15:00 KST",
+    "news": [
+      {
+        "title": "&quot;최대 420만원 혜택&quot;...LG전자, '국가대표가전 국민 응원 대축제'",
+        "url": "https://n.news.naver.com/mnews/article/014/0005531083",
+        "office": "파이낸셜뉴스",
+        "sentiment": "호재"
+      },
+      {
+        "title": "나인테크, 차세대 8.6세대 OLED디스플레이 장비 254억 수주",
+        "url": "https://n.news.naver.com/mnews/article/081/0003649979",
+        "office": "서울신문",
+        "sentiment": "호재"
+      },
+      {
+        "title": "SK실트론 1차 협력사인 반도체 소재 장비업체 M&amp;A 매물로",
+        "url": "https://n.news.naver.com/mnews/article/015/0005295379",
+        "office": "한국경제",
+        "sentiment": "호재"
+      },
+      {
+        "title": "경찰, 'LG전자 흉기난동' 협력직원 구속 송치…살인미수 혐의",
+        "url": "https://n.news.naver.com/mnews/article/003/0013989106",
+        "office": "뉴시스",
+        "sentiment": "호재"
+      }
+    ],
+    "cause_news": [
+      {
+        "title": "젠슨 황 방한 기대감에 급등하던 두산로보틱스·LG전자 '파란불' 켜졌다",
+        "url": "https://www.gukjenews.com/news/articleView.html?idxno=3601053",
+        "office": "gukjenews",
+        "sentiment": "호재",
+        "cause_score": 15,
+        "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+      }
+    ],
+    "cause_confidence": "높음",
+    "cause_summary": "젠슨 황 방한 기대감에 급등하던 두산로보틱스·LG전자 '파란불' 켜졌다"
+  },
+  {
     "post_id": "POST_20260605_271830",
     "status": "PUBLISHED",
     "tier": "candidate",
     "target_stock": "팸텍",
     "signal_probability": "53%",
     "position_type": "과다상승",
-    "day_change": 14.19,
+    "day_change": 11.02,
     "headline": "팸텍, 4거래일 연속 상승에 11% 급등…산업용 로봇 기업 인수",
     "summary": "[후보] 재료+거래대금 포착(중요도 10.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 14:45 KST",
+    "published_at": "2026-06-05 15:00 KST",
     "news": [
       {
         "title": "'上上上' 팸텍…매도 사이드카 발동에도 4거래일 연속 '급등'",
@@ -173,7 +173,7 @@
     "headline": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.5, 호재) · 일봉 분석불가.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 14:45 KST",
+    "published_at": "2026-06-05 15:00 KST",
     "news": [
       {
         "title": "노타, 엔비디아 아태 파트너데이 ‘한국 유일’ 패널 참여…“피지컬...",
@@ -224,7 +224,7 @@
     "headline": "[특징주] 한켐·코칩·키스트론, 삼성전기 FC-BGA 5조 투자 전망에 ↑......",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 14:45 KST",
+    "published_at": "2026-06-05 15:00 KST",
     "news": [
       {
         "title": "한켐, 이상조 대표이사 '화학경영자상' 수상",
@@ -275,68 +275,17 @@
     "cause_summary": "[특징주] 한켐·코칩·키스트론, 삼성전기 FC-BGA 5조 투자 전망에 ↑......"
   },
   {
-    "post_id": "POST_20260605_066570",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "LG전자",
-    "signal_probability": "46%",
-    "position_type": "과다상승",
-    "day_change": -4.73,
-    "headline": "젠슨 황 방한 기대감에 급등하던 두산로보틱스·LG전자 '파란불' 켜졌다",
-    "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 호재) · 일봉 과다상승.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 14:45 KST",
-    "news": [
-      {
-        "title": "LG전자, '국가대표가전 국민 응원 대축제'",
-        "url": "https://n.news.naver.com/mnews/article/030/0003434768",
-        "office": "전자신문",
-        "sentiment": "호재"
-      },
-      {
-        "title": "SK실트론 1차 협력사인 반도체 소재 장비업체 M&amp;A 매물로",
-        "url": "https://n.news.naver.com/mnews/article/015/0005295379",
-        "office": "한국경제",
-        "sentiment": "호재"
-      },
-      {
-        "title": "경찰, 'LG전자 흉기난동' 협력직원 구속 송치…살인미수 혐의",
-        "url": "https://n.news.naver.com/mnews/article/003/0013989106",
-        "office": "뉴시스",
-        "sentiment": "호재"
-      },
-      {
-        "title": "변동장 속 투자 고수들의 선택은…역시 삼성전자·SK하이닉스·LG전자",
-        "url": "https://n.news.naver.com/mnews/article/003/0013989065",
-        "office": "뉴시스",
-        "sentiment": "호재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "젠슨 황 방한 기대감에 급등하던 두산로보틱스·LG전자 '파란불' 켜졌다",
-        "url": "https://www.gukjenews.com/news/articleView.html?idxno=3601053",
-        "office": "gukjenews",
-        "sentiment": "호재",
-        "cause_score": 15,
-        "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "젠슨 황 방한 기대감에 급등하던 두산로보틱스·LG전자 '파란불' 켜졌다"
-  },
-  {
     "post_id": "POST_20260605_388790",
     "status": "PUBLISHED",
     "tier": "candidate",
     "target_stock": "라이콤",
     "signal_probability": "46%",
     "position_type": "과다상승",
-    "day_change": 25.25,
+    "day_change": 25.46,
     "headline": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-05 14:45 KST",
+    "published_at": "2026-06-05 15:00 KST",
     "news": [
       {
         "title": "라이콤, AI 데이터센터·방산 수혜 기대감에 19%↑[특징주]",
