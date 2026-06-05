@@ -1,90 +1,54 @@
 {
-  "as_of": "2026-06-05 09:52 KST",
+  "as_of": "2026-06-05 10:07 KST",
   "intraday_rank": [
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "76%",
-      "entry": 247000.0,
-      "target": 259350,
-      "stop": 239590,
+      "tomorrow_up_prob": "77%",
+      "entry": 246000.0,
+      "target": 258300,
+      "stop": 238620,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI59.6 강세"
+        "RSI59.2 강세"
       ],
       "risk": "약한 마감",
-      "day_change": -6.92,
+      "day_change": -7.85,
       "related_news": [
         {
-          "title": "HBM·로봇 다 품는다…젠슨 황, 韓 총수들과 릴레이 '삼소 회동' 눈길",
-          "url": "https://n.news.naver.com/mnews/article/586/0000130789",
-          "office": "시사저널",
-          "sentiment": "호재"
-        },
-        {
-          "title": "'깐부' 이어 '삼소'…젠슨 황, 오늘 홍대서 재계 총수 회동",
-          "url": "https://n.news.naver.com/mnews/article/014/0005530929",
-          "office": "파이낸셜뉴스",
-          "sentiment": "호재"
+          "title": "젠슨 황 만나는 날…SK·LG·현대차·네이버 줄줄이 급락[핫종목]",
+          "url": "https://n.news.naver.com/mnews/article/421/0008986912",
+          "office": "뉴스1",
+          "sentiment": "혼재"
         },
         {
           "title": "자회사의 네이버클라우드향 공급 호재…M83 3일째 급등[특징주]",
           "url": "https://n.news.naver.com/mnews/article/018/0006297954",
           "office": "이데일리",
           "sentiment": "호재"
+        },
+        {
+          "title": "‘젠슨 황 데이’인데…LG·네이버 등 수혜주 급락",
+          "url": "https://n.news.naver.com/mnews/article/032/0003450113",
+          "office": "경향신문",
+          "sentiment": "혼재"
         }
       ]
     },
     {
-      "ticker": "한올바이오파마",
-      "code": "009420",
-      "tomorrow_up_prob": "72%",
-      "entry": 58600.0,
-      "target": 61530,
-      "stop": 56842,
-      "confidence": "상",
-      "reasons": [
-        "MACD강세",
-        "RSI56.7 강세",
-        "일목 구름위"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[27일 특징주] 한올바이오파마, 류마티스 관절염 임상 기대감에 '상한가...",
-          "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=842051",
-          "office": "newsworks",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "[특징주] 한올바이오파마, 난치성 류마티스 임상 소식에 18%↑",
-          "url": "http://www.newsdream.kr/news/articleView.html?idxno=112303",
-          "office": "newsdream",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[27일 특징주] 한올바이오파마, 류마티스 관절염 임상 기대감에 '상한가..."
-    },
-    {
       "ticker": "신한지주",
       "code": "055550",
-      "tomorrow_up_prob": "69%",
-      "entry": 106200.0,
-      "target": 111510,
-      "stop": 103014,
-      "confidence": "중",
+      "tomorrow_up_prob": "70%",
+      "entry": 105500.0,
+      "target": 110775,
+      "stop": 102335,
+      "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI68.7 강세"
+        "RSI67.9 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -104,50 +68,34 @@
           "sentiment": "호재",
           "cause_score": 9,
           "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] 홍콩ELS 과징금 축소 기대...신한지주 6%대↑",
+          "url": "http://www.newsian.co.kr/news/articleView.html?idxno=90555",
+          "office": "newsian",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
       "cause_summary": "ELS 과징금 부담 던 금융지주株 강세…신한지주 6%↑[이런국장 저런주식..."
     },
     {
-      "ticker": "현대백화점",
-      "code": "069960",
-      "tomorrow_up_prob": "66%",
-      "entry": 146400.0,
-      "target": 153720,
-      "stop": 142008,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "Stoch 과매수",
-      "day_change": 6.01,
-      "related_news": [
-        {
-          "title": "한화證 “현대백화점, 외국인 매출 성장 본격화…목표가 19만원”",
-          "url": "https://n.news.naver.com/mnews/article/366/0001169550",
-          "office": "조선비즈",
-          "sentiment": "호재"
-        }
-      ]
-    },
-    {
       "ticker": "노타",
       "code": "486990",
-      "tomorrow_up_prob": "63%",
-      "entry": 33400.0,
-      "target": 35070,
-      "stop": 32398,
+      "tomorrow_up_prob": "64%",
+      "entry": 33700.0,
+      "target": 35385,
+      "stop": 32689,
       "confidence": "중",
       "reasons": [
         "MACD강세",
-        "RSI50.2 강세",
+        "RSI50.6 강세",
         "호재"
       ],
       "risk": "약한 마감",
-      "day_change": -13.04,
+      "day_change": -14.07,
       "cause_news": [
         {
           "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
@@ -164,18 +112,18 @@
     {
       "ticker": "한온시스템",
       "code": "018880",
-      "tomorrow_up_prob": "57%",
-      "entry": 4480.0,
-      "target": 4704,
-      "stop": 4346,
+      "tomorrow_up_prob": "58%",
+      "entry": 4470.0,
+      "target": 4694,
+      "stop": 4336,
       "confidence": "중",
       "reasons": [
         "정배열",
         "호재",
-        "장중 4회 지속"
+        "장중 5회 지속"
       ],
       "risk": "약한 마감",
-      "day_change": -7.16,
+      "day_change": -6.74,
       "cause_news": [
         {
           "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
@@ -190,45 +138,17 @@
       "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
     },
     {
-      "ticker": "SK증권",
-      "code": "001510",
-      "tomorrow_up_prob": "57%",
-      "entry": 3545.0,
-      "target": 3722,
-      "stop": 3439,
-      "confidence": "중",
-      "reasons": [
-        "거래량2.11배",
-        "호재",
-        "장중 3회 지속"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "SK증권 주가, 급등세... 왜?",
-          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1161998",
-          "office": "ggilbo",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "SK증권 주가, 급등세... 왜?"
-    },
-    {
       "ticker": "동양고속",
       "code": "084670",
-      "tomorrow_up_prob": "54%",
-      "entry": 45800.0,
-      "target": 48090,
-      "stop": 44426,
-      "confidence": "하",
+      "tomorrow_up_prob": "55%",
+      "entry": 46950.0,
+      "target": 49298,
+      "stop": 45542,
+      "confidence": "중",
       "reasons": [
-        "RSI54.7 강세",
+        "RSI55.9 강세",
         "호재",
-        "장중 4회 지속"
+        "장중 5회 지속"
       ],
       "risk": "약한 마감",
       "day_change": null,
@@ -252,93 +172,129 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "[특징주] 동양고속·천일고속, 서울고속버스터미널 재개발 기대감에 강..."
+    },
+    {
+      "ticker": "SK증권",
+      "code": "001510",
+      "tomorrow_up_prob": "54%",
+      "entry": 3380.0,
+      "target": 3549,
+      "stop": 3279,
+      "confidence": "하",
+      "reasons": [
+        "거래량2.45배",
+        "호재",
+        "장중 4회 지속"
+      ],
+      "risk": "약한 마감",
+      "day_change": 11.87,
+      "cause_news": [
+        {
+          "title": "SK증권 주가, 급등세... 왜?",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1161998",
+          "office": "ggilbo",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "SK증권 주가, 급등세... 왜?"
+    },
+    {
+      "ticker": "미래에셋생명",
+      "code": "085620",
+      "tomorrow_up_prob": "54%",
+      "entry": 23950.0,
+      "target": 25148,
+      "stop": 23232,
+      "confidence": "하",
+      "reasons": [
+        "강세마감(0.94)",
+        "MACD강세",
+        "거래량7.89배"
+      ],
+      "risk": "RSI81.8 과매수, Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "미래에셋생명 주가, 급등세... 무슨 회사길래?",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1161989",
+          "office": "ggilbo",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] 미래에셋생명, 자사주 소각·밸류업 기대에 12%대 강세",
+          "url": "https://www.tokenpost.kr/news/economy/365332",
+          "office": "tokenpost",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        },
+        {
+          "title": "[특징주] 미래에셋생명, 장 초반 12% 강세",
+          "url": "https://www.etoday.co.kr/news/view/2589900",
+          "office": "etoday",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "미래에셋생명 주가, 급등세... 무슨 회사길래?"
     }
   ],
   "closing_bet": [
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "76%",
-      "entry": 247000.0,
-      "target": 259350,
-      "stop": 239590,
+      "tomorrow_up_prob": "77%",
+      "entry": 246000.0,
+      "target": 258300,
+      "stop": 238620,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI59.6 강세"
+        "RSI59.2 강세"
       ],
       "risk": "약한 마감",
-      "day_change": -6.92,
+      "day_change": -7.85,
       "related_news": [
         {
-          "title": "HBM·로봇 다 품는다…젠슨 황, 韓 총수들과 릴레이 '삼소 회동' 눈길",
-          "url": "https://n.news.naver.com/mnews/article/586/0000130789",
-          "office": "시사저널",
-          "sentiment": "호재"
-        },
-        {
-          "title": "'깐부' 이어 '삼소'…젠슨 황, 오늘 홍대서 재계 총수 회동",
-          "url": "https://n.news.naver.com/mnews/article/014/0005530929",
-          "office": "파이낸셜뉴스",
-          "sentiment": "호재"
+          "title": "젠슨 황 만나는 날…SK·LG·현대차·네이버 줄줄이 급락[핫종목]",
+          "url": "https://n.news.naver.com/mnews/article/421/0008986912",
+          "office": "뉴스1",
+          "sentiment": "혼재"
         },
         {
           "title": "자회사의 네이버클라우드향 공급 호재…M83 3일째 급등[특징주]",
           "url": "https://n.news.naver.com/mnews/article/018/0006297954",
           "office": "이데일리",
           "sentiment": "호재"
+        },
+        {
+          "title": "‘젠슨 황 데이’인데…LG·네이버 등 수혜주 급락",
+          "url": "https://n.news.naver.com/mnews/article/032/0003450113",
+          "office": "경향신문",
+          "sentiment": "혼재"
         }
       ]
     },
     {
-      "ticker": "한올바이오파마",
-      "code": "009420",
-      "tomorrow_up_prob": "72%",
-      "entry": 58600.0,
-      "target": 61530,
-      "stop": 56842,
-      "confidence": "상",
-      "reasons": [
-        "MACD강세",
-        "RSI56.7 강세",
-        "일목 구름위"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[27일 특징주] 한올바이오파마, 류마티스 관절염 임상 기대감에 '상한가...",
-          "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=842051",
-          "office": "newsworks",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "[특징주] 한올바이오파마, 난치성 류마티스 임상 소식에 18%↑",
-          "url": "http://www.newsdream.kr/news/articleView.html?idxno=112303",
-          "office": "newsdream",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[27일 특징주] 한올바이오파마, 류마티스 관절염 임상 기대감에 '상한가..."
-    },
-    {
       "ticker": "신한지주",
       "code": "055550",
-      "tomorrow_up_prob": "69%",
-      "entry": 106200.0,
-      "target": 111510,
-      "stop": 103014,
-      "confidence": "중",
+      "tomorrow_up_prob": "70%",
+      "entry": 105500.0,
+      "target": 110775,
+      "stop": 102335,
+      "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI68.7 강세"
+        "RSI67.9 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -358,50 +314,34 @@
           "sentiment": "호재",
           "cause_score": 9,
           "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] 홍콩ELS 과징금 축소 기대...신한지주 6%대↑",
+          "url": "http://www.newsian.co.kr/news/articleView.html?idxno=90555",
+          "office": "newsian",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
       "cause_summary": "ELS 과징금 부담 던 금융지주株 강세…신한지주 6%↑[이런국장 저런주식..."
     },
     {
-      "ticker": "현대백화점",
-      "code": "069960",
-      "tomorrow_up_prob": "66%",
-      "entry": 146400.0,
-      "target": 153720,
-      "stop": 142008,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "Stoch 과매수",
-      "day_change": 6.01,
-      "related_news": [
-        {
-          "title": "한화證 “현대백화점, 외국인 매출 성장 본격화…목표가 19만원”",
-          "url": "https://n.news.naver.com/mnews/article/366/0001169550",
-          "office": "조선비즈",
-          "sentiment": "호재"
-        }
-      ]
-    },
-    {
       "ticker": "노타",
       "code": "486990",
-      "tomorrow_up_prob": "63%",
-      "entry": 33400.0,
-      "target": 35070,
-      "stop": 32398,
+      "tomorrow_up_prob": "64%",
+      "entry": 33700.0,
+      "target": 35385,
+      "stop": 32689,
       "confidence": "중",
       "reasons": [
         "MACD강세",
-        "RSI50.2 강세",
+        "RSI50.6 강세",
         "호재"
       ],
       "risk": "약한 마감",
-      "day_change": -13.04,
+      "day_change": -14.07,
       "cause_news": [
         {
           "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
@@ -414,6 +354,70 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]"
+    },
+    {
+      "ticker": "한온시스템",
+      "code": "018880",
+      "tomorrow_up_prob": "58%",
+      "entry": 4470.0,
+      "target": 4694,
+      "stop": 4336,
+      "confidence": "중",
+      "reasons": [
+        "정배열",
+        "호재",
+        "장중 5회 지속"
+      ],
+      "risk": "약한 마감",
+      "day_change": -6.74,
+      "cause_news": [
+        {
+          "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
+    },
+    {
+      "ticker": "동양고속",
+      "code": "084670",
+      "tomorrow_up_prob": "55%",
+      "entry": 46950.0,
+      "target": 49298,
+      "stop": 45542,
+      "confidence": "중",
+      "reasons": [
+        "RSI55.9 강세",
+        "호재",
+        "장중 5회 지속"
+      ],
+      "risk": "약한 마감",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[특징주] 동양고속·천일고속, 서울고속버스터미널 재개발 기대감에 강...",
+          "url": "https://www.ajunews.com/view/20260604141554262",
+          "office": "ajunews",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] 천일·동양고속, 장 초반 상한가…고터 재개발 기대감↑",
+          "url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=842396",
+          "office": "hansbiz",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 동양고속·천일고속, 서울고속버스터미널 재개발 기대감에 강..."
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
