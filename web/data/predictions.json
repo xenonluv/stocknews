@@ -1,21 +1,21 @@
 {
-  "as_of": "2026-06-08 13:22 KST",
+  "as_of": "2026-06-08 13:37 KST",
   "intraday_rank": [
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "84%",
-      "entry": 287000.0,
-      "target": 301350,
-      "stop": 278390,
+      "tomorrow_up_prob": "88%",
+      "entry": 290000.0,
+      "target": 304500,
+      "stop": 281300,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.87)",
+        "강세마감(0.93)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 13.11,
+      "day_change": 12.92,
       "cause_news": [
         {
           "title": "네이버 주가, 강세... 왜?",
@@ -34,12 +34,12 @@
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
         },
         {
-          "title": "네이버, 폭락장서도 보합권…젠슨 황·이해진 회동에 AI 기대감[특징주...",
-          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=02696166645479752",
-          "office": "edaily",
-          "sentiment": "악재",
-          "cause_score": 10,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
+          "title": "NAVER(네이버), AI 생태계 확대 기대에도 24만원선 후퇴…투자심리는 관...",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=580266",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "높음",
@@ -93,17 +93,17 @@
       "ticker": "라이콤",
       "code": "388790",
       "tomorrow_up_prob": "82%",
-      "entry": 6830.0,
-      "target": 7172,
-      "stop": 6625,
+      "entry": 7030.0,
+      "target": 7382,
+      "stop": 6819,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.7)",
+        "강세마감(0.79)",
         "MACD강세",
-        "RSI62.7 강세"
+        "RSI63.7 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 17.77,
+      "day_change": 17.43,
       "cause_news": [
         {
           "title": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
@@ -137,17 +137,17 @@
       "ticker": "LG전자",
       "code": "066570",
       "tomorrow_up_prob": "82%",
-      "entry": 276000.0,
-      "target": 289800,
-      "stop": 267720,
+      "entry": 278000.0,
+      "target": 291900,
+      "stop": 269660,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI56.7 강세"
+        "RSI57.0 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": -8.09,
+      "day_change": -8.42,
       "cause_news": [
         {
           "title": "젠슨 황 효과 꺾였나…LG전자 10%대 낙폭 이어 NC·네이버 약세",
@@ -165,12 +165,12 @@
       "ticker": "SK네트웍스",
       "code": "001740",
       "tomorrow_up_prob": "82%",
-      "entry": 13540.0,
-      "target": 14217,
-      "stop": 13134,
+      "entry": 13510.0,
+      "target": 14186,
+      "stop": 13105,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.9)",
+        "강세마감(0.89)",
         "정배열",
         "MACD강세"
       ],
@@ -253,17 +253,17 @@
       "ticker": "노타",
       "code": "486990",
       "tomorrow_up_prob": "64%",
-      "entry": 31150.0,
-      "target": 32708,
-      "stop": 30216,
+      "entry": 30950.0,
+      "target": 32498,
+      "stop": 30022,
       "confidence": "중",
       "reasons": [
         "MACD강세",
         "호재",
-        "장중 18회 지속"
+        "장중 19회 지속"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": -7.53,
+      "day_change": -10.13,
       "cause_news": [
         {
           "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
@@ -276,24 +276,40 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]"
+    },
+    {
+      "ticker": "미래에셋생명",
+      "code": "085620",
+      "tomorrow_up_prob": "62%",
+      "entry": 20250.0,
+      "target": 21262,
+      "stop": 19642,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.76)",
+        "MACD강세",
+        "거래량3.35배"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null
     }
   ],
   "closing_bet": [
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "84%",
-      "entry": 287000.0,
-      "target": 301350,
-      "stop": 278390,
+      "tomorrow_up_prob": "88%",
+      "entry": 290000.0,
+      "target": 304500,
+      "stop": 281300,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.87)",
+        "강세마감(0.93)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 13.11,
+      "day_change": 12.92,
       "cause_news": [
         {
           "title": "네이버 주가, 강세... 왜?",
@@ -312,12 +328,12 @@
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
         },
         {
-          "title": "네이버, 폭락장서도 보합권…젠슨 황·이해진 회동에 AI 기대감[특징주...",
-          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=02696166645479752",
-          "office": "edaily",
-          "sentiment": "악재",
-          "cause_score": 10,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
+          "title": "NAVER(네이버), AI 생태계 확대 기대에도 24만원선 후퇴…투자심리는 관...",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=580266",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "높음",
@@ -371,17 +387,17 @@
       "ticker": "라이콤",
       "code": "388790",
       "tomorrow_up_prob": "82%",
-      "entry": 6830.0,
-      "target": 7172,
-      "stop": 6625,
+      "entry": 7030.0,
+      "target": 7382,
+      "stop": 6819,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.7)",
+        "강세마감(0.79)",
         "MACD강세",
-        "RSI62.7 강세"
+        "RSI63.7 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 17.77,
+      "day_change": 17.43,
       "cause_news": [
         {
           "title": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
@@ -415,17 +431,17 @@
       "ticker": "LG전자",
       "code": "066570",
       "tomorrow_up_prob": "82%",
-      "entry": 276000.0,
-      "target": 289800,
-      "stop": 267720,
+      "entry": 278000.0,
+      "target": 291900,
+      "stop": 269660,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI56.7 강세"
+        "RSI57.0 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": -8.09,
+      "day_change": -8.42,
       "cause_news": [
         {
           "title": "젠슨 황 효과 꺾였나…LG전자 10%대 낙폭 이어 NC·네이버 약세",
@@ -443,12 +459,12 @@
       "ticker": "SK네트웍스",
       "code": "001740",
       "tomorrow_up_prob": "82%",
-      "entry": 13540.0,
-      "target": 14217,
-      "stop": 13134,
+      "entry": 13510.0,
+      "target": 14186,
+      "stop": 13105,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.9)",
+        "강세마감(0.89)",
         "정배열",
         "MACD강세"
       ],
