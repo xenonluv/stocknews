@@ -4,24 +4,24 @@
     "status": "PUBLISHED",
     "tier": "signal",
     "target_stock": "NAVER",
-    "signal_probability": "52%",
+    "signal_probability": "46%",
     "position_type": "과다상승",
-    "day_change": 12.52,
+    "day_change": 13.31,
     "headline": "네이버 주가, 강세... 왜?",
-    "summary": "[시그널] 일봉 과다상승 · 재료 호재(중요도 4.0). 일봉 국면을 함께 확인.",
+    "summary": "[시그널] 일봉 과다상승 · 재료 호재(중요도 5.0). 일봉 국면을 함께 확인.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-08 11:45 KST",
+    "published_at": "2026-06-08 12:00 KST",
     "news": [
       {
-        "title": "네이버, 엔비디아와 ‘초대형 AI 팩토리’만든다",
-        "url": "https://n.news.naver.com/mnews/article/016/0002653427",
-        "office": "헤럴드경제",
+        "title": "[AI 고속도로] 네이버-엔비디아, 초대형 AI 인프라 '동맹'…유럽·중동...",
+        "url": "https://n.news.naver.com/mnews/article/092/0002425702",
+        "office": "지디넷코리아",
         "sentiment": "호재"
       },
       {
-        "title": "[ET특징주] 폭락장 이긴 엔비디아 효과… 네이버·SK텔레콤 동반 강세",
-        "url": "https://n.news.naver.com/mnews/article/030/0003435305",
-        "office": "전자신문",
+        "title": "[특징주] SKT·네이버, '엔비디아 협력'에 급락장서 강세(종합)",
+        "url": "https://n.news.naver.com/mnews/article/001/0016125707",
+        "office": "연합뉴스",
         "sentiment": "혼재"
       }
     ],
@@ -57,15 +57,15 @@
   {
     "post_id": "POST_20260608_271830",
     "status": "PUBLISHED",
-    "tier": "candidate",
+    "tier": "signal",
     "target_stock": "팸텍",
     "signal_probability": "53%",
     "position_type": "과다상승",
     "day_change": 29.98,
     "headline": "[주간e종목] 팸텍, 로봇 기업 인수 소식에 '3연上'",
-    "summary": "[후보] 재료+거래대금 포착(중요도 10.0, 호재) · 일봉 과다상승.",
+    "summary": "[시그널] 일봉 과다상승 · 재료 호재(중요도 10.0). 일봉 국면을 함께 확인.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-08 11:45 KST",
+    "published_at": "2026-06-08 12:00 KST",
     "news": [
       {
         "title": "'上上上' 팸텍…매도 사이드카 발동에도 4거래일 연속 '급등'",
@@ -132,7 +132,7 @@
     "headline": "아이로보틱스 2연속 上 기염…휴머노이드 핵심 부품 기대감에 투자자 관...",
     "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-08 11:45 KST",
+    "published_at": "2026-06-08 12:00 KST",
     "news": [
       {
         "title": "아이로보틱스, 1분기 흑자전환…로봇사업 확대 본격화",
@@ -195,11 +195,11 @@
     "target_stock": "라이콤",
     "signal_probability": "46%",
     "position_type": "과다상승",
-    "day_change": 11.51,
+    "day_change": 11.34,
     "headline": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-08 11:45 KST",
+    "published_at": "2026-06-08 12:00 KST",
     "news": [
       {
         "title": "라이콤, AI 데이터센터·방산 수혜 기대감에 19%↑[특징주]",
@@ -250,11 +250,11 @@
     "target_stock": "노타",
     "signal_probability": "52%",
     "position_type": "분석불가",
-    "day_change": -10.71,
+    "day_change": -10.13,
     "headline": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
     "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 분석불가.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-08 11:45 KST",
+    "published_at": "2026-06-08 12:00 KST",
     "news": [
       {
         "title": "노타, 엔비디아 아태 파트너데이 ‘한국 유일’ 패널 참여…“피지컬...",
@@ -299,13 +299,13 @@
     "status": "PUBLISHED",
     "tier": "candidate",
     "target_stock": "LG전자",
-    "signal_probability": "45%",
+    "signal_probability": "44%",
     "position_type": "과다상승",
-    "day_change": -5.45,
+    "day_change": -5.78,
     "headline": "젠슨 황 효과 꺾였나…LG전자 10%대 낙폭 이어 NC·네이버 약세",
-    "summary": "[후보] 재료+거래대금 포착(중요도 4.5, 호재) · 일봉 과다상승.",
+    "summary": "[후보] 재료+거래대금 포착(중요도 4.0, 호재) · 일봉 과다상승.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-08 11:45 KST",
+    "published_at": "2026-06-08 12:00 KST",
     "news": [
       {
         "title": "[속보]LG전자 &quot;엔비디아와 '차세대 로봇 분야' 전 개발 과정 협력&quot;",
@@ -317,12 +317,6 @@
         "title": "손 잡은 젠슨 황-구광모 '피지컬 AI' 협력 논의 [TF사진관]",
         "url": "https://n.news.naver.com/mnews/article/629/0000505707",
         "office": "더팩트",
-        "sentiment": "호재"
-      },
-      {
-        "title": "[현장] LG트윈타워 찾은 젠슨 황…“쉿” 제스처에 사인까지",
-        "url": "https://n.news.naver.com/mnews/article/029/0003030503",
-        "office": "디지털타임스",
         "sentiment": "호재"
       }
     ],
