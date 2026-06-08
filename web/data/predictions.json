@@ -1,10 +1,10 @@
 {
-  "as_of": "2026-06-08 09:07 KST",
+  "as_of": "2026-06-08 09:22 KST",
   "intraday_rank": [
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "84%",
+      "tomorrow_up_prob": "86%",
       "entry": 246000.0,
       "target": 258300,
       "stop": 238620,
@@ -15,43 +15,87 @@
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 0,
+      "day_change": -3.72,
       "related_news": [
         {
-          "title": "엔비디아-네이버, 국내 최대 AI 팩토리 짓는다…‘각 세종’ 4배 이상",
-          "url": "https://n.news.naver.com/mnews/article/029/0003030483",
-          "office": "디지털타임스",
+          "title": "젠슨황x이해진, 오늘 네이버 '비전스테이지'서 치지직 생방송",
+          "url": "https://n.news.naver.com/mnews/article/018/0006300477",
+          "office": "이데일리",
           "sentiment": "호재"
         },
         {
-          "title": "네이버, 엔비디아와 초대형 AI 팩토리 '맞손'…수요 발굴·자본 협력",
-          "url": "https://n.news.naver.com/mnews/article/293/0000085914",
-          "office": "블로터",
+          "title": "네이버-엔비디아 “초대형 AI 인프라 구축”",
+          "url": "https://n.news.naver.com/mnews/article/056/0012195548",
+          "office": "KBS",
           "sentiment": "호재"
         },
         {
-          "title": "‘젠슨 황 효과’ BBQ 홍대점 매출 20% 뛰었다",
-          "url": "https://n.news.naver.com/mnews/article/016/0002653155",
-          "office": "헤럴드경제",
+          "title": "네이버-엔비디아, 기가와트급 AI 팩토리 추진⋯젠슨 황, 네이버 1784 방...",
+          "url": "https://n.news.naver.com/mnews/article/031/0001033449",
+          "office": "아이뉴스24",
           "sentiment": "호재"
         }
       ]
     },
     {
+      "ticker": "한켐",
+      "code": "457370",
+      "tomorrow_up_prob": "77%",
+      "entry": 15270.0,
+      "target": 16034,
+      "stop": 14812,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.89)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "주문 폭증에 라인 당겨 돌렸다…한켐, MLCC 수혜로 실적 도약 기대",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=458086",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 인과표현, 재료"
+        },
+        {
+          "title": "[특징주] 한켐·코칩·키스트론, 삼성전기 FC-BGA 5조 투자 전망에 ↑......",
+          "url": "https://www.cstimes.com/news/articleView.html?idxno=708625",
+          "office": "cstimes",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        },
+        {
+          "title": "[특징주] 한켐, 삼성전기 역대 최고가에 MLCC 소재 공급사 부각…수요 5...",
+          "url": "https://www.cstimes.com/news/articleView.html?idxno=707748",
+          "office": "cstimes",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "주문 폭증에 라인 당겨 돌렸다…한켐, MLCC 수혜로 실적 도약 기대"
+    },
+    {
       "ticker": "팸텍",
       "code": "271830",
-      "tomorrow_up_prob": "65%",
-      "entry": 2220.0,
-      "target": 2331,
-      "stop": 2153,
+      "tomorrow_up_prob": "69%",
+      "entry": 2475.0,
+      "target": 2599,
+      "stop": 2401,
       "confidence": "중",
       "reasons": [
+        "강세마감(0.9)",
         "MACD강세",
-        "RSI69.0 강세",
         "호재"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null,
+      "day_change": 14.63,
       "cause_news": [
         {
           "title": "[주간e종목] 팸텍, 로봇 기업 인수 소식에 '3연上'",
@@ -85,16 +129,16 @@
       "ticker": "노타",
       "code": "486990",
       "tomorrow_up_prob": "58%",
-      "entry": 30500.0,
-      "target": 32025,
-      "stop": 29585,
+      "entry": 30350.0,
+      "target": 31868,
+      "stop": 29440,
       "confidence": "중",
       "reasons": [
         "MACD강세",
         "호재"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 0,
+      "day_change": -11.87,
       "cause_news": [
         {
           "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
@@ -111,7 +155,7 @@
     {
       "ticker": "제주은행",
       "code": "006220",
-      "tomorrow_up_prob": "50%",
+      "tomorrow_up_prob": "51%",
       "entry": 11960.0,
       "target": 12558,
       "stop": 11601,
@@ -131,47 +175,13 @@
           "sentiment": "악재"
         }
       ]
-    },
-    {
-      "ticker": "한온시스템",
-      "code": "018880",
-      "tomorrow_up_prob": "48%",
-      "entry": 4375.0,
-      "target": 4594,
-      "stop": 4244,
-      "confidence": "하",
-      "reasons": [
-        "호재"
-      ],
-      "risk": "약한 마감",
-      "day_change": 0,
-      "cause_news": [
-        {
-          "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "[특징주] 한온시스템, 1분기 영업익 361% 급증에 목표가 줄상향…14%대 ...",
-          "url": "https://www.tokenpost.kr/news/economy/356341",
-          "office": "tokenpost",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
     }
   ],
   "closing_bet": [
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "84%",
+      "tomorrow_up_prob": "86%",
       "entry": 246000.0,
       "target": 258300,
       "stop": 238620,
@@ -182,43 +192,87 @@
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 0,
+      "day_change": -3.72,
       "related_news": [
         {
-          "title": "엔비디아-네이버, 국내 최대 AI 팩토리 짓는다…‘각 세종’ 4배 이상",
-          "url": "https://n.news.naver.com/mnews/article/029/0003030483",
-          "office": "디지털타임스",
+          "title": "젠슨황x이해진, 오늘 네이버 '비전스테이지'서 치지직 생방송",
+          "url": "https://n.news.naver.com/mnews/article/018/0006300477",
+          "office": "이데일리",
           "sentiment": "호재"
         },
         {
-          "title": "네이버, 엔비디아와 초대형 AI 팩토리 '맞손'…수요 발굴·자본 협력",
-          "url": "https://n.news.naver.com/mnews/article/293/0000085914",
-          "office": "블로터",
+          "title": "네이버-엔비디아 “초대형 AI 인프라 구축”",
+          "url": "https://n.news.naver.com/mnews/article/056/0012195548",
+          "office": "KBS",
           "sentiment": "호재"
         },
         {
-          "title": "‘젠슨 황 효과’ BBQ 홍대점 매출 20% 뛰었다",
-          "url": "https://n.news.naver.com/mnews/article/016/0002653155",
-          "office": "헤럴드경제",
+          "title": "네이버-엔비디아, 기가와트급 AI 팩토리 추진⋯젠슨 황, 네이버 1784 방...",
+          "url": "https://n.news.naver.com/mnews/article/031/0001033449",
+          "office": "아이뉴스24",
           "sentiment": "호재"
         }
       ]
     },
     {
+      "ticker": "한켐",
+      "code": "457370",
+      "tomorrow_up_prob": "77%",
+      "entry": 15270.0,
+      "target": 16034,
+      "stop": 14812,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.89)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "주문 폭증에 라인 당겨 돌렸다…한켐, MLCC 수혜로 실적 도약 기대",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=458086",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 인과표현, 재료"
+        },
+        {
+          "title": "[특징주] 한켐·코칩·키스트론, 삼성전기 FC-BGA 5조 투자 전망에 ↑......",
+          "url": "https://www.cstimes.com/news/articleView.html?idxno=708625",
+          "office": "cstimes",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        },
+        {
+          "title": "[특징주] 한켐, 삼성전기 역대 최고가에 MLCC 소재 공급사 부각…수요 5...",
+          "url": "https://www.cstimes.com/news/articleView.html?idxno=707748",
+          "office": "cstimes",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "주문 폭증에 라인 당겨 돌렸다…한켐, MLCC 수혜로 실적 도약 기대"
+    },
+    {
       "ticker": "팸텍",
       "code": "271830",
-      "tomorrow_up_prob": "65%",
-      "entry": 2220.0,
-      "target": 2331,
-      "stop": 2153,
+      "tomorrow_up_prob": "69%",
+      "entry": 2475.0,
+      "target": 2599,
+      "stop": 2401,
       "confidence": "중",
       "reasons": [
+        "강세마감(0.9)",
         "MACD강세",
-        "RSI69.0 강세",
         "호재"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null,
+      "day_change": 14.63,
       "cause_news": [
         {
           "title": "[주간e종목] 팸텍, 로봇 기업 인수 소식에 '3연上'",
@@ -252,16 +306,16 @@
       "ticker": "노타",
       "code": "486990",
       "tomorrow_up_prob": "58%",
-      "entry": 30500.0,
-      "target": 32025,
-      "stop": 29585,
+      "entry": 30350.0,
+      "target": 31868,
+      "stop": 29440,
       "confidence": "중",
       "reasons": [
         "MACD강세",
         "호재"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 0,
+      "day_change": -11.87,
       "cause_news": [
         {
           "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
