@@ -3,20 +3,20 @@
     {
       "lo": 70,
       "hi": 80,
-      "n": 4,
+      "n": 6,
       "actual_rate": 0
     },
     {
       "lo": 80,
       "hi": 90,
-      "n": 6,
-      "actual_rate": 67
+      "n": 8,
+      "actual_rate": 62
     },
     {
       "lo": 90,
       "hi": 100,
-      "n": 5,
-      "actual_rate": 60
+      "n": 6,
+      "actual_rate": 50
     }
   ]
 }
