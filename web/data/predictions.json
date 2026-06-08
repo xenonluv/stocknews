@@ -1,22 +1,38 @@
 {
-  "as_of": "2026-06-08 11:22 KST",
+  "as_of": "2026-06-08 11:37 KST",
   "intraday_rank": [
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "90%",
-      "entry": 289000.0,
-      "target": 303450,
-      "stop": 280330,
+      "tomorrow_up_prob": "89%",
+      "entry": 282500.0,
+      "target": 296625,
+      "stop": 274025,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.98)",
+        "강세마감(0.82)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 7.63,
+      "day_change": 13.7,
       "cause_news": [
+        {
+          "title": "네이버 주가, 강세... 왜?",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1162339",
+          "office": "ggilbo",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[ET특징주] 폭락장 이긴 엔비디아 효과… 네이버·SK텔레콤 동반 강세",
+          "url": "https://www.etnews.com/20260608000180",
+          "office": "etnews",
+          "sentiment": "악재",
+          "cause_score": 10,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
+        },
         {
           "title": "네이버, 폭락장서도 보합권…젠슨 황·이해진 회동에 AI 기대감[특징주...",
           "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=02696166645479752",
@@ -24,42 +40,26 @@
           "sentiment": "악재",
           "cause_score": 10,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
-        },
-        {
-          "title": "NAVER(네이버), AI 생태계 확대 기대에도 24만원선 후퇴…투자심리는 관...",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=580266",
-          "office": "cbci",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-        },
-        {
-          "title": "젠슨 황 효과 꺾였나…LG전자 10%대 낙폭 이어 NC·네이버 약세",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439366",
-          "office": "econonews",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "네이버, 폭락장서도 보합권…젠슨 황·이해진 회동에 AI 기대감[특징주..."
+      "cause_summary": "네이버 주가, 강세... 왜?"
     },
     {
       "ticker": "LG전자",
       "code": "066570",
-      "tomorrow_up_prob": "88%",
-      "entry": 277000.0,
-      "target": 290850,
-      "stop": 268690,
+      "tomorrow_up_prob": "89%",
+      "entry": 279500.0,
+      "target": 293475,
+      "stop": 271115,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.74)",
+        "강세마감(0.82)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": -8.58,
+      "day_change": -7.76,
       "cause_news": [
         {
           "title": "젠슨 황 효과 꺾였나…LG전자 10%대 낙폭 이어 NC·네이버 약세",
@@ -76,18 +76,18 @@
     {
       "ticker": "SK텔레콤",
       "code": "017670",
-      "tomorrow_up_prob": "85%",
-      "entry": 115200.0,
-      "target": 120960,
-      "stop": 111744,
+      "tomorrow_up_prob": "86%",
+      "entry": 112000.0,
+      "target": 117600,
+      "stop": 108640,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.96)",
+        "강세마감(0.71)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null,
+      "day_change": 6.3,
       "cause_news": [
         {
           "title": "[특징주] SK텔레콤, 엔비디아와 '풀스택 AI 클라우드' 맞손…글로벌 인...",
@@ -106,12 +106,12 @@
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[특징주] 엔비디아와 AI 협력 소식에...SK텔레콤, 2%대 상승",
-          "url": "https://www.youthdaily.co.kr/news/article.html?no=220433",
-          "office": "youthdaily",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+          "title": "[특징주] 엔비디아 협력 기대감에 SK텔레콤 강세…두산로보틱스는 장중...",
+          "url": "https://biz.chosun.com/stock/stock_general/2026/06/08/B4CTGMQF6NE2RALX644PBSPYA4/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "office": "biz",
+          "sentiment": "악재",
+          "cause_score": 12,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 악재, 당일"
         }
       ],
       "cause_confidence": "높음",
@@ -162,48 +162,48 @@
       "cause_summary": "아이로보틱스 2연속 上 기염…휴머노이드 핵심 부품 기대감에 투자자 관..."
     },
     {
-      "ticker": "라이콤",
-      "code": "388790",
+      "ticker": "SK네트웍스",
+      "code": "001740",
       "tomorrow_up_prob": "82%",
-      "entry": 6920.0,
-      "target": 7266,
-      "stop": 6712,
+      "entry": 13390.0,
+      "target": 14060,
+      "stop": 12988,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.74)",
-        "MACD강세",
-        "RSI63.2 강세"
+        "강세마감(0.87)",
+        "정배열",
+        "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 16.58,
+      "day_change": null,
       "cause_news": [
         {
-          "title": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=295152",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+          "title": "SK네트웍스, 급락 하루만에 25% 급등…1만3000원선 재돌파",
+          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439383",
+          "office": "econonews",
+          "sentiment": "악재",
+          "cause_score": 14,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 악재, 당일"
         },
         {
-          "title": "라이콤, AI 데이터센터·방산 수혜 기대감에 19%↑[특징주]",
-          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03270166645478768",
-          "office": "edaily",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "[특징주] 젠슨 황, AI 수혜 '통신장비' 언급…'라이콤·이노인스트루먼...",
-          "url": "https://www.newspim.com/news/view/20260604000515",
+          "title": "[특징주] SK네트웍스, SK·엔비디아 협력 기대감에 20%대 급등",
+          "url": "https://www.newspim.com/news/view/20260608000363",
           "office": "newspim",
+          "sentiment": "악재",
+          "cause_score": 14,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 악재, 당일"
+        },
+        {
+          "title": "SK네트웍스 주가, 강세... 26%대 급등",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1162254",
+          "office": "ggilbo",
           "sentiment": "호재",
           "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로..."
+      "cause_summary": "SK네트웍스, 급락 하루만에 25% 급등…1만3000원선 재돌파"
     },
     {
       "ticker": "팸텍",
@@ -216,7 +216,7 @@
       "reasons": [
         "강세마감(1.0)",
         "MACD강세",
-        "거래량3.41배"
+        "거래량3.42배"
       ],
       "risk": "특이 위험 낮음",
       "day_change": 29.98,
@@ -250,64 +250,64 @@
       "cause_summary": "[주간e종목] 팸텍, 로봇 기업 인수 소식에 '3연上'"
     },
     {
-      "ticker": "SK네트웍스",
-      "code": "001740",
-      "tomorrow_up_prob": "77%",
-      "entry": 13470.0,
-      "target": 14144,
-      "stop": 13066,
-      "confidence": "상",
+      "ticker": "라이콤",
+      "code": "388790",
+      "tomorrow_up_prob": "66%",
+      "entry": 6750.0,
+      "target": 7088,
+      "stop": 6548,
+      "confidence": "중",
       "reasons": [
-        "강세마감(0.88)",
-        "정배열",
-        "MACD강세"
+        "RSI62.3 강세",
+        "거래량3.87배",
+        "호재"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null,
+      "day_change": 13.03,
       "cause_news": [
         {
-          "title": "[특징주] SK네트웍스, SK·엔비디아 협력 기대감에 20%대 급등",
-          "url": "https://www.newspim.com/news/view/20260608000363",
-          "office": "newspim",
-          "sentiment": "악재",
-          "cause_score": 14,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 악재, 당일"
-        },
-        {
-          "title": "SK네트웍스 주가, 강세... 26%대 급등",
-          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1162254",
-          "office": "ggilbo",
+          "title": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=295152",
+          "office": "widedaily",
           "sentiment": "호재",
           "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
         },
         {
-          "title": "[특징주] SK네트웍스, AI·로봇 기대에 22%대 급등…업스테이지 지분가치...",
-          "url": "https://www.tokenpost.kr/news/economy/363473",
-          "office": "tokenpost",
+          "title": "라이콤, AI 데이터센터·방산 수혜 기대감에 19%↑[특징주]",
+          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03270166645478768",
+          "office": "edaily",
           "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+        },
+        {
+          "title": "[특징주] 젠슨 황, AI 수혜 '통신장비' 언급…'라이콤·이노인스트루먼...",
+          "url": "https://www.newspim.com/news/view/20260604000515",
+          "office": "newspim",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] SK네트웍스, SK·엔비디아 협력 기대감에 20%대 급등"
+      "cause_summary": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로..."
     },
     {
       "ticker": "노타",
       "code": "486990",
       "tomorrow_up_prob": "64%",
-      "entry": 30350.0,
-      "target": 31868,
-      "stop": 29440,
+      "entry": 30800.0,
+      "target": 32340,
+      "stop": 29876,
       "confidence": "중",
       "reasons": [
         "MACD강세",
         "호재",
-        "장중 10회 지속"
+        "장중 11회 지속"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": -12.01,
+      "day_change": -11.29,
       "cause_news": [
         {
           "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
@@ -320,49 +320,41 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]"
-    },
-    {
-      "ticker": "제주은행",
-      "code": "006220",
-      "tomorrow_up_prob": "52%",
-      "entry": 11430.0,
-      "target": 12002,
-      "stop": 11087,
-      "confidence": "하",
-      "reasons": [
-        "MACD강세",
-        "RSI52.8 강세",
-        "거래량5.8배"
-      ],
-      "risk": "악재",
-      "day_change": null,
-      "related_news": [
-        {
-          "title": "은행株 장초반 강세…홍콩ELS 과징금 대폭 감소에 '훈풍'",
-          "url": "https://n.news.naver.com/mnews/article/008/0005367506",
-          "office": "머니투데이",
-          "sentiment": "악재"
-        }
-      ]
     }
   ],
   "closing_bet": [
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "90%",
-      "entry": 289000.0,
-      "target": 303450,
-      "stop": 280330,
+      "tomorrow_up_prob": "89%",
+      "entry": 282500.0,
+      "target": 296625,
+      "stop": 274025,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.98)",
+        "강세마감(0.82)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 7.63,
+      "day_change": 13.7,
       "cause_news": [
+        {
+          "title": "네이버 주가, 강세... 왜?",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1162339",
+          "office": "ggilbo",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[ET특징주] 폭락장 이긴 엔비디아 효과… 네이버·SK텔레콤 동반 강세",
+          "url": "https://www.etnews.com/20260608000180",
+          "office": "etnews",
+          "sentiment": "악재",
+          "cause_score": 10,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
+        },
         {
           "title": "네이버, 폭락장서도 보합권…젠슨 황·이해진 회동에 AI 기대감[특징주...",
           "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=02696166645479752",
@@ -370,42 +362,26 @@
           "sentiment": "악재",
           "cause_score": 10,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
-        },
-        {
-          "title": "NAVER(네이버), AI 생태계 확대 기대에도 24만원선 후퇴…투자심리는 관...",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=580266",
-          "office": "cbci",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-        },
-        {
-          "title": "젠슨 황 효과 꺾였나…LG전자 10%대 낙폭 이어 NC·네이버 약세",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439366",
-          "office": "econonews",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "네이버, 폭락장서도 보합권…젠슨 황·이해진 회동에 AI 기대감[특징주..."
+      "cause_summary": "네이버 주가, 강세... 왜?"
     },
     {
       "ticker": "LG전자",
       "code": "066570",
-      "tomorrow_up_prob": "88%",
-      "entry": 277000.0,
-      "target": 290850,
-      "stop": 268690,
+      "tomorrow_up_prob": "89%",
+      "entry": 279500.0,
+      "target": 293475,
+      "stop": 271115,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.74)",
+        "강세마감(0.82)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": -8.58,
+      "day_change": -7.76,
       "cause_news": [
         {
           "title": "젠슨 황 효과 꺾였나…LG전자 10%대 낙폭 이어 NC·네이버 약세",
@@ -422,18 +398,18 @@
     {
       "ticker": "SK텔레콤",
       "code": "017670",
-      "tomorrow_up_prob": "85%",
-      "entry": 115200.0,
-      "target": 120960,
-      "stop": 111744,
+      "tomorrow_up_prob": "86%",
+      "entry": 112000.0,
+      "target": 117600,
+      "stop": 108640,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.96)",
+        "강세마감(0.71)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null,
+      "day_change": 6.3,
       "cause_news": [
         {
           "title": "[특징주] SK텔레콤, 엔비디아와 '풀스택 AI 클라우드' 맞손…글로벌 인...",
@@ -452,12 +428,12 @@
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[특징주] 엔비디아와 AI 협력 소식에...SK텔레콤, 2%대 상승",
-          "url": "https://www.youthdaily.co.kr/news/article.html?no=220433",
-          "office": "youthdaily",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+          "title": "[특징주] 엔비디아 협력 기대감에 SK텔레콤 강세…두산로보틱스는 장중...",
+          "url": "https://biz.chosun.com/stock/stock_general/2026/06/08/B4CTGMQF6NE2RALX644PBSPYA4/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "office": "biz",
+          "sentiment": "악재",
+          "cause_score": 12,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 악재, 당일"
         }
       ],
       "cause_confidence": "높음",
@@ -508,48 +484,48 @@
       "cause_summary": "아이로보틱스 2연속 上 기염…휴머노이드 핵심 부품 기대감에 투자자 관..."
     },
     {
-      "ticker": "라이콤",
-      "code": "388790",
+      "ticker": "SK네트웍스",
+      "code": "001740",
       "tomorrow_up_prob": "82%",
-      "entry": 6920.0,
-      "target": 7266,
-      "stop": 6712,
+      "entry": 13390.0,
+      "target": 14060,
+      "stop": 12988,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.74)",
-        "MACD강세",
-        "RSI63.2 강세"
+        "강세마감(0.87)",
+        "정배열",
+        "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 16.58,
+      "day_change": null,
       "cause_news": [
         {
-          "title": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=295152",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+          "title": "SK네트웍스, 급락 하루만에 25% 급등…1만3000원선 재돌파",
+          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439383",
+          "office": "econonews",
+          "sentiment": "악재",
+          "cause_score": 14,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 악재, 당일"
         },
         {
-          "title": "라이콤, AI 데이터센터·방산 수혜 기대감에 19%↑[특징주]",
-          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03270166645478768",
-          "office": "edaily",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "[특징주] 젠슨 황, AI 수혜 '통신장비' 언급…'라이콤·이노인스트루먼...",
-          "url": "https://www.newspim.com/news/view/20260604000515",
+          "title": "[특징주] SK네트웍스, SK·엔비디아 협력 기대감에 20%대 급등",
+          "url": "https://www.newspim.com/news/view/20260608000363",
           "office": "newspim",
+          "sentiment": "악재",
+          "cause_score": 14,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 악재, 당일"
+        },
+        {
+          "title": "SK네트웍스 주가, 강세... 26%대 급등",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1162254",
+          "office": "ggilbo",
           "sentiment": "호재",
           "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로..."
+      "cause_summary": "SK네트웍스, 급락 하루만에 25% 급등…1만3000원선 재돌파"
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
