@@ -1,21 +1,21 @@
 {
-  "as_of": "2026-06-08 15:22 KST",
+  "as_of": "2026-06-08 15:37 KST",
   "intraday_rank": [
     {
       "ticker": "NAVER",
       "code": "035420",
       "tomorrow_up_prob": "94%",
-      "entry": 278000.0,
-      "target": 291900,
-      "stop": 269660,
+      "entry": 279000.0,
+      "target": 292950,
+      "stop": 270630,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.71)",
+        "강세마감(0.73)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 9.2,
+      "day_change": 8.81,
       "cause_news": [
         {
           "title": "네이버, 엔비디아 AI 팩토리 협력에 10%대 강세…‘삼쏘 회동’ 이어 치...",
@@ -178,50 +178,20 @@
       "cause_summary": "[주간e종목] 팸텍, 로봇 기업 인수 소식에 '3연上'"
     },
     {
-      "ticker": "LG전자",
-      "code": "066570",
-      "tomorrow_up_prob": "78%",
-      "entry": 268000.0,
-      "target": 281400,
-      "stop": 259960,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI55.3 강세"
-      ],
-      "risk": "약한 마감",
-      "day_change": -11.55,
-      "related_news": [
-        {
-          "title": "LG그룹株, 엔비디아 회동에도 약세…LG전자 8% 급락[이런국장 저런주...",
-          "url": "https://n.news.naver.com/mnews/article/011/0004628755",
-          "office": "서울경제",
-          "sentiment": "혼재"
-        },
-        {
-          "title": "한주에이알티 &quot;LG전자향 물류자동화 설비 안정적 운영 확인&quot;",
-          "url": "https://n.news.naver.com/mnews/article/003/0013993494",
-          "office": "뉴시스",
-          "sentiment": "호재"
-        }
-      ]
-    },
-    {
       "ticker": "화신",
       "code": "010690",
       "tomorrow_up_prob": "75%",
-      "entry": 11500.0,
-      "target": 12075,
-      "stop": 11155,
+      "entry": 11490.0,
+      "target": 12064,
+      "stop": 11145,
       "confidence": "상",
       "reasons": [
         "강세마감(0.82)",
         "Stoch골든",
-        "거래량4.65배"
+        "거래량4.69배"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 24.36,
+      "day_change": 22.86,
       "cause_news": [
         {
           "title": "[특징주] '아틀라스 공급망' 기대감에 화신정공 상한가",
@@ -255,17 +225,17 @@
       "ticker": "알트",
       "code": "459550",
       "tomorrow_up_prob": "71%",
-      "entry": 2040.0,
-      "target": 2142,
-      "stop": 1979,
+      "entry": 2020.0,
+      "target": 2121,
+      "stop": 1959,
       "confidence": "상",
       "reasons": [
         "MACD강세",
-        "거래량12.75배",
+        "거래량12.77배",
         "호재"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 9.69,
+      "day_change": 8.63,
       "cause_news": [
         {
           "title": "알트 주가, 6월 8일 장중 2,245원 19.54% 상승",
@@ -291,14 +261,14 @@
       "ticker": "미래에셋생명",
       "code": "085620",
       "tomorrow_up_prob": "69%",
-      "entry": 21150.0,
-      "target": 22208,
-      "stop": 20516,
+      "entry": 21000.0,
+      "target": 22050,
+      "stop": 20370,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.79)",
+        "강세마감(0.76)",
         "MACD강세",
-        "거래량5.56배"
+        "거래량5.62배"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null
@@ -313,11 +283,11 @@
       "confidence": "중",
       "reasons": [
         "RSI62.3 강세",
-        "거래량5.51배",
+        "거래량5.53배",
         "호재"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 16.24,
+      "day_change": 14.21,
       "cause_news": [
         {
           "title": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
@@ -351,17 +321,17 @@
       "ticker": "노타",
       "code": "486990",
       "tomorrow_up_prob": "60%",
-      "entry": 30300.0,
-      "target": 31815,
-      "stop": 29391,
+      "entry": 30000.0,
+      "target": 31500,
+      "stop": 29100,
       "confidence": "중",
       "reasons": [
         "MACD강세",
         "호재",
-        "장중 26회 지속"
+        "장중 27회 지속"
       ],
       "risk": "약한 마감",
-      "day_change": -13.02,
+      "day_change": -12.3,
       "cause_news": [
         {
           "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
@@ -381,17 +351,17 @@
       "ticker": "NAVER",
       "code": "035420",
       "tomorrow_up_prob": "94%",
-      "entry": 278000.0,
-      "target": 291900,
-      "stop": 269660,
+      "entry": 279000.0,
+      "target": 292950,
+      "stop": 270630,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.71)",
+        "강세마감(0.73)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 9.2,
+      "day_change": 8.81,
       "cause_news": [
         {
           "title": "네이버, 엔비디아 AI 팩토리 협력에 10%대 강세…‘삼쏘 회동’ 이어 치...",
@@ -554,34 +524,48 @@
       "cause_summary": "[주간e종목] 팸텍, 로봇 기업 인수 소식에 '3연上'"
     },
     {
-      "ticker": "LG전자",
-      "code": "066570",
-      "tomorrow_up_prob": "78%",
-      "entry": 268000.0,
-      "target": 281400,
-      "stop": 259960,
+      "ticker": "화신",
+      "code": "010690",
+      "tomorrow_up_prob": "75%",
+      "entry": 11490.0,
+      "target": 12064,
+      "stop": 11145,
       "confidence": "상",
       "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI55.3 강세"
+        "강세마감(0.82)",
+        "Stoch골든",
+        "거래량4.69배"
       ],
-      "risk": "약한 마감",
-      "day_change": -11.55,
-      "related_news": [
+      "risk": "특이 위험 낮음",
+      "day_change": 22.86,
+      "cause_news": [
         {
-          "title": "LG그룹株, 엔비디아 회동에도 약세…LG전자 8% 급락[이런국장 저런주...",
-          "url": "https://n.news.naver.com/mnews/article/011/0004628755",
-          "office": "서울경제",
-          "sentiment": "혼재"
+          "title": "[특징주] '아틀라스 공급망' 기대감에 화신정공 상한가",
+          "url": "https://www.newspim.com/news/view/20260608000306",
+          "office": "newspim",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "한주에이알티 &quot;LG전자향 물류자동화 설비 안정적 운영 확인&quot;",
-          "url": "https://n.news.naver.com/mnews/article/003/0013993494",
-          "office": "뉴시스",
-          "sentiment": "호재"
+          "title": "[특징주] 보스턴다이나믹스 방문 소식에…화신정공 상한가",
+          "url": "https://biz.chosun.com/stock/stock_general/2026/06/08/IUYKMKGD6FAADDGRDLIMDD6BBE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "office": "biz",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주]화신정공, 영업이익 778% 급증에 강세",
+          "url": "https://view.asiae.co.kr/article/2026020212554054178",
+          "office": "view",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
         }
-      ]
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] '아틀라스 공급망' 기대감에 화신정공 상한가"
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
