@@ -1,17 +1,23 @@
 [
   {
-    "post_id": "POST_20260608_486990",
+    "post_id": "POST_20260609_486990",
     "status": "PUBLISHED",
     "tier": "signal",
     "target_stock": "노타",
-    "signal_probability": "60%",
+    "signal_probability": "61%",
     "position_type": "분석불가",
-    "day_change": -13.17,
-    "headline": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
-    "summary": "[시그널] 일봉 분석불가 · 재료 호재(중요도 5.0). 일봉 국면을 함께 확인.",
+    "day_change": 0.0,
+    "headline": "디든·노타·에이로봇 등 총출동…젠슨 황 &quot;韓스타트업 선물은 '이것'...",
+    "summary": "[시그널] 일봉 분석불가 · 재료 호재(중요도 5.5). 일봉 국면을 함께 확인.",
     "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-08 15:45 KST",
+    "published_at": "2026-06-09 09:00 KST",
     "news": [
+      {
+        "title": "디든·노타·에이로봇 등 총출동…젠슨 황 &quot;韓스타트업 선물은 '이것'...",
+        "url": "https://n.news.naver.com/mnews/article/421/0008992442",
+        "office": "뉴스1",
+        "sentiment": "호재"
+      },
       {
         "title": "노타, 엔비디아 아태 파트너데이 ‘한국 유일’ 패널 참여…“피지컬...",
         "url": "https://n.news.naver.com/mnews/article/018/0006295755",
@@ -29,389 +35,74 @@
         "url": "https://n.news.naver.com/mnews/article/092/0002424676",
         "office": "지디넷코리아",
         "sentiment": "호재"
-      },
+      }
+    ]
+  },
+  {
+    "post_id": "POST_20260609_035420",
+    "status": "PUBLISHED",
+    "tier": "candidate",
+    "target_stock": "NAVER",
+    "signal_probability": "46%",
+    "position_type": "과다상승",
+    "day_change": 0.0,
+    "headline": "'젠슨 황 땡큐'…급락장서 웃은 네이버, 9% 상승 마감 [특징주]",
+    "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 호재) · 일봉 과다상승.",
+    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
+    "published_at": "2026-06-09 09:00 KST",
+    "news": [
       {
-        "title": "엔비디아, 피지컬AI 동맹에 노타 낙점",
-        "url": "https://n.news.naver.com/mnews/article/011/0004625067",
+        "title": "하나證, 주가 28만원 네이버 목표가로 40만원…“AI팩토리, 성장 모멘...",
+        "url": "https://n.news.naver.com/mnews/article/011/0004629053",
         "office": "서울경제",
         "sentiment": "호재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]",
-        "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03070086645478440",
-        "office": "edaily",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "노타, GPU·NPU 동시 활용 AI 추론 기술 구현에 13%↑[특징주]"
-  },
-  {
-    "post_id": "POST_20260608_271830",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "팸텍",
-    "signal_probability": "53%",
-    "position_type": "과다상승",
-    "day_change": 29.98,
-    "headline": "[주간e종목] 팸텍, 로봇 기업 인수 소식에 '3연上'",
-    "summary": "[후보] 재료+거래대금 포착(중요도 10.0, 호재) · 일봉 과다상승.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-08 15:45 KST",
-    "news": [
-      {
-        "title": "'上上上' 팸텍…매도 사이드카 발동에도 4거래일 연속 '급등'",
-        "url": "https://n.news.naver.com/mnews/article/018/0006297931",
-        "office": "이데일리",
-        "sentiment": "혼재"
       },
       {
-        "title": "웨이퍼 로봇 기업 인수…팸텍, 3거래일 연속 급등[특징주]",
-        "url": "https://n.news.naver.com/mnews/article/018/0006297089",
-        "office": "이데일리",
+        "title": "&quot;네이버, 엔비디아와 함께 AI 팩토리 사업 진출…목표가 상향&quot;-삼성",
+        "url": "https://n.news.naver.com/mnews/article/008/0005368986",
+        "office": "머니투데이",
         "sentiment": "호재"
       },
       {
-        "title": "[ET특징주]팸텍, 웨이퍼 로봇 기업 인수 소식에 상승세",
-        "url": "https://n.news.naver.com/mnews/article/030/0003433710",
-        "office": "전자신문",
+        "title": "넥슨-네이버 협업 확대…치지직에서 즐기는 'FC 온라인'",
+        "url": "https://n.news.naver.com/mnews/article/076/0004413362",
+        "office": "스포츠조선",
         "sentiment": "호재"
       },
       {
-        "title": "팸텍, 로봇 전문기업 티아이에스 인수",
-        "url": "https://n.news.naver.com/mnews/article/015/0005293712",
-        "office": "한국경제",
+        "title": "네이버의 AI 팩토리 진출, 빠른 사업 현실화가 주가 부양의 관건-메리...",
+        "url": "https://n.news.naver.com/mnews/article/008/0005368980",
+        "office": "머니투데이",
         "sentiment": "호재"
       }
     ],
     "cause_news": [
       {
-        "title": "[주간e종목] 팸텍, 로봇 기업 인수 소식에 '3연上'",
-        "url": "https://www.sisajournal-e.com/news/articleView.html?idxno=421546",
-        "office": "sisajournal-e",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+        "title": "'젠슨 황 땡큐'…급락장서 웃은 네이버, 9% 상승 마감 [특징주]",
+        "url": "https://www.dailian.co.kr/news/view/1653674/?sc=Naver",
+        "office": "dailian",
+        "sentiment": "악재",
+        "cause_score": 10,
+        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
       },
       {
-        "title": "팸텍, 4거래일 연속 상승에 11% 급등…산업용 로봇 기업 인수",
-        "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439267",
-        "office": "econonews",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-      },
-      {
-        "title": "[특징주] 팸텍, 웨이퍼 로봇 기업 티아이에스 인수 소식에 4거래일 연속...",
-        "url": "https://www.widedaily.com/news/articleView.html?idxno=295148",
-        "office": "widedaily",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "[주간e종목] 팸텍, 로봇 기업 인수 소식에 '3연上'"
-  },
-  {
-    "post_id": "POST_20260608_459550",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "알트",
-    "signal_probability": "58%",
-    "position_type": "분석불가",
-    "day_change": 7.56,
-    "headline": "알트 주가, 6월 8일 장중 2,245원 19.54% 상승",
-    "summary": "[후보] 재료+거래대금 포착(중요도 9.0, 호재) · 일봉 분석불가.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-08 15:45 KST",
-    "news": [
-      {
-        "title": "알트, 30억원 규모 자기주식 취득 신탁계약 체결",
-        "url": "https://n.news.naver.com/mnews/article/018/0006298470",
-        "office": "이데일리",
-        "sentiment": "호재"
-      },
-      {
-        "title": "알트, 日 KDDI에 폴더형 스마트폰 공급",
-        "url": "https://n.news.naver.com/mnews/article/003/0013974715",
-        "office": "뉴시스",
-        "sentiment": "호재"
-      },
-      {
-        "title": "알트, 위험 상황 알림 서비스 기술 美 특허 등록",
-        "url": "https://n.news.naver.com/mnews/article/003/0013951041",
-        "office": "뉴시스",
-        "sentiment": "호재"
-      },
-      {
-        "title": "업비트 코인, 10종목 중 9은 상승세…분위기 좋아진 코인시장[매일코...",
-        "url": "https://n.news.naver.com/mnews/article/009/0005678682",
-        "office": "매일경제",
-        "sentiment": "호재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "알트 주가, 6월 8일 장중 2,245원 19.54% 상승",
-        "url": "https://www.joongangenews.com/news/articleView.html?idxno=524382",
-        "office": "joongangenews",
+        "title": "\"네이버, 엔비디아와 함께 AI 팩토리 사업 진출…목표가 상향\"-삼성",
+        "url": "https://www.mt.co.kr/stock/2026/06/09/2026060907560657294",
+        "office": "mt",
         "sentiment": "호재",
         "cause_score": 7,
         "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
       },
       {
-        "title": "알트 주가, 6월 8일 장중 2,315원 23.27% 상승",
-        "url": "https://www.topstarnews.net/news/articleView.html?idxno=16083255",
-        "office": "topstarnews",
+        "title": "네이버의 AI 팩토리 진출, 빠른 사업 현실화가 주가 부양의 관건-메리츠",
+        "url": "https://www.mt.co.kr/stock/2026/06/09/2026060908352677410",
+        "office": "mt",
         "sentiment": "호재",
-        "cause_score": 5,
-        "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-      }
-    ],
-    "cause_confidence": "중간",
-    "cause_summary": "알트 주가, 6월 8일 장중 2,245원 19.54% 상승"
-  },
-  {
-    "post_id": "POST_20260608_066430",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "아이로보틱스",
-    "signal_probability": "47%",
-    "position_type": "과다상승",
-    "day_change": 29.98,
-    "headline": "아이로보틱스 2연속 上 기염…휴머노이드 핵심 부품 기대감에 투자자 관...",
-    "summary": "[후보] 재료+거래대금 포착(중요도 6.0, 호재) · 일봉 과다상승.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-08 15:45 KST",
-    "news": [
-      {
-        "title": "아이로보틱스, 1분기 흑자전환…로봇사업 확대 본격화",
-        "url": "https://n.news.naver.com/mnews/article/018/0006284463",
-        "office": "이데일리",
-        "sentiment": "호재"
-      },
-      {
-        "title": "[주총 포커스] 로봇 전환 속도전, 투자 재원은 과제 I 아이로보틱스②",
-        "url": "https://n.news.naver.com/mnews/article/293/0000084132",
-        "office": "블로터",
-        "sentiment": "호재"
-      },
-      {
-        "title": "[주총 포커스] 신사업 확장·이사회 재편 시동 I 아이로보틱스①",
-        "url": "https://n.news.naver.com/mnews/article/293/0000084044",
-        "office": "블로터",
-        "sentiment": "호재"
-      },
-      {
-        "title": "아이로보틱스 &quot;신주발행무효확인 소송 취하&quot;",
-        "url": "https://n.news.naver.com/mnews/article/018/0006246404",
-        "office": "이데일리",
-        "sentiment": "악재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "아이로보틱스 2연속 上 기염…휴머노이드 핵심 부품 기대감에 투자자 관...",
-        "url": "https://www.cbci.co.kr/news/articleView.html?idxno=580267",
-        "office": "cbci",
-        "sentiment": "호재",
-        "cause_score": 17,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-      },
-      {
-        "title": "[특징주] 아이로보틱스, \"질화규소 베어링 감속기 개발\" 휴머노이드 공...",
-        "url": "https://www.widedaily.com/news/articleView.html?idxno=295300",
-        "office": "widedaily",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-      },
-      {
-        "title": "아이로보틱스, 질화규소 베어링 감속기 개발 소식에 24%↑[특징주]",
-        "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03214406645478768",
-        "office": "edaily",
-        "sentiment": "호재",
-        "cause_score": 9,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 오래됨"
+        "cause_score": 7,
+        "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
       }
     ],
     "cause_confidence": "높음",
-    "cause_summary": "아이로보틱스 2연속 上 기염…휴머노이드 핵심 부품 기대감에 투자자 관..."
-  },
-  {
-    "post_id": "POST_20260608_010690",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "화신",
-    "signal_probability": "53%",
-    "position_type": "분석불가",
-    "day_change": 22.76,
-    "headline": "[특징주] '아틀라스 공급망' 기대감에 화신정공 상한가",
-    "summary": "[후보] 재료+거래대금 포착(중요도 5.5, 호재) · 일봉 분석불가.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-08 15:45 KST",
-    "news": [
-      {
-        "title": "화신정공, 1분기 영업익 122억…작년 한해 실적 석 달 만에 넘었다",
-        "url": "https://n.news.naver.com/mnews/article/088/0001010541",
-        "office": "매일신문",
-        "sentiment": "호재"
-      },
-      {
-        "title": "[외부감사 진단] 화신, 재고자산서 확인된 '성장 모멘텀'",
-        "url": "https://n.news.naver.com/mnews/article/293/0000082545",
-        "office": "블로터",
-        "sentiment": "호재"
-      },
-      {
-        "title": "[마켓인]화신, 신용등급 ‘BBB+’ 상향…현대차 동반성장·수익성 개선",
-        "url": "https://n.news.naver.com/mnews/article/018/0006252780",
-        "office": "이데일리",
-        "sentiment": "호재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "[특징주] '아틀라스 공급망' 기대감에 화신정공 상한가",
-        "url": "https://www.newspim.com/news/view/20260608000306",
-        "office": "newspim",
-        "sentiment": "호재",
-        "cause_score": 15,
-        "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-      },
-      {
-        "title": "[특징주] 보스턴다이나믹스 방문 소식에…화신정공 상한가",
-        "url": "https://biz.chosun.com/stock/stock_general/2026/06/08/IUYKMKGD6FAADDGRDLIMDD6BBE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-        "office": "biz",
-        "sentiment": "호재",
-        "cause_score": 13,
-        "cause_reason": "제목 언급, 원인표현, 인과표현, 검색맥락, 당일"
-      },
-      {
-        "title": "[특징주]화신정공, 영업이익 778% 급증에 강세",
-        "url": "https://view.asiae.co.kr/article/2026020212554054178",
-        "office": "view",
-        "sentiment": "호재",
-        "cause_score": 9,
-        "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "[특징주] '아틀라스 공급망' 기대감에 화신정공 상한가"
-  },
-  {
-    "post_id": "POST_20260608_388790",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "라이콤",
-    "signal_probability": "46%",
-    "position_type": "과다상승",
-    "day_change": 14.21,
-    "headline": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
-    "summary": "[후보] 재료+거래대금 포착(중요도 5.0, 호재) · 일봉 과다상승.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-08 15:45 KST",
-    "news": [
-      {
-        "title": "라이콤, AI 데이터센터·방산 수혜 기대감에 19%↑[특징주]",
-        "url": "https://n.news.naver.com/mnews/article/018/0006297930",
-        "office": "이데일리",
-        "sentiment": "호재"
-      },
-      {
-        "title": "라이콤 &quot;약 39억원 규모 통신용 광증폭기 수주…작년 매출 22% 규모&quot;",
-        "url": "https://n.news.naver.com/mnews/article/015/0005294978",
-        "office": "한국경제",
-        "sentiment": "호재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
-        "url": "https://www.widedaily.com/news/articleView.html?idxno=295152",
-        "office": "widedaily",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-      },
-      {
-        "title": "라이콤, AI 데이터센터·방산 수혜 기대감에 19%↑[특징주]",
-        "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03270166645478768",
-        "office": "edaily",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-      },
-      {
-        "title": "[특징주] 젠슨 황, AI 수혜 '통신장비' 언급…'라이콤·이노인스트루먼...",
-        "url": "https://www.newspim.com/news/view/20260604000515",
-        "office": "newspim",
-        "sentiment": "호재",
-        "cause_score": 11,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로..."
-  },
-  {
-    "post_id": "POST_20260608_035420",
-    "status": "PUBLISHED",
-    "tier": "candidate",
-    "target_stock": "NAVER",
-    "signal_probability": "44%",
-    "position_type": "과다상승",
-    "day_change": 9.2,
-    "headline": "네이버, 엔비디아 AI 팩토리 협력에 10%대 강세…‘삼쏘 회동’ 이어 치...",
-    "summary": "[후보] 재료+거래대금 포착(중요도 4.0, 호재) · 일봉 과다상승.",
-    "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
-    "published_at": "2026-06-08 15:45 KST",
-    "news": [
-      {
-        "title": "[오늘의 그래픽] AI팩토리로 판 키운 젠슨 황…韓 AI 협력망 확대",
-        "url": "https://n.news.naver.com/mnews/article/421/0008991921",
-        "office": "뉴스1",
-        "sentiment": "호재"
-      },
-      {
-        "title": "[현장연결] 네이버·엔비디아, AI공장 짓고 서비스까지 함께 판다",
-        "url": "https://n.news.naver.com/mnews/article/374/0000514725",
-        "office": "SBS Biz",
-        "sentiment": "호재"
-      }
-    ],
-    "cause_news": [
-      {
-        "title": "네이버, 엔비디아 AI 팩토리 협력에 10%대 강세…‘삼쏘 회동’ 이어 치...",
-        "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03732646645479752",
-        "office": "edaily",
-        "sentiment": "호재",
-        "cause_score": 17,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-      },
-      {
-        "title": "[특징주] 네이버, 엔비디아 AI 협업 소식에 하락장 속 13%대 강세",
-        "url": "https://biz.chosun.com/stock/stock_general/2026/06/08/TPRZ4IUBJJGNZA6Z4UAXVRO564/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-        "office": "biz",
-        "sentiment": "악재",
-        "cause_score": 14,
-        "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 악재, 당일"
-      },
-      {
-        "title": "[ET특징주] 폭락장 이긴 엔비디아 효과… 네이버·SK텔레콤 동반 강세",
-        "url": "https://www.etnews.com/20260608000180",
-        "office": "etnews",
-        "sentiment": "악재",
-        "cause_score": 10,
-        "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
-      }
-    ],
-    "cause_confidence": "높음",
-    "cause_summary": "네이버, 엔비디아 AI 팩토리 협력에 10%대 강세…‘삼쏘 회동’ 이어 치..."
+    "cause_summary": "'젠슨 황 땡큐'…급락장서 웃은 네이버, 9% 상승 마감 [특징주]"
   }
 ]
