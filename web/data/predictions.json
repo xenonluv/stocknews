@@ -1,165 +1,93 @@
 {
-  "as_of": "2026-06-10 09:07 KST",
+  "as_of": "2026-06-10 09:22 KST",
   "intraday_rank": [
     {
       "ticker": "신세계",
       "code": "004170",
-      "tomorrow_up_prob": "84%",
-      "entry": 675000.0,
-      "target": 708750,
-      "stop": 654750,
+      "tomorrow_up_prob": "85%",
+      "entry": 679000.0,
+      "target": 712950,
+      "stop": 658630,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.73)",
+        "강세마감(0.8)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null,
+      "day_change": 9.29,
       "cause_news": [
         {
-          "title": "키움證 \"신세계, 경쟁사 대비 높은 성장세…목표가 85만원↑\"",
-          "url": "https://www.ajunews.com/view/20260610082251947",
-          "office": "ajunews",
+          "title": "[애널픽] \"신세계, 업황 호조에 2Q 서프...목표가 85만\"",
+          "url": "https://theviewers.co.kr/View.aspx?No=4106681",
+          "office": "theviewers",
           "sentiment": "호재",
           "cause_score": 7,
           "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "중간",
-      "cause_summary": "키움證 \"신세계, 경쟁사 대비 높은 성장세…목표가 85만원↑\""
+      "cause_summary": "[애널픽] \"신세계, 업황 호조에 2Q 서프...목표가 85만\""
     },
     {
-      "ticker": "LG전자",
-      "code": "066570",
-      "tomorrow_up_prob": "76%",
-      "entry": 244500.0,
-      "target": 256725,
-      "stop": 237165,
+      "ticker": "롯데쇼핑",
+      "code": "023530",
+      "tomorrow_up_prob": "75%",
+      "entry": 193200.0,
+      "target": 202860,
+      "stop": 187404,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.94)",
-        "정배열",
-        "RSI51.5 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 0,
-      "cause_news": [
-        {
-          "title": "﻿[특징주] LG전자·네이버 10% 급락…기대주 팔고 삼전·닉스 담는 AI 머...",
-          "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1711792",
-          "office": "ebn",
-          "sentiment": "악재",
-          "cause_score": 10,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "﻿[특징주] LG전자·네이버 10% 급락…기대주 팔고 삼전·닉스 담는 AI 머..."
-    },
-    {
-      "ticker": "후성",
-      "code": "093370",
-      "tomorrow_up_prob": "76%",
-      "entry": 14960.0,
-      "target": 15708,
-      "stop": 14511,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.95)",
+        "강세마감(0.9)",
         "정배열",
         "MACD강세"
       ],
-      "risk": "특이 위험 낮음",
+      "risk": "Stoch 과매수",
       "day_change": null,
       "cause_news": [
         {
-          "title": "[특징주] 후성, 1분기 실적 선방에도 약세…2분기 LiPF6·반도체가스 개...",
-          "url": "https://www.tokenpost.kr/news/economy/360710",
-          "office": "tokenpost",
+          "title": "롯데쇼핑·현대百, 10%대 급등하며 나란히 '신고가'",
+          "url": "https://www.newsis.com/view/NISX20260609_0003662210",
+          "office": "newsis",
           "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[특징주] 후성, 1분기 실적 발표...향후 분기별 사업 전망",
-          "url": "https://www.newstnt.com/news/articleView.html?idxno=702866",
-          "office": "newstnt",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "배터리 화재·효율 잡는다… 후성, 첨단 정밀 화학 원소재로 승부수",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=458749",
-          "office": "pinpointnews",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "[특징주] 후성, 1분기 실적 선방에도 약세…2분기 LiPF6·반도체가스 개..."
-    },
-    {
-      "ticker": "현대오토에버",
-      "code": "307950",
-      "tomorrow_up_prob": "76%",
-      "entry": 754000.0,
-      "target": 791700,
-      "stop": 731380,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.98)",
-        "정배열",
-        "RSI56.0 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] 플래티어, 현대오토에버와 24억 추가 수주…인증중고차 협력 ...",
-          "url": "https://www.tokenpost.kr/news/economy/367343",
-          "office": "tokenpost",
-          "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] 플래티어, 현대오토에버와 24억 규모 추가 공급계약 체결",
-          "url": "https://www.newstnt.com/news/articleView.html?idxno=705657",
-          "office": "newstnt",
+          "title": "\"롯데쇼핑, 백화점 호조·외국인 소비 증가…목표가↑\"-키움",
+          "url": "https://www.hankyung.com/article/2026061071586",
+          "office": "hankyung",
           "sentiment": "호재",
           "cause_score": 11,
-          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
+          "cause_reason": "제목 언급, 주어, 인과표현, 당일"
         },
         {
-          "title": "[브랜드평판] 현대오토에버, IT서비스 상장기업 6월 1위... 삼성SDS, 카카...",
-          "url": "https://www.enetnews.co.kr/news/articleView.html?idxno=50983",
-          "office": "enetnews",
+          "title": "키움證 “롯데쇼핑, 주식시장 강세로 소비심리↑⋯목표가 23만원 상향”",
+          "url": "https://www.etoday.co.kr/news/view/2592039",
+          "office": "etoday",
           "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 플래티어, 현대오토에버와 24억 추가 수주…인증중고차 협력 ..."
+      "cause_summary": "롯데쇼핑·현대百, 10%대 급등하며 나란히 '신고가'"
     },
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "71%",
-      "entry": 248000.0,
-      "target": 260400,
-      "stop": 240560,
+      "tomorrow_up_prob": "72%",
+      "entry": 243500.0,
+      "target": 255675,
+      "stop": 236195,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI56.1 강세"
+        "RSI54.5 강세"
       ],
       "risk": "약한 마감",
-      "day_change": 0,
+      "day_change": -4.28,
       "cause_news": [
         {
           "title": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1...",
@@ -190,136 +118,115 @@
       "cause_summary": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1..."
     },
     {
-      "ticker": "동양고속",
-      "code": "084670",
-      "tomorrow_up_prob": "56%",
-      "entry": 38600.0,
-      "target": 40530,
-      "stop": 37442,
+      "ticker": "라이콤",
+      "code": "388790",
+      "tomorrow_up_prob": "62%",
+      "entry": 8830.0,
+      "target": 9272,
+      "stop": 8565,
       "confidence": "중",
       "reasons": [
-        "Stoch골든",
+        "강세마감(0.76)",
+        "MACD강세",
         "호재"
       ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
+      "risk": "Stoch 과매수",
+      "day_change": 15.26,
       "cause_news": [
         {
-          "title": "[특징주] 동양고속·천일고속, 서울고속버스터미널 재개발 기대감에 강...",
-          "url": "https://www.ajunews.com/view/20260604141554262",
-          "office": "ajunews",
+          "title": "[시간외Y] 라이콤, E8, 하이로닉 '상한가'",
+          "url": "http://www.newsprime.co.kr/news/article.html?no=736137",
+          "office": "newsprime",
           "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 오래됨"
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         },
         {
-          "title": "서울 최대 복합개발 기대에도 수혜주 차별화 장세...동양고속 웃고 동원...",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=458240",
-          "office": "pinpointnews",
+          "title": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=295152",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+        },
+        {
+          "title": "라이콤, 투자주의 예고→투자경고 가능성 확대",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16085258",
+          "office": "topstarnews",
           "sentiment": "호재",
           "cause_score": 7,
-          "cause_reason": "제목 언급, 인과표현"
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 동양고속·천일고속, 서울고속버스터미널 재개발 기대감에 강..."
+      "cause_summary": "[시간외Y] 라이콤, E8, 하이로닉 '상한가'"
     },
     {
-      "ticker": "OCI홀딩스",
-      "code": "010060",
-      "tomorrow_up_prob": "52%",
-      "entry": 289000.0,
-      "target": 303450,
-      "stop": 280330,
-      "confidence": "하",
+      "ticker": "LIG디펜스앤에어로스페이스",
+      "code": "079550",
+      "tomorrow_up_prob": "58%",
+      "entry": 778000.0,
+      "target": 816900,
+      "stop": 754660,
+      "confidence": "중",
       "reasons": [
-        "Stoch골든",
+        "강세마감(0.75)",
         "호재"
-      ],
-      "risk": "약한 마감",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] OCI홀딩스, 美 탈중국 수혜·스페이스X 공급망 기대에 8%대 강...",
-          "url": "https://www.tokenpost.kr/news/economy/363570",
-          "office": "tokenpost",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "[특징주] OCI홀딩스, 美 탈중국 수혜·스페이스X 공급 기대감에 장중 8%...",
-          "url": "https://www.etoday.co.kr/news/view/2588260",
-          "office": "etoday",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "美 태양광株 10배 폭등…한화솔루션·OCI홀딩스 재평가 불붙나",
-          "url": "https://www.thepowernews.co.kr/view.php?ud=202606081638565788de3f0aa1be_7",
-          "office": "thepowernews",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] OCI홀딩스, 美 탈중국 수혜·스페이스X 공급망 기대에 8%대 강..."
-    },
-    {
-      "ticker": "한화솔루션",
-      "code": "009830",
-      "tomorrow_up_prob": "51%",
-      "entry": 38500.0,
-      "target": 40425,
-      "stop": 37345,
-      "confidence": "하",
-      "reasons": [
-        "Stoch골든"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
         {
-          "title": "美 태양광株 10배 폭등…한화솔루션·OCI홀딩스 재평가 불붙나",
-          "url": "https://www.thepowernews.co.kr/view.php?ud=202606081638565788de3f0aa1be_7",
-          "office": "thepowernews",
+          "title": "LIG디펜스앤에어로스페이스, 독보적 유도무기 기술로 글로벌 방산 시장...",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=458919",
+          "office": "pinpointnews",
           "sentiment": "호재",
           "cause_score": 7,
           "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "중간",
-      "cause_summary": "美 태양광株 10배 폭등…한화솔루션·OCI홀딩스 재평가 불붙나"
+      "cause_summary": "LIG디펜스앤에어로스페이스, 독보적 유도무기 기술로 글로벌 방산 시장..."
     },
     {
-      "ticker": "HD현대에너지솔루션",
-      "code": "322000",
-      "tomorrow_up_prob": "48%",
-      "entry": 173000.0,
-      "target": 181650,
-      "stop": 167810,
+      "ticker": "LS ELECTRIC",
+      "code": "010120",
+      "tomorrow_up_prob": "51%",
+      "entry": 232500.0,
+      "target": 244125,
+      "stop": 225525,
       "confidence": "하",
       "reasons": [
-        "Stoch골든"
+        "강세마감(0.74)"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "LS ELECTRIC 주가, 6월 9일 장중 220,000원 5.77% 상승",
+          "url": "https://www.joongangenews.com/news/articleView.html?idxno=524727",
+          "office": "joongangenews",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "LS ELECTRIC 주가, 6월 9일 장중 220,000원 5.77% 상승"
     },
     {
       "ticker": "노타",
       "code": "486990",
-      "tomorrow_up_prob": "46%",
-      "entry": 28950.0,
-      "target": 30398,
-      "stop": 28082,
+      "tomorrow_up_prob": "48%",
+      "entry": 28600.0,
+      "target": 30030,
+      "stop": 27742,
       "confidence": "하",
       "reasons": [
         "호재"
       ],
       "risk": "약한 마감",
-      "day_change": 0,
+      "day_change": -4.8,
       "related_news": [
         {
           "title": "디든·노타·에이로봇 등 총출동…젠슨 황 &quot;韓스타트업 선물은 '이것'...",
@@ -340,168 +247,144 @@
           "sentiment": "호재"
         }
       ]
+    },
+    {
+      "ticker": "OCI홀딩스",
+      "code": "010060",
+      "tomorrow_up_prob": "48%",
+      "entry": 275000.0,
+      "target": 288750,
+      "stop": 266750,
+      "confidence": "하",
+      "reasons": [
+        "호재"
+      ],
+      "risk": "약한 마감",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[특징주] OCI홀딩스, 美 탈중국 수혜·스페이스X 공급망 기대에 8%대 강...",
+          "url": "https://www.tokenpost.kr/news/economy/363570",
+          "office": "tokenpost",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+        },
+        {
+          "title": "[특징주] OCI홀딩스, 美 탈중국 수혜·스페이스X 공급 기대감에 장중 8%...",
+          "url": "https://www.etoday.co.kr/news/view/2588260",
+          "office": "etoday",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] OCI홀딩스, 美 탈중국 수혜·스페이스X 공급망 기대에 8%대 강..."
+    },
+    {
+      "ticker": "HD현대에너지솔루션",
+      "code": "322000",
+      "tomorrow_up_prob": "45%",
+      "entry": 163500.0,
+      "target": 171675,
+      "stop": 158595,
+      "confidence": "하",
+      "reasons": [
+        "Stoch골든"
+      ],
+      "risk": "약한 마감",
+      "day_change": null
     }
   ],
   "closing_bet": [
     {
       "ticker": "신세계",
       "code": "004170",
-      "tomorrow_up_prob": "84%",
-      "entry": 675000.0,
-      "target": 708750,
-      "stop": 654750,
+      "tomorrow_up_prob": "85%",
+      "entry": 679000.0,
+      "target": 712950,
+      "stop": 658630,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.73)",
+        "강세마감(0.8)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null,
+      "day_change": 9.29,
       "cause_news": [
         {
-          "title": "키움證 \"신세계, 경쟁사 대비 높은 성장세…목표가 85만원↑\"",
-          "url": "https://www.ajunews.com/view/20260610082251947",
-          "office": "ajunews",
+          "title": "[애널픽] \"신세계, 업황 호조에 2Q 서프...목표가 85만\"",
+          "url": "https://theviewers.co.kr/View.aspx?No=4106681",
+          "office": "theviewers",
           "sentiment": "호재",
           "cause_score": 7,
           "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "중간",
-      "cause_summary": "키움證 \"신세계, 경쟁사 대비 높은 성장세…목표가 85만원↑\""
+      "cause_summary": "[애널픽] \"신세계, 업황 호조에 2Q 서프...목표가 85만\""
     },
     {
-      "ticker": "LG전자",
-      "code": "066570",
-      "tomorrow_up_prob": "76%",
-      "entry": 244500.0,
-      "target": 256725,
-      "stop": 237165,
+      "ticker": "롯데쇼핑",
+      "code": "023530",
+      "tomorrow_up_prob": "75%",
+      "entry": 193200.0,
+      "target": 202860,
+      "stop": 187404,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.94)",
-        "정배열",
-        "RSI51.5 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 0,
-      "cause_news": [
-        {
-          "title": "﻿[특징주] LG전자·네이버 10% 급락…기대주 팔고 삼전·닉스 담는 AI 머...",
-          "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1711792",
-          "office": "ebn",
-          "sentiment": "악재",
-          "cause_score": 10,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "﻿[특징주] LG전자·네이버 10% 급락…기대주 팔고 삼전·닉스 담는 AI 머..."
-    },
-    {
-      "ticker": "후성",
-      "code": "093370",
-      "tomorrow_up_prob": "76%",
-      "entry": 14960.0,
-      "target": 15708,
-      "stop": 14511,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.95)",
+        "강세마감(0.9)",
         "정배열",
         "MACD강세"
       ],
-      "risk": "특이 위험 낮음",
+      "risk": "Stoch 과매수",
       "day_change": null,
       "cause_news": [
         {
-          "title": "[특징주] 후성, 1분기 실적 선방에도 약세…2분기 LiPF6·반도체가스 개...",
-          "url": "https://www.tokenpost.kr/news/economy/360710",
-          "office": "tokenpost",
+          "title": "롯데쇼핑·현대百, 10%대 급등하며 나란히 '신고가'",
+          "url": "https://www.newsis.com/view/NISX20260609_0003662210",
+          "office": "newsis",
           "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[특징주] 후성, 1분기 실적 발표...향후 분기별 사업 전망",
-          "url": "https://www.newstnt.com/news/articleView.html?idxno=702866",
-          "office": "newstnt",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "배터리 화재·효율 잡는다… 후성, 첨단 정밀 화학 원소재로 승부수",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=458749",
-          "office": "pinpointnews",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "[특징주] 후성, 1분기 실적 선방에도 약세…2분기 LiPF6·반도체가스 개..."
-    },
-    {
-      "ticker": "현대오토에버",
-      "code": "307950",
-      "tomorrow_up_prob": "76%",
-      "entry": 754000.0,
-      "target": 791700,
-      "stop": 731380,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.98)",
-        "정배열",
-        "RSI56.0 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] 플래티어, 현대오토에버와 24억 추가 수주…인증중고차 협력 ...",
-          "url": "https://www.tokenpost.kr/news/economy/367343",
-          "office": "tokenpost",
-          "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] 플래티어, 현대오토에버와 24억 규모 추가 공급계약 체결",
-          "url": "https://www.newstnt.com/news/articleView.html?idxno=705657",
-          "office": "newstnt",
+          "title": "\"롯데쇼핑, 백화점 호조·외국인 소비 증가…목표가↑\"-키움",
+          "url": "https://www.hankyung.com/article/2026061071586",
+          "office": "hankyung",
           "sentiment": "호재",
           "cause_score": 11,
-          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
+          "cause_reason": "제목 언급, 주어, 인과표현, 당일"
         },
         {
-          "title": "[브랜드평판] 현대오토에버, IT서비스 상장기업 6월 1위... 삼성SDS, 카카...",
-          "url": "https://www.enetnews.co.kr/news/articleView.html?idxno=50983",
-          "office": "enetnews",
+          "title": "키움證 “롯데쇼핑, 주식시장 강세로 소비심리↑⋯목표가 23만원 상향”",
+          "url": "https://www.etoday.co.kr/news/view/2592039",
+          "office": "etoday",
           "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 플래티어, 현대오토에버와 24억 추가 수주…인증중고차 협력 ..."
+      "cause_summary": "롯데쇼핑·현대百, 10%대 급등하며 나란히 '신고가'"
     },
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "71%",
-      "entry": 248000.0,
-      "target": 260400,
-      "stop": 240560,
+      "tomorrow_up_prob": "72%",
+      "entry": 243500.0,
+      "target": 255675,
+      "stop": 236195,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI56.1 강세"
+        "RSI54.5 강세"
       ],
       "risk": "약한 마감",
-      "day_change": 0,
+      "day_change": -4.28,
       "cause_news": [
         {
           "title": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1...",
@@ -530,6 +413,77 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1..."
+    },
+    {
+      "ticker": "라이콤",
+      "code": "388790",
+      "tomorrow_up_prob": "62%",
+      "entry": 8830.0,
+      "target": 9272,
+      "stop": 8565,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.76)",
+        "MACD강세",
+        "호재"
+      ],
+      "risk": "Stoch 과매수",
+      "day_change": 15.26,
+      "cause_news": [
+        {
+          "title": "[시간외Y] 라이콤, E8, 하이로닉 '상한가'",
+          "url": "http://www.newsprime.co.kr/news/article.html?no=736137",
+          "office": "newsprime",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=295152",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+        },
+        {
+          "title": "라이콤, 투자주의 예고→투자경고 가능성 확대",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16085258",
+          "office": "topstarnews",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[시간외Y] 라이콤, E8, 하이로닉 '상한가'"
+    },
+    {
+      "ticker": "LIG디펜스앤에어로스페이스",
+      "code": "079550",
+      "tomorrow_up_prob": "58%",
+      "entry": 778000.0,
+      "target": 816900,
+      "stop": 754660,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.75)",
+        "호재"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "LIG디펜스앤에어로스페이스, 독보적 유도무기 기술로 글로벌 방산 시장...",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=458919",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "LIG디펜스앤에어로스페이스, 독보적 유도무기 기술로 글로벌 방산 시장..."
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
