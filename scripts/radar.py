@@ -139,12 +139,12 @@ def suspicion_score(spark_clusters, fade_pct, ma10_margin_pct, acc, event_score=
 # ---------- 메인 깔때기 ----------
 
 def scan_one(name, code, p, events):
-    """단일 종목 전체 판정. 탈락 시 None, 통과 시 suspect dict."""
+    """단일 종목 전체 판정. 조건 미달 None / 데이터 오류 "ERR" / 통과 suspect dict."""
     try:
         now = kis.price_now(code)
     except Exception as e:
         log(f"  [skip] {name}: 현재가 조회 실패 {e}")
-        return None
+        return "ERR"
     if not now["price"] or not now["prev_close"]:
         return None
 
@@ -164,7 +164,7 @@ def scan_one(name, code, p, events):
         daily = kis.daily_prices(code, days=15)
     except Exception as e:
         log(f"  [skip] {name}: 일봉 실패 {e}")
-        return None
+        return "ERR"
     closes = [d["close"] for d in daily]
     if len(closes) < 10:
         return None
@@ -177,7 +177,7 @@ def scan_one(name, code, p, events):
         bars = kis.minute_bars_today(code)
     except Exception as e:
         log(f"  [skip] {name}: 분봉 실패 {e}")
-        return None
+        return "ERR"
     sparks = detect_sparks(bars, p.spark_x, p.spark_pct)
     if not sparks:
         return None
@@ -314,12 +314,19 @@ def main():
     log(f"[radar] 1차 게이트 통과 {len(candidates)}종목 → KIS 정밀 판정")
 
     suspects = []
+    err_count = 0
     for s in candidates:
         r = scan_one(s["name"], s["code"], p, events)
-        if r:
+        if r == "ERR":
+            err_count += 1
+        elif r:
             log(f"  [HIT] {s['name']} score={r['suspicion_score']} "
                 f"고가{r['high_pct']}% 현재{r['change_pct']}% 페이드{r['fade_pct']}%")
             suspects.append(r)
+    if err_count == len(candidates):
+        # 전 종목 데이터 오류 = KIS 키 부재/토큰 장애 — 거짓 '빈 레이더' 게시 방지
+        log(f"[error] 전 종목({err_count}) 조회 실패 — KIS 장애/키 미설정 의심, 중단")
+        sys.exit(3)
     suspects.sort(key=lambda x: -x["suspicion_score"])
 
     out = {
