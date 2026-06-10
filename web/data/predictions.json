@@ -1,34 +1,26 @@
 {
-  "as_of": "2026-06-10 11:52 KST",
+  "as_of": "2026-06-10 12:07 KST",
   "intraday_rank": [
     {
       "ticker": "신세계",
       "code": "004170",
       "tomorrow_up_prob": "91%",
-      "entry": 679000.0,
-      "target": 712950,
-      "stop": 658630,
+      "entry": 681000.0,
+      "target": 715050,
+      "stop": 660570,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.8)",
+        "강세마감(0.83)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 8.81,
+      "day_change": 8.97,
       "cause_news": [
         {
           "title": "[투데이's 특징주] 신세계, 외국인 관광객 증가 수혜 기대감에 장 초반...",
           "url": "https://www.todaykorea.co.kr/news/articleView.html?idxno=402525",
           "office": "todaykorea",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[ET특징주]신세계, 백화점 호조 기대감에 상승세",
-          "url": "https://www.etnews.com/20260610000084",
-          "office": "etnews",
           "sentiment": "호재",
           "cause_score": 17,
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
@@ -40,6 +32,14 @@
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "신세계 주가 장중 9%대 올라, 매출 증가 기대감 속 백화점주 강세",
+          "url": "https://www.businesspost.co.kr/BP?command=article_view&num=439660",
+          "office": "businesspost",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
@@ -48,18 +48,18 @@
     {
       "ticker": "팸텍",
       "code": "271830",
-      "tomorrow_up_prob": "89%",
-      "entry": 2495.0,
-      "target": 2620,
-      "stop": 2420,
+      "tomorrow_up_prob": "90%",
+      "entry": 2475.0,
+      "target": 2599,
+      "stop": 2401,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.89)",
+        "강세마감(0.86)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 15.73,
+      "day_change": 17.14,
       "cause_news": [
         {
           "title": "[특징주] 팸텍, 웨이퍼 로봇 기업 티아이에스 인수 소식에 4거래일 연속...",
@@ -93,17 +93,17 @@
       "ticker": "후성",
       "code": "093370",
       "tomorrow_up_prob": "88%",
-      "entry": 16030.0,
-      "target": 16832,
-      "stop": 15549,
+      "entry": 15940.0,
+      "target": 16737,
+      "stop": 15462,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.78)",
+        "강세마감(0.74)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 19.38,
+      "day_change": 18.82,
       "cause_news": [
         {
           "title": "후성 주가 급등세…수차례 VI 발동하기도",
@@ -137,17 +137,17 @@
       "ticker": "NAVER",
       "code": "035420",
       "tomorrow_up_prob": "78%",
-      "entry": 233500.0,
-      "target": 245175,
-      "stop": 226495,
+      "entry": 232500.0,
+      "target": 244125,
+      "stop": 225525,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI51.2 강세"
+        "RSI50.9 강세"
       ],
       "risk": "약한 마감",
-      "day_change": -9.53,
+      "day_change": -9.92,
       "cause_news": [
         {
           "title": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1...",
@@ -224,7 +224,7 @@
     {
       "ticker": "현대건설",
       "code": "000720",
-      "tomorrow_up_prob": "68%",
+      "tomorrow_up_prob": "69%",
       "entry": 132100.0,
       "target": 138705,
       "stop": 128137,
@@ -258,44 +258,60 @@
       "cause_summary": "현대건설, 7%대 급등…5000억 조달해 미래 에너지 사업 확대"
     },
     {
-      "ticker": "HD현대마린솔루션",
-      "code": "443060",
+      "ticker": "SK이터닉스",
+      "code": "475150",
       "tomorrow_up_prob": "62%",
-      "entry": 227000.0,
-      "target": 238350,
-      "stop": 220190,
+      "entry": 42250.0,
+      "target": 44362,
+      "stop": 40982,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.95)",
-        "RSI50.3 강세",
-        "Stoch골든"
+        "거래량1.98배",
+        "호재",
+        "장중 13회 지속"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null,
+      "day_change": 23.13,
       "cause_news": [
         {
-          "title": "[특징주] HD현대마린솔루션, 1분기 호실적·증권가 목표가 줄상향에 10%...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=293050",
-          "office": "widedaily",
+          "title": "[특징주] SK이터닉스, 신재생에너지 사업 재편 소식에 상한가",
+          "url": "https://www.ajunews.com/view/20260610113207436",
+          "office": "ajunews",
           "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        },
+        {
+          "title": "[ET특징주] SK이터닉스, 신재생에너지 사업 재편 기대감에 주가 上",
+          "url": "https://www.etnews.com/20260610000192",
+          "office": "etnews",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] SK이터닉스, 신재생에너지주 오름세 속 +29.87% 上 기록",
+          "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1263919",
+          "office": "jeonmae",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         }
       ],
-      "cause_confidence": "중간",
-      "cause_summary": "[특징주] HD현대마린솔루션, 1분기 호실적·증권가 목표가 줄상향에 10%..."
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] SK이터닉스, 신재생에너지 사업 재편 소식에 상한가"
     },
     {
       "ticker": "LS ELECTRIC",
       "code": "010120",
-      "tomorrow_up_prob": "56%",
+      "tomorrow_up_prob": "57%",
       "entry": 238000.0,
       "target": 249900,
       "stop": 230860,
       "confidence": "중",
       "reasons": [
         "강세마감(0.74)",
-        "장중 6회 지속"
+        "장중 7회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null
@@ -304,16 +320,16 @@
       "ticker": "노타",
       "code": "486990",
       "tomorrow_up_prob": "54%",
-      "entry": 27550.0,
-      "target": 28928,
-      "stop": 26724,
+      "entry": 27450.0,
+      "target": 28822,
+      "stop": 26626,
       "confidence": "하",
       "reasons": [
         "호재",
-        "장중 12회 지속"
+        "장중 13회 지속"
       ],
       "risk": "약한 마감",
-      "day_change": -8.77,
+      "day_change": -9.11,
       "related_news": [
         {
           "title": "디든·노타·에이로봇 등 총출동…젠슨 황 &quot;韓스타트업 선물은 '이것'...",
@@ -341,30 +357,22 @@
       "ticker": "신세계",
       "code": "004170",
       "tomorrow_up_prob": "91%",
-      "entry": 679000.0,
-      "target": 712950,
-      "stop": 658630,
+      "entry": 681000.0,
+      "target": 715050,
+      "stop": 660570,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.8)",
+        "강세마감(0.83)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 8.81,
+      "day_change": 8.97,
       "cause_news": [
         {
           "title": "[투데이's 특징주] 신세계, 외국인 관광객 증가 수혜 기대감에 장 초반...",
           "url": "https://www.todaykorea.co.kr/news/articleView.html?idxno=402525",
           "office": "todaykorea",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[ET특징주]신세계, 백화점 호조 기대감에 상승세",
-          "url": "https://www.etnews.com/20260610000084",
-          "office": "etnews",
           "sentiment": "호재",
           "cause_score": 17,
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
@@ -376,6 +384,14 @@
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "신세계 주가 장중 9%대 올라, 매출 증가 기대감 속 백화점주 강세",
+          "url": "https://www.businesspost.co.kr/BP?command=article_view&num=439660",
+          "office": "businesspost",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
@@ -384,18 +400,18 @@
     {
       "ticker": "팸텍",
       "code": "271830",
-      "tomorrow_up_prob": "89%",
-      "entry": 2495.0,
-      "target": 2620,
-      "stop": 2420,
+      "tomorrow_up_prob": "90%",
+      "entry": 2475.0,
+      "target": 2599,
+      "stop": 2401,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.89)",
+        "강세마감(0.86)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 15.73,
+      "day_change": 17.14,
       "cause_news": [
         {
           "title": "[특징주] 팸텍, 웨이퍼 로봇 기업 티아이에스 인수 소식에 4거래일 연속...",
@@ -429,17 +445,17 @@
       "ticker": "후성",
       "code": "093370",
       "tomorrow_up_prob": "88%",
-      "entry": 16030.0,
-      "target": 16832,
-      "stop": 15549,
+      "entry": 15940.0,
+      "target": 16737,
+      "stop": 15462,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.78)",
+        "강세마감(0.74)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 19.38,
+      "day_change": 18.82,
       "cause_news": [
         {
           "title": "후성 주가 급등세…수차례 VI 발동하기도",
@@ -473,17 +489,17 @@
       "ticker": "NAVER",
       "code": "035420",
       "tomorrow_up_prob": "78%",
-      "entry": 233500.0,
-      "target": 245175,
-      "stop": 226495,
+      "entry": 232500.0,
+      "target": 244125,
+      "stop": 225525,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI51.2 강세"
+        "RSI50.9 강세"
       ],
       "risk": "약한 마감",
-      "day_change": -9.53,
+      "day_change": -9.92,
       "cause_news": [
         {
           "title": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1...",
