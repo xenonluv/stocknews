@@ -1,21 +1,21 @@
 {
-  "as_of": "2026-06-10 12:22 KST",
+  "as_of": "2026-06-10 12:37 KST",
   "intraday_rank": [
     {
       "ticker": "신세계",
       "code": "004170",
       "tomorrow_up_prob": "91%",
-      "entry": 678000.0,
-      "target": 711900,
-      "stop": 657660,
+      "entry": 673000.0,
+      "target": 706650,
+      "stop": 652810,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.78)",
+        "강세마감(0.7)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 8.81,
+      "day_change": 8.17,
       "cause_news": [
         {
           "title": "[투데이's 특징주] 신세계, 외국인 관광객 증가 수혜 기대감에 장 초반...",
@@ -49,17 +49,17 @@
       "ticker": "후성",
       "code": "093370",
       "tomorrow_up_prob": "88%",
-      "entry": 16000.0,
-      "target": 16800,
-      "stop": 15520,
+      "entry": 15940.0,
+      "target": 16737,
+      "stop": 15462,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.77)",
+        "강세마감(0.74)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 18.27,
+      "day_change": 17.9,
       "cause_news": [
         {
           "title": "후성 주가 급등세…수차례 VI 발동하기도",
@@ -90,176 +90,20 @@
       "cause_summary": "후성 주가 급등세…수차례 VI 발동하기도"
     },
     {
-      "ticker": "팸텍",
-      "code": "271830",
-      "tomorrow_up_prob": "82%",
-      "entry": 2355.0,
-      "target": 2473,
-      "stop": 2284,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI62.8 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 14.08,
-      "cause_news": [
-        {
-          "title": "[특징주] 팸텍, 웨이퍼 로봇 기업 티아이에스 인수 소식에 4거래일 연속...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=295148",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "[주요공시] 삼성전자, 팸텍, 하나기술, 현대건설, 하이로닉, SKC, 소룩스...",
-          "url": "https://www.kdpress.co.kr/news/articleView.html?idxno=205979",
-          "office": "kdpress",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-        },
-        {
-          "title": "[특징주] 팸텍, 티아이에스 지분 인수에 4거래일 연속 '강세'",
-          "url": "https://www.g-enews.com/view.php?ud=20260605103723908044093b5d4e_1",
-          "office": "g-enews",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 팸텍, 웨이퍼 로봇 기업 티아이에스 인수 소식에 4거래일 연속..."
-    },
-    {
-      "ticker": "NAVER",
-      "code": "035420",
-      "tomorrow_up_prob": "78%",
-      "entry": 232000.0,
-      "target": 243600,
-      "stop": 225040,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI50.7 강세"
-      ],
-      "risk": "약한 마감",
-      "day_change": -9.73,
-      "cause_news": [
-        {
-          "title": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1...",
-          "url": "https://www.tokenpost.kr/news/economy/367307",
-          "office": "tokenpost",
-          "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락"
-        },
-        {
-          "title": "[특징주] 네이버, 엔비디아 협력 발표 뒤 차익실현에 '급락'",
-          "url": "https://www.g-enews.com/view.php?ud=20260609095656477744093b5d4e_1",
-          "office": "g-enews",
-          "sentiment": "악재",
-          "cause_score": 8,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재"
-        },
-        {
-          "title": "[ET특징주] 젠슨 황 출국과 함께… LG전자·네이버 주가 하락",
-          "url": "https://www.etnews.com/20260609000187",
-          "office": "etnews",
-          "sentiment": "악재",
-          "cause_score": 6,
-          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 악재"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1..."
-    },
-    {
-      "ticker": "화신정공",
-      "code": "126640",
-      "tomorrow_up_prob": "72%",
-      "entry": 4430.0,
-      "target": 4652,
-      "stop": 4297,
+      "ticker": "SK이터닉스",
+      "code": "475150",
+      "tomorrow_up_prob": "74%",
+      "entry": 44350.0,
+      "target": 46568,
+      "stop": 43020,
       "confidence": "상",
       "reasons": [
         "강세마감(1.0)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "RSI90.2 과매수, Stoch 과매수",
-      "day_change": 29.91,
-      "cause_news": [
-        {
-          "title": "[특징주] 화신정공, 보스턴다이나믹스 '아틀라스' 공급망 편입 기대감에...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=295327",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락"
-        },
-        {
-          "title": "화신정공, 투자주의종목 지정→주가 급등에 투자경보",
-          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16085251",
-          "office": "topstarnews",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "화신정공, 투자경고종목 지정예고→주가 급등세 주의 요망",
-          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16085242",
-          "office": "topstarnews",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 화신정공, 보스턴다이나믹스 '아틀라스' 공급망 편입 기대감에..."
-    },
-    {
-      "ticker": "제주은행",
-      "code": "006220",
-      "tomorrow_up_prob": "67%",
-      "entry": 12260.0,
-      "target": 12873,
-      "stop": 11892,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.9)",
-        "RSI60.5 강세",
-        "거래량3.09배"
+        "RSI51.9 강세",
+        "거래량2.7배"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null,
-      "related_news": [
-        {
-          "title": "고객 상담 넘어 업무 혁신으로… 제주은행, AI 은행 전환 속도",
-          "url": "https://n.news.naver.com/mnews/article/661/0000077807",
-          "office": "JIBS",
-          "sentiment": "호재"
-        }
-      ]
-    },
-    {
-      "ticker": "SK이터닉스",
-      "code": "475150",
-      "tomorrow_up_prob": "66%",
-      "entry": 43100.0,
-      "target": 45255,
-      "stop": 41807,
-      "confidence": "중",
-      "reasons": [
-        "RSI50.0 강세",
-        "거래량2.32배",
-        "호재"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 24.6,
+      "day_change": 27.38,
       "cause_news": [
         {
           "title": "[특징주] SK이터닉스, 신재생에너지 사업 재편 소식에 상한가",
@@ -290,34 +134,224 @@
       "cause_summary": "[특징주] SK이터닉스, 신재생에너지 사업 재편 소식에 상한가"
     },
     {
-      "ticker": "LS ELECTRIC",
-      "code": "010120",
-      "tomorrow_up_prob": "58%",
-      "entry": 239500.0,
-      "target": 251475,
-      "stop": 232315,
+      "ticker": "화신정공",
+      "code": "126640",
+      "tomorrow_up_prob": "72%",
+      "entry": 4430.0,
+      "target": 4652,
+      "stop": 4297,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(1.0)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "RSI90.2 과매수, Stoch 과매수",
+      "day_change": 29.91,
+      "cause_news": [
+        {
+          "title": "[특징주] 화신정공, 보스턴다이나믹스 '아틀라스' 공급망 편입 기대감에...",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=295327",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락"
+        },
+        {
+          "title": "화신정공, 투자주의종목 지정→주가 급등에 투자경보",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16085251",
+          "office": "topstarnews",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "화신정공, 투자경고종목 지정예고→주가 급등세 주의 요망",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16085242",
+          "office": "topstarnews",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 화신정공, 보스턴다이나믹스 '아틀라스' 공급망 편입 기대감에..."
+    },
+    {
+      "ticker": "NAVER",
+      "code": "035420",
+      "tomorrow_up_prob": "71%",
+      "entry": 230500.0,
+      "target": 242025,
+      "stop": 223585,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI50.3 강세"
+      ],
+      "risk": "약한 마감",
+      "day_change": -10.12,
+      "cause_news": [
+        {
+          "title": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1...",
+          "url": "https://www.tokenpost.kr/news/economy/367307",
+          "office": "tokenpost",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락"
+        },
+        {
+          "title": "[특징주] 네이버, 엔비디아 협력 발표 뒤 차익실현에 '급락'",
+          "url": "https://www.g-enews.com/view.php?ud=20260609095656477744093b5d4e_1",
+          "office": "g-enews",
+          "sentiment": "악재",
+          "cause_score": 8,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재"
+        },
+        {
+          "title": "[ET특징주] 젠슨 황 출국과 함께… LG전자·네이버 주가 하락",
+          "url": "https://www.etnews.com/20260609000187",
+          "office": "etnews",
+          "sentiment": "악재",
+          "cause_score": 6,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 악재"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1..."
+    },
+    {
+      "ticker": "케이뱅크",
+      "code": "279570",
+      "tomorrow_up_prob": "68%",
+      "entry": 6540.0,
+      "target": 6867,
+      "stop": 6344,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.8)",
-        "장중 8회 지속"
+        "강세마감(0.94)",
+        "RSI66.4 강세",
+        "거래량4.2배"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null
+      "day_change": 10.73,
+      "related_news": [
+        {
+          "title": "“월급쟁이 대신 사장님 모셔요”…인뱅들 돈 버는 법 바꿨다",
+          "url": "https://n.news.naver.com/mnews/article/009/0005690132",
+          "office": "매일경제",
+          "sentiment": "호재"
+        },
+        {
+          "title": "주가 부진한 케이뱅크…락업 해제에도 FI ‘딜레마’",
+          "url": "https://n.news.naver.com/mnews/article/011/0004628096",
+          "office": "서울경제",
+          "sentiment": "혼재"
+        }
+      ]
+    },
+    {
+      "ticker": "제주은행",
+      "code": "006220",
+      "tomorrow_up_prob": "68%",
+      "entry": 12300.0,
+      "target": 12915,
+      "stop": 11931,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.9)",
+        "RSI60.8 강세",
+        "거래량3.53배"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "related_news": [
+        {
+          "title": "고객 상담 넘어 업무 혁신으로… 제주은행, AI 은행 전환 속도",
+          "url": "https://n.news.naver.com/mnews/article/661/0000077807",
+          "office": "JIBS",
+          "sentiment": "호재"
+        }
+      ]
+    },
+    {
+      "ticker": "SK오션플랜트",
+      "code": "100090",
+      "tomorrow_up_prob": "66%",
+      "entry": 16900.0,
+      "target": 17745,
+      "stop": 16393,
+      "confidence": "중",
+      "reasons": [
+        "Stoch골든",
+        "거래량4.97배",
+        "호재"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "SK이터닉스·SK오션플랜트, SK그룹 신재생 사업 재편 기대감에 동반 강세...",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026061010000321317",
+          "office": "newsway",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        },
+        {
+          "title": "SK오션플랜트 주가, 6월 10일 장중 16,700원 14.86% 상승",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16086014",
+          "office": "topstarnews",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "SK이터닉스·SK오션플랜트, SK그룹 신재생 사업 재편 기대감에 동반 강세..."
+    },
+    {
+      "ticker": "한국항공우주",
+      "code": "047810",
+      "tomorrow_up_prob": "57%",
+      "entry": 137600.0,
+      "target": 144480,
+      "stop": 133472,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.93)",
+        "호재"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "한국항공우주, 글로벌 안보 위기 속 완제기 수주 랠리… 영토 확장 가속...",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=458996",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "한국항공우주, 글로벌 안보 위기 속 완제기 수주 랠리… 영토 확장 가속..."
     },
     {
       "ticker": "노타",
       "code": "486990",
       "tomorrow_up_prob": "54%",
-      "entry": 27350.0,
-      "target": 28718,
-      "stop": 26530,
+      "entry": 27250.0,
+      "target": 28612,
+      "stop": 26432,
       "confidence": "하",
       "reasons": [
         "호재",
-        "장중 14회 지속"
+        "장중 15회 지속"
       ],
       "risk": "약한 마감",
-      "day_change": -9.11,
+      "day_change": -9.27,
       "related_news": [
         {
           "title": "디든·노타·에이로봇 등 총출동…젠슨 황 &quot;韓스타트업 선물은 '이것'...",
@@ -345,17 +379,17 @@
       "ticker": "신세계",
       "code": "004170",
       "tomorrow_up_prob": "91%",
-      "entry": 678000.0,
-      "target": 711900,
-      "stop": 657660,
+      "entry": 673000.0,
+      "target": 706650,
+      "stop": 652810,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.78)",
+        "강세마감(0.7)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 8.81,
+      "day_change": 8.17,
       "cause_news": [
         {
           "title": "[투데이's 특징주] 신세계, 외국인 관광객 증가 수혜 기대감에 장 초반...",
@@ -389,17 +423,17 @@
       "ticker": "후성",
       "code": "093370",
       "tomorrow_up_prob": "88%",
-      "entry": 16000.0,
-      "target": 16800,
-      "stop": 15520,
+      "entry": 15940.0,
+      "target": 16737,
+      "stop": 15462,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.77)",
+        "강세마감(0.74)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 18.27,
+      "day_change": 17.9,
       "cause_news": [
         {
           "title": "후성 주가 급등세…수차례 VI 발동하기도",
@@ -430,92 +464,48 @@
       "cause_summary": "후성 주가 급등세…수차례 VI 발동하기도"
     },
     {
-      "ticker": "팸텍",
-      "code": "271830",
-      "tomorrow_up_prob": "82%",
-      "entry": 2355.0,
-      "target": 2473,
-      "stop": 2284,
+      "ticker": "SK이터닉스",
+      "code": "475150",
+      "tomorrow_up_prob": "74%",
+      "entry": 44350.0,
+      "target": 46568,
+      "stop": 43020,
       "confidence": "상",
       "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI62.8 강세"
+        "강세마감(1.0)",
+        "RSI51.9 강세",
+        "거래량2.7배"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 14.08,
+      "day_change": 27.38,
       "cause_news": [
         {
-          "title": "[특징주] 팸텍, 웨이퍼 로봇 기업 티아이에스 인수 소식에 4거래일 연속...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=295148",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "[주요공시] 삼성전자, 팸텍, 하나기술, 현대건설, 하이로닉, SKC, 소룩스...",
-          "url": "https://www.kdpress.co.kr/news/articleView.html?idxno=205979",
-          "office": "kdpress",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-        },
-        {
-          "title": "[특징주] 팸텍, 티아이에스 지분 인수에 4거래일 연속 '강세'",
-          "url": "https://www.g-enews.com/view.php?ud=20260605103723908044093b5d4e_1",
-          "office": "g-enews",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 팸텍, 웨이퍼 로봇 기업 티아이에스 인수 소식에 4거래일 연속..."
-    },
-    {
-      "ticker": "NAVER",
-      "code": "035420",
-      "tomorrow_up_prob": "78%",
-      "entry": 232000.0,
-      "target": 243600,
-      "stop": 225040,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI50.7 강세"
-      ],
-      "risk": "약한 마감",
-      "day_change": -9.73,
-      "cause_news": [
-        {
-          "title": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1...",
-          "url": "https://www.tokenpost.kr/news/economy/367307",
-          "office": "tokenpost",
+          "title": "[특징주] SK이터닉스, 신재생에너지 사업 재편 소식에 상한가",
+          "url": "https://www.ajunews.com/view/20260610113207436",
+          "office": "ajunews",
           "sentiment": "호재",
           "cause_score": 15,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락"
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
         },
         {
-          "title": "[특징주] 네이버, 엔비디아 협력 발표 뒤 차익실현에 '급락'",
-          "url": "https://www.g-enews.com/view.php?ud=20260609095656477744093b5d4e_1",
-          "office": "g-enews",
-          "sentiment": "악재",
-          "cause_score": 8,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재"
-        },
-        {
-          "title": "[ET특징주] 젠슨 황 출국과 함께… LG전자·네이버 주가 하락",
-          "url": "https://www.etnews.com/20260609000187",
+          "title": "[ET특징주] SK이터닉스, 신재생에너지 사업 재편 기대감에 주가 上",
+          "url": "https://www.etnews.com/20260610000192",
           "office": "etnews",
-          "sentiment": "악재",
-          "cause_score": 6,
-          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 악재"
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] SK이터닉스, 신재생에너지주 오름세 속 +29.87% 上 기록",
+          "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1263919",
+          "office": "jeonmae",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1..."
+      "cause_summary": "[특징주] SK이터닉스, 신재생에너지 사업 재편 소식에 상한가"
     },
     {
       "ticker": "화신정공",
@@ -560,6 +550,50 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "[특징주] 화신정공, 보스턴다이나믹스 '아틀라스' 공급망 편입 기대감에..."
+    },
+    {
+      "ticker": "NAVER",
+      "code": "035420",
+      "tomorrow_up_prob": "71%",
+      "entry": 230500.0,
+      "target": 242025,
+      "stop": 223585,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI50.3 강세"
+      ],
+      "risk": "약한 마감",
+      "day_change": -10.12,
+      "cause_news": [
+        {
+          "title": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1...",
+          "url": "https://www.tokenpost.kr/news/economy/367307",
+          "office": "tokenpost",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락"
+        },
+        {
+          "title": "[특징주] 네이버, 엔비디아 협력 발표 뒤 차익실현에 '급락'",
+          "url": "https://www.g-enews.com/view.php?ud=20260609095656477744093b5d4e_1",
+          "office": "g-enews",
+          "sentiment": "악재",
+          "cause_score": 8,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 악재"
+        },
+        {
+          "title": "[ET특징주] 젠슨 황 출국과 함께… LG전자·네이버 주가 하락",
+          "url": "https://www.etnews.com/20260609000187",
+          "office": "etnews",
+          "sentiment": "악재",
+          "cause_score": 6,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 악재"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1..."
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
