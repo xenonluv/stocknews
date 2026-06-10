@@ -1,0 +1,65 @@
+{
+ "as_of": "2026-06-10 22:11 KST",
+ "summary": {
+  "n": 0,
+  "hit_rate": null,
+  "avg_return": null,
+  "high3_rate": null,
+  "tracking_days": 1
+ },
+ "series": [
+  {
+   "date": "20260610",
+   "n": 0,
+   "hits": 0,
+   "hit_rate": null,
+   "cum_n": 0,
+   "cum_hit_rate": null
+  }
+ ],
+ "bins": [
+  {
+   "lo": 40,
+   "hi": 60,
+   "n": 0,
+   "actual_rate": null,
+   "valid": false
+  },
+  {
+   "lo": 60,
+   "hi": 75,
+   "n": 0,
+   "actual_rate": null,
+   "valid": false
+  },
+  {
+   "lo": 75,
+   "hi": 101,
+   "n": 0,
+   "actual_rate": null,
+   "valid": false
+  }
+ ],
+ "weights": {
+  "current": {
+   "spark": 15.0,
+   "fade": 15.0,
+   "flow": 15.0,
+   "event": 15.0,
+   "ma10": 10.0
+  },
+  "default": {
+   "spark": 15.0,
+   "fade": 15.0,
+   "flow": 15.0,
+   "event": 15.0,
+   "ma10": 10.0
+  },
+  "tuned": false,
+  "basis_n": 0,
+  "tune_min_samples": 30,
+  "history": []
+ },
+ "recent": [],
+ "disclaimer": "백테스트는 '당일 종가 매수 → 익일 종가 매도' 가정의 참고 지표이며 수수료·슬리피지 미반영. 매수 추천이 아닙니다."
+}

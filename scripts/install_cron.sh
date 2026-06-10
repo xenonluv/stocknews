@@ -21,13 +21,16 @@ TOP=30; BET=5
 L_PUBLISH="0,15,30,45 9-15 * * 1-5 cd $REPO && $PY scripts/publish.py >> /tmp/publish.log 2>&1"
 L_FORECAST="7,22,37,52 9-15 * * 1-5 cd $REPO && $PY analyzer/run.py --push --top $TOP --bet $BET >> /tmp/forecast.log 2>&1"
 L_BACKTEST="10 17 * * 1-5 cd $REPO && $PY analyzer/backtest.py --push >> /tmp/backtest.log 2>&1"
+# 레이더 자가 검증(익일 적중 채점 + 가중치 튜닝 + /performance 데이터) — backtest와 10분 시차
+L_RADAR_BT="20 17 * * 1-5 cd $REPO && $PY scripts/radar_backtest.py --push >> /tmp/radar_backtest.log 2>&1"
 
 NEW_CRON="$(
-  crontab -l 2>/dev/null | grep -v -E "scripts/publish.py|analyzer/run.py|analyzer/backtest.py|^PATH=/usr/local/bin:/usr/bin:/bin$" || true
+  crontab -l 2>/dev/null | grep -v -E "scripts/publish.py|scripts/radar_backtest.py|analyzer/run.py|analyzer/backtest.py|^PATH=/usr/local/bin:/usr/bin:/bin$" || true
   echo "PATH=/usr/local/bin:/usr/bin:/bin"
   echo "$L_PUBLISH"
   echo "$L_FORECAST"
   echo "$L_BACKTEST"
+  echo "$L_RADAR_BT"
 )"
 
 if [ "$DRY" = "1" ]; then

@@ -20,6 +20,7 @@ from datetime import datetime, timezone, timedelta
 KST = timezone(timedelta(hours=9))
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RADAR_JSON = os.path.join(REPO, "web", "data", "radar.json")
+HISTORY_DIR = os.path.join(REPO, "data", "radar_history")
 DISCLAIMER = "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다."
 RADAR_PASSTHRU = ("--min-value", "--high-pct", "--chg-min", "--chg-max",
                   "--spark-x", "--spark-pct")
@@ -34,6 +35,43 @@ def run_radar(extra_args):
         sys.stderr.write(f"radar 실패 (exit {r.returncode})\n")
         sys.exit(1)
     return json.loads(r.stdout)
+
+
+def record_history(out):
+    """당일 수상 종목을 검증용 이력에 누적 (radar_backtest.py가 익일 평가).
+
+    같은 날 여러 회차가 코드별로 merge — 마지막 회차(15:45)의 price가 종가 entry로 남는다.
+    수상 종목 0건인 날도 기록(표본 일수 카운트). 거래일에만 호출할 것.
+    """
+    os.makedirs(HISTORY_DIR, exist_ok=True)
+    today = datetime.now(KST).strftime("%Y%m%d")
+    path = os.path.join(HISTORY_DIR, f"{today}.json")
+    hist = {"date": today, "suspects": {}}
+    if os.path.exists(path):
+        try:
+            hist = json.load(open(path, encoding="utf-8"))
+        except Exception:
+            pass
+    for s in out.get("suspects", []):
+        prev = hist["suspects"].get(s["code"], {})
+        hist["suspects"][s["code"]] = {
+            "name": s["name"],
+            "sector": s.get("sector", ""),
+            "entry": s["price"],          # 당일 종가 매수 가정 (백테스트가 일봉 종가로 재정합)
+            # 통계용은 raw(가중치 적용 전) — 튜닝 체제가 바뀌어도 표본 일관성 유지
+            "score": s.get("score_raw", s["suspicion_score"]),
+            "breakdown": s.get("score_breakdown_raw") or s.get("score_breakdown", {}),
+            "change_pct": s.get("change_pct"),
+            "high_pct": s.get("high_pct"),
+            "fade_pct": s.get("fade_pct"),
+            "matched_events": [m.get("id") for m in s.get("matched_events", [])],
+            "first_seen": prev.get("first_seen") or out.get("generated_at"),
+            "evaluated": prev.get("evaluated", False),
+            "result": prev.get("result"),
+        }
+    hist["as_of"] = out.get("generated_at")
+    json.dump(hist, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    return path
 
 
 def market_session(now=None):
@@ -64,7 +102,9 @@ def main():
         pass  # fcntl 없는 환경은 락 생략
 
     dry = "--dry-run" in args
-    maxn = int(args[args.index("--max") + 1]) if "--max" in args else 12
+    # --max 와 (구 cron 호환) --max-candidates 둘 다 허용
+    max_key = "--max" if "--max" in args else ("--max-candidates" if "--max-candidates" in args else None)
+    maxn = int(args[args.index(max_key) + 1]) if max_key else 12
 
     passthru = []
     for k in RADAR_PASSTHRU:
@@ -91,6 +131,10 @@ def main():
         "suspects": radar.get("suspects", [])[:maxn],
     }
     new = json.dumps(out, ensure_ascii=False, indent=1)
+
+    if not dry:
+        # 게시 여부와 무관하게 매 회차 검증용 이력 기록 (push는 radar_backtest가 담당)
+        record_history(out)
 
     old = open(RADAR_JSON, encoding="utf-8").read() if os.path.exists(RADAR_JSON) else ""
 

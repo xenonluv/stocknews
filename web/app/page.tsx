@@ -22,18 +22,32 @@ export default function Home() {
         </p>
       </header>
 
-      <Link
-        href="/forecast"
-        className="mb-8 flex items-center justify-between gap-3 rounded-lg border border-[rgba(125,176,255,0.35)] bg-gradient-to-br from-[rgba(59,130,246,0.16)] to-[rgba(255,255,255,0.03)] px-5 py-4 backdrop-blur-xl transition-shadow hover:shadow-[0_0_28px_2px_rgba(59,130,246,0.35)]"
-      >
-        <div>
-          <p className="text-base font-bold">🎯 내일 상승 예측 · 종가베팅</p>
-          <p className="text-xs text-muted-foreground">
-            오늘 종가 매수 시 내일 오를 확률 높은 종목 보기
-          </p>
-        </div>
-        <ArrowRight className="size-5 shrink-0 text-up" aria-hidden />
-      </Link>
+      <div className="mb-8 grid gap-3 sm:grid-cols-2">
+        <Link
+          href="/forecast"
+          className="flex items-center justify-between gap-3 rounded-lg border border-[rgba(125,176,255,0.35)] bg-gradient-to-br from-[rgba(59,130,246,0.16)] to-[rgba(255,255,255,0.03)] px-5 py-4 backdrop-blur-xl transition-shadow hover:shadow-[0_0_28px_2px_rgba(59,130,246,0.35)]"
+        >
+          <div>
+            <p className="text-base font-bold">🎯 내일 상승 예측 · 종가베팅</p>
+            <p className="text-xs text-muted-foreground">
+              오늘 종가 매수 시 내일 오를 확률 높은 종목 보기
+            </p>
+          </div>
+          <ArrowRight className="size-5 shrink-0 text-up" aria-hidden />
+        </Link>
+        <Link
+          href="/performance"
+          className="flex items-center justify-between gap-3 rounded-lg border border-[rgba(242,54,69,0.35)] bg-gradient-to-br from-[rgba(242,54,69,0.12)] to-[rgba(255,255,255,0.03)] px-5 py-4 backdrop-blur-xl transition-shadow hover:shadow-[0_0_28px_2px_rgba(242,54,69,0.3)]"
+        >
+          <div>
+            <p className="text-base font-bold">📈 성과 검증 · 자가 개선</p>
+            <p className="text-xs text-muted-foreground">
+              레이더가 실제로 맞췄는지 매일 채점 — 적중률 추세 보기
+            </p>
+          </div>
+          <ArrowRight className="size-5 shrink-0 text-up" aria-hidden />
+        </Link>
+      </div>
 
       <LiveRadar initial={radar} />
     </main>

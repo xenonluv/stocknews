@@ -17,6 +17,7 @@
   python3 scripts/radar.py --min-value 70000000000 --high-pct 13 --names 한온시스템
 출력: stdout JSON {generated_at, params, suspects[]}
 """
+import os
 import sys
 import json
 import math
@@ -31,6 +32,9 @@ from theme_map import match_events
 import kis_client as kis
 
 KST = timezone(timedelta(hours=9))
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+WEIGHTS_PATH = os.path.join(REPO, "data", "radar_weights.json")
+PERF_PATH = os.path.join(REPO, "web", "data", "performance.json")
 
 # ---- 기본 임계값 ----
 MIN_VALUE = 70_000_000_000   # 당일 거래대금 ≥ 700억 (원)
@@ -108,11 +112,46 @@ def accumulation_signal(inv, days=5):
             "detail": detail}
 
 
+# ---------- 자가 개선 입력 (radar_backtest.py 산출물) ----------
+
+def load_tuning(use_weights=True):
+    """튜닝 가중치 비율 + 유효 보정표(bins) 로드. 파일 없으면 기본값."""
+    ratios = {"spark": 1.0, "fade": 1.0, "flow": 1.0, "event": 1.0, "ma10": 1.0}
+    if use_weights and os.path.exists(WEIGHTS_PATH):
+        try:
+            w = json.load(open(WEIGHTS_PATH, encoding="utf-8"))
+            for k, base in (w.get("default") or {}).items():
+                if k in ratios and base:
+                    ratios[k] = float(w["weights"][k]) / float(base)
+            log(f"[radar] 튜닝 가중치 적용 (표본 {w.get('basis_n')}건 기반)")
+        except Exception as e:
+            log(f"[warn] 가중치 로드 실패(기본값 사용): {e}")
+    bins = []
+    if os.path.exists(PERF_PATH):
+        try:
+            perf = json.load(open(PERF_PATH, encoding="utf-8"))
+            bins = [b for b in perf.get("bins", []) if b.get("valid")]
+        except Exception:
+            pass
+    return ratios, bins
+
+
+def calibrated_prob(score, bins):
+    """점수가 표본 충분(n>=20)한 구간에 들면 실측 적중률 반환, 아니면 None."""
+    for b in bins:
+        if b["lo"] <= score < b["hi"]:
+            return {"rate": b["actual_rate"], "n": b["n"]}
+    return None
+
+
 # ---------- 수상함 점수 (결정론, 투명 가중합) ----------
 
 def suspicion_score(spark_clusters, fade_pct, ma10_margin_pct, acc, event_score=0.0,
-                    vol_x_base=SPARK_VOL_X):
-    """0~100. 각 항목 근거는 breakdown으로 공개."""
+                    vol_x_base=SPARK_VOL_X, ratios=None):
+    """0~100. 각 항목 근거는 breakdown으로 공개.
+
+    ratios: 백테스트 기반 자가 튜닝 가중치 비율(항목별 0.7~1.3). None이면 기본.
+    """
     bd = {}
     bd["base"] = 30
     # 스파크 강도: 최대 클러스터 배수. vol_x 기준치→0점, 기준치×4→15점 선형
@@ -132,8 +171,14 @@ def suspicion_score(spark_clusters, fade_pct, ma10_margin_pct, acc, event_score=
     bd["flow"] = round(min(15.0, acc["net_days"] * 2 + (5 if acc["today_buy"] else 0)), 1)
     # 이벤트 근접 × 민감도 (theme_map.match_events 가점)
     bd["event"] = round(min(15.0, event_score), 1)
-    total = int(round(sum(bd.values())))
-    return max(0, min(100, total)), bd
+    bd_raw = dict(bd)  # 가중치 적용 전 원점수 — 백테스트 통계는 이것만 사용(드리프트 방지)
+    if ratios:
+        for k, r in ratios.items():
+            if k in bd:
+                bd[k] = round(bd[k] * r, 1)
+    total = max(0, min(100, int(round(sum(bd.values())))))
+    total_raw = max(0, min(100, int(round(sum(bd_raw.values())))))
+    return total, bd, total_raw, bd_raw
 
 
 # ---------- 메인 깔때기 ----------
@@ -201,15 +246,20 @@ def scan_one(name, code, p, events):
 
     fade_pct = (now["high"] - now["price"]) / (now["high"] - now["prev_close"]) * 100
     ma10_margin = (now["price"] / ma10 - 1) * 100
-    score, breakdown = suspicion_score(sparks, fade_pct, ma10_margin, acc,
-                                       event_score, p.spark_x)
+    score, breakdown, score_raw, breakdown_raw = suspicion_score(
+        sparks, fade_pct, ma10_margin, acc, event_score, p.spark_x, p.tuning_ratios)
+    # 보정표는 raw 점수 기준으로 누적되므로 매칭도 raw로 (가중치 체제와 무관하게 일관)
+    calib = calibrated_prob(score_raw, p.calib_bins)
 
     return {
         "code": code,
         "name": name,
         "sector": now["sector"],
         "suspicion_score": score,
+        "calibrated_prob": calib,  # {rate, n} — 실측 적중률 (표본 n>=20 구간만, 없으면 None)
         "score_breakdown": breakdown,
+        "score_raw": score_raw,                 # 가중치 적용 전 — 백테스트 통계용
+        "score_breakdown_raw": breakdown_raw,
         "price": now["price"],
         "change_pct": round(now["change_pct"], 2),
         "high_pct": round(high_pct, 2),
@@ -299,7 +349,10 @@ def main():
     ap.add_argument("--spark-x", type=float, default=SPARK_VOL_X, help="분봉 거래량 중앙값 배수")
     ap.add_argument("--spark-pct", type=float, default=SPARK_PCT, help="분봉 등락 하한(%%)")
     ap.add_argument("--names", nargs="*", default=[], help="watchlist 강제 포함")
+    ap.add_argument("--no-tuned-weights", action="store_true",
+                    help="백테스트 튜닝 가중치 무시 (기본 가중치 사용)")
     p = ap.parse_args()
+    p.tuning_ratios, p.calib_bins = load_tuning(use_weights=not p.no_tuned_weights)
 
     # 조건 1: D-10 이벤트 캘린더
     events = upcoming_events(10)

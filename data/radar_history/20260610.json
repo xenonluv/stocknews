@@ -1,0 +1,54 @@
+{
+ "date": "20260610",
+ "suspects": {
+  "279570": {
+   "name": "케이뱅크",
+   "sector": "금융",
+   "entry": 6030.0,
+   "score": 79,
+   "breakdown": {
+    "base": 30,
+    "spark": 6.4,
+    "fade": 8.6,
+    "ma10": 7.9,
+    "flow": 15.0,
+    "event": 11.4
+   },
+   "change_pct": 4.33,
+   "high_pct": 15.05,
+   "fade_pct": 71.3,
+   "matched_events": [
+    "2026-06-10_미국 CPI 발표 (5",
+    "2026-06-17_FOMC 금리 결정 ("
+   ],
+   "first_seen": "2026-06-10 21:01:40 KST",
+   "evaluated": false,
+   "result": null
+  },
+  "095610": {
+   "name": "테스",
+   "sector": "기계·장비",
+   "entry": 173400.0,
+   "score": 75,
+   "breakdown": {
+    "base": 30,
+    "spark": 3.1,
+    "fade": 13.0,
+    "ma10": 10.0,
+    "flow": 15.0,
+    "event": 3.8
+   },
+   "change_pct": 7.43,
+   "high_pct": 17.16,
+   "fade_pct": 56.7,
+   "matched_events": [
+    "2026-06-10_미국 CPI 발표 (5",
+    "2026-06-17_FOMC 금리 결정 ("
+   ],
+   "first_seen": "2026-06-10 21:01:40 KST",
+   "evaluated": false,
+   "result": null
+  }
+ },
+ "as_of": "2026-06-10 21:01:40 KST"
+}

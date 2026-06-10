@@ -70,6 +70,17 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
             {change.text}
           </span>
         </h2>
+        {s.calibrated_prob?.rate != null && (
+          <p className="text-[11px] text-muted-foreground">
+            이 점수대의 실측 익일 상승률{" "}
+            <span
+              className={`font-semibold tabular-nums ${s.calibrated_prob.rate >= 50 ? "text-up" : "text-down"}`}
+            >
+              {s.calibrated_prob.rate}%
+            </span>{" "}
+            (표본 {s.calibrated_prob.n}건)
+          </p>
+        )}
       </CardHeader>
 
       <CardContent className="flex flex-col gap-4">

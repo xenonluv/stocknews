@@ -61,6 +61,8 @@ export interface Suspect {
   name: string;
   sector: string;
   suspicion_score: number; // 0~100
+  /** 백테스트 실측 적중률 (점수대 표본 n>=20 구간만, 없으면 null) */
+  calibrated_prob?: { rate: number | null; n: number } | null;
   score_breakdown: ScoreBreakdown;
   price: number;
   change_pct: number; // 현재 등락률 (조건 6)
