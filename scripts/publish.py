@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-"""게시 자동화 (Tier A) — 스크리너 → 결정론 스코어 → signals.json → 변경 시에만 push.
+"""레이더 게시 자동화 — radar.py → web/data/radar.json → 변경 시에만 push.
 
-자동 cron 안정성을 위해 LLM(Codex) 없이 순수 Python으로 동작.
-(Codex 팀원3 심층분석은 수동/별도 잡으로 운용)
+cron 안정성을 위해 LLM 없이 순수 Python. Vercel이 push를 받아 자동 재빌드.
 
 사용:
-  python3 scripts/publish.py --dry-run                     # /tmp에 미리보기, push 안 함
-  python3 scripts/publish.py --vol-x 1.5 --gain 3 --max 6  # 실제 게시
+  python3 scripts/publish.py --dry-run                  # /tmp 미리보기, push 안 함
+  python3 scripts/publish.py --max 12 --names 한온시스템  # 실제 게시
 cron(장중 15분): */15 9-15 * * 1-5  cd ~/stocknews && python3 scripts/publish.py >> /tmp/publish.log 2>&1
+
+radar.py 인자(--min-value --high-pct --chg-min --chg-max --spark-x --spark-pct --names)는
+그대로 전달된다. 빈 레이더(수상 종목 0)도 유효 상태로 게시한다.
 """
 import os
 import sys
@@ -15,106 +17,31 @@ import json
 import subprocess
 from datetime import datetime, timezone, timedelta
 
-from team3_price_context import compute_context
-
 KST = timezone(timedelta(hours=9))
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SIGNALS = os.path.join(REPO, "web", "data", "signals.json")
+RADAR_JSON = os.path.join(REPO, "web", "data", "radar.json")
 DISCLAIMER = "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다."
+RADAR_PASSTHRU = ("--min-value", "--high-pct", "--chg-min", "--chg-max",
+                  "--spark-x", "--spark-pct")
 
-# 결정론 스코어 가중치 (투명)
-PHASE_ADJ = {"저점": 12, "눌림목": 10, "상승추세": 8, "박스": 0, "과다상승": -12, "분석불가": -5}
 
-
-def run_screener(extra_args):
-    cmd = [sys.executable, os.path.join(REPO, "scripts", "screener.py")] + extra_args
+def run_radar(extra_args):
+    cmd = [sys.executable, os.path.join(REPO, "scripts", "radar.py")] + extra_args
     r = subprocess.run(cmd, capture_output=True, text=True, cwd=REPO)
-    if not r.stdout.strip():
-        sys.stderr.write("스크리너 출력 없음:\n" + r.stderr[-500:])
+    if r.stderr:
+        sys.stderr.write(r.stderr[-2000:])  # 스킵/경고 증거를 cron 로그에 남김
+    if r.returncode != 0 or not r.stdout.strip():
+        sys.stderr.write(f"radar 실패 (exit {r.returncode})\n")
         sys.exit(1)
     return json.loads(r.stdout)
 
 
-def score(importance, phase, gc_recent, disp, sentiment):
-    """상승확률 결정론 스코어(0~100). 재료강도+일봉국면+3분봉타이밍+감성."""
-    p = 45 + min(15.0, (importance or 5) * 1.5) + PHASE_ADJ.get(phase, 0)
-    if gc_recent and disp is not None and abs(disp) <= 1.0:
-        p += 8  # 단기 진입 타이밍(갓 골든크로스)
-    p += 5 if sentiment == "호재" else (-10 if sentiment == "악재" else 0)
-    return max(10, min(95, round(p)))
-
-
-def _post(r, tier, stamp_full, today):
-    code, name = r["code"], r["name"]
-    ctx = compute_context(code, name)
-    phase = ctx.get("market_status_hint", "분석불가")
-    c = r.get("C", {})
-    disp = c.get("disparity_pct")
-    prob = score(r.get("importance"), phase, c.get("gc_recent"), disp, r.get("sentiment"))
-    news = r.get("news", [])
-    cause_news = r.get("cause_news") or []
-    headline_source = cause_news[0] if cause_news else (news[0] if news else None)
-    headline = (headline_source["title"][:60] if headline_source and headline_source.get("title")
-                else f"{name} 스크리너 포착")
-    if tier == "signal":
-        summary = (f"[시그널] 일봉 {phase} · "
-                   f"재료 {r.get('sentiment')}(중요도 {r.get('importance')}). 일봉 국면을 함께 확인.")
-    else:
-        summary = (f"[후보] 재료+거래대금 포착(중요도 {r.get('importance')}, {r.get('sentiment')}) · "
-                   f"일봉 {phase}.")
-    post = {
-        "post_id": f"POST_{today}_{code}",
-        "status": "PUBLISHED",
-        "tier": tier,
-        "target_stock": name,
-        "signal_probability": f"{prob}%",
-        "position_type": phase,
-        "day_change": ctx.get("change_pct_day"),
-        "headline": headline,
-        "summary": summary,
-        "disclaimer": DISCLAIMER,
-        "published_at": stamp_full,
-        "news": [
-            {"title": n.get("title"), "url": n.get("url"),
-             "office": n.get("office"), "sentiment": n.get("sentiment")}
-            for n in news[:6] if n.get("title")
-        ],
-    }
-    if cause_news:
-        post["cause_news"] = [
-            {"title": n.get("title"), "url": n.get("url"),
-             "office": n.get("office"), "sentiment": n.get("sentiment"),
-             "cause_score": n.get("cause_score", 0),
-             "cause_reason": n.get("cause_reason", "")}
-            for n in cause_news[:3] if n.get("title")
-        ]
-        if r.get("cause_confidence"):
-            post["cause_confidence"] = r.get("cause_confidence")
-        if r.get("cause_summary"):
-            post["cause_summary"] = r.get("cause_summary")
-    return post
-
-
-def build_posts(scr, maxn, max_cand, news_min):
-    stamp_full = datetime.now(KST).strftime("%Y-%m-%d %H:%M KST")
-    today = datetime.now(KST).strftime("%Y%m%d")
-    posts = []
-    seen = set()
-    # Tier 1: 시그널 (A+B+C 통과)
-    for r in scr.get("passed", [])[:maxn]:
-        posts.append(_post(r, "signal", stamp_full, today))
-        seen.add(r["code"])
-    # Tier 2: 후보 (A+B 통과, C 대기) — by_sector에서 재료(B) 통과분, 중요도순
-    cands = []
-    for recs in scr.get("by_sector", {}).values():
-        for r in recs:
-            if r.get("A_hit") and r["code"] not in seen and (r.get("B_news") or 0) >= news_min:
-                cands.append(r)
-                seen.add(r["code"])
-    cands.sort(key=lambda r: -(r.get("importance") or 0))
-    for r in cands[:max_cand]:
-        posts.append(_post(r, "candidate", stamp_full, today))
-    return posts
+def market_session(now=None):
+    now = now or datetime.now(KST)
+    if now.weekday() >= 5:
+        return "closed"
+    hm = now.strftime("%H%M")
+    return "open" if "0900" <= hm <= "1530" else "closed"
 
 
 def git(*args):
@@ -123,7 +50,7 @@ def git(*args):
 
 def main():
     args = sys.argv[1:]
-    # 동시 실행 방지: 겹친 cron 회차의 git race 차단 (Mac/Linux flock)
+    # 동시 실행 방지: 겹친 cron 회차의 git race 차단
     lock_fh = None
     try:
         import fcntl
@@ -135,19 +62,14 @@ def main():
             return
     except ImportError:
         pass  # fcntl 없는 환경은 락 생략
+
     dry = "--dry-run" in args
-    maxn = int(args[args.index("--max") + 1]) if "--max" in args else 6
-    max_cand = int(args[args.index("--max-candidates") + 1]) if "--max-candidates" in args else 8
-    news_min = int(args[args.index("--news-min") + 1]) if "--news-min" in args else 2
-    # 스크리너에 전달할 임계값(기본: 느슨)
+    maxn = int(args[args.index("--max") + 1]) if "--max" in args else 12
+
     passthru = []
-    for k in ("--vol-x", "--gain", "--news-min", "--gc-window", "--disp-max", "--topn", "--min-value"):
+    for k in RADAR_PASSTHRU:
         if k in args:
             passthru += [k, args[args.index(k) + 1]]
-    if not passthru:
-        passthru = ["--vol-x", "1.5", "--gain", "3.0", "--news-min", "2",
-                    "--gc-window", "40", "--disp-max", "2.0", "--topn", "20"]
-    # 관심종목(watchlist)을 스크리너 유니버스에 포함 (랭킹에 안 잡혀도 평가)
     if "--names" in args:
         i = args.index("--names")
         names = []
@@ -158,35 +80,42 @@ def main():
         if names:
             passthru += ["--names"] + names
 
-    scr = run_screener(passthru)
-    posts = build_posts(scr, maxn, max_cand, news_min)
-    new = json.dumps(posts, ensure_ascii=False, indent=2)
+    radar = run_radar(passthru)
+    out = {
+        "generated_at": radar.get("generated_at"),
+        "market_session": market_session(),
+        "disclaimer": DISCLAIMER,
+        "params": radar.get("params", {}),
+        "universe_count": radar.get("universe_count", 0),
+        "events": radar.get("events", []),
+        "suspects": radar.get("suspects", [])[:maxn],
+    }
+    new = json.dumps(out, ensure_ascii=False, indent=1)
 
-    if not posts:
-        print("게시할 통과 종목 없음 — signals.json 유지, skip")
-        return
+    old = open(RADAR_JSON, encoding="utf-8").read() if os.path.exists(RADAR_JSON) else ""
 
-    old = open(SIGNALS, encoding="utf-8").read() if os.path.exists(SIGNALS) else ""
-    # post_id/내용만 비교(시각은 매번 바뀌므로 제외)
-    def strip_time(s):
-        return "\n".join(l for l in s.splitlines() if "published_at" not in l)
-    if strip_time(new) == strip_time(old):
-        print(f"변경 없음({len(posts)}건 동일) — push skip")
+    def strip_volatile(s):
+        return "\n".join(l for l in s.splitlines()
+                         if '"generated_at"' not in l and '"market_session"' not in l)
+
+    if strip_volatile(new) == strip_volatile(old):
+        print(f"변경 없음(수상종목 {len(out['suspects'])}건 동일) — push skip")
         return
 
     if dry:
-        out = "/tmp/publish_preview.json"
-        open(out, "w", encoding="utf-8").write(new)
-        print(f"[DRY-RUN] {len(posts)}건 → {out} (push 안 함)")
-        for p in posts:
-            print(f"  - {p['target_stock']} {p['signal_probability']} {p['position_type']}")
+        path = "/tmp/radar_preview.json"
+        open(path, "w", encoding="utf-8").write(new)
+        print(f"[DRY-RUN] 수상종목 {len(out['suspects'])}건, 이벤트 {len(out['events'])}건 → {path}")
+        for s in out["suspects"]:
+            print(f"  - {s['name']} score={s['suspicion_score']} "
+                  f"고가{s['high_pct']}% 현재{s['change_pct']}%")
         return
 
-    open(SIGNALS, "w", encoding="utf-8").write(new)
-    git("add", "web/data/signals.json")
-    git("commit", "-q", "-m", f"data: 시그널 자동 게시 ({len(posts)}건)")
-    # push 전 원격 변경(다른 머신/PC의 web 코드 등) 먼저 통합 → 다중 머신 공존.
-    # signals.json과 다른 파일이라 보통 충돌 없이 rebase됨.
+    os.makedirs(os.path.dirname(RADAR_JSON), exist_ok=True)
+    open(RADAR_JSON, "w", encoding="utf-8").write(new)
+    git("add", "web/data/radar.json")
+    git("commit", "-q", "-m", f"data: 레이더 자동 게시 (수상종목 {len(out['suspects'])}건)")
+    # push 전 원격 변경 먼저 통합 (다중 머신 공존)
     pl = git("pull", "--rebase", "--autostash", "origin", "main")
     if pl.returncode != 0:
         sys.stderr.write("pull --rebase 실패(충돌 가능) — 수동 확인 필요:\n" + pl.stderr[-500:])
@@ -196,9 +125,9 @@ def main():
     if pr.returncode != 0:
         sys.stderr.write("push 실패:\n" + pr.stderr[-500:])
         sys.exit(1)
-    print(f"게시 완료: {len(posts)}건 push (exit {pr.returncode})")
-    for p in posts:
-        print(f"  - {p['target_stock']} {p['signal_probability']} {p['position_type']}")
+    print(f"게시 완료: 수상종목 {len(out['suspects'])}건 push")
+    for s in out["suspects"]:
+        print(f"  - {s['name']} score={s['suspicion_score']}")
 
 
 if __name__ == "__main__":

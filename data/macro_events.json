@@ -1,0 +1,27 @@
+{
+  "_readme": "글로벌/국내 매크로 이벤트 정적 캘린더. 연 1회(연초) 갱신. date=현지 발표일(YYYY-MM-DD). estimated=true는 규칙 기반 추정일이므로 공식 일정 확인 권장. category는 theme_map.py의 키와 일치해야 함.",
+  "_updated": "2026-06-10",
+  "events": [
+    { "date": "2026-01-28", "title": "FOMC 금리 결정 (1월)", "category": ["금리"], "importance": 10, "country": "US", "estimated": false },
+    { "date": "2026-03-18", "title": "FOMC 금리 결정 (3월)", "category": ["금리"], "importance": 10, "country": "US", "estimated": false },
+    { "date": "2026-04-29", "title": "FOMC 금리 결정 (4월)", "category": ["금리"], "importance": 10, "country": "US", "estimated": false },
+    { "date": "2026-06-17", "title": "FOMC 금리 결정 (6월)", "category": ["금리"], "importance": 10, "country": "US", "estimated": false },
+    { "date": "2026-07-29", "title": "FOMC 금리 결정 (7월)", "category": ["금리"], "importance": 10, "country": "US", "estimated": false },
+    { "date": "2026-09-16", "title": "FOMC 금리 결정 (9월)", "category": ["금리"], "importance": 10, "country": "US", "estimated": false },
+    { "date": "2026-10-28", "title": "FOMC 금리 결정 (10월)", "category": ["금리"], "importance": 10, "country": "US", "estimated": false },
+    { "date": "2026-12-09", "title": "FOMC 금리 결정 (12월)", "category": ["금리"], "importance": 10, "country": "US", "estimated": false },
+    { "date": "2026-06-10", "title": "미국 CPI 발표 (5월분)", "category": ["금리", "환율"], "importance": 9, "country": "US", "estimated": true },
+    { "date": "2026-07-14", "title": "미국 CPI 발표 (6월분)", "category": ["금리", "환율"], "importance": 9, "country": "US", "estimated": true },
+    { "date": "2026-08-12", "title": "미국 CPI 발표 (7월분)", "category": ["금리", "환율"], "importance": 9, "country": "US", "estimated": true },
+    { "date": "2026-09-11", "title": "미국 CPI 발표 (8월분)", "category": ["금리", "환율"], "importance": 9, "country": "US", "estimated": true },
+    { "date": "2026-10-13", "title": "미국 CPI 발표 (9월분)", "category": ["금리", "환율"], "importance": 9, "country": "US", "estimated": true },
+    { "date": "2026-11-10", "title": "미국 CPI 발표 (10월분)", "category": ["금리", "환율"], "importance": 9, "country": "US", "estimated": true },
+    { "date": "2026-12-10", "title": "미국 CPI 발표 (11월분)", "category": ["금리", "환율"], "importance": 9, "country": "US", "estimated": true },
+    { "date": "2026-07-09", "title": "한국은행 금통위 기준금리 결정", "category": ["금리"], "importance": 8, "country": "KR", "estimated": true },
+    { "date": "2026-08-27", "title": "한국은행 금통위 기준금리 결정", "category": ["금리"], "importance": 8, "country": "KR", "estimated": true },
+    { "date": "2026-10-22", "title": "한국은행 금통위 기준금리 결정", "category": ["금리"], "importance": 8, "country": "KR", "estimated": true },
+    { "date": "2026-11-26", "title": "한국은행 금통위 기준금리 결정", "category": ["금리"], "importance": 8, "country": "KR", "estimated": true },
+    { "date": "2026-07-07", "title": "삼성전자 2분기 잠정실적", "category": ["반도체", "실적"], "importance": 9, "country": "KR", "estimated": true },
+    { "date": "2026-10-08", "title": "삼성전자 3분기 잠정실적", "category": ["반도체", "실적"], "importance": 9, "country": "KR", "estimated": true }
+  ]
+}

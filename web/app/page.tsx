@@ -1,26 +1,24 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-import { listSignals } from "@/lib/signals/repository";
-import { LiveSignals } from "@/components/signal/LiveSignals";
+import { getRadar } from "@/lib/radar/repository";
+import { LiveRadar } from "@/components/radar/LiveRadar";
 
-// 정적 생성: 데이터는 signals.json(빌드 시 import)에서 오므로 배포마다 갱신된다.
+// 정적 생성: 데이터는 radar.json(빌드 시 import)에서 오므로 배포마다 갱신된다.
 // 방문자는 CDN 정적 페이지를 받으므로 동시접속이 늘어도 서버 함수 호출이 없다.
-// 열린 탭의 실시간 갱신은 LiveSignals(클라이언트 폴링)가 담당한다.
-
-const LIMIT = 50;
+// 열린 탭의 실시간 갱신은 LiveRadar(클라이언트 폴링)가 담당한다.
 
 export default function Home() {
-  const { items, total } = listSignals({ page: 1, limit: LIMIT });
+  const radar = getRadar();
 
   return (
     <main className="container py-12">
       <header className="mb-8 space-y-1">
-        <h1 className="text-3xl font-bold tracking-tight">시그널 분석</h1>
+        <h1 className="text-3xl font-bold tracking-tight">이벤트 매집 레이더</h1>
         <p className="text-sm text-muted-foreground">
-          스크리너(거래량·상승 이력 + 재료) + AI 분석 결과 ·
+          10일 내 이벤트를 앞두고, 당일 큰돈이 들어와 급등 후 식은 — 매집이 의심되는
+          종목을 자동 탐지 ·
           <span className="text-warning"> 투자 참고용, 매수 추천 아님</span>
-          <span className="tabular-nums"> · 총 {total}건</span>
         </p>
       </header>
 
@@ -37,7 +35,7 @@ export default function Home() {
         <ArrowRight className="size-5 shrink-0 text-up" aria-hidden />
       </Link>
 
-      <LiveSignals initialSignals={items} />
+      <LiveRadar initial={radar} />
     </main>
   );
 }

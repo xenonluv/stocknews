@@ -83,7 +83,14 @@ def top_ranking(sort_key, market, n):
         name, code = s.get("stockName"), s.get("itemCode") or s.get("reutersCode")
         if not is_individual_stock(name, code, s.get("stockEndType")):
             continue
-        out.append({"name": name, "code": code})
+        def _num(key):
+            try:
+                return float(str(s.get(key, "0")).replace(",", ""))
+            except ValueError:
+                return 0.0
+        out.append({"name": name, "code": code,
+                    "change_pct": _num("fluctuationsRatio"),
+                    "value_mn": _num("accumulatedTradingValue")})  # 백만원 단위
         if len(out) >= n:
             break
     return out

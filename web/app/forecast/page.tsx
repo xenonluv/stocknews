@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 
 import { getPredictions } from "@/lib/predictions/repository";
-import { newsByStockCode } from "@/lib/signals/repository";
+import { newsByStockCode } from "@/lib/radar/repository";
 import { ForecastList } from "@/components/forecast/ForecastList";
 
 export const dynamic = "force-static";

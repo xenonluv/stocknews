@@ -1,6 +1,6 @@
 // analyzer가 생성하는 '내일 상승 예측' 데이터 (web/data/predictions.json)
 
-import type { NewsItem } from "@/types/signal";
+import type { NewsItem } from "@/types/radar";
 
 export interface ForecastNewsItem extends NewsItem {
   cause_score?: number;

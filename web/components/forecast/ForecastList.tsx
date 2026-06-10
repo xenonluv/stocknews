@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { ForecastCard } from "./ForecastCard";
 import { marketPhaseKST, type MarketPhase } from "@/lib/market";
 import type { Predictions } from "@/types/prediction";
-import type { NewsItem } from "@/types/signal";
+import type { NewsItem } from "@/types/radar";
 
 const POLL_MS = 60_000;
 

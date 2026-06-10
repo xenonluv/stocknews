@@ -6,9 +6,9 @@ import { Newspaper, Shield, Target, TrendingUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ProbabilityGauge } from "@/components/signal/ProbabilityGauge";
+import { ProbabilityGauge } from "@/components/forecast/ProbabilityGauge";
 import type { ForecastItem } from "@/types/prediction";
-import type { NewsItem } from "@/types/signal";
+import type { NewsItem } from "@/types/radar";
 
 const won = (n: number | null) => (n == null ? "-" : n.toLocaleString("ko-KR"));
 
