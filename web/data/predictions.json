@@ -1,18 +1,62 @@
 {
-  "as_of": "2026-06-11 09:07 KST",
+  "as_of": "2026-06-11 09:22 KST",
   "intraday_rank": [
+    {
+      "ticker": "SK이터닉스",
+      "code": "475150",
+      "tomorrow_up_prob": "65%",
+      "entry": 47100.0,
+      "target": 49455,
+      "stop": 45687,
+      "confidence": "중",
+      "reasons": [
+        "MACD강세",
+        "RSI55.8 강세",
+        "거래량3.08배"
+      ],
+      "risk": "약한 마감",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "신재생사업 재편 기대감에 이틀째 급등…SK이터닉스 15%↑[특징주]",
+          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03070086645480736",
+          "office": "edaily",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] SK이터닉스, 신재생 사업 재편 기대감에 이틀째 급등",
+          "url": "https://www.etoday.co.kr/news/view/2592535",
+          "office": "etoday",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        },
+        {
+          "title": "SK이터닉스, 신재생 사업 재편 기대감에 12%대 급등",
+          "url": "https://www.newsis.com/view/NISX20260611_0003664930",
+          "office": "newsis",
+          "sentiment": "악재",
+          "cause_score": 14,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 악재, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "신재생사업 재편 기대감에 이틀째 급등…SK이터닉스 15%↑[특징주]"
+    },
     {
       "ticker": "라이콤",
       "code": "388790",
-      "tomorrow_up_prob": "72%",
-      "entry": 7860.0,
-      "target": 8253,
-      "stop": 7624,
-      "confidence": "상",
+      "tomorrow_up_prob": "65%",
+      "entry": 8030.0,
+      "target": 8432,
+      "stop": 7789,
+      "confidence": "중",
       "reasons": [
-        "강세마감(0.95)",
         "MACD강세",
-        "RSI65.8 강세"
+        "RSI66.6 강세",
+        "호재"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -46,172 +90,37 @@
       "cause_summary": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로..."
     },
     {
-      "ticker": "SK이터닉스",
-      "code": "475150",
-      "tomorrow_up_prob": "64%",
-      "entry": 53900.0,
-      "target": 56595,
-      "stop": 52283,
+      "ticker": "한화비전",
+      "code": "489790",
+      "tomorrow_up_prob": "61%",
+      "entry": 71000.0,
+      "target": 74550,
+      "stop": 68870,
       "confidence": "중",
       "reasons": [
-        "강세마감(1.0)",
         "MACD강세",
-        "RSI63.2 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[급등락주 짚어보기] SK이터닉스, SK그룹 신재생에너지 재편 기대에 ‘...",
-          "url": "https://www.etoday.co.kr/news/view/2592365",
-          "office": "etoday",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "KKR과 신재생사업 빅딜…SK이터닉스 '상한가'",
-          "url": "https://www.hankyung.com/article/2026061090251",
-          "office": "hankyung",
-          "sentiment": "악재",
-          "cause_score": 6,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 악재, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[급등락주 짚어보기] SK이터닉스, SK그룹 신재생에너지 재편 기대에 ‘..."
-    },
-    {
-      "ticker": "케이뱅크",
-      "code": "279570",
-      "tomorrow_up_prob": "62%",
-      "entry": 6100.0,
-      "target": 6405,
-      "stop": 5917,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.7)",
-        "RSI58.8 강세",
-        "호재"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 4.33,
-      "cause_news": [
-        {
-          "title": "제주은행 23% 급등 이어 케이뱅크 4% 상승",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439516",
-          "office": "econonews",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "케이뱅크 주가, 강세... 외인·기관 쌍끌이 매수",
-          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1162859",
-          "office": "ggilbo",
-          "sentiment": "악재",
-          "cause_score": 8,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 악재, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "제주은행 23% 급등 이어 케이뱅크 4% 상승"
-    },
-    {
-      "ticker": "제주은행",
-      "code": "006220",
-      "tomorrow_up_prob": "62%",
-      "entry": 13760.0,
-      "target": 14448,
-      "stop": 13347,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.79)",
-        "RSI69.3 강세",
+        "Stoch골든",
         "호재"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
         {
-          "title": "제주은행 23% 급등 이어 케이뱅크 4% 상승",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439516",
-          "office": "econonews",
+          "title": "[속보] 한화비전, VI 눈길 중동 긴장 고조 속 장중 강세…방산·감시기술...",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=580854",
+          "office": "cbci",
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "제주은행 23% 급등 이어 케이뱅크 4% 상승"
-    },
-    {
-      "ticker": "테스",
-      "code": "095610",
-      "tomorrow_up_prob": "61%",
-      "entry": 173000.0,
-      "target": 181650,
-      "stop": 167810,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "약한 마감, Stoch 과매수",
-      "day_change": 7.43,
-      "cause_news": [
-        {
-          "title": "[특징주] 테스, 'HBM4 수율 핵심' BSD 수주 기대감에 12%↑",
-          "url": "http://www.newsdream.kr/news/articleView.html?idxno=112834",
-          "office": "newsdream",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "테스, 투자주의종목→투자경고종목 지정 예고",
-          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16086752",
-          "office": "topstarnews",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 테스, 'HBM4 수율 핵심' BSD 수주 기대감에 12%↑"
-    },
-    {
-      "ticker": "HD현대에너지솔루션",
-      "code": "322000",
-      "tomorrow_up_prob": "58%",
-      "entry": 157400.0,
-      "target": 165270,
-      "stop": 152678,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.76)",
-        "호재"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] HD현대에너지솔루션, 재생에너지 100GW 확대 기대에 美 호재 겹...",
-          "url": "https://www.tokenpost.kr/news/economy/367599",
-          "office": "tokenpost",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] HD현대에너지솔루션, 재생에너지 100GW 확대 기대에 美 호재 겹..."
+      "cause_summary": "[속보] 한화비전, VI 눈길 중동 긴장 고조 속 장중 강세…방산·감시기술..."
     },
     {
       "ticker": "화신정공",
       "code": "126640",
-      "tomorrow_up_prob": "53%",
+      "tomorrow_up_prob": "54%",
       "entry": 5750.0,
       "target": 6038,
       "stop": 5578,
@@ -235,21 +144,118 @@
       ],
       "cause_confidence": "중간",
       "cause_summary": "화신정공, 투자경고종목 지정→추가 상승 시 거래정지 가능"
+    },
+    {
+      "ticker": "화신",
+      "code": "010690",
+      "tomorrow_up_prob": "51%",
+      "entry": 10830.0,
+      "target": 11372,
+      "stop": 10505,
+      "confidence": "하",
+      "reasons": [
+        "호재"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "화신정공, 투자경고종목 지정→추가 상승 시 거래정지 가능",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16086730",
+          "office": "topstarnews",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "화신정공, 투자경고종목 지정→추가 상승 시 거래정지 가능"
+    },
+    {
+      "ticker": "심텍",
+      "code": "222800",
+      "tomorrow_up_prob": "44%",
+      "entry": 120700.0,
+      "target": 126735,
+      "stop": 117079,
+      "confidence": "하",
+      "reasons": [
+        "강세마감(0.9)",
+        "RSI58.1 강세"
+      ],
+      "risk": "악재",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[공시] KBI메탈·심텍·가이아코퍼레이션 '투자주의' 등...42건",
+          "url": "https://www.newstnt.com/news/articleView.html?idxno=705796",
+          "office": "newstnt",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "[공시] KBI메탈·심텍·가이아코퍼레이션 '투자주의' 등...42건"
     }
   ],
   "closing_bet": [
     {
+      "ticker": "SK이터닉스",
+      "code": "475150",
+      "tomorrow_up_prob": "65%",
+      "entry": 47100.0,
+      "target": 49455,
+      "stop": 45687,
+      "confidence": "중",
+      "reasons": [
+        "MACD강세",
+        "RSI55.8 강세",
+        "거래량3.08배"
+      ],
+      "risk": "약한 마감",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "신재생사업 재편 기대감에 이틀째 급등…SK이터닉스 15%↑[특징주]",
+          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03070086645480736",
+          "office": "edaily",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] SK이터닉스, 신재생 사업 재편 기대감에 이틀째 급등",
+          "url": "https://www.etoday.co.kr/news/view/2592535",
+          "office": "etoday",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        },
+        {
+          "title": "SK이터닉스, 신재생 사업 재편 기대감에 12%대 급등",
+          "url": "https://www.newsis.com/view/NISX20260611_0003664930",
+          "office": "newsis",
+          "sentiment": "악재",
+          "cause_score": 14,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 악재, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "신재생사업 재편 기대감에 이틀째 급등…SK이터닉스 15%↑[특징주]"
+    },
+    {
       "ticker": "라이콤",
       "code": "388790",
-      "tomorrow_up_prob": "72%",
-      "entry": 7860.0,
-      "target": 8253,
-      "stop": 7624,
-      "confidence": "상",
+      "tomorrow_up_prob": "65%",
+      "entry": 8030.0,
+      "target": 8432,
+      "stop": 7789,
+      "confidence": "중",
       "reasons": [
-        "강세마감(0.95)",
         "MACD강세",
-        "RSI65.8 강세"
+        "RSI66.6 강세",
+        "호재"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -283,140 +289,32 @@
       "cause_summary": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로..."
     },
     {
-      "ticker": "SK이터닉스",
-      "code": "475150",
-      "tomorrow_up_prob": "64%",
-      "entry": 53900.0,
-      "target": 56595,
-      "stop": 52283,
+      "ticker": "한화비전",
+      "code": "489790",
+      "tomorrow_up_prob": "61%",
+      "entry": 71000.0,
+      "target": 74550,
+      "stop": 68870,
       "confidence": "중",
       "reasons": [
-        "강세마감(1.0)",
         "MACD강세",
-        "RSI63.2 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[급등락주 짚어보기] SK이터닉스, SK그룹 신재생에너지 재편 기대에 ‘...",
-          "url": "https://www.etoday.co.kr/news/view/2592365",
-          "office": "etoday",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "KKR과 신재생사업 빅딜…SK이터닉스 '상한가'",
-          "url": "https://www.hankyung.com/article/2026061090251",
-          "office": "hankyung",
-          "sentiment": "악재",
-          "cause_score": 6,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 악재, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[급등락주 짚어보기] SK이터닉스, SK그룹 신재생에너지 재편 기대에 ‘..."
-    },
-    {
-      "ticker": "케이뱅크",
-      "code": "279570",
-      "tomorrow_up_prob": "62%",
-      "entry": 6100.0,
-      "target": 6405,
-      "stop": 5917,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.7)",
-        "RSI58.8 강세",
-        "호재"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 4.33,
-      "cause_news": [
-        {
-          "title": "제주은행 23% 급등 이어 케이뱅크 4% 상승",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439516",
-          "office": "econonews",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "케이뱅크 주가, 강세... 외인·기관 쌍끌이 매수",
-          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1162859",
-          "office": "ggilbo",
-          "sentiment": "악재",
-          "cause_score": 8,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 악재, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "제주은행 23% 급등 이어 케이뱅크 4% 상승"
-    },
-    {
-      "ticker": "제주은행",
-      "code": "006220",
-      "tomorrow_up_prob": "62%",
-      "entry": 13760.0,
-      "target": 14448,
-      "stop": 13347,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.79)",
-        "RSI69.3 강세",
+        "Stoch골든",
         "호재"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
         {
-          "title": "제주은행 23% 급등 이어 케이뱅크 4% 상승",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439516",
-          "office": "econonews",
+          "title": "[속보] 한화비전, VI 눈길 중동 긴장 고조 속 장중 강세…방산·감시기술...",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=580854",
+          "office": "cbci",
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "제주은행 23% 급등 이어 케이뱅크 4% 상승"
-    },
-    {
-      "ticker": "테스",
-      "code": "095610",
-      "tomorrow_up_prob": "61%",
-      "entry": 173000.0,
-      "target": 181650,
-      "stop": 167810,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "약한 마감, Stoch 과매수",
-      "day_change": 7.43,
-      "cause_news": [
-        {
-          "title": "[특징주] 테스, 'HBM4 수율 핵심' BSD 수주 기대감에 12%↑",
-          "url": "http://www.newsdream.kr/news/articleView.html?idxno=112834",
-          "office": "newsdream",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "테스, 투자주의종목→투자경고종목 지정 예고",
-          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16086752",
-          "office": "topstarnews",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 테스, 'HBM4 수율 핵심' BSD 수주 기대감에 12%↑"
+      "cause_summary": "[속보] 한화비전, VI 눈길 중동 긴장 고조 속 장중 강세…방산·감시기술..."
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
