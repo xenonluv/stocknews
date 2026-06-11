@@ -1,32 +1,16 @@
 {
-  "as_of": "2026-06-11 15:07 KST",
+  "as_of": "2026-06-11 15:22 KST",
   "intraday_rank": [
-    {
-      "ticker": "삼화콘덴서",
-      "code": "001820",
-      "tomorrow_up_prob": "88%",
-      "entry": 135400.0,
-      "target": 142170,
-      "stop": 131338,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.87)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null
-    },
     {
       "ticker": "코리아써키트",
       "code": "007810",
       "tomorrow_up_prob": "87%",
-      "entry": 137500.0,
-      "target": 144375,
-      "stop": 133375,
+      "entry": 138400.0,
+      "target": 145320,
+      "stop": 134248,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.81)",
+        "강세마감(0.84)",
         "정배열",
         "MACD강세"
       ],
@@ -98,48 +82,108 @@
       "cause_summary": "상한가 종목 속출…화신정공·코미코·마니커 초강세, 투자심리 회복 신..."
     },
     {
-      "ticker": "스피어",
-      "code": "347700",
-      "tomorrow_up_prob": "80%",
-      "entry": 38500.0,
-      "target": 40425,
-      "stop": 37345,
+      "ticker": "삼화콘덴서",
+      "code": "001820",
+      "tomorrow_up_prob": "81%",
+      "entry": 133300.0,
+      "target": 139965,
+      "stop": 129301,
       "confidence": "상",
       "reasons": [
-        "강세마감(1.0)",
-        "RSI50.4 강세",
+        "강세마감(0.81)",
+        "정배열",
+        "RSI63.9 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null
+    },
+    {
+      "ticker": "이수화학",
+      "code": "005950",
+      "tomorrow_up_prob": "75%",
+      "entry": 15460.0,
+      "target": 16233,
+      "stop": 14996,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.92)",
+        "RSI64.2 강세",
         "Stoch골든"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
         {
-          "title": "스피어, 美 우주항공 업체 공급계약 체결에 28% 급등[특징주]",
-          "url": "https://www.newsway.co.kr/news/view?ud=2026061114251996856",
-          "office": "newsway",
+          "title": "[특징주] 이수화학, 세탁세제 원료 공급 차질에 반사 수혜…주가 12%↑",
+          "url": "http://www.newsdream.kr/news/articleView.html?idxno=112924",
+          "office": "newsdream",
           "sentiment": "호재",
           "cause_score": 17,
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[특징주] 스피어, 美 우주발사업체 누적 수주 3300억 돌파에 4% 급등",
-          "url": "https://www.etoday.co.kr/news/view/2592555",
-          "office": "etoday",
+          "title": "이수화학, 투자경고종목 지정예고→주가 급등 경계령",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16070153",
+          "office": "topstarnews",
           "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[ET특징주]스피어, 미국 우주발사업체향 수주 확대에 상승세",
-          "url": "https://www.etnews.com/20260611000153",
-          "office": "etnews",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "스피어, 美 우주항공 업체 공급계약 체결에 28% 급등[특징주]"
+      "cause_summary": "[특징주] 이수화학, 세탁세제 원료 공급 차질에 반사 수혜…주가 12%↑"
+    },
+    {
+      "ticker": "서진시스템",
+      "code": "178320",
+      "tomorrow_up_prob": "71%",
+      "entry": 75000.0,
+      "target": 78750,
+      "stop": 72750,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.72)",
+        "RSI57.3 강세",
+        "일목 구름위"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 7.75,
+      "related_news": [
+        {
+          "title": "서진시스템-스틱인베, 영구채·블록딜 '패키지 인수' 가능성 고개",
+          "url": "https://n.news.naver.com/mnews/article/293/0000086122",
+          "office": "블로터",
+          "sentiment": "호재"
+        },
+        {
+          "title": "'3000억 영구채 발행' 서진시스템, 임원 매도·베트남 세금 '악재'",
+          "url": "https://n.news.naver.com/mnews/article/293/0000086039",
+          "office": "블로터",
+          "sentiment": "혼재"
+        },
+        {
+          "title": "1000억 세금리스크, 유증 투자자에만 알렸다는 서진시스템[Only 이데일...",
+          "url": "https://n.news.naver.com/mnews/article/018/0006301101",
+          "office": "이데일리",
+          "sentiment": "호재"
+        }
+      ]
+    },
+    {
+      "ticker": "이수페타시스",
+      "code": "007660",
+      "tomorrow_up_prob": "67%",
+      "entry": 124400.0,
+      "target": 130620,
+      "stop": 120668,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.99)",
+        "Stoch골든",
+        "거래량1.55배"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null
     },
     {
       "ticker": "미래에셋생명",
@@ -186,48 +230,20 @@
       "cause_summary": "미래에셋생명, 상한가 직행…29% 급등에 투자자 관심 집중"
     },
     {
-      "ticker": "HD현대마린솔루션",
-      "code": "443060",
-      "tomorrow_up_prob": "63%",
-      "entry": 250000.0,
-      "target": 262500,
-      "stop": 242500,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.93)",
-        "RSI58.2 강세",
-        "장중 11회 지속"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] HD현대마린솔루션, 1분기 호실적·증권가 목표가 줄상향에 10%...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=293050",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "[특징주] HD현대마린솔루션, 1분기 호실적·증권가 목표가 줄상향에 10%..."
-    },
-    {
       "ticker": "티엠씨",
       "code": "217590",
       "tomorrow_up_prob": "57%",
-      "entry": 22025.0,
-      "target": 23126,
-      "stop": 21364,
+      "entry": 22200.0,
+      "target": 23310,
+      "stop": 21534,
       "confidence": "중",
       "reasons": [
-        "거래량5.82배",
+        "거래량5.87배",
         "호재",
-        "장중 21회 지속"
+        "장중 22회 지속"
       ],
       "risk": "약한 마감",
-      "day_change": -3.98,
+      "day_change": -4.2,
       "cause_news": [
         {
           "title": "[특징주] 티엠씨, 美 데이터센터 광케이블 수요 급증에 강세…원전 인프...",
@@ -256,35 +272,63 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "[특징주] 티엠씨, 美 데이터센터 광케이블 수요 급증에 강세…원전 인프..."
+    },
+    {
+      "ticker": "화신정공",
+      "code": "126640",
+      "tomorrow_up_prob": "52%",
+      "entry": 4675.0,
+      "target": 4909,
+      "stop": 4535,
+      "confidence": "하",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "일목 구름위"
+      ],
+      "risk": "약한 마감, RSI91.0 과매수",
+      "day_change": 8.8,
+      "cause_news": [
+        {
+          "title": "[ET특징주]화신정공, 보스턴 다이내믹스 방문 소식에 상승세",
+          "url": "https://www.etnews.com/20260611000152",
+          "office": "etnews",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] 화신정공, 장중 상한가 후 상승폭 축소…로봇 부품 기대감 지...",
+          "url": "https://www.ajunews.com/view/20260611100451059",
+          "office": "ajunews",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주]보스턴다이내믹스 공급 기대감…화신정공 4거래일 연속 급등",
+          "url": "https://www.namdonews.com/news/articleView.html?idxno=913290",
+          "office": "namdonews",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[ET특징주]화신정공, 보스턴 다이내믹스 방문 소식에 상승세"
     }
   ],
   "closing_bet": [
     {
-      "ticker": "삼화콘덴서",
-      "code": "001820",
-      "tomorrow_up_prob": "88%",
-      "entry": 135400.0,
-      "target": 142170,
-      "stop": 131338,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.87)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null
-    },
-    {
       "ticker": "코리아써키트",
       "code": "007810",
       "tomorrow_up_prob": "87%",
-      "entry": 137500.0,
-      "target": 144375,
-      "stop": 133375,
+      "entry": 138400.0,
+      "target": 145320,
+      "stop": 134248,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.81)",
+        "강세마감(0.84)",
         "정배열",
         "MACD강세"
       ],
@@ -356,92 +400,92 @@
       "cause_summary": "상한가 종목 속출…화신정공·코미코·마니커 초강세, 투자심리 회복 신..."
     },
     {
-      "ticker": "스피어",
-      "code": "347700",
-      "tomorrow_up_prob": "80%",
-      "entry": 38500.0,
-      "target": 40425,
-      "stop": 37345,
+      "ticker": "삼화콘덴서",
+      "code": "001820",
+      "tomorrow_up_prob": "81%",
+      "entry": 133300.0,
+      "target": 139965,
+      "stop": 129301,
       "confidence": "상",
       "reasons": [
-        "강세마감(1.0)",
-        "RSI50.4 강세",
+        "강세마감(0.81)",
+        "정배열",
+        "RSI63.9 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null
+    },
+    {
+      "ticker": "이수화학",
+      "code": "005950",
+      "tomorrow_up_prob": "75%",
+      "entry": 15460.0,
+      "target": 16233,
+      "stop": 14996,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.92)",
+        "RSI64.2 강세",
         "Stoch골든"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
         {
-          "title": "스피어, 美 우주항공 업체 공급계약 체결에 28% 급등[특징주]",
-          "url": "https://www.newsway.co.kr/news/view?ud=2026061114251996856",
-          "office": "newsway",
+          "title": "[특징주] 이수화학, 세탁세제 원료 공급 차질에 반사 수혜…주가 12%↑",
+          "url": "http://www.newsdream.kr/news/articleView.html?idxno=112924",
+          "office": "newsdream",
           "sentiment": "호재",
           "cause_score": 17,
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[특징주] 스피어, 美 우주발사업체 누적 수주 3300억 돌파에 4% 급등",
-          "url": "https://www.etoday.co.kr/news/view/2592555",
-          "office": "etoday",
+          "title": "이수화학, 투자경고종목 지정예고→주가 급등 경계령",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16070153",
+          "office": "topstarnews",
           "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[ET특징주]스피어, 미국 우주발사업체향 수주 확대에 상승세",
-          "url": "https://www.etnews.com/20260611000153",
-          "office": "etnews",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "스피어, 美 우주항공 업체 공급계약 체결에 28% 급등[특징주]"
+      "cause_summary": "[특징주] 이수화학, 세탁세제 원료 공급 차질에 반사 수혜…주가 12%↑"
     },
     {
-      "ticker": "미래에셋생명",
-      "code": "085620",
-      "tomorrow_up_prob": "64%",
-      "entry": 29350.0,
-      "target": 30818,
-      "stop": 28470,
-      "confidence": "중",
+      "ticker": "서진시스템",
+      "code": "178320",
+      "tomorrow_up_prob": "71%",
+      "entry": 75000.0,
+      "target": 78750,
+      "stop": 72750,
+      "confidence": "상",
       "reasons": [
-        "강세마감(1.0)",
-        "정배열",
-        "MACD강세"
+        "강세마감(0.72)",
+        "RSI57.3 강세",
+        "일목 구름위"
       ],
-      "risk": "RSI80.7 과매수, Stoch 과매수",
-      "day_change": null,
-      "cause_news": [
+      "risk": "특이 위험 낮음",
+      "day_change": 7.75,
+      "related_news": [
         {
-          "title": "미래에셋생명, 상한가 직행…29% 급등에 투자자 관심 집중",
-          "url": "https://www.job-post.co.kr/news/articleView.html?idxno=218057",
-          "office": "job-post",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+          "title": "서진시스템-스틱인베, 영구채·블록딜 '패키지 인수' 가능성 고개",
+          "url": "https://n.news.naver.com/mnews/article/293/0000086122",
+          "office": "블로터",
+          "sentiment": "호재"
         },
         {
-          "title": "미래에셋생명 주가, 강세... 왜?",
-          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1163124",
-          "office": "ggilbo",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+          "title": "'3000억 영구채 발행' 서진시스템, 임원 매도·베트남 세금 '악재'",
+          "url": "https://n.news.naver.com/mnews/article/293/0000086039",
+          "office": "블로터",
+          "sentiment": "혼재"
         },
         {
-          "title": "[속보] 미래에셋생명 주가 상한가 직행…전일 하락 딛고 반등",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=581268",
-          "office": "cbci",
-          "sentiment": "악재",
-          "cause_score": 8,
-          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 악재, 당일"
+          "title": "1000억 세금리스크, 유증 투자자에만 알렸다는 서진시스템[Only 이데일...",
+          "url": "https://n.news.naver.com/mnews/article/018/0006301101",
+          "office": "이데일리",
+          "sentiment": "호재"
         }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "미래에셋생명, 상한가 직행…29% 급등에 투자자 관심 집중"
+      ]
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
