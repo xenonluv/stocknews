@@ -3,9 +3,10 @@
 // 구조화 판단을 받아온다. 키는 서버 환경변수 전용(MOONSHOT_API_KEY) — 브라우저 미노출.
 // LLM 응답은 수동 타입가드로 검증하고, 실패 시 AiUnavailableError로 우아하게 강등.
 
+import { getRadar } from "@/lib/radar/repository";
 import type { AiAnalysis, AiDirection, StockReport } from "@/types/stock";
 import { buildStockReport } from "./report";
-import { formatKST } from "./parse";
+import { ddayKST, formatKST } from "./parse";
 
 export class AiConfigError extends Error {}
 export class AiUnavailableError extends Error {}
@@ -102,18 +103,39 @@ function serializeForPrompt(r: StockReport): string {
       `[뉴스 요약] 종합 ${n.summary.sentiment} · 중요도 ${n.summary.importance}/10 · 영향 ${n.summary.impact} · 관련기사 ${n.summary.relevantCount}건(호재 ${n.summary.posCount}/악재 ${n.summary.negCount})`
     );
     const top = n.items.filter((i) => i.relevant).slice(0, 8);
-    for (const it of top) L.push(`- (${it.sentiment}) ${it.title}`);
+    if (top.length > 0) {
+      for (const it of top) L.push(`- (${it.sentiment}) ${it.title}`);
+    } else {
+      // 종목 직접 언급 기사가 없는 날도 시황 기사로 업황·테마 맥락은 전달
+      // (예: "반도체 장비株 급등" — 재료필터엔 비관련이지만 LLM 판단엔 유효한 배경)
+      const ctx = n.items.slice(0, 5);
+      if (ctx.length > 0) {
+        L.push("(종목 직접 언급 기사 없음 — 아래는 같은 날 시황 기사 참고)");
+        for (const it of ctx) L.push(`- (시황) ${it.title}`);
+      }
+    }
   }
 
   const e = r.events;
-  if (e && e.matched.length > 0) {
-    L.push(
-      `[D-10 이벤트] ` +
-        e.matched
-          .map((m) => `${m.title}(D-${m.dday}, 중요도 ${m.importance})`)
-          .join(" · ") +
-        ` · 민감도 ${e.totalScore}/15`
-    );
+  if (e) {
+    if (e.matched.length > 0) {
+      L.push(
+        `[D-10 이벤트] ` +
+          e.matched
+            .map((m) => `${m.title}(D-${m.dday}, 중요도 ${m.importance})`)
+            .join(" · ") +
+          ` · 민감도 ${e.totalScore}/15`
+      );
+    } else if (e.upcomingCount > 0) {
+      // 테마 미매칭이어도 매크로 일정 자체는 변동성 맥락으로 유효 — 일정을 직접 나열
+      const now = new Date();
+      const upcoming = getRadar()
+        .events.map((ev) => ({ ...ev, dday: ddayKST(ev.date, now) }))
+        .filter((ev) => ev.dday >= 0 && ev.dday <= 10)
+        .map((ev) => `${ev.title}(D-${ev.dday})`)
+        .join(" · ");
+      L.push(`[D-10 이벤트] 이 종목 테마와 직접 매칭된 이벤트는 없음 · 참고 매크로 일정: ${upcoming}`);
+    }
   }
 
   if (r.researches.length > 0) {
