@@ -6,6 +6,7 @@ const ITEMS: { key: keyof ScoreBreakdown; label: string; max: number }[] = [
   { key: "flow", label: "외인·기관 수급", max: 15 },
   { key: "event", label: "이벤트 민감도", max: 15 },
   { key: "ma10", label: "10일선 여유", max: 10 },
+  { key: "ai", label: "AI 검증 보정", max: 10 },
 ];
 
 /**
@@ -17,18 +18,18 @@ export function ScoreBreakdownBars({ breakdown }: { breakdown: ScoreBreakdown })
     <ul className="space-y-1">
       {ITEMS.map(({ key, label, max }) => {
         const v = breakdown[key] ?? 0;
-        const w = Math.min(100, Math.max(0, (v / max) * 100));
+        const w = Math.min(100, Math.max(0, (Math.abs(v) / max) * 100));
         return (
           <li key={key} className="flex items-center gap-2 text-[11px]">
             <span className="w-24 shrink-0 text-muted-foreground">{label}</span>
             <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-white/10">
               <span
-                className="block h-full rounded-full bg-up/80"
+                className={`block h-full rounded-full ${v < 0 ? "bg-down/80" : "bg-up/80"}`}
                 style={{ width: `${w}%` }}
               />
             </span>
             <span className="w-9 shrink-0 text-right tabular-nums text-foreground/80">
-              {v > 0 ? `+${v}` : "0"}
+              {v > 0 ? `+${v}` : v < 0 ? v : "0"}
             </span>
           </li>
         );

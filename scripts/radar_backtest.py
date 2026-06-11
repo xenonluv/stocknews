@@ -129,6 +129,10 @@ def collect_samples():
                                 "code": code, "name": s.get("name"),
                                 "score": s.get("score", 0),
                                 "breakdown": s.get("breakdown", {}),
+                                "pattern": s.get("pattern", "unknown"),
+                                "ai_verdict": ((s.get("ai_verdict") or {}).get("verdict")
+                                               or (s.get("ai_verdict") or {}).get("status")
+                                               or "none"),
                                 # 마감 시 게시 카드 잔존 여부(= 종가 매수 가능했던 종목).
                                 # 키 없는 과거(장후 실행) 기록은 True
                                 "final": s.get("final", True),
@@ -176,6 +180,22 @@ def build_bins(samples):
                      "actual_rate": round(hits / len(grp) * 100) if grp else None,
                      "valid": len(grp) >= CALIB_MIN_N})
     return bins
+
+
+def group_stats(samples, key):
+    out = []
+    vals = sorted({s.get(key) or "unknown" for s in samples})
+    for v in vals:
+        grp = [s for s in samples if (s.get(key) or "unknown") == v]
+        if not grp:
+            continue
+        hits = sum(1 for s in grp if s["hit"])
+        rets = [s["return_pct"] for s in grp]
+        out.append({"key": v, "n": len(grp),
+                    "hit_rate": round(hits / len(grp) * 100, 1),
+                    "avg_return": round(sum(rets) / len(rets), 2),
+                    "high3_rate": round(sum(1 for s in grp if s["high3"]) / len(grp) * 100, 1)})
+    return out
 
 
 def tune_weights(samples):
@@ -247,6 +267,8 @@ def write_performance(samples, series, bins, weights, dropouts=None):
         },
         "series": series,
         "bins": bins,
+        "by_pattern": group_stats(samples, "pattern"),
+        "by_ai_verdict": group_stats(samples, "ai_verdict"),
         "weights": {
             "current": (weights or {}).get("weights") or DEFAULT_WEIGHTS,
             "default": DEFAULT_WEIGHTS,

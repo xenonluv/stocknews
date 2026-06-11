@@ -55,6 +55,7 @@ export interface ScoreBreakdown {
   ma10: number;
   flow: number;
   event: number;
+  ai?: number;
 }
 
 /** 흔들기(눌림 후 재상승) 패턴 증거 — pattern === "shakeout"일 때만 */
@@ -65,14 +66,44 @@ export interface ShakeInfo {
   trough_time: string;
 }
 
+/** 급락 흡수 패턴 증거 — pattern === "deep_shakeout"일 때만 */
+export interface DeepShakeInfo {
+  drop_low_from_high_pct: number;
+  drop_close_from_high_pct: number;
+  ibs: number;
+  recovery_pct: number;
+  high_time: string;
+  low_time: string;
+  late_reclaim: boolean;
+  vwap_reclaim: boolean;
+  retest_broken: boolean;
+  close_hold_score: number;
+  bars15_count: number;
+}
+
+/** Kimi 후보 검증 결과 */
+export interface AiVerdict {
+  status: "ok" | "disabled" | "not_configured" | "unavailable" | "outside_window";
+  verdict?: "CONFIRM" | "WATCH" | "REJECT";
+  confidence?: number;
+  reason?: string;
+  risk_flags?: string[];
+  manual_check?: string;
+  model?: string;
+  error?: string;
+  window?: [string, string];
+}
+
 /** 수상 종목 (전 조건 통과) */
 export interface Suspect {
   code: string;
   name: string;
   sector: string;
-  /** 감지 패턴 — "fade"(급등 후 식음) | "shakeout"(눌림 후 재상승). 구버전 JSON엔 없음 */
-  pattern?: "fade" | "shakeout";
+  /** 감지 패턴 — "fade"(급등 후 식음) | "shakeout"(눌림 후 재상승) | "deep_shakeout"(급락 흡수). */
+  pattern?: "fade" | "shakeout" | "deep_shakeout";
   shake?: ShakeInfo | null;
+  deep_shake?: DeepShakeInfo | null;
+  ai_verdict?: AiVerdict | null;
   suspicion_score: number; // 0~100
   /** 백테스트 실측 적중률 (점수대 표본 n>=20 구간만, 없으면 null) */
   calibrated_prob?: { rate: number | null; n: number } | null;
@@ -107,9 +138,17 @@ export interface RadarData {
     universe?: string;
     /** 시장×지표(거래대금/등락률)별 상위 N (kis_rank 방식) */
     top_n?: number;
+    /** deep 수집용 확장 포함 유니버스 등락률 범위 */
+    universe_chg_range?: [number, number];
     /** 흔들기 트랙: 눌림 깊이 하한(%) / 등락률 상한(%) */
     shake_pct?: number;
     shake_chg_max?: number;
+    deep_shake_enabled?: boolean;
+    deep_drop_range?: [number, number];
+    deep_ibs_min?: number;
+    kimi_mode?: "auto" | "on" | "off";
+    kimi_max?: number;
+    kimi_window?: [string, string];
   };
   universe_count: number;
   events: RadarEvent[];

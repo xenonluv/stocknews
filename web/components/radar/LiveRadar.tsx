@@ -11,6 +11,12 @@ import type { RadarData } from "@/types/radar";
 /** 자동 갱신 주기(ms). 데이터는 cron 15분 주기로 바뀌므로 60초면 충분. */
 const POLL_MS = 60_000;
 
+function fmtHHMM(v?: string) {
+  if (!v) return "";
+  const s = v.replace(/:/g, "");
+  return s.length >= 4 ? `${s.slice(0, 2)}:${s.slice(2, 4)}` : v;
+}
+
 function LiveStatusBar({ data, justUpdated }: { data: RadarData; justUpdated: boolean }) {
   const open = data.market_session === "open";
   return (
@@ -109,6 +115,12 @@ export function LiveRadar({ initial }: { initial: RadarData }) {
             {data.params.chg_range?.[1]}% · 10일선 위 · 분봉 스파크
             {data.params.shake_pct != null &&
               ` · 흔들기 재상승(−${data.params.shake_pct}%+ 눌림 후 회복, ≤+${data.params.shake_chg_max}%)`}
+            {data.params.deep_shake_enabled &&
+              ` · 급락흡수(고점대비 −${data.params.deep_drop_range?.[0]}~−${data.params.deep_drop_range?.[1]}%, IBS ${data.params.deep_ibs_min}+)${
+                data.params.kimi_mode !== "off"
+                  ? ` · Kimi ${fmtHHMM(data.params.kimi_window?.[0])}~${fmtHHMM(data.params.kimi_window?.[1])}`
+                  : ""
+              }`}
           </p>
         </div>
 

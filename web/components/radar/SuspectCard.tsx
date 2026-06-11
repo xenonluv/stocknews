@@ -1,4 +1,4 @@
-import { Newspaper, TrendingDown, Zap } from "lucide-react";
+import { BrainCircuit, Newspaper, TrendingDown, Zap } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
@@ -22,6 +22,16 @@ function sentimentDotClass(sentiment?: string | null) {
   if (sentiment === "호재") return "bg-up";
   if (sentiment === "악재") return "bg-down";
   return "bg-muted-foreground/50";
+}
+
+function aiBadge(v: Suspect["ai_verdict"]) {
+  if (!v || v.status === "not_configured") return { label: "AI 미설정", variant: "neutral" as const };
+  if (v.status === "disabled") return { label: "AI 꺼짐", variant: "neutral" as const };
+  if (v.status === "outside_window") return { label: "AI 대기", variant: "neutral" as const };
+  if (v.status === "unavailable") return { label: "AI 미검증", variant: "outline" as const };
+  if (v.verdict === "CONFIRM") return { label: "AI 확인", variant: "outline" as const, className: "border-up/50 text-up" };
+  if (v.verdict === "REJECT") return { label: "AI 경고", variant: "outline" as const, className: "border-down/50 text-down" };
+  return { label: "AI 관망", variant: "warning" as const };
 }
 
 /**
@@ -58,6 +68,19 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
                 눌림 후 재상승
               </Badge>
             )}
+            {s.pattern === "deep_shakeout" && (
+              <Badge variant="warning" title="고점 대비 급락 후 종가에 저가 방어와 흡수 흔적이 있는 패턴">
+                급락 흡수
+              </Badge>
+            )}
+            {(() => {
+              const b = aiBadge(s.ai_verdict);
+              return (
+                <Badge variant={b.variant} className={b.className} title={s.ai_verdict?.reason ?? undefined}>
+                  {b.label}
+                </Badge>
+              );
+            })()}
             {s.sector && <Badge variant="neutral">{s.sector}</Badge>}
             {s.matched_events.slice(0, 2).map((m) => (
               <Badge key={m.id} variant="outline" className="border-up/50 text-up">
@@ -114,6 +137,23 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
                 흔들기: {s.shake.high_time} 고점 → {s.shake.trough_time} 저점 −
                 <span className="tabular-nums">{s.shake.depth_pct.toFixed(1)}%</span> 눌림 후 낙폭{" "}
                 <span className="tabular-nums">{s.shake.recovery_pct}%</span> 회복
+              </p>
+            )}
+            {s.deep_shake && (
+              <p className="text-[11px] text-warning">
+                급락흡수: {s.deep_shake.high_time} 고점 → {s.deep_shake.low_time} 저점 −
+                <span className="tabular-nums">{s.deep_shake.drop_low_from_high_pct.toFixed(1)}%</span>
+                {" · "}IBS <span className="tabular-nums">{Math.round(s.deep_shake.ibs * 100)}</span>
+                {" · "}회복 <span className="tabular-nums">{s.deep_shake.recovery_pct}%</span>
+                {s.deep_shake.late_reclaim && <span> · 막판회복</span>}
+              </p>
+            )}
+            {s.ai_verdict?.status === "ok" && s.ai_verdict.reason && (
+              <p className="flex items-start gap-1 text-[11px] text-muted-foreground">
+                <BrainCircuit className="mt-0.5 size-3 shrink-0" aria-hidden />
+                <span>
+                  Kimi {s.ai_verdict.confidence ?? 0}% · {s.ai_verdict.reason}
+                </span>
               </p>
             )}
             <p className="text-[11px] text-muted-foreground">

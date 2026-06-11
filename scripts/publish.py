@@ -24,7 +24,12 @@ HISTORY_DIR = os.path.join(REPO, "data", "radar_history")
 DISCLAIMER = "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다."
 RADAR_PASSTHRU = ("--min-value", "--high-pct", "--chg-min", "--chg-max",
                   "--spark-x", "--spark-pct", "--top-n",
-                  "--shake-pct", "--shake-recover", "--shake-chg-max")
+                  "--shake-pct", "--shake-recover", "--shake-chg-max",
+                  "--deep-drop-min", "--deep-drop-max", "--deep-ibs-min",
+                  "--deep-recovery-min", "--deep-late-window",
+                  "--kimi-mode", "--kimi-max", "--kimi-timeout",
+                  "--kimi-window-start", "--kimi-window-end")
+RADAR_BOOL_PASSTHRU = ("--no-deep-shake",)
 
 
 def run_radar(extra_args):
@@ -70,6 +75,9 @@ def record_history(out):
             "change_pct": s.get("change_pct"),
             "high_pct": s.get("high_pct"),
             "fade_pct": s.get("fade_pct"),
+            "pattern": s.get("pattern"),
+            "deep_shake": s.get("deep_shake"),
+            "ai_verdict": s.get("ai_verdict"),
             "matched_events": [m.get("id") for m in s.get("matched_events", [])],
             "first_seen": prev.get("first_seen") or out.get("generated_at"),
             "evaluated": prev.get("evaluated", False),
@@ -123,6 +131,9 @@ def main():
     for k in RADAR_PASSTHRU:
         if k in args:
             passthru += [k, args[args.index(k) + 1]]
+    for k in RADAR_BOOL_PASSTHRU:
+        if k in args:
+            passthru.append(k)
     if "--names" in args:
         i = args.index("--names")
         names = []
