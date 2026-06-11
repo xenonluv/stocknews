@@ -1,20 +1,20 @@
 {
-  "as_of": "2026-06-11 11:52 KST",
+  "as_of": "2026-06-11 12:07 KST",
   "intraday_rank": [
     {
       "ticker": "코리아써키트",
       "code": "007810",
-      "tomorrow_up_prob": "83%",
-      "entry": 134800.0,
-      "target": 141540,
-      "stop": 130756,
+      "tomorrow_up_prob": "94%",
+      "entry": 134300.0,
+      "target": 141015,
+      "stop": 130271,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.73)",
+        "강세마감(0.71)",
         "정배열",
         "MACD강세"
       ],
-      "risk": "Stoch 과매수",
+      "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
         {
@@ -84,61 +84,33 @@
     {
       "ticker": "삼화콘덴서",
       "code": "001820",
-      "tomorrow_up_prob": "75%",
-      "entry": 118200.0,
-      "target": 124110,
-      "stop": 114654,
+      "tomorrow_up_prob": "76%",
+      "entry": 122300.0,
+      "target": 128415,
+      "stop": 118631,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.89)",
+        "강세마감(1.0)",
         "정배열",
-        "RSI59.2 강세"
+        "RSI60.6 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null
     },
     {
-      "ticker": "미래에셋생명",
-      "code": "085620",
-      "tomorrow_up_prob": "60%",
-      "entry": 29350.0,
-      "target": 30818,
-      "stop": 28470,
+      "ticker": "화신정공",
+      "code": "126640",
+      "tomorrow_up_prob": "64%",
+      "entry": 5440.0,
+      "target": 5712,
+      "stop": 5277,
       "confidence": "중",
       "reasons": [
-        "강세마감(1.0)",
+        "강세마감(0.71)",
         "정배열",
         "MACD강세"
       ],
-      "risk": "RSI80.7 과매수, Stoch 과매수",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "보험주 뒤늦은 랠리…미래에셋생명·한화생명 급등 배경은",
-          "url": "https://cwn.kr/article/1065600054110017",
-          "office": "cwn",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "보험주 뒤늦은 랠리…미래에셋생명·한화생명 급등 배경은"
-    },
-    {
-      "ticker": "화신정공",
-      "code": "126640",
-      "tomorrow_up_prob": "56%",
-      "entry": 5310.0,
-      "target": 5576,
-      "stop": 5151,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "RSI92.6 과매수, Stoch 과매수",
+      "risk": "RSI92.8 과매수, Stoch 과매수",
       "day_change": null,
       "cause_news": [
         {
@@ -170,17 +142,53 @@
       "cause_summary": "[ET특징주]화신정공, 보스턴 다이내믹스 방문 소식에 상승세"
     },
     {
+      "ticker": "미래에셋생명",
+      "code": "085620",
+      "tomorrow_up_prob": "61%",
+      "entry": 29350.0,
+      "target": 30818,
+      "stop": 28470,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(1.0)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "RSI80.7 과매수, Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "보험주 뒤늦은 랠리…미래에셋생명·한화생명 급등 배경은",
+          "url": "https://cwn.kr/article/1065600054110017",
+          "office": "cwn",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "미래에셋생명 주가, 강세... 왜?",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1163124",
+          "office": "ggilbo",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "보험주 뒤늦은 랠리…미래에셋생명·한화생명 급등 배경은"
+    },
+    {
       "ticker": "심텍",
       "code": "222800",
       "tomorrow_up_prob": "55%",
-      "entry": 129800.0,
-      "target": 136290,
-      "stop": 125906,
+      "entry": 131450.0,
+      "target": 138022,
+      "stop": 127506,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.73)",
-        "RSI61.6 강세",
-        "거래량1.64배"
+        "강세마감(0.78)",
+        "RSI62.2 강세",
+        "거래량1.68배"
       ],
       "risk": "악재",
       "day_change": null,
@@ -218,17 +226,17 @@
     {
       "ticker": "코리아써키트",
       "code": "007810",
-      "tomorrow_up_prob": "83%",
-      "entry": 134800.0,
-      "target": 141540,
-      "stop": 130756,
+      "tomorrow_up_prob": "94%",
+      "entry": 134300.0,
+      "target": 141015,
+      "stop": 130271,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.73)",
+        "강세마감(0.71)",
         "정배열",
         "MACD강세"
       ],
-      "risk": "Stoch 과매수",
+      "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
         {
@@ -298,61 +306,33 @@
     {
       "ticker": "삼화콘덴서",
       "code": "001820",
-      "tomorrow_up_prob": "75%",
-      "entry": 118200.0,
-      "target": 124110,
-      "stop": 114654,
+      "tomorrow_up_prob": "76%",
+      "entry": 122300.0,
+      "target": 128415,
+      "stop": 118631,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.89)",
+        "강세마감(1.0)",
         "정배열",
-        "RSI59.2 강세"
+        "RSI60.6 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null
     },
     {
-      "ticker": "미래에셋생명",
-      "code": "085620",
-      "tomorrow_up_prob": "60%",
-      "entry": 29350.0,
-      "target": 30818,
-      "stop": 28470,
+      "ticker": "화신정공",
+      "code": "126640",
+      "tomorrow_up_prob": "64%",
+      "entry": 5440.0,
+      "target": 5712,
+      "stop": 5277,
       "confidence": "중",
       "reasons": [
-        "강세마감(1.0)",
+        "강세마감(0.71)",
         "정배열",
         "MACD강세"
       ],
-      "risk": "RSI80.7 과매수, Stoch 과매수",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "보험주 뒤늦은 랠리…미래에셋생명·한화생명 급등 배경은",
-          "url": "https://cwn.kr/article/1065600054110017",
-          "office": "cwn",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "보험주 뒤늦은 랠리…미래에셋생명·한화생명 급등 배경은"
-    },
-    {
-      "ticker": "화신정공",
-      "code": "126640",
-      "tomorrow_up_prob": "56%",
-      "entry": 5310.0,
-      "target": 5576,
-      "stop": 5151,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "RSI92.6 과매수, Stoch 과매수",
+      "risk": "RSI92.8 과매수, Stoch 과매수",
       "day_change": null,
       "cause_news": [
         {
@@ -382,6 +362,42 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "[ET특징주]화신정공, 보스턴 다이내믹스 방문 소식에 상승세"
+    },
+    {
+      "ticker": "미래에셋생명",
+      "code": "085620",
+      "tomorrow_up_prob": "61%",
+      "entry": 29350.0,
+      "target": 30818,
+      "stop": 28470,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(1.0)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "RSI80.7 과매수, Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "보험주 뒤늦은 랠리…미래에셋생명·한화생명 급등 배경은",
+          "url": "https://cwn.kr/article/1065600054110017",
+          "office": "cwn",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "미래에셋생명 주가, 강세... 왜?",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1163124",
+          "office": "ggilbo",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "보험주 뒤늦은 랠리…미래에셋생명·한화생명 급등 배경은"
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
