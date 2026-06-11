@@ -1,6 +1,58 @@
 {
-  "as_of": "2026-06-11 13:52 KST",
+  "as_of": "2026-06-11 14:07 KST",
   "intraday_rank": [
+    {
+      "ticker": "삼화콘덴서",
+      "code": "001820",
+      "tomorrow_up_prob": "88%",
+      "entry": 137300.0,
+      "target": 144165,
+      "stop": 133181,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.93)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null
+    },
+    {
+      "ticker": "코리아써키트",
+      "code": "007810",
+      "tomorrow_up_prob": "87%",
+      "entry": 136500.0,
+      "target": 143325,
+      "stop": 132405,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.78)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "심텍·코리아써키트 주가 불기둥… AI 반도체 수혜 기판주 재평가",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=459318",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 인과표현, 재료, 당일"
+        },
+        {
+          "title": "[ET특징주]코리아써키트, PCB 업황 개선 수혜 기대감에 상승세",
+          "url": "https://www.etnews.com/20260529000206",
+          "office": "etnews",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "심텍·코리아써키트 주가 불기둥… AI 반도체 수혜 기판주 재평가"
+    },
     {
       "ticker": "코미코",
       "code": "183300",
@@ -46,68 +98,16 @@
       "cause_summary": "상한가 종목 속출…화신정공·코미코·마니커 초강세, 투자심리 회복 신..."
     },
     {
-      "ticker": "코리아써키트",
-      "code": "007810",
-      "tomorrow_up_prob": "83%",
-      "entry": 138300.0,
-      "target": 145215,
-      "stop": 134151,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.83)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "Stoch 과매수",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "심텍·코리아써키트 주가 불기둥… AI 반도체 수혜 기판주 재평가",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=459318",
-          "office": "pinpointnews",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 인과표현, 재료, 당일"
-        },
-        {
-          "title": "[ET특징주]코리아써키트, PCB 업황 개선 수혜 기대감에 상승세",
-          "url": "https://www.etnews.com/20260529000206",
-          "office": "etnews",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "심텍·코리아써키트 주가 불기둥… AI 반도체 수혜 기판주 재평가"
-    },
-    {
-      "ticker": "삼화콘덴서",
-      "code": "001820",
-      "tomorrow_up_prob": "81%",
-      "entry": 126000.0,
-      "target": 132300,
-      "stop": 122220,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.87)",
-        "정배열",
-        "RSI61.8 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null
-    },
-    {
       "ticker": "엠케이전자",
       "code": "033160",
       "tomorrow_up_prob": "79%",
-      "entry": 28350.0,
-      "target": 29768,
-      "stop": 27500,
+      "entry": 28050.0,
+      "target": 29452,
+      "stop": 27208,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.95)",
-        "RSI53.2 강세",
+        "강세마감(0.91)",
+        "RSI52.8 강세",
         "Stoch골든"
       ],
       "risk": "특이 위험 낮음",
@@ -145,14 +145,14 @@
       "ticker": "원익홀딩스",
       "code": "030530",
       "tomorrow_up_prob": "74%",
-      "entry": 30450.0,
-      "target": 31972,
-      "stop": 29536,
+      "entry": 30050.0,
+      "target": 31552,
+      "stop": 29148,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.99)",
+        "강세마감(0.94)",
         "MACD강세",
-        "RSI54.8 강세"
+        "RSI54.1 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -176,6 +176,50 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "원익홀딩스, 기대감에 장중 강세…중동 불안 속 투자자 시선 집중"
+    },
+    {
+      "ticker": "스피어",
+      "code": "347700",
+      "tomorrow_up_prob": "71%",
+      "entry": 37850.0,
+      "target": 39742,
+      "stop": 36714,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.94)",
+        "Stoch골든",
+        "거래량1.84배"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[특징주] 스피어, 美 우주발사업체 누적 수주 3300억 돌파에 4% 급등",
+          "url": "https://www.etoday.co.kr/news/view/2592555",
+          "office": "etoday",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[ET특징주]스피어, 미국 우주발사업체향 수주 확대에 상승세",
+          "url": "https://www.etnews.com/20260611000153",
+          "office": "etnews",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "스피어, 美 우주발사업체향 수주 3300억 돌파에 11%↑[특징주]",
+          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03037286645480736",
+          "office": "edaily",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 스피어, 美 우주발사업체 누적 수주 3300억 돌파에 4% 급등"
     },
     {
       "ticker": "미래에셋생명",
@@ -225,14 +269,14 @@
       "ticker": "이수페타시스",
       "code": "007660",
       "tomorrow_up_prob": "63%",
-      "entry": 123100.0,
-      "target": 129255,
-      "stop": 119407,
+      "entry": 123400.0,
+      "target": 129570,
+      "stop": 119698,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.92)",
+        "강세마감(0.94)",
         "Stoch골든",
-        "장중 9회 지속"
+        "장중 10회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null
@@ -241,17 +285,17 @@
       "ticker": "티엠씨",
       "code": "217590",
       "tomorrow_up_prob": "57%",
-      "entry": 22200.0,
-      "target": 23310,
-      "stop": 21534,
+      "entry": 22250.0,
+      "target": 23362,
+      "stop": 21582,
       "confidence": "중",
       "reasons": [
-        "거래량5.61배",
+        "거래량5.66배",
         "호재",
-        "장중 16회 지속"
+        "장중 17회 지속"
       ],
       "risk": "약한 마감",
-      "day_change": 0.44,
+      "day_change": -0.88,
       "cause_news": [
         {
           "title": "[특징주] 티엠씨, 美 데이터센터 광케이블 수요 급증에 강세…원전 인프...",
@@ -283,6 +327,58 @@
     }
   ],
   "closing_bet": [
+    {
+      "ticker": "삼화콘덴서",
+      "code": "001820",
+      "tomorrow_up_prob": "88%",
+      "entry": 137300.0,
+      "target": 144165,
+      "stop": 133181,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.93)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null
+    },
+    {
+      "ticker": "코리아써키트",
+      "code": "007810",
+      "tomorrow_up_prob": "87%",
+      "entry": 136500.0,
+      "target": 143325,
+      "stop": 132405,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.78)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "심텍·코리아써키트 주가 불기둥… AI 반도체 수혜 기판주 재평가",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=459318",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 인과표현, 재료, 당일"
+        },
+        {
+          "title": "[ET특징주]코리아써키트, PCB 업황 개선 수혜 기대감에 상승세",
+          "url": "https://www.etnews.com/20260529000206",
+          "office": "etnews",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "심텍·코리아써키트 주가 불기둥… AI 반도체 수혜 기판주 재평가"
+    },
     {
       "ticker": "코미코",
       "code": "183300",
@@ -328,68 +424,16 @@
       "cause_summary": "상한가 종목 속출…화신정공·코미코·마니커 초강세, 투자심리 회복 신..."
     },
     {
-      "ticker": "코리아써키트",
-      "code": "007810",
-      "tomorrow_up_prob": "83%",
-      "entry": 138300.0,
-      "target": 145215,
-      "stop": 134151,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.83)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "Stoch 과매수",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "심텍·코리아써키트 주가 불기둥… AI 반도체 수혜 기판주 재평가",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=459318",
-          "office": "pinpointnews",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 인과표현, 재료, 당일"
-        },
-        {
-          "title": "[ET특징주]코리아써키트, PCB 업황 개선 수혜 기대감에 상승세",
-          "url": "https://www.etnews.com/20260529000206",
-          "office": "etnews",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "심텍·코리아써키트 주가 불기둥… AI 반도체 수혜 기판주 재평가"
-    },
-    {
-      "ticker": "삼화콘덴서",
-      "code": "001820",
-      "tomorrow_up_prob": "81%",
-      "entry": 126000.0,
-      "target": 132300,
-      "stop": 122220,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.87)",
-        "정배열",
-        "RSI61.8 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null
-    },
-    {
       "ticker": "엠케이전자",
       "code": "033160",
       "tomorrow_up_prob": "79%",
-      "entry": 28350.0,
-      "target": 29768,
-      "stop": 27500,
+      "entry": 28050.0,
+      "target": 29452,
+      "stop": 27208,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.95)",
-        "RSI53.2 강세",
+        "강세마감(0.91)",
+        "RSI52.8 강세",
         "Stoch골든"
       ],
       "risk": "특이 위험 낮음",
@@ -427,14 +471,14 @@
       "ticker": "원익홀딩스",
       "code": "030530",
       "tomorrow_up_prob": "74%",
-      "entry": 30450.0,
-      "target": 31972,
-      "stop": 29536,
+      "entry": 30050.0,
+      "target": 31552,
+      "stop": 29148,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.99)",
+        "강세마감(0.94)",
         "MACD강세",
-        "RSI54.8 강세"
+        "RSI54.1 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
