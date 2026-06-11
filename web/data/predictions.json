@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-06-11 13:37 KST",
+  "as_of": "2026-06-11 13:52 KST",
   "intraday_rank": [
     {
       "ticker": "코미코",
@@ -49,9 +49,9 @@
       "ticker": "코리아써키트",
       "code": "007810",
       "tomorrow_up_prob": "83%",
-      "entry": 138200.0,
-      "target": 145110,
-      "stop": 134054,
+      "entry": 138300.0,
+      "target": 145215,
+      "stop": 134151,
       "confidence": "상",
       "reasons": [
         "강세마감(0.83)",
@@ -85,73 +85,29 @@
       "ticker": "삼화콘덴서",
       "code": "001820",
       "tomorrow_up_prob": "81%",
-      "entry": 126500.0,
-      "target": 132825,
-      "stop": 122705,
+      "entry": 126000.0,
+      "target": 132300,
+      "stop": 122220,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.96)",
+        "강세마감(0.87)",
         "정배열",
-        "RSI61.9 강세"
+        "RSI61.8 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null
     },
     {
-      "ticker": "주성엔지니어링",
-      "code": "036930",
-      "tomorrow_up_prob": "80%",
-      "entry": 251500.0,
-      "target": 264075,
-      "stop": 243955,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.98)",
-        "정배열",
-        "RSI64.3 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "주성엔지니어링 주가, 급등세... 광통신 관련주 들썩",
-          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1163129",
-          "office": "ggilbo",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "[속보] 주성엔지니어링 VI 발동, 주가 도약…장중 강세로 전환",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=581274",
-          "office": "cbci",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "차세대 패널·HBM 공정의 필수재… 주성엔지니어링, 수주 랠리 청신호",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=459352",
-          "office": "pinpointnews",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "주성엔지니어링 주가, 급등세... 광통신 관련주 들썩"
-    },
-    {
       "ticker": "엠케이전자",
       "code": "033160",
       "tomorrow_up_prob": "79%",
-      "entry": 28700.0,
-      "target": 30135,
-      "stop": 27839,
+      "entry": 28350.0,
+      "target": 29768,
+      "stop": 27500,
       "confidence": "상",
       "reasons": [
-        "강세마감(1.0)",
-        "RSI53.6 강세",
+        "강세마감(0.95)",
+        "RSI53.2 강세",
         "Stoch골든"
       ],
       "risk": "특이 위험 낮음",
@@ -188,15 +144,15 @@
     {
       "ticker": "원익홀딩스",
       "code": "030530",
-      "tomorrow_up_prob": "73%",
-      "entry": 30100.0,
-      "target": 31605,
-      "stop": 29197,
+      "tomorrow_up_prob": "74%",
+      "entry": 30450.0,
+      "target": 31972,
+      "stop": 29536,
       "confidence": "상",
       "reasons": [
         "강세마감(0.99)",
         "MACD강세",
-        "RSI54.2 강세"
+        "RSI54.8 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -269,61 +225,33 @@
       "ticker": "이수페타시스",
       "code": "007660",
       "tomorrow_up_prob": "63%",
-      "entry": 122300.0,
-      "target": 128415,
-      "stop": 118631,
+      "entry": 123100.0,
+      "target": 129255,
+      "stop": 119407,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.88)",
+        "강세마감(0.92)",
         "Stoch골든",
-        "장중 8회 지속"
+        "장중 9회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null
     },
     {
-      "ticker": "HD현대마린솔루션",
-      "code": "443060",
-      "tomorrow_up_prob": "63%",
-      "entry": 248000.0,
-      "target": 260400,
-      "stop": 240560,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.87)",
-        "RSI57.6 강세",
-        "장중 8회 지속"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] HD현대마린솔루션, 1분기 호실적·증권가 목표가 줄상향에 10%...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=293050",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "[특징주] HD현대마린솔루션, 1분기 호실적·증권가 목표가 줄상향에 10%..."
-    },
-    {
       "ticker": "티엠씨",
       "code": "217590",
       "tomorrow_up_prob": "57%",
-      "entry": 22850.0,
-      "target": 23992,
-      "stop": 22164,
+      "entry": 22200.0,
+      "target": 23310,
+      "stop": 21534,
       "confidence": "중",
       "reasons": [
-        "거래량5.56배",
+        "거래량5.61배",
         "호재",
-        "장중 15회 지속"
+        "장중 16회 지속"
       ],
       "risk": "약한 마감",
-      "day_change": 2.21,
+      "day_change": 0.44,
       "cause_news": [
         {
           "title": "[특징주] 티엠씨, 美 데이터센터 광케이블 수요 급증에 강세…원전 인프...",
@@ -352,50 +280,6 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "[특징주] 티엠씨, 美 데이터센터 광케이블 수요 급증에 강세…원전 인프..."
-    },
-    {
-      "ticker": "화신정공",
-      "code": "126640",
-      "tomorrow_up_prob": "52%",
-      "entry": 4865.0,
-      "target": 5108,
-      "stop": 4719,
-      "confidence": "하",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "약한 마감, RSI91.5 과매수",
-      "day_change": 8.35,
-      "cause_news": [
-        {
-          "title": "[ET특징주]화신정공, 보스턴 다이내믹스 방문 소식에 상승세",
-          "url": "https://www.etnews.com/20260611000152",
-          "office": "etnews",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] 화신정공, 장중 상한가 후 상승폭 축소…로봇 부품 기대감 지...",
-          "url": "https://www.ajunews.com/view/20260611100451059",
-          "office": "ajunews",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주]보스턴다이내믹스 공급 기대감…화신정공 4거래일 연속 급등",
-          "url": "https://www.namdonews.com/news/articleView.html?idxno=913290",
-          "office": "namdonews",
-          "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[ET특징주]화신정공, 보스턴 다이내믹스 방문 소식에 상승세"
     }
   ],
   "closing_bet": [
@@ -447,9 +331,9 @@
       "ticker": "코리아써키트",
       "code": "007810",
       "tomorrow_up_prob": "83%",
-      "entry": 138200.0,
-      "target": 145110,
-      "stop": 134054,
+      "entry": 138300.0,
+      "target": 145215,
+      "stop": 134151,
       "confidence": "상",
       "reasons": [
         "강세마감(0.83)",
@@ -483,73 +367,29 @@
       "ticker": "삼화콘덴서",
       "code": "001820",
       "tomorrow_up_prob": "81%",
-      "entry": 126500.0,
-      "target": 132825,
-      "stop": 122705,
+      "entry": 126000.0,
+      "target": 132300,
+      "stop": 122220,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.96)",
+        "강세마감(0.87)",
         "정배열",
-        "RSI61.9 강세"
+        "RSI61.8 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null
     },
     {
-      "ticker": "주성엔지니어링",
-      "code": "036930",
-      "tomorrow_up_prob": "80%",
-      "entry": 251500.0,
-      "target": 264075,
-      "stop": 243955,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.98)",
-        "정배열",
-        "RSI64.3 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "주성엔지니어링 주가, 급등세... 광통신 관련주 들썩",
-          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1163129",
-          "office": "ggilbo",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "[속보] 주성엔지니어링 VI 발동, 주가 도약…장중 강세로 전환",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=581274",
-          "office": "cbci",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "차세대 패널·HBM 공정의 필수재… 주성엔지니어링, 수주 랠리 청신호",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=459352",
-          "office": "pinpointnews",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "주성엔지니어링 주가, 급등세... 광통신 관련주 들썩"
-    },
-    {
       "ticker": "엠케이전자",
       "code": "033160",
       "tomorrow_up_prob": "79%",
-      "entry": 28700.0,
-      "target": 30135,
-      "stop": 27839,
+      "entry": 28350.0,
+      "target": 29768,
+      "stop": 27500,
       "confidence": "상",
       "reasons": [
-        "강세마감(1.0)",
-        "RSI53.6 강세",
+        "강세마감(0.95)",
+        "RSI53.2 강세",
         "Stoch골든"
       ],
       "risk": "특이 위험 낮음",
@@ -582,6 +422,42 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "케이씨텍·엠케이전자 주가 파죽지세… HBM 수혜주 찾기 분주"
+    },
+    {
+      "ticker": "원익홀딩스",
+      "code": "030530",
+      "tomorrow_up_prob": "74%",
+      "entry": 30450.0,
+      "target": 31972,
+      "stop": 29536,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.99)",
+        "MACD강세",
+        "RSI54.8 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "원익홀딩스, 기대감에 장중 강세…중동 불안 속 투자자 시선 집중",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=580853",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락"
+        },
+        {
+          "title": "원익홀딩스 주가 급등…VI 두차례 발동되기도",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=581275",
+          "office": "cbci",
+          "sentiment": "악재",
+          "cause_score": 8,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 악재, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "원익홀딩스, 기대감에 장중 강세…중동 불안 속 투자자 시선 집중"
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
