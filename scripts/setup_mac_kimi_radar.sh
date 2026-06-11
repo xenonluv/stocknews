@@ -30,11 +30,15 @@ require_cmd git
 require_cmd python3
 
 stash_dirty_worktree() {
-  if [ -n "$(git status --porcelain)" ]; then
+  local status
+  status="$(git status --porcelain -- . ':(exclude)scripts/setup_mac_kimi_radar.sh' ':(exclude)scripts/setup_mac_autorun.sh')"
+  if [ -n "$status" ]; then
     echo "Local git changes found. Stashing them before sync."
-    git status --short
-    git stash push -u -m "setup_mac_kimi_radar auto-stash $(date +%Y%m%d%H%M%S)"
+    printf '%s\n' "$status"
+    git stash push -u -m "setup_mac_kimi_radar auto-stash $(date +%Y%m%d%H%M%S)" -- . ':(exclude)scripts/setup_mac_kimi_radar.sh' ':(exclude)scripts/setup_mac_autorun.sh'
     echo "Local changes were preserved in git stash."
+  elif [ -n "$(git status --porcelain -- scripts/setup_mac_kimi_radar.sh scripts/setup_mac_autorun.sh)" ]; then
+    echo "Keeping local setup script changes out of auto-stash."
   fi
 }
 
@@ -68,6 +72,42 @@ raise SystemExit(1)
 PY
 }
 
+read_kimi_api_key_value() {
+  local file="$1"
+  [ -f "$file" ] || return 1
+  python3 - "$file" <<'PY'
+import re
+import sys
+
+path = sys.argv[1]
+aliases = {"MOONSHOT_API_KEY", "KIMI_API_KEY", "API_KEY", "KIMI API_KEY"}
+try:
+    with open(path, encoding="utf-8") as f:
+        text = f.read()
+except FileNotFoundError:
+    raise SystemExit(1)
+
+for line in text.splitlines():
+    line = line.strip()
+    if not line or line.startswith("#") or "=" not in line:
+        continue
+    k, v = line.split("=", 1)
+    normalized = re.sub(r"[\s-]+", "_", k.strip().upper())
+    if normalized in aliases:
+        value = v.strip().strip('"').strip("'")
+        if value:
+            print(value)
+            raise SystemExit(0)
+
+m = re.search(r"\bsk-[A-Za-z0-9_-]{20,}\b", text)
+if m:
+    print(m.group(0))
+    raise SystemExit(0)
+
+raise SystemExit(1)
+PY
+}
+
 append_or_replace_env() {
   local key="$1"
   local value="$2"
@@ -97,6 +137,14 @@ import_env_from_file() {
       fi
     fi
   done
+  if ! env_has_key "MOONSHOT_API_KEY"; then
+    local kimi_value
+    kimi_value="$(read_kimi_api_key_value "$file" || true)"
+    if [ -n "$kimi_value" ]; then
+      append_or_replace_env "MOONSHOT_API_KEY" "$kimi_value"
+      changed=1
+    fi
+  fi
   [ "$changed" = "1" ]
 }
 

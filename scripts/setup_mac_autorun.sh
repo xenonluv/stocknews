@@ -34,7 +34,9 @@ UTC_OFFSET="$(date +%z)"
 echo "timezone: ${TZ_NAME:-unknown}"
 echo "date: $(date)"
 
-if [ "$TZ_NAME" != "Asia/Seoul" ] || [ "$UTC_OFFSET" != "+0900" ]; then
+if [ "$UTC_OFFSET" = "+0900" ]; then
+  echo "timezone offset already +0900; skipping sudo timezone change."
+elif [ "$TZ_NAME" != "Asia/Seoul" ]; then
   echo "Setting macOS timezone to Asia/Seoul. sudo password may be required."
   sudo systemsetup -settimezone Asia/Seoul >/dev/null
 fi
