@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-11 15:00:24 KST",
+ "generated_at": "2026-06-11 15:15:26 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -12,7 +12,7 @@
   "spark_x": 8.0,
   "spark_pct": 0.8
  },
- "universe_count": 74,
+ "universe_count": 78,
  "events": [
   {
    "id": "2026-06-11_한국 옵션·선물 동시만",
@@ -41,6 +41,117 @@
  ],
  "suspects": [
   {
+   "code": "126640",
+   "name": "화신정공",
+   "sector": "운송장비·부품",
+   "suspicion_score": 63,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 30,
+    "spark": 11.7,
+    "fade": 8.9,
+    "ma10": 10.0,
+    "flow": 2.0,
+    "event": 0.0
+   },
+   "score_raw": 63,
+   "score_breakdown_raw": {
+    "base": 30,
+    "spark": 11.7,
+    "fade": 8.9,
+    "ma10": 10.0,
+    "flow": 2,
+    "event": 0.0
+   },
+   "price": 4820.0,
+   "change_pct": 8.8,
+   "high_pct": 29.8,
+   "fade_pct": 70.5,
+   "value_eok": 2142,
+   "ma10": 2766.5,
+   "ma10_margin_pct": 74.23,
+   "spark": {
+    "clusters": [
+     {
+      "time": "09:53",
+      "vol_x": 26.7,
+      "pct": -9.91,
+      "minutes": 1
+     },
+     {
+      "time": "09:56",
+      "vol_x": 17.3,
+      "pct": 0.22,
+      "minutes": 2
+     },
+     {
+      "time": "10:05",
+      "vol_x": 8.6,
+      "pct": -2.47,
+      "minutes": 1
+     },
+     {
+      "time": "10:25",
+      "vol_x": 10.5,
+      "pct": 2.68,
+      "minutes": 1
+     },
+     {
+      "time": "11:10",
+      "vol_x": 12.0,
+      "pct": -3.48,
+      "minutes": 1
+     },
+     {
+      "time": "11:33",
+      "vol_x": 15.0,
+      "pct": 3.12,
+      "minutes": 2
+     },
+     {
+      "time": "14:22",
+      "vol_x": 8.0,
+      "pct": 3.26,
+      "minutes": 1
+     }
+    ]
+   },
+   "flow": {
+    "net_days": 1,
+    "today_buy": false,
+    "streak": 0,
+    "detail": [
+     {
+      "date": "0605",
+      "frgn": -112697,
+      "orgn": 0
+     },
+     {
+      "date": "0608",
+      "frgn": -7718,
+      "orgn": 2390
+     },
+     {
+      "date": "0609",
+      "frgn": -75422,
+      "orgn": 170115
+     },
+     {
+      "date": "0610",
+      "frgn": -759430,
+      "orgn": -172405
+     },
+     {
+      "date": "0611",
+      "frgn": 0,
+      "orgn": 0
+     }
+    ]
+   },
+   "news": [],
+   "matched_events": []
+  },
+  {
    "code": "217590",
    "name": "티엠씨",
    "sector": "전기·전자",
@@ -50,7 +161,7 @@
     "base": 30,
     "spark": 15.0,
     "fade": 2.0,
-    "ma10": 8.0,
+    "ma10": 7.7,
     "flow": 4.0,
     "event": 0.0
    },
@@ -59,94 +170,100 @@
     "base": 30,
     "spark": 15.0,
     "fade": 2.0,
-    "ma10": 8.0,
+    "ma10": 7.7,
     "flow": 4,
     "event": 0.0
    },
-   "price": 21700.0,
-   "change_pct": -3.98,
+   "price": 21650.0,
+   "change_pct": -4.2,
    "high_pct": 25.66,
-   "fade_pct": 115.5,
-   "value_eok": 790,
-   "ma10": 20402.0,
-   "ma10_margin_pct": 6.36,
+   "fade_pct": 116.4,
+   "value_eok": 796,
+   "ma10": 20397.0,
+   "ma10_margin_pct": 6.14,
    "spark": {
     "clusters": [
      {
+      "time": "09:02",
+      "vol_x": 12.3,
+      "pct": 2.3,
+      "minutes": 1
+     },
+     {
       "time": "09:05",
-      "vol_x": 35.2,
+      "vol_x": 36.3,
       "pct": 5.16,
       "minutes": 3
      },
      {
       "time": "09:09",
-      "vol_x": 32.3,
+      "vol_x": 33.3,
       "pct": 5.47,
       "minutes": 3
      },
      {
       "time": "09:14",
-      "vol_x": 43.8,
+      "vol_x": 45.2,
       "pct": 0.3,
       "minutes": 3
      },
      {
       "time": "09:18",
-      "vol_x": 29.2,
+      "vol_x": 30.1,
       "pct": -6.39,
       "minutes": 3
      },
      {
       "time": "09:23",
-      "vol_x": 11.4,
-      "pct": 2.65,
-      "minutes": 4
+      "vol_x": 11.8,
+      "pct": 1.1,
+      "minutes": 5
      },
      {
       "time": "09:30",
-      "vol_x": 8.9,
+      "vol_x": 9.2,
       "pct": 2.17,
       "minutes": 1
      },
      {
       "time": "09:32",
-      "vol_x": 11.2,
+      "vol_x": 11.6,
       "pct": 0.59,
       "minutes": 2
      },
      {
       "time": "09:39",
-      "vol_x": 8.7,
+      "vol_x": 9.0,
       "pct": 1.72,
       "minutes": 1
      },
      {
       "time": "09:41",
-      "vol_x": 20.2,
+      "vol_x": 20.9,
       "pct": 1.88,
       "minutes": 1
      },
      {
       "time": "09:43",
-      "vol_x": 10.7,
+      "vol_x": 11.0,
       "pct": -1.65,
       "minutes": 1
      },
      {
-      "time": "09:56",
-      "vol_x": 9.6,
-      "pct": -2.58,
-      "minutes": 1
+      "time": "09:55",
+      "vol_x": 9.9,
+      "pct": -4.34,
+      "minutes": 2
      },
      {
       "time": "09:59",
-      "vol_x": 10.3,
+      "vol_x": 10.6,
       "pct": 3.06,
       "minutes": 1
      },
      {
       "time": "10:10",
-      "vol_x": 8.5,
+      "vol_x": 8.8,
       "pct": -1.65,
       "minutes": 1
      }
@@ -195,6 +312,108 @@
     }
    ],
    "matched_events": []
+  },
+  {
+   "code": "178320",
+   "name": "서진시스템",
+   "sector": "전기·전자",
+   "suspicion_score": 55,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 30,
+    "spark": 1.1,
+    "fade": 12.4,
+    "ma10": 3.8,
+    "flow": 6.0,
+    "event": 1.8
+   },
+   "score_raw": 55,
+   "score_breakdown_raw": {
+    "base": 30,
+    "spark": 1.1,
+    "fade": 12.4,
+    "ma10": 3.8,
+    "flow": 6,
+    "event": 1.8
+   },
+   "price": 75100.0,
+   "change_pct": 7.75,
+   "high_pct": 13.2,
+   "fade_pct": 41.3,
+   "value_eok": 1585,
+   "ma10": 72880.0,
+   "ma10_margin_pct": 3.05,
+   "spark": {
+    "clusters": [
+     {
+      "time": "14:31",
+      "vol_x": 9.8,
+      "pct": 0.92,
+      "minutes": 1
+     }
+    ]
+   },
+   "flow": {
+    "net_days": 3,
+    "today_buy": false,
+    "streak": 0,
+    "detail": [
+     {
+      "date": "0605",
+      "frgn": 286669,
+      "orgn": -101186
+     },
+     {
+      "date": "0608",
+      "frgn": 53310,
+      "orgn": -129606
+     },
+     {
+      "date": "0609",
+      "frgn": 88113,
+      "orgn": -2429
+     },
+     {
+      "date": "0610",
+      "frgn": 2002261,
+      "orgn": -144932
+     },
+     {
+      "date": "0611",
+      "frgn": 0,
+      "orgn": 0
+     }
+    ]
+   },
+   "news": [
+    {
+     "title": "서진시스템-스틱인베, 영구채·블록딜 '패키지 인수' 가능성 고개",
+     "summary": "통신장비 케이스 기업 서진시스템이 신종자본증권(영구채) 발행 및 최대주주 지분 매각을 결합한 자금 조달 방안을 추진하고 있다. 시장에서는 스틱인베스트먼트가 영구채 투자를 검토하면서 전동규 회장의 블록딜(대량매매) 물량 일부를 인수하는...",
+     "office": "블로터",
+     "datetime": "202606111055",
+     "url": "https://n.news.naver.com/mnews/article/293/0000086122",
+     "sentiment": "호재"
+    },
+    {
+     "title": "'3000억 영구채 발행' 서진시스템, 임원 매도·베트남 세금 '악재'",
+     "summary": "서진시스템이 3000억원 규모의 영구전환사채 발행을 추진 중인 가운데, 조달 구조와 투자 유치 환경이 급변한 것으로 나타났다. 주관사가 신한투자증권 단독 주선 체제로 변경된 가운데 임원진의 주식 장내 매도와 베트남 세무조사 리스크로 인해...",
+     "office": "블로터",
+     "datetime": "202606100600",
+     "url": "https://n.news.naver.com/mnews/article/293/0000086039",
+     "sentiment": "혼재"
+    }
+   ],
+   "matched_events": [
+    {
+     "id": "2026-06-11_한국 옵션·선물 동시만",
+     "title": "한국 옵션·선물 동시만기일 (6월)",
+     "dday": 0,
+     "categories": [
+      "수급"
+     ],
+     "score": 1.8
+    }
+   ]
   }
  ]
 }
