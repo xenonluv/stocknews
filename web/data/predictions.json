@@ -1,66 +1,30 @@
 {
-  "as_of": "2026-06-11 10:37 KST",
+  "as_of": "2026-06-11 10:52 KST",
   "intraday_rank": [
-    {
-      "ticker": "라이콤",
-      "code": "388790",
-      "tomorrow_up_prob": "82%",
-      "entry": 8620.0,
-      "target": 9051,
-      "stop": 8361,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.87)",
-        "MACD강세",
-        "RSI69.0 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "대한광통신·라이콤·티엠씨 등 광전자 관련주 급등",
-          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3605638",
-          "office": "gukjenews",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=295152",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "라이콤, AI 데이터센터·방산 수혜 기대감에 19%↑[특징주]",
-          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03270166645478768",
-          "office": "edaily",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "대한광통신·라이콤·티엠씨 등 광전자 관련주 급등"
-    },
     {
       "ticker": "코리아써키트",
       "code": "007810",
-      "tomorrow_up_prob": "80%",
-      "entry": 138300.0,
-      "target": 145215,
-      "stop": 134151,
+      "tomorrow_up_prob": "81%",
+      "entry": 136500.0,
+      "target": 143325,
+      "stop": 132405,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.83)",
+        "강세마감(0.78)",
         "정배열",
         "MACD강세"
       ],
       "risk": "Stoch 과매수",
       "day_change": null,
       "cause_news": [
+        {
+          "title": "심텍·코리아써키트 주가 불기… AI 반도체 수혜 기판주 재평가",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=459318",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 인과표현, 재료, 당일"
+        },
         {
           "title": "[ET특징주]코리아써키트, PCB 업황 개선 수혜 기대감에 상승세",
           "url": "https://www.etnews.com/20260529000206",
@@ -71,12 +35,12 @@
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[ET특징주]코리아써키트, PCB 업황 개선 수혜 기대감에 상승세"
+      "cause_summary": "심텍·코리아써키트 주가 불기… AI 반도체 수혜 기판주 재평가"
     },
     {
       "ticker": "코미코",
       "code": "183300",
-      "tomorrow_up_prob": "79%",
+      "tomorrow_up_prob": "80%",
       "entry": 139200.0,
       "target": 146160,
       "stop": 135024,
@@ -90,6 +54,14 @@
       "day_change": null,
       "cause_news": [
         {
+          "title": "상한가 종목 속출…화신정공·코미코·마니커 초강세, 투자심리 회복 신...",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=581215",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
           "title": "코미코 주가, 급등세... 배경은?",
           "url": "https://www.ggilbo.com/news/articleView.html?idxno=1163003",
           "office": "ggilbo",
@@ -99,20 +71,20 @@
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "코미코 주가, 급등세... 배경은?"
+      "cause_summary": "상한가 종목 속출…화신정공·코미코·마니커 초강세, 투자심리 회복 신..."
     },
     {
       "ticker": "삼화콘덴서",
       "code": "001820",
-      "tomorrow_up_prob": "72%",
-      "entry": 117400.0,
-      "target": 123270,
-      "stop": 113878,
+      "tomorrow_up_prob": "73%",
+      "entry": 118000.0,
+      "target": 123900,
+      "stop": 114460,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.84)",
+        "강세마감(0.88)",
         "정배열",
-        "RSI58.9 강세"
+        "RSI59.1 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null
@@ -134,44 +106,44 @@
       "day_change": null,
       "cause_news": [
         {
-          "title": "[특징주] 화신정공, 보스턴 다이내믹스 방문 소식에 4일째 ‘상한가’",
-          "url": "https://biz.chosun.com/stock/stock_general/2026/06/11/5SGNEV54AJAC5FI2CVJPBNZ4UI/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-          "office": "biz",
+          "title": "[ET특징주]화신정공, 보스턴 다이내믹스 방문 소식에 상승세",
+          "url": "https://www.etnews.com/20260611000152",
+          "office": "etnews",
           "sentiment": "호재",
           "cause_score": 17,
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[특징주] 화신정공, 로봇 부품 납품 기대감 '上' 기록··· 단기급등 속...",
-          "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1264297",
-          "office": "jeonmae",
+          "title": "[특징주] 화신정공, 장중 상한가 후 상승폭 축소…로봇 부품 기대감 지...",
+          "url": "https://www.ajunews.com/view/20260611100451059",
+          "office": "ajunews",
           "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[특징주] 화신정공, 보스턴다이나믹스 방문에 나흘째 '상한가'",
-          "url": "https://www.cstimes.com/news/articleView.html?idxno=709359",
-          "office": "cstimes",
+          "title": "[특징주]보스턴다이내믹스 공급 기대감…화신정공 4거래일 연속 급등",
+          "url": "https://www.namdonews.com/news/articleView.html?idxno=913290",
+          "office": "namdonews",
           "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 화신정공, 보스턴 다이내믹스 방문 소식에 4일째 ‘상한가’"
+      "cause_summary": "[ET특징주]화신정공, 보스턴 다이내믹스 방문 소식에 상승세"
     },
     {
       "ticker": "티엠씨",
       "code": "217590",
-      "tomorrow_up_prob": "61%",
-      "entry": 25250.0,
-      "target": 26512,
-      "stop": 24492,
+      "tomorrow_up_prob": "62%",
+      "entry": 25000.0,
+      "target": 26250,
+      "stop": 24250,
       "confidence": "중",
       "reasons": [
-        "RSI53.0 강세",
-        "거래량4.77배",
+        "RSI52.6 강세",
+        "거래량4.96배",
         "호재"
       ],
       "risk": "약한 마감",
@@ -208,14 +180,15 @@
     {
       "ticker": "이수페타시스",
       "code": "007660",
-      "tomorrow_up_prob": "57%",
-      "entry": 121200.0,
-      "target": 127260,
-      "stop": 117564,
+      "tomorrow_up_prob": "58%",
+      "entry": 120500.0,
+      "target": 126525,
+      "stop": 116885,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.92)",
-        "Stoch골든"
+        "강세마감(0.88)",
+        "Stoch골든",
+        "장중 3회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null
@@ -223,19 +196,35 @@
     {
       "ticker": "심텍",
       "code": "222800",
-      "tomorrow_up_prob": "49%",
-      "entry": 135200.0,
-      "target": 141960,
-      "stop": 131144,
+      "tomorrow_up_prob": "50%",
+      "entry": 133300.0,
+      "target": 139965,
+      "stop": 129301,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.9)",
-        "RSI63.5 강세",
-        "장중 6회 지속"
+        "강세마감(0.84)",
+        "RSI62.8 강세",
+        "장중 7회 지속"
       ],
       "risk": "악재",
       "day_change": null,
       "cause_news": [
+        {
+          "title": "심텍·코리아써키트 주가 불기… AI 반도체 수혜 기판주 재평가",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=459318",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
+        },
+        {
+          "title": "심텍 주가, 급등세... 증권가 전망은?",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1163012",
+          "office": "ggilbo",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        },
         {
           "title": "단순 인쇄회로기판은 옛말… 심텍, 반도체 미세화 타고 몸값 올린다",
           "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=459285",
@@ -245,71 +234,35 @@
           "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
         }
       ],
-      "cause_confidence": "중간",
-      "cause_summary": "단순 인쇄회로기판은 옛말… 심텍, 반도체 미세화 타고 몸값 올린다"
+      "cause_confidence": "높음",
+      "cause_summary": "심텍·코리아써키트 주가 불기… AI 반도체 수혜 기판주 재평가"
     }
   ],
   "closing_bet": [
     {
-      "ticker": "라이콤",
-      "code": "388790",
-      "tomorrow_up_prob": "82%",
-      "entry": 8620.0,
-      "target": 9051,
-      "stop": 8361,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.87)",
-        "MACD강세",
-        "RSI69.0 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "대한광통신·라이콤·티엠씨 등 광전자 관련주 급등",
-          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3605638",
-          "office": "gukjenews",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] 라이콤, AI데이터센터 수주 확대에 방산까지 \"광통신 수혜주로...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=295152",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "라이콤, AI 데이터센터·방산 수혜 기대감에 19%↑[특징주]",
-          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03270166645478768",
-          "office": "edaily",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "대한광통신·라이콤·티엠씨 등 광전자 관련주 급등"
-    },
-    {
       "ticker": "코리아써키트",
       "code": "007810",
-      "tomorrow_up_prob": "80%",
-      "entry": 138300.0,
-      "target": 145215,
-      "stop": 134151,
+      "tomorrow_up_prob": "81%",
+      "entry": 136500.0,
+      "target": 143325,
+      "stop": 132405,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.83)",
+        "강세마감(0.78)",
         "정배열",
         "MACD강세"
       ],
       "risk": "Stoch 과매수",
       "day_change": null,
       "cause_news": [
+        {
+          "title": "심텍·코리아써키트 주가 불기… AI 반도체 수혜 기판주 재평가",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=459318",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 인과표현, 재료, 당일"
+        },
         {
           "title": "[ET특징주]코리아써키트, PCB 업황 개선 수혜 기대감에 상승세",
           "url": "https://www.etnews.com/20260529000206",
@@ -320,12 +273,12 @@
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[ET특징주]코리아써키트, PCB 업황 개선 수혜 기대감에 상승세"
+      "cause_summary": "심텍·코리아써키트 주가 불기… AI 반도체 수혜 기판주 재평가"
     },
     {
       "ticker": "코미코",
       "code": "183300",
-      "tomorrow_up_prob": "79%",
+      "tomorrow_up_prob": "80%",
       "entry": 139200.0,
       "target": 146160,
       "stop": 135024,
@@ -339,6 +292,14 @@
       "day_change": null,
       "cause_news": [
         {
+          "title": "상한가 종목 속출…화신정공·코미코·마니커 초강세, 투자심리 회복 신...",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=581215",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
           "title": "코미코 주가, 급등세... 배경은?",
           "url": "https://www.ggilbo.com/news/articleView.html?idxno=1163003",
           "office": "ggilbo",
@@ -348,20 +309,20 @@
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "코미코 주가, 급등세... 배경은?"
+      "cause_summary": "상한가 종목 속출…화신정공·코미코·마니커 초강세, 투자심리 회복 신..."
     },
     {
       "ticker": "삼화콘덴서",
       "code": "001820",
-      "tomorrow_up_prob": "72%",
-      "entry": 117400.0,
-      "target": 123270,
-      "stop": 113878,
+      "tomorrow_up_prob": "73%",
+      "entry": 118000.0,
+      "target": 123900,
+      "stop": 114460,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.84)",
+        "강세마감(0.88)",
         "정배열",
-        "RSI58.9 강세"
+        "RSI59.1 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null
@@ -383,32 +344,76 @@
       "day_change": null,
       "cause_news": [
         {
-          "title": "[특징주] 화신정공, 보스턴 다이내믹스 방문 소식에 4일째 ‘상한가’",
-          "url": "https://biz.chosun.com/stock/stock_general/2026/06/11/5SGNEV54AJAC5FI2CVJPBNZ4UI/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-          "office": "biz",
+          "title": "[ET특징주]화신정공, 보스턴 다이내믹스 방문 소식에 상승세",
+          "url": "https://www.etnews.com/20260611000152",
+          "office": "etnews",
           "sentiment": "호재",
           "cause_score": 17,
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[특징주] 화신정공, 로봇 부품 납품 기대감 '上' 기록··· 단기급등 속...",
-          "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1264297",
-          "office": "jeonmae",
+          "title": "[특징주] 화신정공, 장중 상한가 후 상승폭 축소…로봇 부품 기대감 지...",
+          "url": "https://www.ajunews.com/view/20260611100451059",
+          "office": "ajunews",
           "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[특징주] 화신정공, 보스턴다이나믹스 방문에 나흘째 '상한가'",
-          "url": "https://www.cstimes.com/news/articleView.html?idxno=709359",
-          "office": "cstimes",
+          "title": "[특징주]보스턴다이내믹스 공급 기대감…화신정공 4거래일 연속 급등",
+          "url": "https://www.namdonews.com/news/articleView.html?idxno=913290",
+          "office": "namdonews",
           "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 화신정공, 보스턴 다이내믹스 방문 소식에 4일째 ‘상한가’"
+      "cause_summary": "[ET특징주]화신정공, 보스턴 다이내믹스 방문 소식에 상승세"
+    },
+    {
+      "ticker": "티엠씨",
+      "code": "217590",
+      "tomorrow_up_prob": "62%",
+      "entry": 25000.0,
+      "target": 26250,
+      "stop": 24250,
+      "confidence": "중",
+      "reasons": [
+        "RSI52.6 강세",
+        "거래량4.96배",
+        "호재"
+      ],
+      "risk": "약한 마감",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[특징주] 티엠씨, 美 데이터센터 광케이블 수요 급증에 강세…원전 인프...",
+          "url": "https://www.bizwork.co.kr/news/articleView.html?idxno=416400",
+          "office": "bizwork",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] 티엠씨, 美 데이터센터-광통신 관련 주문 급증…공장 풀가동 ...",
+          "url": "https://www.etoday.co.kr/news/view/2592281",
+          "office": "etoday",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "대한광통신·라이콤·티엠씨 등 광전자 관련주 급등",
+          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3605638",
+          "office": "gukjenews",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 티엠씨, 美 데이터센터 광케이블 수요 급증에 강세…원전 인프..."
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
