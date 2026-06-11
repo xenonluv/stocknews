@@ -29,11 +29,12 @@ require_cmd() {
 require_cmd git
 require_cmd python3
 
-ensure_clean_worktree() {
+stash_dirty_worktree() {
   if [ -n "$(git status --porcelain)" ]; then
-    echo "ERROR: git worktree is not clean. Commit/stash local changes before setup." >&2
+    echo "Local git changes found. Stashing them before sync."
     git status --short
-    exit 1
+    git stash push -u -m "setup_mac_kimi_radar auto-stash $(date +%Y%m%d%H%M%S)"
+    echo "Local changes were preserved in git stash."
   fi
 }
 
@@ -62,7 +63,7 @@ append_or_replace_env() {
 
 echo
 echo "== sync main =="
-ensure_clean_worktree
+stash_dirty_worktree
 git fetch origin main
 git pull --ff-only origin main
 
