@@ -92,6 +92,10 @@ export interface RadarData {
     chg_range: [number, number];
     spark_x: number;
     spark_pct: number;
+    /** 유니버스 수집 방식 — "kis_rank"(기본) | "naver_scan"(폴백). 구버전 JSON엔 없음. */
+    universe?: string;
+    /** 시장×지표(거래대금/등락률)별 상위 N (kis_rank 방식) */
+    top_n?: number;
   };
   universe_count: number;
   events: RadarEvent[];

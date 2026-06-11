@@ -4,7 +4,9 @@
 목적: 10일 이내 이벤트를 앞두고 당일 큰돈이 들어와 급등 후 식은(매집 의심) 종목 탐지.
 
 깔때기 (목적.md 6조건):
-  [유니버스] 네이버 up/down 랭킹 전수 스캔 → 등락률 밴드 + 당일 거래대금 ≥ 700억 게이트
+  [유니버스] 시장별(코스피/코스닥) 거래대금 top20(KIS 공식 순위) + 등락률 top20(네이버 up 랭킹)
+             합집합 → 등락률 밴드. 거래대금 700억 게이트는 정밀판정(scan_one)에서 적용.
+             (KIS 장애 시 기존 네이버 전수 스캔으로 자동 폴백)
   [조건3] 당일 고가 등락률 ≥ +13% 찍고 현재 고가 아래 (폭락/후퇴 중)   ← KIS 현재가
   [조건6] 현재 등락률 -6% ~ +10%                                   ← KIS 현재가
   [조건4] 현재가 ≥ 일봉 10일선                                      ← KIS 일봉
@@ -297,8 +299,8 @@ def _rank_page(direction, market, page):
     return rows, int(d.get("totalCount") or 0)
 
 
-def build_universe(chg_min, chg_max, min_value_mn, names):
-    """등락률 밴드 내 + 거래대금 게이트 통과 종목 전수 수집 (네이버 up/down 풀스캔).
+def build_universe_naver(chg_min, chg_max, min_value_mn):
+    """[폴백] 등락률 밴드 내 + 거래대금 게이트 통과 종목 전수 수집 (네이버 up/down 풀스캔).
 
     up: 상승 종목 전 페이지. down: 마지막 페이지부터 역방향(완만한 하락 → 큰 하락),
     페이지 전체가 chg_min 미만이 되면 중단.
@@ -335,12 +337,52 @@ def build_universe(chg_min, chg_max, min_value_mn, names):
                     break
         except Exception as e:
             log(f"[warn] {market} down 랭킹 실패: {e}")
+    return list(seen.values())
 
+
+def build_universe_rank(chg_min, chg_max, top_n):
+    """[기본] 시장별 거래대금 top_n + 등락률 top_n 합집합 → 등락률 밴드.
+
+    거래대금 순위 = KIS 공식 volume-rank(거래금액순, 실측 검증).
+    등락률 순위 = 네이버 up 랭킹 1페이지 상위 top_n (등락률 내림차순 보장,
+    KIS fluctuation API는 정렬이 등락률순으로 동작하지 않음을 실측 확인).
+    700억 게이트는 여기서 적용하지 않는다 — 정밀판정(scan_one)의 KIS
+    price_now 재검증이 거래대금 하한을 책임진다 (순위권+큰돈 이중 필터).
+    어느 한 콜이라도 실패하면 예외 전파 → 호출부가 네이버 전수 스캔 폴백
+    (반쪽 유니버스로 조용히 왜곡 게시하는 것 방지).
+    """
+    seen = {}
+
+    def keep(r):
+        if r["change_pct"] is None or not (chg_min <= r["change_pct"] <= chg_max):
+            return
+        seen.setdefault(r["code"], r)
+
+    for market in ("KOSPI", "KOSDAQ"):
+        for r in kis.value_rank(market, top_n):           # 거래대금 top_n
+            keep(r)
+        rows, _ = _rank_page("up", market, 1)             # 등락률 top_n
+        for r in rows[:top_n]:
+            keep(r)
+    return list(seen.values())
+
+
+def build_universe(chg_min, chg_max, min_value_mn, names, top_n):
+    """유니버스 구성: KIS 순위 방식 기본, 실패 시 네이버 전수 스캔 폴백."""
+    try:
+        rows = build_universe_rank(chg_min, chg_max, top_n)
+        method = "kis_rank"
+    except Exception as e:
+        log(f"[warn] KIS 랭킹 유니버스 실패: {e} → 네이버 전수 스캔 폴백")
+        rows = build_universe_naver(chg_min, chg_max, min_value_mn)
+        method = "naver_scan"
+
+    seen = {r["code"]: r for r in rows}
     for nm in names or []:
         code = resolve_code(nm)
         if code and code not in seen:
             seen[code] = {"name": nm, "code": code, "change_pct": None, "value_mn": None}
-    return list(seen.values())
+    return list(seen.values()), method
 
 
 def main():
@@ -351,6 +393,8 @@ def main():
     ap.add_argument("--chg-max", type=float, default=CHG_MAX)
     ap.add_argument("--spark-x", type=float, default=SPARK_VOL_X, help="분봉 거래량 중앙값 배수")
     ap.add_argument("--spark-pct", type=float, default=SPARK_PCT, help="분봉 등락 하한(%%)")
+    ap.add_argument("--top-n", type=int, default=20,
+                    help="유니버스: 시장×지표(거래대금/등락률)별 상위 N종목")
     ap.add_argument("--names", nargs="*", default=[], help="watchlist 강제 포함")
     ap.add_argument("--no-tuned-weights", action="store_true",
                     help="백테스트 튜닝 가중치 무시 (기본 가중치 사용)")
@@ -361,13 +405,14 @@ def main():
     events = upcoming_events(10)
     log(f"[radar] D-10 이벤트 {len(events)}건")
 
-    # 1차 게이트: 네이버 전수 스캔에서 등락률 밴드 + 거래대금 게이트 (정확값)
-    candidates = build_universe(p.chg_min, p.chg_max, p.min_value / 1e6, p.names)
+    # 1차 게이트: 시장별 거래대금·등락률 순위권 합집합 + 등락률 밴드
+    candidates, universe_method = build_universe(
+        p.chg_min, p.chg_max, p.min_value / 1e6, p.names, p.top_n)
     if not candidates:
-        # 정상 장에선 700억+ 종목이 밴드 안에 항상 수십 개 — 0이면 수집 장애로 본다
-        log("[error] 1차 게이트 통과 0종목 — 네이버 랭킹 수집 장애 의심, 중단")
+        # 정상 장에선 순위권 종목이 밴드 안에 항상 여러 개 — 0이면 수집 장애로 본다
+        log("[error] 1차 게이트 통과 0종목 — 랭킹 수집 장애 의심(KIS·네이버 모두), 중단")
         sys.exit(2)
-    log(f"[radar] 1차 게이트 통과 {len(candidates)}종목 → KIS 정밀 판정")
+    log(f"[radar] 1차 게이트 통과 {len(candidates)}종목 ({universe_method}) → KIS 정밀 판정")
 
     suspects = []
     err_count = 0
@@ -390,7 +435,8 @@ def main():
         "generated_at": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST"),
         "params": {"min_value_eok": round(p.min_value / 1e8), "high_pct": p.high_pct,
                    "chg_range": [p.chg_min, p.chg_max], "spark_x": p.spark_x,
-                   "spark_pct": p.spark_pct},
+                   "spark_pct": p.spark_pct,
+                   "universe": universe_method, "top_n": p.top_n},
         "universe_count": len(candidates),
         "events": events,
         "suspects": suspects,

@@ -101,6 +101,9 @@ export function LiveRadar({ initial }: { initial: RadarData }) {
             </span>
           </h2>
           <p className="text-xs text-muted-foreground">
+            {data.params.universe === "kis_rank"
+              ? `시장별 거래대금·등락률 TOP${data.params.top_n ?? 20} 유니버스 · `
+              : ""}
             당일 거래대금 {data.params.min_value_eok?.toLocaleString()}억+ · 고가 +
             {data.params.high_pct}% 후 후퇴 · 등락률 {data.params.chg_range?.[0]}~
             {data.params.chg_range?.[1]}% · 10일선 위 · 분봉 스파크

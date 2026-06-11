@@ -9,9 +9,11 @@
   price_now(code)            현재가 스냅샷 (현재가·당일고가·등락률·거래대금·업종)
   minute_bars_today(code)    당일 1분봉 전체 (시각 역방향 페이지네이션)
   investor_daily(code)       종목별 투자자 일별 순매수 (외국인/기관/개인)
+  value_rank(market, top_n)  당일 거래대금(거래금액순) 상위 종목 (코스피/코스닥)
 
 단독 실행 시 삼성전자(005930)로 4개 API를 점검한다:
   python3 scripts/kis_client.py [종목코드]
+  python3 scripts/kis_client.py rank [KOSPI|KOSDAQ]   # 거래대금 순위 점검
 """
 import os
 import json
@@ -278,8 +280,53 @@ def investor_daily(code):
     return out
 
 
+# ── 순위 API (유니버스 구성용) ──────────────────────────────────────────
+# 시장 구분은 FID_INPUT_ISCD 업종코드로: 0001=코스피 종합, 1001=코스닥 종합.
+# 응답은 최대 ~30행 — top20 용도로 충분 (전수 스캔 불가 제약은 그대로).
+_RANK_SECTOR = {"KOSPI": "0001", "KOSDAQ": "1001"}
+# 제외 비트(10자리): 투자위험/경고/주의·관리·정리매매·불성실·우선주·거래정지·ETF·ETN·신용불가·SPAC
+# 시장경보(첫 비트)는 레이더 관심 대상이라 포함(0), 그 외 비종목성은 제외(1).
+_RANK_EXLS = "0110111101"
+
+
+def value_rank(market="KOSPI", top_n=20):
+    """당일 거래대금(거래금액순) 상위 종목. → [{name, code, change_pct, value_mn}]"""
+    res = _call("/uapi/domestic-stock/v1/quotations/volume-rank",
+                "FHPST01710000",
+                {"FID_COND_MRKT_DIV_CODE": "J",
+                 "FID_COND_SCR_DIV_CODE": "20171",
+                 "FID_INPUT_ISCD": _RANK_SECTOR[market],
+                 "FID_DIV_CLS_CODE": "1",        # 보통주만
+                 "FID_BLNG_CLS_CODE": "3",       # 거래금액순
+                 "FID_TRGT_CLS_CODE": "111111111",
+                 "FID_TRGT_EXLS_CLS_CODE": _RANK_EXLS,
+                 "FID_INPUT_PRICE_1": "", "FID_INPUT_PRICE_2": "",
+                 "FID_VOL_CNT": "", "FID_INPUT_DATE_1": ""})
+    out = []
+    for r in (res.get("output") or [])[:top_n]:
+        code = (r.get("mksc_shrn_iscd") or "").strip()
+        name = (r.get("hts_kor_isnm") or "").strip()
+        if not code or not name:
+            continue
+        out.append({"name": name, "code": code,
+                    "change_pct": _f(r.get("prdy_ctrt")),
+                    "value_mn": _f(r.get("acml_tr_pbmn")) / 1e6})  # 원→백만원
+    return out
+
+
+# 참고: 등락률 순위 FHPST01700000은 정렬 코드 0~4 전부 등락률순으로 동작하지
+# 않음을 실측 확인(2026-06) — 등락률 TOP-N은 radar.py가 네이버 up 랭킹으로 대체.
+
+
 if __name__ == "__main__":
     import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "rank":
+        markets = [sys.argv[2]] if len(sys.argv) > 2 else ["KOSPI", "KOSDAQ"]
+        for mkt in markets:
+            v = value_rank(mkt)
+            print(f"== value_rank {mkt} ({len(v)}건) ==")
+            print(json.dumps(v[:3] + v[-1:], ensure_ascii=False, indent=1))
+        sys.exit(0)
     code = sys.argv[1] if len(sys.argv) > 1 else "005930"
     print("== price_now ==")
     print(json.dumps(price_now(code), ensure_ascii=False, indent=1))
