@@ -1,21 +1,29 @@
 {
- "as_of": "2026-06-11 00:37 KST",
+ "as_of": "2026-06-11 17:20 KST",
  "summary": {
-  "n": 0,
-  "hit_rate": null,
-  "avg_return": null,
-  "high3_rate": null,
-  "tracking_days": 1,
+  "n": 2,
+  "hit_rate": 50.0,
+  "avg_return": 0.77,
+  "high3_rate": 100,
+  "tracking_days": 2,
   "dropout": null
  },
  "series": [
   {
    "date": "20260610",
+   "n": 2,
+   "hits": 1,
+   "hit_rate": 50,
+   "cum_n": 2,
+   "cum_hit_rate": 50.0
+  },
+  {
+   "date": "20260611",
    "n": 0,
    "hits": 0,
    "hit_rate": null,
-   "cum_n": 0,
-   "cum_hit_rate": null
+   "cum_n": 2,
+   "cum_hit_rate": 50.0
   }
  ],
  "bins": [
@@ -36,8 +44,8 @@
   {
    "lo": 75,
    "hi": 101,
-   "n": 0,
-   "actual_rate": null,
+   "n": 2,
+   "actual_rate": 50,
    "valid": false
   }
  ],
@@ -61,6 +69,21 @@
   "tune_min_samples": 30,
   "history": []
  },
- "recent": [],
+ "recent": [
+  {
+   "date": "20260610",
+   "name": "케이뱅크",
+   "score": 79,
+   "hit": true,
+   "return_pct": 3.15
+  },
+  {
+   "date": "20260610",
+   "name": "테스",
+   "score": 75,
+   "hit": false,
+   "return_pct": -1.61
+  }
+ ],
  "disclaimer": "백테스트는 '당일 종가 매수 → 익일 종가 매도' 가정의 참고 지표이며 수수료·슬리피지 미반영. 매수 추천이 아닙니다."
 }

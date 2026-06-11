@@ -22,8 +22,15 @@
     "2026-06-17_FOMC 금리 결정 ("
    ],
    "first_seen": "2026-06-10 21:01:40 KST",
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260611",
+    "next_close": 6220.0,
+    "next_high": 6320.0,
+    "hit": true,
+    "high3": true,
+    "return_pct": 3.15
+   }
   },
   "095610": {
    "name": "테스",
@@ -46,8 +53,15 @@
     "2026-06-17_FOMC 금리 결정 ("
    ],
    "first_seen": "2026-06-10 21:01:40 KST",
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260611",
+    "next_close": 170600.0,
+    "next_high": 186000.0,
+    "hit": false,
+    "high3": true,
+    "return_pct": -1.61
+   }
   }
  },
  "as_of": "2026-06-10 21:01:40 KST"
