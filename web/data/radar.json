@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-11 12:45:16 KST",
+ "generated_at": "2026-06-11 13:00:20 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -12,7 +12,7 @@
   "spark_x": 8.0,
   "spark_pct": 0.8
  },
- "universe_count": 42,
+ "universe_count": 48,
  "events": [
   {
    "id": "2026-06-11_한국 옵션·선물 동시만",
@@ -48,8 +48,8 @@
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 10.9,
-    "fade": 2.6,
+    "spark": 12.2,
+    "fade": 1.8,
     "ma10": 10.0,
     "flow": 4.0,
     "event": 0.0
@@ -57,54 +57,54 @@
    "score_raw": 58,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 10.9,
-    "fade": 2.6,
+    "spark": 12.2,
+    "fade": 1.8,
     "ma10": 10.0,
     "flow": 4,
     "event": 0.0
    },
-   "price": 23100.0,
-   "change_pct": 2.21,
+   "price": 22950.0,
+   "change_pct": 1.55,
    "high_pct": 25.66,
-   "fade_pct": 91.4,
-   "value_eok": 728,
-   "ma10": 20542.0,
-   "ma10_margin_pct": 12.45,
+   "fade_pct": 94.0,
+   "value_eok": 734,
+   "ma10": 20527.0,
+   "ma10_margin_pct": 11.8,
    "spark": {
     "clusters": [
      {
       "time": "09:06",
-      "vol_x": 20.5,
+      "vol_x": 22.1,
       "pct": 1.84,
       "minutes": 2
      },
      {
-      "time": "09:11",
-      "vol_x": 18.8,
-      "pct": 3.07,
-      "minutes": 1
+      "time": "09:10",
+      "vol_x": 20.3,
+      "pct": 6.84,
+      "minutes": 2
      },
      {
       "time": "09:14",
-      "vol_x": 25.5,
+      "vol_x": 27.5,
       "pct": 0.3,
       "minutes": 3
      },
      {
       "time": "09:18",
-      "vol_x": 15.2,
+      "vol_x": 16.4,
       "pct": -2.03,
       "minutes": 1
      },
      {
       "time": "09:20",
-      "vol_x": 17.0,
+      "vol_x": 18.4,
       "pct": -3.42,
       "minutes": 1
      },
      {
       "time": "09:41",
-      "vol_x": 11.8,
+      "vol_x": 12.7,
       "pct": 1.88,
       "minutes": 1
      }
