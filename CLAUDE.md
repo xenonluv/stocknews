@@ -89,6 +89,10 @@ python3 scripts/event_calendar.py 10           # D-10 이벤트 확인
 - `GET /api/radar` — 레이더 전체 상태 `{generated_at, market_session, events[], suspects[], params}`. 엣지 캐시 30초. suspect에 `calibrated_prob`(실측 적중률, raw 점수대 표본 n≥20일 때만) 포함.
 - `/performance` 페이지 — 자가 검증 대시보드 (누적 적중률 추세 SVG 차트·점수대 보정표·가중치 패널). 데이터 = `web/data/performance.json`.
 - `GET /api/predictions` — 종가베팅(/forecast)용. analyzer/ 서브시스템이 생성.
+- `GET /api/stock/{code}` — **온디맨드 종목 분석 리포트** (룰베이스, LLM 미사용). 요청 시
+  네이버 공개(무인증) API 6종을 병렬 호출해 주가현황·기술지표·수급·재무·재료뉴스·이벤트
+  민감도·종합판정을 생성. 엣지 캐시 180초. 시크릿 불필요(KIS 미사용 — Vercel 무시크릿 유지).
+  `GET /api/stock/search?q=` — 자동완성 프록시(ac.stock.naver.com, CSP 때문에 경유 필수).
 - 흐름: `web/data/radar.json` → `lib/radar/repository.ts`(SSOT) → `app/page.tsx`(SSG) + `app/api/radar`.
 - 프론트 폴링은 `services/radar.client.ts` 경유만 (컴포넌트 직접 fetch 금지).
 
@@ -97,6 +101,11 @@ python3 scripts/event_calendar.py 10           # D-10 이벤트 확인
 **Next.js(App Router) + TS + Tailwind + shadcn/ui + Pretendard**. 다크 금융 대시보드.
 - ⚠️ **한국 색 관례 — 상승=빨강(`--up`), 하락=파랑(`--down`)** (미국과 반대). 토큰 SSOT = `web/app/globals.css`.
 - 레이더 UI: `components/radar/` — EventStrip(D-day 칩, 클릭 시 민감 종목 필터), SuspectCard(페이드 바+스파크 타임라인+점수 해부도+수급), LiveRadar(60초 폴링), SuspicionGauge.
+- 종목 분석 UI: 메인 검색박스(`components/stock/SearchBox`, 자동완성+키보드 내비) →
+  `/stock/[code]` 동적 페이지. 분석 엔진 = `web/lib/stock/` — `indicators.ts`(analyzer/indicators.py
+  1:1 포팅, **파이썬 쪽 산식 변경 시 동기화 필요**), `news-score.ts`(team2_relevance 포팅),
+  `theme-match.ts`(theme_map 포팅), `scoring.ts`(confluence+컨센서스·수급·이벤트 확장 판정),
+  `report.ts`(오케스트레이터 — 섹션별 graceful degradation + warnings).
 - 빈 상태("오늘은 레이더 깨끗")가 제품 사양. 면책 문구("매수 추천 아님") 유지.
 - 빌드 검증: `cd web && npm run build` (**WSL + nvm Node 20만** — Windows npm은 UNC에서 깨짐).
 

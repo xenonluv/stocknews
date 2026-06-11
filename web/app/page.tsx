@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 import { getRadar } from "@/lib/radar/repository";
 import { LiveRadar } from "@/components/radar/LiveRadar";
+import { SearchBox } from "@/components/stock/SearchBox";
 
 // 정적 생성: 데이터는 radar.json(빌드 시 import)에서 오므로 배포마다 갱신된다.
 // 방문자는 CDN 정적 페이지를 받으므로 동시접속이 늘어도 서버 함수 호출이 없다.
@@ -21,6 +22,15 @@ export default function Home() {
           <span className="text-warning"> 투자 참고용, 매수 추천 아님</span>
         </p>
       </header>
+
+      {/* 종목 검색 — 이름/코드 입력 시 온디맨드 분석 리포트(/stock/[code])로 이동 */}
+      <section className="mb-8">
+        <SearchBox className="max-w-xl" />
+        <p className="mt-1.5 text-xs text-muted-foreground">
+          종목명이나 코드를 검색하면 재무·수급·기술지표·재료뉴스를 종합한 분석
+          리포트를 바로 생성합니다.
+        </p>
+      </section>
 
       <div className="mb-8 grid gap-3 sm:grid-cols-2">
         <Link

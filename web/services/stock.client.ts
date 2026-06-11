@@ -1,0 +1,26 @@
+"use client";
+
+import type { SearchResponse, StockReport } from "@/types/stock";
+
+/**
+ * 종목 분석 클라이언트 서비스 — 컴포넌트는 fetch를 직접 호출하지 않고
+ * 이 서비스를 통해 /api/stock/* 에 접근한다. (브라우저 전용, 상대 경로)
+ */
+export const stockClientService = {
+  async search(q: string, signal?: AbortSignal): Promise<SearchResponse> {
+    const res = await fetch(`/api/stock/search?q=${encodeURIComponent(q)}`, { signal });
+    if (!res.ok) throw new Error(`종목 검색 실패 (HTTP ${res.status})`);
+    return res.json();
+  },
+
+  async getReport(code: string): Promise<StockReport> {
+    const res = await fetch(`/api/stock/${code}`, { cache: "no-store" });
+    if (!res.ok) {
+      const body = await res.json().catch(() => null);
+      throw new Error(
+        body?.error?.message ?? `리포트 조회 실패 (HTTP ${res.status})`
+      );
+    }
+    return res.json();
+  },
+};
