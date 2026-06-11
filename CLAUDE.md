@@ -96,8 +96,11 @@ python3 scripts/event_calendar.py 10           # D-10 이벤트 확인
 - `GET /api/stock/{code}/ai` — **AI(LLM) 심층 분석** (Moonshot `kimi-k2.6`, 유일한 LLM 사용처).
   룰베이스 리포트 전체를 직렬화해 Kimi에 전달 → 익일 방향(상승/하락/관망)+확신도+근거 JSON.
   **버튼 클릭 시에만** 프론트(AiAnalysisCard)가 호출(비용 절약). 성공 30분/에러 60초 CDN 캐시 +
-  쿼리스트링 차단 + in-flight 디둡. reasoning 모델이라 15~50초 소요(`maxDuration=60`).
-  ⚠ kimi-k2.6은 temperature 지정 시 400(1만 허용), confidence를 0~1로 줄 때가 있어 정규화함.
+  쿼리스트링 차단 + in-flight 디둡.
+  ⚠ kimi-k2.6 실측 함정: temperature 지정 시 400(1만 허용) / confidence를 0~1로 줄 때 있어 정규화 /
+  **reasoning(기본값)은 15~120초+ 걸려 Vercel에서 타임아웃** → `thinking:{type:"disabled"}`로
+  꺼서 5~20초(품질 거의 동일, 실증). `MOONSHOT_THINKING=enabled`로 깊은 추론 모드 전환 가능
+  (이때 `maxDuration=300` Fluid Compute 필요).
   시크릿: `MOONSHOT_API_KEY`(+BASE_URL/MODEL) — 로컬 `web/.env.local` + Vercel 환경변수.
 - 흐름: `web/data/radar.json` → `lib/radar/repository.ts`(SSOT) → `app/page.tsx`(SSG) + `app/api/radar`.
 - 프론트 폴링은 `services/radar.client.ts` 경유만 (컴포넌트 직접 fetch 금지).

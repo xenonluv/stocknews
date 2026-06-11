@@ -11,9 +11,11 @@ export class AiConfigError extends Error {}
 export class AiUnavailableError extends Error {}
 
 const DIRECTIONS: AiDirection[] = ["상승", "하락", "관망"];
-// kimi-k2.6은 reasoning 모델이라 응답에 15~60초+ 소요 (Vercel 실측 55초 초과 사례 있음)
-// — 라우트의 maxDuration=300(Fluid Compute)과 짝을 이뤄 120초까지 대기.
-const TIMEOUT_MS = 120_000;
+// kimi-k2.6 reasoning은 15~120초+ 소요(실측, Vercel에서 종종 타임아웃) →
+// 기본은 thinking disabled(실측 2~15초). MOONSHOT_THINKING=enabled로 켜면
+// 깊은 추론 모드 + 긴 타임아웃(라우트 maxDuration=300과 짝).
+const TIMEOUT_FAST_MS = 60_000;
+const TIMEOUT_THINKING_MS = 280_000;
 
 function env(name: string): string | null {
   const v = process.env[name];
@@ -190,6 +192,7 @@ export async function buildAiAnalysis(code: string): Promise<AiAnalysis> {
   if (!apiKey) throw new AiConfigError("MOONSHOT_API_KEY 미설정");
   const baseUrl = env("MOONSHOT_BASE_URL") ?? "https://api.moonshot.ai/v1";
   const model = env("MOONSHOT_MODEL") ?? "kimi-k2.6";
+  const thinking = env("MOONSHOT_THINKING") === "enabled";
 
   // 룰베이스 리포트를 서버 내부에서 직접 생성 (HTTP 왕복 없음)
   const report = await buildStockReport(code);
@@ -206,12 +209,14 @@ export async function buildAiAnalysis(code: string): Promise<AiAnalysis> {
         model,
         // kimi-k2.6은 temperature=1만 허용 — 기본값 사용 (지정 시 400)
         response_format: { type: "json_object" },
+        // thinking 미지정 시 모델 기본이 reasoning(느림) — 명시적으로 제어
+        thinking: { type: thinking ? "enabled" : "disabled" },
         messages: [
           { role: "system", content: SYSTEM_PROMPT },
           { role: "user", content: serializeForPrompt(report) },
         ],
       }),
-      signal: AbortSignal.timeout(TIMEOUT_MS),
+      signal: AbortSignal.timeout(thinking ? TIMEOUT_THINKING_MS : TIMEOUT_FAST_MS),
     });
   } catch {
     throw new AiUnavailableError("AI 서버 연결 실패 (타임아웃/네트워크)");
