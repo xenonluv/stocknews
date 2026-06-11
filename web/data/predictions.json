@@ -1,16 +1,16 @@
 {
-  "as_of": "2026-06-11 12:52 KST",
+  "as_of": "2026-06-11 13:07 KST",
   "intraday_rank": [
     {
       "ticker": "코리아써키트",
       "code": "007810",
       "tomorrow_up_prob": "83%",
-      "entry": 138400.0,
-      "target": 145320,
-      "stop": 134248,
+      "entry": 136300.0,
+      "target": 143115,
+      "stop": 132211,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.84)",
+        "강세마감(0.77)",
         "정배열",
         "MACD강세"
       ],
@@ -36,22 +36,6 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "심텍·코리아써키트 주가 불기둥… AI 반도체 수혜 기판주 재평가"
-    },
-    {
-      "ticker": "삼화콘덴서",
-      "code": "001820",
-      "tomorrow_up_prob": "81%",
-      "entry": 122800.0,
-      "target": 128940,
-      "stop": 119116,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.9)",
-        "정배열",
-        "RSI60.8 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null
     },
     {
       "ticker": "코미코",
@@ -98,17 +82,33 @@
       "cause_summary": "상한가 종목 속출…화신정공·코미코·마니커 초강세, 투자심리 회복 신..."
     },
     {
+      "ticker": "삼화콘덴서",
+      "code": "001820",
+      "tomorrow_up_prob": "76%",
+      "entry": 122200.0,
+      "target": 128310,
+      "stop": 118534,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.87)",
+        "정배열",
+        "RSI60.6 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null
+    },
+    {
       "ticker": "라이콤",
       "code": "388790",
       "tomorrow_up_prob": "72%",
-      "entry": 9000.0,
-      "target": 9450,
-      "stop": 8730,
+      "entry": 9070.0,
+      "target": 9524,
+      "stop": 8798,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.96)",
+        "강세마감(0.99)",
         "MACD강세",
-        "거래량2.68배"
+        "거래량2.77배"
       ],
       "risk": "Stoch 과매수",
       "day_change": null,
@@ -186,33 +186,17 @@
       "cause_summary": "보험주 뒤늦은 랠리…미래에셋생명·한화생명 급등 배경은"
     },
     {
-      "ticker": "이수페타시스",
-      "code": "007660",
-      "tomorrow_up_prob": "60%",
-      "entry": 124100.0,
-      "target": 130305,
-      "stop": 120377,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.99)",
-        "Stoch골든",
-        "장중 5회 지속"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null
-    },
-    {
       "ticker": "HD현대마린솔루션",
       "code": "443060",
-      "tomorrow_up_prob": "60%",
+      "tomorrow_up_prob": "61%",
       "entry": 250000.0,
       "target": 262500,
       "stop": 242500,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.98)",
+        "강세마감(0.95)",
         "RSI58.2 강세",
-        "장중 5회 지속"
+        "장중 6회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -230,20 +214,36 @@
       "cause_summary": "[특징주] HD현대마린솔루션, 1분기 호실적·증권가 목표가 줄상향에 10%..."
     },
     {
+      "ticker": "이수페타시스",
+      "code": "007660",
+      "tomorrow_up_prob": "61%",
+      "entry": 122800.0,
+      "target": 128940,
+      "stop": 119116,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.91)",
+        "Stoch골든",
+        "장중 6회 지속"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null
+    },
+    {
       "ticker": "티엠씨",
       "code": "217590",
       "tomorrow_up_prob": "57%",
-      "entry": 23200.0,
-      "target": 24360,
-      "stop": 22504,
+      "entry": 22550.0,
+      "target": 23678,
+      "stop": 21874,
       "confidence": "중",
       "reasons": [
-        "거래량5.44배",
+        "거래량5.48배",
         "호재",
-        "장중 12회 지속"
+        "장중 13회 지속"
       ],
       "risk": "약한 마감",
-      "day_change": 2.21,
+      "day_change": 1.55,
       "cause_news": [
         {
           "title": "[특징주] 티엠씨, 美 데이터센터 광케이블 수요 급증에 강세…원전 인프...",
@@ -279,12 +279,12 @@
       "ticker": "코리아써키트",
       "code": "007810",
       "tomorrow_up_prob": "83%",
-      "entry": 138400.0,
-      "target": 145320,
-      "stop": 134248,
+      "entry": 136300.0,
+      "target": 143115,
+      "stop": 132211,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.84)",
+        "강세마감(0.77)",
         "정배열",
         "MACD강세"
       ],
@@ -310,22 +310,6 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "심텍·코리아써키트 주가 불기둥… AI 반도체 수혜 기판주 재평가"
-    },
-    {
-      "ticker": "삼화콘덴서",
-      "code": "001820",
-      "tomorrow_up_prob": "81%",
-      "entry": 122800.0,
-      "target": 128940,
-      "stop": 119116,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.9)",
-        "정배열",
-        "RSI60.8 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null
     },
     {
       "ticker": "코미코",
@@ -372,17 +356,33 @@
       "cause_summary": "상한가 종목 속출…화신정공·코미코·마니커 초강세, 투자심리 회복 신..."
     },
     {
+      "ticker": "삼화콘덴서",
+      "code": "001820",
+      "tomorrow_up_prob": "76%",
+      "entry": 122200.0,
+      "target": 128310,
+      "stop": 118534,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.87)",
+        "정배열",
+        "RSI60.6 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null
+    },
+    {
       "ticker": "라이콤",
       "code": "388790",
       "tomorrow_up_prob": "72%",
-      "entry": 9000.0,
-      "target": 9450,
-      "stop": 8730,
+      "entry": 9070.0,
+      "target": 9524,
+      "stop": 8798,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.96)",
+        "강세마감(0.99)",
         "MACD강세",
-        "거래량2.68배"
+        "거래량2.77배"
       ],
       "risk": "Stoch 과매수",
       "day_change": null,
