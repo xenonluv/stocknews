@@ -46,6 +46,28 @@ env_has_key() {
   return 1
 }
 
+read_env_value() {
+  local file="$1"
+  local key="$2"
+  [ -f "$file" ] || return 1
+  python3 - "$file" "$key" <<'PY'
+import sys
+path, key = sys.argv[1], sys.argv[2]
+try:
+    for line in open(path, encoding="utf-8"):
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        k, v = line.split("=", 1)
+        if k.strip() == key:
+            print(v.strip().strip('"').strip("'"))
+            raise SystemExit(0)
+except FileNotFoundError:
+    pass
+raise SystemExit(1)
+PY
+}
+
 append_or_replace_env() {
   local key="$1"
   local value="$2"
@@ -61,6 +83,61 @@ append_or_replace_env() {
   fi
 }
 
+import_env_from_file() {
+  local file="$1"
+  local changed=0
+  [ -f "$file" ] || return 1
+  for key in MOONSHOT_API_KEY MOONSHOT_BASE_URL MOONSHOT_MODEL; do
+    if ! env_has_key "$key"; then
+      local value
+      value="$(read_env_value "$file" "$key" || true)"
+      if [ -n "$value" ]; then
+        append_or_replace_env "$key" "$value"
+        changed=1
+      fi
+    fi
+  done
+  [ "$changed" = "1" ]
+}
+
+extract_kimi_key_from_notes() {
+  python3 - "$REPO" "$HOME" <<'PY'
+import re
+import sys
+from pathlib import Path
+roots = [Path(sys.argv[1]), Path(sys.argv[2])]
+names = ["kimiapi.md", "apikey.md", ".kimiapi", ".stocknews_kimi", ".env"]
+for root in roots:
+    for name in names:
+        path = root / name
+        if not path.exists() or not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        m = re.search(r"\bsk-[A-Za-z0-9_-]{20,}\b", text)
+        if m:
+            print(m.group(0))
+            raise SystemExit(0)
+raise SystemExit(1)
+PY
+}
+
+try_vercel_env_pull() {
+  local tmp
+  tmp="$(mktemp)"
+  echo "Trying to pull MOONSHOT_* from Vercel project env..."
+  if command -v vercel >/dev/null 2>&1; then
+    (cd "$REPO/web" && vercel env pull "$tmp" --yes --environment=production >/dev/null)
+  elif command -v npx >/dev/null 2>&1; then
+    (cd "$REPO/web" && npx --yes vercel env pull "$tmp" --yes --environment=production >/dev/null)
+  else
+    rm -f "$tmp"
+    return 1
+  fi
+  import_env_from_file "$tmp" || true
+  rm -f "$tmp"
+  env_has_key "MOONSHOT_API_KEY"
+}
+
 echo
 echo "== sync main =="
 stash_dirty_worktree
@@ -72,18 +149,29 @@ echo "== Kimi local env =="
 if env_has_key "MOONSHOT_API_KEY"; then
   echo "MOONSHOT_API_KEY: already configured locally"
 else
-  echo "MOONSHOT_API_KEY is required on this Mac because cron calls Kimi locally."
-  printf "Paste MOONSHOT_API_KEY (input hidden): "
-  stty -echo
-  read -r MOONSHOT_KEY
-  stty echo
-  printf '\n'
-  if [ -z "$MOONSHOT_KEY" ]; then
-    echo "ERROR: MOONSHOT_API_KEY was empty" >&2
+  echo "MOONSHOT_API_KEY: not found locally. Trying automatic sources."
+  for f in "$REPO/.env" "$WEB_ENV" "$REPO/kimiapi.md" "$REPO/apikey.md" "$HOME/kimiapi.md" "$HOME/apikey.md" "$HOME/.env"; do
+    import_env_from_file "$f" && echo "Imported MOONSHOT_* from $f" && break || true
+  done
+  if ! env_has_key "MOONSHOT_API_KEY"; then
+    KIMI_KEY="$(extract_kimi_key_from_notes || true)"
+    if [ -n "${KIMI_KEY:-}" ]; then
+      append_or_replace_env "MOONSHOT_API_KEY" "$KIMI_KEY"
+      echo "MOONSHOT_API_KEY: imported from local secret note"
+    fi
+  fi
+  if ! env_has_key "MOONSHOT_API_KEY"; then
+    try_vercel_env_pull || true
+  fi
+  if ! env_has_key "MOONSHOT_API_KEY"; then
+    echo "ERROR: MOONSHOT_API_KEY could not be configured automatically." >&2
+    echo "Fix one of these, then rerun:" >&2
+    echo "  1) log in/link Vercel CLI so 'vercel env pull' works from web/" >&2
+    echo "  2) put MOONSHOT_API_KEY in web/.env.local or .env" >&2
+    echo "  3) put the sk-... key in ~/kimiapi.md" >&2
     exit 1
   fi
-  append_or_replace_env "MOONSHOT_API_KEY" "$MOONSHOT_KEY"
-  echo "MOONSHOT_API_KEY: saved to web/.env.local"
+  echo "MOONSHOT_API_KEY: configured locally"
 fi
 
 if ! env_has_key "MOONSHOT_BASE_URL"; then
