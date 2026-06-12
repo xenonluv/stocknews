@@ -21,8 +21,15 @@
     "2026-06-17_FOMC 금리 결정 ("
    ],
    "first_seen": "2026-06-11 12:30:20 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260612",
+    "next_close": 196100.0,
+    "next_high": 201500.0,
+    "hit": true,
+    "high3": true,
+    "return_pct": 9.98
+   },
    "final": false
   },
   "217590": {
@@ -43,8 +50,15 @@
    "fade_pct": 106.0,
    "matched_events": [],
    "first_seen": "2026-06-11 12:30:20 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260612",
+    "next_close": 21700.0,
+    "next_high": 23300.0,
+    "hit": false,
+    "high3": true,
+    "return_pct": -2.47
+   },
    "final": true
   },
   "126640": {
@@ -65,8 +79,15 @@
    "fade_pct": 86.4,
    "matched_events": [],
    "first_seen": "2026-06-11 13:30:26 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260612",
+    "next_close": 4895.0,
+    "next_high": 5390.0,
+    "hit": true,
+    "high3": true,
+    "return_pct": 6.18
+   },
    "final": true
   },
   "178320": {
@@ -89,8 +110,15 @@
     "2026-06-11_한국 옵션·선물 동시만"
    ],
    "first_seen": "2026-06-11 15:15:26 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260612",
+    "next_close": 75100.0,
+    "next_high": 78300.0,
+    "hit": true,
+    "high3": true,
+    "return_pct": 0.81
+   },
    "final": true
   }
  },

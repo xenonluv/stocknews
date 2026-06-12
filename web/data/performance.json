@@ -1,12 +1,15 @@
 {
- "as_of": "2026-06-11 17:20 KST",
+ "as_of": "2026-06-12 17:20 KST",
  "summary": {
-  "n": 2,
-  "hit_rate": 50.0,
-  "avg_return": 0.77,
+  "n": 5,
+  "hit_rate": 60.0,
+  "avg_return": 1.21,
   "high3_rate": 100,
-  "tracking_days": 2,
-  "dropout": null
+  "tracking_days": 3,
+  "dropout": {
+   "n": 1,
+   "hit_rate": 100.0
+  }
  },
  "series": [
   {
@@ -19,26 +22,34 @@
   },
   {
    "date": "20260611",
+   "n": 3,
+   "hits": 2,
+   "hit_rate": 67,
+   "cum_n": 5,
+   "cum_hit_rate": 60.0
+  },
+  {
+   "date": "20260612",
    "n": 0,
    "hits": 0,
    "hit_rate": null,
-   "cum_n": 2,
-   "cum_hit_rate": 50.0
+   "cum_n": 5,
+   "cum_hit_rate": 60.0
   }
  ],
  "bins": [
   {
    "lo": 40,
    "hi": 60,
-   "n": 0,
-   "actual_rate": null,
+   "n": 2,
+   "actual_rate": 100,
    "valid": false
   },
   {
    "lo": 60,
    "hi": 75,
-   "n": 0,
-   "actual_rate": null,
+   "n": 1,
+   "actual_rate": 0,
    "valid": false
   },
   {
@@ -47,6 +58,24 @@
    "n": 2,
    "actual_rate": 50,
    "valid": false
+  }
+ ],
+ "by_pattern": [
+  {
+   "key": "unknown",
+   "n": 5,
+   "hit_rate": 60.0,
+   "avg_return": 1.21,
+   "high3_rate": 100.0
+  }
+ ],
+ "by_ai_verdict": [
+  {
+   "key": "none",
+   "n": 5,
+   "hit_rate": 60.0,
+   "avg_return": 1.21,
+   "high3_rate": 100.0
   }
  ],
  "weights": {
@@ -70,6 +99,27 @@
   "history": []
  },
  "recent": [
+  {
+   "date": "20260611",
+   "name": "티엠씨",
+   "score": 68,
+   "hit": false,
+   "return_pct": -2.47
+  },
+  {
+   "date": "20260611",
+   "name": "서진시스템",
+   "score": 56,
+   "hit": true,
+   "return_pct": 0.81
+  },
+  {
+   "date": "20260611",
+   "name": "화신정공",
+   "score": 57,
+   "hit": true,
+   "return_pct": 6.18
+  },
   {
    "date": "20260610",
    "name": "케이뱅크",
