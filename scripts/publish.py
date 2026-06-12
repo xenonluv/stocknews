@@ -195,6 +195,12 @@ def main():
         git_lock = acquire_git_lock()  # noqa: F841 — 프로세스 종료까지 유지
         # 게시 여부와 무관하게 매 회차 검증용 이력 기록 (push는 radar_backtest가 담당)
         record_history(out)
+        # 이력은 쓴 즉시 로컬 커밋 — 미커밋 dirty로 남기면 락 해제 후 7분 뒤 forecast의
+        # pull --rebase --autostash가 매번 스태시/팝 (충돌 시 회차 이력 유실). 커밋된
+        # 변경은 autostash 무관. push는 다음 push 회차(레이더 변경 시/17:20)에 함께 실림.
+        git("add", "data/radar_history")
+        if git("diff", "--cached", "--quiet").returncode != 0:
+            git("commit", "-q", "-m", "data: 레이더 회차 이력 기록")
 
     old = open(RADAR_JSON, encoding="utf-8").read() if os.path.exists(RADAR_JSON) else ""
 

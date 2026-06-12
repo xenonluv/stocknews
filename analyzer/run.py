@@ -216,9 +216,12 @@ def main():
         return
 
     open(PRED, "w", encoding="utf-8").write(text)  # git 락 보유 중 (build 전 획득)
-    if "--push" in args:
-        git("add", "web/data/predictions.json")
+    # 산출물(예측 + state/history)은 즉시 로컬 커밋 — 미커밋 dirty로 남기면 락 해제 후
+    # 8분 뒤 publish의 autostash 대상 (충돌 시 이력 유실). push는 --push에서만.
+    git("add", "web/data/predictions.json", "analyzer/state")
+    if git("diff", "--cached", "--quiet").returncode != 0:
         git("commit", "-q", "-m", f"data: 내일상승 예측 갱신 (종가베팅 {len(out['closing_bet'])})")
+    if "--push" in args:
         pl = git("pull", "--rebase", "--autostash", "origin", "main")
         if pl.returncode != 0:
             git("rebase", "--abort"); sys.stderr.write("pull 실패\n"); sys.exit(1)
