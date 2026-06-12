@@ -207,6 +207,9 @@ export interface AiAnalysis {
   code: string;
   asOf: string; // 생성 시각 KST
   model: string; // 사용 모델 id (투명성)
+  /** 같은 시점의 룰베이스 판정 — AI와의 괴리 분석·튜닝용 동시 기록 (radar_backtest가 적재) */
+  verdictScore?: number | null;
+  verdictLevel?: string | null;
   direction: AiDirection; // probUp에서 파생 (≥58 상승, ≤42 하락, 사이 관망)
   probUp: number; // 다음 거래일 종가 > 기준일 종가 확률 0~100 (N샘플 중앙값)
   confidence: number; // 파생 max(probUp, 100-probUp) — 하위호환용

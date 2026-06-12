@@ -1,5 +1,5 @@
 {
- "as_of": "2026-06-12 19:51 KST",
+ "as_of": "2026-06-12 20:32 KST",
  "summary": {
   "n": 5,
   "hit_rate": 60.0,
@@ -84,7 +84,51 @@
   "prob_bands": [],
   "avg_prob": null,
   "actual_rate": null,
-  "brier": null
+  "brier": null,
+  "divergence": {
+   "rule_buy_min": 62,
+   "ai_up_min": 58,
+   "min_n": 10,
+   "unknown_n": 0,
+   "cells": [
+    {
+     "key": "동행 강세 (룰 매수 + AI 상승)",
+     "rule_buy": true,
+     "ai_up": true,
+     "n": 0,
+     "hit_rate": null,
+     "avg_return": null,
+     "valid": false
+    },
+    {
+     "key": "룰만 강세 (룰 매수 + AI 비상승)",
+     "rule_buy": true,
+     "ai_up": false,
+     "n": 0,
+     "hit_rate": null,
+     "avg_return": null,
+     "valid": false
+    },
+    {
+     "key": "AI만 강세 (룰 비매수 + AI 상승)",
+     "rule_buy": false,
+     "ai_up": true,
+     "n": 0,
+     "hit_rate": null,
+     "avg_return": null,
+     "valid": false
+    },
+    {
+     "key": "동반 약세 (룰 비매수 + AI 비상승)",
+     "rule_buy": false,
+     "ai_up": false,
+     "n": 0,
+     "hit_rate": null,
+     "avg_return": null,
+     "valid": false
+    }
+   ]
+  }
  },
  "spark_flow": {
   "mega_x": 40.0,

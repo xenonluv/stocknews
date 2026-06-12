@@ -78,6 +78,46 @@ export function AiPredictionPanel({ ai }: { ai: AiStats }) {
             </tbody>
           </table>
 
+          {ai.divergence && ai.divergence.cells.some((c) => c.n > 0) && (
+            <div className="mt-4">
+              <h4 className="mb-1 text-xs font-semibold">룰베이스 vs AI — 의견 일치/불일치 검증</h4>
+              <p className="mb-2 text-[11px] text-muted-foreground">
+                룰 판정(점수 {ai.divergence.rule_buy_min}+ = 매수 계열)과 AI 예측(확률{" "}
+                {ai.divergence.ai_up_min}%+ = 상승)이 엇갈린 종목들의 실제 결과 — 괴리 시 어느
+                쪽이 맞았는지 누적 판별해 튜닝 근거로 씁니다.
+              </p>
+              <table className="w-full text-sm">
+                <tbody>
+                  {ai.divergence.cells.map((c) => (
+                    <tr key={c.key} className="border-t border-white/5 text-xs">
+                      <td className="py-1.5">{c.key}</td>
+                      <td className="py-1.5 tabular-nums text-muted-foreground">{c.n}건</td>
+                      <td className="py-1.5">
+                        {c.valid && c.hit_rate !== null ? (
+                          <span
+                            className={`font-semibold tabular-nums ${c.hit_rate >= 50 ? "text-up" : "text-down"}`}
+                          >
+                            {c.hit_rate}%
+                            {c.avg_return !== null && (
+                              <span className="ml-1 font-normal text-muted-foreground">
+                                평균 {c.avg_return > 0 ? "+" : ""}
+                                {c.avg_return}%
+                              </span>
+                            )}
+                          </span>
+                        ) : (
+                          <span className="text-muted-foreground">
+                            {c.n > 0 ? `수집 중 (${c.n}건)` : "—"}
+                          </span>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+
           {ai.by_direction.length > 0 && (
             <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-muted-foreground tabular-nums">
               {ai.by_direction.map((d) => (

@@ -396,6 +396,9 @@ export async function buildAiAnalysis(code: string): Promise<AiAnalysis> {
     code,
     asOf: formatKST(),
     model,
+    // 같은 시점의 룰베이스 판정 동봉 — AI 확률과의 괴리를 백테스트가 기록·검증
+    verdictScore: report.verdict?.score ?? null,
+    verdictLevel: report.verdict?.level ?? null,
     direction: deriveDirection(probUp),
     probUp,
     confidence: Math.max(probUp, 100 - probUp),

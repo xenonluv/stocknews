@@ -52,6 +52,25 @@ export interface AiDirStat {
   high3_rate: number;
 }
 
+/** 룰베이스 vs AI 괴리 4분면 — radar_backtest.divergence_stats()와 정합. */
+export interface DivergenceCell {
+  key: string;
+  rule_buy: boolean; // 룰베이스 점수 >= rule_buy_min
+  ai_up: boolean; // AI 확률 >= ai_up_min
+  n: number;
+  hit_rate: number | null;
+  avg_return: number | null;
+  valid: boolean;
+}
+
+export interface DivergenceStats {
+  rule_buy_min: number;
+  ai_up_min: number;
+  min_n: number;
+  unknown_n: number; // verdict_score 미기록 구표본
+  cells: DivergenceCell[];
+}
+
 export interface AiStats {
   n: number; // ai_pred 기록 + 익일 평가 완료 표본
   by_direction: AiDirStat[];
@@ -59,6 +78,8 @@ export interface AiStats {
   avg_prob: number | null;
   actual_rate: number | null;
   brier: number | null; // 낮을수록 좋음 (0.25 = 무정보 기준선)
+  /** 룰베이스 vs AI 일치/불일치 4분면 적중률 — 구버전 JSON엔 없을 수 있음 */
+  divergence?: DivergenceStats;
 }
 
 /** 메가스파크×수급 가설 검증 표 — radar_backtest.spark_flow_matrix()와 정합. */
