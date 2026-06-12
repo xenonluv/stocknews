@@ -96,8 +96,12 @@ python3 scripts/event_calendar.py 10           # D-10 이벤트 확인
 - `/performance` 페이지 — 자가 검증 대시보드 (누적 적중률 추세 SVG 차트·점수대 보정표·가중치 패널). 데이터 = `web/data/performance.json`.
 - `GET /api/predictions` — 종가베팅(/forecast)용. analyzer/ 서브시스템이 생성.
 - `GET /api/stock/{code}` — **온디맨드 종목 분석 리포트** (룰베이스, LLM 미사용). 요청 시
-  네이버 공개(무인증) API 6종을 병렬 호출해 주가현황·기술지표·수급·재무·재료뉴스·이벤트
-  민감도·종합판정을 생성. 엣지 캐시 180초. 시크릿 불필요(KIS 미사용 — Vercel 무시크릿 유지).
+  네이버 공개(무인증) API 7종을 병렬 호출해 주가현황·기술지표·수급·당일 분봉 스파크·재무·
+  재료뉴스·이벤트 민감도·종합판정을 생성. 엣지 캐시 180초. 시크릿 불필요(KIS 미사용 — Vercel 무시크릿 유지).
+  ⚠ 분봉 소스 fchart(`sise.nhn?timeframe=minute`) 실측 함정: 시/고/저는 항상 "null"(종가만 유효),
+  **거래량은 당일 누적값**(분당 = 인접 봉 차분 필요), count와 무관하게 ~6세션치 응답(KST 당일 필터 필수),
+  08:30~ 장전 봉 포함. 스파크 탐지 = `web/lib/stock/sparks.ts`(radar.py detect_sparks 1:1 포팅,
+  **파이썬 쪽 산식 변경 시 동기화 필요**).
   `GET /api/stock/search?q=` — 자동완성 프록시(ac.stock.naver.com, CSP 때문에 경유 필수).
 - `GET /api/stock/{code}/ai` — **AI(LLM) 심층 분석** (Moonshot `kimi-k2.6`, 유일한 LLM 사용처).
   룰베이스 리포트 전체를 직렬화해 Kimi에 전달 → 익일 방향(상승/하락/관망)+확신도+근거 JSON.
@@ -125,7 +129,7 @@ python3 scripts/event_calendar.py 10           # D-10 이벤트 확인
   부재)·`isManagement`(관리종목)·`tradeStopType`(HALTED=정지) — 경고/위험·관리종목은 감점
   + 매수 계열 판정 금지, 헤더 배지로 노출 (02·HALTED·isManagement는 실종목 전수 실증됨).
 - 빈 상태("오늘은 레이더 깨끗")가 제품 사양. 면책 문구("매수 추천 아님") 유지.
-- 빌드 검증: `cd web && npm run build` (**WSL + nvm Node 20만** — Windows npm은 UNC에서 깨짐).
+- 빌드 검증: `cd web && npm run build` (**WSL + nvm Node 20+(현재 24)만** — Windows npm은 UNC에서 깨짐).
 
 ## ⚠️ 환경 함정 (필독 — WSL/Windows 분리)
 
