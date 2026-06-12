@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-12 15:15:49 KST",
+ "generated_at": "2026-06-12 15:30:20 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -32,7 +32,7 @@
    "153000"
   ]
  },
- "universe_count": 25,
+ "universe_count": 26,
  "events": [
   {
    "id": "2026-06-17_FOMC 금리 결정 (",
@@ -55,79 +55,79 @@
    "pattern": "fade",
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 70,
+   "suspicion_score": 68,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 11.4,
-    "fade": 14.8,
+    "spark": 11.2,
+    "fade": 12.7,
     "ma10": 10.0,
     "flow": 4.0,
     "event": 0.0
    },
-   "score_raw": 70,
+   "score_raw": 68,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 11.4,
-    "fade": 14.8,
+    "spark": 11.2,
+    "fade": 12.7,
     "ma10": 10.0,
     "flow": 4,
     "event": 0.0
    },
-   "price": 66100.0,
-   "change_pct": 8.18,
+   "price": 65300.0,
+   "change_pct": 6.87,
    "high_pct": 16.2,
-   "fade_pct": 49.5,
-   "value_eok": 5583,
-   "ma10": 55020.0,
-   "ma10_margin_pct": 20.14,
+   "fade_pct": 57.6,
+   "value_eok": 5639,
+   "ma10": 54940.0,
+   "ma10_margin_pct": 18.86,
    "spark": {
     "clusters": [
      {
       "time": "09:02",
-      "vol_x": 13.0,
+      "vol_x": 12.8,
       "pct": 2.2,
       "minutes": 1
      },
      {
       "time": "09:07",
-      "vol_x": 26.2,
+      "vol_x": 25.9,
       "pct": 4.42,
       "minutes": 3
      },
      {
       "time": "09:12",
-      "vol_x": 12.7,
+      "vol_x": 12.5,
       "pct": -2.6,
       "minutes": 3
      },
      {
       "time": "09:16",
-      "vol_x": 8.4,
+      "vol_x": 8.3,
       "pct": 1.02,
       "minutes": 1
      },
      {
       "time": "09:45",
-      "vol_x": 9.1,
+      "vol_x": 9.0,
       "pct": 1.06,
       "minutes": 1
      },
      {
       "time": "14:20",
-      "vol_x": 9.4,
+      "vol_x": 9.3,
       "pct": 1.33,
       "minutes": 1
      },
      {
       "time": "14:27",
-      "vol_x": 14.1,
+      "vol_x": 13.9,
       "pct": 1.91,
       "minutes": 1
      },
      {
       "time": "14:32",
-      "vol_x": 9.9,
+      "vol_x": 9.7,
       "pct": -1.16,
       "minutes": 1
      }
@@ -166,172 +166,7 @@
     ]
    },
    "news": [],
-   "matched_events": [],
-   "ai_verdict": {
-    "status": "ok",
-    "verdict": "WATCH",
-    "confidence": 55,
-    "reason": "고점 대비 49.5% fade와 16.2% 고점 돌파 후 하락은 흡수 가능성이 있으나, 외국인 2일 연속 순매수 후 금일 0으로 급변하고 기관도 0인 수급 공백, 뉴스 부재, 막판 14:20-14:32 분봉 연속 상승 후 음봉 전환의 불안정한 마감이 확인 부족 상태임.",
-    "risk_flags": [
-     "수급 급변(외인/기관 동시 0)",
-     "막판 분봉 불안정",
-     "뉴스/이벤트 공백"
-    ],
-    "manual_check": "장마감 직전 30분 분봉 종가 방어 여부 및 시간외 매물대 확인",
-    "model": "kimi-k2.6"
-   }
-  },
-  {
-   "code": "347700",
-   "name": "스피어",
-   "sector": "IT 서비스",
-   "pattern": "fade",
-   "shake": null,
-   "deep_shake": null,
-   "suspicion_score": 63,
-   "calibrated_prob": null,
-   "score_breakdown": {
-    "base": 30,
-    "spark": 15.0,
-    "fade": 2.0,
-    "ma10": 10.0,
-    "flow": 4.0,
-    "event": 1.6
-   },
-   "score_raw": 63,
-   "score_breakdown_raw": {
-    "base": 30,
-    "spark": 15.0,
-    "fade": 2.0,
-    "ma10": 10.0,
-    "flow": 4,
-    "event": 1.6
-   },
-   "price": 37050.0,
-   "change_pct": -3.77,
-   "high_pct": 17.66,
-   "fade_pct": 121.3,
-   "value_eok": 1872,
-   "ma10": 33200.0,
-   "ma10_margin_pct": 11.6,
-   "spark": {
-    "clusters": [
-     {
-      "time": "09:02",
-      "vol_x": 44.4,
-      "pct": 12.95,
-      "minutes": 7
-     },
-     {
-      "time": "09:11",
-      "vol_x": 18.4,
-      "pct": -7.59,
-      "minutes": 4
-     },
-     {
-      "time": "09:19",
-      "vol_x": 9.4,
-      "pct": -4.39,
-      "minutes": 2
-     },
-     {
-      "time": "09:30",
-      "vol_x": 9.7,
-      "pct": -1.98,
-      "minutes": 1
-     },
-     {
-      "time": "09:36",
-      "vol_x": 9.4,
-      "pct": -1.32,
-      "minutes": 1
-     },
-     {
-      "time": "09:39",
-      "vol_x": 18.8,
-      "pct": -1.4,
-      "minutes": 1
-     },
-     {
-      "time": "14:42",
-      "vol_x": 13.4,
-      "pct": -1.57,
-      "minutes": 1
-     },
-     {
-      "time": "15:01",
-      "vol_x": 8.4,
-      "pct": -2.44,
-      "minutes": 1
-     }
-    ]
-   },
-   "flow": {
-    "net_days": 2,
-    "today_buy": false,
-    "streak": 0,
-    "detail": [
-     {
-      "date": "0608",
-      "frgn": -101757,
-      "orgn": -16081
-     },
-     {
-      "date": "0609",
-      "frgn": 82766,
-      "orgn": -5800
-     },
-     {
-      "date": "0610",
-      "frgn": -228387,
-      "orgn": 157598
-     },
-     {
-      "date": "0611",
-      "frgn": -250167,
-      "orgn": 259119
-     },
-     {
-      "date": "0612",
-      "frgn": 0,
-      "orgn": 0
-     }
-    ]
-   },
-   "news": [
-    {
-     "title": "[ET특징주]스피어, 미국 우주발사업체향 수주 확대에 상승세",
-     "summary": "스피어가 미국 우주발사업체향 수주를 확대했다는 소식에 상승세다. 스피어(347700)는 6월 11일 오전 10시 42분 기준 전 거래일보다 6.41% 상승한 31,550원에 거래되고 있다. 스피어는 전날 미국 글로벌 우주항공 발사업체와 201억6382",
-     "office": "전자신문",
-     "datetime": "202606111047",
-     "url": "https://n.news.naver.com/mnews/article/030/0003436662",
-     "sentiment": "호재"
-    }
-   ],
-   "matched_events": [
-    {
-     "id": "2026-06-17_FOMC 금리 결정 (",
-     "title": "FOMC 금리 결정 (6월)",
-     "dday": 5,
-     "categories": [
-      "금리"
-     ],
-     "score": 1.6
-    }
-   ],
-   "ai_verdict": {
-    "status": "ok",
-    "verdict": "WATCH",
-    "confidence": 55,
-    "reason": "고점 대비 21.3% 급락(fade_pct 121.3은 급락폭 과대표기로 보임) 속 09:02 초반 폭발적 거래(44.4배) 후 지속적 음봉 클러스터, 외국인 2일 연속 대량 순매도(6/10~11)에 기관이 일부 상쇄했으나 6/12 미거래로 수급 방어 미확인, 뉴스는 호재지만 종가 -3.77%로 막판 회복 없이 저가권 유지",
-    "risk_flags": [
-     "외국인 연속 대량 매도",
-     "초반 급등 후 무회복 지속음봉",
-     "수급 방어 미확인"
-    ],
-    "manual_check": "6/12 장중 외국인/기관 실시간 수급 방어 여부 및 36,000원대 지지선 유지 확인",
-    "model": "kimi-k2.6"
-   }
+   "matched_events": []
   },
   {
    "code": "080220",
@@ -340,56 +175,55 @@
    "pattern": "fade",
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 50,
+   "suspicion_score": 58,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 7.6,
-    "fade": 14.6,
-    "ma10": 6.2,
+    "spark": 7.4,
+    "fade": 13.0,
+    "ma10": 5.4,
     "flow": 2.0,
-    "event": 0.0,
-    "ai": -10
+    "event": 0.0
    },
-   "score_raw": 60,
+   "score_raw": 58,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 7.6,
-    "fade": 14.6,
-    "ma10": 6.2,
+    "spark": 7.4,
+    "fade": 13.0,
+    "ma10": 5.4,
     "flow": 2,
     "event": 0.0
    },
-   "price": 103700.0,
-   "change_pct": 6.91,
+   "price": 103000.0,
+   "change_pct": 6.19,
    "high_pct": 14.23,
-   "fade_pct": 51.4,
-   "value_eok": 3860,
-   "ma10": 98820.0,
-   "ma10_margin_pct": 4.94,
+   "fade_pct": 56.5,
+   "value_eok": 3898,
+   "ma10": 98750.0,
+   "ma10_margin_pct": 4.3,
    "spark": {
     "clusters": [
      {
       "time": "09:06",
-      "vol_x": 16.7,
+      "vol_x": 16.5,
       "pct": 4.29,
       "minutes": 1
      },
      {
       "time": "09:08",
-      "vol_x": 16.0,
+      "vol_x": 15.8,
       "pct": 2.46,
       "minutes": 1
      },
      {
       "time": "09:10",
-      "vol_x": 20.1,
+      "vol_x": 19.8,
       "pct": -1.89,
       "minutes": 3
      },
      {
       "time": "13:39",
-      "vol_x": 9.1,
+      "vol_x": 9.0,
       "pct": 1.29,
       "minutes": 1
      }
@@ -428,20 +262,7 @@
     ]
    },
    "news": [],
-   "matched_events": [],
-   "ai_verdict": {
-    "status": "ok",
-    "verdict": "REJECT",
-    "confidence": 78,
-    "reason": "외국인 4일 연속 대량 순매도(-72만주)에 기관 동반 이탈, 고점 대비 51% 페이드 후에도 저점 방어 없이 막판 소폭 반등만 있어 매도 붕괴 가능성이 높음.",
-    "risk_flags": [
-     "외국인·기관 동반 연속 매도",
-     "고점 대비 과도한 페이드",
-     "수급 흐름과 가격 회복 비대칭"
-    ],
-    "manual_check": "장마감 직전 30분 분봉에서 저가 돌파 여부 및 호가창 매도 잔량 집중도 확인",
-    "model": "kimi-k2.6"
-   }
+   "matched_events": []
   },
   {
    "code": "036930",
@@ -450,38 +271,37 @@
    "pattern": "fade",
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 41,
+   "suspicion_score": 51,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 5.2,
+    "spark": 5.1,
     "fade": 2.0,
     "ma10": 10.0,
     "flow": 4.0,
-    "event": 0.0,
-    "ai": -10
+    "event": 0.0
    },
    "score_raw": 51,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 5.2,
+    "spark": 5.1,
     "fade": 2.0,
     "ma10": 10.0,
     "flow": 4,
     "event": 0.0
    },
-   "price": 232500.0,
-   "change_pct": -5.3,
+   "price": 231000.0,
+   "change_pct": -5.91,
    "high_pct": 15.27,
-   "fade_pct": 134.7,
-   "value_eok": 14510,
-   "ma10": 209440.0,
-   "ma10_margin_pct": 11.01,
+   "fade_pct": 138.7,
+   "value_eok": 14782,
+   "ma10": 209290.0,
+   "ma10_margin_pct": 10.37,
    "spark": {
     "clusters": [
      {
       "time": "09:02",
-      "vol_x": 16.4,
+      "vol_x": 16.2,
       "pct": 3.71,
       "minutes": 1
      }
@@ -529,20 +349,7 @@
      "sentiment": "호재"
     }
    ],
-   "matched_events": [],
-   "ai_verdict": {
-    "status": "ok",
-    "verdict": "REJECT",
-    "confidence": 78,
-    "reason": "기관 3거래일 연속 대량 순매도(-61,709→-20,887→+99,842) 후 외국인 급매도(-237,437→-74,754)로 수급 붕괴가 뚜렷하고, 15.27% 고점 대비 20.57% 급락(fade 134.7%)에도 shake 흔적 없이 스파크 단일 클러스터만 존재해 저가 방어 실패.",
-    "risk_flags": [
-     "외국인·기관 동반 수급 붕괴",
-     "고점 대비 과도한 fade에 shake 부재",
-     "막판 회복 없는 종가 저가권 마감"
-    ],
-    "manual_check": "0612 장중 실시간 수급(외국인/기관 호가창) 및 반도체 장비주 동반 약세 여부 확인",
-    "model": "kimi-k2.6"
-   }
+   "matched_events": []
   }
  ]
 }
