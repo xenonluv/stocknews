@@ -4,6 +4,7 @@
 !.env.example
 apikey.md
 kimiapi.md
+kimikey.md
 kis_devlp.yaml
 .kis_token.json
 setup_mac_radar.sh
