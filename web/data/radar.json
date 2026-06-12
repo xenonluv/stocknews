@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-12 11:30:12 KST",
+ "generated_at": "2026-06-12 11:45:07 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -32,7 +32,7 @@
    "153000"
   ]
  },
- "universe_count": 26,
+ "universe_count": 24,
  "events": [
   {
    "id": "2026-06-17_FOMC 금리 결정 (",
@@ -49,151 +49,73 @@
  ],
  "suspects": [
   {
-   "code": "089030",
-   "name": "테크윙",
-   "sector": "기계·장비",
-   "pattern": "fade",
-   "shake": null,
-   "deep_shake": null,
-   "suspicion_score": 61,
-   "calibrated_prob": null,
-   "score_breakdown": {
-    "base": 30,
-    "spark": 5.6,
-    "fade": 11.2,
-    "ma10": 10.0,
-    "flow": 4.0,
-    "event": 0.0
-   },
-   "score_raw": 61,
-   "score_breakdown_raw": {
-    "base": 30,
-    "spark": 5.6,
-    "fade": 11.2,
-    "ma10": 10.0,
-    "flow": 4,
-    "event": 0.0
-   },
-   "price": 67000.0,
-   "change_pct": 9.66,
-   "high_pct": 15.38,
-   "fade_pct": 37.2,
-   "value_eok": 3287,
-   "ma10": 55100.0,
-   "ma10_margin_pct": 21.6,
-   "spark": {
-    "clusters": [
-     {
-      "time": "09:07",
-      "vol_x": 12.5,
-      "pct": 1.2,
-      "minutes": 1
-     },
-     {
-      "time": "09:09",
-      "vol_x": 16.9,
-      "pct": 2.04,
-      "minutes": 1
-     },
-     {
-      "time": "09:14",
-      "vol_x": 8.2,
-      "pct": -1.89,
-      "minutes": 1
-     }
-    ]
-   },
-   "flow": {
-    "net_days": 2,
-    "today_buy": false,
-    "streak": 0,
-    "detail": [
-     {
-      "date": "0608",
-      "frgn": -160375,
-      "orgn": 75711
-     },
-     {
-      "date": "0609",
-      "frgn": 891119,
-      "orgn": 133026
-     },
-     {
-      "date": "0610",
-      "frgn": 164842,
-      "orgn": -11798
-     },
-     {
-      "date": "0611",
-      "frgn": -179984,
-      "orgn": 146731
-     },
-     {
-      "date": "0612",
-      "frgn": 0,
-      "orgn": 0
-     }
-    ]
-   },
-   "news": [],
-   "matched_events": []
-  },
-  {
    "code": "347700",
    "name": "스피어",
    "sector": "IT 서비스",
-   "pattern": "fade",
+   "pattern": "deep_shakeout",
    "shake": null,
-   "deep_shake": null,
-   "suspicion_score": 60,
+   "deep_shake": {
+    "drop_low_from_high_pct": 15.3,
+    "drop_close_from_high_pct": 10.9,
+    "ibs": 0.288,
+    "recovery_pct": 29,
+    "high_time": "09:07",
+    "low_time": "09:39",
+    "late_reclaim": true,
+    "vwap_reclaim": true,
+    "retest_broken": false,
+    "close_hold_score": 85,
+    "bars15_count": 12
+   },
+   "suspicion_score": 65,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 8.0,
-    "fade": 6.8,
+    "spark": 10.1,
+    "fade": 9.0,
     "ma10": 10.0,
     "flow": 4.0,
     "event": 1.6
    },
-   "score_raw": 60,
+   "score_raw": 65,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 8.0,
-    "fade": 6.8,
+    "spark": 10.1,
+    "fade": 9.0,
     "ma10": 10.0,
     "flow": 4,
     "event": 1.6
    },
-   "price": 40050.0,
-   "change_pct": 4.03,
+   "price": 40350.0,
+   "change_pct": 4.81,
    "high_pct": 17.66,
-   "fade_pct": 77.2,
-   "value_eok": 1337,
-   "ma10": 33500.0,
-   "ma10_margin_pct": 19.55,
+   "fade_pct": 72.8,
+   "value_eok": 1351,
+   "ma10": 33530.0,
+   "ma10_margin_pct": 20.34,
    "spark": {
     "clusters": [
      {
       "time": "09:02",
-      "vol_x": 20.8,
+      "vol_x": 24.2,
       "pct": 11.95,
       "minutes": 1
      },
      {
-      "time": "09:05",
-      "vol_x": 12.0,
-      "pct": -0.9,
-      "minutes": 1
+      "time": "09:04",
+      "vol_x": 14.0,
+      "pct": 2.16,
+      "minutes": 3
      },
      {
-      "time": "09:13",
-      "vol_x": 8.6,
-      "pct": -1.54,
-      "minutes": 1
+      "time": "09:11",
+      "vol_x": 10.0,
+      "pct": -5.9,
+      "minutes": 3
      },
      {
       "time": "09:39",
-      "vol_x": 8.8,
+      "vol_x": 10.2,
       "pct": -1.4,
       "minutes": 1
      }
@@ -251,7 +173,14 @@
      ],
      "score": 1.6
     }
-   ]
+   ],
+   "ai_verdict": {
+    "status": "outside_window",
+    "window": [
+     "144500",
+     "153000"
+    ]
+   }
   },
   {
    "code": "080220",
@@ -264,33 +193,45 @@
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 3.6,
-    "fade": 12.4,
-    "ma10": 7.8,
+    "spark": 4.5,
+    "fade": 12.0,
+    "ma10": 8.0,
     "flow": 2.0,
     "event": 0.0
    },
    "score_raw": 56,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 3.6,
-    "fade": 12.4,
-    "ma10": 7.8,
+    "spark": 4.5,
+    "fade": 12.0,
+    "ma10": 8.0,
     "flow": 2,
     "event": 0.0
    },
-   "price": 105100.0,
-   "change_pct": 8.35,
+   "price": 105300.0,
+   "change_pct": 8.56,
    "high_pct": 14.23,
-   "fade_pct": 41.3,
-   "value_eok": 2382,
-   "ma10": 98960.0,
-   "ma10_margin_pct": 6.2,
+   "fade_pct": 39.9,
+   "value_eok": 2436,
+   "ma10": 98980.0,
+   "ma10_margin_pct": 6.39,
    "spark": {
     "clusters": [
      {
+      "time": "09:06",
+      "vol_x": 12.6,
+      "pct": 4.29,
+      "minutes": 1
+     },
+     {
+      "time": "09:08",
+      "vol_x": 12.1,
+      "pct": 2.46,
+      "minutes": 1
+     },
+     {
       "time": "09:10",
-      "vol_x": 13.7,
+      "vol_x": 15.2,
       "pct": -0.87,
       "minutes": 2
      }
@@ -338,37 +279,37 @@
    "pattern": "fade",
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 49,
+   "suspicion_score": 50,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 2.8,
+    "spark": 3.6,
     "fade": 2.0,
     "ma10": 10.0,
     "flow": 4.0,
     "event": 0.0
    },
-   "score_raw": 49,
+   "score_raw": 50,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 2.8,
+    "spark": 3.6,
     "fade": 2.0,
     "ma10": 10.0,
     "flow": 4,
     "event": 0.0
    },
-   "price": 231000.0,
-   "change_pct": -5.91,
+   "price": 236000.0,
+   "change_pct": -3.87,
    "high_pct": 15.27,
-   "fade_pct": 138.7,
-   "value_eok": 7992,
-   "ma10": 209340.0,
-   "ma10_margin_pct": 10.35,
+   "fade_pct": 125.3,
+   "value_eok": 8297,
+   "ma10": 209790.0,
+   "ma10_margin_pct": 12.49,
    "spark": {
     "clusters": [
      {
       "time": "09:02",
-      "vol_x": 12.5,
+      "vol_x": 13.8,
       "pct": 3.71,
       "minutes": 1
      }
@@ -406,7 +347,16 @@
      }
     ]
    },
-   "news": [],
+   "news": [
+    {
+     "title": "AI 기대에 SK네트웍스 매수…삼성전자·SK하이닉스는 차익실현 [주식 ...",
+     "summary": "미래에셋증권에서 거래하는 고수익 투자자들이 12일 가장 많이 순매수한 종목은 SK네트웍스, 주성엔지니어링, 에이플러스바이오 순으로 집계됐다. 12일 미래에셋증권에 따르면 미래에셋증권 주식 거래 고객 중 최근 1개월간 투자 수익률 상위 1...",
+     "office": "서울경제",
+     "datetime": "202606121135",
+     "url": "https://n.news.naver.com/mnews/article/011/0004630472",
+     "sentiment": "호재"
+    }
+   ],
    "matched_events": []
   }
  ]
