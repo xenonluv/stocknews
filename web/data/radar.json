@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-12 13:45:09 KST",
+ "generated_at": "2026-06-12 14:00:15 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -32,7 +32,7 @@
    "153000"
   ]
  },
- "universe_count": 17,
+ "universe_count": 18,
  "events": [
   {
    "id": "2026-06-17_FOMC 금리 결정 (",
@@ -55,20 +55,20 @@
    "pattern": "fade",
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 70,
+   "suspicion_score": 71,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 13.6,
+    "spark": 14.0,
     "fade": 12.8,
     "ma10": 10.0,
     "flow": 4.0,
     "event": 0.0
    },
-   "score_raw": 70,
+   "score_raw": 71,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 13.6,
+    "spark": 14.0,
     "fade": 12.8,
     "ma10": 10.0,
     "flow": 4,
@@ -78,44 +78,44 @@
    "change_pct": 8.84,
    "high_pct": 15.38,
    "fade_pct": 42.6,
-   "value_eok": 3832,
+   "value_eok": 3918,
    "ma10": 55060.0,
    "ma10_margin_pct": 20.78,
    "spark": {
     "clusters": [
      {
       "time": "09:02",
-      "vol_x": 14.7,
+      "vol_x": 15.1,
       "pct": 3.74,
       "minutes": 2
      },
      {
       "time": "09:07",
-      "vol_x": 29.7,
+      "vol_x": 30.4,
       "pct": 4.42,
       "minutes": 3
      },
      {
       "time": "09:12",
-      "vol_x": 14.3,
+      "vol_x": 14.7,
       "pct": -2.6,
       "minutes": 3
      },
      {
       "time": "09:16",
-      "vol_x": 9.5,
+      "vol_x": 9.7,
       "pct": 1.02,
       "minutes": 1
      },
      {
       "time": "09:22",
-      "vol_x": 8.4,
+      "vol_x": 8.6,
       "pct": -1.62,
       "minutes": 1
      },
      {
       "time": "09:45",
-      "vol_x": 10.3,
+      "vol_x": 10.5,
       "pct": 1.06,
       "minutes": 1
      }
@@ -163,73 +163,79 @@
    "pattern": "fade",
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 67,
+   "suspicion_score": 66,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
     "spark": 15.0,
-    "fade": 6.6,
+    "fade": 5.1,
     "ma10": 10.0,
     "flow": 4.0,
     "event": 1.6
    },
-   "score_raw": 67,
+   "score_raw": 66,
    "score_breakdown_raw": {
     "base": 30,
     "spark": 15.0,
-    "fade": 6.6,
+    "fade": 5.1,
     "ma10": 10.0,
     "flow": 4,
     "event": 1.6
    },
-   "price": 40000.0,
-   "change_pct": 3.9,
+   "price": 39650.0,
+   "change_pct": 2.99,
    "high_pct": 17.66,
-   "fade_pct": 77.9,
-   "value_eok": 1527,
-   "ma10": 33495.0,
-   "ma10_margin_pct": 19.42,
+   "fade_pct": 83.1,
+   "value_eok": 1545,
+   "ma10": 33460.0,
+   "ma10_margin_pct": 18.5,
    "spark": {
     "clusters": [
      {
       "time": "09:02",
-      "vol_x": 46.0,
+      "vol_x": 47.6,
       "pct": 12.95,
       "minutes": 7
      },
      {
       "time": "09:11",
-      "vol_x": 19.1,
+      "vol_x": 19.7,
       "pct": -7.59,
       "minutes": 4
      },
      {
       "time": "09:19",
-      "vol_x": 9.7,
+      "vol_x": 10.1,
       "pct": -4.39,
       "minutes": 2
      },
      {
       "time": "09:30",
-      "vol_x": 10.0,
+      "vol_x": 10.4,
       "pct": -1.98,
       "minutes": 1
      },
      {
       "time": "09:36",
-      "vol_x": 9.7,
+      "vol_x": 10.0,
       "pct": -1.32,
       "minutes": 1
      },
      {
       "time": "09:39",
-      "vol_x": 19.4,
+      "vol_x": 20.1,
       "pct": -1.4,
       "minutes": 1
      },
      {
-      "time": "09:58",
+      "time": "09:42",
       "vol_x": 8.2,
+      "pct": 1.28,
+      "minutes": 1
+     },
+     {
+      "time": "09:58",
+      "vol_x": 8.4,
       "pct": 1.77,
       "minutes": 1
      }
@@ -297,23 +303,23 @@
    "shake": null,
    "deep_shake": {
     "drop_low_from_high_pct": 18.9,
-    "drop_close_from_high_pct": 12.9,
-    "ibs": 0.318,
-    "recovery_pct": 32,
+    "drop_close_from_high_pct": 13.1,
+    "ibs": 0.308,
+    "recovery_pct": 31,
     "high_time": "09:02",
     "low_time": "11:19",
     "late_reclaim": false,
     "vwap_reclaim": false,
     "retest_broken": false,
     "close_hold_score": 50,
-    "bars15_count": 20
+    "bars15_count": 21
    },
    "suspicion_score": 56,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 4.9,
-    "fade": 7.0,
+    "spark": 5.2,
+    "fade": 6.8,
     "ma10": 10.0,
     "flow": 4.0,
     "event": 0.0
@@ -321,24 +327,24 @@
    "score_raw": 56,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 4.9,
-    "fade": 7.0,
+    "spark": 5.2,
+    "fade": 6.8,
     "ma10": 10.0,
     "flow": 4,
     "event": 0.0
    },
-   "price": 246500.0,
-   "change_pct": 0.41,
+   "price": 246000.0,
+   "change_pct": 0.2,
    "high_pct": 15.27,
-   "fade_pct": 97.3,
-   "value_eok": 11946,
-   "ma10": 210890.0,
-   "ma10_margin_pct": 16.89,
+   "fade_pct": 98.7,
+   "value_eok": 12391,
+   "ma10": 210790.0,
+   "ma10_margin_pct": 16.7,
    "spark": {
     "clusters": [
      {
       "time": "09:02",
-      "vol_x": 15.9,
+      "vol_x": 16.4,
       "pct": 3.71,
       "minutes": 1
      }
