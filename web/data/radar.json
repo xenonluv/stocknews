@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-12 12:15:12 KST",
+ "generated_at": "2026-06-12 12:30:11 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -56,66 +56,60 @@
    "shake": null,
    "deep_shake": {
     "drop_low_from_high_pct": 15.3,
-    "drop_close_from_high_pct": 9.9,
-    "ibs": 0.353,
-    "recovery_pct": 35,
+    "drop_close_from_high_pct": 10.3,
+    "ibs": 0.331,
+    "recovery_pct": 33,
     "high_time": "09:07",
     "low_time": "09:39",
     "late_reclaim": true,
     "vwap_reclaim": true,
     "retest_broken": false,
     "close_hold_score": 85,
-    "bars15_count": 14
+    "bars15_count": 15
    },
-   "suspicion_score": 69,
+   "suspicion_score": 70,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 13.7,
-    "fade": 9.7,
+    "spark": 15.0,
+    "fade": 9.5,
     "ma10": 10.0,
     "flow": 4.0,
     "event": 1.6
    },
-   "score_raw": 69,
+   "score_raw": 70,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 13.7,
-    "fade": 9.7,
+    "spark": 15.0,
+    "fade": 9.5,
     "ma10": 10.0,
     "flow": 4,
     "event": 1.6
    },
-   "price": 40800.0,
-   "change_pct": 5.97,
+   "price": 40650.0,
+   "change_pct": 5.58,
    "high_pct": 17.66,
-   "fade_pct": 66.2,
-   "value_eok": 1407,
-   "ma10": 33575.0,
-   "ma10_margin_pct": 21.52,
+   "fade_pct": 68.4,
+   "value_eok": 1422,
+   "ma10": 33560.0,
+   "ma10_margin_pct": 21.13,
    "spark": {
     "clusters": [
      {
       "time": "09:02",
-      "vol_x": 29.9,
-      "pct": 11.95,
-      "minutes": 1
-     },
-     {
-      "time": "09:04",
-      "vol_x": 17.2,
-      "pct": 0.83,
-      "minutes": 4
+      "vol_x": 33.5,
+      "pct": 14.98,
+      "minutes": 6
      },
      {
       "time": "09:11",
-      "vol_x": 12.4,
+      "vol_x": 13.9,
       "pct": -7.59,
       "minutes": 4
      },
      {
       "time": "09:39",
-      "vol_x": 12.6,
+      "vol_x": 14.2,
       "pct": -1.4,
       "minutes": 1
      }
@@ -183,6 +177,102 @@
    }
   },
   {
+   "code": "089030",
+   "name": "테크윙",
+   "sector": "기계·장비",
+   "pattern": "fade",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 65,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 30,
+    "spark": 10.0,
+    "fade": 11.2,
+    "ma10": 10.0,
+    "flow": 4.0,
+    "event": 0.0
+   },
+   "score_raw": 65,
+   "score_breakdown_raw": {
+    "base": 30,
+    "spark": 10.0,
+    "fade": 11.2,
+    "ma10": 10.0,
+    "flow": 4,
+    "event": 0.0
+   },
+   "price": 67000.0,
+   "change_pct": 9.66,
+   "high_pct": 15.38,
+   "fade_pct": 37.2,
+   "value_eok": 3567,
+   "ma10": 55110.0,
+   "ma10_margin_pct": 21.58,
+   "spark": {
+    "clusters": [
+     {
+      "time": "09:07",
+      "vol_x": 24.0,
+      "pct": 4.42,
+      "minutes": 3
+     },
+     {
+      "time": "09:12",
+      "vol_x": 9.3,
+      "pct": -1.73,
+      "minutes": 1
+     },
+     {
+      "time": "09:14",
+      "vol_x": 11.6,
+      "pct": -1.89,
+      "minutes": 1
+     },
+     {
+      "time": "09:45",
+      "vol_x": 8.3,
+      "pct": 1.06,
+      "minutes": 1
+     }
+    ]
+   },
+   "flow": {
+    "net_days": 2,
+    "today_buy": false,
+    "streak": 0,
+    "detail": [
+     {
+      "date": "0608",
+      "frgn": -160375,
+      "orgn": 75711
+     },
+     {
+      "date": "0609",
+      "frgn": 891119,
+      "orgn": 133026
+     },
+     {
+      "date": "0610",
+      "frgn": 164842,
+      "orgn": -11798
+     },
+     {
+      "date": "0611",
+      "frgn": -179984,
+      "orgn": 146731
+     },
+     {
+      "date": "0612",
+      "frgn": 0,
+      "orgn": 0
+     }
+    ]
+   },
+   "news": [],
+   "matched_events": []
+  },
+  {
    "code": "080220",
    "name": "제주반도체",
    "sector": "전기·전자",
@@ -193,45 +283,45 @@
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 6.2,
-    "fade": 11.1,
-    "ma10": 8.4,
+    "spark": 6.8,
+    "fade": 10.0,
+    "ma10": 9.0,
     "flow": 2.0,
     "event": 0.0
    },
    "score_raw": 58,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 6.2,
-    "fade": 11.1,
-    "ma10": 8.4,
+    "spark": 6.8,
+    "fade": 10.0,
+    "ma10": 9.0,
     "flow": 2,
     "event": 0.0
    },
-   "price": 105700.0,
-   "change_pct": 8.97,
+   "price": 106200.0,
+   "change_pct": 9.48,
    "high_pct": 14.23,
-   "fade_pct": 37.0,
-   "value_eok": 2516,
-   "ma10": 99020.0,
-   "ma10_margin_pct": 6.75,
+   "fade_pct": 33.3,
+   "value_eok": 2552,
+   "ma10": 99070.0,
+   "ma10_margin_pct": 7.2,
    "spark": {
     "clusters": [
      {
       "time": "09:06",
-      "vol_x": 15.0,
+      "vol_x": 15.7,
       "pct": 4.29,
       "minutes": 1
      },
      {
       "time": "09:08",
-      "vol_x": 14.4,
+      "vol_x": 15.0,
       "pct": 2.46,
       "minutes": 1
      },
      {
       "time": "09:10",
-      "vol_x": 18.0,
+      "vol_x": 18.8,
       "pct": -1.89,
       "minutes": 3
      }
@@ -279,37 +369,37 @@
    "pattern": "fade",
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 50,
+   "suspicion_score": 51,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 4.3,
+    "spark": 4.9,
     "fade": 2.0,
     "ma10": 10.0,
     "flow": 4.0,
     "event": 0.0
    },
-   "score_raw": 50,
+   "score_raw": 51,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 4.3,
+    "spark": 4.9,
     "fade": 2.0,
     "ma10": 10.0,
     "flow": 4,
     "event": 0.0
    },
-   "price": 236000.0,
-   "change_pct": -3.87,
+   "price": 237000.0,
+   "change_pct": -3.46,
    "high_pct": 15.27,
-   "fade_pct": 125.3,
-   "value_eok": 8836,
-   "ma10": 209790.0,
-   "ma10_margin_pct": 12.49,
+   "fade_pct": 122.7,
+   "value_eok": 9030,
+   "ma10": 209890.0,
+   "ma10_margin_pct": 12.92,
    "spark": {
     "clusters": [
      {
       "time": "09:02",
-      "vol_x": 14.8,
+      "vol_x": 15.9,
       "pct": 3.71,
       "minutes": 1
      }
