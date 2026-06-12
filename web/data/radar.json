@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-12 14:46:01 KST",
+ "generated_at": "2026-06-12 15:01:07 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -32,7 +32,7 @@
    "153000"
   ]
  },
- "universe_count": 24,
+ "universe_count": 27,
  "events": [
   {
    "id": "2026-06-17_FOMC 금리 결정 (",
@@ -48,6 +48,139 @@
   }
  ],
  "suspects": [
+  {
+   "code": "089030",
+   "name": "테크윙",
+   "sector": "기계·장비",
+   "pattern": "fade",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 71,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 30,
+    "spark": 12.2,
+    "fade": 14.8,
+    "ma10": 10.0,
+    "flow": 4.0,
+    "event": 0.0
+   },
+   "score_raw": 71,
+   "score_breakdown_raw": {
+    "base": 30,
+    "spark": 12.2,
+    "fade": 14.8,
+    "ma10": 10.0,
+    "flow": 4,
+    "event": 0.0
+   },
+   "price": 66000.0,
+   "change_pct": 8.02,
+   "high_pct": 16.2,
+   "fade_pct": 50.5,
+   "value_eok": 5403,
+   "ma10": 55010.0,
+   "ma10_margin_pct": 19.98,
+   "spark": {
+    "clusters": [
+     {
+      "time": "09:02",
+      "vol_x": 13.6,
+      "pct": 3.74,
+      "minutes": 2
+     },
+     {
+      "time": "09:07",
+      "vol_x": 27.5,
+      "pct": 4.42,
+      "minutes": 3
+     },
+     {
+      "time": "09:12",
+      "vol_x": 13.3,
+      "pct": -2.6,
+      "minutes": 3
+     },
+     {
+      "time": "09:16",
+      "vol_x": 8.8,
+      "pct": 1.02,
+      "minutes": 1
+     },
+     {
+      "time": "09:45",
+      "vol_x": 9.5,
+      "pct": 1.06,
+      "minutes": 1
+     },
+     {
+      "time": "14:20",
+      "vol_x": 9.9,
+      "pct": 1.33,
+      "minutes": 1
+     },
+     {
+      "time": "14:27",
+      "vol_x": 14.8,
+      "pct": 1.91,
+      "minutes": 1
+     },
+     {
+      "time": "14:32",
+      "vol_x": 10.3,
+      "pct": -1.16,
+      "minutes": 1
+     }
+    ]
+   },
+   "flow": {
+    "net_days": 2,
+    "today_buy": false,
+    "streak": 0,
+    "detail": [
+     {
+      "date": "0608",
+      "frgn": -160375,
+      "orgn": 75711
+     },
+     {
+      "date": "0609",
+      "frgn": 891119,
+      "orgn": 133026
+     },
+     {
+      "date": "0610",
+      "frgn": 164842,
+      "orgn": -11798
+     },
+     {
+      "date": "0611",
+      "frgn": -179984,
+      "orgn": 146731
+     },
+     {
+      "date": "0612",
+      "frgn": 0,
+      "orgn": 0
+     }
+    ]
+   },
+   "news": [],
+   "matched_events": [],
+   "ai_verdict": {
+    "status": "ok",
+    "verdict": "WATCH",
+    "confidence": 55,
+    "reason": "고점 대비 50.5% fade와 장중 급등락 반복은 흔들기 가능성이 있으나, 외국인 2일 연속 순매도 전환(6/11 기준)과 14:32분 막판 음봉 클러스터가 저가 방어 실패 신호로 보임.",
+    "risk_flags": [
+     "외국인 매도 전환",
+     "막판 음봉 클러스터",
+     "뉴스 공백"
+    ],
+    "manual_check": "장마감 전 외국인/기관 수급 방향 확인: 순매도 지속 시 갭하락 리스크",
+    "model": "kimi-k2.6"
+   }
+  },
   {
    "code": "347700",
    "name": "스피어",
@@ -74,66 +207,60 @@
     "flow": 4,
     "event": 1.6
    },
-   "price": 37050.0,
-   "change_pct": -3.77,
+   "price": 36650.0,
+   "change_pct": -4.81,
    "high_pct": 17.66,
-   "fade_pct": 121.3,
-   "value_eok": 1724,
-   "ma10": 33200.0,
-   "ma10_margin_pct": 11.6,
+   "fade_pct": 127.2,
+   "value_eok": 1811,
+   "ma10": 33160.0,
+   "ma10_margin_pct": 10.52,
    "spark": {
     "clusters": [
      {
       "time": "09:02",
-      "vol_x": 47.8,
+      "vol_x": 46.1,
       "pct": 12.95,
       "minutes": 7
      },
      {
       "time": "09:11",
-      "vol_x": 19.8,
+      "vol_x": 19.1,
       "pct": -7.59,
       "minutes": 4
      },
      {
       "time": "09:19",
-      "vol_x": 10.1,
+      "vol_x": 9.7,
       "pct": -4.39,
       "minutes": 2
      },
      {
       "time": "09:30",
-      "vol_x": 10.4,
+      "vol_x": 10.1,
       "pct": -1.98,
       "minutes": 1
      },
      {
       "time": "09:36",
-      "vol_x": 10.1,
+      "vol_x": 9.7,
       "pct": -1.32,
       "minutes": 1
      },
      {
       "time": "09:39",
-      "vol_x": 20.2,
+      "vol_x": 19.5,
       "pct": -1.4,
       "minutes": 1
      },
      {
-      "time": "09:42",
-      "vol_x": 8.3,
-      "pct": 1.28,
-      "minutes": 1
-     },
-     {
       "time": "09:58",
-      "vol_x": 8.5,
+      "vol_x": 8.2,
       "pct": 1.77,
       "minutes": 1
      },
      {
       "time": "14:42",
-      "vol_x": 14.5,
+      "vol_x": 13.9,
       "pct": -1.57,
       "minutes": 1
      }
@@ -193,8 +320,17 @@
     }
    ],
    "ai_verdict": {
-    "status": "unavailable",
-    "error": "invalid Kimi response"
+    "status": "ok",
+    "verdict": "WATCH",
+    "confidence": 55,
+    "reason": "장중 고점 대비 17.66% 급락 후 -4.81% 마감했으나, fade_pct 127.2는 정상 범위를 벗어난 계산 오류로 보이며 실제 저가 방어/회복 패턴이 명확하지 않음; 09:02 초반 급등(12.95%) 후 연속 음봉 클러스터가 흡수보다 분산 매도에 가까움.",
+    "risk_flags": [
+     "fade_pct 비정상(127.2%) 계산값 의심",
+     "외국인 3일 연속 순매도 후 0612 거래중단(0)",
+     "초반 급등 후 지속적 음봉 클러스터"
+    ],
+    "manual_check": "장마감 직전 14:42 이후 분봉에서 저가 추가 붕괴 여부와 최종 체결대금 비중 확인",
+    "model": "kimi-k2.6"
    }
   },
   {
@@ -204,49 +340,49 @@
    "pattern": "fade",
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 62,
+   "suspicion_score": 59,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 9.6,
-    "fade": 14.6,
-    "ma10": 6.2,
+    "spark": 8.2,
+    "fade": 13.5,
+    "ma10": 5.6,
     "flow": 2.0,
     "event": 0.0
    },
-   "score_raw": 62,
+   "score_raw": 59,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 9.6,
-    "fade": 14.6,
-    "ma10": 6.2,
+    "spark": 8.2,
+    "fade": 13.5,
+    "ma10": 5.6,
     "flow": 2,
     "event": 0.0
    },
-   "price": 103700.0,
-   "change_pct": 6.91,
+   "price": 103200.0,
+   "change_pct": 6.39,
    "high_pct": 14.23,
-   "fade_pct": 51.4,
-   "value_eok": 3539,
-   "ma10": 98820.0,
-   "ma10_margin_pct": 4.94,
+   "fade_pct": 55.1,
+   "value_eok": 3723,
+   "ma10": 98770.0,
+   "ma10_margin_pct": 4.49,
    "spark": {
     "clusters": [
      {
       "time": "09:06",
-      "vol_x": 19.4,
+      "vol_x": 17.7,
       "pct": 5.44,
       "minutes": 3
      },
      {
       "time": "09:10",
-      "vol_x": 23.3,
+      "vol_x": 21.2,
       "pct": -1.89,
       "minutes": 3
      },
      {
       "time": "13:39",
-      "vol_x": 10.5,
+      "vol_x": 9.6,
       "pct": 1.29,
       "minutes": 1
      }
@@ -290,13 +426,13 @@
     "status": "ok",
     "verdict": "WATCH",
     "confidence": 55,
-    "reason": "고점 대비 51% 페이드와 외국인 4일 연속 순매도(최근 2일 합 -31만주)가 매도 압력을 시사하나, 종가가 고점 대비 반등하여 MA10 +4.94% 마진 유지 및 거래대금 3,539억으로 과열 흔적이 있어 흡수 가능성도 남아있음.",
+    "reason": "외국인 4일 연속 순매도 중이나 금일 데이터 미확인, 고점 대비 55% fade에도 불구하고 종가가 10이평선 상회 유지, 오전 9시대 거래량 급증 후 소폭 반등 흔적은 있으나 13:39 이후 회복 지속성 및 수급 반전 여부 불명확.",
     "risk_flags": [
-     "외국인 연속 순매도",
-     "고점 대비 51% 페이드",
-     "뉴스/이벤트 공백"
+     "외국인 4일 연속 순매도 누적",
+     "고점 대비 과도한 fade 비율",
+     "금일 수급 데이터 누락"
     ],
-    "manual_check": "장마감 직전 30분 분봉의 거래량 분포와 체결 강도(매도/매수 비율) 확인 — 저가 방어 후 회복형인지 아니면 재하락 시도인지",
+    "manual_check": "장마감 전 외국인/기관 순매수 여부 및 14:30 이후 분봉 추세 방향 확인",
     "model": "kimi-k2.6"
    }
   },
@@ -307,37 +443,37 @@
    "pattern": "fade",
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 52,
+   "suspicion_score": 51,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 5.6,
+    "spark": 5.3,
     "fade": 2.0,
     "ma10": 10.0,
     "flow": 4.0,
     "event": 0.0
    },
-   "score_raw": 52,
+   "score_raw": 51,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 5.6,
+    "spark": 5.3,
     "fade": 2.0,
     "ma10": 10.0,
     "flow": 4,
     "event": 0.0
    },
-   "price": 235500.0,
-   "change_pct": -4.07,
+   "price": 232000.0,
+   "change_pct": -5.5,
    "high_pct": 15.27,
-   "fade_pct": 126.7,
-   "value_eok": 13499,
-   "ma10": 209740.0,
-   "ma10_margin_pct": 12.28,
+   "fade_pct": 136.0,
+   "value_eok": 14076,
+   "ma10": 209390.0,
+   "ma10_margin_pct": 10.8,
    "spark": {
     "clusters": [
      {
       "time": "09:02",
-      "vol_x": 17.0,
+      "vol_x": 16.5,
       "pct": 3.71,
       "minutes": 1
      }
@@ -390,140 +526,13 @@
     "status": "ok",
     "verdict": "WATCH",
     "confidence": 55,
-    "reason": "고점 대비 19.3% 하락 fade이나 단일 1분 스파크(09:02)에 그쳐 흡수 흔적 미미, 외국인 3일 연속 매도 후 기관 대량 매수(6/11)로 수급 엇갈림",
+    "reason": "외국인 3일 연속 대량 순매도 후 기관이 6/11 대량 매수한 흡수 흔적이 있으나, 당일 외국인/기관 수급 미확인(0)에 fade 136%와 고점 대비 -5.5% 하락의 폭이 과도해 실제 매도 붕괴 여부 불명확함.",
     "risk_flags": [
-     "단일 스파크 흡수 부족",
-     "외국인 3일 연속 대량 매도",
-     "고점 대비 19% 급락 후 방어 미확인"
+     "수급 데이터 미완성(0612 외국인/기관 0)",
+     "과도한 fade 136%",
+     "외국인 3일 연속 대량 순매도 후 반전 불확실"
     ],
-    "manual_check": "장중 233,000원 전후 지지선 형성 여부 및 외국인 수급 전환 확인",
-    "model": "kimi-k2.6"
-   }
-  },
-  {
-   "code": "005930",
-   "name": "삼성전자",
-   "sector": "전기·전자",
-   "pattern": "fade",
-   "shake": null,
-   "deep_shake": null,
-   "suspicion_score": 35,
-   "calibrated_prob": null,
-   "score_breakdown": {
-    "base": 30,
-    "spark": 0.9,
-    "fade": 10.1,
-    "ma10": 0.1,
-    "flow": 2.0,
-    "event": 1.6,
-    "ai": -10
-   },
-   "score_raw": 45,
-   "score_breakdown_raw": {
-    "base": 30,
-    "spark": 0.9,
-    "fade": 10.1,
-    "ma10": 0.1,
-    "flow": 2,
-    "event": 1.6
-   },
-   "price": 325500.0,
-   "change_pct": 8.86,
-   "high_pct": 13.38,
-   "fade_pct": 33.8,
-   "value_eok": 80676,
-   "ma10": 325150.0,
-   "ma10_margin_pct": 0.11,
-   "spark": {
-    "clusters": [
-     {
-      "time": "09:11",
-      "vol_x": 9.4,
-      "pct": 0.92,
-      "minutes": 1
-     }
-    ]
-   },
-   "flow": {
-    "net_days": 1,
-    "today_buy": false,
-    "streak": 0,
-    "detail": [
-     {
-      "date": "0608",
-      "frgn": -1174306,
-      "orgn": -3937194
-     },
-     {
-      "date": "0609",
-      "frgn": -1596173,
-      "orgn": 1767022
-     },
-     {
-      "date": "0610",
-      "frgn": -3840270,
-      "orgn": -2851841
-     },
-     {
-      "date": "0611",
-      "frgn": 549645,
-      "orgn": -5437840
-     },
-     {
-      "date": "0612",
-      "frgn": 0,
-      "orgn": 0
-     }
-    ]
-   },
-   "news": [
-    {
-     "title": "레미콘 운송거부에 105개 현장 타설 지연…&quot;지체상금 면책해야&quot;",
-     "summary": "수도권 레미콘 운송거부 사태가 닷새 넘게 이어지면서 건설현장 피해가 확산하고 있다. 레미콘 공급 중단으로 22개 대형 건설사 105개 현장에서 약 10만㎥ 규모의 콘크리트 타설이 지연됐고, 삼성전자(005930) 평택캠퍼스와 SK하이닉스(000660)",
-     "office": "뉴스1",
-     "datetime": "202606121439",
-     "url": "https://n.news.naver.com/mnews/article/421/0009000776",
-     "sentiment": "호재"
-    },
-    {
-     "title": "&quot;이재용 회장 직접 답해달라&quot;…뿔난 개미들, 삼성 사옥 앞 기자회견",
-     "summary": "삼성전자와 SK하이닉스의 '영업이익 연동 성과급 협약'을 둘러싼 논란이 주주단체의 공동 행보로 번졌다. 이들은 이재용 삼성전자 회장이 직접 답변에 나서야 한다며 압박 수위를 높였다. 대한민국주주운동본부와 투자자보호연합회는 12일 서울 서초구...",
-     "office": "한국경제",
-     "datetime": "202606121435",
-     "url": "https://n.news.naver.com/mnews/article/015/0005298107",
-     "sentiment": "호재"
-    },
-    {
-     "title": "시스윈로보틱스, 삼성전자 평택 사업장에 FAB 유지보수 무인화 AMR 공급",
-     "summary": "설비 및 자율이동로봇(AMR) 개발·제조 기업 시스윈로보틱스(대표 유완옥)가 반도체와 화장품 제조 현장에 자율이동로봇 공급을 확대하며 산업 자동화 시장 공략에 나섰다. 시스윈로보틱스는 최근 삼성전자 평택 반도체 사업장에 FAB(Fabrication).",
-     "office": "한국경제",
-     "datetime": "202606121427",
-     "url": "https://n.news.naver.com/mnews/article/015/0005298103",
-     "sentiment": "호재"
-    }
-   ],
-   "matched_events": [
-    {
-     "id": "2026-06-17_FOMC 금리 결정 (",
-     "title": "FOMC 금리 결정 (6월)",
-     "dday": 5,
-     "categories": [
-      "금리"
-     ],
-     "score": 1.6
-    }
-   ],
-   "ai_verdict": {
-    "status": "ok",
-    "verdict": "REJECT",
-    "confidence": 78,
-    "reason": "개인투자자 시위 뉴스와 기관 4일 연속 대량 매도(최근 3일간 -3937억/-2852억/-5438억)가 겹쳐 있고, 외국인 역시 3일 연속 매도 후 소량 매수 전환에 불과해 수급 패턴이 흡수가 아닌 실제 매도 붕괴에 가까움.",
-    "risk_flags": [
-     "기관 대량 연속 매도",
-     "부정적 뉴스(주주 시위)",
-     "FOMC 금리 결정 임박(5일)"
-    ],
-    "manual_check": "장중 개인투자자 시위 관련 추가 뉴스 발표 여부 및 기관 매도세 지속/전환 확인",
+    "manual_check": "장마감 전 외국인/기관 순매수 여부 및 분봉상 저가 회복 시 거래량 동반 여부 확인",
     "model": "kimi-k2.6"
    }
   }
