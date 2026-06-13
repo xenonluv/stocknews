@@ -1,0 +1,120 @@
+{
+ "date": "20260613",
+ "suspects": {
+  "043260": {
+   "name": "성호전자",
+   "sector": "전기·전자",
+   "entry": 46650.0,
+   "score": 0,
+   "breakdown": {
+    "base": 0,
+    "spark": 0,
+    "fade": 0,
+    "ma10": 0,
+    "flow": 0,
+    "event": 0
+   },
+   "change_pct": 2.41,
+   "high_pct": 10.87,
+   "fade_pct": 77.8,
+   "pattern": "reaccum",
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "flow_today_buy": true,
+   "flow_net_days": 3,
+   "deep_shake": null,
+   "ai_verdict": null,
+   "visible_experimental": true,
+   "reaccum_badge": false,
+   "reaccum": {
+    "peak_date": "20260611",
+    "peak_value_eok": 2670,
+    "peak_high_pct": 14.16,
+    "orgn_net_after_peak": 428772
+   },
+   "matched_events": [],
+   "first_seen": "2026-06-13 13:54:44 KST",
+   "evaluated": false,
+   "result": null,
+   "final": true
+  },
+  "058470": {
+   "name": "리노공업",
+   "sector": "전기·전자",
+   "entry": 104500.0,
+   "score": 0,
+   "breakdown": {
+    "base": 0,
+    "spark": 0,
+    "fade": 0,
+    "ma10": 0,
+    "flow": 0,
+    "event": 0
+   },
+   "change_pct": 4.71,
+   "high_pct": 9.72,
+   "fade_pct": 51.5,
+   "pattern": "reaccum",
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "flow_today_buy": true,
+   "flow_net_days": 3,
+   "deep_shake": null,
+   "ai_verdict": null,
+   "visible_experimental": true,
+   "reaccum_badge": false,
+   "reaccum": {
+    "peak_date": "20260609",
+    "peak_value_eok": 1565,
+    "peak_high_pct": 19.27,
+    "orgn_net_after_peak": 514574
+   },
+   "matched_events": [],
+   "first_seen": "2026-06-13 13:54:44 KST",
+   "evaluated": false,
+   "result": null,
+   "final": true
+  },
+  "067310": {
+   "name": "하나마이크론",
+   "sector": "전기·전자",
+   "entry": 48950.0,
+   "score": 0,
+   "breakdown": {
+    "base": 0,
+    "spark": 0,
+    "fade": 0,
+    "ma10": 0,
+    "flow": 0,
+    "event": 0
+   },
+   "change_pct": 2.09,
+   "high_pct": 8.45,
+   "fade_pct": 75.3,
+   "pattern": "reaccum",
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "flow_today_buy": true,
+   "flow_net_days": 4,
+   "deep_shake": null,
+   "ai_verdict": null,
+   "visible_experimental": true,
+   "reaccum_badge": false,
+   "reaccum": {
+    "peak_date": "20260611",
+    "peak_value_eok": 2044,
+    "peak_high_pct": 17.59,
+    "orgn_net_after_peak": 101782
+   },
+   "matched_events": [],
+   "first_seen": "2026-06-13 13:54:44 KST",
+   "evaluated": false,
+   "result": null,
+   "final": true
+  }
+ },
+ "as_of": "2026-06-13 13:54:44 KST"
+}
