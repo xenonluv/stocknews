@@ -88,6 +88,8 @@ export interface ReaccumInfo {
   peak_date: string; // YYYYMMDD
   peak_value_eok: number;
   peak_high_pct: number;
+  ma20?: number;
+  ma20_margin_pct?: number;
   orgn_net_after_peak: number;
 }
 

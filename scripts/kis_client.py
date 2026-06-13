@@ -203,6 +203,7 @@ def price_now(code):
     change_pct = _f(o.get("prdy_ctrt"))
     prev_close = price - _f(o.get("prdy_vrss"))  # 전일대비로 정확 역산
     return {"code": code,
+            "date": (o.get("stck_bsop_date") or "").strip(),
             "price": price,
             "high": _f(o.get("stck_hgpr")),
             "low": _f(o.get("stck_lwpr")),

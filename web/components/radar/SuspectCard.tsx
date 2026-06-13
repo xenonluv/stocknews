@@ -51,6 +51,14 @@ function peakDaysAgo(yyyymmdd?: string) {
  */
 export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string }) {
   const change = fmtChange(s.change_pct);
+  const highChange = fmtChange(s.high_pct);
+  const trendMargin = fmtChange(
+    s.pattern === "reaccum" && s.reaccum?.ma20_margin_pct != null
+      ? s.reaccum.ma20_margin_pct
+      : s.ma10_margin_pct
+  );
+  const trendLabel =
+    s.pattern === "reaccum" && s.reaccum?.ma20_margin_pct != null ? "20일선 위" : "10일선 위";
   const strong = s.suspicion_score >= 75;
   // 페이드 바: 0% = 전일종가, 100% = 당일 고가. 현재 위치 = 100 - fade_pct.
   const curPos = Math.max(0, Math.min(100, 100 - s.fade_pct));
@@ -150,7 +158,7 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
               <div className="mb-1 flex items-center justify-between text-[11px] text-muted-foreground">
                 <span className="flex items-center gap-1">
                   <TrendingDown className="size-3" aria-hidden />
-                  고가 <span className="font-semibold text-up tabular-nums">+{s.high_pct.toFixed(1)}%</span>
+                  고가 <span className={`font-semibold tabular-nums ${highChange.cls}`}>{highChange.text}</span>
                   {" → "}현재 후퇴 <span className="tabular-nums">{s.fade_pct.toFixed(0)}%</span>
                 </span>
               </div>
@@ -197,7 +205,7 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
               </p>
             )}
             <p className="text-[11px] text-muted-foreground">
-              10일선 위 <span className="text-foreground/90 tabular-nums">+{s.ma10_margin_pct.toFixed(1)}%</span>
+              {trendLabel} <span className={`tabular-nums ${trendMargin.cls}`}>{trendMargin.text}</span>
               {" · "}외인·기관 순매수 <span className="text-foreground/90 tabular-nums">{flowBuyDays}/5일</span>
               {s.flow.streak >= 2 && (
                 <span className="text-up"> ({s.flow.streak}일 연속)</span>

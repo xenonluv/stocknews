@@ -346,6 +346,18 @@ def _recent_active_explosions(reg, window):
     return latest
 
 
+def _snapshot_trade_date(code, now):
+    trade_date = (now.get("date") or "").strip()
+    if trade_date:
+        return trade_date
+    try:
+        daily = kis.daily_prices(code, days=1)
+    except Exception as e:
+        log(f"[warn] 스냅샷 영업일 확인 실패 {code}: {e}")
+        return ""
+    return (daily[-1].get("date") if daily else "") or ""
+
+
 def _load_seed_items(path):
     """data/reaccum_seed.json을 유연하게 읽는다: list 또는 {names,codes,items} 허용."""
     if not path or not os.path.exists(path):
@@ -435,11 +447,17 @@ def bootstrap_seed_explosions(reg, p):
 def update_live_explosions(reg, p):
     """시장별 거래대금 상위권에서 당일 1천억+13% 폭발을 감시해 registry에 적재."""
     rows = []
+    seen_codes = set()
     for market in ("KOSPI", "KOSDAQ"):
-        rows.extend(kis.value_rank(market, p.explosion_rank_n))
-    if rows and datetime.now(KST).weekday() < 5:
-        _merge_trading_days(reg, [_today_yyyymmdd()])
+        for row in kis.value_rank(market, p.explosion_rank_n):
+            code = row.get("code")
+            if not code or code in seen_codes:
+                continue
+            seen_codes.add(code)
+            rows.append(row)
     count = 0
+    live_dates = set()
+    today = _today_yyyymmdd()
     for row in rows:
         rank_value_won = float(row.get("value_mn") or 0) * 1e6
         if rank_value_won < p.explosion_value:
@@ -448,6 +466,9 @@ def update_live_explosions(reg, p):
             now = kis.price_now(row["code"])
         except Exception as e:
             log(f"[warn] 폭발 현재가 조회 실패 {row.get('name')}: {e}")
+            continue
+        trade_date = _snapshot_trade_date(row["code"], now)
+        if trade_date != today:
             continue
         if not now.get("high") or not now.get("prev_close"):
             continue
@@ -458,13 +479,15 @@ def update_live_explosions(reg, p):
         _upsert_explosion(reg, {
             "code": row["code"],
             "name": row["name"],
-            "peak_date": _today_yyyymmdd(),
+            "peak_date": trade_date,
             "peak_value_eok": round(value_won / 1e8),
             "peak_high_pct": round(high_pct, 2),
             "peak_change_pct": round(float(now.get("change_pct") or 0), 2),
             "source": "live",
         })
+        live_dates.add(trade_date)
         count += 1
+    _merge_trading_days(reg, live_dates)
     return count
 
 
@@ -491,8 +514,7 @@ def scan_reaccum_candidate(rec, p):
     """폭발 이후 식은 구간에서 기관 순매수+MA20 생존 재매집 후보를 만든다."""
     code, name = rec["code"], rec.get("name") or rec["code"]
     peak_date = rec.get("peak_date")
-    signal_date = _today_yyyymmdd()
-    if not peak_date or signal_date <= peak_date:
+    if not peak_date:
         return None
     try:
         now = kis.price_now(code)
@@ -510,6 +532,9 @@ def scan_reaccum_candidate(rec, p):
         return "ERR"
     closes = [d["close"] for d in daily if d.get("close")]
     if len(closes) < 20:
+        return None
+    signal_date = (now.get("date") or (daily[-1].get("date") if daily else "") or "").strip()
+    if signal_date != _today_yyyymmdd() or signal_date <= peak_date:
         return None
     ma20 = sum(closes[-20:]) / 20
     ma10 = sum(closes[-10:]) / 10
@@ -529,6 +554,7 @@ def scan_reaccum_candidate(rec, p):
     denom = now["high"] - now["prev_close"] if now.get("high") else 0.0
     fade_pct = (now["high"] - now["price"]) / denom * 100 if denom > 0 else 0.0
     ma10_margin = (now["price"] / ma10 - 1) * 100 if ma10 else 0.0
+    ma20_margin = (now["price"] / ma20 - 1) * 100 if ma20 else 0.0
     empty_breakdown = {"base": REACCUM_SCORE, "spark": 0, "fade": 0,
                        "ma10": 0, "flow": 0, "event": 0}
     raw_breakdown = {k: 0 for k in empty_breakdown}
@@ -563,6 +589,8 @@ def scan_reaccum_candidate(rec, p):
             "peak_date": peak_date,
             "peak_value_eok": int(float(rec.get("peak_value_eok") or 0)),
             "peak_high_pct": round(float(rec.get("peak_high_pct") or 0), 2),
+            "ma20": round(ma20, 1),
+            "ma20_margin_pct": round(ma20_margin, 2),
             "orgn_net_after_peak": int(orgn_net_after_peak),
         },
     }
