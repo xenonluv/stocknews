@@ -170,26 +170,42 @@ def _f(v):
 
 
 def daily_prices(code, days=30):
-    """일봉 최근 days개 (오름차순). value=거래대금(원)."""
-    end = datetime.now().strftime("%Y%m%d")
+    """일봉 최근 days개 (오름차순). value=거래대금(원).
+
+    ⚠ FHKST03010100은 1콜 최대 ~100봉(KIS 한도)만 반환 → days>100이면 조회종료일(end)을
+    가장 오래된 봉 직전으로 당겨가며 페이징해 합친다. days<=100이면 1콜(기존과 동일).
+    """
     start = (datetime.now() - timedelta(days=days * 2 + 10)).strftime("%Y%m%d")
-    res = _call("/uapi/domestic-stock/v1/quotations/inquire-daily-itemchartprice",
-                "FHKST03010100",
-                {"FID_COND_MRKT_DIV_CODE": "J", "FID_INPUT_ISCD": code,
-                 "FID_INPUT_DATE_1": start, "FID_INPUT_DATE_2": end,
-                 "FID_PERIOD_DIV_CODE": "D", "FID_ORG_ADJ_PRC": "0"})
-    out = []
-    for row in res.get("output2", []):
-        if not row.get("stck_bsop_date"):
-            continue
-        out.append({"date": row["stck_bsop_date"],
-                    "open": _f(row.get("stck_oprc")),
-                    "high": _f(row.get("stck_hgpr")),
-                    "low": _f(row.get("stck_lwpr")),
-                    "close": _f(row.get("stck_clpr")),
-                    "volume": _f(row.get("acml_vol")),
-                    "value": _f(row.get("acml_tr_pbmn"))})
-    out.sort(key=lambda x: x["date"])
+    acc = {}                                   # date -> bar (중복 방지)
+    cur_end = datetime.now().strftime("%Y%m%d")
+    max_pages = (days + 99) // 100 + 2 if days > 100 else 1  # 여유 페이지
+    for _ in range(max_pages):
+        res = _call("/uapi/domestic-stock/v1/quotations/inquire-daily-itemchartprice",
+                    "FHKST03010100",
+                    {"FID_COND_MRKT_DIV_CODE": "J", "FID_INPUT_ISCD": code,
+                     "FID_INPUT_DATE_1": start, "FID_INPUT_DATE_2": cur_end,
+                     "FID_PERIOD_DIV_CODE": "D", "FID_ORG_ADJ_PRC": "0"})
+        added = 0
+        for row in res.get("output2", []):
+            d = row.get("stck_bsop_date")
+            if not d or d in acc:
+                continue
+            acc[d] = {"date": d,
+                      "open": _f(row.get("stck_oprc")),
+                      "high": _f(row.get("stck_hgpr")),
+                      "low": _f(row.get("stck_lwpr")),
+                      "close": _f(row.get("stck_clpr")),
+                      "volume": _f(row.get("acml_vol")),
+                      "value": _f(row.get("acml_tr_pbmn"))}
+            added += 1
+        if added == 0:                         # 더 줄 게 없음
+            break
+        oldest = min(acc)
+        if oldest <= start or len(acc) >= days:  # 범위 끝 도달 / 충분
+            break
+        cur_end = (datetime.strptime(oldest, "%Y%m%d") - timedelta(days=1)).strftime("%Y%m%d")
+        time.sleep(MIN_GAP)
+    out = sorted(acc.values(), key=lambda x: x["date"])
     return out[-days:]
 
 
