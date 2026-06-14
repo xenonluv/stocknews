@@ -446,23 +446,39 @@ def bootstrap_seed_explosions(reg, p):
 
 
 def update_live_explosions(reg, p):
-    """시장별 거래대금 상위권에서 당일 1천억+13% 폭발을 감시해 registry에 적재."""
+    """당일 1천억+13% 폭발을 감시해 registry에 적재.
+
+    유니버스 = 시장별 거래대금 순위 ∪ 등락률(네이버 up) 순위 — 메인 fade 유니버스
+    (build_universe_rank)와 동일 소스. 거래대금 순위만 보면 등락률로만 잡힌 종목이
+    누락돼 6일 재매집 윈도에서 사라지므로 합집합으로 본다. 1천억 게이트는 사전필터 없이
+    KIS price_now 실거래대금(권위)으로 판정 — scan_one 거래대금 하한과 동일 철학. price_now
+    value가 0/결측인 일시 글리치일 때만 랭킹값으로 폴백해 확정 폭발 누락을 막고, 비-KIS(네이버)
+    랭킹값이 정상 경로에서 1천억 하한을 단독 충족해 sub-1천억을 오기록하지 않게 한다.
+    """
     rows = []
     seen_codes = set()
+
+    def _add(row):
+        code = row.get("code")
+        if not code or code in seen_codes:
+            return
+        seen_codes.add(code)
+        rows.append(row)
+
     for market in ("KOSPI", "KOSDAQ"):
-        for row in kis.value_rank(market, p.explosion_rank_n):
-            code = row.get("code")
-            if not code or code in seen_codes:
-                continue
-            seen_codes.add(code)
-            rows.append(row)
+        for row in kis.value_rank(market, p.explosion_rank_n):       # 거래대금 순위
+            _add(row)
+        try:                                                         # 등락률 순위(네이버 up) 합집합
+            up_rows, _ = _rank_page("up", market, 1)
+            for row in up_rows[:p.explosion_rank_n]:
+                _add(row)
+        except Exception as e:                                       # 네이버 실패 시 거래대금만으로 계속
+            log(f"[warn] {market} 등락률 랭킹 폭발 감시 실패(거래대금만 사용): {e}")
     count = 0
     live_dates = set()
     today = _today_yyyymmdd()
     for row in rows:
         rank_value_won = float(row.get("value_mn") or 0) * 1e6
-        if rank_value_won < p.explosion_value:
-            continue
         try:
             now = kis.price_now(row["code"])
         except Exception as e:
@@ -476,7 +492,13 @@ def update_live_explosions(reg, p):
         high_pct = (now["high"] / now["prev_close"] - 1) * 100
         if high_pct < p.explosion_high_pct:
             continue
-        value_won = max(rank_value_won, float(now.get("value") or 0))
+        # 1천억 게이트: KIS price_now 실거래대금(권위)으로 판정 — scan_one 거래대금 하한과 동일 철학.
+        # price_now value가 0/결측인 일시 글리치일 때만 랭킹값으로 폴백해 확정 폭발 누락을 막고,
+        # 비-KIS(네이버) 랭킹값이 정상 경로에서 1천억 하한을 단독 충족해 sub-1천억을 오기록하지 않게 한다.
+        now_value = float(now.get("value") or 0)
+        value_won = now_value if now_value > 0 else rank_value_won
+        if value_won < p.explosion_value:
+            continue
         _upsert_explosion(reg, {
             "code": row["code"],
             "name": row["name"],
@@ -900,11 +922,18 @@ def apply_kimi_verification(suspects, mode="auto", max_items=5, timeout=60,
             s["ai_verdict"] = {"status": "unavailable", "error": str(e)[:120]}
 
 
+_RANK_CACHE = {}  # per-run 캐시: (direction,market,page)→(rows,total). radar는 1회성 프로세스라 stale 무관.
+                  # build_universe_rank와 update_live_explosions가 같은 (up,market,1)을 공유 → 중복 네이버 호출 제거.
+
+
 def _rank_page(direction, market, page):
+    ckey = (direction, market, page)
+    if ckey in _RANK_CACHE:
+        return _RANK_CACHE[ckey]
     url = (f"https://m.stock.naver.com/api/stocks/{direction}/{market}"
            f"?page={page}&pageSize=100")
     d = json.loads(get_bytes(url, UA))
-    if "stocks" not in d:  # 응답 스키마 변화 — 조용한 빈 결과 대신 명시 실패
+    if "stocks" not in d:  # 응답 스키마 변화 — 조용한 빈 결과 대신 명시 실패 (실패는 캐시 안 함)
         raise RuntimeError(f"네이버 랭킹 응답에 stocks 없음: {direction}/{market}")
     rows = []
     for s in d.get("stocks", []):
@@ -917,7 +946,9 @@ def _rank_page(direction, market, page):
         except ValueError:
             continue
         rows.append({"name": name, "code": code, "change_pct": rate, "value_mn": value_mn})
-    return rows, int(d.get("totalCount") or 0)
+    result = (rows, int(d.get("totalCount") or 0))
+    _RANK_CACHE[ckey] = result
+    return result
 
 
 def build_universe_naver(chg_min, chg_max, min_value_mn):
