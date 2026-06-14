@@ -32,7 +32,7 @@ from net import get_bytes
 from team1_collect import resolve_code, fetch_news, is_individual_stock, UA
 from team2_relevance import score_news, make_aliases
 from event_calendar import upcoming_events
-from theme_map import match_events, match_sensitivity
+from theme_map import match_events, match_sensitivity, THEMES
 import kis_client as kis
 import kimi_client
 
@@ -774,12 +774,15 @@ def suspicion_score(spark_clusters, fade_pct, ma10_margin_pct, acc, event_score=
 # ---------- 메인 깔때기 ----------
 
 def derive_theme(titles, sector=""):
-    """뉴스 제목들+업종 → 상위 테마 1개(없으면 ""). match_sensitivity 단일 소스
-    (결정론: hit 최다, 동률은 카테고리명 내림차순). fade·reaccum·폭발 세 경로 공용 → 테마 파생 일관."""
+    """뉴스 제목들+업종 → 상위 테마 1개(없으면 ""). match_sensitivity 단일 소스.
+    결정론: hit 최다 → 동률이면 THEMES 선언 순서(우선순위) 앞선 테마. 예: 업종 '전기·전자'가
+    SECTOR_HINTS상 반도체·환율 둘 다 매칭(각 hit=1)이면 먼저 선언된 반도체를 택한다(환율 오선택 방지).
+    뉴스가 테마에 기여하면 그 count가 더 커 자연히 우선됨. fade·reaccum·폭발 세 경로 공용."""
     hits = match_sensitivity(titles, sector)
     if not hits:
         return ""
-    return max(hits, key=lambda c: (hits[c], c))
+    order = list(THEMES)  # 선언 순서 = 우선순위
+    return max(hits, key=lambda c: (hits[c], -order.index(c)))
 
 
 def _explain_cause(code, name, sector=""):

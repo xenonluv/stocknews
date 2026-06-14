@@ -135,7 +135,8 @@
     "peak_value_eok": 2670,
     "peak_high_pct": 14.16,
     "orgn_net_after_peak": 428772
-   }
+   },
+   "theme": "반도체"
   },
   {
    "code": "058470",
@@ -216,7 +217,8 @@
     "peak_value_eok": 1565,
     "peak_high_pct": 19.27,
     "orgn_net_after_peak": 514574
-   }
+   },
+   "theme": "반도체"
   },
   {
    "code": "067310",
@@ -297,7 +299,8 @@
     "peak_value_eok": 2044,
     "peak_high_pct": 17.59,
     "orgn_net_after_peak": 101782
-   }
+   },
+   "theme": "반도체"
   }
  ]
 }
