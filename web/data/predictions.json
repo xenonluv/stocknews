@@ -1,16 +1,16 @@
 {
-  "as_of": "2026-06-15 10:22 KST",
+  "as_of": "2026-06-15 10:37 KST",
   "intraday_rank": [
     {
       "ticker": "대한항공",
       "code": "003490",
-      "tomorrow_up_prob": "83%",
-      "entry": 30700.0,
-      "target": 32235,
-      "stop": 29779,
+      "tomorrow_up_prob": "84%",
+      "entry": 30150.0,
+      "target": 31658,
+      "stop": 29246,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.86)",
+        "강세마감(0.71)",
         "정배열",
         "MACD강세"
       ],
@@ -33,70 +33,66 @@
       "ticker": "NAVER",
       "code": "035420",
       "tomorrow_up_prob": "81%",
-      "entry": 249500.0,
-      "target": 261975,
-      "stop": 242015,
+      "entry": 250000.0,
+      "target": 262500,
+      "stop": 242500,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI55.9 강세"
+        "RSI56.0 강세"
       ],
       "risk": "약한 마감",
-      "day_change": 1.52,
-      "cause_news": [
+      "day_change": 1.01,
+      "related_news": [
         {
-          "title": "NAVER(네이버) 주가 주말 앞두고 강세 마감…장중 26만원 돌파, 주말 중...",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=581659",
-          "office": "cbci",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+          "title": "한국 맞춤 가전 겨냥 '쿡테크', 네이버 브랜드 위크 개최… 최대 50% 할...",
+          "url": "https://n.news.naver.com/mnews/article/030/0003437501",
+          "office": "전자신문",
+          "sentiment": "호재"
         }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "NAVER(네이버) 주가 주말 앞두고 강세 마감…장중 26만원 돌파, 주말 중..."
+      ]
     },
     {
-      "ticker": "삼화콘덴서",
-      "code": "001820",
-      "tomorrow_up_prob": "73%",
-      "entry": 143700.0,
-      "target": 150885,
-      "stop": 139389,
+      "ticker": "삼성물산",
+      "code": "028260",
+      "tomorrow_up_prob": "79%",
+      "entry": 489000.0,
+      "target": 513450,
+      "stop": 474330,
       "confidence": "상",
       "reasons": [
+        "강세마감(0.84)",
         "정배열",
-        "MACD강세",
-        "RSI65.9 강세"
+        "RSI61.0 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
         {
-          "title": "단순 전자부품 넘어 전력 인프라로…삼화콘덴서, 고부가 가치 중심 성장...",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=460089",
-          "office": "pinpointnews",
+          "title": "삼전 5%대 뛰자 삼성물산·삼성생명 달린다… 장 초반 12%·8% ↑",
+          "url": "https://www.mt.co.kr/stock/2026/06/15/2026061509233171313",
+          "office": "mt",
           "sentiment": "호재",
           "cause_score": 5,
           "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "중간",
-      "cause_summary": "단순 전자부품 넘어 전력 인프라로…삼화콘덴서, 고부가 가치 중심 성장..."
+      "cause_summary": "삼전 5%대 뛰자 삼성물산·삼성생명 달린다… 장 초반 12%·8% ↑"
     },
     {
       "ticker": "한온시스템",
       "code": "018880",
-      "tomorrow_up_prob": "72%",
-      "entry": 5640.0,
-      "target": 5922,
-      "stop": 5471,
+      "tomorrow_up_prob": "73%",
+      "entry": 5560.0,
+      "target": 5838,
+      "stop": 5393,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.8)",
-        "RSI61.6 강세",
-        "거래량1.56배"
+        "강세마감(0.71)",
+        "RSI60.8 강세",
+        "거래량1.66배"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -132,15 +128,15 @@
     {
       "ticker": "LG이노텍",
       "code": "011070",
-      "tomorrow_up_prob": "71%",
-      "entry": 1173000.0,
-      "target": 1231650,
-      "stop": 1137810,
+      "tomorrow_up_prob": "72%",
+      "entry": 1188000.0,
+      "target": 1247400,
+      "stop": 1152360,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.8)",
+        "강세마감(0.84)",
         "정배열",
-        "RSI61.1 강세"
+        "RSI61.7 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -162,9 +158,9 @@
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[특징주] 삼성전기·LG이노텍, AI 기판 기대에 10%대 강세",
-          "url": "https://www.newspim.com/news/view/20260615000236",
-          "office": "newspim",
+          "title": "[특징주]AI 각광에 기판 기대주 삼성전기·LG이노텍도 강세",
+          "url": "https://www.namdonews.com/news/articleView.html?idxno=913538",
+          "office": "namdonews",
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
@@ -174,63 +170,19 @@
       "cause_summary": "증권가 \"AI 반도체 기판 사업 수혜\"…LG이노텍 10%↑[특징주]"
     },
     {
-      "ticker": "삼성전기",
-      "code": "009150",
-      "tomorrow_up_prob": "66%",
-      "entry": 1922000.0,
-      "target": 2018100,
-      "stop": 1864340,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "RSI65.1 강세",
-        "일목 구름위"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] 삼성전기, AI용 실리콘 커패시터 양산 소식에 '급등'",
-          "url": "https://www.cstimes.com/news/articleView.html?idxno=709684",
-          "office": "cstimes",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] 삼성전기, ‘실리콘 커패시터+실적 전망’에 장 초반 12%대 급...",
-          "url": "https://www.etoday.co.kr/news/view/2593568",
-          "office": "etoday",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] 제2의 반도체 대장주?.. 삼성전기·LG이노텍 기판주 '급등'",
-          "url": "https://www.g-enews.com/view.php?ud=20260615094621603844093b5d4e_1",
-          "office": "g-enews",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 삼성전기, AI용 실리콘 커패시터 양산 소식에 '급등'"
-    },
-    {
       "ticker": "테크윙",
       "code": "089030",
-      "tomorrow_up_prob": "62%",
-      "entry": 68300.0,
-      "target": 71715,
-      "stop": 66251,
+      "tomorrow_up_prob": "67%",
+      "entry": 69700.0,
+      "target": 73185,
+      "stop": 67609,
       "confidence": "중",
       "reasons": [
         "MACD강세",
-        "RSI65.4 강세",
+        "RSI66.5 강세",
         "일목 구름위"
       ],
-      "risk": "약한 마감",
+      "risk": "특이 위험 낮음",
       "day_change": 5.82,
       "cause_news": [
         {
@@ -246,45 +198,77 @@
       "cause_summary": "6월 2주차 테크윙 주가 5거래일 32% 급등 6만5천원대 마감"
     },
     {
-      "ticker": "주성엔지니어링",
-      "code": "036930",
-      "tomorrow_up_prob": "62%",
-      "entry": 226500.0,
-      "target": 237825,
-      "stop": 219705,
+      "ticker": "삼성전기",
+      "code": "009150",
+      "tomorrow_up_prob": "67%",
+      "entry": 1920000.0,
+      "target": 2016000,
+      "stop": 1862400,
       "confidence": "중",
       "reasons": [
         "정배열",
-        "RSI58.6 강세",
+        "RSI65.0 강세",
+        "일목 구름위"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[특징주]AI 각광에 기판 기대주 삼성전기·LG이노텍도 강세",
+          "url": "https://www.namdonews.com/news/articleView.html?idxno=913538",
+          "office": "namdonews",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] 삼성전기, AI 부품 기대에 12%대 강세…실리콘 커패시터·MLCC ...",
+          "url": "https://www.tokenpost.kr/news/economy/369320",
+          "office": "tokenpost",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "삼성전기 등 기판주, 미·이란 종전. AI 신사업 호재에 동반 강세[특징주...",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026061510030287113",
+          "office": "newsway",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주]AI 각광에 기판 기대주 삼성전기·LG이노텍도 강세"
+    },
+    {
+      "ticker": "주성엔지니어링",
+      "code": "036930",
+      "tomorrow_up_prob": "63%",
+      "entry": 227000.0,
+      "target": 238350,
+      "stop": 220190,
+      "confidence": "중",
+      "reasons": [
+        "정배열",
+        "RSI58.8 강세",
         "일목 구름위"
       ],
       "risk": "약한 마감",
-      "day_change": -1.08,
-      "cause_news": [
-        {
-          "title": "주성엔지니어링 주가, 6월 15일 장중 231,500원 0.22% 상승",
-          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16094077",
-          "office": "topstarnews",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "주성엔지니어링 주가, 6월 15일 장중 231,500원 0.22% 상승"
+      "day_change": -0.87
     },
     {
       "ticker": "LS ELECTRIC",
       "code": "010120",
-      "tomorrow_up_prob": "61%",
-      "entry": 252750.0,
-      "target": 265388,
-      "stop": 245168,
+      "tomorrow_up_prob": "62%",
+      "entry": 256000.0,
+      "target": 268800,
+      "stop": 248320,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.7)",
-        "RSI53.1 강세",
-        "장중 6회 지속"
+        "강세마감(0.84)",
+        "RSI53.9 강세",
+        "장중 7회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null
@@ -292,26 +276,26 @@
     {
       "ticker": "한미반도체",
       "code": "042700",
-      "tomorrow_up_prob": "58%",
-      "entry": 359500.0,
-      "target": 377475,
-      "stop": 348715,
-      "confidence": "중",
+      "tomorrow_up_prob": "54%",
+      "entry": 354500.0,
+      "target": 372225,
+      "stop": 343865,
+      "confidence": "하",
       "reasons": [
-        "RSI58.7 강세",
+        "RSI57.7 강세",
         "호재",
-        "장중 3회 지속"
+        "장중 4회 지속"
       ],
-      "risk": "특이 위험 낮음",
-      "day_change": -0.42,
+      "risk": "약한 마감",
+      "day_change": -1.52,
       "cause_news": [
         {
           "title": "[기업이슈] 한미반도체, 스페이스X 전략적 투자한다…주가 급등",
           "url": "https://biz.sbs.co.kr/article_hub/20000316473?division=NAVER",
           "office": "biz",
           "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
           "title": "[특징주] 한미반도체, 스페이스X에 500억원 투자… 주가 급등",
@@ -324,54 +308,19 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "[기업이슈] 한미반도체, 스페이스X 전략적 투자한다…주가 급등"
-    },
-    {
-      "ticker": "한화솔루션",
-      "code": "009830",
-      "tomorrow_up_prob": "40%",
-      "entry": 39300.0,
-      "target": 41265,
-      "stop": 38121,
-      "confidence": "하",
-      "reasons": [
-        "RSI52.1 강세",
-        "장중 5회 지속"
-      ],
-      "risk": "악재",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "미국 태양광 제조업 부활…한화솔루션·OCI홀딩스 재평가 기대",
-          "url": "https://www.asiatoday.co.kr/kn/view.php?key=20260612010004360",
-          "office": "asiatoday",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 오래됨"
-        },
-        {
-          "title": "[특징주] 한화솔루션, 美 태양광 232조 기대에 강세…6~7월 정책·공급계...",
-          "url": "https://www.tokenpost.kr/news/economy/367709",
-          "office": "tokenpost",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "미국 태양광 제조업 부활…한화솔루션·OCI홀딩스 재평가 기대"
     }
   ],
   "closing_bet": [
     {
       "ticker": "대한항공",
       "code": "003490",
-      "tomorrow_up_prob": "83%",
-      "entry": 30700.0,
-      "target": 32235,
-      "stop": 29779,
+      "tomorrow_up_prob": "84%",
+      "entry": 30150.0,
+      "target": 31658,
+      "stop": 29246,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.86)",
+        "강세마감(0.71)",
         "정배열",
         "MACD강세"
       ],
@@ -394,70 +343,66 @@
       "ticker": "NAVER",
       "code": "035420",
       "tomorrow_up_prob": "81%",
-      "entry": 249500.0,
-      "target": 261975,
-      "stop": 242015,
+      "entry": 250000.0,
+      "target": 262500,
+      "stop": 242500,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI55.9 강세"
+        "RSI56.0 강세"
       ],
       "risk": "약한 마감",
-      "day_change": 1.52,
-      "cause_news": [
+      "day_change": 1.01,
+      "related_news": [
         {
-          "title": "NAVER(네이버) 주가 주말 앞두고 강세 마감…장중 26만원 돌파, 주말 중...",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=581659",
-          "office": "cbci",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+          "title": "한국 맞춤 가전 겨냥 '쿡테크', 네이버 브랜드 위크 개최… 최대 50% 할...",
+          "url": "https://n.news.naver.com/mnews/article/030/0003437501",
+          "office": "전자신문",
+          "sentiment": "호재"
         }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "NAVER(네이버) 주가 주말 앞두고 강세 마감…장중 26만원 돌파, 주말 중..."
+      ]
     },
     {
-      "ticker": "삼화콘덴서",
-      "code": "001820",
-      "tomorrow_up_prob": "73%",
-      "entry": 143700.0,
-      "target": 150885,
-      "stop": 139389,
+      "ticker": "삼성물산",
+      "code": "028260",
+      "tomorrow_up_prob": "79%",
+      "entry": 489000.0,
+      "target": 513450,
+      "stop": 474330,
       "confidence": "상",
       "reasons": [
+        "강세마감(0.84)",
         "정배열",
-        "MACD강세",
-        "RSI65.9 강세"
+        "RSI61.0 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
         {
-          "title": "단순 전자부품 넘어 전력 인프라로…삼화콘덴서, 고부가 가치 중심 성장...",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=460089",
-          "office": "pinpointnews",
+          "title": "삼전 5%대 뛰자 삼성물산·삼성생명 달린다… 장 초반 12%·8% ↑",
+          "url": "https://www.mt.co.kr/stock/2026/06/15/2026061509233171313",
+          "office": "mt",
           "sentiment": "호재",
           "cause_score": 5,
           "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "중간",
-      "cause_summary": "단순 전자부품 넘어 전력 인프라로…삼화콘덴서, 고부가 가치 중심 성장..."
+      "cause_summary": "삼전 5%대 뛰자 삼성물산·삼성생명 달린다… 장 초반 12%·8% ↑"
     },
     {
       "ticker": "한온시스템",
       "code": "018880",
-      "tomorrow_up_prob": "72%",
-      "entry": 5640.0,
-      "target": 5922,
-      "stop": 5471,
+      "tomorrow_up_prob": "73%",
+      "entry": 5560.0,
+      "target": 5838,
+      "stop": 5393,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.8)",
-        "RSI61.6 강세",
-        "거래량1.56배"
+        "강세마감(0.71)",
+        "RSI60.8 강세",
+        "거래량1.66배"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -493,15 +438,15 @@
     {
       "ticker": "LG이노텍",
       "code": "011070",
-      "tomorrow_up_prob": "71%",
-      "entry": 1173000.0,
-      "target": 1231650,
-      "stop": 1137810,
+      "tomorrow_up_prob": "72%",
+      "entry": 1188000.0,
+      "target": 1247400,
+      "stop": 1152360,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.8)",
+        "강세마감(0.84)",
         "정배열",
-        "RSI61.1 강세"
+        "RSI61.7 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -523,9 +468,9 @@
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[특징주] 삼성전기·LG이노텍, AI 기판 기대에 10%대 강세",
-          "url": "https://www.newspim.com/news/view/20260615000236",
-          "office": "newspim",
+          "title": "[특징주]AI 각광에 기판 기대주 삼성전기·LG이노텍도 강세",
+          "url": "https://www.namdonews.com/news/articleView.html?idxno=913538",
+          "office": "namdonews",
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
