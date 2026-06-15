@@ -1,21 +1,21 @@
 {
-  "as_of": "2026-06-15 14:37 KST",
+  "as_of": "2026-06-15 14:52 KST",
   "intraday_rank": [
     {
       "ticker": "NAVER",
       "code": "035420",
       "tomorrow_up_prob": "82%",
-      "entry": 248500.0,
-      "target": 260925,
-      "stop": 241045,
+      "entry": 247000.0,
+      "target": 259350,
+      "stop": 239590,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI55.6 강세"
+        "RSI55.2 강세"
       ],
       "risk": "약한 마감",
-      "day_change": 1.01,
+      "day_change": 0.4,
       "related_news": [
         {
           "title": "샘 올트먼, 방한 연기…AI 협력 기대감에도 네이버는?",
@@ -29,14 +29,14 @@
       "ticker": "삼성물산",
       "code": "028260",
       "tomorrow_up_prob": "81%",
-      "entry": 498500.0,
-      "target": 523425,
-      "stop": 483545,
+      "entry": 497500.0,
+      "target": 522375,
+      "stop": 482575,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.78)",
+        "강세마감(0.76)",
         "정배열",
-        "RSI62.0 강세"
+        "RSI61.9 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -57,14 +57,14 @@
       "ticker": "LG이노텍",
       "code": "011070",
       "tomorrow_up_prob": "77%",
-      "entry": 1202000.0,
-      "target": 1262100,
-      "stop": 1165940,
+      "entry": 1205000.0,
+      "target": 1265250,
+      "stop": 1168850,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.82)",
+        "강세마감(0.85)",
         "정배열",
-        "RSI62.2 강세"
+        "RSI62.4 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -101,14 +101,14 @@
       "ticker": "삼성전기",
       "code": "009150",
       "tomorrow_up_prob": "76%",
-      "entry": 1957000.0,
-      "target": 2054850,
-      "stop": 1898290,
+      "entry": 1964000.0,
+      "target": 2062200,
+      "stop": 1905080,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.87)",
+        "강세마감(0.92)",
         "정배열",
-        "RSI65.8 강세"
+        "RSI66.0 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -145,14 +145,14 @@
       "ticker": "한온시스템",
       "code": "018880",
       "tomorrow_up_prob": "74%",
-      "entry": 5610.0,
-      "target": 5890,
-      "stop": 5442,
+      "entry": 5590.0,
+      "target": 5870,
+      "stop": 5422,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.73)",
-        "RSI61.3 강세",
-        "거래량2.56배"
+        "강세마감(0.71)",
+        "RSI61.1 강세",
+        "거래량2.61배"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -186,20 +186,64 @@
       "cause_summary": "한온시스템 주가 22% 급등...2분기 호실적 전망"
     },
     {
+      "ticker": "HL만도",
+      "code": "204320",
+      "tomorrow_up_prob": "73%",
+      "entry": 69800.0,
+      "target": 73290,
+      "stop": 67706,
+      "confidence": "상",
+      "reasons": [
+        "MACD강세",
+        "RSI65.7 강세",
+        "거래량7.08배"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 8,
+      "cause_news": [
+        {
+          "title": "HL만도 주가, 웃음꽃... 목표주가는?",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1163559",
+          "office": "ggilbo",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
+        },
+        {
+          "title": "상한가 찍은 HL만도, 액추에이터 연구조직 신설…로봇주 함께 날았다",
+          "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4419925",
+          "office": "news",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주]HL만도, 피지컬 AI 산업 확산에 따른 수혜 부각 소식에 상한가",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=295625",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "HL만도 주가, 웃음꽃... 목표주가는?"
+    },
+    {
       "ticker": "테크윙",
       "code": "089030",
       "tomorrow_up_prob": "69%",
-      "entry": 68200.0,
-      "target": 71610,
-      "stop": 66154,
+      "entry": 68400.0,
+      "target": 71820,
+      "stop": 66348,
       "confidence": "중",
       "reasons": [
         "MACD강세",
-        "RSI65.4 강세",
+        "RSI65.5 강세",
         "일목 구름위"
       ],
       "risk": "약한 마감",
-      "day_change": 3.98,
+      "day_change": 5.21,
       "cause_news": [
         {
           "title": "테크윙 주가, 급등세... 어떤 기업이길래?",
@@ -214,17 +258,53 @@
       "cause_summary": "테크윙 주가, 급등세... 어떤 기업이길래?"
     },
     {
-      "ticker": "SK이터닉스",
-      "code": "475150",
-      "tomorrow_up_prob": "66%",
-      "entry": 49200.0,
-      "target": 51660,
-      "stop": 47724,
+      "ticker": "후성",
+      "code": "093370",
+      "tomorrow_up_prob": "68%",
+      "entry": 21800.0,
+      "target": 22890,
+      "stop": 21146,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.7)",
-        "RSI58.0 강세",
-        "거래량6.61배"
+        "강세마감(0.98)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "후성, 투자경고종목 지정 예고→주가 급등 경계령",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16092441",
+          "office": "topstarnews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락"
+        },
+        {
+          "title": "“AI 특수에 가스까지 품귀”…후성 주가 일주일새 63% 쑥 [이주의 Bull기...",
+          "url": "https://www.mk.co.kr/article/12073325",
+          "office": "mk",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 인과표현, 재료, 오래됨"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "후성, 투자경고종목 지정 예고→주가 급등 경계령"
+    },
+    {
+      "ticker": "SK이터닉스",
+      "code": "475150",
+      "tomorrow_up_prob": "67%",
+      "entry": 49700.0,
+      "target": 52185,
+      "stop": 48209,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.74)",
+        "RSI58.6 강세",
+        "거래량6.81배"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -261,33 +341,69 @@
       "ticker": "주성엔지니어링",
       "code": "036930",
       "tomorrow_up_prob": "64%",
-      "entry": 221000.0,
-      "target": 232050,
-      "stop": 214370,
+      "entry": 221500.0,
+      "target": 232575,
+      "stop": 214855,
       "confidence": "중",
       "reasons": [
         "정배열",
-        "RSI57.3 강세",
+        "RSI57.4 강세",
         "일목 구름위"
       ],
       "risk": "약한 마감",
-      "day_change": -4.98
+      "day_change": -4.11
+    },
+    {
+      "ticker": "LS ELECTRIC",
+      "code": "010120",
+      "tomorrow_up_prob": "63%",
+      "entry": 259000.0,
+      "target": 271950,
+      "stop": 251230,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.76)",
+        "RSI54.6 강세",
+        "장중 24회 지속"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "AI 전력 수요 폭증 수혜주 부각…초전도체株 LS ELECTRIC 신성델타테크 ...",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=460127",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 인과표현, 재료, 당일"
+        },
+        {
+          "title": "변압기 없어서 못 판다… LS ELECTRIC·효성중공업 신고가 행진",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=460191",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "AI 전력 수요 폭증 수혜주 부각…초전도체株 LS ELECTRIC 신성델타테크 ..."
     },
     {
       "ticker": "한미반도체",
       "code": "042700",
       "tomorrow_up_prob": "58%",
-      "entry": 347000.0,
-      "target": 364350,
-      "stop": 336590,
+      "entry": 346000.0,
+      "target": 363300,
+      "stop": 335620,
       "confidence": "중",
       "reasons": [
-        "RSI56.2 강세",
+        "RSI56.0 강세",
         "호재",
-        "장중 20회 지속"
+        "장중 21회 지속"
       ],
       "risk": "약한 마감",
-      "day_change": -3.74,
+      "day_change": -4.02,
       "cause_news": [
         {
           "title": "[특징주] 한미반도체, 스페이스X에 500억원 투자… 주가 급등",
@@ -316,41 +432,6 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "[특징주] 한미반도체, 스페이스X에 500억원 투자… 주가 급등"
-    },
-    {
-      "ticker": "LS ELECTRIC",
-      "code": "010120",
-      "tomorrow_up_prob": "55%",
-      "entry": 257000.0,
-      "target": 269850,
-      "stop": 249290,
-      "confidence": "중",
-      "reasons": [
-        "RSI54.2 강세",
-        "장중 23회 지속"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "AI 전력 수요 폭증 수혜주 부각…초전도체株 LS ELECTRIC 신성델타테크 ...",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=460127",
-          "office": "pinpointnews",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 인과표현, 재료, 당일"
-        },
-        {
-          "title": "변압기 없어서 못 판다… LS ELECTRIC·효성중공업 신고가 행진",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=460191",
-          "office": "pinpointnews",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "AI 전력 수요 폭증 수혜주 부각…초전도체株 LS ELECTRIC 신성델타테크 ..."
     }
   ],
   "closing_bet": [
@@ -358,17 +439,17 @@
       "ticker": "NAVER",
       "code": "035420",
       "tomorrow_up_prob": "82%",
-      "entry": 248500.0,
-      "target": 260925,
-      "stop": 241045,
+      "entry": 247000.0,
+      "target": 259350,
+      "stop": 239590,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI55.6 강세"
+        "RSI55.2 강세"
       ],
       "risk": "약한 마감",
-      "day_change": 1.01,
+      "day_change": 0.4,
       "related_news": [
         {
           "title": "샘 올트먼, 방한 연기…AI 협력 기대감에도 네이버는?",
@@ -382,14 +463,14 @@
       "ticker": "삼성물산",
       "code": "028260",
       "tomorrow_up_prob": "81%",
-      "entry": 498500.0,
-      "target": 523425,
-      "stop": 483545,
+      "entry": 497500.0,
+      "target": 522375,
+      "stop": 482575,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.78)",
+        "강세마감(0.76)",
         "정배열",
-        "RSI62.0 강세"
+        "RSI61.9 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -410,14 +491,14 @@
       "ticker": "LG이노텍",
       "code": "011070",
       "tomorrow_up_prob": "77%",
-      "entry": 1202000.0,
-      "target": 1262100,
-      "stop": 1165940,
+      "entry": 1205000.0,
+      "target": 1265250,
+      "stop": 1168850,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.82)",
+        "강세마감(0.85)",
         "정배열",
-        "RSI62.2 강세"
+        "RSI62.4 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -454,14 +535,14 @@
       "ticker": "삼성전기",
       "code": "009150",
       "tomorrow_up_prob": "76%",
-      "entry": 1957000.0,
-      "target": 2054850,
-      "stop": 1898290,
+      "entry": 1964000.0,
+      "target": 2062200,
+      "stop": 1905080,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.87)",
+        "강세마감(0.92)",
         "정배열",
-        "RSI65.8 강세"
+        "RSI66.0 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -498,14 +579,14 @@
       "ticker": "한온시스템",
       "code": "018880",
       "tomorrow_up_prob": "74%",
-      "entry": 5610.0,
-      "target": 5890,
-      "stop": 5442,
+      "entry": 5590.0,
+      "target": 5870,
+      "stop": 5422,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.73)",
-        "RSI61.3 강세",
-        "거래량2.56배"
+        "강세마감(0.71)",
+        "RSI61.1 강세",
+        "거래량2.61배"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
