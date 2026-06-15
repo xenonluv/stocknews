@@ -1,46 +1,98 @@
 {
-  "as_of": "2026-06-15 10:52 KST",
+  "as_of": "2026-06-15 11:07 KST",
   "intraday_rank": [
     {
-      "ticker": "대한항공",
-      "code": "003490",
-      "tomorrow_up_prob": "85%",
-      "entry": 30150.0,
-      "target": 31658,
-      "stop": 29246,
+      "ticker": "삼성물산",
+      "code": "028260",
+      "tomorrow_up_prob": "81%",
+      "entry": 492500.0,
+      "target": 517125,
+      "stop": 477725,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.71)",
+        "강세마감(0.94)",
         "정배열",
-        "MACD강세"
+        "RSI61.3 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
         {
-          "title": "항공주 급등…美·이란 종전 기대에 대한항공 16%↑ 제주항공 상한가",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439655",
-          "office": "econonews",
+          "title": "삼전 5%대 뛰자 삼성물산·삼성생명 달린다… 장 초반 12%·8% ↑",
+          "url": "https://www.mt.co.kr/stock/2026/06/15/2026061509233171313",
+          "office": "mt",
           "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "삼전 5%대 뛰자 삼성물산·삼성생명 달린다… 장 초반 12%·8% ↑"
+    },
+    {
+      "ticker": "NAVER",
+      "code": "035420",
+      "tomorrow_up_prob": "80%",
+      "entry": 251500.0,
+      "target": 264075,
+      "stop": 243955,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI56.4 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 1.82
+    },
+    {
+      "ticker": "대한항공",
+      "code": "003490",
+      "tomorrow_up_prob": "78%",
+      "entry": 30100.0,
+      "target": 31605,
+      "stop": 29197,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI67.3 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "종전 기대감에 항공주 날았다…대한항공, 아시아나 12%씩 올라",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=295721",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        },
+        {
+          "title": "대한항공·아시아나항공·제주항공 급등…항공주 전반 강세에 투자자 관...",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582017",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "항공주 급등…美·이란 종전 기대에 대한항공 16%↑ 제주항공 상한가"
+      "cause_summary": "종전 기대감에 항공주 날았다…대한항공, 아시아나 12%씩 올라"
     },
     {
       "ticker": "한온시스템",
       "code": "018880",
-      "tomorrow_up_prob": "81%",
-      "entry": 5860.0,
-      "target": 6153,
-      "stop": 5684,
+      "tomorrow_up_prob": "74%",
+      "entry": 5740.0,
+      "target": 6027,
+      "stop": 5568,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.97)",
-        "MACD강세",
-        "RSI63.6 강세"
+        "강세마감(0.85)",
+        "RSI62.5 강세",
+        "거래량2.03배"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -74,105 +126,17 @@
       "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
     },
     {
-      "ticker": "NAVER",
-      "code": "035420",
-      "tomorrow_up_prob": "80%",
-      "entry": 252000.0,
-      "target": 264600,
-      "stop": 244440,
-      "confidence": "상",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI56.5 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 1.21
-    },
-    {
-      "ticker": "삼성물산",
-      "code": "028260",
-      "tomorrow_up_prob": "80%",
-      "entry": 490500.0,
-      "target": 515025,
-      "stop": 475785,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.88)",
-        "정배열",
-        "RSI61.1 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "삼전 5%대 뛰자 삼성물산·삼성생명 달린다… 장 초반 12%·8% ↑",
-          "url": "https://www.mt.co.kr/stock/2026/06/15/2026061509233171313",
-          "office": "mt",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "삼전 5%대 뛰자 삼성물산·삼성생명 달린다… 장 초반 12%·8% ↑"
-    },
-    {
-      "ticker": "삼성전기",
-      "code": "009150",
-      "tomorrow_up_prob": "76%",
-      "entry": 1942000.0,
-      "target": 2039100,
-      "stop": 1883740,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.76)",
-        "정배열",
-        "RSI65.5 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] 삼성전기, AI 부품 기대에 12%대 강세…실리콘 커패시터·MLCC ...",
-          "url": "https://www.tokenpost.kr/news/economy/369320",
-          "office": "tokenpost",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주]AI 각광에 기판 기대주 삼성전기·LG이노텍도 강세",
-          "url": "https://www.namdonews.com/news/articleView.html?idxno=913538",
-          "office": "namdonews",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "삼성전기 등 기판주, 미·이란 종전. AI 신사업 호재에 동반 강세[특징주...",
-          "url": "https://www.newsway.co.kr/news/view?ud=2026061510030287113",
-          "office": "newsway",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 삼성전기, AI 부품 기대에 12%대 강세…실리콘 커패시터·MLCC ..."
-    },
-    {
       "ticker": "LG이노텍",
       "code": "011070",
-      "tomorrow_up_prob": "73%",
-      "entry": 1211000.0,
-      "target": 1271550,
-      "stop": 1174670,
+      "tomorrow_up_prob": "74%",
+      "entry": 1188000.0,
+      "target": 1247400,
+      "stop": 1152360,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.95)",
+        "강세마감(0.77)",
         "정배열",
-        "RSI62.6 강세"
+        "RSI61.7 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -208,18 +172,18 @@
     {
       "ticker": "테크윙",
       "code": "089030",
-      "tomorrow_up_prob": "64%",
-      "entry": 67800.0,
-      "target": 71190,
-      "stop": 65766,
+      "tomorrow_up_prob": "65%",
+      "entry": 67200.0,
+      "target": 70560,
+      "stop": 65184,
       "confidence": "중",
       "reasons": [
         "MACD강세",
-        "RSI65.0 강세",
+        "RSI64.5 강세",
         "일목 구름위"
       ],
       "risk": "약한 마감",
-      "day_change": 5.28,
+      "day_change": 3.06,
       "cause_news": [
         {
           "title": "6월 2주차 테크윙 주가 5거래일 32% 급등 6만5천원대 마감",
@@ -237,70 +201,62 @@
       "ticker": "주성엔지니어링",
       "code": "036930",
       "tomorrow_up_prob": "64%",
-      "entry": 223000.0,
-      "target": 234150,
-      "stop": 216310,
+      "entry": 222000.0,
+      "target": 233100,
+      "stop": 215340,
       "confidence": "중",
       "reasons": [
         "정배열",
-        "RSI57.8 강세",
+        "RSI57.5 강세",
         "일목 구름위"
       ],
       "risk": "약한 마감",
-      "day_change": -2.6,
-      "cause_news": [
-        {
-          "title": "주성엔지니어링 주가, 6월 15일 장중 231,500원 0.22% 상승",
-          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16094077",
-          "office": "topstarnews",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "주성엔지니어링 주가, 6월 15일 장중 231,500원 0.22% 상승"
+      "day_change": -3.25
     },
     {
       "ticker": "LS ELECTRIC",
       "code": "010120",
       "tomorrow_up_prob": "63%",
-      "entry": 255000.0,
-      "target": 267750,
-      "stop": 247350,
+      "entry": 254500.0,
+      "target": 267225,
+      "stop": 246865,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.79)",
-        "RSI53.7 강세",
-        "장중 8회 지속"
+        "강세마감(0.77)",
+        "RSI53.6 강세",
+        "장중 9회 지속"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "AI 전력 수요 폭증 수혜주 부각…초전도체株 LS ELECTRIC 신성델타테크 ...",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=460127",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 인과표현, 재료, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "AI 전력 수요 폭증 수혜주 부각…초전도체株 LS ELECTRIC 신성델타테크 ..."
     },
     {
       "ticker": "한미반도체",
       "code": "042700",
       "tomorrow_up_prob": "56%",
-      "entry": 348000.0,
-      "target": 365400,
-      "stop": 337560,
+      "entry": 347500.0,
+      "target": 364875,
+      "stop": 337075,
       "confidence": "중",
       "reasons": [
-        "RSI56.4 강세",
+        "RSI56.3 강세",
         "호재",
-        "장중 5회 지속"
+        "장중 6회 지속"
       ],
       "risk": "약한 마감",
-      "day_change": -2.49,
+      "day_change": -3.32,
       "cause_news": [
-        {
-          "title": "[기업이슈] 한미반도체, 스페이스X 전략적 투자한다…주가 급등",
-          "url": "https://biz.sbs.co.kr/article_hub/20000316473?division=NAVER",
-          "office": "biz",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
         {
           "title": "[특징주] 한미반도체, 스페이스X에 500억원 투자… 주가 급등",
           "url": "http://www.biztribune.co.kr/news/articleView.html?idxno=354700",
@@ -316,89 +272,113 @@
           "sentiment": "호재",
           "cause_score": 9,
           "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+        },
+        {
+          "title": "한미반도체 주가 약세, 장세 훈풍에도 털썩…종전 타결 소식 속 향방 주...",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582014",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[기업이슈] 한미반도체, 스페이스X 전략적 투자한다…주가 급등"
-    },
-    {
-      "ticker": "한화솔루션",
-      "code": "009830",
-      "tomorrow_up_prob": "49%",
-      "entry": 39350.0,
-      "target": 41318,
-      "stop": 38170,
-      "confidence": "하",
-      "reasons": [
-        "강세마감(0.71)",
-        "RSI52.2 강세",
-        "장중 6회 지속"
-      ],
-      "risk": "악재",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "미국 태양광 제조업 부활…한화솔루션·OCI홀딩스 재평가 기대",
-          "url": "https://www.asiatoday.co.kr/kn/view.php?key=20260612010004360",
-          "office": "asiatoday",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 오래됨"
-        },
-        {
-          "title": "[특징주] 한화솔루션, 美 태양광 232조 기대에 강세…6~7월 정책·공급계...",
-          "url": "https://www.tokenpost.kr/news/economy/367709",
-          "office": "tokenpost",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "미국 태양광 제조업 부활…한화솔루션·OCI홀딩스 재평가 기대"
+      "cause_summary": "[특징주] 한미반도체, 스페이스X에 500억원 투자… 주가 급등"
     }
   ],
   "closing_bet": [
     {
-      "ticker": "대한항공",
-      "code": "003490",
-      "tomorrow_up_prob": "85%",
-      "entry": 30150.0,
-      "target": 31658,
-      "stop": 29246,
+      "ticker": "삼성물산",
+      "code": "028260",
+      "tomorrow_up_prob": "81%",
+      "entry": 492500.0,
+      "target": 517125,
+      "stop": 477725,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.71)",
+        "강세마감(0.94)",
         "정배열",
-        "MACD강세"
+        "RSI61.3 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
         {
-          "title": "항공주 급등…美·이란 종전 기대에 대한항공 16%↑ 제주항공 상한가",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439655",
-          "office": "econonews",
+          "title": "삼전 5%대 뛰자 삼성물산·삼성생명 달린다… 장 초반 12%·8% ↑",
+          "url": "https://www.mt.co.kr/stock/2026/06/15/2026061509233171313",
+          "office": "mt",
           "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "삼전 5%대 뛰자 삼성물산·삼성생명 달린다… 장 초반 12%·8% ↑"
+    },
+    {
+      "ticker": "NAVER",
+      "code": "035420",
+      "tomorrow_up_prob": "80%",
+      "entry": 251500.0,
+      "target": 264075,
+      "stop": 243955,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI56.4 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 1.82
+    },
+    {
+      "ticker": "대한항공",
+      "code": "003490",
+      "tomorrow_up_prob": "78%",
+      "entry": 30100.0,
+      "target": 31605,
+      "stop": 29197,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI67.3 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "종전 기대감에 항공주 날았다…대한항공, 아시아나 12%씩 올라",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=295721",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        },
+        {
+          "title": "대한항공·아시아나항공·제주항공 급등…항공주 전반 강세에 투자자 관...",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582017",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "항공주 급등…美·이란 종전 기대에 대한항공 16%↑ 제주항공 상한가"
+      "cause_summary": "종전 기대감에 항공주 날았다…대한항공, 아시아나 12%씩 올라"
     },
     {
       "ticker": "한온시스템",
       "code": "018880",
-      "tomorrow_up_prob": "81%",
-      "entry": 5860.0,
-      "target": 6153,
-      "stop": 5684,
+      "tomorrow_up_prob": "74%",
+      "entry": 5740.0,
+      "target": 6027,
+      "stop": 5568,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.97)",
-        "MACD강세",
-        "RSI63.6 강세"
+        "강세마감(0.85)",
+        "RSI62.5 강세",
+        "거래량2.03배"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -432,69 +412,33 @@
       "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
     },
     {
-      "ticker": "NAVER",
-      "code": "035420",
-      "tomorrow_up_prob": "80%",
-      "entry": 252000.0,
-      "target": 264600,
-      "stop": 244440,
+      "ticker": "LG이노텍",
+      "code": "011070",
+      "tomorrow_up_prob": "74%",
+      "entry": 1188000.0,
+      "target": 1247400,
+      "stop": 1152360,
       "confidence": "상",
       "reasons": [
+        "강세마감(0.77)",
         "정배열",
-        "MACD강세",
-        "RSI56.5 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 1.21
-    },
-    {
-      "ticker": "삼성물산",
-      "code": "028260",
-      "tomorrow_up_prob": "80%",
-      "entry": 490500.0,
-      "target": 515025,
-      "stop": 475785,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.88)",
-        "정배열",
-        "RSI61.1 강세"
+        "RSI61.7 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
         {
-          "title": "삼전 5%대 뛰자 삼성물산·삼성생명 달린다… 장 초반 12%·8% ↑",
-          "url": "https://www.mt.co.kr/stock/2026/06/15/2026061509233171313",
-          "office": "mt",
+          "title": "증권가 \"AI 반도체 기판 사업 수혜\"…LG이노텍 10%↑[특징주]",
+          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=02542006645482048",
+          "office": "edaily",
           "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "삼전 5%대 뛰자 삼성물산·삼성생명 달린다… 장 초반 12%·8% ↑"
-    },
-    {
-      "ticker": "삼성전기",
-      "code": "009150",
-      "tomorrow_up_prob": "76%",
-      "entry": 1942000.0,
-      "target": 2039100,
-      "stop": 1883740,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.76)",
-        "정배열",
-        "RSI65.5 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
         {
-          "title": "[특징주] 삼성전기, AI 부품 기대에 12%대 강세…실리콘 커패시터·MLCC ...",
-          "url": "https://www.tokenpost.kr/news/economy/369320",
-          "office": "tokenpost",
+          "title": "[특징주] LG이노텍, 2분기 호실적 전망에 11% 급등",
+          "url": "https://biz.chosun.com/stock/stock_general/2026/06/15/HOLBNHXX5NBZZG6OKHAIOXQF34/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "office": "biz",
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
@@ -506,18 +450,10 @@
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "삼성전기 등 기판주, 미·이란 종전. AI 신사업 호재에 동반 강세[특징주...",
-          "url": "https://www.newsway.co.kr/news/view?ud=2026061510030287113",
-          "office": "newsway",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 삼성전기, AI 부품 기대에 12%대 강세…실리콘 커패시터·MLCC ..."
+      "cause_summary": "증권가 \"AI 반도체 기판 사업 수혜\"…LG이노텍 10%↑[특징주]"
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
