@@ -1,21 +1,57 @@
 {
-  "as_of": "2026-06-15 09:22 KST",
+  "as_of": "2026-06-15 09:37 KST",
   "intraday_rank": [
+    {
+      "ticker": "삼성물산",
+      "code": "028260",
+      "tomorrow_up_prob": "84%",
+      "entry": 482500.0,
+      "target": 506625,
+      "stop": 468025,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.7)",
+        "정배열",
+        "RSI60.2 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "삼성전자 오르자 지분 가치↑…삼성물산 13%대 급등[핫종목]",
+          "url": "https://www.news1.kr/finance/general-stock/6197194",
+          "office": "news1",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+        },
+        {
+          "title": "건설주, 미·이란 종전 협상 기대감에 강세…삼성물산 6%↑[특징주]",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026061210492766373",
+          "office": "newsway",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "삼성전자 오르자 지분 가치↑…삼성물산 13%대 급등[핫종목]"
+    },
     {
       "ticker": "NAVER",
       "code": "035420",
-      "tomorrow_up_prob": "88%",
-      "entry": 256750.0,
-      "target": 269588,
-      "stop": 249048,
+      "tomorrow_up_prob": "81%",
+      "entry": 253750.0,
+      "target": 266438,
+      "stop": 246138,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.94)",
         "정배열",
-        "MACD강세"
+        "MACD강세",
+        "RSI57.0 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 1.62,
+      "day_change": 2.43,
       "cause_news": [
         {
           "title": "NAVER(네이버) 주가 주말 앞두고 강세 마감…장중 26만원 돌파, 주말 중...",
@@ -30,45 +66,15 @@
       "cause_summary": "NAVER(네이버) 주가 주말 앞두고 강세 마감…장중 26만원 돌파, 주말 중..."
     },
     {
-      "ticker": "삼성물산",
-      "code": "028260",
-      "tomorrow_up_prob": "82%",
-      "entry": 488500.0,
-      "target": 512925,
-      "stop": 473845,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.9)",
-        "정배열",
-        "RSI60.9 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "related_news": [
-        {
-          "title": "&quot;자전거 여행부터 장마룩까지&quot; 빈폴, '서울 클래식' 협업 컬렉션",
-          "url": "https://n.news.naver.com/mnews/article/003/0014005952",
-          "office": "뉴시스",
-          "sentiment": "호재"
-        },
-        {
-          "title": "삼성물산, 방배신삼호 재건축 사업 수주",
-          "url": "https://n.news.naver.com/mnews/article/016/0002656410",
-          "office": "헤럴드경제",
-          "sentiment": "호재"
-        }
-      ]
-    },
-    {
       "ticker": "삼화콘덴서",
       "code": "001820",
-      "tomorrow_up_prob": "77%",
-      "entry": 144800.0,
-      "target": 152040,
-      "stop": 140456,
+      "tomorrow_up_prob": "78%",
+      "entry": 149100.0,
+      "target": 156555,
+      "stop": 144627,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.72)",
+        "강세마감(0.85)",
         "정배열",
         "MACD강세"
       ],
@@ -78,19 +84,27 @@
     {
       "ticker": "삼성전기",
       "code": "009150",
-      "tomorrow_up_prob": "76%",
-      "entry": 1929000.0,
-      "target": 2025450,
-      "stop": 1871130,
+      "tomorrow_up_prob": "77%",
+      "entry": 1938000.0,
+      "target": 2034900,
+      "stop": 1879860,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.73)",
+        "강세마감(0.8)",
         "정배열",
-        "RSI65.2 강세"
+        "RSI65.4 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
+        {
+          "title": "[특징주] 삼성전기, AI용 실리콘 커패시터 양산 소식에 '급등'",
+          "url": "https://www.cstimes.com/news/articleView.html?idxno=709684",
+          "office": "cstimes",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
         {
           "title": "\"전쟁 끝난다\"…삼성전기 등 기판주도 동반 상승",
           "url": "https://www.mt.co.kr/stock/2026/06/15/2026061509174066517",
@@ -100,20 +114,20 @@
           "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
         }
       ],
-      "cause_confidence": "중간",
-      "cause_summary": "\"전쟁 끝난다\"…삼성전기 등 기판주도 동반 상승"
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 삼성전기, AI용 실리콘 커패시터 양산 소식에 '급등'"
     },
     {
       "ticker": "LG전자",
       "code": "066570",
-      "tomorrow_up_prob": "72%",
-      "entry": 257000.0,
-      "target": 269850,
-      "stop": 249290,
+      "tomorrow_up_prob": "73%",
+      "entry": 255000.0,
+      "target": 267750,
+      "stop": 247350,
       "confidence": "상",
       "reasons": [
-        "강세마감(1.0)",
-        "RSI53.9 강세",
+        "강세마감(0.76)",
+        "RSI53.6 강세",
         "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
@@ -132,21 +146,81 @@
       "cause_summary": "[특징주] 아이로보틱스, \"LG전자 국내 첫 로봇 훈련소 구축\" 피지컬AI 확..."
     },
     {
-      "ticker": "한온시스템",
-      "code": "018880",
-      "tomorrow_up_prob": "64%",
-      "entry": 5740.0,
-      "target": 6027,
-      "stop": 5568,
+      "ticker": "현대오토에버",
+      "code": "307950",
+      "tomorrow_up_prob": "69%",
+      "entry": 764000.0,
+      "target": 802200,
+      "stop": 741080,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.96)",
-        "RSI62.5 강세",
+        "강세마감(0.94)",
+        "RSI57.0 강세",
+        "일목 구름위"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[특징주] 플래티어, 현대오토에버와 24억 추가 수주…인증중고차 협력 ...",
+          "url": "https://www.tokenpost.kr/news/economy/367343",
+          "office": "tokenpost",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
+        },
+        {
+          "title": "[특징주] 플래티어, 현대오토에버와 24억 규모 추가 공급계약 체결",
+          "url": "https://www.newstnt.com/news/articleView.html?idxno=705657",
+          "office": "newstnt",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 플래티어, 현대오토에버와 24억 추가 수주…인증중고차 협력 ..."
+    },
+    {
+      "ticker": "대한항공",
+      "code": "003490",
+      "tomorrow_up_prob": "69%",
+      "entry": 29650.0,
+      "target": 31132,
+      "stop": 28760,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.82)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null
+    },
+    {
+      "ticker": "한온시스템",
+      "code": "018880",
+      "tomorrow_up_prob": "65%",
+      "entry": 5670.0,
+      "target": 5954,
+      "stop": 5500,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.88)",
+        "RSI61.9 강세",
         "호재"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
+        {
+          "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        },
         {
           "title": "[특징주] 한온시스템, 외국인 장중 순매수 1위 부각에 13%대 강세",
           "url": "https://www.tokenpost.kr/news/economy/368487",
@@ -157,106 +231,68 @@
         }
       ],
       "cause_confidence": "중간",
-      "cause_summary": "[특징주] 한온시스템, 외국인 장중 순매수 1위 부각에 13%대 강세"
+      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
     },
     {
       "ticker": "주성엔지니어링",
       "code": "036930",
-      "tomorrow_up_prob": "58%",
-      "entry": 231500.0,
-      "target": 243075,
-      "stop": 224555,
+      "tomorrow_up_prob": "59%",
+      "entry": 236000.0,
+      "target": 247800,
+      "stop": 228920,
       "confidence": "중",
       "reasons": [
         "정배열",
-        "RSI59.9 강세",
+        "RSI60.6 강세",
         "일목 구름위"
       ],
       "risk": "약한 마감",
-      "day_change": 3.03,
-      "cause_news": [
-        {
-          "title": "주성엔지니어링, 월요일 성적은…성장성 재평가 기대",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=581837",
-          "office": "cbci",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스"
-        }
+      "day_change": 1.95
+    },
+    {
+      "ticker": "이오테크닉스",
+      "code": "039030",
+      "tomorrow_up_prob": "58%",
+      "entry": 577000.0,
+      "target": 605850,
+      "stop": 559690,
+      "confidence": "중",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI59.3 강세"
       ],
-      "cause_confidence": "중간",
-      "cause_summary": "주성엔지니어링, 월요일 성적은…성장성 재평가 기대"
+      "risk": "약한 마감",
+      "day_change": -5.39
     },
     {
       "ticker": "LS ELECTRIC",
       "code": "010120",
-      "tomorrow_up_prob": "57%",
-      "entry": 251500.0,
-      "target": 264075,
-      "stop": 243955,
+      "tomorrow_up_prob": "58%",
+      "entry": 253000.0,
+      "target": 265650,
+      "stop": 245410,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.93)",
-        "RSI52.8 강세"
+        "강세마감(0.81)",
+        "RSI53.2 강세",
+        "장중 3회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null
     },
     {
-      "ticker": "한미반도체",
-      "code": "042700",
-      "tomorrow_up_prob": "53%",
-      "entry": 354500.0,
-      "target": 372225,
-      "stop": 343865,
-      "confidence": "하",
-      "reasons": [
-        "RSI57.7 강세",
-        "호재"
-      ],
-      "risk": "약한 마감",
-      "day_change": -0.14,
-      "cause_news": [
-        {
-          "title": "[기업이슈] 한미반도체, 스페이스X 전략적 투자한다…주가 급등",
-          "url": "https://biz.sbs.co.kr/article_hub/20000316473?division=NAVER",
-          "office": "biz",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] 한미반도체, 스페이스X에 500억원 투자… 주가 급등",
-          "url": "http://www.biztribune.co.kr/news/articleView.html?idxno=354700",
-          "office": "biztribune",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        },
-        {
-          "title": "[12일 특징주] 스페이스X 주식 취득에…한미반도체 24% '껑충'",
-          "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=843742",
-          "office": "newsworks",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[기업이슈] 한미반도체, 스페이스X 전략적 투자한다…주가 급등"
-    },
-    {
       "ticker": "한화솔루션",
       "code": "009830",
-      "tomorrow_up_prob": "51%",
-      "entry": 39850.0,
-      "target": 41842,
-      "stop": 38654,
+      "tomorrow_up_prob": "52%",
+      "entry": 40000.0,
+      "target": 42000,
+      "stop": 38800,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.97)",
+        "강세마감(0.93)",
         "MACD강세",
-        "RSI53.2 강세"
+        "RSI53.5 강세"
       ],
       "risk": "악재",
       "day_change": null,
@@ -284,20 +320,56 @@
   ],
   "closing_bet": [
     {
-      "ticker": "NAVER",
-      "code": "035420",
-      "tomorrow_up_prob": "88%",
-      "entry": 256750.0,
-      "target": 269588,
-      "stop": 249048,
+      "ticker": "삼성물산",
+      "code": "028260",
+      "tomorrow_up_prob": "84%",
+      "entry": 482500.0,
+      "target": 506625,
+      "stop": 468025,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.94)",
+        "강세마감(0.7)",
         "정배열",
-        "MACD강세"
+        "RSI60.2 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 1.62,
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "삼성전자 오르자 지분 가치↑…삼성물산 13%대 급등[핫종목]",
+          "url": "https://www.news1.kr/finance/general-stock/6197194",
+          "office": "news1",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+        },
+        {
+          "title": "건설주, 미·이란 종전 협상 기대감에 강세…삼성물산 6%↑[특징주]",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026061210492766373",
+          "office": "newsway",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "삼성전자 오르자 지분 가치↑…삼성물산 13%대 급등[핫종목]"
+    },
+    {
+      "ticker": "NAVER",
+      "code": "035420",
+      "tomorrow_up_prob": "81%",
+      "entry": 253750.0,
+      "target": 266438,
+      "stop": 246138,
+      "confidence": "상",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI57.0 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 2.43,
       "cause_news": [
         {
           "title": "NAVER(네이버) 주가 주말 앞두고 강세 마감…장중 26만원 돌파, 주말 중...",
@@ -312,45 +384,15 @@
       "cause_summary": "NAVER(네이버) 주가 주말 앞두고 강세 마감…장중 26만원 돌파, 주말 중..."
     },
     {
-      "ticker": "삼성물산",
-      "code": "028260",
-      "tomorrow_up_prob": "82%",
-      "entry": 488500.0,
-      "target": 512925,
-      "stop": 473845,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.9)",
-        "정배열",
-        "RSI60.9 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "related_news": [
-        {
-          "title": "&quot;자전거 여행부터 장마룩까지&quot; 빈폴, '서울 클래식' 협업 컬렉션",
-          "url": "https://n.news.naver.com/mnews/article/003/0014005952",
-          "office": "뉴시스",
-          "sentiment": "호재"
-        },
-        {
-          "title": "삼성물산, 방배신삼호 재건축 사업 수주",
-          "url": "https://n.news.naver.com/mnews/article/016/0002656410",
-          "office": "헤럴드경제",
-          "sentiment": "호재"
-        }
-      ]
-    },
-    {
       "ticker": "삼화콘덴서",
       "code": "001820",
-      "tomorrow_up_prob": "77%",
-      "entry": 144800.0,
-      "target": 152040,
-      "stop": 140456,
+      "tomorrow_up_prob": "78%",
+      "entry": 149100.0,
+      "target": 156555,
+      "stop": 144627,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.72)",
+        "강세마감(0.85)",
         "정배열",
         "MACD강세"
       ],
@@ -360,19 +402,27 @@
     {
       "ticker": "삼성전기",
       "code": "009150",
-      "tomorrow_up_prob": "76%",
-      "entry": 1929000.0,
-      "target": 2025450,
-      "stop": 1871130,
+      "tomorrow_up_prob": "77%",
+      "entry": 1938000.0,
+      "target": 2034900,
+      "stop": 1879860,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.73)",
+        "강세마감(0.8)",
         "정배열",
-        "RSI65.2 강세"
+        "RSI65.4 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
+        {
+          "title": "[특징주] 삼성전기, AI용 실리콘 커패시터 양산 소식에 '급등'",
+          "url": "https://www.cstimes.com/news/articleView.html?idxno=709684",
+          "office": "cstimes",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
         {
           "title": "\"전쟁 끝난다\"…삼성전기 등 기판주도 동반 상승",
           "url": "https://www.mt.co.kr/stock/2026/06/15/2026061509174066517",
@@ -382,20 +432,20 @@
           "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
         }
       ],
-      "cause_confidence": "중간",
-      "cause_summary": "\"전쟁 끝난다\"…삼성전기 등 기판주도 동반 상승"
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 삼성전기, AI용 실리콘 커패시터 양산 소식에 '급등'"
     },
     {
       "ticker": "LG전자",
       "code": "066570",
-      "tomorrow_up_prob": "72%",
-      "entry": 257000.0,
-      "target": 269850,
-      "stop": 249290,
+      "tomorrow_up_prob": "73%",
+      "entry": 255000.0,
+      "target": 267750,
+      "stop": 247350,
       "confidence": "상",
       "reasons": [
-        "강세마감(1.0)",
-        "RSI53.9 강세",
+        "강세마감(0.76)",
+        "RSI53.6 강세",
         "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
