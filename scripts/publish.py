@@ -104,6 +104,7 @@ def record_history(out):
             "high_pct": s.get("high_pct"),
             "fade_pct": s.get("fade_pct"),
             "pattern": s.get("pattern"),
+            "prime": s.get("prime", False),  # 핵심 조건 모두 충족(유력) — 향후 적중률 분리 검증용
             "theme": s.get("theme", ""),  # 상위 테마 — by_theme 성과 집계용(표시 전용, 점수 미반영)
             "value_eok": s.get("value_eok"),         # 당일 거래대금(억) — 테마 대장 판별·기록용
             "theme_leader": s.get("theme_leader", False),  # 같은 테마 거래대금 1위 여부(표시 전용)

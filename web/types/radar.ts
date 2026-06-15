@@ -120,6 +120,8 @@ export interface Suspect {
   sector: string;
   /** 감지 패턴 — "fade"(급등 후 식음) | "shakeout"(눌림 후 재상승) | "deep_shakeout"(급락 흡수) | "reaccum"(재매집). */
   pattern?: "fade" | "shakeout" | "deep_shakeout" | "reaccum";
+  /** 핵심 조건(분봉 스파크+식음/흔들기 품질+투자자 수급) 모두 충족 → 큰 "유력" 뱃지. 구버전 JSON엔 없음 */
+  prime?: boolean;
   shake?: ShakeInfo | null;
   deep_shake?: DeepShakeInfo | null;
   visible_experimental?: boolean;

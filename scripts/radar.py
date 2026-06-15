@@ -918,11 +918,16 @@ def scan_one(name, code, p, events):
         breakdown["mega"] = boosted - score  # 100 캡 시 실제 적용분만 기록 (해부도 과장 방지)
         score = boosted
 
+    # "유력": 핵심 조건이 모두 정렬됨 — 분봉 스파크 + 식음/흔들기 품질 + 투자자 수급 순매수.
+    # 폭등(고가≥+13%)·현재가≥MA10은 fade 트랙 진입 게이트라 이미 보장. 표시 전용(점수·통계 불변).
+    prime = bool(sparks) and breakdown.get("fade", 0) > 0 and breakdown.get("flow", 0) > 0
+
     return {
         "code": code,
         "name": name,
         "sector": now["sector"],
         "pattern": "deep_shakeout" if deep_shake else "shakeout" if shake else "fade",
+        "prime": prime,  # 핵심 조건(스파크+식음+수급) 모두 충족 → 큰 "유력" 뱃지
         "shake": shake,  # shakeout 트랙만 {depth_pct, recovery_pct, high_time, trough_time}
         "deep_shake": deep_shake,
         "suspicion_score": score,

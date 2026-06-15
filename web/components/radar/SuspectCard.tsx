@@ -82,6 +82,14 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
       <CardHeader className="gap-3 pb-3">
         <div className="flex items-center justify-between gap-2">
           <div className="flex flex-wrap items-center gap-1.5">
+            {s.prime && (
+              <Badge
+                className="border-transparent bg-up px-2.5 py-1 text-sm font-bold text-up-foreground"
+                title="폭등 후 식음 + 분봉 스파크 + 투자자 수급 — 핵심 조건이 모두 정렬된 1순위 관찰 후보 (매수 추천 아님)"
+              >
+                🎯 유력
+              </Badge>
+            )}
             {s.pattern === "shakeout" && (
               <Badge variant="warning" title="장중 고점에서 크게 눌렀다가 다시 끌어올리는 패턴">
                 눌림 후 재상승
