@@ -1,18 +1,18 @@
 {
-  "as_of": "2026-06-15 11:07 KST",
+  "as_of": "2026-06-15 11:22 KST",
   "intraday_rank": [
     {
       "ticker": "삼성물산",
       "code": "028260",
       "tomorrow_up_prob": "81%",
-      "entry": 492500.0,
-      "target": 517125,
-      "stop": 477725,
+      "entry": 490000.0,
+      "target": 514500,
+      "stop": 475300,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.94)",
+        "강세마감(0.87)",
         "정배열",
-        "RSI61.3 강세"
+        "RSI61.1 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -33,30 +33,30 @@
       "ticker": "NAVER",
       "code": "035420",
       "tomorrow_up_prob": "80%",
-      "entry": 251500.0,
-      "target": 264075,
-      "stop": 243955,
+      "entry": 250500.0,
+      "target": 263025,
+      "stop": 242985,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI56.4 강세"
+        "RSI56.1 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 1.82
+      "day_change": 1.72
     },
     {
       "ticker": "대한항공",
       "code": "003490",
-      "tomorrow_up_prob": "78%",
-      "entry": 30100.0,
-      "target": 31605,
-      "stop": 29197,
+      "tomorrow_up_prob": "79%",
+      "entry": 29900.0,
+      "target": 31395,
+      "stop": 29003,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI67.3 강세"
+        "RSI66.8 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -92,11 +92,19 @@
       "reasons": [
         "강세마감(0.85)",
         "RSI62.5 강세",
-        "거래량2.03배"
+        "거래량2.11배"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
+        {
+          "title": "한온시스템 주가 22% 급등...2분기 호실적 전망",
+          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3608366",
+          "office": "gukjenews",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
         {
           "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
           "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
@@ -112,43 +120,27 @@
           "sentiment": "호재",
           "cause_score": 5,
           "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        },
-        {
-          "title": "[특징주] 한온시스템, 외국인 장중 순매수 1위 부각에 13%대 강세",
-          "url": "https://www.tokenpost.kr/news/economy/368487",
-          "office": "tokenpost",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 오래됨"
         }
       ],
-      "cause_confidence": "중간",
-      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
+      "cause_confidence": "높음",
+      "cause_summary": "한온시스템 주가 22% 급등...2분기 호실적 전망"
     },
     {
       "ticker": "LG이노텍",
       "code": "011070",
-      "tomorrow_up_prob": "74%",
-      "entry": 1188000.0,
-      "target": 1247400,
-      "stop": 1152360,
-      "confidence": "상",
+      "tomorrow_up_prob": "68%",
+      "entry": 1178000.0,
+      "target": 1236900,
+      "stop": 1142660,
+      "confidence": "중",
       "reasons": [
-        "강세마감(0.77)",
         "정배열",
-        "RSI61.7 강세"
+        "RSI61.3 강세",
+        "호재"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
-        {
-          "title": "증권가 \"AI 반도체 기판 사업 수혜\"…LG이노텍 10%↑[특징주]",
-          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=02542006645482048",
-          "office": "edaily",
-          "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
         {
           "title": "[특징주] LG이노텍, 2분기 호실적 전망에 11% 급등",
           "url": "https://biz.chosun.com/stock/stock_general/2026/06/15/HOLBNHXX5NBZZG6OKHAIOXQF34/?utm_source=naver&utm_medium=original&utm_campaign=biz",
@@ -164,26 +156,34 @@
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[ET특징주]LG이노텍, 2분기 호실적 전망에 상승세",
+          "url": "https://www.etnews.com/20260615000172",
+          "office": "etnews",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "증권가 \"AI 반도체 기판 사업 수혜\"…LG이노텍 10%↑[특징주]"
+      "cause_summary": "[특징주] LG이노텍, 2분기 호실적 전망에 11% 급등"
     },
     {
       "ticker": "테크윙",
       "code": "089030",
-      "tomorrow_up_prob": "65%",
-      "entry": 67200.0,
-      "target": 70560,
-      "stop": 65184,
+      "tomorrow_up_prob": "64%",
+      "entry": 70800.0,
+      "target": 74340,
+      "stop": 68676,
       "confidence": "중",
       "reasons": [
         "MACD강세",
-        "RSI64.5 강세",
+        "RSI67.4 강세",
         "일목 구름위"
       ],
-      "risk": "약한 마감",
-      "day_change": 3.06,
+      "risk": "Stoch 과매수",
+      "day_change": 6.28,
       "cause_news": [
         {
           "title": "6월 2주차 테크윙 주가 5거래일 32% 급등 6만5천원대 마감",
@@ -211,20 +211,20 @@
         "일목 구름위"
       ],
       "risk": "약한 마감",
-      "day_change": -3.25
+      "day_change": -4.55
     },
     {
       "ticker": "LS ELECTRIC",
       "code": "010120",
       "tomorrow_up_prob": "63%",
-      "entry": 254500.0,
-      "target": 267225,
-      "stop": 246865,
+      "entry": 255500.0,
+      "target": 268275,
+      "stop": 247835,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.77)",
-        "RSI53.6 강세",
-        "장중 9회 지속"
+        "강세마감(0.81)",
+        "RSI53.8 강세",
+        "장중 10회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -244,15 +244,15 @@
     {
       "ticker": "한미반도체",
       "code": "042700",
-      "tomorrow_up_prob": "56%",
-      "entry": 347500.0,
-      "target": 364875,
-      "stop": 337075,
+      "tomorrow_up_prob": "58%",
+      "entry": 349500.0,
+      "target": 366975,
+      "stop": 339015,
       "confidence": "중",
       "reasons": [
-        "RSI56.3 강세",
+        "RSI56.7 강세",
         "호재",
-        "장중 6회 지속"
+        "장중 7회 지속"
       ],
       "risk": "약한 마감",
       "day_change": -3.32,
@@ -284,6 +284,49 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "[특징주] 한미반도체, 스페이스X에 500억원 투자… 주가 급등"
+    },
+    {
+      "ticker": "한화솔루션",
+      "code": "009830",
+      "tomorrow_up_prob": "42%",
+      "entry": 39200.0,
+      "target": 41160,
+      "stop": 38024,
+      "confidence": "하",
+      "reasons": [
+        "RSI51.9 강세",
+        "장중 7회 지속"
+      ],
+      "risk": "악재",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[특징주] 금호석유·한화솔루션·S-Oil 등 \"2026년 하반기 업사이클 진입...",
+          "url": "https://www.newstnt.com/news/articleView.html?idxno=706340",
+          "office": "newstnt",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "미국 태양광 제조업 부활…한화솔루션·OCI홀딩스 재평가 기대",
+          "url": "https://www.asiatoday.co.kr/kn/view.php?key=20260612010004360",
+          "office": "asiatoday",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 오래됨"
+        },
+        {
+          "title": "[특징주] 한화솔루션, 美 태양광 232조 기대에 강세…6~7월 정책·공급계...",
+          "url": "https://www.tokenpost.kr/news/economy/367709",
+          "office": "tokenpost",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 금호석유·한화솔루션·S-Oil 등 \"2026년 하반기 업사이클 진입..."
     }
   ],
   "closing_bet": [
@@ -291,14 +334,14 @@
       "ticker": "삼성물산",
       "code": "028260",
       "tomorrow_up_prob": "81%",
-      "entry": 492500.0,
-      "target": 517125,
-      "stop": 477725,
+      "entry": 490000.0,
+      "target": 514500,
+      "stop": 475300,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.94)",
+        "강세마감(0.87)",
         "정배열",
-        "RSI61.3 강세"
+        "RSI61.1 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -319,30 +362,30 @@
       "ticker": "NAVER",
       "code": "035420",
       "tomorrow_up_prob": "80%",
-      "entry": 251500.0,
-      "target": 264075,
-      "stop": 243955,
+      "entry": 250500.0,
+      "target": 263025,
+      "stop": 242985,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI56.4 강세"
+        "RSI56.1 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 1.82
+      "day_change": 1.72
     },
     {
       "ticker": "대한항공",
       "code": "003490",
-      "tomorrow_up_prob": "78%",
-      "entry": 30100.0,
-      "target": 31605,
-      "stop": 29197,
+      "tomorrow_up_prob": "79%",
+      "entry": 29900.0,
+      "target": 31395,
+      "stop": 29003,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI67.3 강세"
+        "RSI66.8 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -378,11 +421,19 @@
       "reasons": [
         "강세마감(0.85)",
         "RSI62.5 강세",
-        "거래량2.03배"
+        "거래량2.11배"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
+        {
+          "title": "한온시스템 주가 22% 급등...2분기 호실적 전망",
+          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3608366",
+          "office": "gukjenews",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
         {
           "title": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대...",
           "url": "https://www.widedaily.com/news/articleView.html?idxno=293710",
@@ -398,43 +449,27 @@
           "sentiment": "호재",
           "cause_score": 5,
           "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        },
-        {
-          "title": "[특징주] 한온시스템, 외국인 장중 순매수 1위 부각에 13%대 강세",
-          "url": "https://www.tokenpost.kr/news/economy/368487",
-          "office": "tokenpost",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 오래됨"
         }
       ],
-      "cause_confidence": "중간",
-      "cause_summary": "[특징주]한온시스템, 전기차 열관리 시스템 사업 성장과 실적 개선 기대..."
+      "cause_confidence": "높음",
+      "cause_summary": "한온시스템 주가 22% 급등...2분기 호실적 전망"
     },
     {
       "ticker": "LG이노텍",
       "code": "011070",
-      "tomorrow_up_prob": "74%",
-      "entry": 1188000.0,
-      "target": 1247400,
-      "stop": 1152360,
-      "confidence": "상",
+      "tomorrow_up_prob": "68%",
+      "entry": 1178000.0,
+      "target": 1236900,
+      "stop": 1142660,
+      "confidence": "중",
       "reasons": [
-        "강세마감(0.77)",
         "정배열",
-        "RSI61.7 강세"
+        "RSI61.3 강세",
+        "호재"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
-        {
-          "title": "증권가 \"AI 반도체 기판 사업 수혜\"…LG이노텍 10%↑[특징주]",
-          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=02542006645482048",
-          "office": "edaily",
-          "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
         {
           "title": "[특징주] LG이노텍, 2분기 호실적 전망에 11% 급등",
           "url": "https://biz.chosun.com/stock/stock_general/2026/06/15/HOLBNHXX5NBZZG6OKHAIOXQF34/?utm_source=naver&utm_medium=original&utm_campaign=biz",
@@ -450,10 +485,18 @@
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[ET특징주]LG이노텍, 2분기 호실적 전망에 상승세",
+          "url": "https://www.etnews.com/20260615000172",
+          "office": "etnews",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "증권가 \"AI 반도체 기판 사업 수혜\"…LG이노텍 10%↑[특징주]"
+      "cause_summary": "[특징주] LG이노텍, 2분기 호실적 전망에 11% 급등"
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
