@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-15 15:16:05 KST",
+ "generated_at": "2026-06-15 15:30:49 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -57,6 +57,138 @@
  ],
  "suspects": [
   {
+   "code": "089030",
+   "name": "테크윙",
+   "sector": "기계·장비",
+   "pattern": "fade",
+   "prime": true,
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 66,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 30,
+    "spark": 11.2,
+    "fade": 9.0,
+    "ma10": 10.0,
+    "flow": 6.0,
+    "event": 0.0
+   },
+   "score_raw": 66,
+   "score_breakdown_raw": {
+    "base": 30,
+    "spark": 11.2,
+    "fade": 9.0,
+    "ma10": 10.0,
+    "flow": 6,
+    "event": 0.0
+   },
+   "price": 67900.0,
+   "change_pct": 3.98,
+   "high_pct": 13.32,
+   "fade_pct": 70.1,
+   "value_eok": 4858,
+   "ma10": 56745.0,
+   "ma10_margin_pct": 19.66,
+   "spark": {
+    "clusters": [
+     {
+      "time": "09:01",
+      "vol_x": 23.0,
+      "pct": 4.38,
+      "minutes": 3
+     },
+     {
+      "time": "09:06",
+      "vol_x": 25.9,
+      "pct": 0.99,
+      "minutes": 1
+     },
+     {
+      "time": "09:08",
+      "vol_x": 25.3,
+      "pct": 2.92,
+      "minutes": 2
+     },
+     {
+      "time": "09:11",
+      "vol_x": 19.3,
+      "pct": -1.35,
+      "minutes": 1
+     },
+     {
+      "time": "09:15",
+      "vol_x": 23.1,
+      "pct": -2.78,
+      "minutes": 2
+     },
+     {
+      "time": "09:18",
+      "vol_x": 10.3,
+      "pct": -1.57,
+      "minutes": 1
+     },
+     {
+      "time": "09:20",
+      "vol_x": 14.9,
+      "pct": -2.72,
+      "minutes": 1
+     },
+     {
+      "time": "09:40",
+      "vol_x": 9.6,
+      "pct": 0.99,
+      "minutes": 1
+     },
+     {
+      "time": "11:17",
+      "vol_x": 12.0,
+      "pct": 2.28,
+      "minutes": 2
+     }
+    ]
+   },
+   "spark_max_x": 25.9,
+   "spark_max_pct": 0.99,
+   "mega_flow": false,
+   "flow": {
+    "net_days": 3,
+    "today_buy": false,
+    "streak": 0,
+    "detail": [
+     {
+      "date": "0609",
+      "frgn": 891119,
+      "orgn": 133026
+     },
+     {
+      "date": "0610",
+      "frgn": 164842,
+      "orgn": -11798
+     },
+     {
+      "date": "0611",
+      "frgn": -179984,
+      "orgn": 146731
+     },
+     {
+      "date": "0612",
+      "frgn": 623028,
+      "orgn": -40634
+     },
+     {
+      "date": "0615",
+      "frgn": 0,
+      "orgn": 0
+     }
+    ]
+   },
+   "news": [],
+   "matched_events": [],
+   "theme": "반도체",
+   "theme_leader": false
+  },
+  {
    "code": "204320",
    "name": "HL만도",
    "sector": "운송장비·부품",
@@ -64,33 +196,32 @@
    "prime": true,
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 61,
+   "suspicion_score": 59,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
     "spark": 0.6,
-    "fade": 11.6,
+    "fade": 14.5,
     "ma10": 10.0,
     "flow": 4.0,
-    "event": 0.0,
-    "ai": 5
+    "event": 0.0
    },
-   "score_raw": 56,
+   "score_raw": 59,
    "score_breakdown_raw": {
     "base": 30,
     "spark": 0.6,
-    "fade": 11.6,
+    "fade": 14.5,
     "ma10": 10.0,
     "flow": 4,
     "event": 0.0
    },
-   "price": 69500.0,
-   "change_pct": 6.92,
+   "price": 70600.0,
+   "change_pct": 8.62,
    "high_pct": 17.85,
-   "fade_pct": 61.2,
-   "value_eok": 5245,
-   "ma10": 57200.0,
-   "ma10_margin_pct": 21.5,
+   "fade_pct": 51.7,
+   "value_eok": 5331,
+   "ma10": 57310.0,
+   "ma10_margin_pct": 23.19,
    "spark": {
     "clusters": [
      {
@@ -162,166 +293,7 @@
    ],
    "matched_events": [],
    "theme": "반도체",
-   "ai_verdict": {
-    "status": "ok",
-    "verdict": "CONFIRM",
-    "confidence": 72,
-    "reason": "고점 대비 61.2% fade로 급락했으나, 외국인 2거래일 연속 순매수(28.9억→0)에 기관 소규모 매도, 로봇/피지컬 AI 테마 뉴스가 수급 붕괴가 아닌 테마 수납매 흔들기로 해석됨.",
-    "risk_flags": [
-     "fade_pct 61.2% 고점 대비 깊은 조정",
-     "기관 6/11 대량 매도(-8.7억) 후 외국인 단독 수급",
-     "테마주 뉴스 후폭풍 리스크"
-    ],
-    "manual_check": "장중 분봉상 저가 구간 매도 물량 소화 후 반등 캔들 형성 여부 및 종가 69,500원 방어 여부",
-    "model": "kimi-k2.6"
-   },
    "theme_leader": true
-  },
-  {
-   "code": "089030",
-   "name": "테크윙",
-   "sector": "기계·장비",
-   "pattern": "fade",
-   "prime": true,
-   "shake": null,
-   "deep_shake": null,
-   "suspicion_score": 57,
-   "calibrated_prob": null,
-   "score_breakdown": {
-    "base": 30,
-    "spark": 11.2,
-    "fade": 9.7,
-    "ma10": 10.0,
-    "flow": 6.0,
-    "event": 0.0,
-    "ai": -10
-   },
-   "score_raw": 67,
-   "score_breakdown_raw": {
-    "base": 30,
-    "spark": 11.2,
-    "fade": 9.7,
-    "ma10": 10.0,
-    "flow": 6,
-    "event": 0.0
-   },
-   "price": 68100.0,
-   "change_pct": 4.29,
-   "high_pct": 13.32,
-   "fade_pct": 67.8,
-   "value_eok": 4789,
-   "ma10": 56765.0,
-   "ma10_margin_pct": 19.97,
-   "spark": {
-    "clusters": [
-     {
-      "time": "09:01",
-      "vol_x": 23.0,
-      "pct": 4.38,
-      "minutes": 3
-     },
-     {
-      "time": "09:06",
-      "vol_x": 26.0,
-      "pct": 0.99,
-      "minutes": 1
-     },
-     {
-      "time": "09:08",
-      "vol_x": 25.4,
-      "pct": 2.92,
-      "minutes": 2
-     },
-     {
-      "time": "09:11",
-      "vol_x": 19.3,
-      "pct": -1.35,
-      "minutes": 1
-     },
-     {
-      "time": "09:15",
-      "vol_x": 23.2,
-      "pct": -2.78,
-      "minutes": 2
-     },
-     {
-      "time": "09:18",
-      "vol_x": 10.3,
-      "pct": -1.57,
-      "minutes": 1
-     },
-     {
-      "time": "09:20",
-      "vol_x": 15.0,
-      "pct": -2.72,
-      "minutes": 1
-     },
-     {
-      "time": "09:40",
-      "vol_x": 9.6,
-      "pct": 0.99,
-      "minutes": 1
-     },
-     {
-      "time": "11:17",
-      "vol_x": 12.0,
-      "pct": 2.28,
-      "minutes": 2
-     }
-    ]
-   },
-   "spark_max_x": 26.0,
-   "spark_max_pct": 0.99,
-   "mega_flow": false,
-   "flow": {
-    "net_days": 3,
-    "today_buy": false,
-    "streak": 0,
-    "detail": [
-     {
-      "date": "0609",
-      "frgn": 891119,
-      "orgn": 133026
-     },
-     {
-      "date": "0610",
-      "frgn": 164842,
-      "orgn": -11798
-     },
-     {
-      "date": "0611",
-      "frgn": -179984,
-      "orgn": 146731
-     },
-     {
-      "date": "0612",
-      "frgn": 623028,
-      "orgn": -40634
-     },
-     {
-      "date": "0615",
-      "frgn": 0,
-      "orgn": 0
-     }
-    ]
-   },
-   "news": [],
-   "matched_events": [],
-   "theme": "반도체",
-   "ai_verdict": {
-    "status": "ok",
-    "verdict": "REJECT",
-    "confidence": 78,
-    "reason": "고점 대비 67.8% fade와 장중 13.32% 급등 후 4.29% 마감은 급락폭이 컸으나, 09:15-09:20 연속 음봉 클러스터(총 -7.07%)와 외국인 3일 순매수 후 금일 데이터 부재, 뉴스/이벤트 공백 상황에서 막판 회복 없이 저가권 유지로 투매성 종가 형태.",
-    "risk_flags": [
-     "고점 대비 과도한 fade(67.8%)",
-     "외국인 수급 금일 미확인",
-     "막판 회복 부재 저가 마감"
-    ],
-    "manual_check": "장마감 직전 30분 분봉 추세 및 외국인/기관 순매수 여부 확인",
-    "model": "kimi-k2.6"
-   },
-   "theme_leader": false
   },
   {
    "code": "035420",
@@ -349,13 +321,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 249000.0,
-   "change_pct": 0.81,
+   "price": 248000.0,
+   "change_pct": 0.4,
    "high_pct": 4.25,
-   "fade_pct": 81.0,
-   "value_eok": 4714,
-   "ma10": 255800.0,
-   "ma10_margin_pct": -2.66,
+   "fade_pct": 90.5,
+   "value_eok": 5016,
+   "ma10": 255700.0,
+   "ma10_margin_pct": -3.01,
    "spark": {
     "clusters": []
    },
@@ -396,6 +368,14 @@
    },
    "news": [
     {
+     "title": "네이버 쇼핑앱, 4월 역전 이어 5월 격차 확대…11번가 추월 굳혔다",
+     "summary": "네이버의 인공지능(AI) 쇼핑앱 네이버플러스 스토어(네플스)가 지난달 월간 활성 이용자(MAU) 875만명을 기록하며 성장세를 이어갔다. 출시 초기만 해도 11번가에 뒤처졌지만 지난 4월 처음으로 MAU를 앞지른 데 이어 지난달에는 격차를 50만명..",
+     "office": "디지털데일리",
+     "datetime": "202606151520",
+     "url": "https://n.news.naver.com/mnews/article/138/0002230935",
+     "sentiment": "호재"
+    },
+    {
      "title": "샘 올트먼, 방한 연기…AI 협력 기대감에도 네이버는?",
      "summary": "■ 용감한 토크쇼 '직설' - 손석우 앵커 경제평론가 (건국대 겸임교수), 송재경 디멘젼투자자문투자부문 대표, 길건우 에프알자산관리 대표, 신얼 상상인증권 투자전략팀장 - 샘 올트먼, 방한 연기…AI 협력 기대감에도 네이버는? - AI 빅테크, 잇따라",
      "office": "SBS Biz",
@@ -411,12 +391,12 @@
     "peak_date": "20260612",
     "peak_value_eok": 13016,
     "peak_high_pct": 17.41,
-    "ma20": 229570.0,
-    "ma20_margin_pct": 8.46,
+    "ma20": 229520.0,
+    "ma20_margin_pct": 8.05,
     "ivtr_net": 616499,
     "ivtr_days": 4,
     "ivtr_eok": 1685,
-    "cause_summary": "샘 올트먼, 방한 연기…AI 협력 기대감에도 네이버는?",
+    "cause_summary": "네이버 쇼핑앱, 4월 역전 이어 5월 격차 확대…11번가 추월 굳혔다",
     "was_theme_leader": false
    },
    "theme_leader": false
@@ -447,13 +427,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 223500.0,
-   "change_pct": -3.25,
+   "price": 225000.0,
+   "change_pct": -2.6,
    "high_pct": 5.63,
-   "fade_pct": 157.7,
-   "value_eok": 5383,
-   "ma10": 211640.0,
-   "ma10_margin_pct": 5.6,
+   "fade_pct": 146.2,
+   "value_eok": 5510,
+   "ma10": 211790.0,
+   "ma10_margin_pct": 6.24,
    "spark": {
     "clusters": []
    },
@@ -500,8 +480,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 14987,
     "peak_high_pct": 15.27,
-    "ma20": 203745.0,
-    "ma20_margin_pct": 9.7,
+    "ma20": 203820.0,
+    "ma20_margin_pct": 10.39,
     "ivtr_net": 232829,
     "ivtr_days": 3,
     "ivtr_eok": 540,
@@ -536,13 +516,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 346000.0,
-   "change_pct": -4.16,
+   "price": 347000.0,
+   "change_pct": -3.88,
    "high_pct": 2.08,
-   "fade_pct": 300.0,
-   "value_eok": 4237,
-   "ma10": 295350.0,
-   "ma10_margin_pct": 17.15,
+   "fade_pct": 286.7,
+   "value_eok": 4422,
+   "ma10": 295450.0,
+   "ma10_margin_pct": 17.45,
    "spark": {
     "clusters": []
    },
@@ -606,8 +586,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 20588,
     "peak_high_pct": 28.01,
-    "ma20": 304525.0,
-    "ma20_margin_pct": 13.62,
+    "ma20": 304575.0,
+    "ma20_margin_pct": 13.93,
     "ivtr_net": 1874444,
     "ivtr_days": 2,
     "ivtr_eok": 6607,
