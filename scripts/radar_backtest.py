@@ -142,6 +142,10 @@ def ai_predict():
     웹 AI 라우트(3샘플 중앙값 합의)를 그대로 호출해 로직 중복 없이 동일 예측을 남긴다.
     익일 evaluate()의 result와 대조해 AI 적중률·확률 보정을 검증하는 루프의 입력.
     종목 단위 실패는 건너뜀(백테스트 본 작업 보호). RADAR_AI_PREDICT=0으로 비활성.
+
+    실험(visible_experimental=재매집) 카드도 기록 대상 — 현 파이프라인의 유일 산출물이라
+    AI 자료를 모아야 추후 코어 승격·괴리 분석이 가능. 단 ai_stats/divergence 표시는 여전히
+    코어(write_performance에 core만 전달)만 집계하므로, 지금은 history에 '기록만' 쌓인다(#2a).
     """
     if os.environ.get("RADAR_AI_PREDICT", "").strip() == "0":
         return
@@ -157,8 +161,8 @@ def ai_predict():
     changed = False
     n_ok = 0
     for code, s in hist.get("suspects", {}).items():
-        if not s.get("final") or s.get("visible_experimental") or s.get("ai_pred"):
-            continue  # 마감 카드 잔존 종목만, 이미 기록된 건 재호출 안 함
+        if not s.get("final") or s.get("ai_pred"):
+            continue  # 마감 카드 잔존 종목만(실험 재매집 포함), 이미 기록된 건 재호출 안 함
         try:
             req = urllib.request.Request(
                 AI_ENDPOINT.format(code=code), headers={"User-Agent": "radar-backtest"})

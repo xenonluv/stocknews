@@ -172,7 +172,9 @@ export interface RadarData {
   market_session: "open" | "closed";
   disclaimer: string;
   params: {
-    /** 재반등(오늘) 트리거: 당일 고가 등락률 허용 범위 [하한, 상한] */
+    /** 재반등(오늘) 트리거: 당일 종가/현재 등락률 허용 범위 [하한, 상한] */
+    reaccum_change_range?: [number, number];
+    /** 구버전 JSON 하위호환: 예전에는 당일 고가 등락률 범위로 기록 */
     reaccum_high_range?: [number, number];
     /** 재반등: 10분봉 몸통% 하한 */
     reignition_body_pct?: number;

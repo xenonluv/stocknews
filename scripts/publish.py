@@ -22,7 +22,8 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RADAR_JSON = os.path.join(REPO, "web", "data", "radar.json")
 HISTORY_DIR = os.path.join(REPO, "data", "radar_history")
 DISCLAIMER = "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다."
-RADAR_PASSTHRU = ("--reaccum-high-min", "--reaccum-high-max",
+RADAR_PASSTHRU = ("--reaccum-change-min", "--reaccum-change-max",
+                  "--reaccum-high-min", "--reaccum-high-max",
                   "--reignition-body-pct", "--reignition-value-10m",
                   "--kimi-mode", "--kimi-max", "--kimi-timeout",
                   "--kimi-window-start", "--kimi-window-end",

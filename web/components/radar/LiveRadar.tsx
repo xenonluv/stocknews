@@ -125,6 +125,7 @@ export function LiveRadar({ initial }: { initial: RadarData }) {
       (!selectedEvent || s.matched_events.some((m) => m.id === selectedEvent)) &&
       (!selectedTheme || inSelectedTheme(s))
   );
+  const reaccumChangeRange = data.params.reaccum_change_range ?? data.params.reaccum_high_range;
 
   return (
     <>
@@ -143,13 +144,13 @@ export function LiveRadar({ initial }: { initial: RadarData }) {
           <p className="text-xs text-muted-foreground">
             과거 폭등({data.params.explosion_value_eok?.toLocaleString() ?? "1,000"}억+ · 고가 +
             {data.params.explosion_high_pct ?? 13}%, 최근 {data.params.explosion_window ?? 6}거래일) → 식음(MA20 위 · 투신 매집) → 오늘 재반등
-            {data.params.reaccum_high_range &&
-              ` (고가 ${data.params.reaccum_high_range[0]}~${data.params.reaccum_high_range[1]}%`}
+            {reaccumChangeRange &&
+              ` (종가/현재 ${reaccumChangeRange[0]}~${reaccumChangeRange[1]}%`}
             {data.params.reignition_body_pct != null &&
               ` · 10분봉 몸통 ${data.params.reignition_body_pct}%+`}
             {data.params.reignition_value_10m_eok != null &&
               ` · 10분봉 거래대금 ${data.params.reignition_value_10m_eok}억+`}
-            {data.params.reaccum_high_range && ")"}
+            {reaccumChangeRange && ")"}
             {data.params.kimi_mode != null &&
               data.params.kimi_mode !== "off" &&
               ` · Kimi ${fmtHHMM(data.params.kimi_window?.[0])}~${fmtHHMM(data.params.kimi_window?.[1])}`}
