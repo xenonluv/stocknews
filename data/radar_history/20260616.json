@@ -4,7 +4,7 @@
   "035420": {
    "name": "NAVER",
    "sector": "IT 서비스",
-   "entry": 244000.0,
+   "entry": 241250.0,
    "score": 0,
    "breakdown": {
     "base": 0,
@@ -14,13 +14,13 @@
     "flow": 0,
     "event": 0
    },
-   "change_pct": -1.61,
+   "change_pct": -2.72,
    "high_pct": 7.06,
-   "fade_pct": 122.9,
+   "fade_pct": 138.6,
    "pattern": "reaccum",
    "prime": false,
    "theme": "전쟁",
-   "value_eok": 4826,
+   "value_eok": 5025,
    "theme_leader": false,
    "spark_max_x": 0.0,
    "spark_max_pct": null,
@@ -35,8 +35,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 13016,
     "peak_high_pct": 17.41,
-    "ma20": 231545.0,
-    "ma20_margin_pct": 5.38,
+    "ma20": 231407.5,
+    "ma20_margin_pct": 4.25,
     "ivtr_net": 605116,
     "ivtr_days": 4,
     "ivtr_eok": 1657,
@@ -118,7 +118,7 @@
    "pattern": "reaccum",
    "prime": false,
    "theme": "반도체",
-   "value_eok": 2514,
+   "value_eok": 2584,
    "theme_leader": false,
    "spark_max_x": 0.0,
    "spark_max_pct": null,
@@ -184,7 +184,7 @@
    "first_seen": "2026-06-16 11:01:15 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": false
   },
   "439960": {
    "name": "코스모로보틱스",
@@ -223,12 +223,12 @@
    "first_seen": "2026-06-16 11:16:03 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": false
   },
   "067310": {
    "name": "하나마이크론",
    "sector": "전기·전자",
-   "entry": 49850.0,
+   "entry": 49450.0,
    "score": 0,
    "breakdown": {
     "base": 0,
@@ -238,13 +238,13 @@
     "flow": 0,
     "event": 0
    },
-   "change_pct": -2.06,
+   "change_pct": -2.85,
    "high_pct": 4.91,
-   "fade_pct": 142.0,
+   "fade_pct": 158.0,
    "pattern": "reaccum",
    "prime": false,
    "theme": "반도체",
-   "value_eok": 1041,
+   "value_eok": 1086,
    "theme_leader": false,
    "spark_max_x": 0.0,
    "spark_max_pct": null,
@@ -259,8 +259,8 @@
     "peak_date": "20260611",
     "peak_value_eok": 2044,
     "peak_high_pct": 17.59,
-    "ma20": 46102.5,
-    "ma20_margin_pct": 8.13,
+    "ma20": 46082.5,
+    "ma20_margin_pct": 7.31,
     "ivtr_net": 767669,
     "ivtr_days": 6,
     "ivtr_eok": 344,
@@ -310,16 +310,16 @@
    "first_seen": "2026-06-16 12:16:05 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": false
   },
   "069540": {
    "name": "빛과전자",
    "sector": "전기·전자",
    "entry": 3635.0,
-   "score": 50,
+   "score": 51,
    "breakdown": {
     "base": 30,
-    "spark": 7.1,
+    "spark": 8.1,
     "fade": 12.3,
     "ma10": 0.6,
     "flow": 0,
@@ -331,9 +331,9 @@
    "pattern": "fade",
    "prime": false,
    "theme": "반도체",
-   "value_eok": 701,
+   "value_eok": 712,
    "theme_leader": false,
-   "spark_max_x": 19.3,
+   "spark_max_x": 20.9,
    "spark_max_pct": -0.36,
    "mega_flow": false,
    "flow_today_buy": false,
@@ -350,5 +350,5 @@
    "final": true
   }
  },
- "as_of": "2026-06-16 13:15:55 KST"
+ "as_of": "2026-06-16 13:31:16 KST"
 }
