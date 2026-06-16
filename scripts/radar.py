@@ -504,9 +504,22 @@ def scan_reaccum_candidate(rec, p, events):
     fade_pct = (now["high"] - now["price"]) / denom * 100 if denom > 0 else 0.0
     ma10_margin = (now["price"] / ma10 - 1) * 100 if ma10 else 0.0
     ma20_margin = (now["price"] / ma20 - 1) * 100 if ma20 else 0.0
-    empty_breakdown = {"base": REACCUM_SCORE, "spark": 0, "fade": 0,
-                       "ma10": 0, "flow": 0, "event": 0}
-    raw_breakdown = {k: 0 for k in empty_breakdown}
+    # ── 변별 점수(표시 전용 '강도') — 검증된 적중확률이 아니라 셋업을 얼마나 강하게 충족했나의
+    #    순위. raw(score_raw)는 0 유지 = 실험 격리라 코어 튜닝에 미반영(B: 표본 쌓이면 데이터로 검증).
+    re_value_max = max((b["value_eok"] for b in rbars), default=0)
+    re_body_max = max((b["body_pct"] for b in rbars), default=0.0)
+    peak_eok = int(float(rec.get("peak_value_eok") or 0))
+    breakdown = {
+        "base": REACCUM_SCORE,
+        "re_value": round(min(12, max(0, (re_value_max - 30) / 270 * 12))),   # 재반등 거래대금 30~300억→0~12
+        "re_body": round(min(6, max(0, (re_body_max - 2) / 4 * 6))),          # 재반등 몸통% 2~6%→0~6
+        "re_count": min(6, max(0, (len(rbars) - 1) * 3)),                     # 자격 봉 1→0·2→3·3+→6
+        "flow": round(min(8, max(0, ivtr_eok / 500 * 8))),                    # 투신 매집 ~500억→8
+        "explosion": round(min(6, max(0, (peak_eok - 1000) / 9000 * 6))),     # 폭발 규모 1천억~1조→0~6
+    }
+    score = min(95, REACCUM_SCORE + breakdown["re_value"] + breakdown["re_body"]
+                + breakdown["re_count"] + breakdown["flow"] + breakdown["explosion"])
+    raw_breakdown = {k: 0 for k in breakdown}
     # 원인/테마("왜 올랐나"): 폭발시점 캡처본(registry) 우선 — 폭발 당일 catalyst라 신선(0 API).
     # 없으면(seed/과거폭발) 재매집 시점 보강 fetch. 표시 전용 — 점수 미반영.
     theme = rec.get("theme") or ""
@@ -527,9 +540,9 @@ def scan_reaccum_candidate(rec, p, events):
         "pattern": "reaccum",
         "shake": None,
         "deep_shake": None,
-        "suspicion_score": REACCUM_SCORE,
+        "suspicion_score": score,
         "calibrated_prob": None,
-        "score_breakdown": empty_breakdown,
+        "score_breakdown": breakdown,
         "score_raw": 0,
         "score_breakdown_raw": raw_breakdown,
         "price": now["price"],

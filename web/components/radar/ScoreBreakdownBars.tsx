@@ -1,6 +1,8 @@
 import type { ScoreBreakdown } from "@/types/radar";
 
-const ITEMS: { key: keyof ScoreBreakdown; label: string; max: number }[] = [
+type Item = { key: keyof ScoreBreakdown; label: string; max: number };
+
+const FADE_ITEMS: Item[] = [
   { key: "spark", label: "분봉 스파크", max: 15 },
   { key: "fade", label: "고점 후퇴·흔들기 패턴", max: 15 },
   { key: "flow", label: "외인·기관 수급", max: 15 },
@@ -10,11 +12,24 @@ const ITEMS: { key: keyof ScoreBreakdown; label: string; max: number }[] = [
   { key: "ai", label: "AI 검증 보정", max: 10 },
 ];
 
+// 재매집(reaccum) 변별 가산점 — 표시 전용 '강도'(검증된 확률 아님)
+const REACCUM_ITEMS: Item[] = [
+  { key: "re_value", label: "재반등 거래대금", max: 12 },
+  { key: "re_body", label: "재반등 몸통%", max: 6 },
+  { key: "re_count", label: "재반등 봉 수", max: 6 },
+  { key: "flow", label: "투신 매집", max: 8 },
+  { key: "explosion", label: "폭발 규모", max: 6 },
+  { key: "ai", label: "AI 검증 보정", max: 10 },
+];
+
 /**
  * 수상함 점수 해부도 — 각 가점 항목의 기여를 막대로 투명 공개.
- * (base 30점은 전 조건 통과 자체의 기본 점수라 생략)
+ * (base 점수는 전 조건 통과 자체의 기본 점수라 생략) 재매집 카드는 재매집 항목으로 표시.
  */
 export function ScoreBreakdownBars({ breakdown }: { breakdown: ScoreBreakdown }) {
+  const isReaccum =
+    breakdown != null && (breakdown.re_value != null || breakdown.re_count != null);
+  const ITEMS = isReaccum ? REACCUM_ITEMS : FADE_ITEMS;
   return (
     <ul className="space-y-1">
       {ITEMS.map(({ key, label, max }) => {

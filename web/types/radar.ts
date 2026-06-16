@@ -58,6 +58,11 @@ export interface ScoreBreakdown {
   ai?: number;
   /** 메가스파크(≥40x)×당일 수급매수 가점 — 표시 점수 전용 (raw에는 없음) */
   mega?: number;
+  // ── 재매집(reaccum) 변별 가산점 — 표시 전용 '강도'(검증된 확률 아님, raw에는 없음) ──
+  re_value?: number; // 재반등 10분봉 거래대금
+  re_body?: number; // 재반등 몸통%
+  re_count?: number; // 자격 봉 개수
+  explosion?: number; // 폭발 규모(peak 거래대금)
 }
 
 /** 흔들기(눌림 후 재상승) 패턴 증거 — pattern === "shakeout"일 때만 */
