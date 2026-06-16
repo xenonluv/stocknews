@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-16 09:01:12 KST",
+ "generated_at": "2026-06-16 09:17:03 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -40,7 +40,7 @@
   "explosion_window": 6,
   "explosion_rank_n": 30
  },
- "universe_count": 39,
+ "universe_count": 47,
  "events": [
   {
    "id": "2026-06-17_FOMC 금리 결정 (",
@@ -82,13 +82,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 260500.0,
-   "change_pct": 5.04,
-   "high_pct": 5.24,
-   "fade_pct": 3.8,
-   "value_eok": 412,
-   "ma10": 254550.0,
-   "ma10_margin_pct": 2.34,
+   "price": 252500.0,
+   "change_pct": 1.81,
+   "high_pct": 7.06,
+   "fade_pct": 74.3,
+   "value_eok": 1954,
+   "ma10": 253800.0,
+   "ma10_margin_pct": -0.51,
    "spark": {
     "clusters": []
    },
@@ -154,8 +154,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 13016,
     "peak_high_pct": 17.41,
-    "ma20": 232345.0,
-    "ma20_margin_pct": 12.12,
+    "ma20": 231970.0,
+    "ma20_margin_pct": 8.85,
     "ivtr_net": 605116,
     "ivtr_days": 4,
     "ivtr_eok": 1657,
@@ -190,13 +190,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 535000.0,
-   "change_pct": 0.75,
+   "price": 521000.0,
+   "change_pct": -1.88,
    "high_pct": 1.69,
-   "fade_pct": 55.6,
-   "value_eok": 8,
-   "ma10": 485500.0,
-   "ma10_margin_pct": 10.2,
+   "fade_pct": 211.1,
+   "value_eok": 73,
+   "ma10": 484300.0,
+   "ma10_margin_pct": 7.58,
    "spark": {
     "clusters": []
    },
@@ -243,8 +243,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 4605,
     "peak_high_pct": 23.61,
-    "ma20": 492150.0,
-    "ma20_margin_pct": 8.71,
+    "ma20": 491550.0,
+    "ma20_margin_pct": 5.99,
     "ivtr_net": 81261,
     "ivtr_days": 2,
     "ivtr_eok": 551,
@@ -279,13 +279,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 360500.0,
-   "change_pct": 3.89,
+   "price": 343000.0,
+   "change_pct": -1.15,
    "high_pct": 4.61,
-   "fade_pct": 15.6,
-   "value_eok": 139,
-   "ma10": 302200.0,
-   "ma10_margin_pct": 19.29,
+   "fade_pct": 125.0,
+   "value_eok": 644,
+   "ma10": 300450.0,
+   "ma10_margin_pct": 14.16,
    "spark": {
     "clusters": []
    },
@@ -324,29 +324,20 @@
      }
     ]
    },
-   "news": [
-    {
-     "title": "한미반도체, '스페이스X' 주식 500억원 취득…&quot;AI·우주항공 성장성 투...",
-     "summary": "한미반도체가 일론 머스크가 이끄는 미국 민간 우주기업 스페이스X에 약 500억원 규모의 투자를 단행했다. 시장은 인공지능(AI)과 위성통신, 우주항공 산업의 성장 가능성에 주목한 전략적 투자로 보고 있다. 한미반도체는 15일 금융감독원...",
-     "office": "파이낸셜뉴스",
-     "datetime": "202606151044",
-     "url": "https://n.news.naver.com/mnews/article/014/0005534845",
-     "sentiment": "호재"
-    }
-   ],
+   "news": [],
    "matched_events": [],
-   "theme": "반도체",
+   "theme": "전쟁",
    "visible_experimental": true,
    "reaccum": {
     "peak_date": "20260612",
     "peak_value_eok": 20588,
     "peak_high_pct": 28.01,
-    "ma20": 304150.0,
-    "ma20_margin_pct": 18.53,
+    "ma20": 303275.0,
+    "ma20_margin_pct": 13.1,
     "ivtr_net": 1728583,
     "ivtr_days": 2,
     "ivtr_eok": 6098,
-    "cause_summary": "한미반도체, '스페이스X' 주식 500억원 취득…&quot;AI·우주항공 성장성 투...",
+    "cause_summary": "",
     "was_theme_leader": false
    },
    "theme_leader": false
