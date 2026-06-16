@@ -4,7 +4,7 @@
   "035420": {
    "name": "NAVER",
    "sector": "IT 서비스",
-   "entry": 251500.0,
+   "entry": 247000.0,
    "score": 0,
    "breakdown": {
     "base": 0,
@@ -14,13 +14,13 @@
     "flow": 0,
     "event": 0
    },
-   "change_pct": 1.41,
+   "change_pct": -0.4,
    "high_pct": 7.06,
-   "fade_pct": 80.0,
+   "fade_pct": 105.7,
    "pattern": "reaccum",
    "prime": false,
    "theme": "반도체",
-   "value_eok": 2271,
+   "value_eok": 2735,
    "theme_leader": false,
    "spark_max_x": 0.0,
    "spark_max_pct": null,
@@ -35,17 +35,15 @@
     "peak_date": "20260612",
     "peak_value_eok": 13016,
     "peak_high_pct": 17.41,
-    "ma20": 231920.0,
-    "ma20_margin_pct": 8.44,
+    "ma20": 231695.0,
+    "ma20_margin_pct": 6.61,
     "ivtr_net": 605116,
     "ivtr_days": 4,
     "ivtr_eok": 1657,
-    "cause_summary": "&quot;본품 또 사지 말고 리필 어때요?&quot;...로레알, 리필 캠페인 진행",
+    "cause_summary": "스톤브릿지벤처스, 스포츠AI 플코에 40억 투자[마켓인]",
     "was_theme_leader": false
    },
-   "matched_events": [
-    "2026-06-17_FOMC 금리 결정 ("
-   ],
+   "matched_events": [],
    "first_seen": "2026-06-16 09:01:12 KST",
    "evaluated": false,
    "result": null,
@@ -54,7 +52,7 @@
   "039030": {
    "name": "이오테크닉스",
    "sector": "기계·장비",
-   "entry": 533000.0,
+   "entry": 512000.0,
    "score": 0,
    "breakdown": {
     "base": 0,
@@ -64,13 +62,13 @@
     "flow": 0,
     "event": 0
    },
-   "change_pct": 0.38,
+   "change_pct": -3.58,
    "high_pct": 1.69,
-   "fade_pct": 77.8,
+   "fade_pct": 311.1,
    "pattern": "reaccum",
    "prime": false,
    "theme": "전쟁",
-   "value_eok": 93,
+   "value_eok": 127,
    "theme_leader": false,
    "spark_max_x": 0.0,
    "spark_max_pct": null,
@@ -85,8 +83,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 4605,
     "peak_high_pct": 23.61,
-    "ma20": 492050.0,
-    "ma20_margin_pct": 8.32,
+    "ma20": 491000.0,
+    "ma20_margin_pct": 4.28,
     "ivtr_net": 81261,
     "ivtr_days": 2,
     "ivtr_eok": 551,
@@ -102,7 +100,7 @@
   "042700": {
    "name": "한미반도체",
    "sector": "기계·장비",
-   "entry": 346000.0,
+   "entry": 335500.0,
    "score": 0,
    "breakdown": {
     "base": 0,
@@ -112,13 +110,13 @@
     "flow": 0,
     "event": 0
    },
-   "change_pct": -0.29,
+   "change_pct": -3.31,
    "high_pct": 4.61,
-   "fade_pct": 106.2,
+   "fade_pct": 171.9,
    "pattern": "reaccum",
    "prime": false,
    "theme": "전쟁",
-   "value_eok": 855,
+   "value_eok": 1062,
    "theme_leader": false,
    "spark_max_x": 0.0,
    "spark_max_pct": null,
@@ -133,8 +131,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 20588,
     "peak_high_pct": 28.01,
-    "ma20": 303425.0,
-    "ma20_margin_pct": 14.03,
+    "ma20": 302900.0,
+    "ma20_margin_pct": 10.76,
     "ivtr_net": 1728583,
     "ivtr_days": 2,
     "ivtr_eok": 6098,
@@ -148,5 +146,5 @@
    "final": true
   }
  },
- "as_of": "2026-06-16 09:32:11 KST"
+ "as_of": "2026-06-16 09:45:58 KST"
 }
