@@ -1,52 +1,16 @@
 {
-  "as_of": "2026-06-16 10:52 KST",
+  "as_of": "2026-06-16 11:07 KST",
   "intraday_rank": [
-    {
-      "ticker": "LG이노텍",
-      "code": "011070",
-      "tomorrow_up_prob": "73%",
-      "entry": 1290000.0,
-      "target": 1354500,
-      "stop": 1251300,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.88)",
-        "정배열",
-        "RSI65.5 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "LG이노텍 주가 연일 상승...아이폰 교체 수혜 전망",
-          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3609481",
-          "office": "gukjenews",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
-        },
-        {
-          "title": "[특징주]삼성전기·LG이노텍 주가 동반 상승...제2의 반도체주될까",
-          "url": "https://www.g-enews.com/view.php?ud=202606151537014110c5557f8da8_1",
-          "office": "g-enews",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "LG이노텍 주가 연일 상승...아이폰 교체 수혜 전망"
-    },
     {
       "ticker": "신세계",
       "code": "004170",
-      "tomorrow_up_prob": "73%",
-      "entry": 754000.0,
-      "target": 791700,
-      "stop": 731380,
+      "tomorrow_up_prob": "74%",
+      "entry": 760000.0,
+      "target": 798000,
+      "stop": 737200,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.86)",
+        "강세마감(0.95)",
         "정배열",
         "MACD강세"
       ],
@@ -77,17 +41,17 @@
       "ticker": "NAVER",
       "code": "035420",
       "tomorrow_up_prob": "71%",
-      "entry": 248000.0,
-      "target": 260400,
-      "stop": 240560,
+      "entry": 249000.0,
+      "target": 261450,
+      "stop": 241530,
       "confidence": "상",
       "reasons": [
         "정배열",
-        "RSI55.5 강세",
+        "RSI55.8 강세",
         "일목 구름위"
       ],
       "risk": "약한 마감",
-      "day_change": -1.01,
+      "day_change": 0.4,
       "cause_news": [
         {
           "title": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1...",
@@ -102,19 +66,143 @@
       "cause_summary": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1..."
     },
     {
-      "ticker": "LIG디펜스앤에어로스페이스",
-      "code": "079550",
+      "ticker": "HL만도",
+      "code": "204320",
+      "tomorrow_up_prob": "70%",
+      "entry": 76300.0,
+      "target": 80115,
+      "stop": 74011,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.83)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "HL만도 주가, 웃음꽃... 목표주가는?",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1163559",
+          "office": "ggilbo",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 인과표현, 재료"
+        },
+        {
+          "title": "[속보] HL만도 VI 수차례 발동, 주가 급등세…주초장 7만원대 중반 돌파",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582053",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "HL만도 주가, 웃음꽃... 목표주가는?"
+    },
+    {
+      "ticker": "DL이앤씨",
+      "code": "375500",
       "tomorrow_up_prob": "68%",
-      "entry": 1009000.0,
-      "target": 1059450,
-      "stop": 978730,
+      "entry": 87500.0,
+      "target": 91875,
+      "stop": 84875,
       "confidence": "중",
       "reasons": [
-        "RSI66.6 강세",
-        "거래량2.66배",
+        "RSI61.7 강세",
+        "거래량2.96배",
         "호재"
       ],
       "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[특징주] DL이앤씨, 이란 재건 기대에 5500억 수주까지…15%대 급등",
+          "url": "https://www.tokenpost.kr/news/economy/369708",
+          "office": "tokenpost",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "\"지금 주가의 두배 뛴다\" DL이앤씨, 미·이란 종전 최대 수혜… 삼성E&A...",
+          "url": "http://www.fnnews.com/news/202606160954134577",
+          "office": "fnnews",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
+        },
+        {
+          "title": "[속보] 건설주 강세 랠리…대우건설·DL이앤씨 급등에 투자심리 개선",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582287",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] DL이앤씨, 이란 재건 기대에 5500억 수주까지…15%대 급등"
+    },
+    {
+      "ticker": "미래에셋생명",
+      "code": "085620",
+      "tomorrow_up_prob": "67%",
+      "entry": 33650.0,
+      "target": 35332,
+      "stop": 32640,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.81)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "RSI82.0 과매수, Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "생명보험주 동반 강세…미래에셋생명 14% 급등에 업종 주목",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582294",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "생명보험주 동반 강세…미래에셋생명 14% 급등에 업종 주목"
+    },
+    {
+      "ticker": "이오테크닉스",
+      "code": "039030",
+      "tomorrow_up_prob": "64%",
+      "entry": 501000.0,
+      "target": 526050,
+      "stop": 485970,
+      "confidence": "중",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI51.5 강세"
+      ],
+      "risk": "약한 마감",
+      "day_change": -5.08
+    },
+    {
+      "ticker": "LIG디펜스앤에어로스페이스",
+      "code": "079550",
+      "tomorrow_up_prob": "64%",
+      "entry": 999000.0,
+      "target": 1048950,
+      "stop": 969030,
+      "confidence": "중",
+      "reasons": [
+        "RSI66.0 강세",
+        "거래량2.73배",
+        "호재"
+      ],
+      "risk": "약한 마감",
       "day_change": null,
       "related_news": [
         {
@@ -138,169 +226,17 @@
       ]
     },
     {
-      "ticker": "퍼스텍",
-      "code": "010820",
-      "tomorrow_up_prob": "67%",
-      "entry": 9380.0,
-      "target": 9849,
-      "stop": 9099,
-      "confidence": "중",
-      "reasons": [
-        "MACD강세",
-        "거래량4.59배",
-        "호재"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "방산·건설·항공주 강세…퍼스텍·상지건설 上 이탈에 투자자 관심 집...",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582291",
-          "office": "cbci",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "방산·건설·항공주 강세…퍼스텍·상지건설 上 이탈에 투자자 관심 집..."
-    },
-    {
-      "ticker": "DL이앤씨",
-      "code": "375500",
-      "tomorrow_up_prob": "67%",
-      "entry": 87100.0,
-      "target": 91455,
-      "stop": 84487,
-      "confidence": "중",
-      "reasons": [
-        "RSI61.3 강세",
-        "거래량2.9배",
-        "호재"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] DL이앤씨, 이란 재건 기대에 5500억 수주까지…15%대 급등",
-          "url": "https://www.tokenpost.kr/news/economy/369708",
-          "office": "tokenpost",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "DL이앤씨, 경제 제재 해제 기대 속 이란 인프라 수혜주로 부상",
-          "url": "https://www.gokorea.kr/news/articleView.html?idxno=869237",
-          "office": "gokorea",
-          "sentiment": "악재",
-          "cause_score": 12,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 악재, 당일"
-        },
-        {
-          "title": "[속보] 건설주 강세 랠리…대우건설·DL이앤씨 급등에 투자심리 개선",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582287",
-          "office": "cbci",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] DL이앤씨, 이란 재건 기대에 5500억 수주까지…15%대 급등"
-    },
-    {
-      "ticker": "미래에셋생명",
-      "code": "085620",
-      "tomorrow_up_prob": "66%",
-      "entry": 34000.0,
-      "target": 35700,
-      "stop": 32980,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.96)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "RSI82.3 과매수, Stoch 과매수",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "생명보험주 동반 강세…미래에셋생명 14% 급등에 업종 주목",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582294",
-          "office": "cbci",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "생명보험주 동반 강세…미래에셋생명 14% 급등에 업종 주목"
-    },
-    {
-      "ticker": "OCI홀딩스",
-      "code": "010060",
-      "tomorrow_up_prob": "65%",
-      "entry": 304000.0,
-      "target": 319200,
-      "stop": 294880,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.72)",
-        "RSI50.4 강세",
-        "호재"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "OCI홀딩스 주가, 6월 16일 장중 303,000원 7.07% 상승",
-          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16096468",
-          "office": "topstarnews",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        },
-        {
-          "title": "미국 태양광 제조업 부활…한화솔루션·OCI홀딩스 재평가 기대",
-          "url": "https://www.asiatoday.co.kr/kn/view.php?key=20260612010004360",
-          "office": "asiatoday",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 인과표현, 재료, 오래됨"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "OCI홀딩스 주가, 6월 16일 장중 303,000원 7.07% 상승"
-    },
-    {
-      "ticker": "이오테크닉스",
-      "code": "039030",
-      "tomorrow_up_prob": "64%",
-      "entry": 504000.0,
-      "target": 529200,
-      "stop": 488880,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI51.8 강세"
-      ],
-      "risk": "약한 마감",
-      "day_change": -5.65
-    },
-    {
       "ticker": "SK이터닉스",
       "code": "475150",
-      "tomorrow_up_prob": "63%",
-      "entry": 53600.0,
-      "target": 56280,
-      "stop": 51992,
+      "tomorrow_up_prob": "64%",
+      "entry": 53500.0,
+      "target": 56175,
+      "stop": 51895,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.77)",
-        "RSI62.6 강세",
-        "거래량3.46배"
+        "강세마감(0.76)",
+        "RSI62.5 강세",
+        "거래량3.66배"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -334,52 +270,72 @@
       "cause_summary": "SK이터닉스 주가, 연일 급등세... 무슨 회사길래?"
     },
     {
-      "ticker": "현대로템",
-      "code": "064350",
-      "tomorrow_up_prob": "59%",
-      "entry": 228000.0,
-      "target": 239400,
-      "stop": 221160,
+      "ticker": "한화시스템",
+      "code": "272210",
+      "tomorrow_up_prob": "60%",
+      "entry": 106100.0,
+      "target": 111405,
+      "stop": 102917,
       "confidence": "중",
       "reasons": [
-        "RSI60.4 강세",
-        "호재",
-        "장중 4회 지속"
+        "RSI52.4 강세",
+        "거래량1.87배",
+        "호재"
       ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "related_news": [
+      "risk": "약한 마감",
+      "day_change": 6.33,
+      "cause_news": [
         {
-          "title": "방산주, 종전에도 급등세…&quot;K-방산 중동 수출 기회&quot;[특징주]",
-          "url": "https://n.news.naver.com/mnews/article/018/0006307273",
-          "office": "이데일리",
-          "sentiment": "호재"
-        },
-        {
-          "title": "현대로템, 세계 최대 방산 전시회 ‘유로사토리’ 참가",
-          "url": "https://n.news.naver.com/mnews/article/081/0003652813",
-          "office": "서울신문",
-          "sentiment": "호재"
-        },
-        {
-          "title": "현대로템, 佛서 첨단국방 뽐낸다... AI 대드론 다층방호체계 첫 공개",
-          "url": "https://n.news.naver.com/mnews/article/008/0005372287",
-          "office": "머니투데이",
-          "sentiment": "호재"
+          "title": "방산·ICT 넘어 도심항공까지…한화시스템, 차세대 모빌리티 주도",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=460464",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
         }
-      ]
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "방산·ICT 넘어 도심항공까지…한화시스템, 차세대 모빌리티 주도"
+    },
+    {
+      "ticker": "퍼스텍",
+      "code": "010820",
+      "tomorrow_up_prob": "56%",
+      "entry": 9140.0,
+      "target": 9597,
+      "stop": 8866,
+      "confidence": "중",
+      "reasons": [
+        "거래량4.79배",
+        "호재",
+        "장중 9회 지속"
+      ],
+      "risk": "약한 마감",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "방산·건설·항공주 강세…퍼스텍·상지건설 上 이탈에 투자자 관심 집...",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582291",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "방산·건설·항공주 강세…퍼스텍·상지건설 上 이탈에 투자자 관심 집..."
     },
     {
       "ticker": "광전자",
       "code": "017900",
       "tomorrow_up_prob": "55%",
-      "entry": 10240.0,
-      "target": 10752,
-      "stop": 9933,
+      "entry": 10120.0,
+      "target": 10626,
+      "stop": 9816,
       "confidence": "중",
       "reasons": [
-        "RSI51.1 강세",
-        "장중 8회 지속"
+        "RSI50.6 강세",
+        "장중 9회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -415,17 +371,17 @@
     {
       "ticker": "한미반도체",
       "code": "042700",
-      "tomorrow_up_prob": "45%",
-      "entry": 337500.0,
-      "target": 354375,
-      "stop": 327375,
+      "tomorrow_up_prob": "51%",
+      "entry": 334000.0,
+      "target": 350700,
+      "stop": 323980,
       "confidence": "하",
       "reasons": [
-        "RSI54.3 강세",
-        "장중 8회 지속"
+        "RSI53.7 강세",
+        "장중 9회 지속"
       ],
-      "risk": "약한 마감, Stoch 과매수",
-      "day_change": -3.82,
+      "risk": "약한 마감",
+      "day_change": -3.53,
       "cause_news": [
         {
           "title": "[특징주] 한미반도체, 스페이스X에 500억원 투자… 주가 급등",
@@ -451,14 +407,14 @@
       "ticker": "대우건설",
       "code": "047040",
       "tomorrow_up_prob": "38%",
-      "entry": 27150.0,
-      "target": 28508,
-      "stop": 26336,
+      "entry": 27300.0,
+      "target": 28665,
+      "stop": 26481,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.75)",
+        "강세마감(0.78)",
         "MACD강세",
-        "RSI56.0 강세"
+        "RSI56.3 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -480,9 +436,9 @@
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
         },
         {
-          "title": "[속보] 건설주 강세 랠리…대우건설·DL이앤씨 급등에 투자심리 개선",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582287",
-          "office": "cbci",
+          "title": "[특징주] 대우건설, 체코 원전 수주 부각에 20%대 급등",
+          "url": "https://www.namdonews.com/news/articleView.html?idxno=913712",
+          "office": "namdonews",
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
@@ -494,51 +450,15 @@
   ],
   "closing_bet": [
     {
-      "ticker": "LG이노텍",
-      "code": "011070",
-      "tomorrow_up_prob": "73%",
-      "entry": 1290000.0,
-      "target": 1354500,
-      "stop": 1251300,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.88)",
-        "정배열",
-        "RSI65.5 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "LG이노텍 주가 연일 상승...아이폰 교체 수혜 전망",
-          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3609481",
-          "office": "gukjenews",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
-        },
-        {
-          "title": "[특징주]삼성전기·LG이노텍 주가 동반 상승...제2의 반도체주될까",
-          "url": "https://www.g-enews.com/view.php?ud=202606151537014110c5557f8da8_1",
-          "office": "g-enews",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "LG이노텍 주가 연일 상승...아이폰 교체 수혜 전망"
-    },
-    {
       "ticker": "신세계",
       "code": "004170",
-      "tomorrow_up_prob": "73%",
-      "entry": 754000.0,
-      "target": 791700,
-      "stop": 731380,
+      "tomorrow_up_prob": "74%",
+      "entry": 760000.0,
+      "target": 798000,
+      "stop": 737200,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.86)",
+        "강세마감(0.95)",
         "정배열",
         "MACD강세"
       ],
@@ -569,17 +489,17 @@
       "ticker": "NAVER",
       "code": "035420",
       "tomorrow_up_prob": "71%",
-      "entry": 248000.0,
-      "target": 260400,
-      "stop": 240560,
+      "entry": 249000.0,
+      "target": 261450,
+      "stop": 241530,
       "confidence": "상",
       "reasons": [
         "정배열",
-        "RSI55.5 강세",
+        "RSI55.8 강세",
         "일목 구름위"
       ],
       "risk": "약한 마감",
-      "day_change": -1.01,
+      "day_change": 0.4,
       "cause_news": [
         {
           "title": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1...",
@@ -594,68 +514,112 @@
       "cause_summary": "[특징주] 네이버, 엔비디아 협력 기대 하루 만에 꺾였다…차익실현에 1..."
     },
     {
-      "ticker": "LIG디펜스앤에어로스페이스",
-      "code": "079550",
-      "tomorrow_up_prob": "68%",
-      "entry": 1009000.0,
-      "target": 1059450,
-      "stop": 978730,
-      "confidence": "중",
+      "ticker": "HL만도",
+      "code": "204320",
+      "tomorrow_up_prob": "70%",
+      "entry": 76300.0,
+      "target": 80115,
+      "stop": 74011,
+      "confidence": "상",
       "reasons": [
-        "RSI66.6 강세",
-        "거래량2.66배",
-        "호재"
+        "강세마감(0.83)",
+        "정배열",
+        "MACD강세"
       ],
-      "risk": "특이 위험 낮음",
+      "risk": "Stoch 과매수",
       "day_change": null,
-      "related_news": [
+      "cause_news": [
         {
-          "title": "LIG D&amp;A, 獨 최대 방산사와 현지 합작사 설립…유럽 시장 본격 공략",
-          "url": "https://n.news.naver.com/mnews/article/011/0004631528",
-          "office": "서울경제",
-          "sentiment": "호재"
+          "title": "HL만도 주가, 웃음꽃... 목표주가는?",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1163559",
+          "office": "ggilbo",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 인과표현, 재료"
         },
         {
-          "title": "&quot;종전은 오히려 기회&quot;…LIG디펜스앤에어로 상한가 터치[핫종목]",
-          "url": "https://n.news.naver.com/mnews/article/421/0009005659",
-          "office": "뉴스1",
-          "sentiment": "호재"
-        },
-        {
-          "title": "방산주, 종전에도 급등세…&quot;K-방산 중동 수출 기회&quot;[특징주]",
-          "url": "https://n.news.naver.com/mnews/article/018/0006307273",
-          "office": "이데일리",
-          "sentiment": "호재"
+          "title": "[속보] HL만도 VI 수차례 발동, 주가 급등세…주초장 7만원대 중반 돌파",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582053",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
         }
-      ]
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "HL만도 주가, 웃음꽃... 목표주가는?"
     },
     {
-      "ticker": "퍼스텍",
-      "code": "010820",
-      "tomorrow_up_prob": "67%",
-      "entry": 9380.0,
-      "target": 9849,
-      "stop": 9099,
+      "ticker": "DL이앤씨",
+      "code": "375500",
+      "tomorrow_up_prob": "68%",
+      "entry": 87500.0,
+      "target": 91875,
+      "stop": 84875,
       "confidence": "중",
       "reasons": [
-        "MACD강세",
-        "거래량4.59배",
+        "RSI61.7 강세",
+        "거래량2.96배",
         "호재"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
         {
-          "title": "방산·건설·항공주 강세…퍼스텍·상지건설 上 이탈에 투자자 관심 집...",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582291",
-          "office": "cbci",
+          "title": "[특징주] DL이앤씨, 이란 재건 기대에 5500억 수주까지…15%대 급등",
+          "url": "https://www.tokenpost.kr/news/economy/369708",
+          "office": "tokenpost",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "\"지금 주가의 두배 뛴다\" DL이앤씨, 미·이란 종전 최대 수혜… 삼성E&A...",
+          "url": "http://www.fnnews.com/news/202606160954134577",
+          "office": "fnnews",
           "sentiment": "호재",
           "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
+        },
+        {
+          "title": "[속보] 건설주 강세 랠리…대우건설·DL이앤씨 급등에 투자심리 개선",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582287",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "방산·건설·항공주 강세…퍼스텍·상지건설 上 이탈에 투자자 관심 집..."
+      "cause_summary": "[특징주] DL이앤씨, 이란 재건 기대에 5500억 수주까지…15%대 급등"
+    },
+    {
+      "ticker": "미래에셋생명",
+      "code": "085620",
+      "tomorrow_up_prob": "67%",
+      "entry": 33650.0,
+      "target": 35332,
+      "stop": 32640,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.81)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "RSI82.0 과매수, Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "생명보험주 동반 강세…미래에셋생명 14% 급등에 업종 주목",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582294",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "생명보험주 동반 강세…미래에셋생명 14% 급등에 업종 주목"
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
