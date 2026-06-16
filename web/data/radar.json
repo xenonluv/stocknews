@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-16 10:46:02 KST",
+ "generated_at": "2026-06-16 11:01:15 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -57,6 +57,99 @@
  ],
  "suspects": [
   {
+   "code": "272210",
+   "name": "한화시스템",
+   "sector": "전기·전자",
+   "pattern": "fade",
+   "prime": true,
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 59,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 30,
+    "spark": 1.8,
+    "fade": 11.1,
+    "ma10": 10.0,
+    "flow": 6.0,
+    "event": 0.0
+   },
+   "score_raw": 59,
+   "score_breakdown_raw": {
+    "base": 30,
+    "spark": 1.8,
+    "fade": 11.1,
+    "ma10": 10.0,
+    "flow": 6,
+    "event": 0.0
+   },
+   "price": 105800.0,
+   "change_pct": 6.33,
+   "high_pct": 17.09,
+   "fade_pct": 62.9,
+   "value_eok": 1837,
+   "ma10": 94270.0,
+   "ma10_margin_pct": 12.23,
+   "spark": {
+    "clusters": [
+     {
+      "time": "09:25",
+      "vol_x": 10.8,
+      "pct": 0.12,
+      "minutes": 2
+     }
+    ]
+   },
+   "spark_max_x": 10.8,
+   "spark_max_pct": 0.12,
+   "mega_flow": false,
+   "flow": {
+    "net_days": 3,
+    "today_buy": false,
+    "streak": 0,
+    "detail": [
+     {
+      "date": "0610",
+      "frgn": 25,
+      "orgn": 48094
+     },
+     {
+      "date": "0611",
+      "frgn": -101900,
+      "orgn": 34761
+     },
+     {
+      "date": "0612",
+      "frgn": 382760,
+      "orgn": -139610
+     },
+     {
+      "date": "0615",
+      "frgn": 41062,
+      "orgn": -23641
+     },
+     {
+      "date": "0616",
+      "frgn": 0,
+      "orgn": 0
+     }
+    ]
+   },
+   "news": [
+    {
+     "title": "&quot;종전 합의했는데 왜 이래?&quot;…K방산주 무섭게 치솟는 이유 [종목+]",
+     "summary": "LIG디펜스앤에어로스페이스가 장 초반 17% 넘게 급등하며 방산주 강세를 주도하고 있다. 16일 오전 9시7분 현재 LIG디펜스앤에어로스페이스는 전 거래일 대비 17.04% 오른 98만9000원에 거래되고 있다. 같은 시각 한화시스템 7.74%, 한화",
+     "office": "한국경제",
+     "datetime": "202606160918",
+     "url": "https://n.news.naver.com/mnews/article/015/0005299179",
+     "sentiment": "호재"
+    }
+   ],
+   "matched_events": [],
+   "theme": "전쟁",
+   "theme_leader": false
+  },
+  {
    "code": "035420",
    "name": "NAVER",
    "sector": "IT 서비스",
@@ -82,13 +175,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 245500.0,
-   "change_pct": -1.01,
+   "price": 249000.0,
+   "change_pct": 0.4,
    "high_pct": 7.06,
-   "fade_pct": 114.3,
-   "value_eok": 3614,
-   "ma10": 253100.0,
-   "ma10_margin_pct": -3.0,
+   "fade_pct": 94.3,
+   "value_eok": 3910,
+   "ma10": 253500.0,
+   "ma10_margin_pct": -1.78,
    "spark": {
     "clusters": []
    },
@@ -152,8 +245,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 13016,
     "peak_high_pct": 17.41,
-    "ma20": 231620.0,
-    "ma20_margin_pct": 5.99,
+    "ma20": 231820.0,
+    "ma20_margin_pct": 7.41,
     "ivtr_net": 605116,
     "ivtr_days": 4,
     "ivtr_eok": 1657,
@@ -188,13 +281,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 501000.0,
-   "change_pct": -5.65,
+   "price": 504000.0,
+   "change_pct": -5.08,
    "high_pct": 1.69,
-   "fade_pct": 433.3,
-   "value_eok": 269,
-   "ma10": 482100.0,
-   "ma10_margin_pct": 3.92,
+   "fade_pct": 400.0,
+   "value_eok": 290,
+   "ma10": 482400.0,
+   "ma10_margin_pct": 4.48,
    "spark": {
     "clusters": []
    },
@@ -241,8 +334,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 4605,
     "peak_high_pct": 23.61,
-    "ma20": 490450.0,
-    "ma20_margin_pct": 2.15,
+    "ma20": 490600.0,
+    "ma20_margin_pct": 2.73,
     "ivtr_net": 81261,
     "ivtr_days": 2,
     "ivtr_eok": 551,
@@ -277,13 +370,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 333750.0,
-   "change_pct": -3.82,
+   "price": 334750.0,
+   "change_pct": -3.53,
    "high_pct": 4.61,
-   "fade_pct": 182.8,
-   "value_eok": 1643,
-   "ma10": 299550.0,
-   "ma10_margin_pct": 11.42,
+   "fade_pct": 176.6,
+   "value_eok": 1791,
+   "ma10": 299625.0,
+   "ma10_margin_pct": 11.72,
    "spark": {
     "clusters": []
    },
@@ -330,8 +423,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 20588,
     "peak_high_pct": 28.01,
-    "ma20": 302825.0,
-    "ma20_margin_pct": 10.21,
+    "ma20": 302862.5,
+    "ma20_margin_pct": 10.53,
     "ivtr_net": 1728583,
     "ivtr_days": 2,
     "ivtr_eok": 6098,
