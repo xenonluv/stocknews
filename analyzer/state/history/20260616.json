@@ -1,46 +1,46 @@
 {
   "date": "20260616",
-  "as_of": "2026-06-16 09:22 KST",
+  "as_of": "2026-06-16 09:37 KST",
   "bets": [
-    {
-      "code": "035420",
-      "ticker": "NAVER",
-      "entry": 251500.0,
-      "target": 264075,
-      "raw": 72,
-      "prob": "72%"
-    },
     {
       "code": "047040",
       "ticker": "대우건설",
-      "entry": 27150.0,
-      "target": 28508,
-      "raw": 70,
-      "prob": "70%"
-    },
-    {
-      "code": "375500",
-      "ticker": "DL이앤씨",
-      "entry": 90000.0,
-      "target": 94500,
-      "raw": 66,
-      "prob": "66%"
+      "entry": 28200.0,
+      "target": 29610,
+      "raw": 77,
+      "prob": "77%"
     },
     {
       "code": "079550",
       "ticker": "LIG디펜스앤에어로스페이스",
-      "entry": 1046000.0,
-      "target": 1098300,
-      "raw": 65,
-      "prob": "65%"
+      "entry": 1081000.0,
+      "target": 1135050,
+      "raw": 72,
+      "prob": "72%"
     },
     {
-      "code": "012450",
-      "ticker": "한화에어로스페이스",
-      "entry": 1176000.0,
-      "target": 1234800,
-      "raw": 64,
-      "prob": "64%"
+      "code": "375500",
+      "ticker": "DL이앤씨",
+      "entry": 91200.0,
+      "target": 95760,
+      "raw": 71,
+      "prob": "71%"
+    },
+    {
+      "code": "028050",
+      "ticker": "삼성E&A",
+      "entry": 56800.0,
+      "target": 59640,
+      "raw": 70,
+      "prob": "70%"
+    },
+    {
+      "code": "035420",
+      "ticker": "NAVER",
+      "entry": 248500.0,
+      "target": 260925,
+      "raw": 66,
+      "prob": "66%"
     }
   ]
 }
