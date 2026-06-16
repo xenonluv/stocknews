@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-16 11:31:28 KST",
+ "generated_at": "2026-06-16 11:46:06 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -40,7 +40,7 @@
   "explosion_window": 6,
   "explosion_rank_n": 30
  },
- "universe_count": 42,
+ "universe_count": 44,
  "events": [
   {
    "id": "2026-06-17_FOMC 금리 결정 (",
@@ -57,6 +57,114 @@
  ],
  "suspects": [
   {
+   "code": "272210",
+   "name": "한화시스템",
+   "sector": "전기·전자",
+   "pattern": "fade",
+   "prime": true,
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 64,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 30,
+    "spark": 5.6,
+    "fade": 12.5,
+    "ma10": 10.0,
+    "flow": 6.0,
+    "event": 0.0
+   },
+   "score_raw": 64,
+   "score_breakdown_raw": {
+    "base": 30,
+    "spark": 5.6,
+    "fade": 12.5,
+    "ma10": 10.0,
+    "flow": 6,
+    "event": 0.0
+   },
+   "price": 106600.0,
+   "change_pct": 7.14,
+   "high_pct": 17.09,
+   "fade_pct": 58.2,
+   "value_eok": 1912,
+   "ma10": 94350.0,
+   "ma10_margin_pct": 12.98,
+   "spark": {
+    "clusters": [
+     {
+      "time": "09:16",
+      "vol_x": 9.8,
+      "pct": 0.97,
+      "minutes": 1
+     },
+     {
+      "time": "09:18",
+      "vol_x": 9.6,
+      "pct": -1.58,
+      "minutes": 1
+     },
+     {
+      "time": "09:25",
+      "vol_x": 16.9,
+      "pct": 0.12,
+      "minutes": 2
+     },
+     {
+      "time": "09:30",
+      "vol_x": 10.3,
+      "pct": -0.87,
+      "minutes": 1
+     },
+     {
+      "time": "09:33",
+      "vol_x": 8.1,
+      "pct": -1.05,
+      "minutes": 1
+     }
+    ]
+   },
+   "spark_max_x": 16.9,
+   "spark_max_pct": 0.12,
+   "mega_flow": false,
+   "flow": {
+    "net_days": 3,
+    "today_buy": false,
+    "streak": 0,
+    "detail": [
+     {
+      "date": "0610",
+      "frgn": 25,
+      "orgn": 48094
+     },
+     {
+      "date": "0611",
+      "frgn": -101900,
+      "orgn": 34761
+     },
+     {
+      "date": "0612",
+      "frgn": 382760,
+      "orgn": -139610
+     },
+     {
+      "date": "0615",
+      "frgn": 41062,
+      "orgn": -23641
+     },
+     {
+      "date": "0616",
+      "frgn": 0,
+      "orgn": 0
+     }
+    ]
+   },
+   "news": [],
+   "matched_events": [],
+   "theme": "전쟁",
+   "theme_leader": false
+  },
+  {
    "code": "439960",
    "name": "코스모로보틱스",
    "sector": "의료·정밀기기",
@@ -64,67 +172,73 @@
    "prime": true,
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 66,
+   "suspicion_score": 63,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 11.1,
-    "fade": 10.7,
-    "ma10": 9.7,
+    "spark": 12.7,
+    "fade": 7.9,
+    "ma10": 7.5,
     "flow": 2.0,
     "event": 2.7
    },
-   "score_raw": 66,
+   "score_raw": 63,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 11.1,
-    "fade": 10.7,
-    "ma10": 9.7,
+    "spark": 12.7,
+    "fade": 7.9,
+    "ma10": 7.5,
     "flow": 2,
     "event": 2.7
    },
-   "price": 27000.0,
-   "change_pct": 7.57,
+   "price": 26500.0,
+   "change_pct": 5.58,
    "high_pct": 21.31,
-   "fade_pct": 64.5,
-   "value_eok": 2301,
-   "ma10": 25047.0,
-   "ma10_margin_pct": 7.8,
+   "fade_pct": 73.8,
+   "value_eok": 2337,
+   "ma10": 24997.0,
+   "ma10_margin_pct": 6.01,
    "spark": {
     "clusters": [
      {
       "time": "09:02",
-      "vol_x": 23.6,
+      "vol_x": 25.9,
       "pct": 5.44,
       "minutes": 2
      },
      {
       "time": "09:06",
-      "vol_x": 25.7,
+      "vol_x": 28.3,
       "pct": 3.62,
       "minutes": 2
      },
      {
-      "time": "09:11",
-      "vol_x": 10.8,
-      "pct": -0.96,
+      "time": "09:10",
+      "vol_x": 13.0,
+      "pct": -3.75,
+      "minutes": 2
+     },
+     {
+      "time": "09:14",
+      "vol_x": 8.0,
+      "pct": 3.37,
       "minutes": 1
      },
      {
-      "time": "10:09",
-      "vol_x": 16.2,
-      "pct": 2.54,
-      "minutes": 1
+      "time": "10:08",
+      "vol_x": 17.8,
+      "pct": 4.52,
+      "minutes": 2
      },
      {
-      "time": "10:12",
-      "vol_x": 8.6,
-      "pct": -2.04,
-      "minutes": 1
+      "time": "10:11",
+      "vol_x": 9.4,
+      "pct": -4.84,
+      "minutes": 2
      }
     ]
    },
-   "spark_max_x": 25.7,
+   "spark_max_x": 28.3,
    "spark_max_pct": 3.62,
    "mega_flow": false,
    "flow": {
@@ -184,102 +298,6 @@
    "theme_leader": false
   },
   {
-   "code": "272210",
-   "name": "한화시스템",
-   "sector": "전기·전자",
-   "pattern": "fade",
-   "prime": true,
-   "shake": null,
-   "deep_shake": null,
-   "suspicion_score": 62,
-   "calibrated_prob": null,
-   "score_breakdown": {
-    "base": 30,
-    "spark": 3.8,
-    "fade": 12.2,
-    "ma10": 10.0,
-    "flow": 6.0,
-    "event": 0.0
-   },
-   "score_raw": 62,
-   "score_breakdown_raw": {
-    "base": 30,
-    "spark": 3.8,
-    "fade": 12.2,
-    "ma10": 10.0,
-    "flow": 6,
-    "event": 0.0
-   },
-   "price": 106400.0,
-   "change_pct": 6.93,
-   "high_pct": 17.09,
-   "fade_pct": 59.4,
-   "value_eok": 1895,
-   "ma10": 94330.0,
-   "ma10_margin_pct": 12.8,
-   "spark": {
-    "clusters": [
-     {
-      "time": "09:16",
-      "vol_x": 8.1,
-      "pct": 0.97,
-      "minutes": 1
-     },
-     {
-      "time": "09:25",
-      "vol_x": 14.0,
-      "pct": 0.12,
-      "minutes": 2
-     },
-     {
-      "time": "09:30",
-      "vol_x": 8.5,
-      "pct": -0.87,
-      "minutes": 1
-     }
-    ]
-   },
-   "spark_max_x": 14.0,
-   "spark_max_pct": 0.12,
-   "mega_flow": false,
-   "flow": {
-    "net_days": 3,
-    "today_buy": false,
-    "streak": 0,
-    "detail": [
-     {
-      "date": "0610",
-      "frgn": 25,
-      "orgn": 48094
-     },
-     {
-      "date": "0611",
-      "frgn": -101900,
-      "orgn": 34761
-     },
-     {
-      "date": "0612",
-      "frgn": 382760,
-      "orgn": -139610
-     },
-     {
-      "date": "0615",
-      "frgn": 41062,
-      "orgn": -23641
-     },
-     {
-      "date": "0616",
-      "frgn": 0,
-      "orgn": 0
-     }
-    ]
-   },
-   "news": [],
-   "matched_events": [],
-   "theme": "전쟁",
-   "theme_leader": false
-  },
-  {
    "code": "035420",
    "name": "NAVER",
    "sector": "IT 서비스",
@@ -305,13 +323,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 246500.0,
-   "change_pct": -0.6,
+   "price": 246000.0,
+   "change_pct": -0.81,
    "high_pct": 7.06,
-   "fade_pct": 108.6,
-   "value_eok": 4167,
-   "ma10": 253200.0,
-   "ma10_margin_pct": -2.65,
+   "fade_pct": 111.4,
+   "value_eok": 4257,
+   "ma10": 253150.0,
+   "ma10_margin_pct": -2.82,
    "spark": {
     "clusters": []
    },
@@ -352,6 +370,14 @@
    },
    "news": [
     {
+     "title": "초고수들, 종전 훈풍에 방산주 차익실현…이틀 연속 삼성전자 베팅[주...",
+     "summary": "미래에셋증권에서 거래하는 고수익 투자자들이 15일 가장 많이 순매수한 종목은 삼성전자(005930), 삼성전기(009150), NAVER(035420), LG전자 순으로 집계됐다. 이날 미래에셋증권에 따르면 미래에셋증권 주식 거래 고객 중 최근 1개월",
+     "office": "서울경제",
+     "datetime": "202606161139",
+     "url": "https://n.news.naver.com/mnews/article/011/0004631596",
+     "sentiment": "호재"
+    },
+    {
      "title": "&quot;월드컵 맛이 안 난다&quot;…골 장면 움짤 막히자 커뮤니티 불만",
      "summary": "네이버(NAVER) 치지직이 2026 북중미 월드컵 한국 대표팀 첫 경기에서 최고 동시 접속자 482만명을 기록하며 흥행에 성공했지만, 온라인 커뮤니티에서는 경기 장면 공유 방식을 둘러싼 불만이 커진다. 골 장면과 주요 장면이 예전처럼 게시글 안에서.",
      "office": "머니투데이",
@@ -375,101 +401,12 @@
     "peak_date": "20260612",
     "peak_value_eok": 13016,
     "peak_high_pct": 17.41,
-    "ma20": 231670.0,
-    "ma20_margin_pct": 6.4,
+    "ma20": 231645.0,
+    "ma20_margin_pct": 6.2,
     "ivtr_net": 605116,
     "ivtr_days": 4,
     "ivtr_eok": 1657,
-    "cause_summary": "&quot;월드컵 맛이 안 난다&quot;…골 장면 움짤 막히자 커뮤니티 불만",
-    "was_theme_leader": false
-   },
-   "theme_leader": false
-  },
-  {
-   "code": "039030",
-   "name": "이오테크닉스",
-   "sector": "기계·장비",
-   "pattern": "reaccum",
-   "shake": null,
-   "deep_shake": null,
-   "suspicion_score": 62,
-   "calibrated_prob": null,
-   "score_breakdown": {
-    "base": 62,
-    "spark": 0,
-    "fade": 0,
-    "ma10": 0,
-    "flow": 0,
-    "event": 0
-   },
-   "score_raw": 0,
-   "score_breakdown_raw": {
-    "base": 0,
-    "spark": 0,
-    "fade": 0,
-    "ma10": 0,
-    "flow": 0,
-    "event": 0
-   },
-   "price": 501000.0,
-   "change_pct": -5.65,
-   "high_pct": 1.69,
-   "fade_pct": 433.3,
-   "value_eok": 333,
-   "ma10": 482100.0,
-   "ma10_margin_pct": 3.92,
-   "spark": {
-    "clusters": []
-   },
-   "spark_max_x": 0.0,
-   "spark_max_pct": null,
-   "mega_flow": false,
-   "flow": {
-    "net_days": 3,
-    "today_buy": false,
-    "streak": 0,
-    "detail": [
-     {
-      "date": "0609",
-      "frgn": 2421,
-      "orgn": 4207
-     },
-     {
-      "date": "0610",
-      "frgn": 36465,
-      "orgn": -38077
-     },
-     {
-      "date": "0611",
-      "frgn": 38753,
-      "orgn": -38248
-     },
-     {
-      "date": "0612",
-      "frgn": -92846,
-      "orgn": 146192
-     },
-     {
-      "date": "0615",
-      "frgn": 7466,
-      "orgn": -43122
-     }
-    ]
-   },
-   "news": [],
-   "matched_events": [],
-   "theme": "전쟁",
-   "visible_experimental": true,
-   "reaccum": {
-    "peak_date": "20260612",
-    "peak_value_eok": 4605,
-    "peak_high_pct": 23.61,
-    "ma20": 490450.0,
-    "ma20_margin_pct": 2.15,
-    "ivtr_net": 81261,
-    "ivtr_days": 2,
-    "ivtr_eok": 551,
-    "cause_summary": "",
+    "cause_summary": "초고수들, 종전 훈풍에 방산주 차익실현…이틀 연속 삼성전자 베팅[주...",
     "was_theme_leader": false
    },
    "theme_leader": false
@@ -504,7 +441,7 @@
    "change_pct": -4.03,
    "high_pct": 4.61,
    "fade_pct": 187.5,
-   "value_eok": 1938,
+   "value_eok": 2040,
    "ma10": 299450.0,
    "ma10_margin_pct": 11.2,
    "spark": {
@@ -568,6 +505,95 @@
     "ivtr_days": 2,
     "ivtr_eok": 6098,
     "cause_summary": "곽동신 한미반도체 회장, 사재 80억 들여 자사주 추가 매입",
+    "was_theme_leader": false
+   },
+   "theme_leader": false
+  },
+  {
+   "code": "067310",
+   "name": "하나마이크론",
+   "sector": "전기·전자",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 62,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "spark": 0,
+    "fade": 0,
+    "ma10": 0,
+    "flow": 0,
+    "event": 0
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "spark": 0,
+    "fade": 0,
+    "ma10": 0,
+    "flow": 0,
+    "event": 0
+   },
+   "price": 49800.0,
+   "change_pct": -2.16,
+   "high_pct": 4.91,
+   "fade_pct": 144.0,
+   "value_eok": 918,
+   "ma10": 44955.0,
+   "ma10_margin_pct": 10.78,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "flow": {
+    "net_days": 3,
+    "today_buy": false,
+    "streak": 0,
+    "detail": [
+     {
+      "date": "0609",
+      "frgn": -216572,
+      "orgn": 442726
+     },
+     {
+      "date": "0610",
+      "frgn": -449097,
+      "orgn": 384143
+     },
+     {
+      "date": "0611",
+      "frgn": -410499,
+      "orgn": 476544
+     },
+     {
+      "date": "0612",
+      "frgn": -75575,
+      "orgn": 101782
+     },
+     {
+      "date": "0615",
+      "frgn": -181668,
+      "orgn": 77538
+     }
+    ]
+   },
+   "news": [],
+   "matched_events": [],
+   "theme": "반도체",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260611",
+    "peak_value_eok": 2044,
+    "peak_high_pct": 17.59,
+    "ma20": 46100.0,
+    "ma20_margin_pct": 8.03,
+    "ivtr_net": 767669,
+    "ivtr_days": 6,
+    "ivtr_eok": 344,
+    "cause_summary": "",
     "was_theme_leader": false
    },
    "theme_leader": false
