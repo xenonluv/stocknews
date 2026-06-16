@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-16 13:31:16 KST",
+ "generated_at": "2026-06-16 13:45:55 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -40,7 +40,7 @@
   "explosion_window": 6,
   "explosion_rank_n": 30
  },
- "universe_count": 35,
+ "universe_count": 37,
  "events": [
   {
    "id": "2026-06-17_FOMC 금리 결정 (",
@@ -57,100 +57,118 @@
  ],
  "suspects": [
   {
-   "code": "069540",
-   "name": "빛과전자",
-   "sector": "전기·전자",
+   "code": "004310",
+   "name": "현대약품",
+   "sector": "제약",
    "pattern": "fade",
-   "prime": false,
+   "prime": true,
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 51,
+   "suspicion_score": 56,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 8.1,
-    "fade": 12.3,
-    "ma10": 0.6,
-    "flow": 0.0,
+    "spark": 3.8,
+    "fade": 10.2,
+    "ma10": 10.0,
+    "flow": 2.0,
     "event": 0.0
    },
-   "score_raw": 51,
+   "score_raw": 56,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 8.1,
-    "fade": 12.3,
-    "ma10": 0.6,
-    "flow": 0,
+    "spark": 3.8,
+    "fade": 10.2,
+    "ma10": 10.0,
+    "flow": 2,
     "event": 0.0
    },
-   "price": 3635.0,
-   "change_pct": 6.44,
-   "high_pct": 15.67,
-   "fade_pct": 58.9,
-   "value_eok": 712,
-   "ma10": 3619.0,
-   "ma10_margin_pct": 0.44,
+   "price": 8070.0,
+   "change_pct": 8.47,
+   "high_pct": 25.0,
+   "fade_pct": 66.1,
+   "value_eok": 2159,
+   "ma10": 6215.0,
+   "ma10_margin_pct": 29.85,
    "spark": {
     "clusters": [
      {
-      "time": "09:11",
-      "vol_x": 10.1,
-      "pct": 2.23,
-      "minutes": 2
-     },
-     {
-      "time": "09:18",
-      "vol_x": 12.5,
-      "pct": 5.79,
-      "minutes": 3
-     },
-     {
-      "time": "09:22",
-      "vol_x": 20.9,
-      "pct": -0.36,
-      "minutes": 2
-     },
-     {
-      "time": "09:26",
-      "vol_x": 8.4,
-      "pct": -1.96,
+      "time": "11:53",
+      "vol_x": 9.2,
+      "pct": 7.31,
       "minutes": 1
      },
      {
-      "time": "11:54",
-      "vol_x": 10.8,
-      "pct": 2.25,
+      "time": "12:00",
+      "vol_x": 10.0,
+      "pct": 3.28,
+      "minutes": 1
+     },
+     {
+      "time": "12:03",
+      "vol_x": 14.1,
+      "pct": 4.18,
+      "minutes": 1
+     },
+     {
+      "time": "12:05",
+      "vol_x": 9.4,
+      "pct": 2.65,
+      "minutes": 2
+     },
+     {
+      "time": "12:11",
+      "vol_x": 12.1,
+      "pct": 3.29,
+      "minutes": 4
+     },
+     {
+      "time": "12:19",
+      "vol_x": 8.4,
+      "pct": -2.93,
+      "minutes": 1
+     },
+     {
+      "time": "12:44",
+      "vol_x": 11.3,
+      "pct": 1.69,
+      "minutes": 1
+     },
+     {
+      "time": "12:53",
+      "vol_x": 10.1,
+      "pct": 1.76,
       "minutes": 1
      }
     ]
    },
-   "spark_max_x": 20.9,
-   "spark_max_pct": -0.36,
+   "spark_max_x": 14.1,
+   "spark_max_pct": 4.18,
    "mega_flow": false,
    "flow": {
-    "net_days": 0,
+    "net_days": 1,
     "today_buy": false,
     "streak": 0,
     "detail": [
      {
       "date": "0610",
-      "frgn": -220499,
-      "orgn": -16543
+      "frgn": -41190,
+      "orgn": -188
      },
      {
       "date": "0611",
-      "frgn": -281588,
-      "orgn": 0
+      "frgn": -127,
+      "orgn": 22204
      },
      {
       "date": "0612",
-      "frgn": -160889,
-      "orgn": 0
+      "frgn": -6446,
+      "orgn": -124
      },
      {
       "date": "0615",
-      "frgn": -179378,
-      "orgn": 0
+      "frgn": -122488,
+      "orgn": -42322
      },
      {
       "date": "0616",
@@ -161,16 +179,161 @@
    },
    "news": [
     {
-     "title": "빛과전자, 100% 자회사 세영기술 흡수합병 결정",
-     "summary": "빛과전자(069540)가 경영 효율성 제고를 위해 100% 자회사인 세영기술을 흡수합병한다. 빛과전자는 세영기술을 흡수합병하기로 결정했다고 20일 공시했다. 존속회사는 빛과전자이며, 소멸회사는 세영기술이다. 합병 형태는 소규모합병이다. 회사 측은...",
-     "office": "이데일리",
-     "datetime": "202605201613",
-     "url": "https://n.news.naver.com/mnews/article/018/0006286156",
+     "title": "탈모치료 건보 급여 확대 추진 소식에 탈모치료제株 상한가 행진",
+     "summary": "정부가 올 하반기 대국민 의견수렴을 통해 탈모치료 건강보험 급여 확대를 추진하겠다고 밝히자 국내 증시에서 탈모치료제 관련주가 상한가 행진 중이다. 15일 오전 9시21분 현재 TS트릴리온, JW신약, 현대약품은 삼서 상한가를 기록하고 있다....",
+     "office": "머니투데이",
+     "datetime": "202606150933",
+     "url": "https://n.news.naver.com/mnews/article/008/0005371773",
      "sentiment": "호재"
     }
    ],
    "matched_events": [],
-   "theme": "반도체",
+   "theme": "전쟁",
+   "theme_leader": false
+  },
+  {
+   "code": "439960",
+   "name": "코스모로보틱스",
+   "sector": "의료·정밀기기",
+   "pattern": "fade",
+   "prime": true,
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 52,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 30,
+    "spark": 15.0,
+    "fade": 2.0,
+    "ma10": 0.1,
+    "flow": 2.0,
+    "event": 2.7
+   },
+   "score_raw": 52,
+   "score_breakdown_raw": {
+    "base": 30,
+    "spark": 15.0,
+    "fade": 2.0,
+    "ma10": 0.1,
+    "flow": 2,
+    "event": 2.7
+   },
+   "price": 24850.0,
+   "change_pct": -1.0,
+   "high_pct": 21.31,
+   "fade_pct": 104.7,
+   "value_eok": 2650,
+   "ma10": 24832.0,
+   "ma10_margin_pct": 0.07,
+   "spark": {
+    "clusters": [
+     {
+      "time": "09:02",
+      "vol_x": 37.3,
+      "pct": 5.44,
+      "minutes": 2
+     },
+     {
+      "time": "09:06",
+      "vol_x": 40.7,
+      "pct": 3.62,
+      "minutes": 2
+     },
+     {
+      "time": "09:10",
+      "vol_x": 18.6,
+      "pct": -3.75,
+      "minutes": 2
+     },
+     {
+      "time": "09:14",
+      "vol_x": 11.5,
+      "pct": 3.37,
+      "minutes": 1
+     },
+     {
+      "time": "09:16",
+      "vol_x": 10.5,
+      "pct": 1.22,
+      "minutes": 1
+     },
+     {
+      "time": "10:08",
+      "vol_x": 25.6,
+      "pct": 4.52,
+      "minutes": 2
+     },
+     {
+      "time": "10:11",
+      "vol_x": 13.5,
+      "pct": -4.84,
+      "minutes": 2
+     },
+     {
+      "time": "10:14",
+      "vol_x": 8.0,
+      "pct": -1.22,
+      "minutes": 1
+     }
+    ]
+   },
+   "spark_max_x": 40.7,
+   "spark_max_pct": 3.62,
+   "mega_flow": false,
+   "flow": {
+    "net_days": 1,
+    "today_buy": false,
+    "streak": 0,
+    "detail": [
+     {
+      "date": "0610",
+      "frgn": -133577,
+      "orgn": -7209
+     },
+     {
+      "date": "0611",
+      "frgn": 110687,
+      "orgn": -280711
+     },
+     {
+      "date": "0612",
+      "frgn": -60055,
+      "orgn": -13328
+     },
+     {
+      "date": "0615",
+      "frgn": 154414,
+      "orgn": -15899
+     },
+     {
+      "date": "0616",
+      "frgn": 0,
+      "orgn": 0
+     }
+    ]
+   },
+   "news": [
+    {
+     "title": "KC코트렐·GC지놈, 최대주주 지분 보호예수 해제",
+     "summary": "KC코트렐의 최대주주 지분 83%가 시장에 출회한다. 지씨지놈, 코스모로보틱스의 의무보유 확약 물량도 보호예수에서 해제된다. 8일 한국예탁결제원에 따르면 KC코트렐의 주식 9115만7556주(발행주식총수 83%)가 오는 12일 보호예수에서...",
+     "office": "아이뉴스24",
+     "datetime": "202606081001",
+     "url": "https://n.news.naver.com/mnews/article/031/0001033474",
+     "sentiment": "호재"
+    }
+   ],
+   "matched_events": [
+    {
+     "id": "2026-06-17_FOMC 금리 결정 (",
+     "title": "FOMC 금리 결정 (6월)",
+     "dday": 1,
+     "categories": [
+      "금리"
+     ],
+     "score": 2.7
+    }
+   ],
+   "theme": "금리",
    "theme_leader": false
   },
   {
@@ -199,13 +362,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 241250.0,
-   "change_pct": -2.72,
+   "price": 241500.0,
+   "change_pct": -2.62,
    "high_pct": 7.06,
-   "fade_pct": 138.6,
-   "value_eok": 5025,
-   "ma10": 252675.0,
-   "ma10_margin_pct": -4.52,
+   "fade_pct": 137.1,
+   "value_eok": 5236,
+   "ma10": 252700.0,
+   "ma10_margin_pct": -4.43,
    "spark": {
     "clusters": []
    },
@@ -269,8 +432,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 13016,
     "peak_high_pct": 17.41,
-    "ma20": 231407.5,
-    "ma20_margin_pct": 4.25,
+    "ma20": 231420.0,
+    "ma20_margin_pct": 4.36,
     "ivtr_net": 605116,
     "ivtr_days": 4,
     "ivtr_eok": 1657,
@@ -305,13 +468,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 332000.0,
-   "change_pct": -4.32,
+   "price": 331000.0,
+   "change_pct": -4.61,
    "high_pct": 4.61,
-   "fade_pct": 193.8,
-   "value_eok": 2584,
-   "ma10": 299350.0,
-   "ma10_margin_pct": 10.91,
+   "fade_pct": 200.0,
+   "value_eok": 2644,
+   "ma10": 299250.0,
+   "ma10_margin_pct": 10.61,
    "spark": {
     "clusters": []
    },
@@ -358,8 +521,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 20588,
     "peak_high_pct": 28.01,
-    "ma20": 302725.0,
-    "ma20_margin_pct": 9.67,
+    "ma20": 302675.0,
+    "ma20_margin_pct": 9.36,
     "ivtr_net": 1728583,
     "ivtr_days": 2,
     "ivtr_eok": 6098,
@@ -394,13 +557,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 49450.0,
-   "change_pct": -2.85,
+   "price": 49400.0,
+   "change_pct": -2.95,
    "high_pct": 4.91,
-   "fade_pct": 158.0,
-   "value_eok": 1086,
-   "ma10": 44920.0,
-   "ma10_margin_pct": 10.08,
+   "fade_pct": 160.0,
+   "value_eok": 1113,
+   "ma10": 44915.0,
+   "ma10_margin_pct": 9.99,
    "spark": {
     "clusters": []
    },
@@ -447,8 +610,8 @@
     "peak_date": "20260611",
     "peak_value_eok": 2044,
     "peak_high_pct": 17.59,
-    "ma20": 46082.5,
-    "ma20_margin_pct": 7.31,
+    "ma20": 46080.0,
+    "ma20_margin_pct": 7.2,
     "ivtr_net": 767669,
     "ivtr_days": 6,
     "ivtr_eok": 344,
