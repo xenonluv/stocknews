@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-06-16 17:53:32 KST",
+ "generated_at": "2026-06-16 22:16:48 KST",
  "market_session": "closed",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
-  "reaccum_high_range": [
+  "reaccum_change_range": [
    -4.0,
    10.0
   ],
@@ -23,7 +23,7 @@
   "explosion_window": 6,
   "explosion_rank_n": 30
  },
- "universe_count": 66,
+ "universe_count": 68,
  "events": [
   {
    "id": "2026-06-17_FOMC 금리 결정 (",
@@ -110,7 +110,7 @@
      },
      {
       "date": "0616",
-      "frgn": 333401,
+      "frgn": 333390,
       "orgn": -247194
      }
     ]
@@ -205,7 +205,7 @@
      {
       "date": "0616",
       "frgn": 51130,
-      "orgn": 5727
+      "orgn": 5712
      }
     ]
    },
@@ -266,7 +266,7 @@
    "change_pct": 1.31,
    "high_pct": 6.02,
    "fade_pct": 78.2,
-   "value_eok": 1586,
+   "value_eok": 1587,
    "ma10": 156920.0,
    "ma10_margin_pct": 8.27,
    "spark": {
@@ -412,14 +412,306 @@
    "visible_experimental": true,
    "reaccum": {
     "peak_date": "20260615",
-    "peak_value_eok": 5166,
-    "peak_high_pct": 17.57,
+    "peak_value_eok": 6385,
+    "peak_high_pct": 18.34,
     "ma20": 1085450.0,
     "ma20_margin_pct": 13.87,
     "ivtr_net": 46200,
     "ivtr_days": 4,
     "ivtr_eok": 535,
-    "cause_summary": "“비수기지만 영업익 18배 급증 전망”...목표가 200만원 유지한 ‘이...",
+    "cause_summary": "애플 AI 전략에 아이폰 더 팔린다…대표 부품주 LG이노텍 주목",
+    "was_theme_leader": false
+   },
+   "theme_leader": false
+  },
+  {
+   "code": "001820",
+   "name": "삼화콘덴서",
+   "sector": "전기·전자",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 62,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "spark": 0,
+    "fade": 0,
+    "ma10": 0,
+    "flow": 0,
+    "event": 0
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "spark": 0,
+    "fade": 0,
+    "ma10": 0,
+    "flow": 0,
+    "event": 0
+   },
+   "price": 147900.0,
+   "change_pct": 5.19,
+   "high_pct": 11.74,
+   "fade_pct": 55.8,
+   "value_eok": 1300,
+   "ma10": 121720.0,
+   "ma10_margin_pct": 21.51,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 9.46,
+    "time": "09:00",
+    "value_10m_eok": 303
+   },
+   "flow": {
+    "net_days": 3,
+    "today_buy": true,
+    "streak": 1,
+    "detail": [
+     {
+      "date": "0610",
+      "frgn": -5209,
+      "orgn": 16389
+     },
+     {
+      "date": "0611",
+      "frgn": 78863,
+      "orgn": 133448
+     },
+     {
+      "date": "0612",
+      "frgn": 3158,
+      "orgn": -67706
+     },
+     {
+      "date": "0615",
+      "frgn": -2173,
+      "orgn": -17918
+     },
+     {
+      "date": "0616",
+      "frgn": -13725,
+      "orgn": 24658
+     }
+    ]
+   },
+   "news": [],
+   "matched_events": [],
+   "theme": "전쟁",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260615",
+    "peak_value_eok": 1683,
+    "peak_high_pct": 18.95,
+    "ma20": 114025.0,
+    "ma20_margin_pct": 29.71,
+    "ivtr_net": 23986,
+    "ivtr_days": 2,
+    "ivtr_eok": 30,
+    "cause_summary": "",
+    "was_theme_leader": false
+   },
+   "theme_leader": false
+  },
+  {
+   "code": "028050",
+   "name": "삼성E&A",
+   "sector": "일반서비스",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 62,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "spark": 0,
+    "fade": 0,
+    "ma10": 0,
+    "flow": 0,
+    "event": 0
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "spark": 0,
+    "fade": 0,
+    "ma10": 0,
+    "flow": 0,
+    "event": 0
+   },
+   "price": 56700.0,
+   "change_pct": 8.83,
+   "high_pct": 12.86,
+   "fade_pct": 31.3,
+   "value_eok": 3655,
+   "ma10": 48730.0,
+   "ma10_margin_pct": 16.36,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 4.57,
+    "time": "09:00",
+    "value_10m_eok": 184
+   },
+   "flow": {
+    "net_days": 2,
+    "today_buy": true,
+    "streak": 1,
+    "detail": [
+     {
+      "date": "0610",
+      "frgn": -172688,
+      "orgn": 241413
+     },
+     {
+      "date": "0611",
+      "frgn": -632680,
+      "orgn": 414744
+     },
+     {
+      "date": "0612",
+      "frgn": -628329,
+      "orgn": 140409
+     },
+     {
+      "date": "0615",
+      "frgn": -972795,
+      "orgn": 417945
+     },
+     {
+      "date": "0616",
+      "frgn": -227821,
+      "orgn": 727193
+     }
+    ]
+   },
+   "news": [],
+   "matched_events": [
+    {
+     "id": "2026-06-17_FOMC 금리 결정 (",
+     "title": "FOMC 금리 결정 (6월)",
+     "dday": 1,
+     "categories": [
+      "금리"
+     ],
+     "score": 8.2
+    }
+   ],
+   "theme": "금리",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260615",
+    "peak_value_eok": 1647,
+    "peak_high_pct": 14.71,
+    "ma20": 49902.5,
+    "ma20_margin_pct": 13.62,
+    "ivtr_net": 1150333,
+    "ivtr_days": 4,
+    "ivtr_eok": 559,
+    "cause_summary": "&quot;미·이란 전쟁 끝나면 재건사업 기회 온다&quot;…삼성E&amp;A 등 건설주 급등",
+    "was_theme_leader": false
+   },
+   "theme_leader": false
+  },
+  {
+   "code": "204320",
+   "name": "HL만도",
+   "sector": "운송장비·부품",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 62,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "spark": 0,
+    "fade": 0,
+    "ma10": 0,
+    "flow": 0,
+    "event": 0
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "spark": 0,
+    "fade": 0,
+    "ma10": 0,
+    "flow": 0,
+    "event": 0
+   },
+   "price": 76900.0,
+   "change_pct": 8.92,
+   "high_pct": 10.34,
+   "fade_pct": 13.7,
+   "value_eok": 3278,
+   "ma10": 58760.0,
+   "ma10_margin_pct": 30.87,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 2.33,
+    "time": "10:10",
+    "value_10m_eok": 82
+   },
+   "flow": {
+    "net_days": 3,
+    "today_buy": true,
+    "streak": 3,
+    "detail": [
+     {
+      "date": "0610",
+      "frgn": 4151,
+      "orgn": -33945
+     },
+     {
+      "date": "0611",
+      "frgn": 82498,
+      "orgn": -86968
+     },
+     {
+      "date": "0612",
+      "frgn": 289058,
+      "orgn": -7568
+     },
+     {
+      "date": "0615",
+      "frgn": 556479,
+      "orgn": 189698
+     },
+     {
+      "date": "0616",
+      "frgn": -69587,
+      "orgn": 322566
+     }
+    ]
+   },
+   "news": [],
+   "matched_events": [],
+   "theme": "반도체",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260615",
+    "peak_value_eok": 5331,
+    "peak_high_pct": 17.85,
+    "ma20": 59395.0,
+    "ma20_margin_pct": 29.47,
+    "ivtr_net": 228368,
+    "ivtr_days": 2,
+    "ivtr_eok": 177,
+    "cause_summary": "&quot;HL만도, 로봇 관절 핵심 공급사&quot;",
     "was_theme_leader": false
    },
    "theme_leader": false
@@ -454,7 +746,7 @@
    "change_pct": 4.18,
    "high_pct": 6.97,
    "fade_pct": 40.0,
-   "value_eok": 1112,
+   "value_eok": 1117,
    "ma10": 619300.0,
    "ma10_margin_pct": 8.67,
    "spark": {
@@ -495,7 +787,7 @@
      },
      {
       "date": "0616",
-      "frgn": 16009,
+      "frgn": 16005,
       "orgn": 15062
      }
     ]
@@ -516,7 +808,7 @@
    "visible_experimental": true,
    "reaccum": {
     "peak_date": "20260615",
-    "peak_value_eok": 1189,
+    "peak_value_eok": 1121,
     "peak_high_pct": 13.49,
     "ma20": 615950.0,
     "ma20_margin_pct": 9.26,
