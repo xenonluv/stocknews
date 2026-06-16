@@ -4,7 +4,7 @@
   "035420": {
    "name": "NAVER",
    "sector": "IT 서비스",
-   "entry": 245000.0,
+   "entry": 243500.0,
    "score": 0,
    "breakdown": {
     "base": 0,
@@ -14,13 +14,13 @@
     "flow": 0,
     "event": 0
    },
-   "change_pct": -1.21,
+   "change_pct": -1.81,
    "high_pct": 7.06,
-   "fade_pct": 117.1,
+   "fade_pct": 125.7,
    "pattern": "reaccum",
    "prime": false,
    "theme": "반도체",
-   "value_eok": 3080,
+   "value_eok": 3324,
    "theme_leader": false,
    "spark_max_x": 0.0,
    "spark_max_pct": null,
@@ -35,17 +35,15 @@
     "peak_date": "20260612",
     "peak_value_eok": 13016,
     "peak_high_pct": 17.41,
-    "ma20": 231595.0,
-    "ma20_margin_pct": 5.79,
+    "ma20": 231520.0,
+    "ma20_margin_pct": 5.17,
     "ivtr_net": 605116,
     "ivtr_days": 4,
     "ivtr_eok": 1657,
-    "cause_summary": "인투씨엔에스, 네이버와 손잡고 동물병원 검색 고도화",
+    "cause_summary": "네이버 D2SF, 스포츠테크 기업 '플코' 프리-시리즈B 투자 참여",
     "was_theme_leader": false
    },
-   "matched_events": [
-    "2026-06-17_FOMC 금리 결정 ("
-   ],
+   "matched_events": [],
    "first_seen": "2026-06-16 09:01:12 KST",
    "evaluated": false,
    "result": null,
@@ -54,7 +52,7 @@
   "039030": {
    "name": "이오테크닉스",
    "sector": "기계·장비",
-   "entry": 505000.0,
+   "entry": 503000.0,
    "score": 0,
    "breakdown": {
     "base": 0,
@@ -64,13 +62,13 @@
     "flow": 0,
     "event": 0
    },
-   "change_pct": -4.9,
+   "change_pct": -5.27,
    "high_pct": 1.69,
-   "fade_pct": 388.9,
+   "fade_pct": 411.1,
    "pattern": "reaccum",
    "prime": false,
    "theme": "반도체",
-   "value_eok": 171,
+   "value_eok": 205,
    "theme_leader": false,
    "spark_max_x": 0.0,
    "spark_max_pct": null,
@@ -85,8 +83,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 4605,
     "peak_high_pct": 23.61,
-    "ma20": 490650.0,
-    "ma20_margin_pct": 2.92,
+    "ma20": 490550.0,
+    "ma20_margin_pct": 2.54,
     "ivtr_net": 81261,
     "ivtr_days": 2,
     "ivtr_eok": 551,
@@ -102,7 +100,7 @@
   "042700": {
    "name": "한미반도체",
    "sector": "기계·장비",
-   "entry": 336000.0,
+   "entry": 334000.0,
    "score": 0,
    "breakdown": {
     "base": 0,
@@ -112,13 +110,13 @@
     "flow": 0,
     "event": 0
    },
-   "change_pct": -3.17,
+   "change_pct": -3.75,
    "high_pct": 4.61,
-   "fade_pct": 168.8,
+   "fade_pct": 181.2,
    "pattern": "reaccum",
    "prime": false,
    "theme": "전쟁",
-   "value_eok": 1284,
+   "value_eok": 1445,
    "theme_leader": false,
    "spark_max_x": 0.0,
    "spark_max_pct": null,
@@ -133,8 +131,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 20588,
     "peak_high_pct": 28.01,
-    "ma20": 302925.0,
-    "ma20_margin_pct": 10.92,
+    "ma20": 302825.0,
+    "ma20_margin_pct": 10.29,
     "ivtr_net": 1728583,
     "ivtr_days": 2,
     "ivtr_eok": 6098,
@@ -148,5 +146,5 @@
    "final": true
   }
  },
- "as_of": "2026-06-16 10:01:13 KST"
+ "as_of": "2026-06-16 10:16:00 KST"
 }
