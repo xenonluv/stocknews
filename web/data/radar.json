@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-16 09:17:03 KST",
+ "generated_at": "2026-06-16 09:32:11 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -40,7 +40,7 @@
   "explosion_window": 6,
   "explosion_rank_n": 30
  },
- "universe_count": 47,
+ "universe_count": 43,
  "events": [
   {
    "id": "2026-06-17_FOMC 금리 결정 (",
@@ -82,13 +82,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 252500.0,
-   "change_pct": 1.81,
+   "price": 251500.0,
+   "change_pct": 1.41,
    "high_pct": 7.06,
-   "fade_pct": 74.3,
-   "value_eok": 1954,
-   "ma10": 253800.0,
-   "ma10_margin_pct": -0.51,
+   "fade_pct": 80.0,
+   "value_eok": 2271,
+   "ma10": 253700.0,
+   "ma10_margin_pct": -0.87,
    "spark": {
     "clusters": []
    },
@@ -129,11 +129,11 @@
    },
    "news": [
     {
-     "title": "데이터센터 수요 폭증의 명암 [더 머니이스트-김효선의 부동산이지!]",
-     "summary": "최근 젠슨 황 엔비디아 최고경영자(CEO)가 한국을 방문했습니다. 그는 네이버 제2 사옥인 '1784'를 방문한 뒤, 네이버 데이터센터 '각 세종'을 거점으로 인공지능(AI) 팩토리를 구축하겠다는 협력 계획을 발표했습니다. AI 팩토리는 전력과 데이터",
-     "office": "한국경제",
-     "datetime": "202606160631",
-     "url": "https://n.news.naver.com/mnews/article/015/0005299112",
+     "title": "&quot;본품 또 사지 말고 리필 어때요?&quot;...로레알, 리필 캠페인 진행",
+     "summary": "로레알코리아가 세계 리필의 날을 맞아 쿠팡, 카카오, 네이버, 올리브영 등 국내 주요 유통 플랫폼과 손잡고 리필 제품 확산에 나선다. 리필 제품 할인과 쿠폰 증정 행사를 통해 지속가능한 소비 문화를 확대하고, 뷰티 업계 전반에 리필 소비를 새로운...",
+     "office": "지디넷코리아",
+     "datetime": "202606160920",
+     "url": "https://n.news.naver.com/mnews/article/092/0002426737",
      "sentiment": "호재"
     }
    ],
@@ -145,7 +145,7 @@
      "categories": [
       "금리"
      ],
-     "score": 5.5
+     "score": 2.7
     }
    ],
    "theme": "반도체",
@@ -154,12 +154,12 @@
     "peak_date": "20260612",
     "peak_value_eok": 13016,
     "peak_high_pct": 17.41,
-    "ma20": 231970.0,
-    "ma20_margin_pct": 8.85,
+    "ma20": 231920.0,
+    "ma20_margin_pct": 8.44,
     "ivtr_net": 605116,
     "ivtr_days": 4,
     "ivtr_eok": 1657,
-    "cause_summary": "데이터센터 수요 폭증의 명암 [더 머니이스트-김효선의 부동산이지!]",
+    "cause_summary": "&quot;본품 또 사지 말고 리필 어때요?&quot;...로레알, 리필 캠페인 진행",
     "was_theme_leader": false
    },
    "theme_leader": false
@@ -190,13 +190,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 521000.0,
-   "change_pct": -1.88,
+   "price": 533000.0,
+   "change_pct": 0.38,
    "high_pct": 1.69,
-   "fade_pct": 211.1,
-   "value_eok": 73,
-   "ma10": 484300.0,
-   "ma10_margin_pct": 7.58,
+   "fade_pct": 77.8,
+   "value_eok": 93,
+   "ma10": 485300.0,
+   "ma10_margin_pct": 9.83,
    "spark": {
     "clusters": []
    },
@@ -243,8 +243,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 4605,
     "peak_high_pct": 23.61,
-    "ma20": 491550.0,
-    "ma20_margin_pct": 5.99,
+    "ma20": 492050.0,
+    "ma20_margin_pct": 8.32,
     "ivtr_net": 81261,
     "ivtr_days": 2,
     "ivtr_eok": 551,
@@ -279,13 +279,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 343000.0,
-   "change_pct": -1.15,
+   "price": 346000.0,
+   "change_pct": -0.29,
    "high_pct": 4.61,
-   "fade_pct": 125.0,
-   "value_eok": 644,
-   "ma10": 300450.0,
-   "ma10_margin_pct": 14.16,
+   "fade_pct": 106.2,
+   "value_eok": 855,
+   "ma10": 300750.0,
+   "ma10_margin_pct": 15.05,
    "spark": {
     "clusters": []
    },
@@ -332,8 +332,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 20588,
     "peak_high_pct": 28.01,
-    "ma20": 303275.0,
-    "ma20_margin_pct": 13.1,
+    "ma20": 303425.0,
+    "ma20_margin_pct": 14.03,
     "ivtr_net": 1728583,
     "ivtr_days": 2,
     "ivtr_eok": 6098,
