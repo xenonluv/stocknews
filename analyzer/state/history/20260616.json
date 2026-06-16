@@ -1,46 +1,46 @@
 {
   "date": "20260616",
-  "as_of": "2026-06-16 09:07 KST",
+  "as_of": "2026-06-16 09:22 KST",
   "bets": [
     {
-      "code": "034730",
-      "ticker": "SK",
-      "entry": 679000.0,
-      "target": 712950,
+      "code": "035420",
+      "ticker": "NAVER",
+      "entry": 251500.0,
+      "target": 264075,
       "raw": 72,
       "prob": "72%"
     },
     {
-      "code": "035420",
-      "ticker": "NAVER",
-      "entry": 257000.0,
-      "target": 269850,
+      "code": "047040",
+      "ticker": "대우건설",
+      "entry": 27150.0,
+      "target": 28508,
       "raw": 70,
       "prob": "70%"
     },
     {
-      "code": "001820",
-      "ticker": "삼화콘덴서",
-      "entry": 151700.0,
-      "target": 159285,
-      "raw": 68,
-      "prob": "68%"
+      "code": "375500",
+      "ticker": "DL이앤씨",
+      "entry": 90000.0,
+      "target": 94500,
+      "raw": 66,
+      "prob": "66%"
     },
     {
       "code": "079550",
       "ticker": "LIG디펜스앤에어로스페이스",
-      "entry": 979000.0,
-      "target": 1027950,
-      "raw": 63,
-      "prob": "63%"
+      "entry": 1046000.0,
+      "target": 1098300,
+      "raw": 65,
+      "prob": "65%"
     },
     {
-      "code": "064350",
-      "ticker": "현대로템",
-      "entry": 225000.0,
-      "target": 236250,
-      "raw": 58,
-      "prob": "58%"
+      "code": "012450",
+      "ticker": "한화에어로스페이스",
+      "entry": 1176000.0,
+      "target": 1234800,
+      "raw": 64,
+      "prob": "64%"
     }
   ]
 }
