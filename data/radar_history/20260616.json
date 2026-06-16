@@ -37,9 +37,9 @@
     "peak_high_pct": 17.41,
     "ma20": 231445.0,
     "ma20_margin_pct": 4.56,
-    "ivtr_net": 605116,
+    "ivtr_net": 561411,
     "ivtr_days": 4,
-    "ivtr_eok": 1657,
+    "ivtr_eok": 1551,
     "cause_summary": "저작권위 블로그, 네이버 메이트 IT·테크 분야 선정",
     "was_theme_leader": false
    },
@@ -137,9 +137,9 @@
     "peak_high_pct": 28.01,
     "ma20": 302550.0,
     "ma20_margin_pct": 8.58,
-    "ivtr_net": 1728583,
+    "ivtr_net": 1616368,
     "ivtr_days": 2,
-    "ivtr_eok": 6098,
+    "ivtr_eok": 5726,
     "cause_summary": "",
     "was_theme_leader": false
    },
@@ -208,7 +208,7 @@
    "prime": true,
    "theme": "반도체",
    "value_eok": 2926,
-   "theme_leader": false,
+   "theme_leader": true,
    "spark_max_x": 46.1,
    "spark_max_pct": 3.62,
    "mega_flow": false,
@@ -271,7 +271,7 @@
    "first_seen": "2026-06-16 11:16:03 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": false
   },
   "010820": {
    "name": "퍼스텍",
@@ -368,7 +368,7 @@
    "pattern": "fade",
    "prime": true,
    "theme": "전쟁",
-   "value_eok": 2818,
+   "value_eok": 2819,
    "theme_leader": true,
    "spark_max_x": 10.5,
    "spark_max_pct": 4.18,
@@ -391,43 +391,31 @@
   "009830": {
    "name": "한화솔루션",
    "sector": "화학",
-   "entry": 42100.0,
-   "score": 56,
+   "entry": 42200.0,
+   "score": 63,
    "breakdown": {
     "base": 30,
     "spark": 4.3,
-    "fade": 10.2,
+    "fade": 9.6,
     "ma10": 10.0,
-    "flow": 2,
+    "flow": 9,
     "event": 0.0
    },
-   "change_pct": 8.79,
+   "change_pct": 9.04,
    "high_pct": 13.31,
-   "fade_pct": 34.0,
+   "fade_pct": 32.0,
    "pattern": "fade",
    "prime": true,
    "theme": "반도체",
-   "value_eok": 1381,
+   "value_eok": 1440,
    "theme_leader": false,
    "spark_max_x": 14.8,
    "spark_max_pct": -1.27,
    "mega_flow": false,
-   "flow_today_buy": false,
-   "flow_net_days": 1,
+   "flow_today_buy": true,
+   "flow_net_days": 2,
    "deep_shake": null,
-   "ai_verdict": {
-    "status": "ok",
-    "verdict": "REJECT",
-    "confidence": 78,
-    "reason": "외국인 4일 연속 순매도 후 소규모 매수 전환에 그쳤고, 기관도 4일 중 3일 매도로 수급 방어 동력이 약하며, spark 클러스터가 12시대 단 2회에 불과하고 음봉(-1.27%) 포함되어 상승 동력 소진 후 흔들기가 아닌 분산 매도로 보임.",
-    "risk_flags": [
-     "외국인·기관 동반 매도 우세",
-     "spark 음봉 포함·상승 동력 부재",
-     "고려아연 지분 뉴스 불확실성"
-    ],
-    "manual_check": "장중 실시간 호가창 매도잔량 누적 추이 및 2시 이후 외국인 매수세 지속 여부",
-    "model": "kimi-k2.6"
-   },
+   "ai_verdict": null,
    "visible_experimental": false,
    "reaccum_badge": false,
    "reaccum": null,
@@ -435,7 +423,7 @@
    "first_seen": "2026-06-16 14:46:21 KST",
    "evaluated": false,
    "result": null,
-   "final": false
+   "final": true
   },
   "067290": {
    "name": "JW신약",
@@ -534,7 +522,55 @@
    "evaluated": false,
    "result": null,
    "final": false
+  },
+  "005930": {
+   "name": "삼성전자",
+   "sector": "전기·전자",
+   "entry": 343000.0,
+   "score": 0,
+   "breakdown": {
+    "base": 0,
+    "spark": 0,
+    "fade": 0,
+    "ma10": 0,
+    "flow": 0,
+    "event": 0
+   },
+   "change_pct": 1.78,
+   "high_pct": 2.52,
+   "fade_pct": 29.4,
+   "pattern": "reaccum",
+   "prime": false,
+   "theme": "반도체",
+   "value_eok": 56776,
+   "theme_leader": false,
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "flow_today_buy": true,
+   "flow_net_days": 2,
+   "deep_shake": null,
+   "ai_verdict": null,
+   "visible_experimental": true,
+   "reaccum_badge": false,
+   "reaccum": {
+    "peak_date": "20260612",
+    "peak_value_eok": 102432,
+    "peak_high_pct": 13.38,
+    "ma20": 312925.0,
+    "ma20_margin_pct": 9.61,
+    "ivtr_net": 3321,
+    "ivtr_days": 4,
+    "ivtr_eok": 1062,
+    "cause_summary": "삼성전자, 내년 갤럭시S27에 BOE OLED 적용 여부 불투명",
+    "was_theme_leader": false
+   },
+   "matched_events": [],
+   "first_seen": "2026-06-16 15:46:01 KST",
+   "evaluated": false,
+   "result": null,
+   "final": true
   }
  },
- "as_of": "2026-06-16 15:31:07 KST"
+ "as_of": "2026-06-16 15:46:01 KST"
 }
