@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-16 11:46:06 KST",
+ "generated_at": "2026-06-16 12:01:00 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -40,7 +40,7 @@
   "explosion_window": 6,
   "explosion_rank_n": 30
  },
- "universe_count": 44,
+ "universe_count": 41,
  "events": [
   {
    "id": "2026-06-17_FOMC 금리 결정 (",
@@ -64,67 +64,85 @@
    "prime": true,
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 64,
+   "suspicion_score": 66,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 5.6,
-    "fade": 12.5,
+    "spark": 8.2,
+    "fade": 11.8,
     "ma10": 10.0,
     "flow": 6.0,
     "event": 0.0
    },
-   "score_raw": 64,
+   "score_raw": 66,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 5.6,
-    "fade": 12.5,
+    "spark": 8.2,
+    "fade": 11.8,
     "ma10": 10.0,
     "flow": 6,
     "event": 0.0
    },
-   "price": 106600.0,
-   "change_pct": 7.14,
+   "price": 106200.0,
+   "change_pct": 6.73,
    "high_pct": 17.09,
-   "fade_pct": 58.2,
-   "value_eok": 1912,
-   "ma10": 94350.0,
-   "ma10_margin_pct": 12.98,
+   "fade_pct": 60.6,
+   "value_eok": 1929,
+   "ma10": 94310.0,
+   "ma10_margin_pct": 12.61,
    "spark": {
     "clusters": [
      {
+      "time": "09:12",
+      "vol_x": 9.3,
+      "pct": 2.62,
+      "minutes": 2
+     },
+     {
       "time": "09:16",
-      "vol_x": 9.8,
+      "vol_x": 12.3,
       "pct": 0.97,
       "minutes": 1
      },
      {
       "time": "09:18",
-      "vol_x": 9.6,
+      "vol_x": 12.0,
       "pct": -1.58,
       "minutes": 1
      },
      {
       "time": "09:25",
-      "vol_x": 16.9,
+      "vol_x": 21.1,
       "pct": 0.12,
       "minutes": 2
      },
      {
       "time": "09:30",
-      "vol_x": 10.3,
+      "vol_x": 12.9,
       "pct": -0.87,
       "minutes": 1
      },
      {
       "time": "09:33",
-      "vol_x": 8.1,
+      "vol_x": 10.2,
       "pct": -1.05,
+      "minutes": 1
+     },
+     {
+      "time": "09:41",
+      "vol_x": 9.4,
+      "pct": -2.93,
+      "minutes": 1
+     },
+     {
+      "time": "09:44",
+      "vol_x": 8.6,
+      "pct": 3.12,
       "minutes": 1
      }
     ]
    },
-   "spark_max_x": 16.9,
+   "spark_max_x": 21.1,
    "spark_max_pct": 0.12,
    "mega_flow": false,
    "flow": {
@@ -172,73 +190,79 @@
    "prime": true,
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 63,
+   "suspicion_score": 64,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 30,
-    "spark": 12.7,
-    "fade": 7.9,
-    "ma10": 7.5,
+    "spark": 14.8,
+    "fade": 7.6,
+    "ma10": 7.3,
     "flow": 2.0,
     "event": 2.7
    },
-   "score_raw": 63,
+   "score_raw": 64,
    "score_breakdown_raw": {
     "base": 30,
-    "spark": 12.7,
-    "fade": 7.9,
-    "ma10": 7.5,
+    "spark": 14.8,
+    "fade": 7.6,
+    "ma10": 7.3,
     "flow": 2,
     "event": 2.7
    },
-   "price": 26500.0,
-   "change_pct": 5.58,
+   "price": 26450.0,
+   "change_pct": 5.38,
    "high_pct": 21.31,
-   "fade_pct": 73.8,
-   "value_eok": 2337,
-   "ma10": 24997.0,
-   "ma10_margin_pct": 6.01,
+   "fade_pct": 74.8,
+   "value_eok": 2363,
+   "ma10": 24992.0,
+   "ma10_margin_pct": 5.83,
    "spark": {
     "clusters": [
      {
       "time": "09:02",
-      "vol_x": 25.9,
+      "vol_x": 29.1,
       "pct": 5.44,
       "minutes": 2
      },
      {
       "time": "09:06",
-      "vol_x": 28.3,
+      "vol_x": 31.7,
       "pct": 3.62,
       "minutes": 2
      },
      {
       "time": "09:10",
-      "vol_x": 13.0,
+      "vol_x": 14.5,
       "pct": -3.75,
       "minutes": 2
      },
      {
       "time": "09:14",
-      "vol_x": 8.0,
+      "vol_x": 9.0,
       "pct": 3.37,
       "minutes": 1
      },
      {
+      "time": "09:16",
+      "vol_x": 8.2,
+      "pct": 1.22,
+      "minutes": 1
+     },
+     {
       "time": "10:08",
-      "vol_x": 17.8,
+      "vol_x": 19.9,
       "pct": 4.52,
       "minutes": 2
      },
      {
       "time": "10:11",
-      "vol_x": 9.4,
+      "vol_x": 10.5,
       "pct": -4.84,
       "minutes": 2
      }
     ]
    },
-   "spark_max_x": 28.3,
+   "spark_max_x": 31.7,
    "spark_max_pct": 3.62,
    "mega_flow": false,
    "flow": {
@@ -323,13 +347,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 246000.0,
-   "change_pct": -0.81,
+   "price": 245000.0,
+   "change_pct": -1.21,
    "high_pct": 7.06,
-   "fade_pct": 111.4,
-   "value_eok": 4257,
-   "ma10": 253150.0,
-   "ma10_margin_pct": -2.82,
+   "fade_pct": 117.1,
+   "value_eok": 4356,
+   "ma10": 253050.0,
+   "ma10_margin_pct": -3.18,
    "spark": {
     "clusters": []
    },
@@ -384,25 +408,17 @@
      "datetime": "202606161123",
      "url": "https://n.news.naver.com/mnews/article/008/0005372534",
      "sentiment": "호재"
-    },
-    {
-     "title": "인투씨엔에스, 네이버와 손잡고 동물병원 검색 고도화",
-     "summary": "동물병원 디지털 전환 전문기업인 인투씨엔에스가 네이버(NAVER(035420))와 협력해 동물병원의 온라인 검색 경쟁력 강화에 나선다. 인투씨엔에스는 네이버와의 협업을 통해 ‘네이버 플레이스 플러스(place+) 베타’ 서비스를 정식 오픈했다고 16일",
-     "office": "이데일리",
-     "datetime": "202606160954",
-     "url": "https://n.news.naver.com/mnews/article/018/0006307291",
-     "sentiment": "호재"
     }
    ],
    "matched_events": [],
-   "theme": "반도체",
+   "theme": "전쟁",
    "visible_experimental": true,
    "reaccum": {
     "peak_date": "20260612",
     "peak_value_eok": 13016,
     "peak_high_pct": 17.41,
-    "ma20": 231645.0,
-    "ma20_margin_pct": 6.2,
+    "ma20": 231595.0,
+    "ma20_margin_pct": 5.79,
     "ivtr_net": 605116,
     "ivtr_days": 4,
     "ivtr_eok": 1657,
@@ -437,13 +453,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 333000.0,
-   "change_pct": -4.03,
+   "price": 332000.0,
+   "change_pct": -4.32,
    "high_pct": 4.61,
-   "fade_pct": 187.5,
-   "value_eok": 2040,
-   "ma10": 299450.0,
-   "ma10_margin_pct": 11.2,
+   "fade_pct": 193.8,
+   "value_eok": 2122,
+   "ma10": 299350.0,
+   "ma10_margin_pct": 10.91,
    "spark": {
     "clusters": []
    },
@@ -484,11 +500,11 @@
    },
    "news": [
     {
-     "title": "곽동신 한미반도체 회장, 사재 80억 들여 자사주 추가 매입",
-     "summary": "곽동신 한미반도체(042700) 회장이 사재 80억 원을 투입해 자사주를 추가 매입했다. 글로벌 고대역폭메모리(HBM) 핵심인 본딩(Bonding) 장비 시장에서의 지배력과 미국 우주항공 인프라 투자에 따른 중장기 성장 동력에 대한 자신감을 표명한..",
-     "office": "서울경제",
-     "datetime": "202606161127",
-     "url": "https://n.news.naver.com/mnews/article/011/0004631591",
+     "title": "한미반도체 &quot;곽동신 회장 자사주 취득, 회사 성장 확신&quot;",
+     "summary": "한미반도체 곽동신 회장이 자사주를 추가로 취득, 주주들을 대상으로 회사 성장에 대한 확신이 있음을 알렸다. 16일 관련 업계에 따르면 곽 회장은 사재를 활용해 80억원 자사주 취득을 마쳤다. 이번 매입은 지난달 19일 공시한 자사주 취득 계획...",
+     "office": "파이낸셜뉴스",
+     "datetime": "202606161152",
+     "url": "https://n.news.naver.com/mnews/article/014/0005535487",
      "sentiment": "호재"
     }
    ],
@@ -499,12 +515,12 @@
     "peak_date": "20260612",
     "peak_value_eok": 20588,
     "peak_high_pct": 28.01,
-    "ma20": 302775.0,
-    "ma20_margin_pct": 9.98,
+    "ma20": 302725.0,
+    "ma20_margin_pct": 9.67,
     "ivtr_net": 1728583,
     "ivtr_days": 2,
     "ivtr_eok": 6098,
-    "cause_summary": "곽동신 한미반도체 회장, 사재 80억 들여 자사주 추가 매입",
+    "cause_summary": "한미반도체 &quot;곽동신 회장 자사주 취득, 회사 성장 확신&quot;",
     "was_theme_leader": false
    },
    "theme_leader": false
@@ -535,13 +551,13 @@
     "flow": 0,
     "event": 0
    },
-   "price": 49800.0,
-   "change_pct": -2.16,
+   "price": 50000.0,
+   "change_pct": -1.77,
    "high_pct": 4.91,
-   "fade_pct": 144.0,
-   "value_eok": 918,
-   "ma10": 44955.0,
-   "ma10_margin_pct": 10.78,
+   "fade_pct": 136.0,
+   "value_eok": 941,
+   "ma10": 44975.0,
+   "ma10_margin_pct": 11.17,
    "spark": {
     "clusters": []
    },
@@ -588,8 +604,8 @@
     "peak_date": "20260611",
     "peak_value_eok": 2044,
     "peak_high_pct": 17.59,
-    "ma20": 46100.0,
-    "ma20_margin_pct": 8.03,
+    "ma20": 46110.0,
+    "ma20_margin_pct": 8.44,
     "ivtr_net": 767669,
     "ivtr_days": 6,
     "ivtr_eok": 344,
