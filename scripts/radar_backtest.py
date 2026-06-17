@@ -228,6 +228,8 @@ def collect_samples():
                                     "flow_today_buy",
                                     int(round(s.get("breakdown", {}).get("flow", 0) or 0)) % 2 == 1),
                                 "mega_flow": s.get("mega_flow", False),
+                                # 신호일 당일 등락률 — 등락률 구간별 익일 상승확률 분석용
+                                "change_pct": s.get("change_pct"),
                                 "eval_date": r.get("date"),
                                 "hit": r.get("hit", False),
                                 "high3": r.get("high3", False),
@@ -404,6 +406,32 @@ def spark_flow_matrix(samples):
             "unknown_n": len(samples) - len(known), "cells": cells}
 
 
+# 신호일 당일 등락률 구간 — 레이더 게이트(−4~+10%) 내에서 어느 구간 종가매수가 익일 더 오르나
+CHANGE_BANDS = [("−4~0%", -100.0, 0.0), ("0~+3%", 0.0, 3.0),
+                ("+3~+6%", 3.0, 6.0), ("+6~+10%", 6.0, 100.0)]
+
+
+def change_band_stats(samples):
+    """등락률 구간별 익일 상승확률(적중률)·평균수익 — '몇 % 구간 종가베팅이 익일 더 오르나'.
+
+    hit_rate = 익일 종가 > 신호일 종가 비율 = 실측 상승확률. change_pct 미기록 구표본은 제외.
+    valid 게이트(n>=FEATURE_MIN_N)로 소표본 단정 방지.
+    """
+    known = [s for s in samples if s.get("change_pct") is not None]
+    cells = []
+    for label, lo, hi in CHANGE_BANDS:
+        grp = [s for s in known if lo <= s["change_pct"] < hi]
+        hits = sum(1 for s in grp if s["hit"])
+        rets = [s["return_pct"] for s in grp]
+        cells.append({
+            "band": label, "n": len(grp),
+            "hit_rate": round(hits / len(grp) * 100, 1) if grp else None,
+            "avg_return": round(sum(rets) / len(rets), 2) if rets else None,
+            "valid": len(grp) >= FEATURE_MIN_N,
+        })
+    return {"min_n": FEATURE_MIN_N, "unknown_n": len(samples) - len(known), "cells": cells}
+
+
 def tune_weights(samples):
     """항목별 정규화 기여도의 적중군-미적중군 평균 차(lift)로 가중치 조정.
 
@@ -499,6 +527,8 @@ def write_performance(samples, series, bins, weights, dropouts=None,
         "ai": ai_stats(samples),
         # 메가스파크×수급 가설 검증 표 (스파크 배율 구간 × 당일 수급매수)
         "spark_flow": spark_flow_matrix(samples),
+        # 등락률 구간별 익일 상승확률 — '몇 % 구간 종가매수가 익일 더 오르나'(재매집 실험 풀)
+        "change_bands": change_band_stats(reaccum_experimental),
         "experimental": {
             "reaccum": sample_stats(reaccum_experimental),
         },

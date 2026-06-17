@@ -100,6 +100,21 @@ export interface SparkFlowStats {
   cells: SparkFlowCell[];
 }
 
+/** 신호일 등락률 구간별 익일 상승확률 — radar_backtest.change_band_stats()와 정합. */
+export interface ChangeBandCell {
+  band: string; // "−4~0%" | "0~+3%" | "+3~+6%" | "+6~+10%"
+  n: number;
+  hit_rate: number | null; // 익일 종가 상승 비율(%) = 실측 상승확률
+  avg_return: number | null; // 익일 평균 수익(%)
+  valid: boolean; // n >= min_n
+}
+
+export interface ChangeBandStats {
+  min_n: number;
+  unknown_n: number; // change_pct 미기록 구표본 수
+  cells: ChangeBandCell[];
+}
+
 /** 테마/섹터별 성과 — radar_backtest.group_stats_gated()와 정합. */
 export interface GroupStat {
   key: string; // 테마명 또는 섹터명 (미분류는 "unknown")
@@ -170,6 +185,8 @@ export interface PerformanceData {
   ai?: AiStats;
   /** 메가스파크×수급 가설 검증 표 — 구버전 performance.json에는 없을 수 있음 */
   spark_flow?: SparkFlowStats;
+  /** 등락률 구간별 익일 상승확률 — 구버전 performance.json에는 없을 수 있음 */
+  change_bands?: ChangeBandStats;
   /** 테마별 성과 — 구버전 performance.json에는 없을 수 있음 */
   by_theme?: GroupStat[];
   /** 섹터별 성과 — 구버전 performance.json에는 없을 수 있음 */

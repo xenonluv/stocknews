@@ -9,6 +9,7 @@ import { CalibrationTable } from "@/components/performance/CalibrationTable";
 import { WeightsPanel } from "@/components/performance/WeightsPanel";
 import { AiPredictionPanel } from "@/components/performance/AiPredictionPanel";
 import { SparkFlowMatrix } from "@/components/performance/SparkFlowMatrix";
+import { ChangeBandTable } from "@/components/performance/ChangeBandTable";
 import { ThemeStatsTable } from "@/components/performance/ThemeStatsTable";
 import { TrackPerformancePanel } from "@/components/performance/TrackPerformancePanel";
 
@@ -65,6 +66,8 @@ export default function PerformancePage() {
         <TrackPerformancePanel data={track} />
 
         {data.spark_flow && <SparkFlowMatrix data={data.spark_flow} />}
+
+        {data.change_bands && <ChangeBandTable data={data.change_bands} />}
 
         {(data.by_theme || data.by_sector) && (
           <div className="grid gap-6 lg:grid-cols-2">
