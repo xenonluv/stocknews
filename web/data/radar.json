@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-17 10:31:53 KST",
+ "generated_at": "2026-06-17 10:41:52 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -23,7 +23,7 @@
   "explosion_window": 6,
   "explosion_rank_n": 30
  },
- "universe_count": 67,
+ "universe_count": 68,
  "events": [
   {
    "id": "2026-06-17_FOMC 금리 결정 (",
@@ -65,13 +65,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 1262000.0,
-   "change_pct": 2.1,
+   "price": 1259000.0,
+   "change_pct": 1.86,
    "high_pct": 5.58,
-   "fade_pct": 62.3,
-   "value_eok": 2250,
-   "ma10": 1147000.0,
-   "ma10_margin_pct": 10.03,
+   "fade_pct": 66.7,
+   "value_eok": 2312,
+   "ma10": 1146700.0,
+   "ma10_margin_pct": 9.79,
    "spark": {
     "clusters": []
    },
@@ -135,8 +135,8 @@
     "peak_date": "20260615",
     "peak_value_eok": 6385,
     "peak_high_pct": 18.34,
-    "ma20": 1110550.0,
-    "ma20_margin_pct": 13.64,
+    "ma20": 1110400.0,
+    "ma20_margin_pct": 13.38,
     "ivtr_net": 46200,
     "ivtr_days": 4,
     "ivtr_eok": 535,
@@ -171,13 +171,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 1582000.0,
-   "change_pct": 5.4,
+   "price": 1581000.0,
+   "change_pct": 5.33,
    "high_pct": 7.4,
-   "fade_pct": 27.0,
-   "value_eok": 5153,
-   "ma10": 1327100.0,
-   "ma10_margin_pct": 19.21,
+   "fade_pct": 27.9,
+   "value_eok": 5452,
+   "ma10": 1327000.0,
+   "ma10_margin_pct": 19.14,
    "spark": {
     "clusters": []
    },
@@ -230,7 +230,7 @@
    },
    "news": [
     {
-     "title": "올해만 주가 300% 뛴 SK스퀘어…지주사 첫 시총 200조 돌파",
+     "title": "39.2만원→156.7만원...'시총 200조 돌파' SK스퀘어, 더 달린다",
      "summary": "SK스퀘어가 국내 지주사로는 처음으로 시가총액 200조원을 돌파했다. 17일 오전 10시19분 현재 코스피 시장에서 SK스퀘어는 전일대비 4%대 오른 156만7000원에 거래되며 시가총액 206조5148억원을 기록했다. SK스퀘어 시가총액은 지난해 1",
      "office": "머니투데이",
      "datetime": "202606171022",
@@ -255,12 +255,151 @@
     "peak_date": "20260612",
     "peak_value_eok": 20966,
     "peak_high_pct": 15.8,
-    "ma20": 1260650.0,
-    "ma20_margin_pct": 25.49,
+    "ma20": 1260600.0,
+    "ma20_margin_pct": 25.42,
     "ivtr_net": 1192969,
     "ivtr_days": 4,
     "ivtr_eok": 15537,
-    "cause_summary": "올해만 주가 300% 뛴 SK스퀘어…지주사 첫 시총 200조 돌파",
+    "cause_summary": "39.2만원→156.7만원...'시총 200조 돌파' SK스퀘어, 더 달린다",
+    "was_theme_leader": false
+   },
+   "theme_leader": false
+  },
+  {
+   "code": "043260",
+   "name": "성호전자",
+   "sector": "전기·전자",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 82,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_value": 3,
+    "re_body": 5,
+    "re_count": 3,
+    "flow": 8,
+    "explosion": 1
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_value": 0,
+    "re_body": 0,
+    "re_count": 0,
+    "flow": 0,
+    "explosion": 0
+   },
+   "price": 44600.0,
+   "change_pct": 9.85,
+   "high_pct": 9.85,
+   "fade_pct": 0.0,
+   "value_eok": 478,
+   "ma10": 45000.0,
+   "ma10_margin_pct": -0.89,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 5.6,
+    "time": "10:30",
+    "value_10m_eok": 78
+   },
+   "reignition_bars": [
+    {
+     "time": "10:30",
+     "body_pct": 5.6,
+     "value_eok": 78
+    },
+    {
+     "time": "10:40",
+     "body_pct": 5.19,
+     "value_eok": 90
+    }
+   ],
+   "flow": {
+    "net_days": 2,
+    "today_buy": false,
+    "streak": 0,
+    "detail": [
+     {
+      "date": "0610",
+      "frgn": -157443,
+      "orgn": -451962
+     },
+     {
+      "date": "0611",
+      "frgn": -886810,
+      "orgn": 1280775
+     },
+     {
+      "date": "0612",
+      "frgn": 30757,
+      "orgn": 428772
+     },
+     {
+      "date": "0615",
+      "frgn": -750413,
+      "orgn": -237717
+     },
+     {
+      "date": "0616",
+      "frgn": -91198,
+      "orgn": -200991
+     }
+    ]
+   },
+   "news": [
+    {
+     "title": "성호전자 &quot;ADS테크, 엔비디아·마벨서 100억원 수주…젠슨 황이 찍은 ...",
+     "summary": "성호전자의 자회사 ADS테크가 엔비디아와 마벨로부터 총 100억원 상당의 '공동광학패키징'(CPO) 장비를 수주했다. 17일 성호전자에 따르면 ADS테크는 엔비디아로부터 95억원 규모의 CPO 장비를 전날 신규 수주했다. 전체 수주량의 70%가량은 신",
+     "office": "머니투데이",
+     "datetime": "202606171039",
+     "url": "https://n.news.naver.com/mnews/article/008/0005373087",
+     "sentiment": "호재"
+    },
+    {
+     "title": "성호전자 '반도체 장비社' 인티맥스 인수",
+     "summary": "▶마켓인사이트 6월 12일 오전 9시 37분 성호전자가 반도체 핸들러·검사장비 제조사인 인티맥스 지분 90%를 640억원에 인수했다고 12일 발표했다. 지난해 12월 광통신 부품 조립 장비 업체 ADS테크를 인수한 데 이은 두 번째 반도체 장비 인수합",
+     "office": "한국경제",
+     "datetime": "202606121806",
+     "url": "https://n.news.naver.com/mnews/article/015/0005298231",
+     "sentiment": "호재"
+    },
+    {
+     "title": "[딜 인사이드] 성호전자, 메자닌 활용한 2000억 잭팟…오버행은 부담",
+     "summary": "성호전자가 고도화된 자본시장 금융기법을 활용해 인수합병(M&amp;A)에 잇따라 나서고 있다. 회사는 주가급등으로 가치가 크게 오른 메자닌(CB·BW)을 현금 대신 인수대금으로 사용하며 단기간에 자산 규모를 조 단위로 키웠다. 반면 본업 부진으로...",
+     "office": "블로터",
+     "datetime": "202606121509",
+     "url": "https://n.news.naver.com/mnews/article/293/0000086194",
+     "sentiment": "혼재"
+    },
+    {
+     "title": "젠슨 황이 찍은 ‘빛의 길’ 잡는다…성호전자, LG이노텍과 ‘광 커넥...",
+     "summary": "광 커넥션·CPO 양산장비 협력 검토 로보틱스·우주항공 등 미래사업 적용성 평가 [헤럴드경제=홍석희 기자] 성호전자가 LG이노텍과 광통신·로보틱스·우주항공 등 미래사업 분야 협력에 나선다. 인공지능(AI) 데이터 처리 병목을 줄일 기술로...",
+     "office": "헤럴드경제",
+     "datetime": "202606100811",
+     "url": "https://n.news.naver.com/mnews/article/016/0002654346",
+     "sentiment": "호재"
+    }
+   ],
+   "matched_events": [],
+   "theme": "반도체",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260611",
+    "peak_value_eok": 2670,
+    "peak_high_pct": 14.16,
+    "ma20": 42275.0,
+    "ma20_margin_pct": 5.5,
+    "ivtr_net": 1328706,
+    "ivtr_days": 2,
+    "ivtr_eok": 613,
+    "cause_summary": "성호전자 &quot;ADS테크, 엔비디아·마벨서 100억원 수주…젠슨 황이 찍은 ...",
     "was_theme_leader": false
    },
    "theme_leader": false
@@ -291,13 +430,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 51000.0,
-   "change_pct": 1.8,
+   "price": 51400.0,
+   "change_pct": 2.59,
    "high_pct": 7.98,
-   "fade_pct": 77.5,
-   "value_eok": 732,
-   "ma10": 45945.0,
-   "ma10_margin_pct": 11.0,
+   "fade_pct": 67.5,
+   "value_eok": 753,
+   "ma10": 45985.0,
+   "ma10_margin_pct": 11.78,
    "spark": {
     "clusters": []
    },
@@ -361,8 +500,8 @@
     "peak_date": "20260611",
     "peak_value_eok": 2044,
     "peak_high_pct": 17.59,
-    "ma20": 46217.5,
-    "ma20_margin_pct": 10.35,
+    "ma20": 46237.5,
+    "ma20_margin_pct": 11.17,
     "ivtr_net": 524964,
     "ivtr_days": 6,
     "ivtr_eok": 223,
@@ -397,13 +536,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 54300.0,
-   "change_pct": -2.69,
+   "price": 54600.0,
+   "change_pct": -2.15,
    "high_pct": 0.54,
-   "fade_pct": 600.0,
-   "value_eok": 1703,
-   "ma10": 42550.0,
-   "ma10_margin_pct": 27.61,
+   "fade_pct": 500.0,
+   "value_eok": 1757,
+   "ma10": 42580.0,
+   "ma10_margin_pct": 28.23,
    "spark": {
     "clusters": []
    },
@@ -467,8 +606,8 @@
     "peak_date": "20260616",
     "peak_value_eok": 12512,
     "peak_high_pct": 26.71,
-    "ma20": 41932.5,
-    "ma20_margin_pct": 29.49,
+    "ma20": 41947.5,
+    "ma20_margin_pct": 30.16,
     "ivtr_net": 130578,
     "ivtr_days": 2,
     "ivtr_eok": 68,
@@ -503,13 +642,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 160100.0,
-   "change_pct": -1.23,
+   "price": 159300.0,
+   "change_pct": -1.73,
    "high_pct": 6.05,
-   "fade_pct": 120.4,
-   "value_eok": 328,
-   "ma10": 144370.0,
-   "ma10_margin_pct": 10.9,
+   "fade_pct": 128.6,
+   "value_eok": 338,
+   "ma10": 144290.0,
+   "ma10_margin_pct": 10.4,
    "spark": {
     "clusters": []
    },
@@ -577,8 +716,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 2652,
     "peak_high_pct": 24.5,
-    "ma20": 124480.0,
-    "ma20_margin_pct": 28.62,
+    "ma20": 124440.0,
+    "ma20_margin_pct": 28.01,
     "ivtr_net": 432967,
     "ivtr_days": 4,
     "ivtr_eok": 729,
@@ -617,7 +756,7 @@
    "change_pct": 0.35,
    "high_pct": 5.14,
    "fade_pct": 93.1,
-   "value_eok": 210,
+   "value_eok": 217,
    "ma10": 161020.0,
    "ma10_margin_pct": 5.45,
    "spark": {
@@ -733,13 +872,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 176200.0,
-   "change_pct": 3.71,
+   "price": 177300.0,
+   "change_pct": 4.36,
    "high_pct": 7.47,
-   "fade_pct": 50.4,
-   "value_eok": 1240,
-   "ma10": 158790.0,
-   "ma10_margin_pct": 10.96,
+   "fade_pct": 41.7,
+   "value_eok": 1263,
+   "ma10": 158900.0,
+   "ma10_margin_pct": 11.58,
    "spark": {
     "clusters": []
    },
@@ -798,8 +937,8 @@
     "peak_date": "20260615",
     "peak_value_eok": 2017,
     "peak_high_pct": 14.07,
-    "ma20": 158830.0,
-    "ma20_margin_pct": 10.94,
+    "ma20": 158885.0,
+    "ma20_margin_pct": 11.59,
     "ivtr_net": 828292,
     "ivtr_days": 4,
     "ivtr_eok": 1419,
@@ -838,7 +977,7 @@
    "change_pct": 2.53,
    "high_pct": 6.39,
    "fade_pct": 60.5,
-   "value_eok": 549,
+   "value_eok": 571,
    "ma10": 621500.0,
    "ma10_margin_pct": 11.02,
    "spark": {
@@ -945,13 +1084,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 399500.0,
-   "change_pct": 5.55,
+   "price": 397000.0,
+   "change_pct": 4.89,
    "high_pct": 8.19,
-   "fade_pct": 32.3,
-   "value_eok": 143,
-   "ma10": 375400.0,
-   "ma10_margin_pct": 6.42,
+   "fade_pct": 40.3,
+   "value_eok": 146,
+   "ma10": 375150.0,
+   "ma10_margin_pct": 5.82,
    "spark": {
     "clusters": []
    },
@@ -1037,8 +1176,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 2053,
     "peak_high_pct": 30.0,
-    "ma20": 390200.0,
-    "ma20_margin_pct": 2.38,
+    "ma20": 390075.0,
+    "ma20_margin_pct": 1.78,
     "ivtr_net": 24320,
     "ivtr_days": 1,
     "ivtr_eok": 287,
@@ -1073,13 +1212,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 505000.0,
-   "change_pct": 2.02,
+   "price": 499500.0,
+   "change_pct": 0.91,
    "high_pct": 6.67,
-   "fade_pct": 69.7,
-   "value_eok": 226,
-   "ma10": 488800.0,
-   "ma10_margin_pct": 3.31,
+   "fade_pct": 86.4,
+   "value_eok": 252,
+   "ma10": 488250.0,
+   "ma10_margin_pct": 2.3,
    "spark": {
     "clusters": []
    },
@@ -1143,8 +1282,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 4605,
     "peak_high_pct": 23.61,
-    "ma20": 491150.0,
-    "ma20_margin_pct": 2.82,
+    "ma20": 490875.0,
+    "ma20_margin_pct": 1.76,
     "ivtr_net": 37631,
     "ivtr_days": 2,
     "ivtr_eok": 334,
@@ -1179,13 +1318,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 151100.0,
-   "change_pct": 2.16,
-   "high_pct": 3.25,
-   "fade_pct": 33.3,
-   "value_eok": 503,
-   "ma10": 126060.0,
-   "ma10_margin_pct": 19.86,
+   "price": 150000.0,
+   "change_pct": 1.42,
+   "high_pct": 4.53,
+   "fade_pct": 68.7,
+   "value_eok": 599,
+   "ma10": 125950.0,
+   "ma10_margin_pct": 19.09,
    "spark": {
     "clusters": []
    },
@@ -1249,8 +1388,8 @@
     "peak_date": "20260615",
     "peak_value_eok": 1683,
     "peak_high_pct": 18.95,
-    "ma20": 118455.0,
-    "ma20_margin_pct": 27.56,
+    "ma20": 118400.0,
+    "ma20_margin_pct": 26.69,
     "ivtr_net": 23986,
     "ivtr_days": 2,
     "ivtr_eok": 30,
