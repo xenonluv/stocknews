@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-17 09:11:48 KST",
+ "generated_at": "2026-06-17 09:21:46 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -40,6 +40,112 @@
  ],
  "suspects": [
   {
+   "code": "011070",
+   "name": "LG이노텍",
+   "sector": "전기·전자",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 93,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_value": 12,
+    "re_body": 4,
+    "re_count": 3,
+    "flow": 8,
+    "explosion": 4
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_value": 0,
+    "re_body": 0,
+    "re_count": 0,
+    "flow": 0,
+    "explosion": 0
+   },
+   "price": 1275000.0,
+   "change_pct": 3.16,
+   "high_pct": 5.58,
+   "fade_pct": 43.5,
+   "value_eok": 1076,
+   "ma10": 1148400.0,
+   "ma10_margin_pct": 11.02,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 4.72,
+    "time": "09:00",
+    "value_10m_eok": 386
+   },
+   "reignition_bars": [
+    {
+     "time": "09:00",
+     "body_pct": 4.72,
+     "value_eok": 386
+    },
+    {
+     "time": "09:10",
+     "body_pct": 2.21,
+     "value_eok": 614
+    }
+   ],
+   "flow": {
+    "net_days": 3,
+    "today_buy": false,
+    "streak": 0,
+    "detail": [
+     {
+      "date": "0610",
+      "frgn": 33868,
+      "orgn": -17751
+     },
+     {
+      "date": "0611",
+      "frgn": 8071,
+      "orgn": 7943
+     },
+     {
+      "date": "0612",
+      "frgn": 17667,
+      "orgn": -25379
+     },
+     {
+      "date": "0615",
+      "frgn": 13405,
+      "orgn": 38140
+     },
+     {
+      "date": "0616",
+      "frgn": -76406,
+      "orgn": -8151
+     }
+    ]
+   },
+   "news": [],
+   "matched_events": [],
+   "theme": "반도체",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260615",
+    "peak_value_eok": 6385,
+    "peak_high_pct": 18.34,
+    "ma20": 1111250.0,
+    "ma20_margin_pct": 14.74,
+    "ivtr_net": 46200,
+    "ivtr_days": 4,
+    "ivtr_eok": 535,
+    "cause_summary": "애플 AI 전략에 아이폰 더 팔린다…대표 부품주 LG이노텍 주목",
+    "was_theme_leader": false
+   },
+   "theme_leader": false
+  },
+  {
    "code": "403870",
    "name": "HPSP",
    "sector": "기계·장비",
@@ -65,13 +171,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 68600.0,
-   "change_pct": 3.47,
+   "price": 65800.0,
+   "change_pct": -0.75,
    "high_pct": 5.88,
-   "fade_pct": 41.0,
-   "value_eok": 1600,
-   "ma10": 59995.0,
-   "ma10_margin_pct": 14.34,
+   "fade_pct": 112.8,
+   "value_eok": 2314,
+   "ma10": 59715.0,
+   "ma10_margin_pct": 10.19,
    "spark": {
     "clusters": []
    },
@@ -130,8 +236,8 @@
     "peak_date": "20260615",
     "peak_value_eok": 27304,
     "peak_high_pct": 28.67,
-    "ma20": 55552.5,
-    "ma20_margin_pct": 23.49,
+    "ma20": 55412.5,
+    "ma20_margin_pct": 18.75,
     "ivtr_net": 5609683,
     "ivtr_days": 3,
     "ivtr_eok": 4271,
@@ -166,13 +272,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 1583000.0,
-   "change_pct": 5.46,
+   "price": 1566000.0,
+   "change_pct": 4.33,
    "high_pct": 7.4,
-   "fade_pct": 26.1,
-   "value_eok": 1952,
-   "ma10": 1327200.0,
-   "ma10_margin_pct": 19.27,
+   "fade_pct": 41.4,
+   "value_eok": 2663,
+   "ma10": 1325700.0,
+   "ma10_margin_pct": 18.13,
    "spark": {
     "clusters": []
    },
@@ -244,119 +350,18 @@
      "score": 3.0
     }
    ],
-   "theme": "전쟁",
+   "theme": "금리",
    "visible_experimental": true,
    "reaccum": {
     "peak_date": "20260612",
     "peak_value_eok": 20966,
     "peak_high_pct": 15.8,
-    "ma20": 1260700.0,
-    "ma20_margin_pct": 25.57,
+    "ma20": 1259950.0,
+    "ma20_margin_pct": 24.29,
     "ivtr_net": 1192969,
     "ivtr_days": 4,
     "ivtr_eok": 15537,
     "cause_summary": "SK證 “SK스퀘어, 목표가 185만원…하이닉스 주주환원 확대 기대감”",
-    "was_theme_leader": false
-   },
-   "theme_leader": false
-  },
-  {
-   "code": "011070",
-   "name": "LG이노텍",
-   "sector": "전기·전자",
-   "pattern": "reaccum",
-   "shake": null,
-   "deep_shake": null,
-   "suspicion_score": 90,
-   "calibrated_prob": null,
-   "score_breakdown": {
-    "base": 62,
-    "re_value": 12,
-    "re_body": 4,
-    "re_count": 0,
-    "flow": 8,
-    "explosion": 4
-   },
-   "score_raw": 0,
-   "score_breakdown_raw": {
-    "base": 0,
-    "re_value": 0,
-    "re_body": 0,
-    "re_count": 0,
-    "flow": 0,
-    "explosion": 0
-   },
-   "price": 1271000.0,
-   "change_pct": 2.83,
-   "high_pct": 3.96,
-   "fade_pct": 28.6,
-   "value_eok": 491,
-   "ma10": 1147900.0,
-   "ma10_margin_pct": 10.72,
-   "spark": {
-    "clusters": []
-   },
-   "spark_max_x": 0.0,
-   "spark_max_pct": null,
-   "mega_flow": false,
-   "reignition": {
-    "body_pct": 4.72,
-    "time": "09:00",
-    "value_10m_eok": 386
-   },
-   "reignition_bars": [
-    {
-     "time": "09:00",
-     "body_pct": 4.72,
-     "value_eok": 386
-    }
-   ],
-   "flow": {
-    "net_days": 3,
-    "today_buy": false,
-    "streak": 0,
-    "detail": [
-     {
-      "date": "0610",
-      "frgn": 33868,
-      "orgn": -17751
-     },
-     {
-      "date": "0611",
-      "frgn": 8071,
-      "orgn": 7943
-     },
-     {
-      "date": "0612",
-      "frgn": 17667,
-      "orgn": -25379
-     },
-     {
-      "date": "0615",
-      "frgn": 13405,
-      "orgn": 38140
-     },
-     {
-      "date": "0616",
-      "frgn": -76406,
-      "orgn": -8151
-     }
-    ]
-   },
-   "news": [],
-   "matched_events": [],
-   "theme": "반도체",
-   "visible_experimental": true,
-   "reaccum": {
-    "peak_date": "20260615",
-    "peak_value_eok": 6385,
-    "peak_high_pct": 18.34,
-    "ma20": 1111000.0,
-    "ma20_margin_pct": 14.4,
-    "ivtr_net": 46200,
-    "ivtr_days": 4,
-    "ivtr_eok": 535,
-    "cause_summary": "애플 AI 전략에 아이폰 더 팔린다…대표 부품주 LG이노텍 주목",
     "was_theme_leader": false
    },
    "theme_leader": false
@@ -387,13 +392,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 171300.0,
-   "change_pct": 5.68,
+   "price": 164000.0,
+   "change_pct": 1.17,
    "high_pct": 6.05,
-   "fade_pct": 6.1,
-   "value_eok": 111,
-   "ma10": 145480.0,
-   "ma10_margin_pct": 17.75,
+   "fade_pct": 80.6,
+   "value_eok": 176,
+   "ma10": 144760.0,
+   "ma10_margin_pct": 13.29,
    "spark": {
     "clusters": []
    },
@@ -461,8 +466,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 2652,
     "peak_high_pct": 24.5,
-    "ma20": 125035.0,
-    "ma20_margin_pct": 37.0,
+    "ma20": 124675.0,
+    "ma20_margin_pct": 31.54,
     "ivtr_net": 432967,
     "ivtr_days": 4,
     "ivtr_eok": 729,
@@ -497,13 +502,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 53000.0,
-   "change_pct": 5.79,
+   "price": 52000.0,
+   "change_pct": 3.79,
    "high_pct": 6.59,
-   "fade_pct": 12.1,
-   "value_eok": 179,
-   "ma10": 46145.0,
-   "ma10_margin_pct": 14.86,
+   "fade_pct": 42.4,
+   "value_eok": 290,
+   "ma10": 46045.0,
+   "ma10_margin_pct": 12.93,
    "spark": {
     "clusters": []
    },
@@ -562,8 +567,8 @@
     "peak_date": "20260611",
     "peak_value_eok": 2044,
     "peak_high_pct": 17.59,
-    "ma20": 46317.5,
-    "ma20_margin_pct": 14.43,
+    "ma20": 46267.5,
+    "ma20_margin_pct": 12.39,
     "ivtr_net": 524964,
     "ivtr_days": 6,
     "ivtr_eok": 223,
@@ -598,13 +603,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 176900.0,
-   "change_pct": 4.55,
+   "price": 173600.0,
+   "change_pct": 2.6,
    "high_pct": 5.14,
-   "fade_pct": 11.5,
-   "value_eok": 73,
-   "ma10": 161730.0,
-   "ma10_margin_pct": 9.38,
+   "fade_pct": 49.4,
+   "value_eok": 104,
+   "ma10": 161400.0,
+   "ma10_margin_pct": 7.56,
    "spark": {
     "clusters": []
    },
@@ -682,8 +687,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 2232,
     "peak_high_pct": 18.7,
-    "ma20": 139915.0,
-    "ma20_margin_pct": 26.43,
+    "ma20": 139750.0,
+    "ma20_margin_pct": 24.22,
     "ivtr_net": 284383,
     "ivtr_days": 4,
     "ivtr_eok": 486,
@@ -718,13 +723,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 175100.0,
-   "change_pct": 3.06,
-   "high_pct": 4.3,
-   "fade_pct": 28.8,
-   "value_eok": 160,
-   "ma10": 158680.0,
-   "ma10_margin_pct": 10.35,
+   "price": 176800.0,
+   "change_pct": 4.06,
+   "high_pct": 4.89,
+   "fade_pct": 16.9,
+   "value_eok": 337,
+   "ma10": 158850.0,
+   "ma10_margin_pct": 11.3,
    "spark": {
     "clusters": []
    },
@@ -783,8 +788,8 @@
     "peak_date": "20260615",
     "peak_value_eok": 2017,
     "peak_high_pct": 14.07,
-    "ma20": 158775.0,
-    "ma20_margin_pct": 10.28,
+    "ma20": 158860.0,
+    "ma20_margin_pct": 11.29,
     "ivtr_net": 828292,
     "ivtr_days": 4,
     "ivtr_eok": 1419,
@@ -819,13 +824,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 708000.0,
-   "change_pct": 5.2,
+   "price": 696000.0,
+   "change_pct": 3.42,
    "high_pct": 6.39,
-   "fade_pct": 18.6,
-   "value_eok": 236,
-   "ma10": 623300.0,
-   "ma10_margin_pct": 13.59,
+   "fade_pct": 46.5,
+   "value_eok": 362,
+   "ma10": 622100.0,
+   "ma10_margin_pct": 11.88,
    "spark": {
     "clusters": []
    },
@@ -894,8 +899,8 @@
     "peak_date": "20260615",
     "peak_value_eok": 1121,
     "peak_high_pct": 13.49,
-    "ma20": 624850.0,
-    "ma20_margin_pct": 13.31,
+    "ma20": 624250.0,
+    "ma20_margin_pct": 11.49,
     "ivtr_net": 6888,
     "ivtr_days": 3,
     "ivtr_eok": 45,
@@ -930,13 +935,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 402500.0,
-   "change_pct": 6.34,
-   "high_pct": 7.4,
-   "fade_pct": 14.3,
-   "value_eok": 54,
-   "ma10": 375700.0,
-   "ma10_margin_pct": 7.13,
+   "price": 401500.0,
+   "change_pct": 6.08,
+   "high_pct": 7.66,
+   "fade_pct": 20.7,
+   "value_eok": 82,
+   "ma10": 375600.0,
+   "ma10_margin_pct": 6.9,
    "spark": {
     "clusters": []
    },
@@ -1022,8 +1027,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 2053,
     "peak_high_pct": 30.0,
-    "ma20": 390350.0,
-    "ma20_margin_pct": 3.11,
+    "ma20": 390300.0,
+    "ma20_margin_pct": 2.87,
     "ivtr_net": 24320,
     "ivtr_days": 1,
     "ivtr_eok": 287,
@@ -1058,13 +1063,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 93400.0,
-   "change_pct": 0.97,
+   "price": 90400.0,
+   "change_pct": -2.27,
    "high_pct": 2.16,
-   "fade_pct": 55.0,
-   "value_eok": 42,
-   "ma10": 81710.0,
-   "ma10_margin_pct": 14.31,
+   "fade_pct": 205.0,
+   "value_eok": 62,
+   "ma10": 81410.0,
+   "ma10_margin_pct": 11.04,
    "spark": {
     "clusters": []
    },
@@ -1142,8 +1147,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 1568,
     "peak_high_pct": 22.21,
-    "ma20": 70310.0,
-    "ma20_margin_pct": 32.84,
+    "ma20": 70160.0,
+    "ma20_margin_pct": 28.85,
     "ivtr_net": 1418353,
     "ivtr_days": 4,
     "ivtr_eok": 1226,
@@ -1178,13 +1183,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 509000.0,
-   "change_pct": 2.83,
-   "high_pct": 3.64,
-   "fade_pct": 22.2,
-   "value_eok": 39,
-   "ma10": 489200.0,
-   "ma10_margin_pct": 4.05,
+   "price": 507000.0,
+   "change_pct": 2.42,
+   "high_pct": 4.44,
+   "fade_pct": 45.5,
+   "value_eok": 82,
+   "ma10": 489000.0,
+   "ma10_margin_pct": 3.68,
    "spark": {
     "clusters": []
    },
@@ -1253,8 +1258,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 4605,
     "peak_high_pct": 23.61,
-    "ma20": 491350.0,
-    "ma20_margin_pct": 3.59,
+    "ma20": 491250.0,
+    "ma20_margin_pct": 3.21,
     "ivtr_net": 37631,
     "ivtr_days": 2,
     "ivtr_eok": 334,
@@ -1289,13 +1294,13 @@
     "flow": 0,
     "explosion": 0
    },
-   "price": 149900.0,
-   "change_pct": 1.35,
+   "price": 145500.0,
+   "change_pct": -1.62,
    "high_pct": 1.76,
-   "fade_pct": 23.1,
-   "value_eok": 84,
-   "ma10": 125940.0,
-   "ma10_margin_pct": 19.02,
+   "fade_pct": 192.3,
+   "value_eok": 158,
+   "ma10": 125500.0,
+   "ma10_margin_pct": 15.94,
    "spark": {
     "clusters": []
    },
@@ -1354,8 +1359,8 @@
     "peak_date": "20260615",
     "peak_value_eok": 1683,
     "peak_high_pct": 18.95,
-    "ma20": 118395.0,
-    "ma20_margin_pct": 26.61,
+    "ma20": 118175.0,
+    "ma20_margin_pct": 23.12,
     "ivtr_net": 23986,
     "ivtr_days": 2,
     "ivtr_eok": 30,
