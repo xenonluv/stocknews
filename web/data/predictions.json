@@ -1,21 +1,21 @@
 {
-  "as_of": "2026-06-17 15:07 KST",
+  "as_of": "2026-06-17 15:22 KST",
   "intraday_rank": [
     {
       "ticker": "테스",
       "code": "095610",
       "tomorrow_up_prob": "78%",
-      "entry": 167600.0,
-      "target": 175980,
-      "stop": 162572,
+      "entry": 169200.0,
+      "target": 177660,
+      "stop": 164124,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI66.0 강세"
+        "RSI67.0 강세"
       ],
       "risk": "약한 마감",
-      "day_change": -1,
+      "day_change": -0.59,
       "related_news": [
         {
           "title": "두산테스나, 삼성 파운드리 낙수효과 돌입…4분기 램프업으로 실적 본...",
@@ -29,17 +29,17 @@
       "ticker": "피에스케이",
       "code": "319660",
       "tomorrow_up_prob": "77%",
-      "entry": 161900.0,
-      "target": 169995,
-      "stop": 157043,
+      "entry": 163300.0,
+      "target": 171465,
+      "stop": 158401,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI68.6 강세"
+        "RSI69.1 강세"
       ],
       "risk": "약한 마감",
-      "day_change": -0.19,
+      "day_change": 0.56,
       "related_news": [
         {
           "title": "'삼전닉스 반등' 소부장도 강세…피에스케이 20%↑[핫종목]",
@@ -53,17 +53,17 @@
       "ticker": "대덕전자",
       "code": "353200",
       "tomorrow_up_prob": "75%",
-      "entry": 173800.0,
-      "target": 182490,
-      "stop": 168586,
+      "entry": 174000.0,
+      "target": 182700,
+      "stop": 168780,
       "confidence": "상",
       "reasons": [
         "정배열",
-        "RSI62.6 강세",
+        "RSI62.7 강세",
         "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 2.18,
+      "day_change": 2.41,
       "cause_news": [
         {
           "title": "[특징주] 대덕전자, 목표가 25만원 상향에 강세…판가 인상·증설 기대",
@@ -89,14 +89,14 @@
       "ticker": "한화엔진",
       "code": "082740",
       "tomorrow_up_prob": "75%",
-      "entry": 66000.0,
-      "target": 69300,
-      "stop": 64020,
+      "entry": 65600.0,
+      "target": 68880,
+      "stop": 63632,
       "confidence": "상",
       "reasons": [
         "MACD강세",
-        "RSI54.4 강세",
-        "거래량2.44배"
+        "RSI54.0 강세",
+        "거래량2.5배"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -133,14 +133,14 @@
       "ticker": "포스코스틸리온",
       "code": "058430",
       "tomorrow_up_prob": "74%",
-      "entry": 6670.0,
-      "target": 7004,
-      "stop": 6470,
+      "entry": 6500.0,
+      "target": 6825,
+      "stop": 6305,
       "confidence": "상",
       "reasons": [
         "MACD강세",
-        "RSI60.4 강세",
-        "거래량12.37배"
+        "RSI58.5 강세",
+        "거래량12.67배"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -163,17 +163,17 @@
       "ticker": "SK스퀘어",
       "code": "402340",
       "tomorrow_up_prob": "72%",
-      "entry": 1588000.0,
-      "target": 1667400,
-      "stop": 1540360,
+      "entry": 1596000.0,
+      "target": 1675800,
+      "stop": 1548120,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.72)",
+        "강세마감(0.81)",
         "정배열",
         "MACD강세"
       ],
       "risk": "Stoch 과매수",
-      "day_change": 5.86,
+      "day_change": 5.8,
       "cause_news": [
         {
           "title": "SK스퀘어, 증권가 목표가 상향에 강세…SK하이닉스 가치 부각",
@@ -196,50 +196,20 @@
       "cause_summary": "SK스퀘어, 증권가 목표가 상향에 강세…SK하이닉스 가치 부각"
     },
     {
-      "ticker": "솔브레인",
-      "code": "357780",
+      "ticker": "LG이노텍",
+      "code": "011070",
       "tomorrow_up_prob": "70%",
-      "entry": 403500.0,
-      "target": 423675,
-      "stop": 391395,
+      "entry": 1246000.0,
+      "target": 1308300,
+      "stop": 1208620,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.81)",
-        "RSI50.6 강세",
+        "정배열",
+        "RSI64.0 강세",
         "호재"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 6.87,
-      "related_news": [
-        {
-          "title": "원익·주성엔 차익실현…코미코·솔브레인은 매수 추천 [칩칩폭폭]",
-          "url": "https://n.news.naver.com/mnews/article/123/0002383944",
-          "office": "조세일보",
-          "sentiment": "호재"
-        },
-        {
-          "title": "[주총 포커스] 솔브레인, GAA·유리기판으로 1兆 클럽 정조준",
-          "url": "https://n.news.naver.com/mnews/article/293/0000081434",
-          "office": "블로터",
-          "sentiment": "호재"
-        }
-      ]
-    },
-    {
-      "ticker": "LG이노텍",
-      "code": "011070",
-      "tomorrow_up_prob": "66%",
-      "entry": 1242000.0,
-      "target": 1304100,
-      "stop": 1204740,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "RSI63.8 강세",
-        "호재"
-      ],
-      "risk": "약한 마감",
-      "day_change": 0.65,
+      "day_change": 0.85,
       "cause_news": [
         {
           "title": "[ET특징주]LG이노텍, AI 반도체 기판 성장 기대감에 상승세",
@@ -270,17 +240,47 @@
       "cause_summary": "[ET특징주]LG이노텍, AI 반도체 기판 성장 기대감에 상승세"
     },
     {
+      "ticker": "솔브레인",
+      "code": "357780",
+      "tomorrow_up_prob": "70%",
+      "entry": 407000.0,
+      "target": 427350,
+      "stop": 394790,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.92)",
+        "RSI51.1 강세",
+        "호재"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 7.13,
+      "related_news": [
+        {
+          "title": "원익·주성엔 차익실현…코미코·솔브레인은 매수 추천 [칩칩폭폭]",
+          "url": "https://n.news.naver.com/mnews/article/123/0002383944",
+          "office": "조세일보",
+          "sentiment": "호재"
+        },
+        {
+          "title": "[주총 포커스] 솔브레인, GAA·유리기판으로 1兆 클럽 정조준",
+          "url": "https://n.news.naver.com/mnews/article/293/0000081434",
+          "office": "블로터",
+          "sentiment": "호재"
+        }
+      ]
+    },
+    {
       "ticker": "이오테크닉스",
       "code": "039030",
       "tomorrow_up_prob": "64%",
-      "entry": 500000.0,
-      "target": 525000,
-      "stop": 485000,
+      "entry": 503000.0,
+      "target": 528150,
+      "stop": 487910,
       "confidence": "중",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI51.4 강세"
+        "RSI51.7 강세"
       ],
       "risk": "약한 마감",
       "day_change": 1.01
@@ -289,13 +289,13 @@
       "ticker": "현대약품",
       "code": "004310",
       "tomorrow_up_prob": "62%",
-      "entry": 8240.0,
-      "target": 8652,
-      "stop": 7993,
+      "entry": 8140.0,
+      "target": 8547,
+      "stop": 7896,
       "confidence": "중",
       "reasons": [
-        "RSI64.2 강세",
-        "거래량8.3배",
+        "RSI63.4 강세",
+        "거래량8.36배",
         "호재"
       ],
       "risk": "약한 마감",
@@ -325,14 +325,14 @@
       "ticker": "대원전선",
       "code": "006340",
       "tomorrow_up_prob": "60%",
-      "entry": 12400.0,
-      "target": 13020,
-      "stop": 12028,
+      "entry": 12410.0,
+      "target": 13030,
+      "stop": 12038,
       "confidence": "중",
       "reasons": [
         "RSI55.0 강세",
-        "거래량6.21배",
-        "장중 19회 지속"
+        "거래량6.3배",
+        "장중 20회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -369,16 +369,16 @@
       "ticker": "성호전자",
       "code": "043260",
       "tomorrow_up_prob": "59%",
-      "entry": 42800.0,
-      "target": 44940,
-      "stop": 41516,
+      "entry": 42450.0,
+      "target": 44572,
+      "stop": 41176,
       "confidence": "중",
       "reasons": [
         "호재",
-        "장중 9회 지속"
+        "장중 10회 지속"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 4.62,
+      "day_change": 4.93,
       "cause_news": [
         {
           "title": "[특징주] 성호전자, 체질 개선·호실적 전망…두자릿수↑",
@@ -404,17 +404,17 @@
       "ticker": "하나마이크론",
       "code": "067310",
       "tomorrow_up_prob": "58%",
-      "entry": 50300.0,
-      "target": 52815,
-      "stop": 48791,
+      "entry": 50500.0,
+      "target": 53025,
+      "stop": 48985,
       "confidence": "중",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI58.7 강세"
+        "RSI59.0 강세"
       ],
       "risk": "약한 마감, Stoch 과매수",
-      "day_change": 0.4,
+      "day_change": 0.6,
       "cause_news": [
         {
           "title": "[특징주] 하나마이크론, 2분기 실적 개선 기대감에 16%↑",
@@ -429,49 +429,25 @@
       "cause_summary": "[특징주] 하나마이크론, 2분기 실적 개선 기대감에 16%↑"
     },
     {
-      "ticker": "달바글로벌",
-      "code": "483650",
-      "tomorrow_up_prob": "55%",
-      "entry": 207000.0,
-      "target": 217350,
-      "stop": 200790,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.79)",
-        "RSI51.4 강세",
-        "Stoch골든"
-      ],
-      "risk": "악재",
-      "day_change": null,
-      "related_news": [
-        {
-          "title": "'상장 1년' 달바글로벌, 자사주·배당 카드…20만원선 회복할까",
-          "url": "https://n.news.naver.com/mnews/article/293/0000085783",
-          "office": "블로터",
-          "sentiment": "악재"
-        }
-      ]
-    },
-    {
       "ticker": "SK",
       "code": "034730",
       "tomorrow_up_prob": "39%",
-      "entry": 705000.0,
-      "target": 740250,
-      "stop": 683850,
+      "entry": 706000.0,
+      "target": 741300,
+      "stop": 684820,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.74)",
+        "강세마감(0.75)",
         "정배열",
-        "RSI68.5 강세"
+        "RSI68.6 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": 4.9,
       "cause_news": [
         {
-          "title": "[특징주] SK하이닉스, 장중 250만원 돌파…역대 최고가 경신",
-          "url": "https://www.etoday.co.kr/news/view/2594539",
-          "office": "etoday",
+          "title": "[특징주] SK하이닉스, 250만원 돌파하며 또 신고가…AI 메모리 슈퍼사이...",
+          "url": "https://www.tokenpost.kr/news/economy/370242",
+          "office": "tokenpost",
           "sentiment": "호재",
           "cause_score": 11,
           "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
@@ -485,16 +461,16 @@
           "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         },
         {
-          "title": "[속보] SK하이닉스, 장중 5%대 급등… 사상 첫 '250만 닉스' 넘겼다",
-          "url": "https://www.daejonilbo.com/news/articleView.html?idxno=2282316",
-          "office": "daejonilbo",
+          "title": "[특징주] SK하이닉스…장중 첫 250만닉스 고지 올라",
+          "url": "http://www.segyebiz.com/newsView/20260617512705?OutUrl=naver",
+          "office": "segyebiz",
           "sentiment": "호재",
           "cause_score": 9,
           "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] SK하이닉스, 장중 250만원 돌파…역대 최고가 경신"
+      "cause_summary": "[특징주] SK하이닉스, 250만원 돌파하며 또 신고가…AI 메모리 슈퍼사이..."
     },
     {
       "ticker": "삼화콘덴서",
@@ -510,7 +486,7 @@
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 1.35,
+      "day_change": 1.49,
       "cause_news": [
         {
           "title": "두산에너빌리티·삼화콘덴서·일진파워 강세…핵융합에너지 원전주 투자...",
@@ -616,9 +592,9 @@
       "ticker": "코리아써키트",
       "code": "007810",
       "tomorrow_up_prob": "39%",
-      "entry": 141800.0,
-      "target": 148890,
-      "stop": 137546,
+      "entry": 141900.0,
+      "target": 148995,
+      "stop": 137643,
       "confidence": "하",
       "reasons": [
         "강세마감(0.94)",
@@ -662,17 +638,17 @@
       "ticker": "테스",
       "code": "095610",
       "tomorrow_up_prob": "78%",
-      "entry": 167600.0,
-      "target": 175980,
-      "stop": 162572,
+      "entry": 169200.0,
+      "target": 177660,
+      "stop": 164124,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI66.0 강세"
+        "RSI67.0 강세"
       ],
       "risk": "약한 마감",
-      "day_change": -1,
+      "day_change": -0.59,
       "related_news": [
         {
           "title": "두산테스나, 삼성 파운드리 낙수효과 돌입…4분기 램프업으로 실적 본...",
@@ -686,17 +662,17 @@
       "ticker": "피에스케이",
       "code": "319660",
       "tomorrow_up_prob": "77%",
-      "entry": 161900.0,
-      "target": 169995,
-      "stop": 157043,
+      "entry": 163300.0,
+      "target": 171465,
+      "stop": 158401,
       "confidence": "상",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI68.6 강세"
+        "RSI69.1 강세"
       ],
       "risk": "약한 마감",
-      "day_change": -0.19,
+      "day_change": 0.56,
       "related_news": [
         {
           "title": "'삼전닉스 반등' 소부장도 강세…피에스케이 20%↑[핫종목]",
@@ -710,17 +686,17 @@
       "ticker": "대덕전자",
       "code": "353200",
       "tomorrow_up_prob": "75%",
-      "entry": 173800.0,
-      "target": 182490,
-      "stop": 168586,
+      "entry": 174000.0,
+      "target": 182700,
+      "stop": 168780,
       "confidence": "상",
       "reasons": [
         "정배열",
-        "RSI62.6 강세",
+        "RSI62.7 강세",
         "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 2.18,
+      "day_change": 2.41,
       "cause_news": [
         {
           "title": "[특징주] 대덕전자, 목표가 25만원 상향에 강세…판가 인상·증설 기대",
@@ -746,14 +722,14 @@
       "ticker": "한화엔진",
       "code": "082740",
       "tomorrow_up_prob": "75%",
-      "entry": 66000.0,
-      "target": 69300,
-      "stop": 64020,
+      "entry": 65600.0,
+      "target": 68880,
+      "stop": 63632,
       "confidence": "상",
       "reasons": [
         "MACD강세",
-        "RSI54.4 강세",
-        "거래량2.44배"
+        "RSI54.0 강세",
+        "거래량2.5배"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -790,14 +766,14 @@
       "ticker": "포스코스틸리온",
       "code": "058430",
       "tomorrow_up_prob": "74%",
-      "entry": 6670.0,
-      "target": 7004,
-      "stop": 6470,
+      "entry": 6500.0,
+      "target": 6825,
+      "stop": 6305,
       "confidence": "상",
       "reasons": [
         "MACD강세",
-        "RSI60.4 강세",
-        "거래량12.37배"
+        "RSI58.5 강세",
+        "거래량12.67배"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
