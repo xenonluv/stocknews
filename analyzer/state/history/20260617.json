@@ -1,44 +1,44 @@
 {
   "date": "20260617",
-  "as_of": "2026-06-17 11:52 KST",
+  "as_of": "2026-06-17 12:07 KST",
   "bets": [
-    {
-      "code": "088350",
-      "ticker": "한화생명",
-      "entry": 6010.0,
-      "target": 6310,
-      "raw": 79,
-      "prob": "79%"
-    },
     {
       "code": "402340",
       "ticker": "SK스퀘어",
-      "entry": 1592000.0,
-      "target": 1671600,
+      "entry": 1588000.0,
+      "target": 1667400,
       "raw": 78,
       "prob": "78%"
     },
     {
       "code": "095610",
       "ticker": "테스",
-      "entry": 169300.0,
-      "target": 177765,
+      "entry": 168200.0,
+      "target": 176610,
       "raw": 78,
       "prob": "78%"
     },
     {
       "code": "475150",
       "ticker": "SK이터닉스",
-      "entry": 54400.0,
-      "target": 57120,
+      "entry": 54500.0,
+      "target": 57225,
       "raw": 77,
       "prob": "77%"
     },
     {
       "code": "319660",
       "ticker": "피에스케이",
-      "entry": 161300.0,
-      "target": 169365,
+      "entry": 161100.0,
+      "target": 169155,
+      "raw": 77,
+      "prob": "77%"
+    },
+    {
+      "code": "034730",
+      "ticker": "SK",
+      "entry": 688000.0,
+      "target": 722400,
       "raw": 77,
       "prob": "77%"
     }
