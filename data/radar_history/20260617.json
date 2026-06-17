@@ -213,7 +213,16 @@
    "first_seen": "2026-06-17 09:11:48 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 49,
+    "model_prob": 42,
+    "direction": "관망",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-17 17:21 KST",
+    "verdict_score": 71,
+    "verdict_level": "관망·과열"
+   }
   },
   "011070": {
    "name": "LG이노텍",
@@ -266,7 +275,16 @@
    "first_seen": "2026-06-17 09:11:48 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 45,
+    "model_prob": 42,
+    "direction": "관망",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-17 17:21 KST",
+    "verdict_score": 57,
+    "verdict_level": "중립"
+   }
   },
   "319660": {
    "name": "피에스케이",
@@ -319,7 +337,16 @@
    "first_seen": "2026-06-17 09:11:48 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 43,
+    "model_prob": 39,
+    "direction": "관망",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-17 17:22 KST",
+    "verdict_score": 68,
+    "verdict_level": "매수 우위"
+   }
   },
   "067310": {
    "name": "하나마이크론",
@@ -372,7 +399,16 @@
    "first_seen": "2026-06-17 09:11:48 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 45,
+    "model_prob": 42,
+    "direction": "관망",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-17 17:23 KST",
+    "verdict_score": 64,
+    "verdict_level": "관망·과열"
+   }
   },
   "095610": {
    "name": "테스",
@@ -427,7 +463,16 @@
    "first_seen": "2026-06-17 09:11:48 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 43,
+    "model_prob": 42,
+    "direction": "관망",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-17 17:24 KST",
+    "verdict_score": 76,
+    "verdict_level": "매수 우위"
+   }
   },
   "353200": {
    "name": "대덕전자",
@@ -480,7 +525,16 @@
    "first_seen": "2026-06-17 09:11:48 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 47,
+    "model_prob": 48,
+    "direction": "관망",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-17 17:24 KST",
+    "verdict_score": 82,
+    "verdict_level": "매수 우위"
+   }
   },
   "034730": {
    "name": "SK",
@@ -535,7 +589,16 @@
    "first_seen": "2026-06-17 09:11:48 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 50,
+    "model_prob": 52,
+    "direction": "관망",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-17 17:25 KST",
+    "verdict_score": 95,
+    "verdict_level": "매수 우위"
+   }
   },
   "357780": {
    "name": "솔브레인",
@@ -590,7 +653,16 @@
    "first_seen": "2026-06-17 09:11:48 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 42,
+    "model_prob": 40,
+    "direction": "하락",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-17 17:26 KST",
+    "verdict_score": 75,
+    "verdict_level": "매수 우위"
+   }
   },
   "089970": {
    "name": "브이엠",
@@ -698,7 +770,16 @@
    "first_seen": "2026-06-17 09:11:48 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 47,
+    "model_prob": 42,
+    "direction": "관망",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-17 17:27 KST",
+    "verdict_score": 70,
+    "verdict_level": "매수 우위"
+   }
   },
   "001820": {
    "name": "삼화콘덴서",
@@ -751,7 +832,16 @@
    "first_seen": "2026-06-17 09:11:48 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 43,
+    "model_prob": 42,
+    "direction": "관망",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-17 17:28 KST",
+    "verdict_score": 84,
+    "verdict_level": "매수 우위"
+   }
   },
   "093370": {
    "name": "후성",
@@ -910,7 +1000,16 @@
    "first_seen": "2026-06-17 10:41:52 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 43,
+    "model_prob": 42,
+    "direction": "관망",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-17 17:29 KST",
+    "verdict_score": 68,
+    "verdict_level": "매수 우위"
+   }
   },
   "089030": {
    "name": "테크윙",
@@ -963,7 +1062,16 @@
    "first_seen": "2026-06-17 15:42:33 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 51,
+    "model_prob": 52,
+    "direction": "관망",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-17 17:30 KST",
+    "verdict_score": 85,
+    "verdict_level": "강한 매수신호"
+   }
   }
  },
  "as_of": "2026-06-17 15:52:12 KST"

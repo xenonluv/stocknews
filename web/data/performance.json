@@ -1,14 +1,14 @@
 {
- "as_of": "2026-06-16 17:22 KST",
+ "as_of": "2026-06-17 17:30 KST",
  "summary": {
   "n": 10,
   "hit_rate": 60.0,
   "avg_return": 0.68,
   "high3_rate": 90,
-  "tracking_days": 6,
+  "tracking_days": 7,
   "dropout": {
-   "n": 3,
-   "hit_rate": 66.7
+   "n": 11,
+   "hit_rate": 54.5
   }
  },
  "series": [
@@ -54,6 +54,14 @@
   },
   {
    "date": "20260616",
+   "n": 0,
+   "hits": 0,
+   "hit_rate": null,
+   "cum_n": 10,
+   "cum_hit_rate": 60.0
+  },
+  {
+   "date": "20260617",
    "n": 0,
    "hits": 0,
    "hit_rate": null,
@@ -318,10 +326,10 @@
  },
  "experimental": {
   "reaccum": {
-   "n": 5,
-   "hit_rate": 20.0,
-   "avg_return": -3.09,
-   "high3_rate": 80.0
+   "n": 17,
+   "hit_rate": 58.8,
+   "avg_return": -0.75,
+   "high3_rate": 70.6
   }
  },
  "weights": {
