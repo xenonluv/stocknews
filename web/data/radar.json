@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-18 10:41:52 KST",
+ "generated_at": "2026-06-18 10:51:51 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -54,19 +54,19 @@
    },
    "forecast": {
     "horizon": "3일 내 +7%",
-    "prob_pct": 52,
+    "prob_pct": 46,
     "base_pct": 46,
-    "strong": true,
+    "strong": false,
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 1256000.0,
-   "change_pct": 0.64,
+   "price": 1237000.0,
+   "change_pct": -0.88,
    "high_pct": 3.69,
-   "fade_pct": 82.6,
-   "value_eok": 3771,
-   "ma10": 1153900.0,
-   "ma10_margin_pct": 8.85,
+   "fade_pct": 123.9,
+   "value_eok": 4001,
+   "ma10": 1152000.0,
+   "ma10_margin_pct": 7.38,
    "spark": {
     "clusters": []
    },
@@ -135,8 +135,8 @@
     "peak_date": "20260615",
     "peak_value_eok": 6385,
     "peak_high_pct": 18.34,
-    "ma20": 1133000.0,
-    "ma20_margin_pct": 10.86,
+    "ma20": 1132050.0,
+    "ma20_margin_pct": 9.27,
     "ivtr_net": 39345,
     "ivtr_days": 4,
     "ivtr_eok": 449,
@@ -179,13 +179,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 52900.0,
-   "change_pct": 0.95,
+   "price": 51800.0,
+   "change_pct": -1.15,
    "high_pct": 8.78,
-   "fade_pct": 89.1,
-   "value_eok": 1617,
-   "ma10": 43950.0,
-   "ma10_margin_pct": 20.36,
+   "fade_pct": 113.0,
+   "value_eok": 1678,
+   "ma10": 43840.0,
+   "ma10_margin_pct": 18.16,
    "spark": {
     "clusters": []
    },
@@ -244,8 +244,8 @@
     "peak_date": "20260616",
     "peak_value_eok": 12512,
     "peak_high_pct": 26.71,
-    "ma20": 42310.0,
-    "ma20_margin_pct": 25.03,
+    "ma20": 42255.0,
+    "ma20_margin_pct": 22.59,
     "ivtr_net": 401476,
     "ivtr_days": 3,
     "ivtr_eok": 217,
@@ -288,13 +288,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 162300.0,
-   "change_pct": 0.37,
+   "price": 160700.0,
+   "change_pct": -0.62,
    "high_pct": 5.63,
-   "fade_pct": 93.4,
-   "value_eok": 1379,
-   "ma10": 145230.0,
-   "ma10_margin_pct": 11.75,
+   "fade_pct": 111.0,
+   "value_eok": 1422,
+   "ma10": 145070.0,
+   "ma10_margin_pct": 10.77,
    "spark": {
     "clusters": []
    },
@@ -353,8 +353,8 @@
     "peak_date": "20260617",
     "peak_value_eok": 4161,
     "peak_high_pct": 15.25,
-    "ma20": 129380.0,
-    "ma20_margin_pct": 25.44,
+    "ma20": 129300.0,
+    "ma20_margin_pct": 24.28,
     "ivtr_net": 213118,
     "ivtr_days": 2,
     "ivtr_eok": 400,
@@ -397,13 +397,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 110400.0,
-   "change_pct": -0.99,
+   "price": 109300.0,
+   "change_pct": -1.97,
    "high_pct": 4.84,
-   "fade_pct": 120.4,
-   "value_eok": 2045,
-   "ma10": 101030.0,
-   "ma10_margin_pct": 9.27,
+   "fade_pct": 140.7,
+   "value_eok": 2121,
+   "ma10": 100920.0,
+   "ma10_margin_pct": 8.3,
    "spark": {
     "clusters": []
    },
@@ -462,8 +462,8 @@
     "peak_date": "20260617",
     "peak_value_eok": 9972,
     "peak_high_pct": 14.53,
-    "ma20": 103995.0,
-    "ma20_margin_pct": 6.16,
+    "ma20": 103940.0,
+    "ma20_margin_pct": 5.16,
     "ivtr_net": 99793,
     "ivtr_days": 3,
     "ivtr_eok": 108,
@@ -506,13 +506,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 72100.0,
-   "change_pct": -2.44,
+   "price": 71200.0,
+   "change_pct": -3.65,
    "high_pct": 4.87,
-   "fade_pct": 150.0,
-   "value_eok": 1104,
-   "ma10": 61600.0,
-   "ma10_margin_pct": 17.05,
+   "fade_pct": 175.0,
+   "value_eok": 1163,
+   "ma10": 61510.0,
+   "ma10_margin_pct": 15.75,
    "spark": {
     "clusters": []
    },
@@ -576,8 +576,8 @@
     "peak_date": "20260615",
     "peak_value_eok": 5331,
     "peak_high_pct": 17.85,
-    "ma20": 61065.0,
-    "ma20_margin_pct": 18.07,
+    "ma20": 61020.0,
+    "ma20_margin_pct": 16.68,
     "ivtr_net": 282153,
     "ivtr_days": 3,
     "ivtr_eok": 216,
@@ -620,13 +620,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 90600.0,
-   "change_pct": 3.42,
+   "price": 90800.0,
+   "change_pct": 3.65,
    "high_pct": 6.05,
-   "fade_pct": 43.4,
-   "value_eok": 212,
-   "ma10": 83240.0,
-   "ma10_margin_pct": 8.84,
+   "fade_pct": 39.6,
+   "value_eok": 220,
+   "ma10": 83260.0,
+   "ma10_margin_pct": 9.06,
    "spark": {
     "clusters": []
    },
@@ -694,12 +694,121 @@
     "peak_date": "20260612",
     "peak_value_eok": 1568,
     "peak_high_pct": 22.21,
-    "ma20": 71945.0,
-    "ma20_margin_pct": 25.93,
+    "ma20": 71955.0,
+    "ma20_margin_pct": 26.19,
     "ivtr_net": 1353399,
     "ivtr_days": 4,
     "ivtr_eok": 1170,
     "cause_summary": "다올證 “브이엠, 반도체 장비주 중 저평가…목표가 14만원”",
+    "was_theme_leader": false
+   },
+   "theme_leader": false
+  },
+  {
+   "code": "017900",
+   "name": "광전자",
+   "sector": "전기·전자",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 73,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_value": 5,
+    "re_body": 6,
+    "re_count": 0,
+    "flow": 0,
+    "explosion": 0
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_value": 0,
+    "re_body": 0,
+    "re_count": 0,
+    "flow": 0,
+    "explosion": 0
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "price": 11030.0,
+   "change_pct": 7.71,
+   "high_pct": 8.98,
+   "fade_pct": 14.1,
+   "value_eok": 272,
+   "ma10": 9370.0,
+   "ma10_margin_pct": 17.72,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 13.76,
+    "time": "10:40",
+    "value_10m_eok": 139
+   },
+   "reignition_bars": [
+    {
+     "time": "10:40",
+     "body_pct": 13.76,
+     "value_eok": 139
+    }
+   ],
+   "flow": {
+    "net_days": 2,
+    "today_buy": false,
+    "streak": 0,
+    "detail": [
+     {
+      "date": "0611",
+      "frgn": -127016,
+      "orgn": -2023
+     },
+     {
+      "date": "0612",
+      "frgn": 165967,
+      "orgn": 3459
+     },
+     {
+      "date": "0615",
+      "frgn": -293718,
+      "orgn": -650
+     },
+     {
+      "date": "0616",
+      "frgn": 215043,
+      "orgn": -925
+     },
+     {
+      "date": "0617",
+      "frgn": -103291,
+      "orgn": -3257
+     }
+    ]
+   },
+   "news": [],
+   "matched_events": [],
+   "theme": "반도체",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260616",
+    "peak_value_eok": 1378,
+    "peak_high_pct": 24.56,
+    "ma20": 10442.0,
+    "ma20_margin_pct": 5.63,
+    "ivtr_net": 2775,
+    "ivtr_days": 1,
+    "ivtr_eok": 0,
+    "cause_summary": "",
     "was_theme_leader": false
    },
    "theme_leader": false
@@ -738,13 +847,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 170900.0,
-   "change_pct": 0.89,
+   "price": 167650.0,
+   "change_pct": -1.03,
    "high_pct": 4.49,
-   "fade_pct": 80.3,
-   "value_eok": 233,
-   "ma10": 164480.0,
-   "ma10_margin_pct": 3.9,
+   "fade_pct": 123.0,
+   "value_eok": 242,
+   "ma10": 164155.0,
+   "ma10_margin_pct": 2.13,
    "spark": {
     "clusters": []
    },
@@ -812,8 +921,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 2232,
     "peak_high_pct": 18.7,
-    "ma20": 142465.0,
-    "ma20_margin_pct": 19.96,
+    "ma20": 142302.5,
+    "ma20_margin_pct": 17.81,
     "ivtr_net": 249285,
     "ivtr_days": 4,
     "ivtr_eok": 428,
@@ -856,13 +965,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 169000.0,
-   "change_pct": 4.06,
+   "price": 167100.0,
+   "change_pct": 2.89,
    "high_pct": 7.14,
-   "fade_pct": 43.1,
-   "value_eok": 442,
-   "ma10": 150060.0,
-   "ma10_margin_pct": 12.62,
+   "fade_pct": 59.5,
+   "value_eok": 457,
+   "ma10": 149870.0,
+   "ma10_margin_pct": 11.5,
    "spark": {
     "clusters": []
    },
@@ -930,8 +1039,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 2652,
     "peak_high_pct": 24.5,
-    "ma20": 127865.0,
-    "ma20_margin_pct": 32.17,
+    "ma20": 127770.0,
+    "ma20_margin_pct": 30.78,
     "ivtr_net": 466286,
     "ivtr_days": 5,
     "ivtr_eok": 783,
@@ -974,13 +1083,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 128900.0,
-   "change_pct": -0.77,
+   "price": 127850.0,
+   "change_pct": -1.58,
    "high_pct": 4.31,
-   "fade_pct": 117.9,
-   "value_eok": 366,
-   "ma10": 121050.0,
-   "ma10_margin_pct": 6.48,
+   "fade_pct": 136.6,
+   "value_eok": 378,
+   "ma10": 120945.0,
+   "ma10_margin_pct": 5.71,
    "spark": {
     "clusters": []
    },
@@ -1056,8 +1165,8 @@
     "peak_date": "20260611",
     "peak_value_eok": 3107,
     "peak_high_pct": 26.12,
-    "ma20": 118925.0,
-    "ma20_margin_pct": 8.39,
+    "ma20": 118872.5,
+    "ma20_margin_pct": 7.55,
     "ivtr_net": 259357,
     "ivtr_days": 4,
     "ivtr_eok": 312,
