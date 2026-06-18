@@ -142,7 +142,7 @@
    "pattern": "reaccum",
    "prime": false,
    "theme": "반도체",
-   "value_eok": 2568,
+   "value_eok": 2570,
    "theme_leader": false,
    "spark_max_x": 0.0,
    "spark_max_pct": null,
@@ -203,7 +203,7 @@
    "pattern": "reaccum",
    "prime": false,
    "theme": "반도체",
-   "value_eok": 8988,
+   "value_eok": 8993,
    "theme_leader": false,
    "spark_max_x": 0.0,
    "spark_max_pct": null,
@@ -386,7 +386,7 @@
    "pattern": "reaccum",
    "prime": false,
    "theme": "반도체",
-   "value_eok": 9365,
+   "value_eok": 9368,
    "theme_leader": false,
    "spark_max_x": 0.0,
    "spark_max_pct": null,
@@ -630,7 +630,7 @@
    "pattern": "reaccum",
    "prime": false,
    "theme": "반도체",
-   "value_eok": 1207,
+   "value_eok": 1208,
    "theme_leader": false,
    "spark_max_x": 0.0,
    "spark_max_pct": null,
@@ -917,5 +917,5 @@
    "final": true
   }
  },
- "as_of": "2026-06-18 15:42:09 KST"
+ "as_of": "2026-06-18 15:52:10 KST"
 }
