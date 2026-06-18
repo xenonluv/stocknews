@@ -144,7 +144,7 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
               <Badge
                 variant="outline"
                 className="border-up/70 font-semibold text-up"
-                title="폭발일에 같은 테마 거래대금 1위(테마 대장)였던 종목이 식었다 재매집 — 강한 의심 신호"
+                title="폭발일에 같은 업종 거래대금 1위(업종 대장)였던 종목이 식었다 재매집 — 강한 의심 신호"
               >
                 🏆 예전 대장
               </Badge>

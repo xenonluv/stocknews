@@ -100,7 +100,7 @@ export interface ReaccumInfo {
   ivtr_days?: number; // 투신 순매수일 수
   ivtr_eok?: number; // 투신 순매수 누적 금액(억)
   cause_summary?: string; // 폭발 catalyst 한 줄("왜 올랐나") — 구버전 JSON엔 없음
-  /** 폭발일에 같은 테마 거래대금 1위(테마 대장)였는지 — '예전 대장 재등장' 의심 신호. 구버전 JSON엔 없음 */
+  /** 폭발일에 같은 업종 거래대금 1위(업종 대장)였는지 — '예전 대장 재등장' 의심 신호. 구버전 JSON엔 없음 */
   was_theme_leader?: boolean;
   orgn_net_after_peak?: number; // 구버전 JSON 하위호환
 }
