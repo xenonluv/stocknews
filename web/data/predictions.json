@@ -1,49 +1,156 @@
 {
-  "as_of": "2026-06-18 09:22 KST",
+  "as_of": "2026-06-18 09:37 KST",
   "intraday_rank": [
     {
-      "ticker": "원익IPS",
-      "code": "240810",
-      "tomorrow_up_prob": "68%",
-      "entry": 165200.0,
-      "target": 173460,
-      "stop": 160244,
+      "ticker": "SK스퀘어",
+      "code": "402340",
+      "tomorrow_up_prob": "64%",
+      "entry": 1661000.0,
+      "target": 1744050,
+      "stop": 1611170,
       "confidence": "중",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI61.0 강세"
+        "일목 구름위"
       ],
-      "risk": "특이 위험 낮음",
-      "day_change": 4.7
+      "risk": "Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[특징주] SK스퀘어, 52주 신고가 경신…3%대 강세",
+          "url": "https://www.newspim.com/news/view/20260618000256",
+          "office": "newspim",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] SK스퀘어, 52주 신고가 경신…3%대 강세"
     },
     {
-      "ticker": "제주은행",
-      "code": "006220",
-      "tomorrow_up_prob": "68%",
-      "entry": 12570.0,
-      "target": 13198,
-      "stop": 12193,
+      "ticker": "SK이터닉스",
+      "code": "475150",
+      "tomorrow_up_prob": "63%",
+      "entry": 54600.0,
+      "target": 57330,
+      "stop": 52962,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.76)",
         "MACD강세",
-        "RSI60.5 강세"
+        "RSI61.6 강세",
+        "호재"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null
+      "day_change": 6.87,
+      "cause_news": [
+        {
+          "title": "[특징주] SK이터닉스, \"SK그룹 1.8조 신재생 사업 재편\" 기대감에 연일 ...",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=295868",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] SK이터닉스, \"SK그룹 1.8조 신재생 사업 재편\" 기대감에 연일 ..."
+    },
+    {
+      "ticker": "현대백화점",
+      "code": "069960",
+      "tomorrow_up_prob": "63%",
+      "entry": 219500.0,
+      "target": 230475,
+      "stop": 212915,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.87)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "RSI83.6 과매수, Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "'신고가' 현대백화점, 2분기 실적 개선 전망 잇따라… 4일째 상승[특징...",
+          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03437446645483032",
+          "office": "edaily",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "'신고가' 현대백화점, 2분기 실적 개선 전망 잇따라… 4일째 상승[특징..."
+    },
+    {
+      "ticker": "제주반도체",
+      "code": "080220",
+      "tomorrow_up_prob": "58%",
+      "entry": 109700.0,
+      "target": 115185,
+      "stop": 106409,
+      "confidence": "중",
+      "reasons": [
+        "정배열",
+        "RSI62.0 강세",
+        "일목 구름위"
+      ],
+      "risk": "약한 마감",
+      "day_change": -1.61,
+      "cause_news": [
+        {
+          "title": "제주반도체 주가, 급등세... 이유는?",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1164070",
+          "office": "ggilbo",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "제주반도체 주가, 급등세... 이유는?"
+    },
+    {
+      "ticker": "대원전선",
+      "code": "006340",
+      "tomorrow_up_prob": "57%",
+      "entry": 12770.0,
+      "target": 13408,
+      "stop": 12387,
+      "confidence": "중",
+      "reasons": [
+        "MACD강세",
+        "RSI57.0 강세",
+        "거래량1.83배"
+      ],
+      "risk": "약한 마감",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "가온전선·대원전선 강세…전기·전선주, 종목별 차별화 장세",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582879",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "가온전선·대원전선 강세…전기·전선주, 종목별 차별화 장세"
     },
     {
       "ticker": "현대약품",
       "code": "004310",
-      "tomorrow_up_prob": "63%",
-      "entry": 9020.0,
-      "target": 9471,
-      "stop": 8749,
+      "tomorrow_up_prob": "56%",
+      "entry": 8690.0,
+      "target": 9124,
+      "stop": 8429,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.9)",
-        "RSI69.8 강세",
+        "RSI67.7 강세",
         "호재"
       ],
       "risk": "특이 위험 낮음",
@@ -62,84 +169,32 @@
       "cause_summary": "탈모약 건보 추진에 TS트릴리온·현대약품 등 연일 강세"
     },
     {
-      "ticker": "현대백화점",
-      "code": "069960",
-      "tomorrow_up_prob": "60%",
-      "entry": 218000.0,
-      "target": 228900,
-      "stop": 211460,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.77)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "RSI83.4 과매수, Stoch 과매수",
-      "day_change": null,
-      "related_news": [
-        {
-          "title": "[클릭 e종목]스페이스X급 실적 성장한 이 회사",
-          "url": "https://n.news.naver.com/mnews/article/277/0005777844",
-          "office": "아시아경제",
-          "sentiment": "호재"
-        }
-      ]
-    },
-    {
-      "ticker": "제주반도체",
-      "code": "080220",
-      "tomorrow_up_prob": "57%",
-      "entry": 108000.0,
-      "target": 113400,
-      "stop": 104760,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "RSI60.6 강세",
-        "일목 구름위"
-      ],
-      "risk": "약한 마감",
-      "day_change": 0.36,
-      "cause_news": [
-        {
-          "title": "제주반도체 주가, 급등세... 이유는?",
-          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1164070",
-          "office": "ggilbo",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "제주반도체 주가, 급등세... 이유는?"
-    },
-    {
-      "ticker": "대원전선",
-      "code": "006340",
+      "ticker": "삼성바이오로직스",
+      "code": "207940",
       "tomorrow_up_prob": "56%",
-      "entry": 13190.0,
-      "target": 13850,
-      "stop": 12794,
+      "entry": 1446000.0,
+      "target": 1518300,
+      "stop": 1402620,
       "confidence": "중",
       "reasons": [
-        "MACD강세",
-        "RSI59.0 강세",
-        "거래량1.58배"
+        "강세마감(0.99)",
+        "RSI59.4 강세"
       ],
-      "risk": "약한 마감",
+      "risk": "특이 위험 낮음",
       "day_change": null
     },
     {
       "ticker": "가온전선",
       "code": "000500",
       "tomorrow_up_prob": "54%",
-      "entry": 404000.0,
-      "target": 424200,
-      "stop": 391880,
+      "entry": 396000.0,
+      "target": 415800,
+      "stop": 384120,
       "confidence": "하",
       "reasons": [
-        "RSI59.1 강세",
-        "호재"
+        "RSI58.4 강세",
+        "호재",
+        "장중 3회 지속"
       ],
       "risk": "약한 마감",
       "day_change": null,
@@ -161,9 +216,9 @@
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[특징주] 가온전선, 美 태양광 발전단지 대규모 케이블 공급 및 무상증...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=295953",
-          "office": "widedaily",
+          "title": "가온전선·대원전선 강세…전기·전선주, 종목별 차별화 장세",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582879",
+          "office": "cbci",
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
@@ -173,110 +228,154 @@
       "cause_summary": "[특징주] 가온전선, 美 태양광 케이블 공급 소식에 장 초반 17%대 강세"
     },
     {
-      "ticker": "한전기술",
-      "code": "052690",
-      "tomorrow_up_prob": "45%",
-      "entry": 143500.0,
-      "target": 150675,
-      "stop": 139195,
+      "ticker": "브이엠",
+      "code": "089970",
+      "tomorrow_up_prob": "39%",
+      "entry": 92900.0,
+      "target": 97545,
+      "stop": 90113,
       "confidence": "하",
       "reasons": [
-        "RSI51.5 강세"
-      ],
-      "risk": "약한 마감",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[속보] 원전주, 장초반 일제히 강세…한전기술 12%대 급등·두산에너빌...",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582863",
-          "office": "cbci",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] 전력·에너지주 동반 강세...강원에너지·한전기술 프리마켓 ...",
-          "url": "https://www.newspim.com/news/view/20260618000115",
-          "office": "newspim",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[속보] 원전주, 장초반 일제히 강세…한전기술 12%대 급등·두산에너빌..."
-    },
-    {
-      "ticker": "SK이터닉스",
-      "code": "475150",
-      "tomorrow_up_prob": "38%",
-      "entry": 55800.0,
-      "target": 58590,
-      "stop": 54126,
-      "confidence": "하",
-      "reasons": [
-        "강세마감(0.79)",
-        "MACD강세",
-        "RSI62.6 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 8.4,
-      "cause_news": [
-        {
-          "title": "[특징주] SK이터닉스, \"SK그룹 1.8조 신재생 사업 재편\" 기대감에 연일 ...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=295868",
-          "office": "widedaily",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] SK이터닉스, \"SK그룹 1.8조 신재생 사업 재편\" 기대감에 연일 ..."
-    },
-    {
-      "ticker": "삼화콘덴서",
-      "code": "001820",
-      "tomorrow_up_prob": "38%",
-      "entry": 177100.0,
-      "target": 185955,
-      "stop": 171787,
-      "confidence": "하",
-      "reasons": [
-        "강세마감(0.93)",
+        "강세마감(1.0)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 8.32,
+      "day_change": 5.71,
       "cause_news": [
         {
-          "title": "두산에너빌리티·삼화콘덴서·일진파워 강세…핵융합에너지 원전주 투자...",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582342",
-          "office": "cbci",
+          "title": "[특징주] 브이엠, 증권가 \"주가 급등에도 저평가\" 분석.. '강세'",
+          "url": "https://www.g-enews.com/view.php?ud=20260612093652673244093b5d4e_1",
+          "office": "g-enews",
           "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락"
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "[특징주] 브이엠, 증권가 \"주가 급등에도 저평가\" 분석.. '강세'"
+    },
+    {
+      "ticker": "테스",
+      "code": "095610",
+      "tomorrow_up_prob": "39%",
+      "entry": 175800.0,
+      "target": 184590,
+      "stop": 170526,
+      "confidence": "하",
+      "reasons": [
+        "강세마감(0.89)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 4.04,
+      "related_news": [
+        {
+          "title": "두산테스나, 삼성 파운드리 낙수효과 돌입…4분기 램프업으로 실적 본...",
+          "url": "https://n.news.naver.com/mnews/article/008/0005369615",
+          "office": "머니투데이",
+          "sentiment": "호재"
+        }
+      ]
+    },
+    {
+      "ticker": "심텍",
+      "code": "222800",
+      "tomorrow_up_prob": "39%",
+      "entry": 134300.0,
+      "target": 141015,
+      "stop": 130271,
+      "confidence": "하",
+      "reasons": [
+        "강세마감(0.9)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 4.16,
+      "related_news": [
+        {
+          "title": "&quot;심텍, 엔비디아 소캠2 양산에 최대 수혜…목표주가 52%↑&quot;-대신",
+          "url": "https://n.news.naver.com/mnews/article/008/0005372356",
+          "office": "머니투데이",
+          "sentiment": "호재"
+        },
+        {
+          "title": "변동성 극심한데...여의도서 추천하는 단기 투자 유망주",
+          "url": "https://n.news.naver.com/mnews/article/024/0000106211",
+          "office": "매경이코노미",
+          "sentiment": "호재"
+        }
+      ]
+    },
+    {
+      "ticker": "LG이노텍",
+      "code": "011070",
+      "tomorrow_up_prob": "38%",
+      "entry": 1260000.0,
+      "target": 1323000,
+      "stop": 1222200,
+      "confidence": "하",
+      "reasons": [
+        "강세마감(0.7)",
+        "정배열",
+        "RSI64.5 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 1.84,
+      "cause_news": [
+        {
+          "title": "[ET특징주]LG이노텍, AI 반도체 기판 성장 기대감에 상승세",
+          "url": "https://www.etnews.com/20260617000191",
+          "office": "etnews",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "날개 단 반도체 기판… LG이노텍 “2031년 영업익 1조”",
+          "url": "https://www.seoul.co.kr/news/economy/industry/2026/06/18/20260618031001?wlog_tag3=naver",
+          "office": "seoul",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "두산에너빌리티·삼화콘덴서·일진파워 강세…핵융합에너지 원전주 투자..."
+      "cause_summary": "[ET특징주]LG이노텍, AI 반도체 기판 성장 기대감에 상승세"
+    },
+    {
+      "ticker": "원익IPS",
+      "code": "240810",
+      "tomorrow_up_prob": "38%",
+      "entry": 167600.0,
+      "target": 175980,
+      "stop": 162572,
+      "confidence": "하",
+      "reasons": [
+        "강세마감(0.7)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 4.45
     },
     {
       "ticker": "HL만도",
       "code": "204320",
       "tomorrow_up_prob": "38%",
-      "entry": 75200.0,
-      "target": 78960,
-      "stop": 72944,
+      "entry": 76000.0,
+      "target": 79800,
+      "stop": 73720,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.76)",
+        "강세마감(0.74)",
         "정배열",
         "MACD강세"
       ],
       "risk": "Stoch 과매수",
-      "day_change": 1.35,
+      "day_change": 3.52,
       "cause_news": [
         {
           "title": "HL만도, 3거래일 연속 상승에 5% 급등…7만4000원선 재돌파",
@@ -299,15 +398,43 @@
       "cause_summary": "HL만도, 3거래일 연속 상승에 5% 급등…7만4000원선 재돌파"
     },
     {
+      "ticker": "삼화콘덴서",
+      "code": "001820",
+      "tomorrow_up_prob": "38%",
+      "entry": 178500.0,
+      "target": 187425,
+      "stop": 173145,
+      "confidence": "하",
+      "reasons": [
+        "강세마감(0.9)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "삼화콘덴서 주가, 급등세... 무슨 회사길래?",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1164309",
+          "office": "ggilbo",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "삼화콘덴서 주가, 급등세... 무슨 회사길래?"
+    },
+    {
       "ticker": "미래에셋생명",
       "code": "085620",
       "tomorrow_up_prob": "38%",
-      "entry": 32950.0,
-      "target": 34598,
-      "stop": 31962,
+      "entry": 33750.0,
+      "target": 35438,
+      "stop": 32738,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.82)",
+        "강세마감(1.0)",
         "정배열",
         "MACD강세"
       ],
@@ -330,151 +457,179 @@
       "ticker": "삼성전기",
       "code": "009150",
       "tomorrow_up_prob": "38%",
-      "entry": 2143000.0,
-      "target": 2250150,
-      "stop": 2078710,
+      "entry": 2170000.0,
+      "target": 2278500,
+      "stop": 2104900,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.99)",
+        "강세마감(0.87)",
         "정배열",
         "MACD강세"
       ],
       "risk": "Stoch 과매수",
       "day_change": null,
-      "related_news": [
+      "cause_news": [
         {
-          "title": "&quot;700% 폭등했는데, 100만원 더 오른다&quot;…프리장서 외국인이 싹쓸이한 ...",
-          "url": "https://n.news.naver.com/mnews/article/014/0005536467",
-          "office": "파이낸셜뉴스",
-          "sentiment": "호재"
+          "title": "삼성전기 주가, 급등세... 배경은?",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1164310",
+          "office": "ggilbo",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "유리기판 치고 나간 TSMC… ‘상용화 준비’ 삼성·SK·LG, 시장 진입 ...",
-          "url": "https://n.news.naver.com/mnews/article/366/0001172519",
-          "office": "조선비즈",
-          "sentiment": "호재"
-        },
-        {
-          "title": "“올들어 700% 폭등, 목표주가 300만원” 파격 전망…외국인들이 쓸어...",
-          "url": "https://n.news.naver.com/mnews/article/016/0002658023",
-          "office": "헤럴드경제",
-          "sentiment": "호재"
+          "title": "MLCC 수요 폭발...한울반도체 '상한가' 삼성전기 '신고가'",
+          "url": "https://www.mt.co.kr/stock/2026/06/18/2026061809300749553",
+          "office": "mt",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
         }
-      ]
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "삼성전기 주가, 급등세... 배경은?"
     }
   ],
   "closing_bet": [
     {
-      "ticker": "원익IPS",
-      "code": "240810",
-      "tomorrow_up_prob": "68%",
-      "entry": 165200.0,
-      "target": 173460,
-      "stop": 160244,
+      "ticker": "SK스퀘어",
+      "code": "402340",
+      "tomorrow_up_prob": "64%",
+      "entry": 1661000.0,
+      "target": 1744050,
+      "stop": 1611170,
       "confidence": "중",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI61.0 강세"
+        "일목 구름위"
       ],
-      "risk": "특이 위험 낮음",
-      "day_change": 4.7
-    },
-    {
-      "ticker": "제주은행",
-      "code": "006220",
-      "tomorrow_up_prob": "68%",
-      "entry": 12570.0,
-      "target": 13198,
-      "stop": 12193,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.76)",
-        "MACD강세",
-        "RSI60.5 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null
-    },
-    {
-      "ticker": "현대약품",
-      "code": "004310",
-      "tomorrow_up_prob": "63%",
-      "entry": 9020.0,
-      "target": 9471,
-      "stop": 8749,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.9)",
-        "RSI69.8 강세",
-        "호재"
-      ],
-      "risk": "특이 위험 낮음",
+      "risk": "Stoch 과매수",
       "day_change": null,
       "cause_news": [
         {
-          "title": "탈모약 건보 추진에 TS트릴리온·현대약품 등 연일 강세",
-          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3610539",
-          "office": "gukjenews",
+          "title": "[특징주] SK스퀘어, 52주 신고가 경신…3%대 강세",
+          "url": "https://www.newspim.com/news/view/20260618000256",
+          "office": "newspim",
           "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 원인표현, 인과표현, 검색맥락, 당일"
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "탈모약 건보 추진에 TS트릴리온·현대약품 등 연일 강세"
+      "cause_summary": "[특징주] SK스퀘어, 52주 신고가 경신…3%대 강세"
+    },
+    {
+      "ticker": "SK이터닉스",
+      "code": "475150",
+      "tomorrow_up_prob": "63%",
+      "entry": 54600.0,
+      "target": 57330,
+      "stop": 52962,
+      "confidence": "중",
+      "reasons": [
+        "MACD강세",
+        "RSI61.6 강세",
+        "호재"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 6.87,
+      "cause_news": [
+        {
+          "title": "[특징주] SK이터닉스, \"SK그룹 1.8조 신재생 사업 재편\" 기대감에 연일 ...",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=295868",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] SK이터닉스, \"SK그룹 1.8조 신재생 사업 재편\" 기대감에 연일 ..."
     },
     {
       "ticker": "현대백화점",
       "code": "069960",
-      "tomorrow_up_prob": "60%",
-      "entry": 218000.0,
-      "target": 228900,
-      "stop": 211460,
+      "tomorrow_up_prob": "63%",
+      "entry": 219500.0,
+      "target": 230475,
+      "stop": 212915,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.77)",
+        "강세마감(0.87)",
         "정배열",
         "MACD강세"
       ],
-      "risk": "RSI83.4 과매수, Stoch 과매수",
+      "risk": "RSI83.6 과매수, Stoch 과매수",
       "day_change": null,
-      "related_news": [
+      "cause_news": [
         {
-          "title": "[클릭 e종목]스페이스X급 실적 성장한 이 회사",
-          "url": "https://n.news.naver.com/mnews/article/277/0005777844",
-          "office": "아시아경제",
-          "sentiment": "호재"
+          "title": "'신고가' 현대백화점, 2분기 실적 개선 전망 잇따라… 4일째 상승[특징...",
+          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03437446645483032",
+          "office": "edaily",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
         }
-      ]
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "'신고가' 현대백화점, 2분기 실적 개선 전망 잇따라… 4일째 상승[특징..."
     },
     {
       "ticker": "제주반도체",
       "code": "080220",
-      "tomorrow_up_prob": "57%",
-      "entry": 108000.0,
-      "target": 113400,
-      "stop": 104760,
+      "tomorrow_up_prob": "58%",
+      "entry": 109700.0,
+      "target": 115185,
+      "stop": 106409,
       "confidence": "중",
       "reasons": [
         "정배열",
-        "RSI60.6 강세",
+        "RSI62.0 강세",
         "일목 구름위"
       ],
       "risk": "약한 마감",
-      "day_change": 0.36,
+      "day_change": -1.61,
       "cause_news": [
         {
           "title": "제주반도체 주가, 급등세... 이유는?",
           "url": "https://www.ggilbo.com/news/articleView.html?idxno=1164070",
           "office": "ggilbo",
           "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락"
         }
       ],
       "cause_confidence": "높음",
       "cause_summary": "제주반도체 주가, 급등세... 이유는?"
+    },
+    {
+      "ticker": "대원전선",
+      "code": "006340",
+      "tomorrow_up_prob": "57%",
+      "entry": 12770.0,
+      "target": 13408,
+      "stop": 12387,
+      "confidence": "중",
+      "reasons": [
+        "MACD강세",
+        "RSI57.0 강세",
+        "거래량1.83배"
+      ],
+      "risk": "약한 마감",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "가온전선·대원전선 강세…전기·전선주, 종목별 차별화 장세",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582879",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "가온전선·대원전선 강세…전기·전선주, 종목별 차별화 장세"
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
