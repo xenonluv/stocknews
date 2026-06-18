@@ -50,8 +50,15 @@
    },
    "matched_events": [],
    "first_seen": "2026-06-17 09:01:50 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 59400.0,
+    "next_high": 66300.0,
+    "hit": false,
+    "high3": true,
+    "return_pct": -5.41
+   },
    "final": false
   },
   "204320": {
@@ -103,8 +110,15 @@
    },
    "matched_events": [],
    "first_seen": "2026-06-17 09:01:50 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 68800.0,
+    "next_high": 77500.0,
+    "hit": false,
+    "high3": true,
+    "return_pct": -6.9
+   },
    "final": false
   },
   "240810": {
@@ -156,8 +170,15 @@
    },
    "matched_events": [],
    "first_seen": "2026-06-17 09:01:50 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 163200.0,
+    "next_high": 170800.0,
+    "hit": true,
+    "high3": true,
+    "return_pct": 0.93
+   },
    "final": false
   },
   "402340": {
@@ -211,8 +232,15 @@
     "2026-06-17_FOMC 금리 결정 ("
    ],
    "first_seen": "2026-06-17 09:11:48 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 1700000.0,
+    "next_high": 1738000.0,
+    "hit": true,
+    "high3": true,
+    "return_pct": 6.52
+   },
    "final": true,
    "ai_pred": {
     "prob_up": 49,
@@ -273,8 +301,15 @@
    },
    "matched_events": [],
    "first_seen": "2026-06-17 09:11:48 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 1283000.0,
+    "next_high": 1320000.0,
+    "hit": true,
+    "high3": true,
+    "return_pct": 2.8
+   },
    "final": true,
    "ai_pred": {
     "prob_up": 45,
@@ -335,8 +370,15 @@
    },
    "matched_events": [],
    "first_seen": "2026-06-17 09:11:48 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 172000.0,
+    "next_high": 179200.0,
+    "hit": true,
+    "high3": true,
+    "return_pct": 5.91
+   },
    "final": true,
    "ai_pred": {
     "prob_up": 43,
@@ -397,8 +439,15 @@
    },
    "matched_events": [],
    "first_seen": "2026-06-17 09:11:48 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 51600.0,
+    "next_high": 52200.0,
+    "hit": true,
+    "high3": false,
+    "return_pct": 1.78
+   },
    "final": true,
    "ai_pred": {
     "prob_up": 45,
@@ -461,8 +510,15 @@
     "2026-06-17_FOMC 금리 결정 ("
    ],
    "first_seen": "2026-06-17 09:11:48 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 176100.0,
+    "next_high": 179200.0,
+    "hit": true,
+    "high3": true,
+    "return_pct": 3.96
+   },
    "final": true,
    "ai_pred": {
     "prob_up": 43,
@@ -523,8 +579,15 @@
    },
    "matched_events": [],
    "first_seen": "2026-06-17 09:11:48 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 167600.0,
+    "next_high": 176000.0,
+    "hit": false,
+    "high3": false,
+    "return_pct": -3.79
+   },
    "final": true,
    "ai_pred": {
     "prob_up": 47,
@@ -587,8 +650,15 @@
     "2026-06-17_FOMC 금리 결정 ("
    ],
    "first_seen": "2026-06-17 09:11:48 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 687000.0,
+    "next_high": 705000.0,
+    "hit": false,
+    "high3": false,
+    "return_pct": -2.97
+   },
    "final": true,
    "ai_pred": {
     "prob_up": 50,
@@ -651,8 +721,15 @@
     "2026-06-17_FOMC 금리 결정 ("
    ],
    "first_seen": "2026-06-17 09:11:48 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 403000.0,
+    "next_high": 410000.0,
+    "hit": false,
+    "high3": false,
+    "return_pct": -0.98
+   },
    "final": true,
    "ai_pred": {
     "prob_up": 42,
@@ -715,8 +792,15 @@
     "2026-06-17_FOMC 금리 결정 ("
    ],
    "first_seen": "2026-06-17 09:11:48 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 93500.0,
+    "next_high": 94900.0,
+    "hit": true,
+    "high3": true,
+    "return_pct": 6.74
+   },
    "final": false
   },
   "039030": {
@@ -768,8 +852,15 @@
    },
    "matched_events": [],
    "first_seen": "2026-06-17 09:11:48 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 508000.0,
+    "next_high": 519000.0,
+    "hit": false,
+    "high3": false,
+    "return_pct": 0.0
+   },
    "final": true,
    "ai_pred": {
     "prob_up": 47,
@@ -830,8 +921,15 @@
    },
    "matched_events": [],
    "first_seen": "2026-06-17 09:11:48 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 190100.0,
+    "next_high": 196800.0,
+    "hit": true,
+    "high3": true,
+    "return_pct": 25.56
+   },
    "final": true,
    "ai_pred": {
     "prob_up": 43,
@@ -892,8 +990,15 @@
    },
    "matched_events": [],
    "first_seen": "2026-06-17 09:51:47 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 18840.0,
+    "next_high": 19630.0,
+    "hit": true,
+    "high3": true,
+    "return_pct": 7.17
+   },
    "final": false
   },
   "475150": {
@@ -945,8 +1050,15 @@
    },
    "matched_events": [],
    "first_seen": "2026-06-17 10:01:52 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 48700.0,
+    "next_high": 57000.0,
+    "hit": false,
+    "high3": true,
+    "return_pct": -7.06
+   },
    "final": false
   },
   "043260": {
@@ -998,8 +1110,15 @@
    },
    "matched_events": [],
    "first_seen": "2026-06-17 10:41:52 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 40000.0,
+    "next_high": 42950.0,
+    "hit": false,
+    "high3": false,
+    "return_pct": -6.32
+   },
    "final": true,
    "ai_pred": {
     "prob_up": 43,
@@ -1060,8 +1179,15 @@
    },
    "matched_events": [],
    "first_seen": "2026-06-17 15:42:33 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260618",
+    "next_close": 60500.0,
+    "next_high": 62900.0,
+    "hit": false,
+    "high3": false,
+    "return_pct": -2.58
+   },
    "final": true,
    "ai_pred": {
     "prob_up": 51,
