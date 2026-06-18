@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-18 10:11:48 KST",
+ "generated_at": "2026-06-18 10:21:58 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -60,13 +60,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 1267000.0,
-   "change_pct": 1.52,
+   "price": 1266000.0,
+   "change_pct": 1.44,
    "high_pct": 3.69,
-   "fade_pct": 58.7,
-   "value_eok": 3368,
-   "ma10": 1155000.0,
-   "ma10_margin_pct": 9.7,
+   "fade_pct": 60.9,
+   "value_eok": 3575,
+   "ma10": 1154900.0,
+   "ma10_margin_pct": 9.62,
    "spark": {
     "clusters": []
    },
@@ -135,8 +135,8 @@
     "peak_date": "20260615",
     "peak_value_eok": 6385,
     "peak_high_pct": 18.34,
-    "ma20": 1133550.0,
-    "ma20_margin_pct": 11.77,
+    "ma20": 1133500.0,
+    "ma20_margin_pct": 11.69,
     "ivtr_net": 39345,
     "ivtr_days": 4,
     "ivtr_eok": 449,
@@ -179,13 +179,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 53700.0,
-   "change_pct": 2.48,
+   "price": 52700.0,
+   "change_pct": 0.57,
    "high_pct": 8.78,
-   "fade_pct": 71.7,
-   "value_eok": 1488,
-   "ma10": 44030.0,
-   "ma10_margin_pct": 21.96,
+   "fade_pct": 93.5,
+   "value_eok": 1538,
+   "ma10": 43930.0,
+   "ma10_margin_pct": 19.96,
    "spark": {
     "clusters": []
    },
@@ -244,8 +244,8 @@
     "peak_date": "20260616",
     "peak_value_eok": 12512,
     "peak_high_pct": 26.71,
-    "ma20": 42350.0,
-    "ma20_margin_pct": 26.8,
+    "ma20": 42300.0,
+    "ma20_margin_pct": 24.59,
     "ivtr_net": 401476,
     "ivtr_days": 3,
     "ivtr_eok": 217,
@@ -282,19 +282,19 @@
    },
    "forecast": {
     "horizon": "3일 내 +7%",
-    "prob_pct": 46,
+    "prob_pct": 52,
     "base_pct": 46,
-    "strong": false,
+    "strong": true,
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 161800.0,
-   "change_pct": 0.06,
+   "price": 163900.0,
+   "change_pct": 1.36,
    "high_pct": 5.63,
-   "fade_pct": 98.9,
-   "value_eok": 1248,
-   "ma10": 145180.0,
-   "ma10_margin_pct": 11.45,
+   "fade_pct": 75.8,
+   "value_eok": 1317,
+   "ma10": 145390.0,
+   "ma10_margin_pct": 12.73,
    "spark": {
     "clusters": []
    },
@@ -353,8 +353,8 @@
     "peak_date": "20260617",
     "peak_value_eok": 4161,
     "peak_high_pct": 15.25,
-    "ma20": 129355.0,
-    "ma20_margin_pct": 25.08,
+    "ma20": 129460.0,
+    "ma20_margin_pct": 26.6,
     "ivtr_net": 213118,
     "ivtr_days": 2,
     "ivtr_eok": 400,
@@ -397,13 +397,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 109000.0,
-   "change_pct": -2.24,
+   "price": 108600.0,
+   "change_pct": -2.6,
    "high_pct": 4.84,
-   "fade_pct": 146.3,
-   "value_eok": 1846,
-   "ma10": 100890.0,
-   "ma10_margin_pct": 8.04,
+   "fade_pct": 153.7,
+   "value_eok": 1909,
+   "ma10": 100850.0,
+   "ma10_margin_pct": 7.68,
    "spark": {
     "clusters": []
    },
@@ -462,8 +462,8 @@
     "peak_date": "20260617",
     "peak_value_eok": 9972,
     "peak_high_pct": 14.53,
-    "ma20": 103925.0,
-    "ma20_margin_pct": 4.88,
+    "ma20": 103905.0,
+    "ma20_margin_pct": 4.52,
     "ivtr_net": 99793,
     "ivtr_days": 3,
     "ivtr_eok": 108,
@@ -506,13 +506,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 74300.0,
-   "change_pct": 0.54,
+   "price": 73800.0,
+   "change_pct": -0.14,
    "high_pct": 4.87,
-   "fade_pct": 88.9,
-   "value_eok": 991,
-   "ma10": 61820.0,
-   "ma10_margin_pct": 20.19,
+   "fade_pct": 102.8,
+   "value_eok": 1026,
+   "ma10": 61770.0,
+   "ma10_margin_pct": 19.48,
    "spark": {
     "clusters": []
    },
@@ -576,8 +576,8 @@
     "peak_date": "20260615",
     "peak_value_eok": 5331,
     "peak_high_pct": 17.85,
-    "ma20": 61175.0,
-    "ma20_margin_pct": 21.45,
+    "ma20": 61150.0,
+    "ma20_margin_pct": 20.69,
     "ivtr_net": 282153,
     "ivtr_days": 3,
     "ivtr_eok": 216,
@@ -620,13 +620,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 89200.0,
-   "change_pct": 1.83,
+   "price": 90500.0,
+   "change_pct": 3.31,
    "high_pct": 6.05,
-   "fade_pct": 69.8,
-   "value_eok": 189,
-   "ma10": 83100.0,
-   "ma10_margin_pct": 7.34,
+   "fade_pct": 45.3,
+   "value_eok": 199,
+   "ma10": 83230.0,
+   "ma10_margin_pct": 8.73,
    "spark": {
     "clusters": []
    },
@@ -694,8 +694,8 @@
     "peak_date": "20260612",
     "peak_value_eok": 1568,
     "peak_high_pct": 22.21,
-    "ma20": 71875.0,
-    "ma20_margin_pct": 24.1,
+    "ma20": 71940.0,
+    "ma20_margin_pct": 25.8,
     "ivtr_net": 1353399,
     "ivtr_days": 4,
     "ivtr_eok": 1170,
@@ -738,13 +738,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 168000.0,
-   "change_pct": -0.83,
+   "price": 171100.0,
+   "change_pct": 1.0,
    "high_pct": 4.49,
-   "fade_pct": 118.4,
-   "value_eok": 198,
-   "ma10": 164190.0,
-   "ma10_margin_pct": 2.32,
+   "fade_pct": 77.6,
+   "value_eok": 208,
+   "ma10": 164500.0,
+   "ma10_margin_pct": 4.01,
    "spark": {
     "clusters": []
    },
@@ -812,12 +812,130 @@
     "peak_date": "20260612",
     "peak_value_eok": 2232,
     "peak_high_pct": 18.7,
-    "ma20": 142320.0,
-    "ma20_margin_pct": 18.04,
+    "ma20": 142475.0,
+    "ma20_margin_pct": 20.09,
     "ivtr_net": 249285,
     "ivtr_days": 4,
     "ivtr_eok": 428,
     "cause_summary": "두산테스나, 삼성 파운드리 낙수효과 돌입…4분기 램프업으로 실적 본...",
+    "was_theme_leader": false
+   },
+   "theme_leader": false
+  },
+  {
+   "code": "319660",
+   "name": "피에스케이",
+   "sector": "기계·장비",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 72,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_value": 0,
+    "re_body": 1,
+    "re_count": 0,
+    "flow": 8,
+    "explosion": 1
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_value": 0,
+    "re_body": 0,
+    "re_count": 0,
+    "flow": 0,
+    "explosion": 0
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "price": 170800.0,
+   "change_pct": 5.17,
+   "high_pct": 7.14,
+   "fade_pct": 27.6,
+   "value_eok": 400,
+   "ma10": 150240.0,
+   "ma10_margin_pct": 13.68,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 2.94,
+    "time": "10:10",
+    "value_10m_eok": 38
+   },
+   "reignition_bars": [
+    {
+     "time": "10:10",
+     "body_pct": 2.94,
+     "value_eok": 38
+    }
+   ],
+   "flow": {
+    "net_days": 2,
+    "today_buy": true,
+    "streak": 2,
+    "detail": [
+     {
+      "date": "0611",
+      "frgn": -45428,
+      "orgn": 3781
+     },
+     {
+      "date": "0612",
+      "frgn": -227696,
+      "orgn": 175237
+     },
+     {
+      "date": "0615",
+      "frgn": -8062,
+      "orgn": -90397
+     },
+     {
+      "date": "0616",
+      "frgn": 51130,
+      "orgn": 5712
+     },
+     {
+      "date": "0617",
+      "frgn": 2025,
+      "orgn": 9262
+     }
+    ]
+   },
+   "news": [
+    {
+     "title": "'삼전닉스 반등' 소부장도 강세…피에스케이 20%↑[핫종목]",
+     "summary": "삼성전자(005930)와 SK하이닉스(000660)가 9일 반등하면서 반도체 소부장 종목들도 동반 강세다. 이날 오전 10시 52분 반도체 전공정 장비 기업 피에스케이(319660)는 전일 대비 2만 2700원(20.41%) 오른 13만 3900원에 ",
+     "office": "뉴스1",
+     "datetime": "202606091103",
+     "url": "https://n.news.naver.com/mnews/article/421/0008993247",
+     "sentiment": "호재"
+    }
+   ],
+   "matched_events": [],
+   "theme": "반도체",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260612",
+    "peak_value_eok": 2652,
+    "peak_high_pct": 24.5,
+    "ma20": 127955.0,
+    "ma20_margin_pct": 33.48,
+    "ivtr_net": 466286,
+    "ivtr_days": 5,
+    "ivtr_eok": 783,
+    "cause_summary": "'삼전닉스 반등' 소부장도 강세…피에스케이 20%↑[핫종목]",
     "was_theme_leader": false
    },
    "theme_leader": false
@@ -856,13 +974,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 128800.0,
-   "change_pct": -0.85,
+   "price": 128700.0,
+   "change_pct": -0.92,
    "high_pct": 4.31,
-   "fade_pct": 119.6,
-   "value_eok": 334,
-   "ma10": 121040.0,
-   "ma10_margin_pct": 6.41,
+   "fade_pct": 121.4,
+   "value_eok": 348,
+   "ma10": 121030.0,
+   "ma10_margin_pct": 6.34,
    "spark": {
     "clusters": []
    },
@@ -938,8 +1056,8 @@
     "peak_date": "20260611",
     "peak_value_eok": 3107,
     "peak_high_pct": 26.12,
-    "ma20": 118920.0,
-    "ma20_margin_pct": 8.31,
+    "ma20": 118915.0,
+    "ma20_margin_pct": 8.23,
     "ivtr_net": 259357,
     "ivtr_days": 4,
     "ivtr_eok": 312,
