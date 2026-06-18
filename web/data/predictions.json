@@ -1,57 +1,21 @@
 {
-  "as_of": "2026-06-18 15:07 KST",
+  "as_of": "2026-06-18 15:22 KST",
   "intraday_rank": [
-    {
-      "ticker": "후성",
-      "code": "093370",
-      "tomorrow_up_prob": "95%",
-      "entry": 19000.0,
-      "target": 19950,
-      "stop": 18430,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.75)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "후성 136% 폭등 비결은 '반도체·불산'…\"밸류 부담은 변수\"",
-          "url": "http://www.fnnews.com/news/202606180716328127",
-          "office": "fnnews",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
-        },
-        {
-          "title": "84만 해외 팔로워가 찍은 후성, \"반도체·불산 수혜 랠리 vs 밸류 부담\"[...",
-          "url": "https://view.asiae.co.kr/article/2026061717475099542",
-          "office": "view",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "후성 136% 폭등 비결은 '반도체·불산'…\"밸류 부담은 변수\""
-    },
     {
       "ticker": "브이엠",
       "code": "089970",
       "tomorrow_up_prob": "90%",
-      "entry": 94100.0,
-      "target": 98805,
-      "stop": 91277,
+      "entry": 93200.0,
+      "target": 97860,
+      "stop": 90404,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.91)",
+        "강세마감(0.8)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 7.99,
+      "day_change": 6.85,
       "related_news": [
         {
           "title": "다올證 “브이엠, 반도체 장비주 중 저평가…목표가 14만원”",
@@ -81,7 +45,7 @@
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 4.01,
+      "day_change": 3.19,
       "cause_news": [
         {
           "title": "[특징주] 테스, 'HBM4 수율 핵심' BSD 수주 기대감에 12%↑",
@@ -96,40 +60,48 @@
       "cause_summary": "[특징주] 테스, 'HBM4 수율 핵심' BSD 수주 기대감에 12%↑"
     },
     {
-      "ticker": "LG이노텍",
-      "code": "011070",
+      "ticker": "효성화학",
+      "code": "298000",
       "tomorrow_up_prob": "69%",
-      "entry": 1280500.0,
-      "target": 1344525,
-      "stop": 1242085,
+      "entry": 75600.0,
+      "target": 79380,
+      "stop": 73332,
       "confidence": "중",
       "reasons": [
-        "정배열",
-        "RSI65.4 강세",
-        "호재"
+        "RSI51.9 강세",
+        "Stoch골든",
+        "거래량9.7배"
       ],
-      "risk": "특이 위험 낮음",
-      "day_change": 3.37,
+      "risk": "약한 마감",
+      "day_change": null,
       "cause_news": [
         {
-          "title": "LG이노텍, 장중 2%대 상승…패키지기판 기대감에 강세",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582981",
-          "office": "cbci",
+          "title": "[주식마감] 무상증자 기대감에 가온전선 상한가... 효성화학·JW신약 등...",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1164291",
+          "office": "ggilbo",
           "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[투자전략] 세아제강 상단돌파, LG이노텍 상향…LG디스플레이는 하단 이...",
-          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16100131",
-          "office": "topstarnews",
+          "title": "효성화학 주가 장중 21%대 상승, 거래 재개 뒤 유가 하락 기대감에 이틀...",
+          "url": "https://www.businesspost.co.kr/BP?command=article_view&num=440257",
+          "office": "businesspost",
+          "sentiment": "악재",
+          "cause_score": 12,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 악재, 당일"
+        },
+        {
+          "title": "[특징주] 효성화학, 공시 없이 29.87% 급등···화학 섹터 역풍 속 차별...",
+          "url": "https://www.enetnews.co.kr/news/articleView.html?idxno=51316",
+          "office": "enetnews",
           "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "LG이노텍, 장중 2%대 상승…패키지기판 기대감에 강세"
+      "cause_summary": "[주식마감] 무상증자 기대감에 가온전선 상한가... 효성화학·JW신약 등..."
     },
     {
       "ticker": "가온전선",
@@ -141,7 +113,7 @@
       "confidence": "중",
       "reasons": [
         "RSI56.8 강세",
-        "거래량2.72배",
+        "거래량2.76배",
         "호재"
       ],
       "risk": "약한 마감",
@@ -176,56 +148,20 @@
       "cause_summary": "[특징주] 가온전선, 美 AI·전력망 수혜 기대에 14%대 급등"
     },
     {
-      "ticker": "현대약품",
-      "code": "004310",
-      "tomorrow_up_prob": "55%",
-      "entry": 8630.0,
-      "target": 9062,
-      "stop": 8371,
-      "confidence": "중",
-      "reasons": [
-        "RSI67.3 강세",
-        "거래량5.49배",
-        "장중 24회 지속"
-      ],
-      "risk": "약한 마감",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "현대약품 주가, 급등세... 왜?",
-          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1164426",
-          "office": "ggilbo",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "탈모약 건보 추진에 TS트릴리온·현대약품 등 연일 강세",
-          "url": "https://www.gukjenews.com/news/articleView.html?idxno=3610539",
-          "office": "gukjenews",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 원인표현, 인과표현, 검색맥락"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "현대약품 주가, 급등세... 왜?"
-    },
-    {
       "ticker": "피에스케이",
       "code": "319660",
       "tomorrow_up_prob": "39%",
-      "entry": 173800.0,
-      "target": 182490,
-      "stop": 168586,
+      "entry": 171700.0,
+      "target": 180285,
+      "stop": 166549,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.71)",
         "정배열",
-        "MACD강세"
+        "MACD강세",
+        "Stoch골든"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 7.39,
+      "day_change": 5.54,
       "related_news": [
         {
           "title": "'삼전닉스 반등' 소부장도 강세…피에스케이 20%↑[핫종목]",
@@ -236,20 +172,40 @@
       ]
     },
     {
-      "ticker": "테크윙",
-      "code": "089030",
+      "ticker": "디앤디파마텍",
+      "code": "347850",
       "tomorrow_up_prob": "39%",
-      "entry": 61300.0,
-      "target": 64365,
-      "stop": 59461,
+      "entry": 108700.0,
+      "target": 114135,
+      "stop": 105439,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.7)",
         "정배열",
-        "MACD강세"
+        "MACD강세",
+        "RSI62.9 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": -0.89
+      "day_change": 1.57,
+      "cause_news": [
+        {
+          "title": "[특징주] 디앤디파마텍, MASH 치료제 기대감에 18% 급등…기술수출 모멘...",
+          "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1712910",
+          "office": "ebn",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "디앤디파마텍, 추가 임상 데이터 공개에 기술이전 기대감 확대…투자경...",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582745",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 디앤디파마텍, MASH 치료제 기대감에 18% 급등…기술수출 모멘..."
     },
     {
       "ticker": "삼화전기",
@@ -299,12 +255,12 @@
       "ticker": "삼화콘덴서",
       "code": "001820",
       "tomorrow_up_prob": "39%",
-      "entry": 194300.0,
-      "target": 204015,
-      "stop": 188471,
+      "entry": 190500.0,
+      "target": 200025,
+      "stop": 184785,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.95)",
+        "강세마감(0.87)",
         "정배열",
         "MACD강세"
       ],
@@ -343,12 +299,12 @@
       "ticker": "SK하이닉스",
       "code": "000660",
       "tomorrow_up_prob": "39%",
-      "entry": 2729000.0,
-      "target": 2865450,
-      "stop": 2647130,
+      "entry": 2698000.0,
+      "target": 2832900,
+      "stop": 2617060,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.95)",
+        "강세마감(0.78)",
         "정배열",
         "MACD강세"
       ],
@@ -356,32 +312,88 @@
       "day_change": null,
       "cause_news": [
         {
-          "title": "애플·삼성도 탐내는 기술력…SK하이닉스, LPDDR6 표준 선점으로 패권 장...",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=461212",
-          "office": "pinpointnews",
+          "title": "사상 첫 '270만닉스'…SK하이닉스 장중 또 최고가",
+          "url": "http://www.yonhapnewstv.co.kr/news/AKR20260618151535Sja",
+          "office": "yonhapnewstv",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "사상 첫 '270만닉스'…SK하이닉스 장중 또 최고가"
+    },
+    {
+      "ticker": "후성",
+      "code": "093370",
+      "tomorrow_up_prob": "39%",
+      "entry": 18810.0,
+      "target": 19750,
+      "stop": 18246,
+      "confidence": "하",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI62.3 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "후성 136% 폭등 비결은 '반도체·불산'…\"밸류 부담은 변수\"",
+          "url": "http://www.fnnews.com/news/202606180716328127",
+          "office": "fnnews",
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
         },
         {
-          "title": "[ET특징주] 200만 닉스는 옛말… SK하이닉스, 268만원 뚫고 '사상 최고가...",
-          "url": "https://www.etnews.com/20260618000205",
-          "office": "etnews",
+          "title": "84만 해외 팔로워가 찍은 후성, \"반도체·불산 수혜 랠리 vs 밸류 부담\"[...",
+          "url": "https://view.asiae.co.kr/article/2026061717475099542",
+          "office": "view",
           "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] SK하이닉스, 사상 첫 '260만닉스' 달성...SK스퀘어도 동반 강세",
-          "url": "http://www.metroseoul.co.kr/article/20260618500072",
-          "office": "metroseoul",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "애플·삼성도 탐내는 기술력…SK하이닉스, LPDDR6 표준 선점으로 패권 장..."
+      "cause_summary": "후성 136% 폭등 비결은 '반도체·불산'…\"밸류 부담은 변수\""
+    },
+    {
+      "ticker": "LG이노텍",
+      "code": "011070",
+      "tomorrow_up_prob": "38%",
+      "entry": 1292000.0,
+      "target": 1356600,
+      "stop": 1253240,
+      "confidence": "하",
+      "reasons": [
+        "강세마감(0.77)",
+        "정배열",
+        "RSI65.8 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 2.56,
+      "cause_news": [
+        {
+          "title": "LG이노텍, 장중 2%대 상승…패키지기판 기대감에 강세",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582981",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        },
+        {
+          "title": "[투자전략] 세아제강 상단돌파, LG이노텍 상향…LG디스플레이는 하단 이...",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16100131",
+          "office": "topstarnews",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "LG이노텍, 장중 2%대 상승…패키지기판 기대감에 강세"
     },
     {
       "ticker": "제주반도체",
@@ -397,7 +409,7 @@
         "일목 구름위"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 5.56,
+      "day_change": 4.93,
       "cause_news": [
         {
           "title": "[속보] 제주반도체 VI 발동, 주가 도약...장중 강세로 전환",
@@ -415,33 +427,33 @@
       "ticker": "원익IPS",
       "code": "240810",
       "tomorrow_up_prob": "38%",
-      "entry": 165700.0,
-      "target": 173985,
-      "stop": 160729,
+      "entry": 164800.0,
+      "target": 173040,
+      "stop": 159856,
       "confidence": "하",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI61.1 강세"
+        "RSI60.9 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 2.54
+      "day_change": 1.73
     },
     {
       "ticker": "심텍",
       "code": "222800",
       "tomorrow_up_prob": "38%",
-      "entry": 129200.0,
-      "target": 135660,
-      "stop": 125324,
+      "entry": 128200.0,
+      "target": 134610,
+      "stop": 124354,
       "confidence": "하",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI58.9 강세"
+        "RSI58.2 강세"
       ],
-      "risk": "특이 위험 낮음",
-      "day_change": -0.46,
+      "risk": "약한 마감",
+      "day_change": -1.31,
       "related_news": [
         {
           "title": "&quot;심텍, 엔비디아 소캠2 양산에 최대 수혜…목표주가 52%↑&quot;-대신",
@@ -458,95 +470,31 @@
       ]
     },
     {
-      "ticker": "디앤디파마텍",
-      "code": "347850",
+      "ticker": "테크윙",
+      "code": "089030",
       "tomorrow_up_prob": "38%",
-      "entry": 109200.0,
-      "target": 114660,
-      "stop": 105924,
+      "entry": 60700.0,
+      "target": 63735,
+      "stop": 58879,
       "confidence": "하",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI63.1 강세"
+        "RSI54.4 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 0.74,
-      "cause_news": [
-        {
-          "title": "[특징주] 디앤디파마텍, MASH 치료제 기대감에 18% 급등…기술수출 모멘...",
-          "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1712910",
-          "office": "ebn",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "디앤디파마텍, 추가 임상 데이터 공개에 기술이전 기대감 확대…투자경...",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582745",
-          "office": "cbci",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 디앤디파마텍, MASH 치료제 기대감에 18% 급등…기술수출 모멘..."
-    },
-    {
-      "ticker": "효성화학",
-      "code": "298000",
-      "tomorrow_up_prob": "38%",
-      "entry": 76400.0,
-      "target": 80220,
-      "stop": 74108,
-      "confidence": "하",
-      "reasons": [
-        "RSI52.8 강세",
-        "Stoch골든",
-        "거래량9.65배"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[주식마감] 무상증자 기대감에 가온전선 상한가... 효성화학·JW신약 등...",
-          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1164291",
-          "office": "ggilbo",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "효성화학 주가 장중 21%대 상승, 거래 재개 뒤 유가 하락 기대감에 이틀...",
-          "url": "https://www.businesspost.co.kr/BP?command=article_view&num=440257",
-          "office": "businesspost",
-          "sentiment": "악재",
-          "cause_score": 12,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 악재, 당일"
-        },
-        {
-          "title": "[특징주] 효성화학, 공시 없이 29.87% 급등···화학 섹터 역풍 속 차별...",
-          "url": "https://www.enetnews.co.kr/news/articleView.html?idxno=51316",
-          "office": "enetnews",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[주식마감] 무상증자 기대감에 가온전선 상한가... 효성화학·JW신약 등..."
+      "day_change": -2.09
     },
     {
       "ticker": "삼성전기",
       "code": "009150",
       "tomorrow_up_prob": "38%",
-      "entry": 2209000.0,
-      "target": 2319450,
-      "stop": 2142730,
+      "entry": 2208000.0,
+      "target": 2318400,
+      "stop": 2141760,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.75)",
+        "강세마감(0.74)",
         "정배열",
         "MACD강세"
       ],
@@ -585,18 +533,26 @@
       "ticker": "SK스퀘어",
       "code": "402340",
       "tomorrow_up_prob": "38%",
-      "entry": 1729000.0,
-      "target": 1815450,
-      "stop": 1677130,
+      "entry": 1727000.0,
+      "target": 1813350,
+      "stop": 1675190,
       "confidence": "하",
       "reasons": [
-        "강세마감(1.0)",
+        "강세마감(0.9)",
         "정배열",
         "MACD강세"
       ],
       "risk": "Stoch 과매수",
       "day_change": null,
       "cause_news": [
+        {
+          "title": "[특징주] SK스퀘어, 하이닉스發 대규모 배당 유입 기대감에 '강세'",
+          "url": "https://www.cstimes.com/news/articleView.html?idxno=710217",
+          "office": "cstimes",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
         {
           "title": "[특징주] SK하이닉스, 사상 첫 '260만닉스' 달성...SK스퀘어도 동반 강세",
           "url": "http://www.metroseoul.co.kr/article/20260618500072",
@@ -612,72 +568,28 @@
           "sentiment": "호재",
           "cause_score": 13,
           "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "SK하이닉스·SK스퀘어, 동반 신고가 경신…'263만닉스' 달성[특징주]",
-          "url": "https://www.newsway.co.kr/news/view?ud=2026061809565499201",
-          "office": "newsway",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] SK하이닉스, 사상 첫 '260만닉스' 달성...SK스퀘어도 동반 강세"
+      "cause_summary": "[특징주] SK스퀘어, 하이닉스發 대규모 배당 유입 기대감에 '강세'"
     }
   ],
   "closing_bet": [
     {
-      "ticker": "후성",
-      "code": "093370",
-      "tomorrow_up_prob": "95%",
-      "entry": 19000.0,
-      "target": 19950,
-      "stop": 18430,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.75)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "후성 136% 폭등 비결은 '반도체·불산'…\"밸류 부담은 변수\"",
-          "url": "http://www.fnnews.com/news/202606180716328127",
-          "office": "fnnews",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
-        },
-        {
-          "title": "84만 해외 팔로워가 찍은 후성, \"반도체·불산 수혜 랠리 vs 밸류 부담\"[...",
-          "url": "https://view.asiae.co.kr/article/2026061717475099542",
-          "office": "view",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "후성 136% 폭등 비결은 '반도체·불산'…\"밸류 부담은 변수\""
-    },
-    {
       "ticker": "브이엠",
       "code": "089970",
       "tomorrow_up_prob": "90%",
-      "entry": 94100.0,
-      "target": 98805,
-      "stop": 91277,
+      "entry": 93200.0,
+      "target": 97860,
+      "stop": 90404,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.91)",
+        "강세마감(0.8)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 7.99,
+      "day_change": 6.85,
       "related_news": [
         {
           "title": "다올證 “브이엠, 반도체 장비주 중 저평가…목표가 14만원”",
@@ -707,7 +619,7 @@
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 4.01,
+      "day_change": 3.19,
       "cause_news": [
         {
           "title": "[특징주] 테스, 'HBM4 수율 핵심' BSD 수주 기대감에 12%↑",
@@ -722,40 +634,48 @@
       "cause_summary": "[특징주] 테스, 'HBM4 수율 핵심' BSD 수주 기대감에 12%↑"
     },
     {
-      "ticker": "LG이노텍",
-      "code": "011070",
+      "ticker": "효성화학",
+      "code": "298000",
       "tomorrow_up_prob": "69%",
-      "entry": 1280500.0,
-      "target": 1344525,
-      "stop": 1242085,
+      "entry": 75600.0,
+      "target": 79380,
+      "stop": 73332,
       "confidence": "중",
       "reasons": [
-        "정배열",
-        "RSI65.4 강세",
-        "호재"
+        "RSI51.9 강세",
+        "Stoch골든",
+        "거래량9.7배"
       ],
-      "risk": "특이 위험 낮음",
-      "day_change": 3.37,
+      "risk": "약한 마감",
+      "day_change": null,
       "cause_news": [
         {
-          "title": "LG이노텍, 장중 2%대 상승…패키지기판 기대감에 강세",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=582981",
-          "office": "cbci",
+          "title": "[주식마감] 무상증자 기대감에 가온전선 상한가... 효성화학·JW신약 등...",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1164291",
+          "office": "ggilbo",
           "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[투자전략] 세아제강 상단돌파, LG이노텍 상향…LG디스플레이는 하단 이...",
-          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16100131",
-          "office": "topstarnews",
+          "title": "효성화학 주가 장중 21%대 상승, 거래 재개 뒤 유가 하락 기대감에 이틀...",
+          "url": "https://www.businesspost.co.kr/BP?command=article_view&num=440257",
+          "office": "businesspost",
+          "sentiment": "악재",
+          "cause_score": 12,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 악재, 당일"
+        },
+        {
+          "title": "[특징주] 효성화학, 공시 없이 29.87% 급등···화학 섹터 역풍 속 차별...",
+          "url": "https://www.enetnews.co.kr/news/articleView.html?idxno=51316",
+          "office": "enetnews",
           "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "LG이노텍, 장중 2%대 상승…패키지기판 기대감에 강세"
+      "cause_summary": "[주식마감] 무상증자 기대감에 가온전선 상한가... 효성화학·JW신약 등..."
     },
     {
       "ticker": "가온전선",
@@ -767,7 +687,7 @@
       "confidence": "중",
       "reasons": [
         "RSI56.8 강세",
-        "거래량2.72배",
+        "거래량2.76배",
         "호재"
       ],
       "risk": "약한 마감",
