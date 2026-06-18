@@ -1,0 +1,67 @@
+{
+ "date": "20260618",
+ "suspects": {
+  "402340": {
+   "name": "SK스퀘어",
+   "sector": "금융",
+   "entry": 1699000.0,
+   "score": 0,
+   "breakdown": {
+    "base": 0,
+    "re_value": 0,
+    "re_body": 0,
+    "re_count": 0,
+    "flow": 0,
+    "explosion": 0
+   },
+   "change_pct": 6.45,
+   "high_pct": 6.45,
+   "fade_pct": 0.0,
+   "pattern": "reaccum",
+   "prime": false,
+   "theme": "금리",
+   "value_eok": 1157,
+   "theme_leader": false,
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "flow_today_buy": false,
+   "flow_net_days": 3,
+   "deep_shake": null,
+   "ai_verdict": null,
+   "visible_experimental": true,
+   "reaccum_badge": false,
+   "reaccum": {
+    "peak_date": "20260612",
+    "peak_value_eok": 20966,
+    "peak_high_pct": 15.8,
+    "ma20": 1295300.0,
+    "ma20_margin_pct": 31.17,
+    "ivtr_net": 1345960,
+    "ivtr_days": 5,
+    "ivtr_eok": 17968,
+    "cause_summary": "“형보다 나은 아우” SK스퀘어, 하이닉스보다 주가 더 뛰었다 [오늘 ...",
+    "was_theme_leader": false
+   },
+   "reignition": {
+    "body_pct": 2.6,
+    "time": "09:00",
+    "value_10m_eok": 1166
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "matched_events": [],
+   "first_seen": "2026-06-18 09:01:45 KST",
+   "evaluated": false,
+   "result": null,
+   "final": true
+  }
+ },
+ "as_of": "2026-06-18 09:01:45 KST"
+}
