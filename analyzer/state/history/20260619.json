@@ -1,46 +1,46 @@
 {
   "date": "20260619",
-  "as_of": "2026-06-19 09:07 KST",
+  "as_of": "2026-06-19 09:22 KST",
   "bets": [
     {
-      "code": "010120",
-      "ticker": "LS ELECTRIC",
-      "entry": 266500.0,
-      "target": 279825,
-      "raw": 69,
-      "prob": "69%"
+      "code": "006260",
+      "ticker": "LS",
+      "entry": 446000.0,
+      "target": 468300,
+      "raw": 66,
+      "prob": "66%"
+    },
+    {
+      "code": "032830",
+      "ticker": "삼성생명",
+      "entry": 510000.0,
+      "target": 535500,
+      "raw": 65,
+      "prob": "65%"
+    },
+    {
+      "code": "080220",
+      "ticker": "제주반도체",
+      "entry": 125800.0,
+      "target": 132090,
+      "raw": 62,
+      "prob": "62%"
     },
     {
       "code": "062040",
       "ticker": "산일전기",
-      "entry": 259500.0,
-      "target": 272475,
-      "raw": 69,
-      "prob": "69%"
-    },
-    {
-      "code": "035420",
-      "ticker": "NAVER",
-      "entry": 240500.0,
-      "target": 252525,
-      "raw": 67,
-      "prob": "67%"
+      "entry": 258000.0,
+      "target": 270900,
+      "raw": 62,
+      "prob": "62%"
     },
     {
       "code": "402340",
       "ticker": "SK스퀘어",
-      "entry": 1825000.0,
-      "target": 1916250,
-      "raw": 64,
-      "prob": "64%"
-    },
-    {
-      "code": "046970",
-      "ticker": "우리로",
-      "entry": 8980.0,
-      "target": 9429,
-      "raw": 63,
-      "prob": "63%"
+      "entry": 1823000.0,
+      "target": 1914150,
+      "raw": 58,
+      "prob": "58%"
     }
   ]
 }
