@@ -1,46 +1,46 @@
 {
   "date": "20260619",
-  "as_of": "2026-06-19 10:37 KST",
+  "as_of": "2026-06-19 10:52 KST",
   "bets": [
     {
-      "code": "028050",
-      "ticker": "삼성E&A",
-      "entry": 50400.0,
-      "target": 52920,
-      "raw": 69,
-      "prob": "69%"
+      "code": "080220",
+      "ticker": "제주반도체",
+      "entry": 125500.0,
+      "target": 131775,
+      "raw": 68,
+      "prob": "68%"
     },
     {
-      "code": "204320",
-      "ticker": "HL만도",
-      "entry": 67300.0,
-      "target": 70665,
-      "raw": 69,
-      "prob": "69%"
+      "code": "085620",
+      "ticker": "미래에셋생명",
+      "entry": 34200.0,
+      "target": 35910,
+      "raw": 68,
+      "prob": "68%"
     },
     {
-      "code": "032830",
-      "ticker": "삼성생명",
-      "entry": 503000.0,
-      "target": 528150,
-      "raw": 69,
-      "prob": "69%"
+      "code": "402340",
+      "ticker": "SK스퀘어",
+      "entry": 1826000.0,
+      "target": 1917300,
+      "raw": 67,
+      "prob": "67%"
     },
     {
-      "code": "010690",
-      "ticker": "화신",
-      "entry": 13620.0,
-      "target": 14301,
-      "raw": 66,
-      "prob": "66%"
+      "code": "240810",
+      "ticker": "원익IPS",
+      "entry": 157500.0,
+      "target": 165375,
+      "raw": 65,
+      "prob": "65%"
     },
     {
       "code": "006400",
       "ticker": "삼성SDI",
-      "entry": 564000.0,
-      "target": 592200,
-      "raw": 59,
-      "prob": "59%"
+      "entry": 563000.0,
+      "target": 591150,
+      "raw": 60,
+      "prob": "60%"
     }
   ]
 }
