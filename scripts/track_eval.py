@@ -31,7 +31,9 @@ RULE_BUY_MIN = 62   # 참고용: '매수 우위' 시작 점수 (scoring.ts). 분
 # 과열(RSI/52주고점/거래소 경고·위험)·관리종목이면 level을 비매수("관망·과열"/"중립")로 오버라이드하므로,
 # 점수만 쓰면 사용자가 비매수로 본 종목을 '룰 매수'로 오집계한다(목적: 사용자가 본 판정 vs AI 비교).
 BUY_LEVELS = ("강한 매수신호", "매수 우위")
-AI_UP_MIN = 58      # Kimi '상승' 임계 (ai.ts 58/42 파생과 정합)
+AI_UP_MIN = 54      # 추적 4분면 'AI 상승' 분류 임계. ⚠ 사이트 방향배지(ai.ts ≥58/≤42)와 별개 —
+# 추적종목군은 Kimi가 58을 거의 안 넘겨 ai_up 분면이 비어 룰vsAI 비교 불가 → 검증 분류만 54로 하향
+# (2026-06-20). 표시 임계는 58 유지(재앵커링 방지). 표본 누적 후 상대순위 방식 재검토 후보.
 HIGH3_X = 1.03
 
 
@@ -306,7 +308,7 @@ def write_perf(tracked_codes):
         "n": n,
         "fwd_n": fwd_matured,  # D+10까지 성숙(경로 확정)한 표본 수 — 다중일자 통계 분모 고지
         "rule_buy": {"n": len(rule_buy), "hit_rate": rate(rule_buy), **fwd_cell(rule_buy)},  # 종합판정 매수
-        "ai_up": {"n": len(ai_up), "hit_rate": rate(ai_up), **fwd_cell(ai_up)},               # Kimi ≥58%
+        "ai_up": {"n": len(ai_up), "hit_rate": rate(ai_up), **fwd_cell(ai_up)},               # Kimi ≥AI_UP_MIN%
         "rule_buy_min": RULE_BUY_MIN, "ai_up_min": AI_UP_MIN, "min_n": 10,
         "quad_n": len(quad_samples), "unknown_n": unknown_n,  # 4분면 분모·제외 표본 고지
         "divergence": {

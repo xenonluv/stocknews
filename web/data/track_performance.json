@@ -1,5 +1,5 @@
 {
- "as_of": "2026-06-20 08:05 KST",
+ "as_of": "2026-06-20 08:16 KST",
  "n": 25,
  "fwd_n": 0,
  "rule_buy": {
@@ -10,46 +10,46 @@
   "fwd_n": 0
  },
  "ai_up": {
-  "n": 0,
-  "hit_rate": null,
+  "n": 3,
+  "hit_rate": 33.3,
   "avg_d5": null,
   "avg_d10": null,
   "fwd_n": 0
  },
  "rule_buy_min": 62,
- "ai_up_min": 58,
+ "ai_up_min": 54,
  "min_n": 10,
  "quad_n": 25,
  "unknown_n": 0,
  "divergence": {
   "both": {
-   "n": 0,
-   "hit_rate": null,
-   "avg_return": null,
+   "n": 2,
+   "hit_rate": 50.0,
+   "avg_return": 1.29,
    "avg_d5": null,
    "avg_d10": null,
    "fwd_n": 0
   },
   "rule_only": {
-   "n": 12,
-   "hit_rate": 16.7,
-   "avg_return": -1.99,
+   "n": 10,
+   "hit_rate": 10.0,
+   "avg_return": -2.64,
    "avg_d5": null,
    "avg_d10": null,
    "fwd_n": 0
   },
   "ai_only": {
-   "n": 0,
-   "hit_rate": null,
-   "avg_return": null,
+   "n": 1,
+   "hit_rate": 0.0,
+   "avg_return": -4.44,
    "avg_d5": null,
    "avg_d10": null,
    "fwd_n": 0
   },
   "neither": {
-   "n": 13,
-   "hit_rate": 46.2,
-   "avg_return": -1.37,
+   "n": 12,
+   "hit_rate": 50.0,
+   "avg_return": -1.11,
    "avg_d5": null,
    "avg_d10": null,
    "fwd_n": 0
