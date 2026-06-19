@@ -1,0 +1,46 @@
+{
+  "date": "20260619",
+  "as_of": "2026-06-19 09:07 KST",
+  "bets": [
+    {
+      "code": "010120",
+      "ticker": "LS ELECTRIC",
+      "entry": 266500.0,
+      "target": 279825,
+      "raw": 69,
+      "prob": "69%"
+    },
+    {
+      "code": "062040",
+      "ticker": "산일전기",
+      "entry": 259500.0,
+      "target": 272475,
+      "raw": 69,
+      "prob": "69%"
+    },
+    {
+      "code": "035420",
+      "ticker": "NAVER",
+      "entry": 240500.0,
+      "target": 252525,
+      "raw": 67,
+      "prob": "67%"
+    },
+    {
+      "code": "402340",
+      "ticker": "SK스퀘어",
+      "entry": 1825000.0,
+      "target": 1916250,
+      "raw": 64,
+      "prob": "64%"
+    },
+    {
+      "code": "046970",
+      "ticker": "우리로",
+      "entry": 8980.0,
+      "target": 9429,
+      "raw": 63,
+      "prob": "63%"
+    }
+  ]
+}
