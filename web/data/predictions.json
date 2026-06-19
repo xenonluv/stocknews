@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-06-19 15:37 KST",
+  "as_of": "2026-06-19 15:52 KST",
   "intraday_rank": [
     {
       "ticker": "아모텍",
@@ -111,7 +111,7 @@
       "confidence": "중",
       "reasons": [
         "Stoch골든",
-        "장중 17회 지속"
+        "장중 18회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -135,50 +135,6 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "효성중공업·삼성SDI 강세…전력설비·이차전지주 동반 상승"
-    },
-    {
-      "ticker": "대한항공",
-      "code": "003490",
-      "tomorrow_up_prob": "39%",
-      "entry": 27950.0,
-      "target": 29348,
-      "stop": 27112,
-      "confidence": "하",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI56.3 강세"
-      ],
-      "risk": "약한 마감",
-      "day_change": -3.12,
-      "cause_news": [
-        {
-          "title": "[종목분석] 대한항공 목표가 18% 상향…아시아나 합병 시너지 주목",
-          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16102132",
-          "office": "topstarnews",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
-        },
-        {
-          "title": "대한항공, 미래 항공기술 승부수… AI 화물 수요 증가로 실적 기대감",
-          "url": "http://www.whitepaper.co.kr/news/articleView.html?idxno=263642",
-          "office": "whitepaper",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스"
-        },
-        {
-          "title": "[비즈 인사이트] \"대한항공, 아시아나 그리고 수익 창출\"…통합 시험대...",
-          "url": "https://www.seoultimes.news/news/article.html?no=2000096586",
-          "office": "seoultimes",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "[종목분석] 대한항공 목표가 18% 상향…아시아나 합병 시너지 주목"
     },
     {
       "ticker": "SK",
@@ -311,6 +267,50 @@
       ],
       "risk": "특이 위험 낮음",
       "day_change": -0.5
+    },
+    {
+      "ticker": "대한항공",
+      "code": "003490",
+      "tomorrow_up_prob": "38%",
+      "entry": 27950.0,
+      "target": 29348,
+      "stop": 27112,
+      "confidence": "하",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI56.3 강세"
+      ],
+      "risk": "약한 마감",
+      "day_change": -3.12,
+      "cause_news": [
+        {
+          "title": "대한항공 \"아시아나 통합, 연 3000억 시너지..2028년말 비용 상쇄\"",
+          "url": "https://www.mt.co.kr/industry/2026/06/19/2026061913184241752",
+          "office": "mt",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        },
+        {
+          "title": "[종목분석] 대한항공 목표가 18% 상향…아시아나 합병 시너지 주목",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16102132",
+          "office": "topstarnews",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
+        },
+        {
+          "title": "대한항공, 미래 항공기술 승부수… AI 화물 수요 증가로 실적 기대감",
+          "url": "http://www.whitepaper.co.kr/news/articleView.html?idxno=263642",
+          "office": "whitepaper",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "대한항공 \"아시아나 통합, 연 3000억 시너지..2028년말 비용 상쇄\""
     },
     {
       "ticker": "미래에셋생명",
