@@ -141,7 +141,7 @@ python3 scripts/event_calendar.py 10           # D-10 이벤트 확인
   당일 누적값**(분당=차분 필요), ~6세션치 응답(KST 당일 필터 필수), 08:30~ 장전 봉 포함.
   스파크 = `web/lib/stock/sparks.ts`(radar.py 1:1 포팅, **산식 변경 시 동기화**).
   `GET /api/stock/search?q=` — 자동완성 프록시(ac.stock.naver.com, CSP 때문에 경유 필수).
-- `GET /api/stock/{code}/ai` — **AI(LLM) 심층 분석** (Moonshot `kimi-k2.6`, **유일한 LLM 사용처**).
+- `GET /api/stock/{code}/ai` — **AI(LLM) 심층 분석** (Moonshot `kimi-k2.6`, LLM 사용처는 이 `/ai`와 아래 `/ask` 둘뿐).
   룰베이스 리포트 전체를 직렬화해 Kimi에 전달 → **익일 상승 확률 `prob_up`(0~100)** 추정.
   방향(상승/하락/관망)은 코드가 파생(≥58/≤42 — **임계값 프롬프트 노출 금지**, 재앵커링 방지).
   `MOONSHOT_SAMPLES`(기본 3) 병렬 호출 → **중앙값 합의**(self-consistency). 버튼 클릭 시에만 호출.
@@ -150,6 +150,18 @@ python3 scripts/event_calendar.py 10           # D-10 이벤트 확인
   **reasoning(기본값)은 15~120초+ → Vercel 타임아웃** → `thinking:{type:"disabled"}`로 5~20초.
   `MOONSHOT_THINKING=enabled`로 깊은 추론(이때 `maxDuration=300` Fluid Compute 필요).
   시크릿: `MOONSHOT_API_KEY`(+BASE_URL/MODEL) — `web/.env.local` + Vercel.
+- `POST /api/stock/{code}/ask` — **AI 자유질문(찌라시 RAG)**. 사용자 질문을 그 종목의 실제
+  데이터 + 수집 글(뉴스·토론방·텔레그램) **"원문만"** 근거로 Kimi가 답함(`/ai`와 별개 엔드포인트).
+  body `{question}`(2~300자) → `{answerable, answer, facts[], rumors[], calcUnverified, droppedCount,
+  caveat, sourceCounts}`. 질문마다 답이 달라 **CDN 캐시 불가**(`force-dynamic`·`no-store`·POST),
+  `maxDuration=300`. **환각 차단 2단**: ① 프롬프트(자료 밖 사실 생성 금지·인용 시 원문 발췌 필수)
+  ② 사후 대조 — 모델이 댄 `quote`가 수집 원문에 substring 존재할 때만 채택, 데이터 근거 4자리+
+  숫자는 실제 데이터에 있어야 채택, 미통과분 자동 삭제(`droppedCount`). 찌라시(토론방·텔레그램)=
+  **미확인 루머** / 데이터·뉴스=사실 분리 표시. answer 속 계산수치·% 백스톱(`calcUnverified`).
+  엔진: `lib/stock/ask.ts`(오케스트레이터) + `lib/stock/rumors.ts`(토론방·텔레그램 수집, best-effort)
+  + `ai.ts`의 `callKimiJson`/`serializeForPrompt` 공유. UI = `components/stock/AskQuestionCard.tsx`
+  (`StockReportView`에서 `!tradeStop`일 때 마운트), 호출은 `services/stock.client.ts`의 `askQuestion`.
+  시크릿: `MOONSHOT_API_KEY`(KIS 미사용 — 무시크릿 유지, 네이버 공개 HTML만 추가).
 - 흐름: `web/data/radar.json` → `lib/radar/repository.ts`(SSOT) → `app/page.tsx`(SSG) + `app/api/radar`.
 - 프론트 폴링은 `services/radar.client.ts` 경유만(컴포넌트 직접 fetch 금지).
 
