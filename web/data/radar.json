@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-19 09:51:52 KST",
+ "generated_at": "2026-06-19 10:01:53 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -60,13 +60,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 123900.0,
-   "change_pct": 5.27,
+   "price": 123400.0,
+   "change_pct": 4.84,
    "high_pct": 9.43,
-   "fade_pct": 44.1,
-   "value_eok": 3696,
-   "ma10": 104790.0,
-   "ma10_margin_pct": 18.24,
+   "fade_pct": 48.6,
+   "value_eok": 3887,
+   "ma10": 104780.0,
+   "ma10_margin_pct": 17.77,
    "spark": {
     "clusters": []
    },
@@ -130,8 +130,8 @@
     "peak_date": "20260617",
     "peak_value_eok": 9972,
     "peak_high_pct": 14.53,
-    "ma20": 105810.0,
-    "ma20_margin_pct": 17.1,
+    "ma20": 105805.0,
+    "ma20_margin_pct": 16.63,
     "ivtr_net": 196092,
     "ivtr_days": 4,
     "ivtr_eok": 221,
@@ -175,13 +175,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 61700.0,
-   "change_pct": 3.87,
+   "price": 60100.0,
+   "change_pct": 1.18,
    "high_pct": 6.4,
-   "fade_pct": 39.5,
-   "value_eok": 2721,
-   "ma10": 61755.0,
-   "ma10_margin_pct": -0.09,
+   "fade_pct": 81.6,
+   "value_eok": 2975,
+   "ma10": 61585.0,
+   "ma10_margin_pct": -2.41,
    "spark": {
     "clusters": []
    },
@@ -240,8 +240,8 @@
     "peak_date": "20260615",
     "peak_value_eok": 27304,
     "peak_high_pct": 28.67,
-    "ma20": 56452.5,
-    "ma20_margin_pct": 9.3,
+    "ma20": 56367.5,
+    "ma20_margin_pct": 6.62,
     "ivtr_net": 5474318,
     "ivtr_days": 3,
     "ivtr_eok": 4189,
@@ -285,13 +285,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 1861000.0,
-   "change_pct": 9.47,
+   "price": 1844000.0,
+   "change_pct": 8.47,
    "high_pct": 11.24,
-   "fade_pct": 15.7,
-   "value_eok": 6467,
-   "ma10": 1422800.0,
-   "ma10_margin_pct": 30.8,
+   "fade_pct": 24.6,
+   "value_eok": 7016,
+   "ma10": 1421000.0,
+   "ma10_margin_pct": 29.77,
    "spark": {
     "clusters": []
    },
@@ -344,6 +344,14 @@
    },
    "news": [
     {
+     "title": "삼전닉스 지분 가졌을 뿐인데…SK스퀘어·삼성생명 '신고가' [핫종목]",
+     "summary": "삼성전자(005930)와 SK하이닉스(000660) 지분을 보유한 계열사 주식이 동반 강세를 보이면서 신고가를 경신하고 있다. 19일 오전 9시 50분 기준 SK스퀘어(402340)는 전일 대비 15만 9000원(9.35%) 오른 185만 9000원을",
+     "office": "뉴스1",
+     "datetime": "202606190959",
+     "url": "https://n.news.naver.com/mnews/article/421/0009012338",
+     "sentiment": "호재"
+    },
+    {
      "title": "넥써쓰, 원스토어 626억원에 인수…“게임 중심 플랫폼으로 확장”",
      "summary": "유상증자·CB로 607억원 조달 넥써쓰가 국산 앱 마켓 원스토어를 인수한다. 넥써쓰는 18일 SK스퀘어·네이버·스틸넘버원제일차·크래프톤으로부터 원스토어 주식회사 지분 84.63%를 약 626억원에 인수하기로 했다고 공시했다. 매각 주체별 지분...",
      "office": "조선비즈",
@@ -359,12 +367,12 @@
     "peak_date": "20260612",
     "peak_value_eok": 20966,
     "peak_high_pct": 15.8,
-    "ma20": 1337000.0,
-    "ma20_margin_pct": 39.19,
+    "ma20": 1336100.0,
+    "ma20_margin_pct": 38.01,
     "ivtr_net": 1395999,
     "ivtr_days": 6,
     "ivtr_eok": 18802,
-    "cause_summary": "넥써쓰, 원스토어 626억원에 인수…“게임 중심 플랫폼으로 확장”",
+    "cause_summary": "삼전닉스 지분 가졌을 뿐인데…SK스퀘어·삼성생명 '신고가' [핫종목]",
     "was_theme_leader": false
    },
    "leader_cohort_prob": null,
@@ -404,13 +412,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 113900.0,
-   "change_pct": 5.17,
+   "price": 111000.0,
+   "change_pct": 2.49,
    "high_pct": 6.19,
-   "fade_pct": 16.4,
-   "value_eok": 906,
-   "ma10": 94140.0,
-   "ma10_margin_pct": 20.99,
+   "fade_pct": 59.7,
+   "value_eok": 1025,
+   "ma10": 93850.0,
+   "ma10_margin_pct": 18.27,
    "spark": {
     "clusters": []
    },
@@ -474,122 +482,12 @@
     "peak_date": "20260617",
     "peak_value_eok": 5770,
     "peak_high_pct": 27.29,
-    "ma20": 90110.0,
-    "ma20_margin_pct": 26.4,
+    "ma20": 89965.0,
+    "ma20_margin_pct": 23.38,
     "ivtr_net": 306461,
     "ivtr_days": 3,
     "ivtr_eok": 312,
     "cause_summary": "LG AI연구원, 디앤디파마텍과 AI 기반 펩타이드 신약 공동 개발",
-    "was_theme_leader": false
-   },
-   "leader_cohort_prob": null,
-   "theme_leader": false
-  },
-  {
-   "code": "240810",
-   "name": "원익IPS",
-   "sector": "기계·장비",
-   "pattern": "reaccum",
-   "shake": null,
-   "deep_shake": null,
-   "suspicion_score": 81,
-   "calibrated_prob": null,
-   "score_breakdown": {
-    "base": 62,
-    "re_value": 7,
-    "re_body": 2,
-    "re_count": 0,
-    "flow": 8,
-    "explosion": 2
-   },
-   "score_raw": 0,
-   "score_breakdown_raw": {
-    "base": 0,
-    "re_value": 0,
-    "re_body": 0,
-    "re_count": 0,
-    "flow": 0,
-    "explosion": 0
-   },
-   "forecast": {
-    "horizon": "3일 내 +7%",
-    "prob_pct": 46,
-    "base_pct": 46,
-    "strong": false,
-    "next_day_7_pct": 25,
-    "note": "과거 실측 확률·보장 아님"
-   },
-   "price": 156700.0,
-   "change_pct": -3.98,
-   "high_pct": 2.94,
-   "fade_pct": 235.4,
-   "value_eok": 865,
-   "ma10": 147720.0,
-   "ma10_margin_pct": 6.08,
-   "spark": {
-    "clusters": []
-   },
-   "spark_max_x": 0.0,
-   "spark_max_pct": null,
-   "mega_flow": false,
-   "reignition": {
-    "body_pct": 3.26,
-    "time": "09:10",
-    "value_10m_eok": 179
-   },
-   "reignition_bars": [
-    {
-     "time": "09:10",
-     "body_pct": 3.26,
-     "value_eok": 179
-    }
-   ],
-   "flow": {
-    "net_days": 2,
-    "today_buy": false,
-    "streak": 0,
-    "detail": [
-     {
-      "date": "0612",
-      "frgn": -467464,
-      "orgn": 751895
-     },
-     {
-      "date": "0615",
-      "frgn": -224320,
-      "orgn": 274393
-     },
-     {
-      "date": "0616",
-      "frgn": 67364,
-      "orgn": -222986
-     },
-     {
-      "date": "0617",
-      "frgn": -114557,
-      "orgn": -94594
-     },
-     {
-      "date": "0618",
-      "frgn": 49409,
-      "orgn": -74440
-     }
-    ]
-   },
-   "news": [],
-   "matched_events": [],
-   "theme": "반도체",
-   "visible_experimental": true,
-   "reaccum": {
-    "peak_date": "20260617",
-    "peak_value_eok": 4161,
-    "peak_high_pct": 15.25,
-    "ma20": 131665.0,
-    "ma20_margin_pct": 19.01,
-    "ivtr_net": 258025,
-    "ivtr_days": 3,
-    "ivtr_eok": 474,
-    "cause_summary": "",
     "was_theme_leader": false
    },
    "leader_cohort_prob": null,
@@ -629,13 +527,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 51000.0,
-   "change_pct": 2.62,
+   "price": 51100.0,
+   "change_pct": 2.82,
    "high_pct": 4.83,
-   "fade_pct": 45.8,
-   "value_eok": 470,
+   "fade_pct": 41.7,
+   "value_eok": 512,
    "ma10": 49335.0,
-   "ma10_margin_pct": 3.37,
+   "ma10_margin_pct": 3.58,
    "spark": {
     "clusters": []
    },
@@ -695,121 +593,11 @@
     "peak_value_eok": 1647,
     "peak_high_pct": 14.71,
     "ma20": 50255.0,
-    "ma20_margin_pct": 1.48,
+    "ma20_margin_pct": 1.68,
     "ivtr_net": 1080002,
     "ivtr_days": 4,
     "ivtr_eok": 522,
     "cause_summary": "&quot;미·이란 전쟁 끝나면 재건사업 기회 온다&quot;…삼성E&amp;A 등 건설주 급등",
-    "was_theme_leader": false
-   },
-   "leader_cohort_prob": null,
-   "theme_leader": false
-  },
-  {
-   "code": "039030",
-   "name": "이오테크닉스",
-   "sector": "기계·장비",
-   "pattern": "reaccum",
-   "shake": null,
-   "deep_shake": null,
-   "suspicion_score": 74,
-   "calibrated_prob": null,
-   "score_breakdown": {
-    "base": 62,
-    "re_value": 1,
-    "re_body": 3,
-    "re_count": 0,
-    "flow": 6,
-    "explosion": 2
-   },
-   "score_raw": 0,
-   "score_breakdown_raw": {
-    "base": 0,
-    "re_value": 0,
-    "re_body": 0,
-    "re_count": 0,
-    "flow": 0,
-    "explosion": 0
-   },
-   "forecast": {
-    "horizon": "3일 내 +7%",
-    "prob_pct": 46,
-    "base_pct": 46,
-    "strong": false,
-    "next_day_7_pct": 25,
-    "note": "과거 실측 확률·보장 아님"
-   },
-   "price": 496500.0,
-   "change_pct": -2.26,
-   "high_pct": 2.95,
-   "fade_pct": 176.7,
-   "value_eok": 302,
-   "ma10": 492150.0,
-   "ma10_margin_pct": 0.88,
-   "spark": {
-    "clusters": []
-   },
-   "spark_max_x": 0.0,
-   "spark_max_pct": null,
-   "mega_flow": false,
-   "reignition": {
-    "body_pct": 3.85,
-    "time": "09:10",
-    "value_10m_eok": 52
-   },
-   "reignition_bars": [
-    {
-     "time": "09:10",
-     "body_pct": 3.85,
-     "value_eok": 52
-    }
-   ],
-   "flow": {
-    "net_days": 1,
-    "today_buy": false,
-    "streak": 0,
-    "detail": [
-     {
-      "date": "0612",
-      "frgn": -92846,
-      "orgn": 146192
-     },
-     {
-      "date": "0615",
-      "frgn": 7466,
-      "orgn": -43122
-     },
-     {
-      "date": "0616",
-      "frgn": 21977,
-      "orgn": -40402
-     },
-     {
-      "date": "0617",
-      "frgn": 40244,
-      "orgn": -40902
-     },
-     {
-      "date": "0618",
-      "frgn": 29957,
-      "orgn": -32064
-     }
-    ]
-   },
-   "news": [],
-   "matched_events": [],
-   "theme": "반도체",
-   "visible_experimental": true,
-   "reaccum": {
-    "peak_date": "20260612",
-    "peak_value_eok": 4605,
-    "peak_high_pct": 23.61,
-    "ma20": 495200.0,
-    "ma20_margin_pct": 0.26,
-    "ivtr_net": 40194,
-    "ivtr_days": 3,
-    "ivtr_eok": 348,
-    "cause_summary": "",
     "was_theme_leader": false
    },
    "leader_cohort_prob": null,
@@ -853,7 +641,7 @@
    "change_pct": 0.99,
    "high_pct": 2.98,
    "fade_pct": 66.7,
-   "value_eok": 416,
+   "value_eok": 438,
    "ma10": 60455.0,
    "ma10_margin_pct": 1.07,
    "spark": {
@@ -959,13 +747,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 28800.0,
-   "change_pct": -0.17,
+   "price": 28600.0,
+   "change_pct": -0.87,
    "high_pct": 2.6,
-   "fade_pct": 106.7,
-   "value_eok": 255,
-   "ma10": 27125.0,
-   "ma10_margin_pct": 6.18,
+   "fade_pct": 133.3,
+   "value_eok": 277,
+   "ma10": 27105.0,
+   "ma10_margin_pct": 5.52,
    "spark": {
     "clusters": []
    },
@@ -1024,12 +812,122 @@
     "peak_date": "20260615",
     "peak_value_eok": 3583,
     "peak_high_pct": 17.29,
-    "ma20": 26682.5,
-    "ma20_margin_pct": 7.94,
+    "ma20": 26672.5,
+    "ma20_margin_pct": 7.23,
     "ivtr_net": 1028317,
     "ivtr_days": 5,
     "ivtr_eok": 301,
     "cause_summary": "",
+    "was_theme_leader": false
+   },
+   "leader_cohort_prob": null,
+   "theme_leader": false
+  },
+  {
+   "code": "204320",
+   "name": "HL만도",
+   "sector": "운송장비·부품",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 71,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_value": 1,
+    "re_body": 1,
+    "re_count": 0,
+    "flow": 4,
+    "explosion": 3
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_value": 0,
+    "re_body": 0,
+    "re_count": 0,
+    "flow": 0,
+    "explosion": 0
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 46,
+    "base_pct": 46,
+    "strong": false,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "price": 68900.0,
+   "change_pct": 0.15,
+   "high_pct": 0.15,
+   "fade_pct": 0.0,
+   "value_eok": 328,
+   "ma10": 62640.0,
+   "ma10_margin_pct": 9.99,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 2.7,
+    "time": "09:50",
+    "value_10m_eok": 46
+   },
+   "reignition_bars": [
+    {
+     "time": "09:50",
+     "body_pct": 2.7,
+     "value_eok": 46
+    }
+   ],
+   "flow": {
+    "net_days": 5,
+    "today_buy": true,
+    "streak": 5,
+    "detail": [
+     {
+      "date": "0612",
+      "frgn": 289058,
+      "orgn": -7568
+     },
+     {
+      "date": "0615",
+      "frgn": 556479,
+      "orgn": 189698
+     },
+     {
+      "date": "0616",
+      "frgn": -69587,
+      "orgn": 322566
+     },
+     {
+      "date": "0617",
+      "frgn": -37896,
+      "orgn": 83041
+     },
+     {
+      "date": "0618",
+      "frgn": 23857,
+      "orgn": 63277
+     }
+    ]
+   },
+   "news": [],
+   "matched_events": [],
+   "theme": "반도체",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260615",
+    "peak_value_eok": 5331,
+    "peak_high_pct": 17.85,
+    "ma20": 61715.0,
+    "ma20_margin_pct": 11.64,
+    "ivtr_net": 361476,
+    "ivtr_days": 4,
+    "ivtr_eok": 275,
+    "cause_summary": "&quot;HL만도, 로봇 관절 핵심 공급사&quot;",
     "was_theme_leader": false
    },
    "leader_cohort_prob": null,
@@ -1069,13 +967,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 742000.0,
-   "change_pct": 8.01,
+   "price": 738000.0,
+   "change_pct": 7.42,
    "high_pct": 10.19,
-   "fade_pct": 21.4,
-   "value_eok": 739,
-   "ma10": 636900.0,
-   "ma10_margin_pct": 16.5,
+   "fade_pct": 27.1,
+   "value_eok": 806,
+   "ma10": 636400.0,
+   "ma10_margin_pct": 15.96,
    "spark": {
     "clusters": []
    },
@@ -1134,8 +1032,8 @@
     "peak_date": "20260615",
     "peak_value_eok": 1121,
     "peak_high_pct": 13.49,
-    "ma20": 644050.0,
-    "ma20_margin_pct": 15.21,
+    "ma20": 643800.0,
+    "ma20_margin_pct": 14.63,
     "ivtr_net": 5859,
     "ivtr_days": 3,
     "ivtr_eok": 38,
@@ -1179,13 +1077,13 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 31800.0,
-   "change_pct": -0.31,
+   "price": 31650.0,
+   "change_pct": -0.78,
    "high_pct": 1.72,
-   "fade_pct": 118.2,
-   "value_eok": 133,
-   "ma10": 28400.0,
-   "ma10_margin_pct": 11.97,
+   "fade_pct": 145.5,
+   "value_eok": 142,
+   "ma10": 28385.0,
+   "ma10_margin_pct": 11.5,
    "spark": {
     "clusters": []
    },
@@ -1244,8 +1142,8 @@
     "peak_date": "20260618",
     "peak_value_eok": 1181,
     "peak_high_pct": 18.85,
-    "ma20": 26921.0,
-    "ma20_margin_pct": 18.12,
+    "ma20": 26913.5,
+    "ma20_margin_pct": 17.6,
     "ivtr_net": 215715,
     "ivtr_days": 4,
     "ivtr_eok": 66,
