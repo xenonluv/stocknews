@@ -1,0 +1,128 @@
+{
+ "date": "20260619",
+ "suspects": {
+  "035420": {
+   "name": "NAVER",
+   "sector": "IT 서비스",
+   "entry": 241500.0,
+   "score": 0,
+   "breakdown": {
+    "base": 0,
+    "re_value": 0,
+    "re_body": 0,
+    "re_count": 0,
+    "flow": 0,
+    "explosion": 0
+   },
+   "change_pct": 2.77,
+   "high_pct": 2.98,
+   "fade_pct": 7.1,
+   "pattern": "reaccum",
+   "prime": false,
+   "theme": "반도체",
+   "value_eok": 189,
+   "theme_leader": false,
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "flow_today_buy": true,
+   "flow_net_days": 3,
+   "deep_shake": null,
+   "ai_verdict": null,
+   "visible_experimental": true,
+   "reaccum_badge": false,
+   "reaccum": {
+    "peak_date": "20260612",
+    "peak_value_eok": 13016,
+    "peak_high_pct": 17.41,
+    "ma20": 237965.0,
+    "ma20_margin_pct": 1.49,
+    "ivtr_net": 462622,
+    "ivtr_days": 4,
+    "ivtr_eok": 1316,
+    "cause_summary": "네이버, 2주간 쇼핑 축제 '넾다세일' 진행…&quot;최대 15% 할인쿠폰&quot;",
+    "was_theme_leader": false
+   },
+   "reignition": {
+    "body_pct": 2.11,
+    "time": "09:00",
+    "value_10m_eok": 190
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 46,
+    "base_pct": 46,
+    "strong": false,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "matched_events": [],
+   "first_seen": "2026-06-19 09:01:51 KST",
+   "evaluated": false,
+   "result": null,
+   "final": true
+  },
+  "475150": {
+   "name": "SK이터닉스",
+   "sector": "건설",
+   "entry": 50400.0,
+   "score": 0,
+   "breakdown": {
+    "base": 0,
+    "re_value": 0,
+    "re_body": 0,
+    "re_count": 0,
+    "flow": 0,
+    "explosion": 0
+   },
+   "change_pct": 3.49,
+   "high_pct": 3.7,
+   "fade_pct": 5.6,
+   "pattern": "reaccum",
+   "prime": false,
+   "theme": "",
+   "value_eok": 46,
+   "theme_leader": false,
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "flow_today_buy": false,
+   "flow_net_days": 4,
+   "deep_shake": null,
+   "ai_verdict": null,
+   "visible_experimental": true,
+   "reaccum_badge": false,
+   "reaccum": {
+    "peak_date": "20260616",
+    "peak_value_eok": 12512,
+    "peak_high_pct": 26.71,
+    "ma20": 42555.0,
+    "ma20_margin_pct": 18.43,
+    "ivtr_net": 406666,
+    "ivtr_days": 4,
+    "ivtr_eok": 220,
+    "cause_summary": "",
+    "was_theme_leader": false
+   },
+   "reignition": {
+    "body_pct": 3.49,
+    "time": "09:00",
+    "value_10m_eok": 45
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 46,
+    "base_pct": 46,
+    "strong": false,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "matched_events": [],
+   "first_seen": "2026-06-19 09:01:51 KST",
+   "evaluated": false,
+   "result": null,
+   "final": true
+  }
+ },
+ "as_of": "2026-06-19 09:01:51 KST"
+}
