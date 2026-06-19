@@ -3,8 +3,8 @@
     {
       "lo": 60,
       "hi": 70,
-      "n": 2,
-      "actual_rate": 50
+      "n": 5,
+      "actual_rate": 20
     },
     {
       "lo": 70,
@@ -21,8 +21,8 @@
     {
       "lo": 90,
       "hi": 100,
-      "n": 9,
-      "actual_rate": 56
+      "n": 11,
+      "actual_rate": 45
     }
   ]
 }
