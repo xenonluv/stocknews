@@ -15,7 +15,14 @@
     "entry_close": 2032000.0,
     "hit": true,
     "high3": true,
-    "return_pct": 8.27
+    "return_pct": 8.27,
+    "fwd": {
+     "n_bars": 2,
+     "d5_return": null,
+     "d10_return": null,
+     "mfe": 18.95,
+     "mae": -1.23
+    }
    }
   },
   "011070": {
@@ -32,7 +39,14 @@
     "entry_close": 1248000.0,
     "hit": true,
     "high3": true,
-    "return_pct": 2.8
+    "return_pct": 2.8,
+    "fwd": {
+     "n_bars": 2,
+     "d5_return": null,
+     "d10_return": null,
+     "mfe": 5.77,
+     "mae": -10.1
+    }
    }
   },
   "028050": {
@@ -49,7 +63,14 @@
     "entry_close": 52500.0,
     "hit": false,
     "high3": false,
-    "return_pct": -5.33
+    "return_pct": -5.33,
+    "fwd": {
+     "n_bars": 2,
+     "d5_return": null,
+     "d10_return": null,
+     "mfe": 1.71,
+     "mae": -8.48
+    }
    }
   },
   "034730": {
@@ -66,7 +87,14 @@
     "entry_close": 708000.0,
     "hit": false,
     "high3": false,
-    "return_pct": -2.97
+    "return_pct": -2.97,
+    "fwd": {
+     "n_bars": 2,
+     "d5_return": null,
+     "d10_return": null,
+     "mfe": 6.92,
+     "mae": -6.5
+    }
    }
   },
   "043260": {
@@ -83,7 +111,14 @@
     "entry_close": 42700.0,
     "hit": false,
     "high3": false,
-    "return_pct": -6.32
+    "return_pct": -6.32,
+    "fwd": {
+     "n_bars": 2,
+     "d5_return": null,
+     "d10_return": null,
+     "mfe": 0.59,
+     "mae": -12.53
+    }
    }
   },
   "080220": {
@@ -100,7 +135,14 @@
     "entry_close": 111500.0,
     "hit": true,
     "high3": true,
-    "return_pct": 5.56
+    "return_pct": 5.56,
+    "fwd": {
+     "n_bars": 2,
+     "d5_return": null,
+     "d10_return": null,
+     "mfe": 15.78,
+     "mae": -4.48
+    }
    }
   },
   "089030": {
@@ -117,7 +159,14 @@
     "entry_close": 62100.0,
     "hit": false,
     "high3": false,
-    "return_pct": -2.58
+    "return_pct": -2.58,
+    "fwd": {
+     "n_bars": 2,
+     "d5_return": null,
+     "d10_return": null,
+     "mfe": 1.29,
+     "mae": -8.86
+    }
    }
   },
   "204320": {
@@ -134,7 +183,14 @@
     "entry_close": 73900.0,
     "hit": false,
     "high3": true,
-    "return_pct": -6.9
+    "return_pct": -6.9,
+    "fwd": {
+     "n_bars": 2,
+     "d5_return": null,
+     "d10_return": null,
+     "mfe": 4.87,
+     "mae": -14.75
+    }
    }
   },
   "279570": {
@@ -151,7 +207,14 @@
     "entry_close": 7200.0,
     "hit": false,
     "high3": false,
-    "return_pct": -4.44
+    "return_pct": -4.44,
+    "fwd": {
+     "n_bars": 2,
+     "d5_return": null,
+     "d10_return": null,
+     "mfe": 2.64,
+     "mae": -6.67
+    }
    }
   },
   "356680": {
@@ -168,7 +231,14 @@
     "entry_close": 18480.0,
     "hit": false,
     "high3": false,
-    "return_pct": -5.19
+    "return_pct": -5.19,
+    "fwd": {
+     "n_bars": 2,
+     "d5_return": null,
+     "d10_return": null,
+     "mfe": -2.33,
+     "mae": -16.13
+    }
    }
   }
  }

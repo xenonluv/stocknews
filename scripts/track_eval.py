@@ -142,27 +142,34 @@ def record_today(codes):
     return len(hist["tracks"]), added
 
 
-def _signal_and_next(code, date):
-    """신호일(date) 봉과 바로 다음 거래일 봉 → (sig, next). 신호일 봉이 조회 윈도우에
-    없으면 (None, None) — 휴장일에 stale(전 거래일) 가격으로 만든 표본을 엉뚱한 후일봉에
-    오평가/중복 누적하는 것을 막는다(radar_backtest.next_day_bar와 동일 철학). days=40으로
-    25일 만료창 + 거래정지 공백에 여유."""
+FWD_SPAN = 10  # 전방 추적 최대 거래일(D+10) — 보유기간 경로(D+5·D+10·MFE/MAE)용
+
+
+def _signal_and_window(code, date, span=FWD_SPAN):
+    """신호일(date) 봉과 그 이후 최대 span 거래일 봉 → (sig, after[]). 신호일 봉이 조회
+    윈도우에 없으면 (None, []) — 휴장일에 stale(전 거래일) 가격으로 만든 표본을 엉뚱한 후일봉에
+    오평가/중복 누적하는 것을 막는다(radar_backtest.next_day_bar와 동일 철학).
+    after는 close>0 봉만, 날짜 오름차순(after[0]=익일=D+1). days=60으로 25일 만료창 + D+10
+    (≈14거래일) + 거래정지 공백에 여유."""
     try:
-        bars = kis.daily_prices(code, days=40)
+        bars = kis.daily_prices(code, days=60)
     except Exception:
-        return None, None
-    # sig/nxt 모두 close가 truthy인 봉만 — 신호일/익일이 거래정지(close=0/누락)면 채점 불가로
-    # 보류, entry=0 → hit(nb>0) 거짓양성·ZeroDivision 방지.
-    sig = next((b for b in bars if b.get("date") == date and b.get("close")), None)
+        return None, []
+    # close가 truthy인 봉만 — 신호일/후일이 거래정지(close=0/누락)면 채점 불가로 보류,
+    # entry=0 → hit(nb>0) 거짓양성·ZeroDivision 방지.
+    bars = [b for b in bars if b.get("close")]
+    sig = next((b for b in bars if b.get("date") == date), None)
     if not sig:
-        return None, None
-    nxt = next((b for b in bars if b.get("date", "") > date and b.get("close")), None)
-    return sig, nxt
+        return None, []
+    after = sorted((b for b in bars if b.get("date", "") > date), key=lambda b: b["date"])
+    return sig, after[:span]
 
 
 def evaluate():
-    """미평가 추적 기록을 신호일·익일 일봉으로 평가. 신호일 봉이 실제로 있을 때만 채점하고
-    entry를 신호일 종가로 재정합(장후 기록가 ≠ 확정 종가 drift 제거). 25일 초과는 만료."""
+    """미평가 추적 기록을 일봉으로 평가. ① D+1 적중(익일종가>신호일종가)은 익일에 즉시 확정
+    (evaluated). ② 그 뒤로도 D+10까지 매 회차 전방 경로(D+5·D+10 수익률, 기간 MFE/MAE)를
+    점진적으로 채우고, D+10 봉이 생기거나 25일 초과 시 확정(fwd_final). entry는 신호일 종가로
+    재정합(장후 기록가 ≠ 확정 종가 drift 제거)."""
     if not os.path.isdir(HIST_DIR):
         return 0
     today = datetime.now(KST).strftime("%Y%m%d")
@@ -181,23 +188,47 @@ def evaluate():
         age = (datetime.strptime(today, "%Y%m%d") - datetime.strptime(date, "%Y%m%d")).days
         changed = False
         for code, t in hist.get("tracks", {}).items():
-            if t.get("evaluated") or not t.get("entry"):
-                continue
-            sig, nb = _signal_and_next(code, date)
-            if not sig or not nb:
+            if t.get("fwd_final") or not t.get("entry"):
+                continue  # 경로까지 확정된 표본은 더 보지 않음
+            sig, after = _signal_and_window(code, date)
+            if not sig:
                 if age > 25:   # 신호일 봉이 영영 없음(그날 휴장 등) → 영구 재조회 방지 위해 만료
                     t["evaluated"] = True
-                    t["result"] = None
+                    t["fwd_final"] = True
+                    if t.get("result") is None:
+                        t["result"] = None
+                    changed = True
+                continue
+            if not after:
+                if age > 25:
+                    t["evaluated"] = True
+                    t["fwd_final"] = True
                     changed = True
                 continue       # 익일봉 미존재(연휴 등) — 다음 실행에서 재시도
-            entry = float(sig["close"])  # _signal_and_next가 close>0 봉만 반환 → entry>0 보장
-            ret = (nb["close"] / entry - 1) * 100
-            t["evaluated"] = True
-            t["result"] = {"date": nb["date"], "next_close": nb["close"], "entry_close": entry,
-                           "hit": nb["close"] > entry, "high3": nb["high"] >= entry * HIGH3_X,
-                           "return_pct": round(ret, 2)}
+            entry = float(sig["close"])  # close>0 봉만 반환 → entry>0 보장
+            # ① D+1 적중은 최초 1회만 확정(기존 통계·UI 호환 필드 유지)
+            if not t.get("evaluated"):
+                nb = after[0]
+                t["evaluated"] = True
+                t["result"] = {"date": nb["date"], "next_close": nb["close"], "entry_close": entry,
+                               "hit": nb["close"] > entry, "high3": nb["high"] >= entry * HIGH3_X,
+                               "return_pct": round((nb["close"] / entry - 1) * 100, 2)}
+                done += 1
+            # ② 전방 경로 — D+5·D+10 수익률 + 기간 최고/최저(MFE/MAE). 매 회차 갱신.
+            highs = [b["high"] for b in after if b.get("high")]
+            lows = [b["low"] for b in after if b.get("low")]
+            res = t.get("result") or {}
+            res["fwd"] = {
+                "n_bars": len(after),
+                "d5_return": round((after[4]["close"] / entry - 1) * 100, 2) if len(after) >= 5 else None,
+                "d10_return": round((after[9]["close"] / entry - 1) * 100, 2) if len(after) >= 10 else None,
+                "mfe": round((max(highs) / entry - 1) * 100, 2) if highs else None,  # 기간 최대 상승
+                "mae": round((min(lows) / entry - 1) * 100, 2) if lows else None,    # 기간 최대 하락
+            }
+            t["result"] = res
+            if len(after) >= FWD_SPAN or age > 25:
+                t["fwd_final"] = True
             changed = True
-            done += 1
         if changed:
             json.dump(hist, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     return done
@@ -219,10 +250,13 @@ def _collect():
             r = t.get("result")
             if not t.get("evaluated") or not r or r.get("expired"):
                 continue
+            fwd = r.get("fwd") or {}
             out.append({"date": hist.get("date") or fn[:8], "code": code, "name": t.get("name"),
                         "verdict_score": t.get("verdict_score"), "verdict_level": t.get("verdict_level"),
                         "ai_prob": t.get("ai_prob"),
-                        "hit": bool(r.get("hit")), "return_pct": r.get("return_pct", 0.0)})
+                        "hit": bool(r.get("hit")), "return_pct": r.get("return_pct", 0.0),
+                        "d5": fwd.get("d5_return"), "d10": fwd.get("d10_return"),
+                        "mfe": fwd.get("mfe"), "mae": fwd.get("mae")})
     out.sort(key=lambda x: (x["date"] or "", x["code"]))
     return out
 
@@ -242,6 +276,14 @@ def write_perf(tracked_codes):
     def rate(grp):
         return round(sum(1 for s in grp if s["hit"]) / len(grp) * 100, 1) if grp else None
 
+    def favg(grp, key):  # 전방 평균(성숙해 값이 있는 표본만) — 미성숙(None)은 분모서 제외
+        v = [s[key] for s in grp if s.get(key) is not None]
+        return round(sum(v) / len(v), 2) if v else None
+
+    def fwd_cell(grp):  # 셀별 전방 경로 요약 (D+5·D+10 평균 + 성숙 표본수)
+        return {"avg_d5": favg(grp, "d5"), "avg_d10": favg(grp, "d10"),
+                "fwd_n": sum(1 for s in grp if s.get("d10") is not None)}
+
     # 룰 '매수'는 사용자가 본 판정 level 기준(점수 아님 — 과열/관리 오버라이드 반영). AI는 표시 방향 임계.
     # 판정/예측 누락(거래정지·수집실패 등 None)은 분모 왜곡 방지 위해 제외.
     def is_buy(s):
@@ -256,12 +298,15 @@ def write_perf(tracked_codes):
              if is_buy(s) == rb
              and (s["ai_prob"] >= AI_UP_MIN) == au]
         return {"n": len(g), "hit_rate": rate(g), "avg_return":
-                round(sum(s["return_pct"] for s in g) / len(g), 2) if g else None}
+                round(sum(s["return_pct"] for s in g) / len(g), 2) if g else None,
+                **fwd_cell(g)}
+    fwd_matured = sum(1 for s in samples if s.get("d10") is not None)
     out = {
         "as_of": datetime.now(KST).strftime("%Y-%m-%d %H:%M KST"),
         "n": n,
-        "rule_buy": {"n": len(rule_buy), "hit_rate": rate(rule_buy)},   # 종합판정 ≥62일 때 익일 적중률
-        "ai_up": {"n": len(ai_up), "hit_rate": rate(ai_up)},            # Kimi ≥58%일 때 익일 적중률
+        "fwd_n": fwd_matured,  # D+10까지 성숙(경로 확정)한 표본 수 — 다중일자 통계 분모 고지
+        "rule_buy": {"n": len(rule_buy), "hit_rate": rate(rule_buy), **fwd_cell(rule_buy)},  # 종합판정 매수
+        "ai_up": {"n": len(ai_up), "hit_rate": rate(ai_up), **fwd_cell(ai_up)},               # Kimi ≥58%
         "rule_buy_min": RULE_BUY_MIN, "ai_up_min": AI_UP_MIN, "min_n": 10,
         "quad_n": len(quad_samples), "unknown_n": unknown_n,  # 4분면 분모·제외 표본 고지
         "divergence": {
@@ -271,10 +316,12 @@ def write_perf(tracked_codes):
             "neither": quad(False, False),
         },
         "recent": [{"date": s["date"], "name": s["name"], "verdict_score": s["verdict_score"],
-                    "ai_prob": s["ai_prob"], "hit": s["hit"], "return_pct": s["return_pct"]}
+                    "ai_prob": s["ai_prob"], "hit": s["hit"], "return_pct": s["return_pct"],
+                    "d5": s.get("d5"), "d10": s.get("d10"), "mfe": s.get("mfe"), "mae": s.get("mae")}
                    for s in samples[-30:]][::-1],
         "tracking": tracked_codes,
-        "disclaimer": "추적 종목의 종합판정(룰)·Kimi(AI) 예측을 익일 종가로 검증한 기록입니다. 투자 참고용.",
+        "disclaimer": "추적 종목의 종합판정(룰)·Kimi(AI) 예측을 검증한 기록입니다. 익일(D+1) 적중 외에 "
+                      "D+5·D+10 수익률과 보유기간 최고/최저(MFE/MAE)를 함께 추적합니다. 투자 참고용.",
     }
     os.makedirs(os.path.dirname(PERF_PATH), exist_ok=True)
     json.dump(out, open(PERF_PATH, "w", encoding="utf-8"), ensure_ascii=False, indent=1)

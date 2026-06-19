@@ -175,7 +175,11 @@ export interface ExperimentalStats {
 export interface TrackCell {
   n: number;
   hit_rate: number | null;
-  avg_return: number | null;
+  avg_return?: number | null;
+  // 전방 경로(보유기간) — 구버전 JSON엔 없음
+  avg_d5?: number | null; // D+5 평균 수익률
+  avg_d10?: number | null; // D+10 평균 수익률
+  fwd_n?: number; // D+10까지 성숙한 표본 수(다중일자 분모)
 }
 export interface TrackRecent {
   date: string;
@@ -184,12 +188,18 @@ export interface TrackRecent {
   ai_prob: number | null; // Kimi 상승확률
   hit: boolean; // 익일 종가 > 진입
   return_pct: number;
+  // 전방 경로 — 미성숙이면 null, 매 회차 채워짐 (구버전 JSON엔 없음)
+  d5?: number | null; // D+5 수익률
+  d10?: number | null; // D+10 수익률
+  mfe?: number | null; // 보유기간 최대 상승(%)
+  mae?: number | null; // 보유기간 최대 하락(%)
 }
 export interface TrackPerformance {
   as_of: string | null;
   n: number;
-  rule_buy: { n: number; hit_rate: number | null }; // 종합판정 ≥기준일 때 익일 적중률
-  ai_up: { n: number; hit_rate: number | null }; // Kimi ≥기준%일 때 익일 적중률
+  fwd_n?: number; // D+10까지 성숙한 표본 수 (구버전 JSON엔 없음)
+  rule_buy: TrackCell; // 종합판정 ≥기준일 때 익일 적중률 + 전방 경로
+  ai_up: TrackCell; // Kimi ≥기준%일 때 익일 적중률 + 전방 경로
   rule_buy_min: number;
   ai_up_min: number;
   min_n: number;

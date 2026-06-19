@@ -1,7 +1,13 @@
 import type { TrackPerformance, TrackCell } from "@/types/performance";
 
+/** 부호 있는 % (null=아직 성숙 안 됨 → '진행중'). */
+function pct(v: number | null | undefined): string {
+  return v == null ? "진행중" : `${v > 0 ? "+" : ""}${v}%`;
+}
+
 function Cell({ label, cell, minN }: { label: string; cell: TrackCell; minN: number }) {
   const valid = cell.n >= minN && cell.hit_rate != null;
+  const hasFwd = cell.avg_d5 != null || cell.avg_d10 != null;
   return (
     <div className="rounded-md border border-white/10 bg-white/[0.03] p-3">
       <p className="text-[11px] text-muted-foreground">{label}</p>
@@ -11,11 +17,16 @@ function Cell({ label, cell, minN }: { label: string; cell: TrackCell; minN: num
             {cell.hit_rate}%
           </span>
           <span className="ml-1 text-xs text-muted-foreground">
-            ({cell.n}건{cell.avg_return != null ? ` · 평균 ${cell.avg_return > 0 ? "+" : ""}${cell.avg_return}%` : ""})
+            ({cell.n}건{cell.avg_return != null ? ` · 익일평균 ${pct(cell.avg_return)}` : ""})
           </span>
         </p>
       ) : (
         <p className="mt-1 text-xs text-muted-foreground">수집 중 ({cell.n}건)</p>
+      )}
+      {hasFwd && (
+        <p className="mt-0.5 text-[10px] text-muted-foreground tabular-nums">
+          이후경로 {cell.fwd_n ?? 0}건 · D+5 {pct(cell.avg_d5)} · D+10 {pct(cell.avg_d10)}
+        </p>
       )}
     </div>
   );
@@ -30,8 +41,10 @@ export function TrackPerformancePanel({ data }: { data: TrackPerformance }) {
     <section className="rounded-lg border border-white/10 bg-white/[0.03] p-4">
       <h3 className="mb-1 text-sm font-semibold">📌 추적 종목 — 종합판정(룰) vs Kimi(AI) 검증</h3>
       <p className="mb-3 text-[11px] text-muted-foreground">
-        /stock에서 추적한 종목의 종합판정·AI 상승확률을 매일 기록하고 익일 종가로 검증합니다 ·
+        /stock에서 추적한 종목의 종합판정·AI 상승확률을 매일 기록하고, 익일(D+1) 적중 외에
+        보유기간 경로(D+5·D+10·최고/최저)까지 추적합니다 ·
         현재 추적 {data.tracking.length}종목 · 평가 표본 {data.n}건
+        {data.fwd_n != null ? ` (D+10 성숙 ${data.fwd_n}건)` : ""}
         {data.as_of ? ` · 기준 ${data.as_of}` : ""}
       </p>
 
@@ -69,31 +82,46 @@ export function TrackPerformancePanel({ data }: { data: TrackPerformance }) {
                   <th className="pb-2 font-medium">종합판정</th>
                   <th className="pb-2 font-medium">AI%</th>
                   <th className="pb-2 font-medium">익일</th>
+                  <th className="pb-2 font-medium">D+5</th>
+                  <th className="pb-2 font-medium">D+10</th>
+                  <th className="pb-2 font-medium">최고/최저</th>
                 </tr>
               </thead>
               <tbody>
-                {data.recent.map((r, i) => (
-                  <tr key={`${r.date}-${r.name}-${i}`} className="border-t border-white/5">
-                    <td className="py-1.5 font-medium">
-                      {r.name}
-                      <span className="ml-1 text-[10px] text-muted-foreground tabular-nums">
-                        {r.date.slice(4, 6)}/{r.date.slice(6, 8)}
-                      </span>
-                    </td>
-                    <td className="py-1.5 tabular-nums">{r.verdict_score ?? "—"}</td>
-                    <td className="py-1.5 tabular-nums">{r.ai_prob != null ? `${r.ai_prob}%` : "—"}</td>
-                    <td className={`py-1.5 font-semibold tabular-nums ${r.hit ? "text-up" : "text-down"}`}>
-                      {r.hit ? "적중" : "미적중"} {r.return_pct > 0 ? "+" : ""}
-                      {r.return_pct}%
-                    </td>
-                  </tr>
-                ))}
+                {data.recent.map((r, i) => {
+                  const color = (v: number | null | undefined) =>
+                    v == null ? "text-muted-foreground" : v > 0 ? "text-up" : "text-down";
+                  return (
+                    <tr key={`${r.date}-${r.name}-${i}`} className="border-t border-white/5">
+                      <td className="py-1.5 font-medium">
+                        {r.name}
+                        <span className="ml-1 text-[10px] text-muted-foreground tabular-nums">
+                          {r.date.slice(4, 6)}/{r.date.slice(6, 8)}
+                        </span>
+                      </td>
+                      <td className="py-1.5 tabular-nums">{r.verdict_score ?? "—"}</td>
+                      <td className="py-1.5 tabular-nums">{r.ai_prob != null ? `${r.ai_prob}%` : "—"}</td>
+                      <td className={`py-1.5 font-semibold tabular-nums ${r.hit ? "text-up" : "text-down"}`}>
+                        {r.hit ? "적중" : "미적중"} {r.return_pct > 0 ? "+" : ""}
+                        {r.return_pct}%
+                      </td>
+                      <td className={`py-1.5 tabular-nums ${color(r.d5)}`}>{pct(r.d5)}</td>
+                      <td className={`py-1.5 tabular-nums ${color(r.d10)}`}>{pct(r.d10)}</td>
+                      <td className="py-1.5 text-[11px] tabular-nums text-muted-foreground">
+                        {r.mfe != null ? `${r.mfe > 0 ? "+" : ""}${r.mfe}` : "—"}
+                        {" / "}
+                        {r.mae != null ? `${r.mae}` : "—"}
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           )}
           <p className="mt-2 text-[11px] text-muted-foreground">
-            셀당 {data.min_n}건 이상 누적 시 적중률 표시 · 종합판정(현재 강도)과 AI(익일 확률)는 다른 잣대라
-            괴리가 정상일 수 있고, 표본이 쌓이면 어느 쪽이 잘 맞는지 드러납니다.
+            셀당 {data.min_n}건 이상 누적 시 적중률 표시 · <span className="text-foreground">익일(D+1)은 하루 등락이라 노이즈가 크다</span> —
+            D+5·D+10 수익률과 보유기간 최고(MFE)/최저(MAE)를 함께 봐야 그 판단이 실제로 먹혔는지 드러납니다
+            (예: 익일 미적중이어도 며칠 뒤 크게 오른 경우 다수). 경로 값은 거래일이 지나며 채워집니다(진행중=미성숙).
           </p>
         </>
       )}
