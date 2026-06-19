@@ -220,6 +220,34 @@ export interface AiAnalysis {
   narrative: string; // 2~4문장 한국어 서술
 }
 
+/** AI 자유질문 답변 — 근거 항목 1건 (사후 출처대조 통과분만). */
+export interface AskItem {
+  text: string; // 한 줄 근거/주장
+  label: "데이터" | "뉴스" | "토론방" | "텔레그램"; // 출처 종류
+  quote?: string; // 찌라시·뉴스의 경우 원문 발췌(코드가 실제 존재 검증)
+  date?: string | null; // 출처 일자(있으면)
+}
+
+/**
+ * AI 자유질문 응답 — 사용자가 텍스트로 질문하면 Kimi가 그 종목의 실제 데이터·뉴스·찌라시를
+ * 근거로만 답한다(RAG). 환각 방지: 모델이 인용한 발췌가 실제 수집 원문에 있는지 코드가 대조해
+ * 통과분만 남긴다. 찌라시는 "사실"이 아니라 "이런 말이 돈다(미확인)"로만 전달.
+ */
+export interface StockAnswer {
+  code: string;
+  question: string;
+  asOf: string; // 생성 시각 KST
+  model: string;
+  answerable: boolean; // 수집 근거로 답할 수 있었는지 (false면 "확인 불가")
+  answer: string; // 종합 서술 (아래 검증된 근거에 한정)
+  calcUnverified: boolean; // 서술 속 계산·비율 수치가 자동검증 안 됨 (모델 계산오류 가능 — 경고)
+  facts: AskItem[]; // 데이터·뉴스 근거 (검증됨)
+  rumors: AskItem[]; // 찌라시(토론방·텔레그램) — 검증된 발췌, 미확인 라벨
+  droppedCount: number; // 사후 출처대조에서 제거된 미검증(환각 의심) 주장 수
+  caveat: string; // 한계·면책
+  sourceCounts: { news: number; board: number; telegram: number }; // 수집된 원문 수(투명성)
+}
+
 export interface StockReport {
   code: string;
   name: string;

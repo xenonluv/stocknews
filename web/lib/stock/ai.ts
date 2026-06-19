@@ -29,11 +29,80 @@ function env(name: string): string | null {
   return v && v.trim() !== "" ? v.trim() : null;
 }
 
+export interface KimiConfig {
+  apiKey: string;
+  baseUrl: string;
+  model: string;
+  thinking: boolean;
+}
+
+/** Moonshot 환경설정 로드 (키 없으면 AiConfigError). buildAiAnalysis·answerQuestion 공용. */
+export function getKimiConfig(): KimiConfig {
+  const apiKey = env("MOONSHOT_API_KEY");
+  if (!apiKey) throw new AiConfigError("MOONSHOT_API_KEY 미설정");
+  return {
+    apiKey,
+    baseUrl: env("MOONSHOT_BASE_URL") ?? "https://api.moonshot.ai/v1",
+    model: env("MOONSHOT_MODEL") ?? "kimi-k2.6",
+    thinking: env("MOONSHOT_THINKING") === "enabled",
+  };
+}
+
+/**
+ * Kimi 1회 호출 → 응답 content를 JSON 파싱해 그대로 반환(unknown). 호출자가 형식 검증.
+ * HTTP/타임아웃/파싱 실패는 AiUnavailableError. 방향예측·자유질문 공용 저수준 래퍼.
+ */
+export async function callKimiJson(args: {
+  cfg: KimiConfig;
+  systemPrompt: string;
+  userContent: string;
+  thinking?: boolean;
+  tag: string;
+}): Promise<unknown> {
+  const { cfg, systemPrompt, userContent, tag } = args;
+  const thinking = args.thinking ?? cfg.thinking;
+  let res: Response;
+  try {
+    res = await fetch(`${cfg.baseUrl}/chat/completions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cfg.apiKey}`,
+      },
+      body: JSON.stringify({
+        model: cfg.model,
+        // kimi-k2.6은 temperature=1만 허용 — 기본값 사용 (지정 시 400)
+        response_format: { type: "json_object" },
+        thinking: { type: thinking ? "enabled" : "disabled" },
+        messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user", content: userContent },
+        ],
+      }),
+      signal: AbortSignal.timeout(thinking ? TIMEOUT_THINKING_MS : TIMEOUT_FAST_MS),
+    });
+  } catch (e) {
+    console.error(`[stock-ai] Kimi 연결 실패 (${tag}): ${e instanceof Error ? e.name : "unknown"}`);
+    throw new AiUnavailableError("AI 서버 연결 실패 (타임아웃/네트워크)");
+  }
+  if (!res.ok) {
+    const body = await res.text().catch(() => "");
+    console.error(`[stock-ai] Kimi HTTP ${res.status}: ${body.slice(0, 300)}`);
+    throw new AiUnavailableError(`AI 서버 오류 (HTTP ${res.status})`);
+  }
+  try {
+    const data = (await res.json()) as { choices?: { message?: { content?: string } }[] };
+    return JSON.parse(data.choices?.[0]?.message?.content ?? "");
+  } catch {
+    throw new AiUnavailableError("AI 응답 파싱 실패");
+  }
+}
+
 /* ── 리포트 → 프롬프트 직렬화 (토큰 절약: 원시 캔들 제외, 요약만) ── */
 
 const pct = (n: number | null | undefined) => (n == null ? "?" : `${n}%`);
 
-function serializeForPrompt(r: StockReport): string {
+export function serializeForPrompt(r: StockReport): string {
   const L: string[] = [];
   L.push(`종목: ${r.name}(${r.code}) ${r.market ?? ""} · 기준 ${r.asOf}`);
   if (r.marketAlert) L.push(`⚠ 거래소 시장경보: ${r.marketAlert.label}`);
@@ -331,66 +400,24 @@ function aggregate(samples: KimiSample[]): { probUp: number; rep: KimiSample } {
 /* ── 메인 ── */
 
 async function callKimiOnce(args: {
-  baseUrl: string;
-  apiKey: string;
-  model: string;
-  thinking: boolean;
+  cfg: KimiConfig;
   userContent: string;
   code: string;
 }): Promise<KimiSample> {
-  const { baseUrl, apiKey, model, thinking, userContent, code } = args;
-  let res: Response;
-  try {
-    res = await fetch(`${baseUrl}/chat/completions`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        model,
-        // kimi-k2.6은 temperature=1만 허용 — 기본값 사용 (지정 시 400)
-        response_format: { type: "json_object" },
-        // thinking 미지정 시 모델 기본이 reasoning(느림) — 명시적으로 제어
-        thinking: { type: thinking ? "enabled" : "disabled" },
-        messages: [
-          { role: "system", content: SYSTEM_PROMPT },
-          { role: "user", content: userContent },
-        ],
-      }),
-      signal: AbortSignal.timeout(thinking ? TIMEOUT_THINKING_MS : TIMEOUT_FAST_MS),
-    });
-  } catch (e) {
-    console.error(`[stock-ai] Kimi 연결 실패 (${code}): ${e instanceof Error ? e.name : "unknown"}`);
-    throw new AiUnavailableError("AI 서버 연결 실패 (타임아웃/네트워크)");
-  }
-  if (!res.ok) {
-    const body = await res.text().catch(() => "");
-    console.error(`[stock-ai] Kimi HTTP ${res.status}: ${body.slice(0, 300)}`);
-    throw new AiUnavailableError(`AI 서버 오류 (HTTP ${res.status})`);
-  }
-
-  let parsed: unknown;
-  try {
-    const data = (await res.json()) as {
-      choices?: { message?: { content?: string } }[];
-    };
-    parsed = JSON.parse(data.choices?.[0]?.message?.content ?? "");
-  } catch {
-    throw new AiUnavailableError("AI 응답 파싱 실패");
-  }
-
+  const parsed = await callKimiJson({
+    cfg: args.cfg,
+    systemPrompt: SYSTEM_PROMPT,
+    userContent: args.userContent,
+    tag: args.code,
+  });
   const valid = validate(parsed);
   if (!valid) throw new AiUnavailableError("AI 응답 형식 검증 실패");
   return valid;
 }
 
 export async function buildAiAnalysis(code: string): Promise<AiAnalysis> {
-  const apiKey = env("MOONSHOT_API_KEY");
-  if (!apiKey) throw new AiConfigError("MOONSHOT_API_KEY 미설정");
-  const baseUrl = env("MOONSHOT_BASE_URL") ?? "https://api.moonshot.ai/v1";
-  const model = env("MOONSHOT_MODEL") ?? "kimi-k2.6";
-  const thinking = env("MOONSHOT_THINKING") === "enabled";
+  const cfg = getKimiConfig();
+  const model = cfg.model;
   const nRaw = Number.parseInt(env("MOONSHOT_SAMPLES") ?? "", 10);
   const n = Math.max(1, Math.min(5, Number.isFinite(nRaw) ? nRaw : DEFAULT_SAMPLES));
 
@@ -401,9 +428,7 @@ export async function buildAiAnalysis(code: string): Promise<AiAnalysis> {
   // temperature=1 고정 제약을 역이용한 self-consistency: 병렬 N콜 → 중앙값 합의.
   // 일부 실패는 생존 샘플로 진행, 전부 실패 시에만 에러 (라우트 503 + 네거티브 캐시).
   const settled = await Promise.allSettled(
-    Array.from({ length: n }, () =>
-      callKimiOnce({ baseUrl, apiKey, model, thinking, userContent, code })
-    )
+    Array.from({ length: n }, () => callKimiOnce({ cfg, userContent, code }))
   );
   const samples = settled
     .filter((r): r is PromiseFulfilledResult<KimiSample> => r.status === "fulfilled")
