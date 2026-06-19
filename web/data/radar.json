@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-19 15:32:12 KST",
+ "generated_at": "2026-06-19 15:42:13 KST",
  "market_session": "closed",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -66,7 +66,7 @@
    "change_pct": -2.89,
    "high_pct": 9.69,
    "fade_pct": 129.8,
-   "value_eok": 9691,
+   "value_eok": 9695,
    "ma10": 103840.0,
    "ma10_margin_pct": 10.07,
    "spark": {
@@ -103,15 +103,10 @@
     }
    ],
    "flow": {
-    "net_days": 2,
+    "net_days": 1,
     "today_buy": false,
     "streak": 0,
     "detail": [
-     {
-      "date": "0612",
-      "frgn": -39286,
-      "orgn": 84301
-     },
      {
       "date": "0615",
       "frgn": -350970,
@@ -131,6 +126,11 @@
       "date": "0618",
       "frgn": -148521,
       "orgn": 93985
+     },
+     {
+      "date": "0619",
+      "frgn": -353962,
+      "orgn": -49698
      }
     ]
    },
@@ -144,9 +144,9 @@
     "peak_high_pct": 14.53,
     "ma20": 105335.0,
     "ma20_margin_pct": 8.51,
-    "ivtr_net": 196092,
-    "ivtr_days": 4,
-    "ivtr_eok": 221,
+    "ivtr_net": 235540,
+    "ivtr_days": 5,
+    "ivtr_eok": 269,
     "cause_summary": "",
     "was_theme_leader": false,
     "source": "seed"
@@ -161,14 +161,14 @@
    "pattern": "reaccum",
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 89,
+   "suspicion_score": 90,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 62,
     "re_value": 8,
     "re_body": 5,
     "re_count": 6,
-    "flow": 5,
+    "flow": 6,
     "explosion": 3
    },
    "score_raw": 0,
@@ -229,11 +229,6 @@
     "streak": 0,
     "detail": [
      {
-      "date": "0612",
-      "frgn": 36162,
-      "orgn": -292238
-     },
-     {
       "date": "0615",
       "frgn": -95719,
       "orgn": -208549
@@ -252,6 +247,11 @@
       "date": "0618",
       "frgn": -184417,
       "orgn": 150698
+     },
+     {
+      "date": "0619",
+      "frgn": -275622,
+      "orgn": 210689
      }
     ]
    },
@@ -265,9 +265,9 @@
     "peak_high_pct": 27.29,
     "ma20": 89975.0,
     "ma20_margin_pct": 23.59,
-    "ivtr_net": 306461,
-    "ivtr_days": 3,
-    "ivtr_eok": 312,
+    "ivtr_net": 361743,
+    "ivtr_days": 4,
+    "ivtr_eok": 374,
     "cause_summary": "LG AI연구원, 디앤디파마텍과 AI 기반 펩타이드 신약 공동 개발",
     "was_theme_leader": false,
     "source": "seed"
@@ -313,7 +313,7 @@
    "change_pct": 4.71,
    "high_pct": 11.24,
    "fade_pct": 58.1,
-   "value_eok": 26769,
+   "value_eok": 26770,
    "ma10": 1414600.0,
    "ma10_margin_pct": 25.83,
    "spark": {
@@ -335,15 +335,10 @@
     }
    ],
    "flow": {
-    "net_days": 2,
+    "net_days": 1,
     "today_buy": false,
     "streak": 0,
     "detail": [
-     {
-      "date": "0612",
-      "frgn": -513309,
-      "orgn": 716022
-     },
      {
       "date": "0615",
       "frgn": 132963,
@@ -363,6 +358,11 @@
       "date": "0618",
       "frgn": -177706,
       "orgn": 31407
+     },
+     {
+      "date": "0619",
+      "frgn": -282497,
+      "orgn": 118715
      }
     ]
    },
@@ -376,9 +376,9 @@
     "peak_high_pct": 15.8,
     "ma20": 1332900.0,
     "ma20_margin_pct": 33.54,
-    "ivtr_net": 1395999,
-    "ivtr_days": 6,
-    "ivtr_eok": 18802,
+    "ivtr_net": 1415089,
+    "ivtr_days": 7,
+    "ivtr_eok": 19148,
     "cause_summary": "",
     "was_theme_leader": false,
     "source": "seed"
@@ -393,14 +393,14 @@
    "pattern": "reaccum",
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 77,
+   "suspicion_score": 79,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 62,
     "re_value": 1,
     "re_body": 3,
     "re_count": 3,
-    "flow": 6,
+    "flow": 8,
     "explosion": 2
    },
    "score_raw": 0,
@@ -424,7 +424,7 @@
    "change_pct": -1.87,
    "high_pct": 2.95,
    "fade_pct": 163.3,
-   "value_eok": 1044,
+   "value_eok": 1045,
    "ma10": 492350.0,
    "ma10_margin_pct": 1.25,
    "spark": {
@@ -451,15 +451,10 @@
     }
    ],
    "flow": {
-    "net_days": 1,
+    "net_days": 0,
     "today_buy": false,
     "streak": 0,
     "detail": [
-     {
-      "date": "0612",
-      "frgn": -92846,
-      "orgn": 146192
-     },
      {
       "date": "0615",
       "frgn": 7466,
@@ -479,6 +474,11 @@
       "date": "0618",
       "frgn": 29957,
       "orgn": -32064
+     },
+     {
+      "date": "0619",
+      "frgn": -1788,
+      "orgn": -2283
      }
     ]
    },
@@ -492,9 +492,9 @@
     "peak_high_pct": 23.61,
     "ma20": 495300.0,
     "ma20_margin_pct": 0.65,
-    "ivtr_net": 40194,
-    "ivtr_days": 3,
-    "ivtr_eok": 348,
+    "ivtr_net": 89919,
+    "ivtr_days": 4,
+    "ivtr_eok": 594,
     "cause_summary": "",
     "was_theme_leader": false,
     "source": "seed"
@@ -540,7 +540,7 @@
    "change_pct": -0.5,
    "high_pct": 2.98,
    "fade_pct": 116.7,
-   "value_eok": 1153,
+   "value_eok": 1154,
    "ma10": 60365.0,
    "ma10_margin_pct": -0.27,
    "spark": {
@@ -573,14 +573,9 @@
    ],
    "flow": {
     "net_days": 1,
-    "today_buy": false,
-    "streak": 0,
+    "today_buy": true,
+    "streak": 1,
     "detail": [
-     {
-      "date": "0612",
-      "frgn": 623028,
-      "orgn": -40634
-     },
      {
       "date": "0615",
       "frgn": -275851,
@@ -600,6 +595,11 @@
       "date": "0618",
       "frgn": 8297,
       "orgn": -52730
+     },
+     {
+      "date": "0619",
+      "frgn": 24981,
+      "orgn": 28925
      }
     ]
    },
@@ -613,12 +613,123 @@
     "peak_high_pct": 13.32,
     "ma20": 56475.0,
     "ma20_margin_pct": 6.6,
-    "ivtr_net": 23566,
+    "ivtr_net": 18468,
     "ivtr_days": 4,
-    "ivtr_eok": 19,
+    "ivtr_eok": 16,
     "cause_summary": "",
     "was_theme_leader": false,
     "source": "seed"
+   },
+   "leader_cohort_prob": null,
+   "theme_leader": false
+  },
+  {
+   "code": "034730",
+   "name": "SK",
+   "sector": "금융",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 73,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_value": 7,
+    "re_body": 0,
+    "re_count": 0,
+    "flow": 4,
+    "explosion": 0
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_value": 0,
+    "re_body": 0,
+    "re_count": 0,
+    "flow": 0,
+    "explosion": 0
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "price": 724000.0,
+   "change_pct": 5.39,
+   "high_pct": 10.19,
+   "fade_pct": 47.1,
+   "value_eok": 3355,
+   "ma10": 635100.0,
+   "ma10_margin_pct": 14.0,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 2.21,
+    "time": "09:20",
+    "value_10m_eok": 185
+   },
+   "reignition_bars": [
+    {
+     "time": "09:20",
+     "body_pct": 2.21,
+     "value_eok": 185
+    }
+   ],
+   "flow": {
+    "net_days": 4,
+    "today_buy": true,
+    "streak": 1,
+    "detail": [
+     {
+      "date": "0615",
+      "frgn": 27736,
+      "orgn": 26120
+     },
+     {
+      "date": "0616",
+      "frgn": 16005,
+      "orgn": 15062
+     },
+     {
+      "date": "0617",
+      "frgn": 16397,
+      "orgn": -4478
+     },
+     {
+      "date": "0618",
+      "frgn": -9320,
+      "orgn": 2412
+     },
+     {
+      "date": "0619",
+      "frgn": 17610,
+      "orgn": 50173
+     }
+    ]
+   },
+   "news": [],
+   "matched_events": [],
+   "theme": "금리",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260615",
+    "peak_value_eok": 1121,
+    "peak_high_pct": 13.49,
+    "ma20": 643150.0,
+    "ma20_margin_pct": 12.57,
+    "ivtr_net": 34603,
+    "ivtr_days": 4,
+    "ivtr_eok": 247,
+    "cause_summary": "최태원·노소영 재산분할 2차 조정기일…2년 만에 법정대면",
+    "was_theme_leader": false,
+    "source": "live"
    },
    "leader_cohort_prob": null,
    "theme_leader": false
@@ -688,11 +799,6 @@
     "streak": 5,
     "detail": [
      {
-      "date": "0612",
-      "frgn": 1329496,
-      "orgn": 879806
-     },
-     {
       "date": "0615",
       "frgn": 2494164,
       "orgn": 2307821
@@ -711,6 +817,11 @@
       "date": "0618",
       "frgn": 160392,
       "orgn": 453849
+     },
+     {
+      "date": "0619",
+      "frgn": 1175849,
+      "orgn": -90580
      }
     ]
    },
@@ -724,121 +835,10 @@
     "peak_high_pct": 17.29,
     "ma20": 26640.0,
     "ma20_margin_pct": 4.92,
-    "ivtr_net": 1028317,
+    "ivtr_net": 1012544,
     "ivtr_days": 5,
-    "ivtr_eok": 301,
+    "ivtr_eok": 296,
     "cause_summary": "",
-    "was_theme_leader": false,
-    "source": "live"
-   },
-   "leader_cohort_prob": null,
-   "theme_leader": false
-  },
-  {
-   "code": "034730",
-   "name": "SK",
-   "sector": "금융",
-   "pattern": "reaccum",
-   "shake": null,
-   "deep_shake": null,
-   "suspicion_score": 70,
-   "calibrated_prob": null,
-   "score_breakdown": {
-    "base": 62,
-    "re_value": 7,
-    "re_body": 0,
-    "re_count": 0,
-    "flow": 1,
-    "explosion": 0
-   },
-   "score_raw": 0,
-   "score_breakdown_raw": {
-    "base": 0,
-    "re_value": 0,
-    "re_body": 0,
-    "re_count": 0,
-    "flow": 0,
-    "explosion": 0
-   },
-   "forecast": {
-    "horizon": "3일 내 +7%",
-    "prob_pct": 52,
-    "base_pct": 46,
-    "strong": true,
-    "next_day_7_pct": 25,
-    "note": "과거 실측 확률·보장 아님"
-   },
-   "price": 724000.0,
-   "change_pct": 5.39,
-   "high_pct": 10.19,
-   "fade_pct": 47.1,
-   "value_eok": 3351,
-   "ma10": 635100.0,
-   "ma10_margin_pct": 14.0,
-   "spark": {
-    "clusters": []
-   },
-   "spark_max_x": 0.0,
-   "spark_max_pct": null,
-   "mega_flow": false,
-   "reignition": {
-    "body_pct": 2.21,
-    "time": "09:20",
-    "value_10m_eok": 185
-   },
-   "reignition_bars": [
-    {
-     "time": "09:20",
-     "body_pct": 2.21,
-     "value_eok": 185
-    }
-   ],
-   "flow": {
-    "net_days": 4,
-    "today_buy": false,
-    "streak": 0,
-    "detail": [
-     {
-      "date": "0612",
-      "frgn": 12660,
-      "orgn": -2705
-     },
-     {
-      "date": "0615",
-      "frgn": 27736,
-      "orgn": 26120
-     },
-     {
-      "date": "0616",
-      "frgn": 16005,
-      "orgn": 15062
-     },
-     {
-      "date": "0617",
-      "frgn": 16397,
-      "orgn": -4478
-     },
-     {
-      "date": "0618",
-      "frgn": -9320,
-      "orgn": 2412
-     }
-    ]
-   },
-   "news": [],
-   "matched_events": [],
-   "theme": "금리",
-   "visible_experimental": true,
-   "reaccum": {
-    "peak_date": "20260615",
-    "peak_value_eok": 1121,
-    "peak_high_pct": 13.49,
-    "ma20": 643150.0,
-    "ma20_margin_pct": 12.57,
-    "ivtr_net": 5859,
-    "ivtr_days": 3,
-    "ivtr_eok": 38,
-    "cause_summary": "최태원·노소영 재산분할 2차 조정기일…2년 만에 법정대면",
     "was_theme_leader": false,
     "source": "live"
    },
@@ -883,7 +883,7 @@
    "change_pct": 2.19,
    "high_pct": 2.66,
    "fade_pct": 17.6,
-   "value_eok": 338,
+   "value_eok": 339,
    "ma10": 28480.0,
    "ma10_margin_pct": 14.47,
    "spark": {
@@ -906,14 +906,9 @@
    ],
    "flow": {
     "net_days": 3,
-    "today_buy": false,
-    "streak": 0,
+    "today_buy": true,
+    "streak": 1,
     "detail": [
-     {
-      "date": "0612",
-      "frgn": 92699,
-      "orgn": 27750
-     },
      {
       "date": "0615",
       "frgn": -95889,
@@ -933,6 +928,11 @@
       "date": "0618",
       "frgn": -60421,
       "orgn": -19043
+     },
+     {
+      "date": "0619",
+      "frgn": -1953,
+      "orgn": 43942
      }
     ]
    },
@@ -946,9 +946,9 @@
     "peak_high_pct": 18.85,
     "ma20": 26961.0,
     "ma20_margin_pct": 20.92,
-    "ivtr_net": 215715,
-    "ivtr_days": 4,
-    "ivtr_eok": 66,
+    "ivtr_net": 260258,
+    "ivtr_days": 5,
+    "ivtr_eok": 80,
     "cause_summary": "'AI 부품 초호황' MLCC 관련주 뜨자 상한가 직행한 '이 종목'",
     "was_theme_leader": false,
     "source": "live"
