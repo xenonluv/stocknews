@@ -1,0 +1,20 @@
+{
+ "as_of": null,
+ "n": 0,
+ "hit_rate": null,
+ "avg_prob": null,
+ "brier": null,
+ "min_n": 20,
+ "prob_bands": [],
+ "threshold_sweep": {
+  "rows": [],
+  "recommended_up_min": null,
+  "current_up_min": 54,
+  "current_down_max": 46,
+  "min_n": 30,
+  "pos": 0,
+  "neg": 0
+ },
+ "recent": [],
+ "disclaimer": "사용자가 'AI분석하기'를 누른 모든 종목의 AI 상승확률을 익일 등락으로 채점한 기록입니다. 확률 구간별 실측 상승률·최적 임계는 표시·참고용이며 자동 적용되지 않습니다(권고치 확인 후 수동 조정). 약세 단일 레짐 표본 한계."
+}

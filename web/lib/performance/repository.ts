@@ -1,6 +1,11 @@
 import performanceData from "@/data/performance.json";
 import trackData from "@/data/track_performance.json";
-import type { PerformanceData, TrackPerformance } from "@/types/performance";
+import aiClickData from "@/data/ai_click_performance.json";
+import type {
+  AiClickPerformance,
+  PerformanceData,
+  TrackPerformance,
+} from "@/types/performance";
 
 /**
  * 성과 검증 저장소 (단일 출처).
@@ -13,4 +18,9 @@ export function getPerformance(): PerformanceData {
 /** 추적 종목 검증 — scripts/track_eval.py가 갱신(web/data/track_performance.json). */
 export function getTrackPerformance(): TrackPerformance {
   return trackData as unknown as TrackPerformance;
+}
+
+/** AI '클릭 예측' 보정 — scripts/ai_click_eval.py가 갱신(web/data/ai_click_performance.json). */
+export function getAiClickPerformance(): AiClickPerformance {
+  return aiClickData as unknown as AiClickPerformance;
 }

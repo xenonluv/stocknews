@@ -211,6 +211,53 @@ export interface TrackPerformance {
   disclaimer: string;
 }
 
+/** AI '클릭 예측' 보정 — scripts/ai_click_eval.py가 생성하는 web/data/ai_click_performance.json과 정합. */
+export interface AiClickBand {
+  lo: number;
+  hi: number;
+  n: number;
+  avg_prob: number | null; // 구간 평균 예측 확률(%)
+  actual_rate: number | null; // 실측 익일 상승률(%)
+  valid: boolean; // n >= min_n
+}
+export interface AiClickSweepRow {
+  t: number; // 후보 임계 (상승 예측 = probUp ≥ t)
+  n_pred_up: number;
+  precision: number | null; // 상승예측 적중률(%)
+  recall: number | null; // 실제상승 포착률(%)
+  tnr: number | null; // 하락 정확도(%)
+  balanced_acc: number | null; // 균형정확도(%)
+  accuracy: number | null;
+}
+export interface AiClickSweep {
+  rows: AiClickSweepRow[];
+  recommended_up_min: number | null; // 균형정확도 최대 T (표본 충분 시)
+  current_up_min: number; // 현 ai.ts PROB_BULL_MIN
+  current_down_max: number; // 현 ai.ts PROB_BEAR_MAX
+  min_n: number; // 권고 활성 최소 표본
+  pos: number; // 실제 상승 표본 수
+  neg: number; // 실제 하락/보합 표본 수
+}
+export interface AiClickRecent {
+  date: string;
+  code: string;
+  ai_prob: number;
+  hit: boolean;
+  return_pct: number;
+}
+export interface AiClickPerformance {
+  as_of: string | null;
+  n: number;
+  hit_rate: number | null;
+  avg_prob: number | null;
+  brier: number | null; // 낮을수록 좋음 (0.25 = 무정보 기준선)
+  min_n: number;
+  prob_bands: AiClickBand[];
+  threshold_sweep: AiClickSweep;
+  recent: AiClickRecent[];
+  disclaimer: string;
+}
+
 export interface PerformanceData {
   as_of: string;
   summary: {

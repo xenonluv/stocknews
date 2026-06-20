@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 
 import { AiConfigError, AiUnavailableError, buildAiAnalysis } from "@/lib/stock/ai";
 import { NotFoundError, UnreachableError } from "@/lib/stock/report";
+import { kvCommand, kvConfigured } from "@/lib/kv";
+import { ymdKST } from "@/lib/stock/parse";
 import type { AiAnalysis } from "@/types/stock";
 
 // AI(LLM) 심층 분석 — 버튼 클릭 시에만 호출되는 온디맨드 엔드포인트.
@@ -29,6 +31,31 @@ function getAnalysisDeduped(code: string): Promise<AiAnalysis> {
   return p;
 }
 
+const PRED_TTL_SEC = 60 * 60 * 24 * 90; // 예측 해시 90일 보관(평가·만료 충분)
+
+/**
+ * 클릭한 종목의 AI 예측을 KV에 1건 적재 — 익일 등락 채점·임계 보정의 원천(scripts/ai_click_eval.py).
+ * 종목·일자당 1건(HSETNX): 같은 날 여러 번 눌러도 첫 예측만 남아 인기 종목 편향을 막는다.
+ * KV 미설정(로컬·무시크릿 프리뷰)이면 조용히 skip → AI 응답 동작 불변. 실패는 호출부에서 삼킨다.
+ */
+async function recordPrediction(code: string, a: AiAnalysis): Promise<void> {
+  if (!kvConfigured()) return;
+  const date = ymdKST();
+  const key = `aipred:${date}`;
+  const payload = JSON.stringify({
+    probUp: a.probUp,
+    dir: a.direction,
+    verdictScore: a.verdictScore ?? null,
+    ts: Date.now(),
+  });
+  // HSETNX(1=신규·0=기존) 직후 EXPIRE·SADD는 멱등이라 무조건 실행 — HSETNX만 성공하고
+  // 중단되면 해당 날짜가 aipred:dates에서 영영 누락되는 비원자성 갭을 자가치유(매 회 재보강).
+  // (aipred:dates SET 자체는 TTL 없음 — 거래일당 짧은 문자열 하나라 누적량 무시 가능)
+  await kvCommand(["HSETNX", key, code, payload]);
+  await kvCommand(["EXPIRE", key, PRED_TTL_SEC]);
+  await kvCommand(["SADD", "aipred:dates", date]);
+}
+
 /**
  * GET /api/stock/{code}/ai
  * 외부 공개 · 읽기 전용. Kimi LLM이 룰베이스 리포트 전체를 읽고
@@ -49,6 +76,13 @@ export async function GET(
   }
   try {
     const analysis = await getAnalysisDeduped(code);
+    // 예측 기록은 부가 작업 — 실패해도 AI 응답엔 영향 없게 격리(fail-safe).
+    // CDN 캐시 미스에서만 함수가 실행되므로 (code,day) 첫 계산 시 1회 적재되면 충분.
+    try {
+      await recordPrediction(code, analysis);
+    } catch (e) {
+      console.error("[ai] 예측 KV 기록 실패(무시):", e);
+    }
     return NextResponse.json(analysis, { headers: { "Cache-Control": CACHE_OK } });
   } catch (e) {
     if (e instanceof NotFoundError) {
