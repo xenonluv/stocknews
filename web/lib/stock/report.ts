@@ -147,15 +147,23 @@ export async function buildStockReport(code: string): Promise<StockReport> {
         at: String(om?.localTradedAt ?? ""),
       };
     }
+    // 거래대금·거래량은 totalInfos의 통합(KRX+NXT) 누적값 — 레이더 카드와 동일 기준.
+    // (일별 candles의 volume은 siseJson=KRX 단독이라 별개. 가격·MA는 KRX 공식 유지.)
+    const tradingValueEok = parseEok(info.accumulatedTradingValue);
+    // 거래대금회전율 = 거래대금/시총 — 시총 대비 손바뀜 강도(화신 6/19처럼 시총 ≈ 거래대금이면 ~100%).
+    const capEok = parseEok(info.marketValue);
+    const turnoverPct =
+      tradingValueEok !== null && tradingValueEok >= 0 && capEok !== null && capEok > 0
+        ? Math.round((tradingValueEok / capEok) * 1000) / 10
+        : null; // 음수 거래대금(비정상 응답)·시총≤0은 null → 음수/Infinity 회전율이 AI에 새지 않게
     price = {
       close,
       change: num(basic?.compareToPreviousClosePrice) ?? 0,
       changePct: num(basic?.fluctuationsRatio) ?? 0,
       marketCap: info.marketValue ?? null,
-      // 거래대금·거래량은 totalInfos의 통합(KRX+NXT) 누적값 — 레이더 카드와 동일 기준.
-      // (일별 candles의 volume은 siseJson=KRX 단독이라 별개. 가격·MA는 KRX 공식 유지.)
-      tradingValue: parseEok(info.accumulatedTradingValue),
+      tradingValue: tradingValueEok,
       tradingVolume: num(info.accumulatedTradingVolume),
+      turnoverPct,
       afterMarket,
       per: num(info.per),
       eps: num(info.eps),
