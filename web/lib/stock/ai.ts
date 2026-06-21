@@ -120,6 +120,13 @@ export function serializeForPrompt(r: StockReport): string {
           ? ` · 컨센서스 목표가 ${p.consensus.targetPrice.toLocaleString()}원(상승여력 ${pct(p.consensus.upsidePct)}, 의견 ${p.consensus.recommMean}/5)`
           : "")
     );
+    if (p.afterMarket) {
+      L.push(
+        `[NXT 시간외] ${p.afterMarket.session} ${p.afterMarket.price.toLocaleString()}원 · ` +
+          `정규장 종가 대비 ${p.afterMarket.pctVsClose > 0 ? "+" : ""}${p.afterMarket.pctVsClose}% ` +
+          `(정규장 마감 후 변동 — 익일 시초 갭 리스크)`
+      );
+    }
   }
 
   if (r.chart && r.chart.candles.length >= 5) {

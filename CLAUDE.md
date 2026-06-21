@@ -154,6 +154,10 @@ python3 scripts/event_calendar.py 10           # D-10 이벤트 확인
   - **거래대금·거래량은 통합(KRX+NXT)** — `totalInfos`의 `accumulatedTradingValue`(`parseEok`로 억 환산)·
     `accumulatedTradingVolume`을 `price.tradingValue/tradingVolume`로 노출(레이더 카드와 동일 기준, AI 프롬프트에도 포함).
     단 가격·MA·`volumeVs20d`는 일별 candles(siseJson=**KRX 단독·공식 종가**) 기반 그대로(통합 일별 이력은 네이버 공개 API에 없음).
+  - **NXT 시간외 야간 괴리 배지** — `basic.overMarketPriceInfo`(애프터마켓 종가 `overPrice`, ~20:00)를 `price.afterMarket`로
+    노출. **당일 정규장 종가 대비 %를 직접 계산**(네이버는 전일 종가 대비로 줌)해 "장 마감 후 −X%·익일 갭 주의"를
+    경고(화신 6/19: KRX 14,330 → NXT 야간 13,500 = −5.8%). 정규장 중(marketStatus=OPEN)엔 비노출(전일 시간외 혼동 방지).
+    표시·AI 프롬프트 전용 — 지표·평가는 KRX 종가 유지.
   ⚠ 분봉 소스 fchart(`sise.nhn?timeframe=minute`) 함정: 시/고/저 "null"(종가만 유효), **거래량은
   당일 누적값**(분당=차분 필요), ~6세션치 응답(KST 당일 필터 필수), 08:30~ 장전 봉 포함.
   스파크 = `web/lib/stock/sparks.ts`(radar.py 1:1 포팅, **산식 변경 시 동기화**).

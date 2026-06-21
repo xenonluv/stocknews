@@ -49,6 +49,31 @@ export function PriceSummaryCard({ price }: { price: PriceSection }) {
           </span>
         </div>
 
+        {price.afterMarket && (
+          <div className="flex flex-wrap items-center gap-2 rounded-md border border-white/10 bg-white/[0.03] px-3 py-2 text-xs">
+            <Badge variant={price.afterMarket.pctVsClose < 0 ? "down" : "up"}>
+              NXT {price.afterMarket.session}
+            </Badge>
+            <span className="font-medium tabular-nums">
+              {price.afterMarket.price.toLocaleString("ko-KR")}원
+            </span>
+            <span
+              className={cn(
+                "font-semibold tabular-nums",
+                price.afterMarket.pctVsClose < 0
+                  ? "text-down"
+                  : price.afterMarket.pctVsClose > 0
+                    ? "text-up"
+                    : "text-muted-foreground"
+              )}
+            >
+              정규장 종가 대비 {price.afterMarket.pctVsClose > 0 ? "+" : ""}
+              {price.afterMarket.pctVsClose}%
+            </span>
+            <span className="text-muted-foreground">장 마감 후 변동 · 익일 갭 주의</span>
+          </div>
+        )}
+
         <dl className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs sm:grid-cols-4">
           {rows.map((r) => (
             <div key={r.label} className="flex flex-col">

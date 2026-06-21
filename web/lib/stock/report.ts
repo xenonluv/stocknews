@@ -121,6 +121,25 @@ export async function buildStockReport(code: string): Promise<StockReport> {
     const low52 = num(info.lowPriceOf52Weeks);
     const targetPrice = num(integ?.consensusInfo?.priceTargetMean);
     const recommMean = num(integ?.consensusInfo?.recommMean);
+    // NXT 시간외(애프터마켓/프리마켓) — 정규장 마감 후 KRX 종가 대비 변동(야간 갭 리스크 경고용).
+    // ⚠ 정규장 중(marketStatus=OPEN)에는 '전일 시간외 vs 당일 현재가'가 되어 오해하므로 마감 상태에서만 노출.
+    // 네이버 overMarketPriceInfo는 전일 종가 대비로 주므로, 당일 종가 대비 %는 여기서 직접 계산한다.
+    const om = basic?.overMarketPriceInfo;
+    const omPrice = num(om?.overPrice);
+    let afterMarket: PriceSection["afterMarket"] = null;
+    if (
+      String(basic?.marketStatus ?? "") !== "OPEN" &&
+      omPrice !== null &&
+      omPrice > 0 &&
+      (om?.overMarketStatus === "CLOSE" || om?.overMarketStatus === "TRADING")
+    ) {
+      afterMarket = {
+        price: omPrice,
+        pctVsClose: Math.round((omPrice / close - 1) * 1000) / 10,
+        session: om?.tradingSessionType === "PRE_MARKET" ? "프리마켓" : "애프터마켓(시간외)",
+        at: String(om?.localTradedAt ?? ""),
+      };
+    }
     price = {
       close,
       change: num(basic?.compareToPreviousClosePrice) ?? 0,
@@ -130,6 +149,7 @@ export async function buildStockReport(code: string): Promise<StockReport> {
       // (일별 candles의 volume은 siseJson=KRX 단독이라 별개. 가격·MA는 KRX 공식 유지.)
       tradingValue: parseEok(info.accumulatedTradingValue),
       tradingVolume: num(info.accumulatedTradingVolume),
+      afterMarket,
       per: num(info.per),
       eps: num(info.eps),
       cnsPer: num(info.cnsPer),
