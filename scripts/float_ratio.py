@@ -106,6 +106,19 @@ def get_float_ratio(code, cache=None):
     return ratio
 
 
+def get_float_and_listed(code, cache=None):
+    """(유동비율 0~1 | None, 발행주식수 int | None) — 폭발일 시총 복원(과거 봉)용. get_float_ratio와 동일 경로."""
+    own = cache is None
+    if own:
+        cache = _load_cache()
+    r = get_float_ratio(code, cache=cache)
+    if own:
+        _save_cache(cache)  # 콜드/만료 스크랩분을 디스크에 영속(없으면 bootstrap이 매 회차 재스크랩)
+    if r is None:
+        return None, None
+    return r, (cache.get(code) or {}).get("listed")
+
+
 if __name__ == "__main__":
     codes = sys.argv[1:] or ["010690"]
     for c in codes:

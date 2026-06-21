@@ -16,6 +16,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
   코드를 푸시한 뒤 Mac 반영은 `git pull` + (cron 변경 시) `install_cron.sh` 재실행이 필요하다.
 - **KIS/네이버/텔레그램 시크릿은 Mac `.env`에만** 존재(WSL엔 없어 일부 스크립트는 no-op).
 
+<!-- 폭발 게이트(reaccum): 고가+13% AND (거래대금 ≥ 1,500억 OR **폭발일 유통 회전율 ≥ 100%**). 후자는
+시총 작은데 유통주식이 통째로 손바뀐 저유동 폭발주(위더스제약類)를 포착 — 임계 100%는 데이터 캘리브
+(`float_gate_calibration.py`: 확정 폭발 중 6%만 도달·신규 ~1종목/일=flood 없음) 근거. 유동비율 없으면 절대 게이트만. -->
+
 ## 탐지 트랙 (2종 공존)
 
 레이더는 두 트랙을 동시에 게시하되 **통계 격리 원칙**으로 분리한다:

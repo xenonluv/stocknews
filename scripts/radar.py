@@ -50,6 +50,13 @@ PERFORMANCE_PATH = os.path.join(REPO, "web", "data", "performance.json")
 # 방지: 같은 '진짜 큰돈' 엄격도를 통합 기준으로 정합. 신규 포착은 유니버스 J∪NX 합집합이 담당).
 EXPLOSION_VALUE = 150_000_000_000  # 재매집 폭발 거래대금 하한: 1,500억(원, UN 통합기준 = J 1천억×1.5)
 EXPLOSION_HIGH_PCT = 13.0          # 재매집 폭발 당일 고가 등락률 하한(%)
+# 폭발 게이트 OR 조건: 절대 1,500억 미달이어도 '폭발일 유통 회전율 ≥ 100%'(유통주식 완전회전=자명한 매집)면
+# 폭발 인정 → 시총 작은데 유통이 통째로 손바뀐 저유동 폭발주(위더스제약類) 포착. 임계 100%는 데이터 캘리브
+# 근거(float_gate_calibration: 확정 폭발 중 6%만 도달하는 극단·신규등록 ~1종목/일=flood 없음). 유동비율 없으면 미적용.
+EXPLOSION_TURNOVER_PCT = 100.0
+# OR 조건도 '큰돈' 전제는 유지 — 유통 회전율만 높고 거래대금이 소액(품절주 호가공백 소량체결로 상한가 근접)인
+# 노이즈를 배제하기 위해, 회전율 OR 분기도 거래대금 ≥ 300억은 요구한다(위더스683·화신정공957 등 실제 폭발은 통과).
+EXPLOSION_TURNOVER_MIN_VALUE = 30_000_000_000  # 300억(원)
 EXPLOSION_WINDOW = 6               # 최근 6거래일 폭발만 재매집 후보
 EXPLOSION_RANK_N = 30              # 시장별 거래대금 상위 N에서 라이브 폭발 감시
 REACCUM_SCORE = 62                 # 검증중 노출용 고정 표시 점수(raw 통계와 분리)
@@ -343,6 +350,7 @@ def bootstrap_seed_explosions(reg, p):
             continue
         _merge_trading_days(reg, [d["date"] for d in daily[-p.explosion_window:]])
         recent_dates = {d["date"] for d in daily[-p.explosion_window:]}
+        fratio, flisted = float_ratio.get_float_and_listed(item["code"])  # 유통비율·발행주식수(보통주만)
         qualifying = []
         for i, bar in enumerate(daily):
             if bar["date"] not in recent_dates or i == 0:
@@ -351,7 +359,14 @@ def bootstrap_seed_explosions(reg, p):
             if prev_close <= 0:
                 continue
             high_pct = (bar["high"] / prev_close - 1) * 100
-            if bar["value"] < p.explosion_value or high_pct < p.explosion_high_pct:
+            if high_pct < p.explosion_high_pct:
+                continue
+            # 폭발 = 절대 거래대금 ≥ 게이트 OR 폭발일 유통 회전율 ≥ 임계(저유동 폭발주 포착).
+            # 폭발일 시총 = 발행주식수 × 폭발일종가, 유통시총 = ×유동비율. 유동비율 없으면 절대 게이트만.
+            ft = (bar["value"] / 1e8 / (flisted * bar["close"] / 1e8 * fratio) * 100
+                  if (fratio and flisted and bar.get("close")) else None)
+            or_ok = ft and ft >= p.explosion_turnover_pct and bar["value"] >= EXPLOSION_TURNOVER_MIN_VALUE
+            if bar["value"] < p.explosion_value and not or_ok:
                 continue
             qualifying.append({
                 "code": item["code"],
@@ -447,7 +462,13 @@ def update_live_explosions(reg, p):
         now_value = float(now.get("value") or 0)
         value_won = now_value if now_value > 0 else rank_value_won
         if value_won < p.explosion_value:
-            continue
+            # 절대 미달이어도 폭발일(=당일) 유통 회전율 ≥ 임계면 폭발 인정(저유동 폭발주). 유동비율 없으면 탈락.
+            cap_eok = float(now.get("market_cap_eok") or 0)
+            frl = float_ratio.get_float_ratio(row["code"])
+            ft = (value_won / 1e8 / (cap_eok * frl) * 100) if (frl and cap_eok > 0) else None
+            # 유통 회전율 ≥ 임계 AND 거래대금 ≥ 300억(품절주 소액거래 노이즈 배제) 둘 다일 때만 OR 통과
+            if not (ft and ft >= p.explosion_turnover_pct and value_won >= EXPLOSION_TURNOVER_MIN_VALUE):
+                continue
         rec_new = {
             "code": row["code"],
             "name": row["name"],
@@ -609,16 +630,15 @@ def scan_reaccum_candidate(rec, p, events):
     # 유동비율(free float, 0~1) — wisereport 스크랩(캐시). 회전율을 '유통주식수 대비'로 정밀화: 최대주주
     # 지분이 묶인 소형주는 유통시총이 작아 진짜 손바뀜 강도가 드러난다(화신 유동49%→유통회전율 ~2배).
     # None(스크랩 실패·미상장)이면 전체 시총 기준으로 폴백(basis="cap") — 조용히 죽지 않게 아래서 분기.
-    fr = float_ratio.get_float_ratio(code)
+    fr, flisted = float_ratio.get_float_and_listed(code)  # 유동비율·발행주식수(보통주만, 캐시)
     turnover_basis = "float" if (fr and fr > 0) else "cap"
     eff = fr if (fr and fr > 0) else 1.0   # 유통시총 = 시총 × 유동비율 (폴백 시 전체 시총)
     turnover_pct = round((now.get("value") or 0) / 1e8 / (cap_eok * eff) * 100, 1) if cap_eok > 0 else None
-    # 폭발일 회전율 = 폭발일 거래대금 / 폭발일 (유통)시총 — '유통 대비 얼마나 자명한 큰돈이 폭발일에 들어왔나'.
-    # 레지스트리엔 폭발일 시총이 없으나, 폭발일 시총 ≈ 현재시총 × (폭발일종가/현재가)로 복원(상장주식수·유동비율
-    # 불변 가정, 신규 API 없이 daily+now 재사용). 폭발일종가 결측 시 현재시총 proxy. 화신류(폭발일 고회전) 강변별.
+    # 폭발일 회전율 = 폭발일 거래대금 / 폭발일 (유통)시총. 폭발일 시총 = 발행주식수 × 폭발일종가 —
+    # **폭발 게이트(bootstrap)와 동일 분모**로 통일(게이트 통과 ft와 게시 peak_turnover_pct 정합). 발행주식수
+    # 결측 시 현재시총 proxy로 폴백. 화신류(폭발일 고회전) 강변별.
     peak_close = next((b["close"] for b in daily if b.get("date") == rec.get("peak_date")), None)
-    now_price = float(now.get("price") or 0)
-    peak_cap_eok = (cap_eok * peak_close / now_price) if (cap_eok > 0 and peak_close and now_price > 0) else cap_eok
+    peak_cap_eok = (flisted * peak_close / 1e8) if (flisted and peak_close) else cap_eok
     peak_turnover_pct = round(peak_eok / (peak_cap_eok * eff) * 100, 1) if peak_cap_eok > 0 else None
     if cap_eok <= 0:  # 시총 결측(KIS hts_avls 누락·일부 ETF/지주) → 회전율 가점 0이 되는 걸 조용히 두지 않음
         log(f"  [warn] {code} {name} 시총 결측 → 회전율 가점 0(폭발 절대규모만 반영)")
@@ -970,6 +990,8 @@ def main():
                     help="게시 단계에서 예약할 재매집 후보 슬롯 수(파라미터 기록용)")
     ap.add_argument("--explosion-value", type=float, default=EXPLOSION_VALUE,
                     help="재매집 폭발 거래대금 하한(원, 기본 1,500억=UN 통합기준)")
+    ap.add_argument("--explosion-turnover-pct", type=float, default=EXPLOSION_TURNOVER_PCT,
+                    help="폭발 OR 조건: 폭발일 유통 회전율 하한(%%, 기본 100=유통 완전회전). 절대 거래대금 미달이어도 통과")
     ap.add_argument("--explosion-high-pct", type=float, default=EXPLOSION_HIGH_PCT,
                     help="재매집 폭발 당일 고가 등락률 하한(%%)")
     ap.add_argument("--explosion-window", type=int, default=EXPLOSION_WINDOW,
@@ -1032,6 +1054,8 @@ def main():
                    "reaccum_visible": p.reaccum_visible,
                    "reaccum_max": p.reaccum_max,
                    "explosion_value_eok": round(p.explosion_value / 1e8),
+                   "explosion_turnover_pct": p.explosion_turnover_pct,  # 폭발 OR 조건: 폭발일 유통 회전율 하한
+                   "explosion_turnover_min_value_eok": round(EXPLOSION_TURNOVER_MIN_VALUE / 1e8),  # OR 분기 거래대금 floor
                    "explosion_high_pct": p.explosion_high_pct,
                    "explosion_window": p.explosion_window,
                    "explosion_rank_n": p.explosion_rank_n,
