@@ -51,7 +51,15 @@ export function PriceSummaryCard({ price }: { price: PriceSection }) {
 
         {price.afterMarket && (
           <div className="flex flex-wrap items-center gap-2 rounded-md border border-white/10 bg-white/[0.03] px-3 py-2 text-xs">
-            <Badge variant={price.afterMarket.pctVsClose < 0 ? "down" : "up"}>
+            <Badge
+              variant={
+                price.afterMarket.pctVsClose < 0
+                  ? "down"
+                  : price.afterMarket.pctVsClose > 0
+                    ? "up"
+                    : "secondary"
+              }
+            >
               NXT {price.afterMarket.session}
             </Badge>
             <span className="font-medium tabular-nums">

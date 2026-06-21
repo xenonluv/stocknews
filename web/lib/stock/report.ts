@@ -126,11 +126,18 @@ export async function buildStockReport(code: string): Promise<StockReport> {
     // 네이버 overMarketPriceInfo는 전일 종가 대비로 주므로, 당일 종가 대비 %는 여기서 직접 계산한다.
     const om = basic?.overMarketPriceInfo;
     const omPrice = num(om?.overPrice);
+    // 시간외·정규장 체결이 같은 거래일일 때만 비교(개장 전·휴장일에 전일 시간외를 당일 종가와 잘못 대조하는
+    // 기준일 어긋남 방지). marketStatus!=="OPEN"만으로는 비정규 전이 상태를 못 거른다.
+    const omDay = String(om?.localTradedAt ?? "").slice(0, 10);
+    const regDay = String(basic?.localTradedAt ?? "").slice(0, 10);
     let afterMarket: PriceSection["afterMarket"] = null;
     if (
       String(basic?.marketStatus ?? "") !== "OPEN" &&
+      close > 0 && // 0除(Infinity %) 방지 — 다른 %필드와 동일하게 양수 가드
       omPrice !== null &&
       omPrice > 0 &&
+      omDay !== "" &&
+      omDay === regDay &&
       (om?.overMarketStatus === "CLOSE" || om?.overMarketStatus === "TRADING")
     ) {
       afterMarket = {

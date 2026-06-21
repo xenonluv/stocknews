@@ -14,7 +14,7 @@
 import os
 import sys
 import json
-import urllib.parse
+import time
 import urllib.request
 from datetime import datetime, timezone, timedelta
 
@@ -28,6 +28,9 @@ STATE_PATH = os.path.join(REPO, ".night_alert_notified.json")
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 DROP_PCT = -3.0  # 정규장 종가 대비 이 % 이하로 빠지면 경고(야간 급락 하한)
+# 한국 주식 일일 가격제한 ±30% → 정규장 종가 대비 -35%↓ 시간외가는 사실상 데이터 글리치.
+# 경고도·디둡도 하지 않고 건너뛴다(거짓 알람이 그날 진짜 알람까지 막는 것 방지).
+GLITCH_FLOOR = -35.0
 
 
 def _num(s):
@@ -89,6 +92,10 @@ def night_quote(code):
     om = b.get("overMarketPriceInfo") or {}
     if om.get("overMarketStatus") not in ("CLOSE", "TRADING"):
         return None
+    # 시간외·정규장 체결이 같은 거래일일 때만(개장 전 전일 시간외를 당일 종가와 잘못 대조 방지)
+    om_day = str(om.get("localTradedAt") or "")[:10]
+    if not om_day or om_day != str(b.get("localTradedAt") or "")[:10]:
+        return None
     close = _num(b.get("closePrice"))
     over = _num(om.get("overPrice"))
     if not close or not over or close <= 0 or over <= 0:
@@ -119,11 +126,15 @@ def main():
         if key in state:
             continue  # 같은 밤 1회만
         q = night_quote(code)
+        time.sleep(0.15)  # 네이버 연속 호출 간 최소 간격(throttle 회피)
         if not q:
             continue
         close, over, pct, session, nm = q
         if pct > DROP_PCT:
             continue  # 급락 아님(임계 미달)
+        if pct < GLITCH_FLOOR:
+            tg.log(f"[night] {code} 이상치 {pct:+.1f}% — 글리치로 보고 skip(디둡 안 함)")
+            continue  # 데이터 글리치 의심 → 알람·디둡 안 함(진짜 알람 차단 방지)
         label = nm or name  # 네이버 종목명 우선(watchlist 코드 이름 메움)
         msg = (f"🌙 NXT 야간 급락 경고\n"
                f"{label}({code}) {session}\n"
@@ -135,7 +146,9 @@ def main():
             alerted += 1
             tg.log(f"[night] 경고 발송 {label}({code}) {pct:+.1f}%")
     if alerted:
-        tg._save_state(STATE_PATH, state)
+        # 오늘 키만 남기고 과거 날짜는 정리(파일 무한 증가 방지 — telegram_notify와 동일 철학)
+        pruned = {k: v for k, v in state.items() if k.startswith(today + ":")}
+        tg._save_state(STATE_PATH, pruned)
     tg.log(f"[night] 감시 {len(codes)}종목 · 경고 {alerted}건")
 
 
