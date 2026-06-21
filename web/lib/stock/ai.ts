@@ -8,7 +8,7 @@
 import { getRadar } from "@/lib/radar/repository";
 import type { AiAnalysis, AiDirection, StockReport } from "@/types/stock";
 import { buildStockReport } from "./report";
-import { ddayKST, formatKST, ymdKST } from "./parse";
+import { ddayKST, formatEok, formatKST, ymdKST } from "./parse";
 
 export class AiConfigError extends Error {}
 export class AiUnavailableError extends Error {}
@@ -114,7 +114,7 @@ export function serializeForPrompt(r: StockReport): string {
   if (p) {
     L.push(
       `[주가] 현재가 ${p.close.toLocaleString()}원 (${p.changePct > 0 ? "+" : ""}${p.changePct}%) · ` +
-        (p.tradingValue != null ? `거래대금 ${Math.round(p.tradingValue).toLocaleString()}억(KRX+NXT 통합) · ` : "") +
+        (p.tradingValue != null ? `거래대금 ${formatEok(p.tradingValue)}(KRX+NXT 통합) · ` : "") +
         `PER ${p.per ?? "?"} PBR ${p.pbr ?? "?"} · 52주고가 대비 ${pct(p.pctFrom52High)} 저가 대비 ${pct(p.pctFrom52Low)}` +
         (p.consensus
           ? ` · 컨센서스 목표가 ${p.consensus.targetPrice.toLocaleString()}원(상승여력 ${pct(p.consensus.upsidePct)}, 의견 ${p.consensus.recommMean}/5)`

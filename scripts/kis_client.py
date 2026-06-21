@@ -251,13 +251,14 @@ def _overlay_money(bar, un_bar):
     """가격은 그대로 두고 거래대금/거래량만 UN 값으로 덮어쓴다(un_bar 없거나 0이면 J 유지).
 
     ⚠ _f()가 결측 필드를 0.0으로 강제하므로 `is not None`은 항상 참이라 무용지물 → 0으로 검사.
-    UN ⊇ KRX(통합=KRX+NXT)라 정상 데이터의 UN value/volume은 J 이상이며, 0은 곧 결측·글리치이므로
-    J 값을 보존해야 한다(0으로 덮으면 폭발 게이트가 진짜 거래대금을 0으로 보고 후보를 놓친다)."""
+    UN ⊇ KRX(통합=KRX+NXT)라 정상 데이터의 UN value/volume은 J 이상 → max(J, UN)로 덮어쓴다.
+    0은 곧 결측·글리치이므로 J 보존(0으로 덮으면 게이트가 진짜 거래대금을 0으로 봄). UN이 0은 아니나
+    J보다 작은 부분집계(NXT만 반영 등)를 줄 때도 max로 더 큰 J를 지켜 과소탐지를 막는다."""
     if un_bar:
         if (un_bar.get("value") or 0) > 0:
-            bar["value"] = un_bar["value"]
+            bar["value"] = max(bar.get("value") or 0, un_bar["value"])
         if (un_bar.get("volume") or 0) > 0:
-            bar["volume"] = un_bar["volume"]
+            bar["volume"] = max(bar.get("volume") or 0, un_bar["volume"])
 
 
 def daily_prices_jmoney_un(code, days=30):
@@ -445,9 +446,12 @@ def value_rank_union(market="KOSPI", top_n=20):
     순위에서 탈락하는 누락을 막는다. 같은 종목이 양쪽에 있으면 value_mn은 J+NX 합산(≈통합 거래대금
     근사), change_pct는 J 우선. 결과는 value_mn 내림차순 상위 top_n."""
     merged = {}
+    # 시장별로 미리 top_n까지만 자르면 'J 21위·NX 21위지만 합산 상위'인 종목이 누락된다 →
+    # 가용 행을 넉넉히(min 40, API가 ~30 상한이라 사실상 전수) 받아 합집합 후 마지막에만 절단.
+    fetch_n = max(top_n, 40)
     for mrkt in ("J", "NX"):
         try:
-            rows = value_rank(market, top_n=top_n, mrkt=mrkt)
+            rows = value_rank(market, top_n=fetch_n, mrkt=mrkt)
         except Exception as e:
             # 한쪽 시장 실패는 다른 쪽으로 계속(부분 유니버스가 abort보다 안전) — 단 조용히 묻지 않게 경고.
             sys.stderr.write(f"[kis] value_rank {market}/{mrkt} 실패(스킵): {e}\n")
@@ -467,7 +471,6 @@ def value_rank_union(market="KOSPI", top_n=20):
 
 
 if __name__ == "__main__":
-    import sys
     if len(sys.argv) > 1 and sys.argv[1] == "rank":
         markets = [sys.argv[2]] if len(sys.argv) > 2 else ["KOSPI", "KOSDAQ"]
         for mkt in markets:

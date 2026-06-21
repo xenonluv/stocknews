@@ -15,6 +15,9 @@ export function num(s: unknown): number | null {
  * 한국어 금액 단위 문자열 → 억(number). "468,099백만"→4681, "5,004억"→5004, "1,753조 8,836억"→17538836.
  * 네이버 totalInfos의 accumulatedTradingValue("백만")·marketValue("억") 등 단위 접미사를 정규화한다.
  * num()은 백만/억/조 접미사를 못 떼어 NaN이 되므로 금액 전용 파서가 별도로 필요하다. 실패 시 null.
+ * ⚠ 단위 접미사가 **없는** 숫자는 단위가 모호(원? 백만?)하므로 null을 반환한다 — 네이버 totalInfos는
+ * 항상 단위가 붙어 오고, 만약 포맷이 바뀌어 단위가 빠지면 원으로 단정해 ~100만배 오차를 내느니
+ * "—"로 비우는 편이 안전하다(무신호 < 거짓 소액).
  */
 export function parseEok(s: unknown): number | null {
   if (typeof s === "number") return Number.isFinite(s) ? s : null;
@@ -30,9 +33,15 @@ export function parseEok(s: unknown): number | null {
       matched = true;
     }
   }
-  if (matched) return Math.round(eok * 100) / 100;
-  const won = Number(str.replace(/^\+/, "")); // 단위 없는 순수 원 → 억 환산
-  return Number.isFinite(won) ? Math.round((won / 1e8) * 100) / 100 : null;
+  return matched ? Math.round(eok * 100) / 100 : null;
+}
+
+/** 거래대금(억) 표시 문자열. null→"—", 0<v<1→"1억 미만"(0억으로 거짓표기 방지), else 반올림+"억". */
+export function formatEok(v: number | null): string {
+  if (v === null) return "—";
+  if (v <= 0) return "0억";
+  if (v < 1) return "1억 미만";
+  return `${Math.round(v).toLocaleString("ko-KR")}억`;
 }
 
 /** 뉴스 제목의 HTML 태그 제거 + 기본 엔티티 디코드. */
