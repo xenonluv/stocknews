@@ -606,18 +606,28 @@ def scan_reaccum_candidate(rec, p, events):
     # '소형 시총인데 거래대금 폭발'(화신류 초고회전)을 가점으로 반영. 게이트(절대액)는 불변 → flood 없음.
     cap_eok = float(now.get("market_cap_eok") or 0)
     turnover_pct = round((now.get("value") or 0) / 1e8 / cap_eok * 100, 1) if cap_eok > 0 else None
+    # 폭발일 회전율 = 폭발일 거래대금 / 폭발일 시총 — '시총 대비 얼마나 자명한 큰돈이 폭발일에 들어왔나'.
+    # 레지스트리엔 폭발일 시총이 없으나, 폭발일 시총 ≈ 현재시총 × (폭발일종가/현재가)로 복원(상장주식수 불변 가정,
+    # 신규 API 없이 daily+now 재사용). 폭발일종가 결측 시 현재시총 proxy. 화신류(폭발일 고회전)를 강하게 변별.
+    peak_close = next((b["close"] for b in daily if b.get("date") == rec.get("peak_date")), None)
+    now_price = float(now.get("price") or 0)
+    peak_cap_eok = (cap_eok * peak_close / now_price) if (cap_eok > 0 and peak_close and now_price > 0) else cap_eok
+    peak_turnover_pct = round(peak_eok / peak_cap_eok * 100, 1) if peak_cap_eok > 0 else None
+    if cap_eok <= 0:  # 시총 결측(KIS hts_avls 누락·일부 ETF/지주) → 회전율 가점 0이 되는 걸 조용히 두지 않음
+        log(f"  [warn] {code} {name} 시총 결측 → 회전율 가점 0(폭발 절대규모만 반영)")
     breakdown = {
         "base": REACCUM_SCORE,
         "re_value": round(min(12, max(0, (re_value_max - 30) / 270 * 12))),   # 재반등 거래대금 30~300억→0~12
         "re_body": round(min(6, max(0, (re_body_max - 2) / 4 * 6))),          # 재반등 몸통% 2~6%→0~6
         "re_count": min(6, max(0, (len(rbars) - 1) * 3)),                     # 자격 봉 1→0·2→3·3+→6
         "flow": round(min(8, max(0, ivtr_eok / 500 * 8))),                    # 투신 매집 ~500억→8 (UN/J≈1.0 실측 → 불변)
-        "explosion": round(min(6, max(0, (peak_eok - 1500) / 13500 * 6))),    # 폭발 규모 1,500억~1.5조→0~6 (UN기준 ×1.5)
-        "re_turnover": round(min(6, max(0, ((turnover_pct or 0) - 10) / 50 * 6))),  # 거래대금회전율 10~60%→0~6
+        "explosion": round(min(3, max(0, (peak_eok - 1500) / 13500 * 3))),    # 폭발 절대규모(보조 축소) 1,500억~1.5조→0~3
+        "peak_turnover": round(min(10, max(0, ((peak_turnover_pct or 0) - 20) / 80 * 10))),  # 폭발일 회전율(주) 20~100%→0~10
+        "re_turnover": round(min(6, max(0, ((turnover_pct or 0) - 10) / 50 * 6))),  # 재반등 당일 회전율 10~60%→0~6
     }
     score = min(95, REACCUM_SCORE + breakdown["re_value"] + breakdown["re_body"]
                 + breakdown["re_count"] + breakdown["flow"] + breakdown["explosion"]
-                + breakdown["re_turnover"])
+                + breakdown["peak_turnover"] + breakdown["re_turnover"])
     raw_breakdown = {k: 0 for k in breakdown}
     # 익일~3일 상승확률 라벨(표시 전용·보장 아님) — 동결 모델. daily/now에서 0 API로 피처 산출.
     vals_d = [d.get("value") or 0 for d in daily]
@@ -658,7 +668,8 @@ def scan_reaccum_candidate(rec, p, events):
         "high_pct": round(high_pct, 2),
         "fade_pct": round(fade_pct, 1),
         "value_eok": round(float(now.get("value") or 0) / 1e8),
-        "turnover_pct": turnover_pct,   # 거래대금회전율(거래대금/시총 %) — 시총 대비 손바뀜 강도(표시·검증용)
+        "turnover_pct": turnover_pct,   # 당일 거래대금회전율(거래대금/시총 %) — 시총 대비 손바뀜 강도(표시·검증용)
+        "peak_turnover_pct": peak_turnover_pct,  # 폭발일 회전율(폭발일 거래대금/폭발일 시총 %) — 폭발의 자명함
         "ma10": round(ma10, 1),
         "ma10_margin_pct": round(ma10_margin, 2),
         "spark": {"clusters": []},

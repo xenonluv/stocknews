@@ -46,9 +46,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 [조건 가점] event_calendar(D-10 정적 캘린더+규칙) × theme_map(뉴스·업종 테마 매칭)
    ▼
 [점수]
-   reaccum: 변별 점수 = base62 + re_value(0~12)+re_body(0~6)+re_count(0~6)+flow(0~8)+explosion(0~6)
-            +re_turnover(0~6, 거래대금회전율=거래대금/시총 10~60%), min(95, 합) — 표시·정렬 전용(score_raw=0).
-            suspect에 turnover_pct(거래대금/시총 %) 필드도 노출(시총 대비 손바뀜 강도, 화신류 초고회전 포착)
+   reaccum: 변별 점수 = base62 + re_value(0~12)+re_body(0~6)+re_count(0~6)+flow(0~8)
+            +peak_turnover(0~10, **폭발일 회전율** 20~100%, 주신호)+explosion(0~3, 폭발 절대규모 보조)
+            +re_turnover(0~6, 재반등 당일 회전율 10~60%), min(95, 합) — 표시·정렬 전용(score_raw=0).
+            폭발일 시총 ≈ 현재시총×(폭발일종가/현재가)로 복원(저장X·신규 API X). suspect에 turnover_pct(당일)·
+            peak_turnover_pct(폭발일) 노출 — 화신류(시총 대비 폭발) 강하게 변별(절대 거래대금만으론 못 봄)
    fade/shakeout: raw 가중합(통계 반영)
    forecast: 동결 모델 "3일내 +7% 터치" 과거 실측 확률 라벨(표시 전용)
    ▼

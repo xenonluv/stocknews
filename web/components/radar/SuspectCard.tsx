@@ -234,6 +234,12 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
               <p className="text-[11px] text-warning">
                 재매집 감시: {peakDaysAgo(s.reaccum.peak_date) ?? "-"}일 전{" "}
                 <span className="tabular-nums">{s.reaccum.peak_value_eok.toLocaleString()}억</span>
+                {s.peak_turnover_pct != null && (
+                  <span className="tabular-nums" title="폭발일 거래대금/시총 — 시총 대비 폭발의 자명함">
+                    {" (회전 "}
+                    {s.peak_turnover_pct}%{")"}
+                  </span>
+                )}
                 {" · "}고가{" "}
                 <span className="tabular-nums">+{s.reaccum.peak_high_pct.toFixed(1)}%</span>
                 {" 폭발"}
