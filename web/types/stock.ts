@@ -46,7 +46,9 @@ export interface PriceSection {
   marketCap: string | null; // "1,753조 8,836억" 표시용 원문
   tradingValue: number | null; // 당일 거래대금(억) — KRX+NXT 통합(레이더 카드와 동일 기준)
   tradingVolume: number | null; // 당일 거래량(주) — KRX+NXT 통합
-  turnoverPct: number | null; // 거래대금회전율 = 당일 거래대금/시총 ×100(%) — 시총 대비 손바뀜 강도
+  turnoverPct: number | null; // 거래대금회전율 = 당일 거래대금/유통시총 ×100(%) — 유통 대비 손바뀜 강도(폴백 시 시총)
+  floatRatio: number | null; // 유동비율(free float, 0~1) — wisereport 스크랩, null이면 전체 시총 기준 폴백
+  turnoverBasis: "float" | "cap"; // 회전율 기준: float(유통) | cap(시총 폴백)
   // NXT 시간외(애프터마켓/프리마켓) 가격 — 정규장 마감 후 변동. 표시·경고 전용(지표·평가는 KRX 종가 유지).
   afterMarket: {
     price: number; // NXT 시간외 체결가

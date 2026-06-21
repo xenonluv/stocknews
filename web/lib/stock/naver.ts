@@ -120,6 +120,37 @@ export async function fetchMinuteCandles(code: string, count = 480): Promise<Min
  * scripts/team3_price_context.py:fetch_daily 의 관대 파싱을 TS로 포팅.
  * calendarDays=300 → 거래일 약 200봉 (지표 최소 35봉 + 일목 78봉 충분).
  */
+/**
+ * 유동비율(free float, 0~1) — 네이버 finance coinfo가 iframe으로 부르는 wisereport 페이지를 스크랩.
+ * KIS·네이버모바일엔 유통주식수가 없어 '유통주식 회전율'(거래대금/유통시총)을 못 내므로 여기서 보충.
+ * HTML 스크랩이라 best-effort: 실패·파싱불가·이상치(0/>1)면 null → 호출부가 전체 시총 기준으로 폴백.
+ */
+export async function fetchFloatRatio(code: string): Promise<number | null> {
+  // 보통주(6자리·끝자리 0)만 — wisereport가 우선주/ETN 코드를 보통주 페이지로 합쳐 응답해 오귀속됨.
+  if (!/^\d{5}0$/.test(code)) return null;
+  try {
+    const url =
+      `https://navercomp.wisereport.co.kr/v2/company/c1010001.aspx` +
+      `?cmp_cd=${code}&target=finsum_more`;
+    const res = await fetch(url, {
+      cache: "no-store",
+      signal: AbortSignal.timeout(5000), // 비핵심·graceful 폴백이라 짧게(전체 리포트 tail latency 억제)
+      headers: { "User-Agent": UA, Referer: "https://finance.naver.com/" },
+    });
+    if (!res.ok) return null;
+    const html = await res.text();
+    // "발행주식수/유동비율" 행의 td 셀만 잡고(다음 행 숫자로 넘어가 오매칭 방지) 그 안에서 % 추출
+    const cellM = html.match(/발행주식수\/유동비율\s*<\/th>\s*<td[^>]*>([\s\S]*?)<\/td>/);
+    const m = cellM && cellM[1].match(/[\d,]+\s*주\s*\/\s*([\d.]+)\s*%/);
+    if (!m) return null;
+    const r = Number(m[1]) / 100;
+    // 3%~100%만 유효 — <3%(품절주·이상치)는 유통시총 극소→회전율 폭증이라 폴백
+    return r >= 0.03 && r <= 1 ? r : null;
+  } catch {
+    return null;
+  }
+}
+
 export async function fetchDaily(code: string, calendarDays = 300): Promise<Candle[]> {
   const end = ymdKST();
   const start = ymdKST(new Date(Date.now() - calendarDays * 86_400_000));

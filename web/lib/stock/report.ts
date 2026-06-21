@@ -16,6 +16,7 @@ import type {
 import {
   fetchBasic,
   fetchDaily,
+  fetchFloatRatio,
   fetchFinanceAnnual,
   fetchIntegration,
   fetchMinuteCandles,
@@ -59,7 +60,7 @@ function parseMarketAlert(raw: any): MarketAlert | null {
 }
 
 export async function buildStockReport(code: string): Promise<StockReport> {
-  const [basicR, integR, dailyR, newsR, trendR, finR, minuteR] = await Promise.allSettled([
+  const [basicR, integR, dailyR, newsR, trendR, finR, minuteR, floatR] = await Promise.allSettled([
     fetchBasic(code),
     fetchIntegration(code),
     fetchDaily(code),
@@ -67,6 +68,7 @@ export async function buildStockReport(code: string): Promise<StockReport> {
     fetchTrend(code),
     fetchFinanceAnnual(code),
     fetchMinuteCandles(code),
+    fetchFloatRatio(code),
   ]);
 
   const basic = val(basicR);
@@ -75,6 +77,7 @@ export async function buildStockReport(code: string): Promise<StockReport> {
   const rawNews = val(newsR);
   const trend = val(trendR);
   const fin = val(finR);
+  const floatRatio = val(floatR) ?? null; // 유동비율(0~1) — null이면 전체 시총 기준 폴백
 
   if (!basic && !integ && candles.length === 0 && !rawNews && !trend && !fin) {
     throw new UnreachableError("네이버 응답 없음");
@@ -150,12 +153,16 @@ export async function buildStockReport(code: string): Promise<StockReport> {
     // 거래대금·거래량은 totalInfos의 통합(KRX+NXT) 누적값 — 레이더 카드와 동일 기준.
     // (일별 candles의 volume은 siseJson=KRX 단독이라 별개. 가격·MA는 KRX 공식 유지.)
     const tradingValueEok = parseEok(info.accumulatedTradingValue);
-    // 거래대금회전율 = 거래대금/시총 — 시총 대비 손바뀜 강도(화신 6/19처럼 시총 ≈ 거래대금이면 ~100%).
+    // 거래대금회전율 = 거래대금/유통시총 — 유통주식 대비 손바뀜 강도. 최대주주 지분이 묶인 소형주는
+    // 유통시총이 작아 회전율이 더 크게(진짜 강도) 잡힌다(화신 유동 49%→유통 회전율 ~2배). floatRatio
+    // None(스크랩 실패)이면 전체 시총 기준 폴백(turnoverBasis="cap"). 음수 거래대금·시총≤0은 null.
     const capEok = parseEok(info.marketValue);
+    const floatEff = floatRatio && floatRatio > 0 ? floatRatio : 1;
+    const turnoverBasis: "float" | "cap" = floatRatio && floatRatio > 0 ? "float" : "cap";
     const turnoverPct =
       tradingValueEok !== null && tradingValueEok >= 0 && capEok !== null && capEok > 0
-        ? Math.round((tradingValueEok / capEok) * 1000) / 10
-        : null; // 음수 거래대금(비정상 응답)·시총≤0은 null → 음수/Infinity 회전율이 AI에 새지 않게
+        ? Math.round((tradingValueEok / (capEok * floatEff)) * 1000) / 10
+        : null;
     price = {
       close,
       change: num(basic?.compareToPreviousClosePrice) ?? 0,
@@ -164,6 +171,8 @@ export async function buildStockReport(code: string): Promise<StockReport> {
       tradingValue: tradingValueEok,
       tradingVolume: num(info.accumulatedTradingVolume),
       turnoverPct,
+      floatRatio,
+      turnoverBasis,
       afterMarket,
       per: num(info.per),
       eps: num(info.eps),

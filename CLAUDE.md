@@ -47,10 +47,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
    ▼
 [점수]
    reaccum: 변별 점수 = base62 + re_value(0~12)+re_body(0~6)+re_count(0~6)+flow(0~8)
-            +peak_turnover(0~10, **폭발일 회전율** 20~100%, 주신호)+explosion(0~3, 폭발 절대규모 보조)
-            +re_turnover(0~6, 재반등 당일 회전율 10~60%), min(95, 합) — 표시·정렬 전용(score_raw=0).
-            폭발일 시총 ≈ 현재시총×(폭발일종가/현재가)로 복원(저장X·신규 API X). suspect에 turnover_pct(당일)·
-            peak_turnover_pct(폭발일) 노출 — 화신류(시총 대비 폭발) 강하게 변별(절대 거래대금만으론 못 봄)
+            +peak_turnover(0~10, **폭발일 회전율** 주신호)+explosion(0~3, 폭발 절대규모 보조)
+            +re_turnover(0~6, 재반등 당일 회전율), min(95, 합) — 표시·정렬 전용(score_raw=0).
+            **회전율은 '유통주식수 기준'**(거래대금/유통시총) — 유동비율은 네이버 finance coinfo의 iframe
+            (`navercomp.wisereport.co.kr` "발행주식수/유동비율")을 `float_ratio.py`가 스크랩·캐시(data/float_ratio.json,
+            7일, fail-safe→시총 기준 폴백). 폭발일 시총 ≈ 현재시총×(폭발일종가/현재가) 복원. 유통 기준이라 시총
+            기준의 ~2배 스케일(peak_turnover 밴드 40~200%). suspect에 turnover_pct·peak_turnover_pct·float_ratio·
+            turnover_basis 노출 — 화신류(저유동+폭발)를 강하게 변별(화신 유동49%→유통회전율 190%, 제주 86%→30%)
    fade/shakeout: raw 가중합(통계 반영)
    forecast: 동결 모델 "3일내 +7% 터치" 과거 실측 확률 라벨(표시 전용)
    ▼
@@ -159,6 +162,8 @@ python3 scripts/event_calendar.py 10           # D-10 이벤트 확인
   - **거래대금·거래량은 통합(KRX+NXT)** — `totalInfos`의 `accumulatedTradingValue`(`parseEok`로 억 환산)·
     `accumulatedTradingVolume`을 `price.tradingValue/tradingVolume`로 노출(레이더 카드와 동일 기준, AI 프롬프트에도 포함).
     단 가격·MA·`volumeVs20d`는 일별 candles(siseJson=**KRX 단독·공식 종가**) 기반 그대로(통합 일별 이력은 네이버 공개 API에 없음).
+    **거래대금회전율은 '유통주식수 기준'**(거래대금/유통시총) — `fetchFloatRatio`(wisereport 스크랩, best-effort)로
+    유동비율을 받아 `price.turnoverPct`·`floatRatio`·`turnoverBasis` 노출(실패 시 시총 기준 폴백). 카드·AI 프롬프트 반영.
   - **NXT 시간외 야간 괴리 배지** — `basic.overMarketPriceInfo`(애프터마켓 종가 `overPrice`, ~20:00)를 `price.afterMarket`로
     노출. **당일 정규장 종가 대비 %를 직접 계산**(네이버는 전일 종가 대비로 줌)해 "장 마감 후 −X%·익일 갭 주의"를
     경고(화신 6/19: KRX 14,330 → NXT 야간 13,500 = −5.8%). 정규장 중(marketStatus=OPEN)엔 비노출(전일 시간외 혼동 방지).

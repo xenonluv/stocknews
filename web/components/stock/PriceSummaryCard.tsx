@@ -16,7 +16,12 @@ export function PriceSummaryCard({ price }: { price: PriceSection }) {
     { label: "거래대금(통합)", value: formatEok(price.tradingValue) },
     {
       label: "거래대금 회전율",
-      value: price.turnoverPct === null ? "—" : `${price.turnoverPct}% (거래대금/시총)`,
+      value:
+        price.turnoverPct === null
+          ? "—"
+          : price.turnoverBasis === "float" && price.floatRatio
+            ? `${price.turnoverPct}% (유통 기준, 유동 ${Math.round(price.floatRatio * 100)}%)`
+            : `${price.turnoverPct}% (시총 기준)`,
     },
     { label: "PER / 컨센서스", value: `${fmt(price.per, "배")} / ${fmt(price.cnsPer, "배")}` },
     { label: "PBR", value: fmt(price.pbr, "배") },

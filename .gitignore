@@ -20,6 +20,8 @@ open-trading-api/
 
 # 1회성 캘리브레이션 산출물 (재생성 가능 — nxt_calibration.py)
 data/nxt_calibration.json
+# 유동비율 캐시 (wisereport 스크랩, 재생성 가능 — float_ratio.py)
+data/float_ratio.json
 
 # 의존성
 node_modules/
