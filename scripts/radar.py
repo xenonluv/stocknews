@@ -602,6 +602,10 @@ def scan_reaccum_candidate(rec, p, events):
     re_value_max = max((b["value_eok"] for b in rbars), default=0)
     re_body_max = max((b["body_pct"] for b in rbars), default=0.0)
     peak_eok = int(float(rec.get("peak_value_eok") or 0))
+    # 거래대금회전율 = 당일 거래대금(UN)/시총 — 시총 대비 손바뀜 강도. 절대 거래대금 게이트가 못 보는
+    # '소형 시총인데 거래대금 폭발'(화신류 초고회전)을 가점으로 반영. 게이트(절대액)는 불변 → flood 없음.
+    cap_eok = float(now.get("market_cap_eok") or 0)
+    turnover_pct = round((now.get("value") or 0) / 1e8 / cap_eok * 100, 1) if cap_eok > 0 else None
     breakdown = {
         "base": REACCUM_SCORE,
         "re_value": round(min(12, max(0, (re_value_max - 30) / 270 * 12))),   # 재반등 거래대금 30~300억→0~12
@@ -609,9 +613,11 @@ def scan_reaccum_candidate(rec, p, events):
         "re_count": min(6, max(0, (len(rbars) - 1) * 3)),                     # 자격 봉 1→0·2→3·3+→6
         "flow": round(min(8, max(0, ivtr_eok / 500 * 8))),                    # 투신 매집 ~500억→8 (UN/J≈1.0 실측 → 불변)
         "explosion": round(min(6, max(0, (peak_eok - 1500) / 13500 * 6))),    # 폭발 규모 1,500억~1.5조→0~6 (UN기준 ×1.5)
+        "re_turnover": round(min(6, max(0, ((turnover_pct or 0) - 10) / 50 * 6))),  # 거래대금회전율 10~60%→0~6
     }
     score = min(95, REACCUM_SCORE + breakdown["re_value"] + breakdown["re_body"]
-                + breakdown["re_count"] + breakdown["flow"] + breakdown["explosion"])
+                + breakdown["re_count"] + breakdown["flow"] + breakdown["explosion"]
+                + breakdown["re_turnover"])
     raw_breakdown = {k: 0 for k in breakdown}
     # 익일~3일 상승확률 라벨(표시 전용·보장 아님) — 동결 모델. daily/now에서 0 API로 피처 산출.
     vals_d = [d.get("value") or 0 for d in daily]
@@ -652,6 +658,7 @@ def scan_reaccum_candidate(rec, p, events):
         "high_pct": round(high_pct, 2),
         "fade_pct": round(fade_pct, 1),
         "value_eok": round(float(now.get("value") or 0) / 1e8),
+        "turnover_pct": turnover_pct,   # 거래대금회전율(거래대금/시총 %) — 시총 대비 손바뀜 강도(표시·검증용)
         "ma10": round(ma10, 1),
         "ma10_margin_pct": round(ma10_margin, 2),
         "spark": {"clusters": []},

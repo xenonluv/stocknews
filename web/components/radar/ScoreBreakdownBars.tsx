@@ -19,6 +19,7 @@ const REACCUM_ITEMS: Item[] = [
   { key: "re_count", label: "재반등 봉 수", max: 6 },
   { key: "flow", label: "투신 매집", max: 8 },
   { key: "explosion", label: "폭발 규모", max: 6 },
+  { key: "re_turnover", label: "거래대금 회전율", max: 6 },
   { key: "ai", label: "AI 검증 보정", max: 10 },
 ];
 

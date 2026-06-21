@@ -63,6 +63,7 @@ export interface ScoreBreakdown {
   re_body?: number; // 재반등 몸통%
   re_count?: number; // 자격 봉 개수
   explosion?: number; // 폭발 규모(peak 거래대금)
+  re_turnover?: number; // 거래대금회전율(거래대금/시총) 가점 — 시총 대비 손바뀜 강도
 }
 
 /** 흔들기(눌림 후 재상승) 패턴 증거 — pattern === "shakeout"일 때만 */
@@ -169,6 +170,7 @@ export interface Suspect {
   high_pct: number; // 당일 고가 등락률 (조건 3)
   fade_pct: number; // 고가 상승분 대비 후퇴율
   value_eok: number; // 당일 거래대금(억)
+  turnover_pct?: number | null; // 거래대금회전율(거래대금/시총 %) — 시총 대비 손바뀜 강도
   ma10: number;
   ma10_margin_pct: number; // 10일선 대비 여유 (조건 4)
   spark: { clusters: SparkCluster[] };

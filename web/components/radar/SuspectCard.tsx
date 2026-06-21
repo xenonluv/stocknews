@@ -166,6 +166,12 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
           </div>
           <span className="text-xs text-muted-foreground tabular-nums">
             거래대금 {s.value_eok.toLocaleString()}억
+            {s.turnover_pct != null && (
+              <span title="거래대금/시총 — 시총 대비 손바뀜 강도(높을수록 큰돈 집중)">
+                {" · 회전 "}
+                {s.turnover_pct}%
+              </span>
+            )}
           </span>
         </div>
         <h2 className="flex items-baseline gap-2 text-2xl font-bold tracking-tight">
