@@ -284,7 +284,7 @@
   "028260": {
    "name": "삼성물산",
    "sector": "유통",
-   "entry": 523000.0,
+   "entry": 528000.0,
    "score": 0,
    "breakdown": {
     "base": 0,
@@ -308,13 +308,13 @@
     "re_turnover": 0
    },
    "rank": 1,
-   "change_pct": 6.41,
+   "change_pct": 7.43,
    "high_pct": 10.07,
-   "fade_pct": 36.4,
+   "fade_pct": 26.3,
    "pattern": "reaccum",
    "prime": false,
    "theme": "금리",
-   "value_eok": 5180,
+   "value_eok": 5318,
    "turnover_pct": 1.0,
    "peak_turnover_pct": 2.2,
    "turnover_basis": "float",
@@ -332,8 +332,8 @@
     "peak_date": "20260619",
     "peak_value_eok": 10802,
     "peak_high_pct": 15.14,
-    "ma20": 453950.0,
-    "ma20_margin_pct": 15.21,
+    "ma20": 454200.0,
+    "ma20_margin_pct": 16.25,
     "ivtr_net": 65910,
     "ivtr_days": 3,
     "ivtr_eok": 333,
@@ -363,7 +363,7 @@
   "028050": {
    "name": "삼성E&A",
    "sector": "일반서비스",
-   "entry": 50100.0,
+   "entry": 50200.0,
    "score": 0,
    "breakdown": {
     "base": 0,
@@ -387,13 +387,13 @@
     "re_turnover": 0
    },
    "rank": 2,
-   "change_pct": 2.98,
+   "change_pct": 3.19,
    "high_pct": 6.47,
-   "fade_pct": 54.0,
+   "fade_pct": 50.8,
    "pattern": "reaccum",
    "prime": false,
    "theme": "금리",
-   "value_eok": 1633,
+   "value_eok": 1659,
    "turnover_pct": 2.1,
    "peak_turnover_pct": 2.0,
    "turnover_basis": "float",
@@ -412,7 +412,7 @@
     "peak_value_eok": 1647,
     "peak_high_pct": 14.71,
     "ma20": 50082.5,
-    "ma20_margin_pct": 0.03,
+    "ma20_margin_pct": 0.23,
     "ivtr_net": 1044861,
     "ivtr_days": 4,
     "ivtr_eok": 503,
@@ -516,8 +516,8 @@
    "first_seen": "2026-06-22 09:12:39 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": false
   }
  },
- "as_of": "2026-06-22 14:12:29 KST"
+ "as_of": "2026-06-22 14:22:26 KST"
 }
