@@ -1,97 +1,13 @@
 {
-  "as_of": "2026-06-19 15:52 KST",
+  "as_of": "2026-06-22 09:07 KST",
   "intraday_rank": [
-    {
-      "ticker": "아모텍",
-      "code": "052710",
-      "tomorrow_up_prob": "92%",
-      "entry": 32600.0,
-      "target": 34230,
-      "stop": 31622,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.95)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 2.19,
-      "related_news": [
-        {
-          "title": "'AI 부품 초호황' MLCC 관련주 뜨자 상한가 직행한 '이 종목'",
-          "url": "https://n.news.naver.com/mnews/article/008/0005365208",
-          "office": "머니투데이",
-          "sentiment": "호재"
-        },
-        {
-          "title": "[유상증자 모니터] 아모텍, 주주업고 MLCC 증설…수익 개선 시험대",
-          "url": "https://n.news.naver.com/mnews/article/293/0000085371",
-          "office": "블로터",
-          "sentiment": "악재"
-        },
-        {
-          "title": "증권가 &quot;MLCC 매출 꾸준히 성장&quot;…아모텍 12%↑[특징주]",
-          "url": "https://n.news.naver.com/mnews/article/018/0006291252",
-          "office": "이데일리",
-          "sentiment": "호재"
-        }
-      ]
-    },
-    {
-      "ticker": "NC",
-      "code": "036570",
-      "tomorrow_up_prob": "68%",
-      "entry": 277000.0,
-      "target": 290850,
-      "stop": 268690,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.75)",
-        "RSI53.5 강세",
-        "Stoch골든"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null
-    },
-    {
-      "ticker": "삼성생명",
-      "code": "032830",
-      "tomorrow_up_prob": "64%",
-      "entry": 497000.0,
-      "target": 521850,
-      "stop": 482090,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "Stoch 과매수",
-      "day_change": null
-    },
-    {
-      "ticker": "제주반도체",
-      "code": "080220",
-      "tomorrow_up_prob": "62%",
-      "entry": 114300.0,
-      "target": 120015,
-      "stop": 110871,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "RSI63.5 강세",
-        "일목 구름위"
-      ],
-      "risk": "약한 마감, Stoch 과매수",
-      "day_change": -2.89
-    },
     {
       "ticker": "SK스퀘어",
       "code": "402340",
-      "tomorrow_up_prob": "60%",
-      "entry": 1780000.0,
-      "target": 1869000,
-      "stop": 1726600,
+      "tomorrow_up_prob": "61%",
+      "entry": 1821000.0,
+      "target": 1912050,
+      "stop": 1766370,
       "confidence": "중",
       "reasons": [
         "정배열",
@@ -99,436 +15,320 @@
         "일목 구름위"
       ],
       "risk": "약한 마감, Stoch 과매수",
-      "day_change": 4.71
-    },
-    {
-      "ticker": "삼성SDI",
-      "code": "006400",
-      "tomorrow_up_prob": "55%",
-      "entry": 555000.0,
-      "target": 582750,
-      "stop": 538350,
-      "confidence": "중",
-      "reasons": [
-        "Stoch골든",
-        "장중 18회 지속"
-      ],
-      "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
         {
-          "title": "효성중공업·삼성SDI 강세…전력설비·이차전지주 동반 상승",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=583263",
-          "office": "cbci",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "삼성SDI, 흑자전환 시점 앞당긴다는 전망에 12%대 강세[특징주]",
-          "url": "https://www.newsway.co.kr/news/view?ud=2026061214233015531",
+          "title": "프리마켓서 SK하이닉스·SK스퀘어 또 강세…삼성전자는 하락[특징주]",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026062208343411125",
           "office": "newsway",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "효성중공업·삼성SDI 강세…전력설비·이차전지주 동반 상승"
-    },
-    {
-      "ticker": "SK",
-      "code": "034730",
-      "tomorrow_up_prob": "39%",
-      "entry": 724000.0,
-      "target": 760200,
-      "stop": 702280,
-      "confidence": "하",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI68.3 강세"
-      ],
-      "risk": "Stoch 과매수",
-      "day_change": 5.39,
-      "related_news": [
-        {
-          "title": "SK, 지난해 사회적가치 32.2조 창출…역대 최대",
-          "url": "https://n.news.naver.com/mnews/article/374/0000517131",
-          "office": "SBS Biz",
-          "sentiment": "호재"
+          "sentiment": "악재",
+          "cause_score": 8,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 악재, 당일"
         },
         {
-          "title": "“이번에도 잃으면”…‘주식 1억 손실’ 미자, SK하이닉스 샀다는데",
-          "url": "https://n.news.naver.com/mnews/article/009/0005696188",
-          "office": "매일경제",
-          "sentiment": "악재"
-        },
-        {
-          "title": "삼전과 120조 차이…2천조 넘은 하이닉스 '7월 분수령' [마켓딥다이브...",
-          "url": "https://n.news.naver.com/mnews/article/215/0001255967",
-          "office": "한국경제TV",
-          "sentiment": "호재"
-        }
-      ]
-    },
-    {
-      "ticker": "화신",
-      "code": "010690",
-      "tomorrow_up_prob": "39%",
-      "entry": 14330.0,
-      "target": 15046,
-      "stop": 13900,
-      "confidence": "하",
-      "reasons": [
-        "강세마감(0.72)",
-        "MACD강세",
-        "RSI60.4 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] 화신, 로봇 사업 진입 가능성? 장초반 신고가 경신",
-          "url": "https://www.yna.co.kr/view/AKR20260617047200008?input=1195m",
+          "title": "NH아문디운용, K-반도체 ETF에 SK스퀘어 신규 편입",
+          "url": "https://www.yna.co.kr/view/AKR20260622028400008?input=1195m",
           "office": "yna",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "[특징주] 화신, 로봇 사업 진입 가능성? 장초반 신고가 경신"
-    },
-    {
-      "ticker": "디앤디파마텍",
-      "code": "347850",
-      "tomorrow_up_prob": "38%",
-      "entry": 111200.0,
-      "target": 116760,
-      "stop": 107864,
-      "confidence": "하",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI64.0 강세"
-      ],
-      "risk": "Stoch 과매수",
-      "day_change": 2.68,
-      "cause_news": [
-        {
-          "title": "[특징주] 디앤디파마텍, MASH 치료제 기대감에 18% 급등…기술수출 모멘...",
-          "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1712910",
-          "office": "ebn",
-          "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락"
-        },
-        {
-          "title": "탈모주가 이끈 바이오 강세…JW신약 '上', LG 손잡은 디앤디파마텍도 부...",
-          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=02847046645483360",
-          "office": "edaily",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 디앤디파마텍, MASH 치료제 기대감에 18% 급등…기술수출 모멘..."
-    },
-    {
-      "ticker": "이오테크닉스",
-      "code": "039030",
-      "tomorrow_up_prob": "38%",
-      "entry": 498500.0,
-      "target": 523425,
-      "stop": 483545,
-      "confidence": "하",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI51.1 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": -1.87
-    },
-    {
-      "ticker": "테크윙",
-      "code": "089030",
-      "tomorrow_up_prob": "38%",
-      "entry": 60200.0,
-      "target": 63210,
-      "stop": 58394,
-      "confidence": "하",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI53.8 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": -0.5
-    },
-    {
-      "ticker": "대한항공",
-      "code": "003490",
-      "tomorrow_up_prob": "38%",
-      "entry": 27950.0,
-      "target": 29348,
-      "stop": 27112,
-      "confidence": "하",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI56.3 강세"
-      ],
-      "risk": "약한 마감",
-      "day_change": -3.12,
-      "cause_news": [
-        {
-          "title": "대한항공 \"아시아나 통합, 연 3000억 시너지..2028년말 비용 상쇄\"",
-          "url": "https://www.mt.co.kr/industry/2026/06/19/2026061913184241752",
-          "office": "mt",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
-        },
-        {
-          "title": "[종목분석] 대한항공 목표가 18% 상향…아시아나 합병 시너지 주목",
-          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16102132",
-          "office": "topstarnews",
           "sentiment": "호재",
           "cause_score": 5,
           "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
-        },
-        {
-          "title": "대한항공, 미래 항공기술 승부수… AI 화물 수요 증가로 실적 기대감",
-          "url": "http://www.whitepaper.co.kr/news/articleView.html?idxno=263642",
-          "office": "whitepaper",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "대한항공 \"아시아나 통합, 연 3000억 시너지..2028년말 비용 상쇄\""
-    },
-    {
-      "ticker": "미래에셋생명",
-      "code": "085620",
-      "tomorrow_up_prob": "38%",
-      "entry": 34550.0,
-      "target": 36278,
-      "stop": 33514,
-      "confidence": "하",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "Stoch 과매수",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "미래에셋생명 주가, 급등세... 시장서 주목한 배경은",
-          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1164576",
-          "office": "ggilbo",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "[STOCK톺] 2대 주주 장내매수에 강세…미래에셋생명 18%↑",
-          "url": "http://www.newsian.co.kr/news/articleView.html?idxno=91114",
-          "office": "newsian",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락"
-        },
-        {
-          "title": "[특징주] 미래에셋생명 14%ㆍ증권우 9%대↑⋯ 자사주 취득ㆍ대주주 지분...",
-          "url": "https://www.etoday.co.kr/news/view/2594838",
-          "office": "etoday",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "미래에셋생명 주가, 급등세... 시장서 주목한 배경은"
+      "cause_summary": "프리마켓서 SK하이닉스·SK스퀘어 또 강세…삼성전자는 하락[특징주]"
     },
     {
-      "ticker": "LS ELECTRIC",
-      "code": "010120",
-      "tomorrow_up_prob": "38%",
-      "entry": 259000.0,
-      "target": 271950,
-      "stop": 251230,
-      "confidence": "하",
+      "ticker": "현대약품",
+      "code": "004310",
+      "tomorrow_up_prob": "55%",
+      "entry": 8530.0,
+      "target": 8956,
+      "stop": 8274,
+      "confidence": "중",
       "reasons": [
-        "정배열",
         "MACD강세",
-        "RSI54.3 강세"
+        "RSI64.4 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
       "cause_news": [
         {
-          "title": "[특징주] LS ELECTRIC, 수주 기대에 8%대 강세…전력기기주 다시 달아오...",
-          "url": "https://www.tokenpost.kr/news/economy/370972",
-          "office": "tokenpost",
+          "title": "탈모 급여 언급되자 관련주 '고공행진'…JW신약·현대약품·위더스 급등",
+          "url": "https://www.apsk.co.kr/news/articleView.html?idxno=539633",
+          "office": "apsk",
           "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "전력 슈퍼사이클 본격화…LS ELECTRIC·효성중공업 다시 폭풍질",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=461423",
-          "office": "pinpointnews",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] LS ELECTRIC, 수주 기대에 8%대 강세…전력기기주 다시 달아오..."
+      "cause_summary": "탈모 급여 언급되자 관련주 '고공행진'…JW신약·현대약품·위더스 급등"
     },
     {
-      "ticker": "삼익제약",
-      "code": "014950",
-      "tomorrow_up_prob": "38%",
-      "entry": 8410.0,
-      "target": 8830,
-      "stop": 8158,
+      "ticker": "가온전선",
+      "code": "000500",
+      "tomorrow_up_prob": "54%",
+      "entry": 344500.0,
+      "target": 361725,
+      "stop": 334165,
       "confidence": "하",
       "reasons": [
-        "강세마감(1.0)",
-        "RSI59.1 강세",
-        "Stoch골든"
+        "RSI52.4 강세",
+        "호재"
       ],
-      "risk": "특이 위험 낮음",
+      "risk": "약한 마감",
       "day_change": null,
       "cause_news": [
         {
-          "title": "[특징주] 삼익제약, 탈모 정책 수혜 기대…'上'",
-          "url": "https://www.ajunews.com/view/20260615141615642",
-          "office": "ajunews",
+          "title": "[특징주] 가온전선, 美 AI·전력망 수혜 기대에 14%대 급등",
+          "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1713052",
+          "office": "ebn",
           "sentiment": "호재",
           "cause_score": 11,
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
         },
         {
-          "title": "[특징주] 삼익제약, 청년 탈모 건보 적용 추진에 상승…'월 1회 탈모 주...",
-          "url": "https://www.cstimes.com/news/articleView.html?idxno=709696",
-          "office": "cstimes",
+          "title": "가온전선, 美 AI 데이터센터 수주 확대에 11%대 급등[특징주]",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026061814060790981",
+          "office": "newsway",
           "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 오래됨"
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
         },
         {
-          "title": "[특징주] 삼익제약, 장기지속형 주사제 플랫폼 기술 특허 등록...핵심 원...",
-          "url": "https://www.widedaily.com/news/articleView.html?idxno=286403",
-          "office": "widedaily",
+          "title": "[ET특징주]가온전선, 美 AI 데이터센터 수주 확대에 상승세",
+          "url": "https://www.etnews.com/20260618000211",
+          "office": "etnews",
           "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 오래됨"
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 오래됨"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 삼익제약, 탈모 정책 수혜 기대…'上'"
-    }
-  ],
-  "closing_bet": [
+      "cause_summary": "[특징주] 가온전선, 美 AI·전력망 수혜 기대에 14%대 급등"
+    },
     {
-      "ticker": "아모텍",
-      "code": "052710",
-      "tomorrow_up_prob": "92%",
-      "entry": 32600.0,
-      "target": 34230,
-      "stop": 31622,
-      "confidence": "상",
+      "ticker": "LG씨엔에스",
+      "code": "064400",
+      "tomorrow_up_prob": "51%",
+      "entry": 92700.0,
+      "target": 97335,
+      "stop": 89919,
+      "confidence": "하",
       "reasons": [
-        "강세마감(0.95)",
+        "RSI50.1 강세",
+        "호재"
+      ],
+      "risk": "약한 마감",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[특징주] LG그룹, 엔비디아와 AI 협력 확대 기대…LG CNS 프리마켓서 10%...",
+          "url": "https://www.newspim.com/news/view/20260622000109",
+          "office": "newspim",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] LG그룹, 엔비디아와 AI 협력 확대 기대…LG CNS 프리마켓서 10%..."
+    },
+    {
+      "ticker": "LG전자",
+      "code": "066570",
+      "tomorrow_up_prob": "45%",
+      "entry": 223500.0,
+      "target": 234675,
+      "stop": 216795,
+      "confidence": "하",
+      "reasons": [
+        "호재"
+      ],
+      "risk": "약한 마감",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[특징주] LG전자, 엔비디아와 AI·로봇 협력 확대 기대감에 강세",
+          "url": "https://www.tokenpost.kr/news/economy/371548",
+          "office": "tokenpost",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "LG전자 모듈러주택 확대…AI·가전·공조 동시에 키운다",
+          "url": "https://www.sedaily.com/article/20058313?ref=naver",
+          "office": "sedaily",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+        },
+        {
+          "title": "LG전자, 25kg 세탁건조기 라인업 확대…\"국내 최대 용량\"",
+          "url": "http://www.biztribune.co.kr/news/articleView.html?idxno=354991",
+          "office": "biztribune",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] LG전자, 엔비디아와 AI·로봇 협력 확대 기대감에 강세"
+    },
+    {
+      "ticker": "HPSP",
+      "code": "403870",
+      "tomorrow_up_prob": "39%",
+      "entry": 60500.0,
+      "target": 63525,
+      "stop": 58685,
+      "confidence": "하",
+      "reasons": [
+        "강세마감(0.98)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 2.19,
+      "day_change": 2.83,
       "related_news": [
         {
-          "title": "'AI 부품 초호황' MLCC 관련주 뜨자 상한가 직행한 '이 종목'",
-          "url": "https://n.news.naver.com/mnews/article/008/0005365208",
-          "office": "머니투데이",
-          "sentiment": "호재"
-        },
-        {
-          "title": "[유상증자 모니터] 아모텍, 주주업고 MLCC 증설…수익 개선 시험대",
-          "url": "https://n.news.naver.com/mnews/article/293/0000085371",
-          "office": "블로터",
-          "sentiment": "악재"
-        },
-        {
-          "title": "증권가 &quot;MLCC 매출 꾸준히 성장&quot;…아모텍 12%↑[특징주]",
-          "url": "https://n.news.naver.com/mnews/article/018/0006291252",
+          "title": "예스티, HPSP 고압어닐링장비 특허분쟁 2심도 승소…“특허 리스크 해...",
+          "url": "https://n.news.naver.com/mnews/article/018/0006309011",
           "office": "이데일리",
           "sentiment": "호재"
         }
       ]
     },
     {
-      "ticker": "NC",
-      "code": "036570",
-      "tomorrow_up_prob": "68%",
-      "entry": 277000.0,
-      "target": 290850,
-      "stop": 268690,
-      "confidence": "중",
+      "ticker": "테크윙",
+      "code": "089030",
+      "tomorrow_up_prob": "39%",
+      "entry": 62200.0,
+      "target": 65310,
+      "stop": 60334,
+      "confidence": "하",
       "reasons": [
-        "강세마감(0.75)",
-        "RSI53.5 강세",
-        "Stoch골든"
+        "강세마감(0.98)",
+        "정배열",
+        "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": null
+      "day_change": 0.17
     },
     {
-      "ticker": "삼성생명",
-      "code": "032830",
-      "tomorrow_up_prob": "64%",
-      "entry": 497000.0,
-      "target": 521850,
-      "stop": 482090,
-      "confidence": "중",
+      "ticker": "삼성물산",
+      "code": "028260",
+      "tomorrow_up_prob": "39%",
+      "entry": 528000.0,
+      "target": 554400,
+      "stop": 512160,
+      "confidence": "하",
       "reasons": [
+        "강세마감(0.92)",
         "정배열",
-        "MACD강세",
-        "일목 구름위"
+        "MACD강세"
       ],
-      "risk": "Stoch 과매수",
-      "day_change": null
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[특징주] 삼성물산, 장중 15% 급등…SMR 기대감에 목표가 상향",
+          "url": "https://www.youthdaily.co.kr/news/article.html?no=221280",
+          "office": "youthdaily",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 오래됨"
+        },
+        {
+          "title": "[특징주] 삼성물산, 지분가치 재평가·SMR 기대감에 급등",
+          "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1713195",
+          "office": "ebn",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 삼성물산, 장중 15% 급등…SMR 기대감에 목표가 상향"
     },
     {
       "ticker": "제주반도체",
       "code": "080220",
-      "tomorrow_up_prob": "62%",
-      "entry": 114300.0,
-      "target": 120015,
-      "stop": 110871,
-      "confidence": "중",
+      "tomorrow_up_prob": "38%",
+      "entry": 121900.0,
+      "target": 127995,
+      "stop": 118243,
+      "confidence": "하",
       "reasons": [
+        "강세마감(0.99)",
         "정배열",
-        "RSI63.5 강세",
-        "일목 구름위"
+        "MACD강세"
       ],
-      "risk": "약한 마감, Stoch 과매수",
-      "day_change": -2.89
+      "risk": "Stoch 과매수",
+      "day_change": 0.7
     },
+    {
+      "ticker": "원익IPS",
+      "code": "240810",
+      "tomorrow_up_prob": "38%",
+      "entry": 160300.0,
+      "target": 168315,
+      "stop": 155491,
+      "confidence": "하",
+      "reasons": [
+        "강세마감(0.89)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": -0.96
+    },
+    {
+      "ticker": "삼화콘덴서",
+      "code": "001820",
+      "tomorrow_up_prob": "38%",
+      "entry": 181000.0,
+      "target": 190050,
+      "stop": 175570,
+      "confidence": "하",
+      "reasons": [
+        "강세마감(0.93)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[특징주] 삼화콘덴서, \"삼성전기 자율주행용 MLCC 양산\"에 핵심 수혜주로...",
+          "url": "https://www.widedaily.com/news/articleView.html?idxno=296036",
+          "office": "widedaily",
+          "sentiment": "호재",
+          "cause_score": 9,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 오래됨"
+        },
+        {
+          "title": "삼화콘덴서 주가 최근 5거래일 주가 등락",
+          "url": "https://www.joongangenews.com/news/articleView.html?idxno=527136",
+          "office": "joongangenews",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 삼화콘덴서, \"삼성전기 자율주행용 MLCC 양산\"에 핵심 수혜주로..."
+    }
+  ],
+  "closing_bet": [
     {
       "ticker": "SK스퀘어",
       "code": "402340",
-      "tomorrow_up_prob": "60%",
-      "entry": 1780000.0,
-      "target": 1869000,
-      "stop": 1726600,
+      "tomorrow_up_prob": "61%",
+      "entry": 1821000.0,
+      "target": 1912050,
+      "stop": 1766370,
       "confidence": "중",
       "reasons": [
         "정배열",
@@ -536,14 +336,61 @@
         "일목 구름위"
       ],
       "risk": "약한 마감, Stoch 과매수",
-      "day_change": 4.71
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "프리마켓서 SK하이닉스·SK스퀘어 또 강세…삼성전자는 하락[특징주]",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026062208343411125",
+          "office": "newsway",
+          "sentiment": "악재",
+          "cause_score": 8,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 악재, 당일"
+        },
+        {
+          "title": "NH아문디운용, K-반도체 ETF에 SK스퀘어 신규 편입",
+          "url": "https://www.yna.co.kr/view/AKR20260622028400008?input=1195m",
+          "office": "yna",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "프리마켓서 SK하이닉스·SK스퀘어 또 강세…삼성전자는 하락[특징주]"
+    },
+    {
+      "ticker": "현대약품",
+      "code": "004310",
+      "tomorrow_up_prob": "55%",
+      "entry": 8530.0,
+      "target": 8956,
+      "stop": 8274,
+      "confidence": "중",
+      "reasons": [
+        "MACD강세",
+        "RSI64.4 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "탈모 급여 언급되자 관련주 '고공행진'…JW신약·현대약품·위더스 급등",
+          "url": "https://www.apsk.co.kr/news/articleView.html?idxno=539633",
+          "office": "apsk",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "탈모 급여 언급되자 관련주 '고공행진'…JW신약·현대약품·위더스 급등"
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
   "backtest": {
-    "sample": 60,
-    "recent_hit_rate": "42% (n=60)",
-    "avg_return": -2.31,
-    "target_rate": "52%"
+    "sample": 65,
+    "recent_hit_rate": "38% (n=65)",
+    "avg_return": -2.69,
+    "target_rate": "49%"
   }
 }
