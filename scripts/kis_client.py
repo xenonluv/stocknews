@@ -307,8 +307,9 @@ def minute_bars_today(code, until="153000", market="J"):
     날짜 필터 이중 가드. 휴장일·개장 전에는 빈 리스트를 반환한다
     (전일 분봉이 당일로 혼입되면 스파크 오탐이 나므로 절대 섞지 않는다).
 
-    market 기본 "J"(KRX) — 재반등 10분봉은 정규장 의미라 NXT 장전/야간 혼입을 막는다.
-    UN으로 호출해도 SESSION_OPEN~CLOSE 시간창 가드로 정규장 봉만 채택한다(거래일 실측 검증 후 UN 전환).
+    market 기본 "J"(KRX). radar는 "UN"(KRX+NXT 통합)으로 호출 — 거래대금·수급과 정합.
+    UN엔 프리마켓(08:30~09:00) 봉이 섞이지만 SESSION_OPEN~CLOSE 시간창 가드로 정규장 봉만 채택한다.
+    (until 기본 15:30이라 앵커가 15:30을 안 넘어 애프터마켓 봉은 애초에 fetch되지 않는다 — 2026-06-22 실측.)
     """
     mkt = market
     now = datetime.now()
@@ -324,27 +325,39 @@ def minute_bars_today(code, until="153000", market="J"):
                      "FID_INPUT_HOUR_1": hour, "FID_PW_DATA_INCU_YN": "N",
                      "FID_ETC_CLS_CODE": ""})
         rows = res.get("output2", []) or []
-        got = 0
+        if not rows:
+            break  # 더 이상 데이터 없음
+        page_times = []  # 이 페이지의 당일 봉 시각(가드 전 — 페이징 커서용)
         for row in rows:
             t = row.get("stck_cntg_hour", "")
             if row.get("stck_bsop_date") != today:
                 continue  # 전일/휴장일 봉 배제
+            if len(t) != 6:
+                continue
+            page_times.append(t)
             if not (SESSION_OPEN <= t <= SESSION_CLOSE):
-                continue  # NXT 장전(~09:00)·애프터마켓(15:30~) 봉 배제 — 정규장만
-            if len(t) == 6 and t not in bars:
+                continue  # NXT 장전(~09:00)·애프터마켓(15:30~) 봉 배제 — 정규장만 채택
+            if t not in bars:
                 bars[t] = {"time": t,
                            "open": _f(row.get("stck_oprc")),
                            "high": _f(row.get("stck_hgpr")),
                            "low": _f(row.get("stck_lwpr")),
                            "close": _f(row.get("stck_prpr")),
                            "vol": _f(row.get("cntg_vol"))}
-                got += 1
-        if not rows or got == 0:
+        # 종료·다음커서는 가드 통과수(got)가 아니라 **페이지의 당일 최소시각(page_earliest)** 으로 구동.
+        # UN은 장 밖 봉이 섞여 한 페이지가 전부 정규장 밖일 수 있는데(got==0), 정규장 봉이 더 과거(위)에
+        # 남아있으면 누락하면 안 된다. page_earliest로 페이징하면 그런 페이지를 건너 정규장까지 도달한다.
+        # ※ radar 경로는 until≤15:30이라 앵커가 15:30을 안 넘어 애프터마켓 페이지는 fetch되지 않는다
+        #   (실재하는 장 밖 봉은 프리마켓 08:30~09:00). until을 키워 호출하는 경우까지 일반 대비한 안전판.
+        # 당일 봉이 아예 없으면(전일 진입) 종료.
+        if not page_times:
             break
-        earliest = min(bars.keys())
-        if earliest <= "090000":  # 09:00봉까지 수집 후 종료
+        page_earliest = min(page_times)
+        if page_earliest <= "090000":  # 09:00봉까지 도달(09:00봉은 위에서 이미 수집) → 종료
             break
-        prev = datetime.strptime(earliest, "%H%M%S") - timedelta(minutes=1)
+        # 다음 앵커는 반드시 현재 앵커 미만으로 — KIS가 앵커 이상 봉을 반환하는 이변에도 진행 보장(정지 방지).
+        next_anchor = min(page_earliest, hour)
+        prev = datetime.strptime(next_anchor, "%H%M%S") - timedelta(minutes=1)
         if prev.strftime("%H%M%S") < "090000":
             break
         hour = prev.strftime("%H%M%S")
