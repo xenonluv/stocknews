@@ -1,38 +1,46 @@
 {
   "date": "20260622",
-  "as_of": "2026-06-22 10:22 KST",
+  "as_of": "2026-06-22 10:37 KST",
   "bets": [
+    {
+      "code": "028260",
+      "ticker": "삼성물산",
+      "entry": 537000.0,
+      "target": 563850,
+      "raw": 93,
+      "prob": "93%"
+    },
+    {
+      "code": "093370",
+      "ticker": "후성",
+      "entry": 18110.0,
+      "target": 19016,
+      "raw": 90,
+      "prob": "90%"
+    },
     {
       "code": "066570",
       "ticker": "LG전자",
-      "entry": 237000.0,
-      "target": 248850,
-      "raw": 68,
-      "prob": "68%"
+      "entry": 239500.0,
+      "target": 251475,
+      "raw": 69,
+      "prob": "69%"
     },
     {
-      "code": "064400",
-      "ticker": "LG씨엔에스",
-      "entry": 94000.0,
-      "target": 98700,
-      "raw": 60,
-      "prob": "60%"
+      "code": "402340",
+      "ticker": "SK스퀘어",
+      "entry": 1953000.0,
+      "target": 2050650,
+      "raw": 64,
+      "prob": "64%"
     },
     {
-      "code": "000990",
-      "ticker": "DB하이텍",
-      "entry": 165200.0,
-      "target": 173460,
-      "raw": 57,
-      "prob": "57%"
-    },
-    {
-      "code": "079650",
-      "ticker": "서산",
-      "entry": 6250.0,
-      "target": 6562,
-      "raw": 56,
-      "prob": "56%"
+      "code": "003550",
+      "ticker": "LG",
+      "entry": 113900.0,
+      "target": 119595,
+      "raw": 64,
+      "prob": "64%"
     }
   ]
 }

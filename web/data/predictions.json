@@ -1,188 +1,21 @@
 {
-  "as_of": "2026-06-22 10:22 KST",
+  "as_of": "2026-06-22 10:37 KST",
   "intraday_rank": [
-    {
-      "ticker": "LG전자",
-      "code": "066570",
-      "tomorrow_up_prob": "68%",
-      "entry": 237000.0,
-      "target": 248850,
-      "stop": 229890,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.91)",
-        "RSI51.0 강세",
-        "호재"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "LG전자, 엔비디아 협력 기대감에 8%대 급등…장중 23만원 돌파[특징주]",
-          "url": "https://www.newsway.co.kr/news/view?ud=2026062210081260933",
-          "office": "newsway",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] LG전자, 엔비디아와 협력 기대감에 9% 급등",
-          "url": "http://www.metroseoul.co.kr/article/20260622500049",
-          "office": "metroseoul",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "LG전자·CNS 10%안팎 강세…엔비디아 협력 기대↑[핫종목]",
-          "url": "https://www.news1.kr/finance/general-stock/6204045",
-          "office": "news1",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "LG전자, 엔비디아 협력 기대감에 8%대 급등…장중 23만원 돌파[특징주]"
-    },
-    {
-      "ticker": "LG씨엔에스",
-      "code": "064400",
-      "tomorrow_up_prob": "60%",
-      "entry": 94000.0,
-      "target": 98700,
-      "stop": 91180,
-      "confidence": "중",
-      "reasons": [
-        "RSI50.9 강세",
-        "호재",
-        "장중 6회 지속"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] LG전자, 엔비디아 협력 구체화 기대에 강세…LG씨엔에스도 9%↑",
-          "url": "https://biz.chosun.com/stock/stock_general/2026/06/22/QMWIVJNFV5CZHG5Q3BKWHTEG5E/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-          "office": "biz",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "(특징주)엔비디아 협력 기대감…LG전자·LG CNS '강세'",
-          "url": "http://www.newstomato.com/ReadNews.aspx?no=1304711&inflow=N",
-          "office": "newstomato",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "LG전자 11% 급등 이어 LG씨엔에스 12% 상승...LG그룹주 강세",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439986",
-          "office": "econonews",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] LG전자, 엔비디아 협력 구체화 기대에 강세…LG씨엔에스도 9%↑"
-    },
-    {
-      "ticker": "DB하이텍",
-      "code": "000990",
-      "tomorrow_up_prob": "57%",
-      "entry": 165200.0,
-      "target": 173460,
-      "stop": 160244,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.94)",
-        "RSI50.8 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "related_news": [
-        {
-          "title": "AI칩 수혜株 옥석 가리기 시작됐나",
-          "url": "https://n.news.naver.com/mnews/article/009/0005694701",
-          "office": "매일경제",
-          "sentiment": "혼재"
-        }
-      ]
-    },
-    {
-      "ticker": "서산",
-      "code": "079650",
-      "tomorrow_up_prob": "56%",
-      "entry": 6250.0,
-      "target": 6562,
-      "stop": 6062,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(1.0)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "RSI95.8 과매수, Stoch 과매수",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "서산, 투자경고종목 지정 후 주가 급등→1일간 매매거래 정지",
-          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16100718",
-          "office": "topstarnews",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "서산, 투자경고종목 지정 후 주가 급등→1일간 매매거래 정지"
-    },
-    {
-      "ticker": "HPSP",
-      "code": "403870",
-      "tomorrow_up_prob": "39%",
-      "entry": 59400.0,
-      "target": 62370,
-      "stop": 57618,
-      "confidence": "하",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI52.2 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 5.3,
-      "cause_news": [
-        {
-          "title": "[속보] HPSP VI 발동, 주가 주초장 장초반부터 도약…6만원선 안착 시도",
-          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=583606",
-          "office": "cbci",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "[속보] HPSP VI 발동, 주가 주초장 장초반부터 도약…6만원선 안착 시도"
-    },
     {
       "ticker": "삼성물산",
       "code": "028260",
-      "tomorrow_up_prob": "39%",
-      "entry": 533000.0,
-      "target": 559650,
-      "stop": 517010,
-      "confidence": "하",
+      "tomorrow_up_prob": "93%",
+      "entry": 537000.0,
+      "target": 563850,
+      "stop": 520890,
+      "confidence": "상",
       "reasons": [
-        "강세마감(0.98)",
+        "강세마감(0.96)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 7.43,
+      "day_change": 8.24,
       "cause_news": [
         {
           "title": "삼성물산, 계열사 지분가치 159조 재평가…7%대 강세",
@@ -193,20 +26,12 @@
           "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         },
         {
-          "title": "[특징주] 삼성물산, 지분가치 159조 재평가에 7%대 강세…목표가 70만원...",
-          "url": "https://www.tokenpost.kr/news/economy/371573",
-          "office": "tokenpost",
+          "title": "강남 재건축 시공사 선정·삼전 지분 보유… 삼성물산, 8%대 ↑",
+          "url": "https://www.mt.co.kr/stock/2026/06/22/2026062210163164356",
+          "office": "mt",
           "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] 삼성물산, 계열사 지분가치 재평가 기대에 5%대 강세",
-          "url": "https://www.ajunews.com/view/20260622094143926",
-          "office": "ajunews",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "높음",
@@ -215,13 +40,13 @@
     {
       "ticker": "후성",
       "code": "093370",
-      "tomorrow_up_prob": "39%",
-      "entry": 18140.0,
-      "target": 19047,
-      "stop": 17596,
-      "confidence": "하",
+      "tomorrow_up_prob": "90%",
+      "entry": 18110.0,
+      "target": 19016,
+      "stop": 17567,
+      "confidence": "상",
       "reasons": [
-        "강세마감(0.86)",
+        "강세마감(0.84)",
         "정배열",
         "MACD강세"
       ],
@@ -249,15 +74,303 @@
       ]
     },
     {
+      "ticker": "LG전자",
+      "code": "066570",
+      "tomorrow_up_prob": "69%",
+      "entry": 239500.0,
+      "target": 251475,
+      "stop": 232315,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.9)",
+        "RSI51.4 강세",
+        "호재"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "LG전자, 엔비디아 협력 기대감에 8%대 급등…장중 23만원 돌파[특징주]",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026062210081260933",
+          "office": "newsway",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[특징주] LG전자, 엔비디아와 협력 기대감에 9% 급등",
+          "url": "http://www.metroseoul.co.kr/article/20260622500049",
+          "office": "metroseoul",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[STOCK톺] 엔비디아 협력 기대감...LG전자 10%대 급등",
+          "url": "http://www.newsian.co.kr/news/articleView.html?idxno=91258",
+          "office": "newsian",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "LG전자, 엔비디아 협력 기대감에 8%대 급등…장중 23만원 돌파[특징주]"
+    },
+    {
+      "ticker": "SK스퀘어",
+      "code": "402340",
+      "tomorrow_up_prob": "64%",
+      "entry": 1953000.0,
+      "target": 2050650,
+      "stop": 1894410,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.88)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "RSI80.2 과매수, Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "프리마켓서 SK하이닉스·SK스퀘어 또 강세…삼성전자는 하락[특징주]",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026062208343411125",
+          "office": "newsway",
+          "sentiment": "악재",
+          "cause_score": 8,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 악재, 당일"
+        },
+        {
+          "title": "“AI 반도체 훈풍에 주주환원까지”…NH투자, SK스퀘어 목표가 270만원으...",
+          "url": "https://www.viva100.com/article/20260622500245",
+          "office": "viva100",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "프리마켓서 SK하이닉스·SK스퀘어 또 강세…삼성전자는 하락[특징주]"
+    },
+    {
+      "ticker": "LG",
+      "code": "003550",
+      "tomorrow_up_prob": "64%",
+      "entry": 113900.0,
+      "target": 119595,
+      "stop": 110483,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.91)",
+        "Stoch골든",
+        "호재"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "LG전자, 엔비디아 협력 기대감에 8%대 급등…장중 23만원 돌파[특징주]",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026062210081260933",
+          "office": "newsway",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[STOCK톺] 엔비디아 협력 기대감...LG전자 10%대 급등",
+          "url": "http://www.newsian.co.kr/news/articleView.html?idxno=91258",
+          "office": "newsian",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "“엔비디아와 손잡았다”…협력 기대감에 LG전자 ‘불기둥’ [오늘, 이...",
+          "url": "https://www.mk.co.kr/article/12079657",
+          "office": "mk",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "LG전자, 엔비디아 협력 기대감에 8%대 급등…장중 23만원 돌파[특징주]"
+    },
+    {
+      "ticker": "LG씨엔에스",
+      "code": "064400",
+      "tomorrow_up_prob": "61%",
+      "entry": 94100.0,
+      "target": 98805,
+      "stop": 91277,
+      "confidence": "중",
+      "reasons": [
+        "RSI51.0 강세",
+        "호재",
+        "장중 7회 지속"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "(특징주)엔비디아 협력 기대감…LG전자·LG CNS '강세'",
+          "url": "http://www.newstomato.com/ReadNews.aspx?no=1304711&inflow=N",
+          "office": "newstomato",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "(특징주)엔비디아 협력 기대감…LG전자·LG CNS '강세'"
+    },
+    {
+      "ticker": "DB하이텍",
+      "code": "000990",
+      "tomorrow_up_prob": "58%",
+      "entry": 164800.0,
+      "target": 173040,
+      "stop": 159856,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.91)",
+        "RSI50.6 강세",
+        "장중 3회 지속"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "related_news": [
+        {
+          "title": "AI칩 수혜株 옥석 가리기 시작됐나",
+          "url": "https://n.news.naver.com/mnews/article/009/0005694701",
+          "office": "매일경제",
+          "sentiment": "혼재"
+        }
+      ]
+    },
+    {
+      "ticker": "서산",
+      "code": "079650",
+      "tomorrow_up_prob": "57%",
+      "entry": 6250.0,
+      "target": 6562,
+      "stop": 6062,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(1.0)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "RSI95.8 과매수, Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "서산, 투자경고종목 지정 후 주가 급등→1일간 매매거래 정지",
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16100718",
+          "office": "topstarnews",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "서산, 투자경고종목 지정 후 주가 급등→1일간 매매거래 정지"
+    },
+    {
+      "ticker": "원익IPS",
+      "code": "240810",
+      "tomorrow_up_prob": "39%",
+      "entry": 164400.0,
+      "target": 172620,
+      "stop": 159468,
+      "confidence": "하",
+      "reasons": [
+        "강세마감(0.72)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 5.26,
+      "cause_news": [
+        {
+          "title": "[특징주] 원익IPS, 반도체 수출 급증에 장중 강세…소부장 전반 매수세...",
+          "url": "https://www.tokenpost.kr/news/economy/371583",
+          "office": "tokenpost",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 원익IPS, 반도체 수출 급증에 장중 강세…소부장 전반 매수세..."
+    },
+    {
+      "ticker": "HPSP",
+      "code": "403870",
+      "tomorrow_up_prob": "39%",
+      "entry": 58600.0,
+      "target": 61530,
+      "stop": 56842,
+      "confidence": "하",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI51.6 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 4.06,
+      "cause_news": [
+        {
+          "title": "[속보] HPSP VI 발동, 주가 주초장 장초반부터 도약…6만원선 안착 시도",
+          "url": "https://www.cbci.co.kr/news/articleView.html?idxno=583606",
+          "office": "cbci",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "[속보] HPSP VI 발동, 주가 주초장 장초반부터 도약…6만원선 안착 시도"
+    },
+    {
+      "ticker": "예스티",
+      "code": "122640",
+      "tomorrow_up_prob": "39%",
+      "entry": 37300.0,
+      "target": 39165,
+      "stop": 36181,
+      "confidence": "하",
+      "reasons": [
+        "강세마감(0.7)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 8.05,
+      "cause_news": [
+        {
+          "title": "\"반도체·디스플레이 다 잡았다\"...예스티, 고도화 공정 투자 확대 최대...",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=461927",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "중간",
+      "cause_summary": "\"반도체·디스플레이 다 잡았다\"...예스티, 고도화 공정 투자 확대 최대..."
+    },
+    {
       "ticker": "한솔테크닉스",
       "code": "004710",
       "tomorrow_up_prob": "39%",
-      "entry": 13850.0,
-      "target": 14542,
-      "stop": 13434,
+      "entry": 14080.0,
+      "target": 14784,
+      "stop": 13658,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.76)",
+        "강세마감(0.9)",
         "정배열",
         "MACD강세"
       ],
@@ -285,36 +398,20 @@
       ]
     },
     {
-      "ticker": "원익IPS",
-      "code": "240810",
-      "tomorrow_up_prob": "38%",
-      "entry": 163100.0,
-      "target": 171255,
-      "stop": 158207,
-      "confidence": "하",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI59.6 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 5.06
-    },
-    {
       "ticker": "삼성E&A",
       "code": "028050",
       "tomorrow_up_prob": "38%",
-      "entry": 50200.0,
-      "target": 52710,
-      "stop": 48694,
+      "entry": 51000.0,
+      "target": 53550,
+      "stop": 49470,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.71)",
+        "강세마감(0.81)",
         "정배열",
-        "RSI50.0 강세"
+        "RSI51.2 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 2.98,
+      "day_change": 5.24,
       "related_news": [
         {
           "title": "[아침밥] 교보증권 &quot;삼성E&amp;A, LNG 플랜트 확대 수혜…중장기 기대&quot;",
@@ -334,64 +431,28 @@
       "ticker": "테크윙",
       "code": "089030",
       "tomorrow_up_prob": "38%",
-      "entry": 60500.0,
-      "target": 63525,
-      "stop": 58685,
+      "entry": 60300.0,
+      "target": 63315,
+      "stop": 58491,
       "confidence": "하",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI54.1 강세"
+        "RSI53.9 강세"
       ],
-      "risk": "특이 위험 낮음",
+      "risk": "약한 마감",
       "day_change": 1
-    },
-    {
-      "ticker": "SK스퀘어",
-      "code": "402340",
-      "tomorrow_up_prob": "38%",
-      "entry": 1941000.0,
-      "target": 2038050,
-      "stop": 1882770,
-      "confidence": "하",
-      "reasons": [
-        "강세마감(0.97)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "Stoch 과매수",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "프리마켓서 SK하이닉스·SK스퀘어 또 강세…삼성전자는 하락[특징주]",
-          "url": "https://www.newsway.co.kr/news/view?ud=2026062208343411125",
-          "office": "newsway",
-          "sentiment": "악재",
-          "cause_score": 8,
-          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 악재, 당일"
-        },
-        {
-          "title": "“AI 반도체 훈풍에 주주환원까지”…NH투자, SK스퀘어 목표가 270만원으...",
-          "url": "https://www.viva100.com/article/20260622500245",
-          "office": "viva100",
-          "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "프리마켓서 SK하이닉스·SK스퀘어 또 강세…삼성전자는 하락[특징주]"
     },
     {
       "ticker": "SK하이닉스",
       "code": "000660",
       "tomorrow_up_prob": "38%",
-      "entry": 2907000.0,
-      "target": 3052350,
-      "stop": 2819790,
+      "entry": 2918000.0,
+      "target": 3063900,
+      "stop": 2830460,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.98)",
+        "강세마감(0.88)",
         "정배열",
         "MACD강세"
       ],
@@ -399,47 +460,47 @@
       "day_change": null,
       "cause_news": [
         {
-          "title": "SK하이닉스 주가, 美 ADR 상장 임박 기대감에 강세... \"목표주가 430만원...",
-          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1164819",
-          "office": "ggilbo",
+          "title": "[특징주] SK하이닉스, 294만원 고지… 장중 294만2000원 터치",
+          "url": "https://www.sidae.com/article/2026062210290184114",
+          "office": "sidae",
           "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         },
         {
-          "title": "'9000선' 방어 총력전...SK하이닉스 ADR 기대에 4% 강세",
-          "url": "https://www.ntoday.co.kr/news/articleView.html?idxno=127746",
-          "office": "ntoday",
-          "sentiment": "악재",
-          "cause_score": 6,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 악재, 당일"
+          "title": "[특징주] 삼성전자와 SK하이닉스, 미국-이란 갈등 후 진전 '상승 전환'",
+          "url": "https://www.g-enews.com/view.php?ud=20260622095635487744093b5d4e_1",
+          "office": "g-enews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
         },
         {
-          "title": "‘삼전·하이닉스 직행’ 반도체 계약학과, 서울대 자연계 넘었다",
-          "url": "https://www.sedaily.com/article/20058404?ref=naver",
-          "office": "sedaily",
+          "title": "시총 1위 뒤집히는 건 시간 문제?…SK하이닉스, 삼성전자 '맹추격'[매일...",
+          "url": "https://www.imaeil.com/page/view/2026062210031708343",
+          "office": "imaeil",
           "sentiment": "호재",
           "cause_score": 5,
-          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "SK하이닉스 주가, 美 ADR 상장 임박 기대감에 강세... \"목표주가 430만원..."
+      "cause_summary": "[특징주] SK하이닉스, 294만원 고지… 장중 294만2000원 터치"
     },
     {
       "ticker": "한울반도체",
       "code": "320000",
       "tomorrow_up_prob": "38%",
-      "entry": 22400.0,
-      "target": 23520,
-      "stop": 21728,
+      "entry": 22250.0,
+      "target": 23362,
+      "stop": 21582,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.86)",
+        "강세마감(0.83)",
         "정배열",
         "MACD강세"
       ],
-      "risk": "RSI82.0 과매수, Stoch 과매수",
+      "risk": "RSI81.8 과매수, Stoch 과매수",
       "day_change": null,
       "cause_news": [
         {
@@ -473,16 +534,88 @@
   ],
   "closing_bet": [
     {
+      "ticker": "삼성물산",
+      "code": "028260",
+      "tomorrow_up_prob": "93%",
+      "entry": 537000.0,
+      "target": 563850,
+      "stop": 520890,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.96)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": 8.24,
+      "cause_news": [
+        {
+          "title": "삼성물산, 계열사 지분가치 159조 재평가…7%대 강세",
+          "url": "https://www.newsis.com/view/NISX20260622_0003677913",
+          "office": "newsis",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        },
+        {
+          "title": "강남 재건축 시공사 선정·삼전 지분 보유… 삼성물산, 8%대 ↑",
+          "url": "https://www.mt.co.kr/stock/2026/06/22/2026062210163164356",
+          "office": "mt",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "삼성물산, 계열사 지분가치 159조 재평가…7%대 강세"
+    },
+    {
+      "ticker": "후성",
+      "code": "093370",
+      "tomorrow_up_prob": "90%",
+      "entry": 18110.0,
+      "target": 19016,
+      "stop": 17567,
+      "confidence": "상",
+      "reasons": [
+        "강세마감(0.84)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "related_news": [
+        {
+          "title": "후성 136% 폭등 비결은 '반도체·불산'…&quot;밸류 부담은 변수&quot;",
+          "url": "https://n.news.naver.com/mnews/article/014/0005536471",
+          "office": "파이낸셜뉴스",
+          "sentiment": "호재"
+        },
+        {
+          "title": "반도체·배터리 '쌍끌이'…불기둥 뿜은 후성",
+          "url": "https://n.news.naver.com/mnews/article/015/0005299854",
+          "office": "한국경제",
+          "sentiment": "호재"
+        },
+        {
+          "title": "팔로워 84만 해외 트레이더 “이 주식 사세요”…외국인 몰리자 급등...",
+          "url": "https://n.news.naver.com/mnews/article/009/0005694809",
+          "office": "매일경제",
+          "sentiment": "호재"
+        }
+      ]
+    },
+    {
       "ticker": "LG전자",
       "code": "066570",
-      "tomorrow_up_prob": "68%",
-      "entry": 237000.0,
-      "target": 248850,
-      "stop": 229890,
+      "tomorrow_up_prob": "69%",
+      "entry": 239500.0,
+      "target": 251475,
+      "stop": 232315,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.91)",
-        "RSI51.0 강세",
+        "강세마감(0.9)",
+        "RSI51.4 강세",
         "호재"
       ],
       "risk": "특이 위험 낮음",
@@ -505,111 +638,96 @@
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "LG전자·CNS 10%안팎 강세…엔비디아 협력 기대↑[핫종목]",
-          "url": "https://www.news1.kr/finance/general-stock/6204045",
-          "office": "news1",
+          "title": "[STOCK톺] 엔비디아 협력 기대감...LG전자 10%대 급등",
+          "url": "http://www.newsian.co.kr/news/articleView.html?idxno=91258",
+          "office": "newsian",
           "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
       "cause_summary": "LG전자, 엔비디아 협력 기대감에 8%대 급등…장중 23만원 돌파[특징주]"
     },
     {
-      "ticker": "LG씨엔에스",
-      "code": "064400",
-      "tomorrow_up_prob": "60%",
-      "entry": 94000.0,
-      "target": 98700,
-      "stop": 91180,
+      "ticker": "SK스퀘어",
+      "code": "402340",
+      "tomorrow_up_prob": "64%",
+      "entry": 1953000.0,
+      "target": 2050650,
+      "stop": 1894410,
       "confidence": "중",
       "reasons": [
-        "RSI50.9 강세",
-        "호재",
-        "장중 6회 지속"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] LG전자, 엔비디아 협력 구체화 기대에 강세…LG씨엔에스도 9%↑",
-          "url": "https://biz.chosun.com/stock/stock_general/2026/06/22/QMWIVJNFV5CZHG5Q3BKWHTEG5E/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-          "office": "biz",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "(특징주)엔비디아 협력 기대감…LG전자·LG CNS '강세'",
-          "url": "http://www.newstomato.com/ReadNews.aspx?no=1304711&inflow=N",
-          "office": "newstomato",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "LG전자 11% 급등 이어 LG씨엔에스 12% 상승...LG그룹주 강세",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=439986",
-          "office": "econonews",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] LG전자, 엔비디아 협력 구체화 기대에 강세…LG씨엔에스도 9%↑"
-    },
-    {
-      "ticker": "DB하이텍",
-      "code": "000990",
-      "tomorrow_up_prob": "57%",
-      "entry": 165200.0,
-      "target": 173460,
-      "stop": 160244,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(0.94)",
-        "RSI50.8 강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "related_news": [
-        {
-          "title": "AI칩 수혜株 옥석 가리기 시작됐나",
-          "url": "https://n.news.naver.com/mnews/article/009/0005694701",
-          "office": "매일경제",
-          "sentiment": "혼재"
-        }
-      ]
-    },
-    {
-      "ticker": "서산",
-      "code": "079650",
-      "tomorrow_up_prob": "56%",
-      "entry": 6250.0,
-      "target": 6562,
-      "stop": 6062,
-      "confidence": "중",
-      "reasons": [
-        "강세마감(1.0)",
+        "강세마감(0.88)",
         "정배열",
         "MACD강세"
       ],
-      "risk": "RSI95.8 과매수, Stoch 과매수",
+      "risk": "RSI80.2 과매수, Stoch 과매수",
       "day_change": null,
       "cause_news": [
         {
-          "title": "서산, 투자경고종목 지정 후 주가 급등→1일간 매매거래 정지",
-          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16100718",
-          "office": "topstarnews",
+          "title": "프리마켓서 SK하이닉스·SK스퀘어 또 강세…삼성전자는 하락[특징주]",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026062208343411125",
+          "office": "newsway",
+          "sentiment": "악재",
+          "cause_score": 8,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 악재, 당일"
+        },
+        {
+          "title": "“AI 반도체 훈풍에 주주환원까지”…NH투자, SK스퀘어 목표가 270만원으...",
+          "url": "https://www.viva100.com/article/20260622500245",
+          "office": "viva100",
           "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 오래됨"
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
         }
       ],
-      "cause_confidence": "중간",
-      "cause_summary": "서산, 투자경고종목 지정 후 주가 급등→1일간 매매거래 정지"
+      "cause_confidence": "높음",
+      "cause_summary": "프리마켓서 SK하이닉스·SK스퀘어 또 강세…삼성전자는 하락[특징주]"
+    },
+    {
+      "ticker": "LG",
+      "code": "003550",
+      "tomorrow_up_prob": "64%",
+      "entry": 113900.0,
+      "target": 119595,
+      "stop": 110483,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.91)",
+        "Stoch골든",
+        "호재"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "LG전자, 엔비디아 협력 기대감에 8%대 급등…장중 23만원 돌파[특징주]",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026062210081260933",
+          "office": "newsway",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "[STOCK톺] 엔비디아 협력 기대감...LG전자 10%대 급등",
+          "url": "http://www.newsian.co.kr/news/articleView.html?idxno=91258",
+          "office": "newsian",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "“엔비디아와 손잡았다”…협력 기대감에 LG전자 ‘불기둥’ [오늘, 이...",
+          "url": "https://www.mk.co.kr/article/12079657",
+          "office": "mk",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "LG전자, 엔비디아 협력 기대감에 8%대 급등…장중 23만원 돌파[특징주]"
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
