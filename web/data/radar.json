@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-22 09:12:39 KST",
+ "generated_at": "2026-06-22 09:22:34 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -31,6 +31,130 @@
  "universe_count": 52,
  "events": [],
  "suspects": [
+  {
+   "code": "240810",
+   "name": "원익IPS",
+   "sector": "기계·장비",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 93,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_value": 12,
+    "re_body": 6,
+    "re_count": 3,
+    "flow": 8,
+    "explosion": 2,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_value": 0,
+    "re_body": 0,
+    "re_count": 0,
+    "flow": 0,
+    "explosion": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 46,
+    "base_pct": 46,
+    "strong": false,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "price": 166800.0,
+   "change_pct": 6.92,
+   "high_pct": 8.91,
+   "fade_pct": 22.3,
+   "value_eok": 1432,
+   "turnover_pct": 2.6,
+   "peak_turnover_pct": 17.7,
+   "float_ratio": 0.6618,
+   "turnover_basis": "float",
+   "ma10": 153830.0,
+   "ma10_margin_pct": 8.43,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 8.91,
+    "time": "09:00",
+    "value_10m_eok": 323
+   },
+   "reignition_bars": [
+    {
+     "time": "09:00",
+     "body_pct": 8.91,
+     "value_eok": 323
+    },
+    {
+     "time": "09:10",
+     "body_pct": 2.56,
+     "value_eok": 307
+    }
+   ],
+   "flow": {
+    "net_days": 1,
+    "today_buy": false,
+    "streak": 0,
+    "detail": [
+     {
+      "date": "0615",
+      "frgn": -261136,
+      "orgn": 273155
+     },
+     {
+      "date": "0616",
+      "frgn": 14510,
+      "orgn": -226299
+     },
+     {
+      "date": "0617",
+      "frgn": -170750,
+      "orgn": -95215
+     },
+     {
+      "date": "0618",
+      "frgn": 33690,
+      "orgn": -72560
+     },
+     {
+      "date": "0619",
+      "frgn": -29184,
+      "orgn": 9051
+     }
+    ]
+   },
+   "news": [],
+   "matched_events": [],
+   "theme": "반도체",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260617",
+    "peak_value_eok": 9306,
+    "peak_high_pct": 15.25,
+    "ma20": 133700.0,
+    "ma20_margin_pct": 24.76,
+    "ivtr_net": 494291,
+    "ivtr_days": 4,
+    "ivtr_eok": 838,
+    "cause_summary": "",
+    "was_theme_leader": false,
+    "source": "seed"
+   },
+   "leader_cohort_prob": null,
+   "theme_leader": false
+  },
   {
    "code": "403870",
    "name": "HPSP",
@@ -69,17 +193,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 61600.0,
-   "change_pct": 8.83,
-   "high_pct": 9.72,
-   "fade_pct": 9.1,
-   "value_eok": 1052,
-   "turnover_pct": 2.6,
+   "price": 62100.0,
+   "change_pct": 9.72,
+   "high_pct": 12.19,
+   "fade_pct": 20.3,
+   "value_eok": 1765,
+   "turnover_pct": 4.4,
    "peak_turnover_pct": 50.7,
    "float_ratio": 0.7839,
    "turnover_basis": "float",
-   "ma10": 62670.0,
-   "ma10_margin_pct": -1.71,
+   "ma10": 62730.0,
+   "ma10_margin_pct": -1.0,
    "spark": {
     "clusters": []
    },
@@ -138,132 +262,13 @@
     "peak_date": "20260615",
     "peak_value_eok": 27304,
     "peak_high_pct": 28.67,
-    "ma20": 56597.5,
-    "ma20_margin_pct": 8.84,
+    "ma20": 56627.5,
+    "ma20_margin_pct": 9.66,
     "ivtr_net": 4174807,
     "ivtr_days": 3,
     "ivtr_eok": 3452,
     "cause_summary": "외국투자자 한달여만에 컴백 … 반도체 투톱 2조 '폭풍 쇼핑'",
     "was_theme_leader": true,
-    "source": "seed"
-   },
-   "leader_cohort_prob": null,
-   "theme_leader": false
-  },
-  {
-   "code": "240810",
-   "name": "원익IPS",
-   "sector": "기계·장비",
-   "pattern": "reaccum",
-   "shake": null,
-   "deep_shake": null,
-   "suspicion_score": 90,
-   "calibrated_prob": null,
-   "score_breakdown": {
-    "base": 62,
-    "re_value": 12,
-    "re_body": 6,
-    "re_count": 0,
-    "flow": 8,
-    "explosion": 2,
-    "peak_turnover": 0,
-    "re_turnover": 0
-   },
-   "score_raw": 0,
-   "score_breakdown_raw": {
-    "base": 0,
-    "re_value": 0,
-    "re_body": 0,
-    "re_count": 0,
-    "flow": 0,
-    "explosion": 0,
-    "peak_turnover": 0,
-    "re_turnover": 0
-   },
-   "forecast": {
-    "horizon": "3일 내 +7%",
-    "prob_pct": 46,
-    "base_pct": 46,
-    "strong": false,
-    "next_day_7_pct": 25,
-    "note": "과거 실측 확률·보장 아님"
-   },
-   "price": 165400.0,
-   "change_pct": 6.03,
-   "high_pct": 6.03,
-   "fade_pct": 0.0,
-   "value_eok": 876,
-   "turnover_pct": 1.6,
-   "peak_turnover_pct": 17.7,
-   "float_ratio": 0.6618,
-   "turnover_basis": "float",
-   "ma10": 153700.0,
-   "ma10_margin_pct": 7.61,
-   "spark": {
-    "clusters": []
-   },
-   "spark_max_x": 0.0,
-   "spark_max_pct": null,
-   "mega_flow": false,
-   "reignition": {
-    "body_pct": 8.91,
-    "time": "09:00",
-    "value_10m_eok": 323
-   },
-   "reignition_bars": [
-    {
-     "time": "09:00",
-     "body_pct": 8.91,
-     "value_eok": 323
-    }
-   ],
-   "flow": {
-    "net_days": 1,
-    "today_buy": false,
-    "streak": 0,
-    "detail": [
-     {
-      "date": "0615",
-      "frgn": -261136,
-      "orgn": 273155
-     },
-     {
-      "date": "0616",
-      "frgn": 14510,
-      "orgn": -226299
-     },
-     {
-      "date": "0617",
-      "frgn": -170750,
-      "orgn": -95215
-     },
-     {
-      "date": "0618",
-      "frgn": 33690,
-      "orgn": -72560
-     },
-     {
-      "date": "0619",
-      "frgn": -29184,
-      "orgn": 9051
-     }
-    ]
-   },
-   "news": [],
-   "matched_events": [],
-   "theme": "반도체",
-   "visible_experimental": true,
-   "reaccum": {
-    "peak_date": "20260617",
-    "peak_value_eok": 9306,
-    "peak_high_pct": 15.25,
-    "ma20": 133635.0,
-    "ma20_margin_pct": 23.77,
-    "ivtr_net": 494291,
-    "ivtr_days": 4,
-    "ivtr_eok": 838,
-    "cause_summary": "",
-    "was_theme_leader": false,
     "source": "seed"
    },
    "leader_cohort_prob": null,
@@ -307,17 +312,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 120800.0,
-   "change_pct": 5.69,
-   "high_pct": 7.61,
-   "fade_pct": 25.3,
-   "value_eok": 944,
-   "turnover_pct": 2.6,
+   "price": 123600.0,
+   "change_pct": 8.14,
+   "high_pct": 9.89,
+   "fade_pct": 17.7,
+   "value_eok": 1646,
+   "turnover_pct": 4.5,
    "peak_turnover_pct": 30.2,
    "float_ratio": 0.8609,
    "turnover_basis": "float",
-   "ma10": 106370.0,
-   "ma10_margin_pct": 13.57,
+   "ma10": 106655.0,
+   "ma10_margin_pct": 15.89,
    "spark": {
     "clusters": []
    },
@@ -376,8 +381,8 @@
     "peak_date": "20260617",
     "peak_value_eok": 9972,
     "peak_high_pct": 14.53,
-    "ma20": 105485.0,
-    "ma20_margin_pct": 14.52,
+    "ma20": 105627.5,
+    "ma20_margin_pct": 17.01,
     "ivtr_net": 235540,
     "ivtr_days": 5,
     "ivtr_eok": 269,
@@ -426,17 +431,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 518000.0,
-   "change_pct": 5.39,
+   "price": 511000.0,
+   "change_pct": 3.97,
    "high_pct": 8.04,
-   "fade_pct": 32.9,
-   "value_eok": 1379,
+   "fade_pct": 50.6,
+   "value_eok": 1559,
    "turnover_pct": 0.3,
    "peak_turnover_pct": 2.2,
    "float_ratio": 0.616,
    "turnover_basis": "float",
-   "ma10": 465550.0,
-   "ma10_margin_pct": 11.27,
+   "ma10": 464850.0,
+   "ma10_margin_pct": 9.93,
    "spark": {
     "clusters": []
    },
@@ -495,8 +500,8 @@
     "peak_date": "20260619",
     "peak_value_eok": 10802,
     "peak_high_pct": 15.14,
-    "ma20": 453700.0,
-    "ma20_margin_pct": 14.17,
+    "ma20": 453350.0,
+    "ma20_margin_pct": 12.72,
     "ivtr_net": 65910,
     "ivtr_days": 3,
     "ivtr_eok": 333,
@@ -545,17 +550,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 50600.0,
-   "change_pct": 4.01,
-   "high_pct": 4.42,
-   "fade_pct": 9.3,
-   "value_eok": 382,
-   "turnover_pct": 0.5,
+   "price": 50400.0,
+   "change_pct": 3.6,
+   "high_pct": 4.83,
+   "fade_pct": 25.5,
+   "value_eok": 486,
+   "turnover_pct": 0.6,
    "peak_turnover_pct": 2.0,
    "float_ratio": 0.7936,
    "turnover_basis": "float",
-   "ma10": 49715.0,
-   "ma10_margin_pct": 1.78,
+   "ma10": 49695.0,
+   "ma10_margin_pct": 1.42,
    "spark": {
     "clusters": []
    },
@@ -614,8 +619,8 @@
     "peak_date": "20260615",
     "peak_value_eok": 1647,
     "peak_high_pct": 14.71,
-    "ma20": 50102.5,
-    "ma20_margin_pct": 0.99,
+    "ma20": 50092.5,
+    "ma20_margin_pct": 0.61,
     "ivtr_net": 1044861,
     "ivtr_days": 4,
     "ivtr_eok": 503,
@@ -664,17 +669,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 63000.0,
-   "change_pct": 4.65,
-   "high_pct": 5.65,
-   "fade_pct": 17.6,
-   "value_eok": 215,
-   "turnover_pct": 1.3,
+   "price": 62200.0,
+   "change_pct": 3.32,
+   "high_pct": 6.31,
+   "fade_pct": 47.4,
+   "value_eok": 343,
+   "turnover_pct": 2.1,
    "peak_turnover_pct": 26.8,
    "float_ratio": 0.7229000000000001,
    "turnover_basis": "float",
-   "ma10": 61730.0,
-   "ma10_margin_pct": 2.06,
+   "ma10": 61660.0,
+   "ma10_margin_pct": 0.88,
    "spark": {
     "clusters": []
    },
@@ -733,8 +738,8 @@
     "peak_date": "20260615",
     "peak_value_eok": 4882,
     "peak_high_pct": 13.32,
-    "ma20": 56990.0,
-    "ma20_margin_pct": 10.55,
+    "ma20": 56955.0,
+    "ma20_margin_pct": 9.21,
     "ivtr_net": 18468,
     "ivtr_days": 4,
     "ivtr_eok": 16,
@@ -783,17 +788,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 35750.0,
-   "change_pct": 2.73,
-   "high_pct": 7.04,
-   "fade_pct": 61.2,
-   "value_eok": 204,
-   "turnover_pct": 3.7,
+   "price": 36150.0,
+   "change_pct": 3.88,
+   "high_pct": 7.76,
+   "fade_pct": 50.0,
+   "value_eok": 276,
+   "turnover_pct": 5.0,
    "peak_turnover_pct": 43.2,
    "float_ratio": 0.7117,
    "turnover_basis": "float",
-   "ma10": 31195.0,
-   "ma10_margin_pct": 14.6,
+   "ma10": 31240.0,
+   "ma10_margin_pct": 15.72,
    "spark": {
     "clusters": []
    },
@@ -852,8 +857,8 @@
     "peak_date": "20260618",
     "peak_value_eok": 2642,
     "peak_high_pct": 29.57,
-    "ma20": 29287.5,
-    "ma20_margin_pct": 22.07,
+    "ma20": 29310.0,
+    "ma20_margin_pct": 23.34,
     "ivtr_net": 40168,
     "ivtr_days": 3,
     "ivtr_eok": 14,
