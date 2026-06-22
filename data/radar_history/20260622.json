@@ -314,7 +314,7 @@
    "pattern": "reaccum",
    "prime": false,
    "theme": "금리",
-   "value_eok": 6380,
+   "value_eok": 6431,
    "turnover_pct": 1.2,
    "peak_turnover_pct": 2.2,
    "turnover_basis": "float",
@@ -519,5 +519,5 @@
    "final": false
   }
  },
- "as_of": "2026-06-22 15:42:20 KST"
+ "as_of": "2026-06-22 15:52:23 KST"
 }
