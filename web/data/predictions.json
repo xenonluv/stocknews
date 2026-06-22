@@ -1,16 +1,16 @@
 {
-  "as_of": "2026-06-22 15:07 KST",
+  "as_of": "2026-06-22 15:22 KST",
   "intraday_rank": [
     {
       "ticker": "한솔테크닉스",
       "code": "004710",
       "tomorrow_up_prob": "95%",
-      "entry": 15390.0,
-      "target": 16160,
-      "stop": 14928,
+      "entry": 15430.0,
+      "target": 16202,
+      "stop": 14967,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.73)",
+        "강세마감(0.74)",
         "정배열",
         "MACD강세"
       ],
@@ -46,47 +46,19 @@
       "cause_summary": "한솔테크닉스 주가, 급등세... 왜?"
     },
     {
-      "ticker": "후성",
-      "code": "093370",
-      "tomorrow_up_prob": "95%",
-      "entry": 18920.0,
-      "target": 19866,
-      "stop": 18352,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.73)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "후성 주가, 급등세... 배경은?",
-          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1164908",
-          "office": "ggilbo",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "후성 주가, 급등세... 배경은?"
-    },
-    {
       "ticker": "SK스퀘어",
       "code": "402340",
-      "tomorrow_up_prob": "68%",
-      "entry": 1964000.0,
-      "target": 2062200,
-      "stop": 1905080,
+      "tomorrow_up_prob": "69%",
+      "entry": 1970000.0,
+      "target": 2068500,
+      "stop": 1910900,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.94)",
+        "강세마감(0.91)",
         "정배열",
         "MACD강세"
       ],
-      "risk": "RSI80.3 과매수, Stoch 과매수",
+      "risk": "RSI80.5 과매수, Stoch 과매수",
       "day_change": null,
       "cause_news": [
         {
@@ -113,14 +85,14 @@
       "ticker": "DB하이텍",
       "code": "000990",
       "tomorrow_up_prob": "64%",
-      "entry": 173600.0,
-      "target": 182280,
-      "stop": 168392,
+      "entry": 173400.0,
+      "target": 182070,
+      "stop": 168198,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.97)",
-        "RSI54.0 강세",
-        "장중 17회 지속"
+        "강세마감(0.96)",
+        "RSI53.9 강세",
+        "장중 18회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -177,7 +149,7 @@
       "confidence": "하",
       "reasons": [
         "호재",
-        "장중 25회 지속"
+        "장중 26회 지속"
       ],
       "risk": "약한 마감",
       "day_change": null,
@@ -213,17 +185,17 @@
     {
       "ticker": "보해양조",
       "code": "000890",
-      "tomorrow_up_prob": "50%",
-      "entry": 2500.0,
-      "target": 2625,
-      "stop": 2425,
+      "tomorrow_up_prob": "51%",
+      "entry": 2280.0,
+      "target": 2394,
+      "stop": 2212,
       "confidence": "하",
       "reasons": [
         "MACD강세",
-        "일목 구름위",
-        "거래량16.64배"
+        "거래량16.86배",
+        "장중 26회 지속"
       ],
-      "risk": "RSI80.7 과매수, Stoch 과매수",
+      "risk": "약한 마감, Stoch 과매수",
       "day_change": null,
       "cause_news": [
         {
@@ -239,57 +211,21 @@
       "cause_summary": "주류주 변동성 확대… 보해양조·한울앤제주 강세, 대형주 조정"
     },
     {
-      "ticker": "원익IPS",
-      "code": "240810",
-      "tomorrow_up_prob": "39%",
-      "entry": 172200.0,
-      "target": 180810,
-      "stop": 167034,
-      "confidence": "하",
-      "reasons": [
-        "강세마감(0.85)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 9.94,
-      "cause_news": [
-        {
-          "title": "[특징주] 원익IPS, 반도체 수출 급증에 장중 강세…소부장 전반 매수세...",
-          "url": "https://www.tokenpost.kr/news/economy/371583",
-          "office": "tokenpost",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 원익IPS, 반도체 수출 급증에 장중 강세…소부장 전반 매수세..."
-    },
-    {
       "ticker": "삼성물산",
       "code": "028260",
       "tomorrow_up_prob": "39%",
-      "entry": 531000.0,
-      "target": 557550,
-      "stop": 515070,
+      "entry": 525000.0,
+      "target": 551250,
+      "stop": 509250,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.79)",
         "정배열",
-        "MACD강세"
+        "MACD강세",
+        "RSI64.8 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 7.73,
+      "day_change": 7.83,
       "cause_news": [
-        {
-          "title": "[특징주] 삼성물산, 지분가치 159조 재평가에 7%대 강세…목표가 70만원...",
-          "url": "https://www.tokenpost.kr/news/economy/371573",
-          "office": "tokenpost",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        },
         {
           "title": "강남 재건축 시공사 선정·삼전 지분 보유… 삼성물산, 8%대 ↑",
           "url": "https://www.mt.co.kr/stock/2026/06/22/2026062210163164356",
@@ -299,24 +235,24 @@
           "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
         }
       ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 삼성물산, 지분가치 159조 재평가에 7%대 강세…목표가 70만원..."
+      "cause_confidence": "중간",
+      "cause_summary": "강남 재건축 시공사 선정·삼전 지분 보유… 삼성물산, 8%대 ↑"
     },
     {
       "ticker": "예스티",
       "code": "122640",
       "tomorrow_up_prob": "39%",
-      "entry": 38150.0,
-      "target": 40058,
-      "stop": 37006,
+      "entry": 38250.0,
+      "target": 40162,
+      "stop": 37102,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.79)",
+        "강세마감(0.8)",
         "정배열",
         "MACD강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 9.55,
+      "day_change": 9.34,
       "cause_news": [
         {
           "title": "\"반도체·디스플레이 다 잡았다\"...예스티, 고도화 공정 투자 확대 최대...",
@@ -329,6 +265,70 @@
       ],
       "cause_confidence": "중간",
       "cause_summary": "\"반도체·디스플레이 다 잡았다\"...예스티, 고도화 공정 투자 확대 최대..."
+    },
+    {
+      "ticker": "후성",
+      "code": "093370",
+      "tomorrow_up_prob": "39%",
+      "entry": 18630.0,
+      "target": 19562,
+      "stop": 18071,
+      "confidence": "하",
+      "reasons": [
+        "정배열",
+        "MACD강세",
+        "RSI60.0 강세"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "후성 주가, 급등세... 배경은?",
+          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1164908",
+          "office": "ggilbo",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "후성 주가, 급등세... 배경은?"
+    },
+    {
+      "ticker": "SK하이닉스",
+      "code": "000660",
+      "tomorrow_up_prob": "39%",
+      "entry": 2918000.0,
+      "target": 3063900,
+      "stop": 2830460,
+      "confidence": "하",
+      "reasons": [
+        "강세마감(0.88)",
+        "정배열",
+        "MACD강세"
+      ],
+      "risk": "Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[특징주] SK하이닉스, 25년만에 장중 시총 1위 뒤집었다",
+          "url": "https://www.seoulfn.com/news/articleView.html?idxno=631632",
+          "office": "seoulfn",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        },
+        {
+          "title": "SK하이닉스, \"가전·폰에 묶인 거인\" 삼성전자 제치고 시총 1위",
+          "url": "http://www.ftoday.co.kr/news/articleView.html?idxno=360858",
+          "office": "ftoday",
+          "sentiment": "호재",
+          "cause_score": 5,
+          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] SK하이닉스, 25년만에 장중 시총 1위 뒤집었다"
     },
     {
       "ticker": "한울반도체",
@@ -380,12 +380,12 @@
       "ticker": "한솔테크닉스",
       "code": "004710",
       "tomorrow_up_prob": "95%",
-      "entry": 15390.0,
-      "target": 16160,
-      "stop": 14928,
+      "entry": 15430.0,
+      "target": 16202,
+      "stop": 14967,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.73)",
+        "강세마감(0.74)",
         "정배열",
         "MACD강세"
       ],
@@ -421,47 +421,19 @@
       "cause_summary": "한솔테크닉스 주가, 급등세... 왜?"
     },
     {
-      "ticker": "후성",
-      "code": "093370",
-      "tomorrow_up_prob": "95%",
-      "entry": 18920.0,
-      "target": 19866,
-      "stop": 18352,
-      "confidence": "상",
-      "reasons": [
-        "강세마감(0.73)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "후성 주가, 급등세... 배경은?",
-          "url": "https://www.ggilbo.com/news/articleView.html?idxno=1164908",
-          "office": "ggilbo",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "후성 주가, 급등세... 배경은?"
-    },
-    {
       "ticker": "SK스퀘어",
       "code": "402340",
-      "tomorrow_up_prob": "68%",
-      "entry": 1964000.0,
-      "target": 2062200,
-      "stop": 1905080,
+      "tomorrow_up_prob": "69%",
+      "entry": 1970000.0,
+      "target": 2068500,
+      "stop": 1910900,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.94)",
+        "강세마감(0.91)",
         "정배열",
         "MACD강세"
       ],
-      "risk": "RSI80.3 과매수, Stoch 과매수",
+      "risk": "RSI80.5 과매수, Stoch 과매수",
       "day_change": null,
       "cause_news": [
         {
@@ -488,14 +460,14 @@
       "ticker": "DB하이텍",
       "code": "000990",
       "tomorrow_up_prob": "64%",
-      "entry": 173600.0,
-      "target": 182280,
-      "stop": 168392,
+      "entry": 173400.0,
+      "target": 182070,
+      "stop": 168198,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.97)",
-        "RSI54.0 강세",
-        "장중 17회 지속"
+        "강세마감(0.96)",
+        "RSI53.9 강세",
+        "장중 18회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
