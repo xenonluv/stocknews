@@ -1,44 +1,44 @@
 {
   "date": "20260622",
-  "as_of": "2026-06-22 13:52 KST",
+  "as_of": "2026-06-22 14:07 KST",
   "bets": [
     {
       "code": "004710",
       "ticker": "한솔테크닉스",
-      "entry": 15420.0,
-      "target": 16191,
+      "entry": 15390.0,
+      "target": 16160,
+      "raw": 95,
+      "prob": "95%"
+    },
+    {
+      "code": "093370",
+      "ticker": "후성",
+      "entry": 18990.0,
+      "target": 19940,
       "raw": 95,
       "prob": "95%"
     },
     {
       "code": "000990",
       "ticker": "DB하이텍",
-      "entry": 166300.0,
-      "target": 174615,
+      "entry": 167600.0,
+      "target": 175980,
       "raw": 64,
       "prob": "64%"
     },
     {
-      "code": "000890",
-      "ticker": "보해양조",
-      "entry": 2555.0,
-      "target": 2683,
-      "raw": 58,
-      "prob": "58%"
-    },
-    {
       "code": "004310",
       "ticker": "현대약품",
-      "entry": 8460.0,
-      "target": 8883,
-      "raw": 58,
-      "prob": "58%"
+      "entry": 8550.0,
+      "target": 8978,
+      "raw": 62,
+      "prob": "62%"
     },
     {
-      "code": "079650",
-      "ticker": "서산",
-      "entry": 6250.0,
-      "target": 6562,
+      "code": "000890",
+      "ticker": "보해양조",
+      "entry": 2585.0,
+      "target": 2714,
       "raw": 58,
       "prob": "58%"
     }
