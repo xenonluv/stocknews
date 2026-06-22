@@ -114,7 +114,7 @@ def record_dates(dates):
             conf = rec.get("confidence") if isinstance(rec, dict) else None
             hist["tracks"][code] = {
                 "phase": phase,
-                "confidence": round(float(conf)) if isinstance(conf, (int, float)) else None,
+                "confidence": round(float(conf)) if isinstance(conf, (int, float)) and not isinstance(conf, bool) else None,
                 "evaluated": False, "result": None,
             }
             added += 1
@@ -154,12 +154,14 @@ def evaluate():
             entry = float(sig["close"])  # close>0 봉만 반환 → entry>0 보장
             nb = after[0]
             rose = nb["close"] > entry
+            fell = nb["close"] < entry  # 보합(==)은 rose·fell 모두 False → 양 방향 모두 미적중(대칭)
             phase = t.get("phase")
-            # 방향 적중: 재매집=상승 예측·분산=하락 예측. 중립은 방향 무판단 → hit None(적중 집계 제외).
+            # 방향 적중: 재매집=상승 예측(rose)·분산=하락 예측(fell). 보합일을 'not rose'로 잡으면 분산만
+            # 적중을 챙겨 편향되므로 fell(strict <)로 — 보합은 양쪽 다 미적중. 중립은 방향 무판단(hit None).
             if phase == "재매집":
                 hit = rose
             elif phase == "분산":
-                hit = not rose
+                hit = fell
             else:
                 hit = None
             t["evaluated"] = True

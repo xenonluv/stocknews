@@ -18,7 +18,7 @@ export function PhasePerformancePanel({ data }: { data: PhasePerformance }) {
         <span className="text-xs text-muted-foreground">방향 표본 {n}건{total_n > n ? ` (중립 ${total_n - n} 별도)` : ""}</span>
       </div>
 
-      {n === 0 ? (
+      {total_n === 0 ? (
         <div className="flex min-h-32 flex-col items-center justify-center gap-1 rounded-md border border-dashed border-border text-sm text-muted-foreground">
           <p>국면 판정 채점 데이터 수집 중</p>
           <p className="text-xs">
@@ -29,9 +29,9 @@ export function PhasePerformancePanel({ data }: { data: PhasePerformance }) {
       ) : (
         <>
           <div className="mb-4 rounded-md border border-white/10 bg-white/[0.02] px-3 py-2">
-            <span className="text-[11px] text-muted-foreground">전체 방향 적중률(재매집→상승·분산→하락)</span>
-            <div className={`text-2xl font-bold tabular-nums ${accuracy !== null && accuracy >= 50 ? "text-up" : "text-down"}`}>
-              {cell(accuracy)}
+            <span className="text-[11px] text-muted-foreground">전체 방향 적중률(재매집→상승·분산→하락) · 표본 {n}건</span>
+            <div className={`text-2xl font-bold tabular-nums ${accuracy === null ? "text-muted-foreground" : accuracy >= 50 ? "text-up" : "text-down"}`}>
+              {accuracy === null ? "방향 표본 수집 중" : cell(accuracy)}
             </div>
           </div>
 
@@ -57,8 +57,8 @@ export function PhasePerformancePanel({ data }: { data: PhasePerformance }) {
                         : b.valid ? cell(b.hit_rate) : <span className="text-muted-foreground" title={`표본 ${min_n}건 미만`}>수집 중</span>}
                     </td>
                     <td className="px-2 text-right tabular-nums text-muted-foreground">{b.valid ? cell(b.rose_rate) : "—"}</td>
-                    <td className={`pl-2 text-right tabular-nums ${b.avg_return === null ? "" : b.avg_return > 0 ? "text-up" : "text-down"}`}>
-                      {b.avg_return === null ? "—" : `${b.avg_return > 0 ? "+" : ""}${b.avg_return}%`}
+                    <td className={`pl-2 text-right tabular-nums ${!b.valid || b.avg_return === null || b.avg_return === 0 ? "" : b.avg_return > 0 ? "text-up" : "text-down"}`}>
+                      {b.valid && b.avg_return !== null ? `${b.avg_return > 0 ? "+" : ""}${b.avg_return}%` : "—"}
                     </td>
                   </tr>
                 ))}
@@ -81,7 +81,7 @@ export function PhasePerformancePanel({ data }: { data: PhasePerformance }) {
                 <tbody>
                   {confidence_bands.map((b) => (
                     <tr key={`${b.lo}-${b.hi}`} className="border-b border-white/5">
-                      <td className="py-1.5 pr-2 tabular-nums">{b.lo}~{b.hi >= 100 ? "" : b.hi}%</td>
+                      <td className="py-1.5 pr-2 tabular-nums">{b.hi >= 100 ? `${b.lo}%+` : `${b.lo}~${b.hi}%`}</td>
                       <td className="px-2 text-right tabular-nums">{b.n}</td>
                       <td className="pl-2 text-right tabular-nums">
                         {b.valid ? cell(b.hit_rate) : <span className="text-muted-foreground">수집 중</span>}

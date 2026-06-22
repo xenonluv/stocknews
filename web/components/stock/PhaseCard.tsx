@@ -99,7 +99,9 @@ export function PhaseCard({ code }: { code: string }) {
           <>
             <div className="flex items-baseline gap-2">
               <span className={cn("text-2xl font-bold", st.text)}>{st.label}</span>
-              <span className={cn("text-sm tabular-nums", st.text)}>신뢰도 {result.confidence}%</span>
+              <span className={cn("text-sm tabular-nums", st.text)}>
+                신뢰도 {result.confidence === null ? "미상" : `${result.confidence}%`}
+              </span>
             </div>
 
             <p className="text-sm leading-relaxed">{result.narrative}</p>

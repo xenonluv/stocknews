@@ -86,8 +86,10 @@ export async function buildPhaseAnalysis(code: string): Promise<PhaseAnalysis> {
   const phase: StockPhase = PHASES.includes(parsed?.phase as StockPhase)
     ? (parsed.phase as StockPhase)
     : "중립";
+  // 모델이 confidence를 누락/비유한 값으로 주면 null — 임의 기본값(50)을 넣으면 phase_eval의 신뢰도
+  // 구간 보정이 '모델 침묵' 케이스로 오염되므로(리뷰 지적), '미상'으로 두고 보정 집계에서 제외한다.
   const confRaw = Number(parsed?.confidence);
-  const confidence = Number.isFinite(confRaw) ? Math.max(0, Math.min(100, Math.round(confRaw))) : 50;
+  const confidence = Number.isFinite(confRaw) ? Math.max(0, Math.min(100, Math.round(confRaw))) : null;
 
   return {
     code,
