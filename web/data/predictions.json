@@ -1,16 +1,16 @@
 {
-  "as_of": "2026-06-22 15:22 KST",
+  "as_of": "2026-06-22 15:37 KST",
   "intraday_rank": [
     {
       "ticker": "한솔테크닉스",
       "code": "004710",
       "tomorrow_up_prob": "95%",
-      "entry": 15430.0,
-      "target": 16202,
-      "stop": 14967,
+      "entry": 15460.0,
+      "target": 16233,
+      "stop": 14996,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.74)",
+        "강세마감(0.75)",
         "정배열",
         "MACD강세"
       ],
@@ -48,7 +48,7 @@
     {
       "ticker": "SK스퀘어",
       "code": "402340",
-      "tomorrow_up_prob": "69%",
+      "tomorrow_up_prob": "68%",
       "entry": 1970000.0,
       "target": 2068500,
       "stop": 1910900,
@@ -85,14 +85,14 @@
       "ticker": "DB하이텍",
       "code": "000990",
       "tomorrow_up_prob": "64%",
-      "entry": 173400.0,
-      "target": 182070,
-      "stop": 168198,
+      "entry": 174000.0,
+      "target": 182700,
+      "stop": 168780,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.96)",
-        "RSI53.9 강세",
-        "장중 18회 지속"
+        "강세마감(0.99)",
+        "RSI54.1 강세",
+        "장중 19회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -110,6 +110,34 @@
           "sentiment": "혼재"
         }
       ]
+    },
+    {
+      "ticker": "보해양조",
+      "code": "000890",
+      "tomorrow_up_prob": "62%",
+      "entry": 2340.0,
+      "target": 2457,
+      "stop": 2270,
+      "confidence": "중",
+      "reasons": [
+        "MACD강세",
+        "일목 구름위",
+        "거래량16.87배"
+      ],
+      "risk": "Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "주류주 변동성 확대… 보해양조·한울앤제주 강세, 대형주 조정",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=462034",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "주류주 변동성 확대… 보해양조·한울앤제주 강세, 대형주 조정"
     },
     {
       "ticker": "서산",
@@ -149,7 +177,7 @@
       "confidence": "하",
       "reasons": [
         "호재",
-        "장중 26회 지속"
+        "장중 27회 지속"
       ],
       "risk": "약한 마감",
       "day_change": null,
@@ -183,48 +211,20 @@
       "cause_summary": "[특징주] LG그룹, 엔비디아 본사 방문 소식에 강세...LG전자 12%대 ↑"
     },
     {
-      "ticker": "보해양조",
-      "code": "000890",
-      "tomorrow_up_prob": "51%",
-      "entry": 2280.0,
-      "target": 2394,
-      "stop": 2212,
-      "confidence": "하",
-      "reasons": [
-        "MACD강세",
-        "거래량16.86배",
-        "장중 26회 지속"
-      ],
-      "risk": "약한 마감, Stoch 과매수",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "주류주 변동성 확대… 보해양조·한울앤제주 강세, 대형주 조정",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=462034",
-          "office": "pinpointnews",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "주류주 변동성 확대… 보해양조·한울앤제주 강세, 대형주 조정"
-    },
-    {
       "ticker": "삼성물산",
       "code": "028260",
       "tomorrow_up_prob": "39%",
-      "entry": 525000.0,
-      "target": 551250,
-      "stop": 509250,
+      "entry": 520000.0,
+      "target": 546000,
+      "stop": 504400,
       "confidence": "하",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI64.8 강세"
+        "RSI64.2 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": 7.83,
+      "day_change": 5.8,
       "cause_news": [
         {
           "title": "강남 재건축 시공사 선정·삼전 지분 보유… 삼성물산, 8%대 ↑",
@@ -239,45 +239,17 @@
       "cause_summary": "강남 재건축 시공사 선정·삼전 지분 보유… 삼성물산, 8%대 ↑"
     },
     {
-      "ticker": "예스티",
-      "code": "122640",
-      "tomorrow_up_prob": "39%",
-      "entry": 38250.0,
-      "target": 40162,
-      "stop": 37102,
-      "confidence": "하",
-      "reasons": [
-        "강세마감(0.8)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 9.34,
-      "cause_news": [
-        {
-          "title": "\"반도체·디스플레이 다 잡았다\"...예스티, 고도화 공정 투자 확대 최대...",
-          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=461927",
-          "office": "pinpointnews",
-          "sentiment": "호재",
-          "cause_score": 7,
-          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
-        }
-      ],
-      "cause_confidence": "중간",
-      "cause_summary": "\"반도체·디스플레이 다 잡았다\"...예스티, 고도화 공정 투자 확대 최대..."
-    },
-    {
       "ticker": "후성",
       "code": "093370",
       "tomorrow_up_prob": "39%",
-      "entry": 18630.0,
-      "target": 19562,
-      "stop": 18071,
+      "entry": 18600.0,
+      "target": 19530,
+      "stop": 18042,
       "confidence": "하",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI60.0 강세"
+        "RSI59.9 강세"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -298,9 +270,9 @@
       "ticker": "SK하이닉스",
       "code": "000660",
       "tomorrow_up_prob": "39%",
-      "entry": 2918000.0,
-      "target": 3063900,
-      "stop": 2830460,
+      "entry": 2919000.0,
+      "target": 3064950,
+      "stop": 2831430,
       "confidence": "하",
       "reasons": [
         "강세마감(0.88)",
@@ -311,24 +283,32 @@
       "day_change": null,
       "cause_news": [
         {
-          "title": "[특징주] SK하이닉스, 25년만에 장중 시총 1위 뒤집었다",
-          "url": "https://www.seoulfn.com/news/articleView.html?idxno=631632",
-          "office": "seoulfn",
+          "title": "SK하이닉스, 삼성전자 시총 25년 독주에 도전…AI 반도체 훈풍 타고 급등",
+          "url": "https://www.tokenpost.kr/news/market/371662",
+          "office": "tokenpost",
           "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "SK하이닉스, \"가전·폰에 묶인 거인\" 삼성전자 제치고 시총 1위",
-          "url": "http://www.ftoday.co.kr/news/articleView.html?idxno=360858",
-          "office": "ftoday",
+          "title": "SK하이닉스, 삼성전자 제치고 시총 1위…25년 7개월만 교체",
+          "url": "http://www.whitepaper.co.kr/news/articleView.html?idxno=263749",
+          "office": "whitepaper",
           "sentiment": "호재",
-          "cause_score": 5,
-          "cause_reason": "제목 언급, 주어, 일반뉴스, 당일"
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 인과표현, 재료, 당일"
+        },
+        {
+          "title": "SK하이닉스, 삼성전자 추월…26년 만에 '왕좌' 교체",
+          "url": "https://biz.sbs.co.kr/article_hub/20000318029?division=NAVER",
+          "office": "biz",
+          "sentiment": "호재",
+          "cause_score": 7,
+          "cause_reason": "제목 언급, 주어, 재료, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] SK하이닉스, 25년만에 장중 시총 1위 뒤집었다"
+      "cause_summary": "SK하이닉스, 삼성전자 시총 25년 독주에 도전…AI 반도체 훈풍 타고 급등"
     },
     {
       "ticker": "한울반도체",
@@ -380,12 +360,12 @@
       "ticker": "한솔테크닉스",
       "code": "004710",
       "tomorrow_up_prob": "95%",
-      "entry": 15430.0,
-      "target": 16202,
-      "stop": 14967,
+      "entry": 15460.0,
+      "target": 16233,
+      "stop": 14996,
       "confidence": "상",
       "reasons": [
-        "강세마감(0.74)",
+        "강세마감(0.75)",
         "정배열",
         "MACD강세"
       ],
@@ -423,7 +403,7 @@
     {
       "ticker": "SK스퀘어",
       "code": "402340",
-      "tomorrow_up_prob": "69%",
+      "tomorrow_up_prob": "68%",
       "entry": 1970000.0,
       "target": 2068500,
       "stop": 1910900,
@@ -460,14 +440,14 @@
       "ticker": "DB하이텍",
       "code": "000990",
       "tomorrow_up_prob": "64%",
-      "entry": 173400.0,
-      "target": 182070,
-      "stop": 168198,
+      "entry": 174000.0,
+      "target": 182700,
+      "stop": 168780,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.96)",
-        "RSI53.9 강세",
-        "장중 18회 지속"
+        "강세마감(0.99)",
+        "RSI54.1 강세",
+        "장중 19회 지속"
       ],
       "risk": "특이 위험 낮음",
       "day_change": null,
@@ -485,6 +465,34 @@
           "sentiment": "혼재"
         }
       ]
+    },
+    {
+      "ticker": "보해양조",
+      "code": "000890",
+      "tomorrow_up_prob": "62%",
+      "entry": 2340.0,
+      "target": 2457,
+      "stop": 2270,
+      "confidence": "중",
+      "reasons": [
+        "MACD강세",
+        "일목 구름위",
+        "거래량16.87배"
+      ],
+      "risk": "Stoch 과매수",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "주류주 변동성 확대… 보해양조·한울앤제주 강세, 대형주 조정",
+          "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=462034",
+          "office": "pinpointnews",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "주류주 변동성 확대… 보해양조·한울앤제주 강세, 대형주 조정"
     },
     {
       "ticker": "서산",
