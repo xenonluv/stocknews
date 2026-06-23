@@ -34,8 +34,8 @@
    "pattern": "reaccum",
    "prime": false,
    "theme": "금리",
-   "value_eok": 3282,
-   "turnover_pct": 0.6,
+   "value_eok": 3527,
+   "turnover_pct": 0.7,
    "peak_turnover_pct": 2.2,
    "turnover_basis": "float",
    "theme_leader": false,
@@ -81,7 +81,86 @@
    "evaluated": false,
    "result": null,
    "final": true
+  },
+  "122640": {
+   "name": "예스티",
+   "sector": "기계·장비",
+   "entry": 40700.0,
+   "score": 0,
+   "breakdown": {
+    "base": 0,
+    "re_value": 0,
+    "re_body": 0,
+    "re_count": 0,
+    "flow": 0,
+    "explosion": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "suspicion_score": 66,
+   "score_breakdown_display": {
+    "base": 62,
+    "re_value": 2,
+    "re_body": 2,
+    "re_count": 0,
+    "flow": 0,
+    "explosion": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "rank": 2,
+   "change_pct": 5.71,
+   "high_pct": 6.49,
+   "fade_pct": 12.0,
+   "pattern": "reaccum",
+   "prime": false,
+   "theme": "반도체",
+   "value_eok": 606,
+   "turnover_pct": 9.7,
+   "peak_turnover_pct": 43.2,
+   "turnover_basis": "float",
+   "theme_leader": false,
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "flow_today_buy": true,
+   "flow_net_days": 3,
+   "deep_shake": null,
+   "ai_verdict": null,
+   "visible_experimental": true,
+   "reaccum_badge": false,
+   "reaccum": {
+    "peak_date": "20260618",
+    "peak_value_eok": 2642,
+    "peak_high_pct": 29.57,
+    "ma20": 29952.5,
+    "ma20_margin_pct": 35.88,
+    "ivtr_net": 73775,
+    "ivtr_days": 4,
+    "ivtr_eok": 27,
+    "cause_summary": "예스티, 메모리향 장비 공급 본격화 기대-유안타",
+    "was_theme_leader": false,
+    "source": "live"
+   },
+   "reignition": {
+    "body_pct": 3.17,
+    "time": "09:30",
+    "value_10m_eok": 113
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "matched_events": [],
+   "first_seen": "2026-06-23 09:42:18 KST",
+   "evaluated": false,
+   "result": null,
+   "final": true
   }
  },
- "as_of": "2026-06-23 09:32:34 KST"
+ "as_of": "2026-06-23 09:42:18 KST"
 }
