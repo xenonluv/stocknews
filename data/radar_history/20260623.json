@@ -34,7 +34,7 @@
    "pattern": "reaccum",
    "prime": false,
    "theme": "금리",
-   "value_eok": 4545,
+   "value_eok": 4677,
    "turnover_pct": 0.9,
    "peak_turnover_pct": 2.2,
    "turnover_basis": "float",
@@ -160,7 +160,88 @@
    "evaluated": false,
    "result": null,
    "final": false
+  },
+  "204270": {
+   "name": "제이앤티씨",
+   "sector": "전기·전자",
+   "entry": 23800.0,
+   "score": 0,
+   "breakdown": {
+    "base": 0,
+    "re_value": 0,
+    "re_body": 0,
+    "re_count": 0,
+    "flow": 0,
+    "explosion": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "suspicion_score": 78,
+   "score_breakdown_display": {
+    "base": 62,
+    "re_value": 6,
+    "re_body": 6,
+    "re_count": 3,
+    "flow": 0,
+    "explosion": 0,
+    "peak_turnover": 1,
+    "re_turnover": 0
+   },
+   "rank": 2,
+   "change_pct": 4.16,
+   "high_pct": 10.5,
+   "fade_pct": 60.4,
+   "pattern": "reaccum",
+   "prime": false,
+   "theme": "반도체",
+   "value_eok": 610,
+   "turnover_pct": 13.7,
+   "peak_turnover_pct": 54.0,
+   "turnover_basis": "float",
+   "theme_leader": false,
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "flow_today_buy": true,
+   "flow_net_days": 1,
+   "deep_shake": null,
+   "ai_verdict": null,
+   "visible_experimental": true,
+   "reaccum_badge": false,
+   "reaccum": {
+    "peak_date": "20260622",
+    "peak_value_eok": 2310,
+    "peak_high_pct": 19.05,
+    "ma20": 18881.5,
+    "ma20_margin_pct": 26.05,
+    "ivtr_net": 293,
+    "ivtr_days": 2,
+    "ivtr_eok": 0,
+    "cause_summary": "제이앤티씨, 글로벌 최초 유리두께 2.0mmT 고난이도 TGV 유리기판 개발...",
+    "was_theme_leader": false,
+    "source": "live"
+   },
+   "reignition": {
+    "body_pct": 14.45,
+    "time": "10:30",
+    "value_10m_eok": 245
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "matched_events": [
+    "2026-07-03_미국 고용보고서 (7월"
+   ],
+   "first_seen": "2026-06-23 10:42:24 KST",
+   "evaluated": false,
+   "result": null,
+   "final": true
   }
  },
- "as_of": "2026-06-23 10:32:26 KST"
+ "as_of": "2026-06-23 10:42:24 KST"
 }
