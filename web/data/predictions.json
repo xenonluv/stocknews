@@ -1,16 +1,60 @@
 {
-  "as_of": "2026-06-23 10:22 KST",
+  "as_of": "2026-06-23 10:37 KST",
   "intraday_rank": [
+    {
+      "ticker": "대원전선",
+      "code": "006340",
+      "tomorrow_up_prob": "66%",
+      "entry": 11160.0,
+      "target": 11718,
+      "stop": 10825,
+      "confidence": "중",
+      "reasons": [
+        "정배열",
+        "거래량2.23배",
+        "호재"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[특징주] 대원전선, \"전선업계 사상 최대 수주 잔고\".. 11%대 '급등'",
+          "url": "https://www.g-enews.com/view.php?ud=20260623093944718944093b5d4e_1",
+          "office": "g-enews",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "전선업계, 사상 최대 수주잔고 행진…대원전선, 18%↑[특징주]",
+          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03194726645484672",
+          "office": "edaily",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "대원전선, 4거래일만에 8% 급등...1만1000원선 회복",
+          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=440055",
+          "office": "econonews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 대원전선, \"전선업계 사상 최대 수주 잔고\".. 11%대 '급등'"
+    },
     {
       "ticker": "삼양식품",
       "code": "003230",
-      "tomorrow_up_prob": "63%",
-      "entry": 1121000.0,
-      "target": 1177050,
-      "stop": 1087370,
+      "tomorrow_up_prob": "64%",
+      "entry": 1125000.0,
+      "target": 1181250,
+      "stop": 1091250,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.87)",
+        "강세마감(0.88)",
         "Stoch골든",
         "호재"
       ],
@@ -18,15 +62,15 @@
       "day_change": null,
       "related_news": [
         {
-          "title": "삼양애니, '페포월드닷컴' 오픈…참여형 플랫폼 구축",
-          "url": "https://n.news.naver.com/mnews/article/629/0000509680",
-          "office": "더팩트",
-          "sentiment": "호재"
-        },
-        {
           "title": "K푸드 넘어 콘텐츠로…‘불닭 IP’ 키우는 삼양",
           "url": "https://n.news.naver.com/mnews/article/092/0002427557",
           "office": "지디넷코리아",
+          "sentiment": "호재"
+        },
+        {
+          "title": "불닭 엄마 김정수의 선택은 전병우…삼양 3세 승계 시계 빨라졌다",
+          "url": "https://n.news.naver.com/mnews/article/243/0000099426",
+          "office": "이코노미스트",
           "sentiment": "호재"
         }
       ]
@@ -34,7 +78,7 @@
     {
       "ticker": "보해양조",
       "code": "000890",
-      "tomorrow_up_prob": "62%",
+      "tomorrow_up_prob": "63%",
       "entry": 3040.0,
       "target": 3192,
       "stop": 2949,
@@ -76,125 +120,9 @@
       "cause_summary": "[특징주] 보해양조, '반도체 호남 유치설'에 강세…투자주의 지정"
     },
     {
-      "ticker": "대원전선",
-      "code": "006340",
-      "tomorrow_up_prob": "62%",
-      "entry": 11040.0,
-      "target": 11592,
-      "stop": 10709,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "거래량2.17배",
-        "호재"
-      ],
-      "risk": "약한 마감",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] 대원전선, \"전선업계 사상 최대 수주 잔고\".. 11%대 '급등'",
-          "url": "https://www.g-enews.com/view.php?ud=20260623093944718944093b5d4e_1",
-          "office": "g-enews",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "전선업계, 사상 최대 수주잔고 행진…대원전선, 18%↑[특징주]",
-          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03194726645484672",
-          "office": "edaily",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "대원전선, 4거래일만에 8% 급등...1만1000원선 회복",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=440055",
-          "office": "econonews",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 대원전선, \"전선업계 사상 최대 수주 잔고\".. 11%대 '급등'"
-    },
-    {
-      "ticker": "삼성생명",
-      "code": "032830",
-      "tomorrow_up_prob": "56%",
-      "entry": 472000.0,
-      "target": 495600,
-      "stop": 457840,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI63.5 강세"
-      ],
-      "risk": "약한 마감, 악재",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "삼전 내려도 삼성생명 7%대 강세…지분가치 재평가 기대[핫종목]",
-          "url": "https://www.news1.kr/finance/general-stock/6205324",
-          "office": "news1",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "삼전 내려도 삼성생명 7%대 강세…지분가치 재평가 기대[핫종목]"
-    },
-    {
-      "ticker": "SK스퀘어",
-      "code": "402340",
-      "tomorrow_up_prob": "56%",
-      "entry": 2061000.0,
-      "target": 2164050,
-      "stop": 1999170,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "RSI82.0 과매수, Stoch 과매수",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] SK스퀘어, SK하이닉스 지분 가치 재평가에 장중 ‘신고가’ 경...",
-          "url": "https://biz.chosun.com/stock/stock_general/2026/06/23/COUAOB63GFHRDDGPIAKSEHQGY4/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-          "office": "biz",
-          "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] SK스퀘어, 210만원 돌파 후 숨고르기…SK하이닉스 지분가치 부...",
-          "url": "https://www.tokenpost.kr/news/economy/371922",
-          "office": "tokenpost",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주} SK스퀘어, '시총 1위' SK하이닉스 효과에 장중 신고가",
-          "url": "https://www.cstimes.com/news/articleView.html?idxno=710719",
-          "office": "cstimes",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] SK스퀘어, SK하이닉스 지분 가치 재평가에 장중 ‘신고가’ 경..."
-    },
-    {
       "ticker": "서산",
       "code": "079650",
-      "tomorrow_up_prob": "51%",
+      "tomorrow_up_prob": "52%",
       "entry": 8120.0,
       "target": 8526,
       "stop": 7876,
@@ -236,51 +164,29 @@
       "cause_summary": "건설 경기 회복 기대감에 시멘트주 강세… 서산 모헨즈 주가 파죽지세"
     },
     {
-      "ticker": "예스티",
-      "code": "122640",
-      "tomorrow_up_prob": "39%",
-      "entry": 42850.0,
-      "target": 44992,
-      "stop": 41564,
-      "confidence": "하",
-      "reasons": [
-        "강세마감(0.91)",
-        "정배열",
-        "MACD강세"
-      ],
-      "risk": "특이 위험 낮음",
-      "day_change": 10,
-      "related_news": [
-        {
-          "title": "HPSP·예스티 특허분쟁 2심…특허 유효·비침해 판단",
-          "url": "https://n.news.naver.com/mnews/article/030/0003439161",
-          "office": "전자신문",
-          "sentiment": "혼재"
-        },
-        {
-          "title": "특허법원 &quot;HPSP 특허 유효, 예스티 비침해&quot; 판결",
-          "url": "https://n.news.naver.com/mnews/article/092/0002427176",
-          "office": "지디넷코리아",
-          "sentiment": "혼재"
-        }
-      ]
-    },
-    {
       "ticker": "삼성물산",
       "code": "028260",
       "tomorrow_up_prob": "38%",
-      "entry": 513000.0,
-      "target": 538650,
-      "stop": 497610,
+      "entry": 509000.0,
+      "target": 534450,
+      "stop": 493730,
       "confidence": "하",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI62.6 강세"
+        "RSI61.8 강세"
       ],
       "risk": "약한 마감",
-      "day_change": 0.96,
+      "day_change": -1.54,
       "cause_news": [
+        {
+          "title": "[투데이's 특징주] 삼성물산, 계열사 지분가치 상승 수혜 기대감에 장 초...",
+          "url": "https://www.todaykorea.co.kr/news/articleView.html?idxno=402979",
+          "office": "todaykorea",
+          "sentiment": "호재",
+          "cause_score": 15,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
+        },
         {
           "title": "[특징주] 삼성물산, 장 초반 강세…계열사 지분가치 재평가 기대",
           "url": "https://www.ajunews.com/view/20260623095012675",
@@ -291,64 +197,108 @@
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 삼성물산, 장 초반 강세…계열사 지분가치 재평가 기대"
+      "cause_summary": "[투데이's 특징주] 삼성물산, 계열사 지분가치 상승 수혜 기대감에 장 초..."
     },
     {
       "ticker": "SK",
       "code": "034730",
       "tomorrow_up_prob": "38%",
-      "entry": 783500.0,
-      "target": 822675,
-      "stop": 759995,
+      "entry": 767000.0,
+      "target": 805350,
+      "stop": 743990,
       "confidence": "하",
       "reasons": [
         "정배열",
         "MACD강세",
         "일목 구름위"
       ],
-      "risk": "Stoch 과매수",
+      "risk": "약한 마감, Stoch 과매수",
       "day_change": null,
       "cause_news": [
         {
-          "title": "[특징주} SK스퀘어, '시총 1위' SK하이닉스 효과에 장중 신고가",
-          "url": "https://www.cstimes.com/news/articleView.html?idxno=710719",
-          "office": "cstimes",
+          "title": "[특징주] SK하이닉스 뛰자 SK스퀘어 '날았다'…주가 200만원 돌파",
+          "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=844743",
+          "office": "newsworks",
           "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "[특징주] SK스퀘어, 210만원 돌파 후 숨고르기…SK하이닉스 지분가치 부...",
-          "url": "https://www.tokenpost.kr/news/economy/371922",
-          "office": "tokenpost",
+          "title": "'285만닉스의 힘'…SK스퀘어, 장중 사상 최고가 경신[특징주]",
+          "url": "https://www.newsway.co.kr/news/view?ud=2026062310054998013",
+          "office": "newsway",
           "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 원인표현, 재료, 검색맥락, 당일"
         },
         {
-          "title": "마이크론 25일(한국시간) 새벽 실적 발표 주가 분수령될 듯...SK하이닉스...",
-          "url": "http://www.beyondpost.co.kr/view.php?ud=2026062309584944602aaae0046f_30",
-          "office": "beyondpost",
+          "title": "금감원장 \"삼성전자·SK하이닉스 레버리지 ETF, 막았어야 했다\"",
+          "url": "https://www.ezyeconomy.com/news/articleView.html?idxno=236628",
+          "office": "ezyeconomy",
           "sentiment": "호재",
           "cause_score": 5,
           "cause_reason": "제목 언급, 재료, 일반뉴스, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주} SK스퀘어, '시총 1위' SK하이닉스 효과에 장중 신고가"
+      "cause_summary": "[특징주] SK하이닉스 뛰자 SK스퀘어 '날았다'…주가 200만원 돌파"
     }
   ],
   "closing_bet": [
     {
-      "ticker": "삼양식품",
-      "code": "003230",
-      "tomorrow_up_prob": "63%",
-      "entry": 1121000.0,
-      "target": 1177050,
-      "stop": 1087370,
+      "ticker": "대원전선",
+      "code": "006340",
+      "tomorrow_up_prob": "66%",
+      "entry": 11160.0,
+      "target": 11718,
+      "stop": 10825,
       "confidence": "중",
       "reasons": [
-        "강세마감(0.87)",
+        "정배열",
+        "거래량2.23배",
+        "호재"
+      ],
+      "risk": "특이 위험 낮음",
+      "day_change": null,
+      "cause_news": [
+        {
+          "title": "[특징주] 대원전선, \"전선업계 사상 최대 수주 잔고\".. 11%대 '급등'",
+          "url": "https://www.g-enews.com/view.php?ud=20260623093944718944093b5d4e_1",
+          "office": "g-enews",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "전선업계, 사상 최대 수주잔고 행진…대원전선, 18%↑[특징주]",
+          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03194726645484672",
+          "office": "edaily",
+          "sentiment": "호재",
+          "cause_score": 13,
+          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
+        },
+        {
+          "title": "대원전선, 4거래일만에 8% 급등...1만1000원선 회복",
+          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=440055",
+          "office": "econonews",
+          "sentiment": "호재",
+          "cause_score": 11,
+          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
+        }
+      ],
+      "cause_confidence": "높음",
+      "cause_summary": "[특징주] 대원전선, \"전선업계 사상 최대 수주 잔고\".. 11%대 '급등'"
+    },
+    {
+      "ticker": "삼양식품",
+      "code": "003230",
+      "tomorrow_up_prob": "64%",
+      "entry": 1125000.0,
+      "target": 1181250,
+      "stop": 1091250,
+      "confidence": "중",
+      "reasons": [
+        "강세마감(0.88)",
         "Stoch골든",
         "호재"
       ],
@@ -356,15 +306,15 @@
       "day_change": null,
       "related_news": [
         {
-          "title": "삼양애니, '페포월드닷컴' 오픈…참여형 플랫폼 구축",
-          "url": "https://n.news.naver.com/mnews/article/629/0000509680",
-          "office": "더팩트",
-          "sentiment": "호재"
-        },
-        {
           "title": "K푸드 넘어 콘텐츠로…‘불닭 IP’ 키우는 삼양",
           "url": "https://n.news.naver.com/mnews/article/092/0002427557",
           "office": "지디넷코리아",
+          "sentiment": "호재"
+        },
+        {
+          "title": "불닭 엄마 김정수의 선택은 전병우…삼양 3세 승계 시계 빨라졌다",
+          "url": "https://n.news.naver.com/mnews/article/243/0000099426",
+          "office": "이코노미스트",
           "sentiment": "호재"
         }
       ]
@@ -372,7 +322,7 @@
     {
       "ticker": "보해양조",
       "code": "000890",
-      "tomorrow_up_prob": "62%",
+      "tomorrow_up_prob": "63%",
       "entry": 3040.0,
       "target": 3192,
       "stop": 2949,
@@ -412,122 +362,6 @@
       ],
       "cause_confidence": "높음",
       "cause_summary": "[특징주] 보해양조, '반도체 호남 유치설'에 강세…투자주의 지정"
-    },
-    {
-      "ticker": "대원전선",
-      "code": "006340",
-      "tomorrow_up_prob": "62%",
-      "entry": 11040.0,
-      "target": 11592,
-      "stop": 10709,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "거래량2.17배",
-        "호재"
-      ],
-      "risk": "약한 마감",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] 대원전선, \"전선업계 사상 최대 수주 잔고\".. 11%대 '급등'",
-          "url": "https://www.g-enews.com/view.php?ud=20260623093944718944093b5d4e_1",
-          "office": "g-enews",
-          "sentiment": "호재",
-          "cause_score": 17,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "전선업계, 사상 최대 수주잔고 행진…대원전선, 18%↑[특징주]",
-          "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03194726645484672",
-          "office": "edaily",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "대원전선, 4거래일만에 8% 급등...1만1000원선 회복",
-          "url": "http://www.econonews.co.kr/news/articleView.html?idxno=440055",
-          "office": "econonews",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] 대원전선, \"전선업계 사상 최대 수주 잔고\".. 11%대 '급등'"
-    },
-    {
-      "ticker": "삼성생명",
-      "code": "032830",
-      "tomorrow_up_prob": "56%",
-      "entry": 472000.0,
-      "target": 495600,
-      "stop": 457840,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "RSI63.5 강세"
-      ],
-      "risk": "약한 마감, 악재",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "삼전 내려도 삼성생명 7%대 강세…지분가치 재평가 기대[핫종목]",
-          "url": "https://www.news1.kr/finance/general-stock/6205324",
-          "office": "news1",
-          "sentiment": "호재",
-          "cause_score": 9,
-          "cause_reason": "제목 언급, 원인표현, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "삼전 내려도 삼성생명 7%대 강세…지분가치 재평가 기대[핫종목]"
-    },
-    {
-      "ticker": "SK스퀘어",
-      "code": "402340",
-      "tomorrow_up_prob": "56%",
-      "entry": 2061000.0,
-      "target": 2164050,
-      "stop": 1999170,
-      "confidence": "중",
-      "reasons": [
-        "정배열",
-        "MACD강세",
-        "일목 구름위"
-      ],
-      "risk": "RSI82.0 과매수, Stoch 과매수",
-      "day_change": null,
-      "cause_news": [
-        {
-          "title": "[특징주] SK스퀘어, SK하이닉스 지분 가치 재평가에 장중 ‘신고가’ 경...",
-          "url": "https://biz.chosun.com/stock/stock_general/2026/06/23/COUAOB63GFHRDDGPIAKSEHQGY4/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-          "office": "biz",
-          "sentiment": "호재",
-          "cause_score": 15,
-          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] SK스퀘어, 210만원 돌파 후 숨고르기…SK하이닉스 지분가치 부...",
-          "url": "https://www.tokenpost.kr/news/economy/371922",
-          "office": "tokenpost",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주} SK스퀘어, '시총 1위' SK하이닉스 효과에 장중 신고가",
-          "url": "https://www.cstimes.com/news/articleView.html?idxno=710719",
-          "office": "cstimes",
-          "sentiment": "호재",
-          "cause_score": 11,
-          "cause_reason": "제목 언급, 주어, 원인표현, 검색맥락, 당일"
-        }
-      ],
-      "cause_confidence": "높음",
-      "cause_summary": "[특징주] SK스퀘어, SK하이닉스 지분 가치 재평가에 장중 ‘신고가’ 경..."
     }
   ],
   "disclaimer": "예측·투자 참고용이며 매수 추천이 아닙니다. 갭 리스크가 있으니 손절을 지키세요.",
