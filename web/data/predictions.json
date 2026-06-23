@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-06-23 11:22 KST",
+  "as_of": "2026-06-23 11:37 KST",
   "intraday_rank": [
     {
       "ticker": "보해양조",
@@ -18,6 +18,14 @@
       "day_change": null,
       "cause_news": [
         {
+          "title": "\"소주 회사가 반도체 수혜주?\"…보해양조, 장성 유치설에 급등",
+          "url": "https://www.jnilbo.com/news/articleView.html?idxno=90000044528",
+          "office": "jnilbo",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
           "title": "[특징주] 보해양조, '반도체 호남 유치설'에 강세…투자주의 지정",
           "url": "https://www.yna.co.kr/view/AKR20260623050300008?input=1195m",
           "office": "yna",
@@ -32,30 +40,22 @@
           "sentiment": "호재",
           "cause_score": 17,
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] 보해양조, 반도체 호남 유치설 영향 '상승'",
-          "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1267691",
-          "office": "jeonmae",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 보해양조, '반도체 호남 유치설'에 강세…투자주의 지정"
+      "cause_summary": "\"소주 회사가 반도체 수혜주?\"…보해양조, 장성 유치설에 급등"
     },
     {
       "ticker": "대원전선",
       "code": "006340",
       "tomorrow_up_prob": "64%",
-      "entry": 11100.0,
-      "target": 11655,
-      "stop": 10767,
+      "entry": 10960.0,
+      "target": 11508,
+      "stop": 10631,
       "confidence": "중",
       "reasons": [
         "정배열",
-        "거래량2.37배",
+        "거래량2.42배",
         "호재"
       ],
       "risk": "약한 마감",
@@ -137,17 +137,17 @@
       "ticker": "제이앤티씨",
       "code": "204270",
       "tomorrow_up_prob": "38%",
-      "entry": 22300.0,
-      "target": 23415,
-      "stop": 21631,
+      "entry": 22250.0,
+      "target": 23362,
+      "stop": 21582,
       "confidence": "하",
       "reasons": [
         "정배열",
         "MACD강세",
-        "RSI61.5 강세"
+        "RSI61.3 강세"
       ],
       "risk": "특이 위험 낮음",
-      "day_change": -0.22,
+      "day_change": -1.09,
       "cause_news": [
         {
           "title": "[특징주] 제이앤티씨, 글로벌 첫 2.0㎜T TGV 유리기판 개발에 상한가",
@@ -181,12 +181,12 @@
       "ticker": "부국철강",
       "code": "026940",
       "tomorrow_up_prob": "38%",
-      "entry": 3580.0,
-      "target": 3759,
-      "stop": 3473,
+      "entry": 3610.0,
+      "target": 3790,
+      "stop": 3502,
       "confidence": "하",
       "reasons": [
-        "강세마감(0.99)",
+        "강세마감(0.97)",
         "MACD강세",
         "일목 구름위"
       ],
@@ -232,6 +232,14 @@
       "day_change": null,
       "cause_news": [
         {
+          "title": "\"소주 회사가 반도체 수혜주?\"…보해양조, 장성 유치설에 급등",
+          "url": "https://www.jnilbo.com/news/articleView.html?idxno=90000044528",
+          "office": "jnilbo",
+          "sentiment": "호재",
+          "cause_score": 17,
+          "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
+        },
+        {
           "title": "[특징주] 보해양조, '반도체 호남 유치설'에 강세…투자주의 지정",
           "url": "https://www.yna.co.kr/view/AKR20260623050300008?input=1195m",
           "office": "yna",
@@ -246,30 +254,22 @@
           "sentiment": "호재",
           "cause_score": 17,
           "cause_reason": "제목 언급, 주어, 원인표현, 인과표현, 재료, 검색맥락, 당일"
-        },
-        {
-          "title": "[특징주] 보해양조, 반도체 호남 유치설 영향 '상승'",
-          "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1267691",
-          "office": "jeonmae",
-          "sentiment": "호재",
-          "cause_score": 13,
-          "cause_reason": "제목 언급, 주어, 원인표현, 재료, 검색맥락, 당일"
         }
       ],
       "cause_confidence": "높음",
-      "cause_summary": "[특징주] 보해양조, '반도체 호남 유치설'에 강세…투자주의 지정"
+      "cause_summary": "\"소주 회사가 반도체 수혜주?\"…보해양조, 장성 유치설에 급등"
     },
     {
       "ticker": "대원전선",
       "code": "006340",
       "tomorrow_up_prob": "64%",
-      "entry": 11100.0,
-      "target": 11655,
-      "stop": 10767,
+      "entry": 10960.0,
+      "target": 11508,
+      "stop": 10631,
       "confidence": "중",
       "reasons": [
         "정배열",
-        "거래량2.37배",
+        "거래량2.42배",
         "호재"
       ],
       "risk": "약한 마감",
