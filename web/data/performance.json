@@ -1,11 +1,11 @@
 {
- "as_of": "2026-06-22 19:22 KST",
+ "as_of": "2026-06-23 17:20 KST",
  "summary": {
   "n": 10,
   "hit_rate": 60.0,
   "avg_return": 0.68,
   "high3_rate": 90,
-  "tracking_days": 10,
+  "tracking_days": 11,
   "dropout": {
    "n": 11,
    "hit_rate": 54.5
@@ -86,6 +86,14 @@
   },
   {
    "date": "20260622",
+   "n": 0,
+   "hits": 0,
+   "hit_rate": null,
+   "cum_n": 10,
+   "cum_hit_rate": 60.0
+  },
+  {
+   "date": "20260623",
    "n": 0,
    "hits": 0,
    "hit_rate": null,
@@ -361,24 +369,24 @@
    },
    {
     "band": "0~+3%",
-    "n": 19,
-    "hit_rate": 52.6,
-    "avg_return": 0.36,
+    "n": 21,
+    "hit_rate": 47.6,
+    "avg_return": -0.9,
     "valid": true
    },
    {
     "band": "+3~+6%",
-    "n": 15,
-    "hit_rate": 33.3,
-    "avg_return": -2.1,
+    "n": 17,
+    "hit_rate": 29.4,
+    "avg_return": -3.18,
     "valid": true
    },
    {
     "band": "+6~+10%",
-    "n": 7,
-    "hit_rate": 28.6,
-    "avg_return": -2.33,
-    "valid": false
+    "n": 10,
+    "hit_rate": 20.0,
+    "avg_return": -4.66,
+    "valid": true
    }
   ]
  },
@@ -388,16 +396,16 @@
   "cells": [
    {
     "band": "<40%",
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
+    "n": 5,
+    "hit_rate": 0.0,
+    "avg_return": -13.4,
     "valid": false
    },
    {
     "band": "40~80%",
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
+    "n": 2,
+    "hit_rate": 0.0,
+    "avg_return": -5.83,
     "valid": false
    },
    {
@@ -442,11 +450,11 @@
  },
  "experimental": {
   "reaccum": {
-   "n": 67,
-   "hit_rate": 44.8,
-   "avg_return": -0.61,
-   "high3_rate": 59.7,
-   "tracking_days": 10,
+   "n": 74,
+   "hit_rate": 40.5,
+   "avg_return": -1.61,
+   "high3_rate": 56.8,
+   "tracking_days": 11,
    "series": [
     {
      "date": "20260610",
@@ -522,14 +530,71 @@
     },
     {
      "date": "20260622",
+     "n": 7,
+     "hits": 0,
+     "hit_rate": 0,
+     "cum_n": 74,
+     "cum_hit_rate": 40.5
+    },
+    {
+     "date": "20260623",
      "n": 0,
      "hits": 0,
      "hit_rate": null,
-     "cum_n": 67,
-     "cum_hit_rate": 44.8
+     "cum_n": 74,
+     "cum_hit_rate": 40.5
     }
    ],
    "recent": [
+    {
+     "date": "20260622",
+     "name": "HPSP",
+     "score": 0,
+     "hit": false,
+     "return_pct": -11.67
+    },
+    {
+     "date": "20260622",
+     "name": "원익IPS",
+     "score": 93,
+     "hit": false,
+     "return_pct": -12.99
+    },
+    {
+     "date": "20260622",
+     "name": "예스티",
+     "score": 76,
+     "hit": false,
+     "return_pct": 0.0
+    },
+    {
+     "date": "20260622",
+     "name": "테크윙",
+     "score": 0,
+     "hit": false,
+     "return_pct": -14.08
+    },
+    {
+     "date": "20260622",
+     "name": "제주반도체",
+     "score": 0,
+     "hit": false,
+     "return_pct": -17.31
+    },
+    {
+     "date": "20260622",
+     "name": "삼성물산",
+     "score": 87,
+     "hit": false,
+     "return_pct": -12.5
+    },
+    {
+     "date": "20260622",
+     "name": "삼성E&A",
+     "score": 80,
+     "hit": false,
+     "return_pct": -10.12
+    },
     {
      "date": "20260619",
      "name": "SK이터닉스",
@@ -620,55 +685,6 @@
      "score": 0,
      "hit": false,
      "return_pct": -3.27
-    },
-    {
-     "date": "20260619",
-     "name": "SK",
-     "score": 0,
-     "hit": true,
-     "return_pct": 0.83
-    },
-    {
-     "date": "20260619",
-     "name": "삼성E&A",
-     "score": 0,
-     "hit": true,
-     "return_pct": 2.57
-    },
-    {
-     "date": "20260619",
-     "name": "LG이노텍",
-     "score": 0,
-     "hit": false,
-     "return_pct": -1.31
-    },
-    {
-     "date": "20260619",
-     "name": "대한항공",
-     "score": 0,
-     "hit": false,
-     "return_pct": -3.22
-    },
-    {
-     "date": "20260618",
-     "name": "SK이터닉스",
-     "score": 0,
-     "hit": false,
-     "return_pct": -11.29
-    },
-    {
-     "date": "20260618",
-     "name": "HPSP",
-     "score": 0,
-     "hit": false,
-     "return_pct": -4.71
-    },
-    {
-     "date": "20260618",
-     "name": "SK스퀘어",
-     "score": 0,
-     "hit": true,
-     "return_pct": 4.71
     }
    ]
   },
@@ -676,24 +692,24 @@
    "min_n": 10,
    "unknown_n": 0,
    "leader": {
-    "n": 2,
-    "hit_rate": 50.0,
-    "avg_return": 0.65,
-    "high3_rate": 100.0,
+    "n": 3,
+    "hit_rate": 33.3,
+    "avg_return": -3.46,
+    "high3_rate": 66.7,
     "valid": false
    },
    "nonleader": {
-    "n": 65,
-    "hit_rate": 44.6,
-    "avg_return": -0.64,
-    "high3_rate": 58.5,
+    "n": 71,
+    "hit_rate": 40.8,
+    "avg_return": -1.53,
+    "high3_rate": 56.3,
     "valid": true
    },
    "all": {
-    "n": 67,
-    "hit_rate": 44.8,
-    "avg_return": -0.61,
-    "high3_rate": 59.7,
+    "n": 74,
+    "hit_rate": 40.5,
+    "avg_return": -1.61,
+    "high3_rate": 56.8,
     "valid": true
    },
    "lift": null
