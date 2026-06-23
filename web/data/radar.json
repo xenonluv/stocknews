@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-23 09:52:21 KST",
+ "generated_at": "2026-06-23 10:02:20 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -28,7 +28,7 @@
   "telegram_seed": true,
   "telegram_channel": "FastStockNews"
  },
- "universe_count": 55,
+ "universe_count": 56,
  "events": [
   {
    "id": "2026-07-03_미국 고용보고서 (7월",
@@ -83,17 +83,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 534000.0,
-   "change_pct": 2.69,
+   "price": 527000.0,
+   "change_pct": 1.35,
    "high_pct": 6.15,
-   "fade_pct": 56.2,
-   "value_eok": 3763,
-   "turnover_pct": 0.7,
+   "fade_pct": 78.1,
+   "value_eok": 4021,
+   "turnover_pct": 0.8,
    "peak_turnover_pct": 2.2,
    "float_ratio": 0.616,
    "turnover_basis": "float",
-   "ma10": 476250.0,
-   "ma10_margin_pct": 12.13,
+   "ma10": 475450.0,
+   "ma10_margin_pct": 10.84,
    "spark": {
     "clusters": []
    },
@@ -162,8 +162,8 @@
     "peak_date": "20260619",
     "peak_value_eok": 10802,
     "peak_high_pct": 15.14,
-    "ma20": 459475.0,
-    "ma20_margin_pct": 16.22,
+    "ma20": 459075.0,
+    "ma20_margin_pct": 14.8,
     "ivtr_net": 112946,
     "ivtr_days": 4,
     "ivtr_eok": 581,
