@@ -4,7 +4,7 @@
   "028260": {
    "name": "삼성물산",
    "sector": "유통",
-   "entry": 527000.0,
+   "entry": 525000.0,
    "score": 0,
    "breakdown": {
     "base": 0,
@@ -28,13 +28,13 @@
     "re_turnover": 0
    },
    "rank": 1,
-   "change_pct": 1.35,
+   "change_pct": 0.96,
    "high_pct": 6.15,
-   "fade_pct": 78.1,
+   "fade_pct": 84.4,
    "pattern": "reaccum",
    "prime": false,
    "theme": "금리",
-   "value_eok": 4021,
+   "value_eok": 4218,
    "turnover_pct": 0.8,
    "peak_turnover_pct": 2.2,
    "turnover_basis": "float",
@@ -52,8 +52,8 @@
     "peak_date": "20260619",
     "peak_value_eok": 10802,
     "peak_high_pct": 15.14,
-    "ma20": 459075.0,
-    "ma20_margin_pct": 14.8,
+    "ma20": 459025.0,
+    "ma20_margin_pct": 14.37,
     "ivtr_net": 112946,
     "ivtr_days": 4,
     "ivtr_eok": 581,
@@ -85,7 +85,7 @@
   "122640": {
    "name": "예스티",
    "sector": "기계·장비",
-   "entry": 40700.0,
+   "entry": 42350.0,
    "score": 0,
    "breakdown": {
     "base": 0,
@@ -97,26 +97,26 @@
     "peak_turnover": 0,
     "re_turnover": 0
    },
-   "suspicion_score": 66,
+   "suspicion_score": 72,
    "score_breakdown_display": {
     "base": 62,
-    "re_value": 2,
+    "re_value": 5,
     "re_body": 2,
-    "re_count": 0,
+    "re_count": 3,
     "flow": 0,
     "explosion": 0,
     "peak_turnover": 0,
     "re_turnover": 0
    },
    "rank": 2,
-   "change_pct": 5.71,
-   "high_pct": 6.49,
-   "fade_pct": 12.0,
+   "change_pct": 10.0,
+   "high_pct": 12.47,
+   "fade_pct": 19.8,
    "pattern": "reaccum",
    "prime": false,
    "theme": "반도체",
-   "value_eok": 606,
-   "turnover_pct": 9.7,
+   "value_eok": 1269,
+   "turnover_pct": 19.5,
    "peak_turnover_pct": 43.2,
    "turnover_basis": "float",
    "theme_leader": false,
@@ -133,8 +133,8 @@
     "peak_date": "20260618",
     "peak_value_eok": 2642,
     "peak_high_pct": 29.57,
-    "ma20": 29952.5,
-    "ma20_margin_pct": 35.88,
+    "ma20": 30040.0,
+    "ma20_margin_pct": 40.98,
     "ivtr_net": 73775,
     "ivtr_days": 4,
     "ivtr_eok": 27,
@@ -143,9 +143,9 @@
     "source": "live"
    },
    "reignition": {
-    "body_pct": 3.17,
-    "time": "09:30",
-    "value_10m_eok": 113
+    "body_pct": 3.32,
+    "time": "09:40",
+    "value_10m_eok": 207
    },
    "forecast": {
     "horizon": "3일 내 +7%",
@@ -159,8 +159,8 @@
    "first_seen": "2026-06-23 09:42:18 KST",
    "evaluated": false,
    "result": null,
-   "final": false
+   "final": true
   }
  },
- "as_of": "2026-06-23 10:02:20 KST"
+ "as_of": "2026-06-23 10:12:51 KST"
 }
