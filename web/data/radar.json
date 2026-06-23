@@ -1,30 +1,23 @@
 {
- "generated_at": "2026-06-23 15:32:10 KST",
+ "generated_at": "2026-06-24 01:46:42 KST",
  "market_session": "closed",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
   "market": "UN",
-  "reaccum_change_range": [
-   -4.0,
-   10.0
+  "fade_drawdown_range": [
+   15.0,
+   40.0
   ],
   "reignition_body_pct": 2.0,
-  "reignition_value_10m_eok": 45,
-  "kimi_mode": "auto",
-  "kimi_max": 5,
-  "kimi_window": [
-   "144500",
-   "153000"
-  ],
+  "reignition_span_min": 15,
+  "reignition_min_count": 2,
   "reaccum_enabled": true,
   "reaccum_visible": true,
   "reaccum_max": 12,
-  "explosion_value_eok": 1500,
-  "explosion_turnover_pct": 100.0,
-  "explosion_turnover_min_value_eok": 300,
-  "explosion_high_pct": 13.0,
+  "explosion_vol_turnover": 90.0,
+  "explosion_high_pct": 22.0,
   "explosion_window": 6,
-  "explosion_rank_n": 30,
+  "explosion_scan_n": 50,
   "telegram_seed": true,
   "telegram_channel": "FastStockNews"
  },
@@ -33,7 +26,7 @@
   {
    "id": "2026-07-03_미국 고용보고서 (7월",
    "date": "2026-07-03",
-   "dday": 10,
+   "dday": 9,
    "title": "미국 고용보고서 (7월 발표)",
    "category": [
     "금리",
@@ -44,5 +37,6 @@
    "estimated": true
   }
  ],
+ "explosions": [],
  "suspects": []
 }

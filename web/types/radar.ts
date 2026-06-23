@@ -47,24 +47,14 @@ export interface MatchedEvent {
   score: number;
 }
 
-/** 수상함 점수 해부 (결정론 가중합 근거) */
+/** 반등조짐 점수 해부 (결정론 가산점 — 표시 전용 '강도', raw에는 없음) */
 export interface ScoreBreakdown {
   base: number;
-  spark: number;
-  fade: number;
-  ma10: number;
-  flow: number;
-  event: number;
-  ai?: number;
-  /** 메가스파크(≥40x)×당일 수급매수 가점 — 표시 점수 전용 (raw에는 없음) */
-  mega?: number;
-  // ── 재매집(reaccum) 변별 가산점 — 표시 전용 '강도'(검증된 확률 아님, raw에는 없음) ──
-  re_value?: number; // 재반등 10분봉 거래대금
-  re_body?: number; // 재반등 몸통%
-  re_count?: number; // 자격 봉 개수
-  explosion?: number; // 폭발 절대규모(peak 거래대금, 보조)
-  peak_turnover?: number; // 폭발일 회전율(폭발일 거래대금/폭발일 시총) 가점 — 폭발의 자명함(주신호)
-  re_turnover?: number; // 재반등 당일 회전율(거래대금/시총) 가점
+  drawdown?: number; // 식음 깊이(고점 대비 −15~−40%)
+  re_count?: number; // 당일 15분 양봉 자격 봉 개수
+  re_body?: number; // 최대 15분 양봉 몸통%
+  peak_turnover?: number; // 폭발일 회전율(거래량/유통주식수) 가점 — 폭발의 자명함(주신호)
+  re_turnover?: number; // 당일 회전율(거래량/유통주식수) 가점
 }
 
 /** 흔들기(눌림 후 재상승) 패턴 증거 — pattern === "shakeout"일 때만 */
@@ -90,30 +80,48 @@ export interface DeepShakeInfo {
   bars15_count: number;
 }
 
-/** 재매집 후보 메타 — 1천억+13% 폭발 이후 식은 구간 재매집 감시 */
+/** 반등조짐 후보 메타 — 폭발(고가22%+거래량90%) 이후 식음(고점 대비 −15~−40%) 구간 감시 */
 export interface ReaccumInfo {
   peak_date: string; // YYYYMMDD
   peak_value_eok: number;
+  peak_high?: number; // 폭발 후 고점(식음 drawdown 기준가)
   peak_high_pct: number;
+  peak_turnover_pct?: number | null; // 폭발일 거래량 회전율(유통주식수 대비 %)
+  drawdown_pct?: number; // 고점 대비 식음 하락률(%)
   ma20?: number;
   ma20_margin_pct?: number;
-  /** 폭발 전후 투신 순매수 (조건=수량>0 느슨, 일수·금액은 정보 표시) */
-  ivtr_net?: number; // 투신 순매수 수량
-  ivtr_days?: number; // 투신 순매수일 수
-  ivtr_eok?: number; // 투신 순매수 누적 금액(억)
   cause_summary?: string; // 폭발 catalyst 한 줄("왜 올랐나") — 구버전 JSON엔 없음
   /** 폭발일에 같은 업종 거래대금 1위(업종 대장)였는지 — '예전 대장 재등장' 의심 신호. 구버전 JSON엔 없음 */
   was_theme_leader?: boolean;
-  /** 유니버스 진입 경로 — "live"(랭킹) | "seed"(시드파일) | "telegram"(채널 언급發). 구버전 JSON엔 없음 */
+  /** 진입 경로 — "live"(랭킹) | "seed"(시드파일) | "telegram"(채널 언급發). 구버전 JSON엔 없음 */
   source?: "live" | "seed" | "telegram";
-  orgn_net_after_peak?: number; // 구버전 JSON 하위호환
+  // ── 구버전(재매집 v1) JSON 하위호환 ──
+  ivtr_net?: number;
+  ivtr_days?: number;
+  ivtr_eok?: number;
+  orgn_net_after_peak?: number;
 }
 
-/** 재반등(오늘) 신호 — 과거 폭등 종목이 오늘 거래대금 동반 재상승 초입인지 */
+/** 반등조짐(오늘) 신호 — 식음 종목이 오늘 15분봉 양봉으로 다시 살아나는지 */
 export interface ReignitionInfo {
-  body_pct: number; // 10분봉 몸통%(|종가−시가|/시가) 최댓값
-  time: string; // 해당 10분봉 시각 "HH:MM"
-  value_10m_eok: number; // 그 10분봉 1개의 거래대금(억)
+  body_pct: number; // 15분봉 양봉 몸통%(|종가−시가|/시가) 최댓값
+  time: string; // 대표(최대 몸통) 15분봉 시각 "HH:MM"
+  count?: number; // 당일 자격 양봉 수(게이트 ≥2)
+  value_15m_eok?: number; // 그 15분봉 1개의 거래대금(억) — 메타데이터(미표시)
+  value_10m_eok?: number; // 구버전 JSON 하위호환
+}
+
+/** 당일 폭발 종목 — 고가등락률 ≥22% AND 당일 거래량/유통주식수 ≥90% (/forecast 게시) */
+export interface Explosion {
+  code: string;
+  name: string;
+  sector: string;
+  high_pct: number; // 당일 고가 등락률(%)
+  vol_turnover_pct: number; // 당일 거래량 / 유통주식수 회전율(%)
+  value_eok: number; // 당일 거래대금(억)
+  /** 현재가 — 랭킹에서 밀려 registry로 백필된 종목은 null(현재가 미표시) */
+  price: number | null;
+  change_pct: number; // 현재 등락률(라이브) | 폭발일 종가 등락률(백필 행)
 }
 
 /** 3일내 +7% 상승확률 라벨 — 6개월 백테스트 보정(과거 실측·보장 아님) */
@@ -124,19 +132,6 @@ export interface ForecastInfo {
   strong: boolean; // 강 모멘텀 상위군(holdout 검증 구간)
   next_day_7_pct: number; // 내일(1일) +7% 터치 — 낮음, 정직 표기
   note: string;
-}
-
-/** Kimi 후보 검증 결과 */
-export interface AiVerdict {
-  status: "ok" | "disabled" | "not_configured" | "unavailable" | "outside_window";
-  verdict?: "CONFIRM" | "WATCH" | "REJECT";
-  confidence?: number;
-  reason?: string;
-  risk_flags?: string[];
-  manual_check?: string;
-  model?: string;
-  error?: string;
-  window?: [string, string];
 }
 
 /** 수상 종목 (전 조건 통과) */
@@ -157,7 +152,6 @@ export interface Suspect {
   reignition?: ReignitionInfo | null;
   /** 3일내 +7% 과거 실측 확률 라벨 — 표시 전용·보장 아님. 구버전 JSON엔 없음 */
   forecast?: ForecastInfo | null;
-  ai_verdict?: AiVerdict | null;
   suspicion_score: number; // 0~100
   /** 백테스트 실측 적중률 (점수대 표본 n>=20 구간만, 없으면 null) */
   calibrated_prob?: { rate: number | null; n: number } | null;
@@ -167,14 +161,17 @@ export interface Suspect {
   score_raw?: number; // 가중치 적용 전 — 백테스트 통계 기준
   score_breakdown_raw?: ScoreBreakdown;
   price: number;
-  change_pct: number; // 현재 등락률 (조건 6)
-  high_pct: number; // 당일 고가 등락률 (조건 3)
-  fade_pct: number; // 고가 상승분 대비 후퇴율
+  change_pct: number; // 현재 등락률
+  high_pct: number; // 당일 고가 등락률
+  drawdown_pct?: number; // 식음 깊이 — 폭발 후 고점 대비 현재가 하락률(%)
+  fade_pct?: number; // 구버전 JSON 하위호환(고가 후퇴율)
   value_eok: number; // 당일 거래대금(억)
-  turnover_pct?: number | null; // 당일 거래대금회전율(거래대금/시총 %) — 시총 대비 손바뀜 강도
-  peak_turnover_pct?: number | null; // 폭발일 회전율(폭발일 거래대금/폭발일 시총 %)
+  turnover_pct?: number | null; // 당일 회전율(거래량/유통주식수 %) — 손바뀜 강도
+  peak_turnover_pct?: number | null; // 폭발일 회전율(거래량/유통주식수 %)
+  float_ratio?: number | null; // 유동비율(0~1)
+  turnover_basis?: "float" | "cap"; // 회전율 기준
   ma10: number;
-  ma10_margin_pct: number; // 10일선 대비 여유 (조건 4)
+  ma10_margin_pct: number; // 10일선 대비 여유
   spark: { clusters: SparkCluster[] };
   /** 최대 스파크 클러스터 배수 — 구버전 JSON엔 없음 */
   spark_max_x?: number;
@@ -182,7 +179,7 @@ export interface Suspect {
   spark_max_pct?: number | null;
   /** 메가스파크(≥mega_x) × 당일 외인+기관 순매수 동반 여부 */
   mega_flow?: boolean;
-  flow: FlowInfo;
+  flow?: FlowInfo; // 구버전 JSON 하위호환(현 파이프라인 미출력)
   news: NewsItem[];
   matched_events: MatchedEvent[];
   /** 상위 테마(금리|반도체|환율|유가|전쟁|실적|수급) — 표시·그룹용, 점수 미반영. 구버전 JSON엔 없음 */
@@ -197,14 +194,24 @@ export interface RadarData {
   market_session: "open" | "closed";
   disclaimer: string;
   params: {
-    /** 재반등(오늘) 트리거: 당일 종가/현재 등락률 허용 범위 [하한, 상한] */
-    reaccum_change_range?: [number, number];
-    /** 구버전 JSON 하위호환: 예전에는 당일 고가 등락률 범위로 기록 */
-    reaccum_high_range?: [number, number];
-    /** 재반등: 10분봉 몸통% 하한 */
+    /** 식음: 폭발 후 고점 대비 하락률 허용 범위 [하한, 상한] */
+    fade_drawdown_range?: [number, number];
+    /** 반등: 15분 양봉 몸통% 하한 */
     reignition_body_pct?: number;
-    /** 재반등: 해당 10분봉 1개의 거래대금 하한(억) */
+    /** 반등: 분봉 합성 단위(분) */
+    reignition_span_min?: number;
+    /** 반등: 당일 자격 양봉 최소 횟수 */
+    reignition_min_count?: number;
+    /** 폭발: 거래량/유통주식수 회전율 하한(%) */
+    explosion_vol_turnover?: number;
+    /** 폭발: 시장별 네이버 up 스캔 상위 N */
+    explosion_scan_n?: number;
+    // ── 구버전 JSON 하위호환 ──
+    reaccum_change_range?: [number, number];
+    reaccum_high_range?: [number, number];
     reignition_value_10m_eok?: number;
+    explosion_value_eok?: number;
+    explosion_rank_n?: number;
     // --- 아래는 구버전(fade) radar.json 하위호환용 (현 파이프라인은 미출력) ---
     min_value_eok?: number;
     high_pct?: number;
@@ -220,18 +227,15 @@ export interface RadarData {
     deep_shake_enabled?: boolean;
     deep_drop_range?: [number, number];
     deep_ibs_min?: number;
-    kimi_mode?: "auto" | "on" | "off";
-    kimi_max?: number;
-    kimi_window?: [string, string];
     reaccum_enabled?: boolean;
     reaccum_visible?: boolean;
     reaccum_max?: number;
-    explosion_value_eok?: number;
     explosion_high_pct?: number;
     explosion_window?: number;
-    explosion_rank_n?: number;
   };
   universe_count: number;
   events: RadarEvent[];
+  /** 당일 폭발 종목 (/forecast 게시용) */
+  explosions?: Explosion[];
   suspects: Suspect[];
 }

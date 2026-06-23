@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """레이더 재반등 봉 텔레그램 알림 (표준 라이브러리만).
 
-publish.py가 게시 후보를 정한 뒤 호출 → 후보의 '완성된' 자격 10분봉마다 1통 전송.
-봉 시각(날짜:코드:HH:MM)으로 중복 제거 → 같은 봉 재전송 안 함(10분 회차 도배 방지),
+publish.py가 게시 후보를 정한 뒤 호출 → 후보의 '완성된' 자격 15분봉마다 1통 전송.
+봉 시각(날짜:코드:HH:MM)으로 중복 제거 → 같은 봉 재전송 안 함(회차 도배 방지),
 새 자격 봉이 또 뜨면 또 전송. 토큰 미설정/전송 실패는 조용히 skip(publish 본작업 보호).
 
 설정(Mac .env): TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
@@ -74,38 +74,43 @@ def _save_state(path, state):
         log(f"[telegram] 상태 저장 실패: {e}")
 
 
-def _bar_complete(bar_time_hhmm, now=None):
-    """버킷 시작 'HH:MM'의 10분봉이 완성됐나(now ≥ 시작+10분). 형성 중 봉은 알림 보류."""
+def _bar_complete(bar_time_hhmm, now=None, span_min=15):
+    """버킷 시작 'HH:MM'의 15분봉이 완성됐나(now ≥ 시작+15분). 형성 중 봉은 알림 보류."""
     now = now or datetime.now(KST)
     try:
         hh, mm = bar_time_hhmm.split(":")
         start = int(hh) * 60 + int(mm)
     except Exception:
         return False
-    return (now.hour * 60 + now.minute) >= start + 10
+    return (now.hour * 60 + now.minute) >= start + span_min
 
 
 def _format(s, bar):
     code = s.get("code") or ""
     name = s.get("name") or code
     r = s.get("reaccum") or {}
-    ma20 = r.get("ma20_margin_pct")
-    ivtr = r.get("ivtr_eok")
+    dd = r.get("drawdown_pct")
+    pt = r.get("peak_turnover_pct")
     line3 = f"등락 {s.get('change_pct')}%"
-    if ma20 is not None:
-        line3 += f" · MA20 +{ma20}%"
-    if ivtr is not None:
-        line3 += f" · 투신 +{ivtr}억"
+    if dd is not None:
+        line3 += f" · 고점대비 -{dd}%"
+    if pt is not None:
+        line3 += f" · 폭발일 회전 {pt}%"
+    # 15분 양봉 게이트는 거래대금 하한이 없어 value_eok이 0/소액일 수 있음 → 0이면 거래대금 표기 생략.
+    bar_line = f"{bar['time']} · 몸통 {bar['body_pct']}%"
+    if (bar.get("value_eok") or 0) > 0:
+        bar_line += f" · 거래대금 {bar['value_eok']}억"
     return "\n".join([
         f"🚨 {name} ({code}) 재반등 봉",
-        f"{bar['time']} · 몸통 {bar['body_pct']}% · 거래대금 {bar['value_eok']}억",
+        bar_line,
         line3,
         f"{BASE}/stock/{code}",
     ])
 
 
-def notify_reignitions(suspects, state_path=STATE_PATH, now=None):
-    """게시 후보의 '완성된' 자격 10분봉마다 1통 — 봉 시각 기준 중복 제거. 보낸 건수 반환."""
+def notify_reignitions(suspects, state_path=STATE_PATH, now=None, span_min=15):
+    """게시 후보의 '완성된' 자격 봉마다 1통 — 봉 시각 기준 중복 제거. 보낸 건수 반환.
+    span_min = 재반등 봉 합성 단위(radar의 --reignition-span-min, 기본 15). 봉 완성 판정에 사용."""
     load_env()
     if not os.environ.get("TELEGRAM_BOT_TOKEN") or not os.environ.get("TELEGRAM_CHAT_ID"):
         return 0  # 미설정 → 조용히 skip
@@ -117,7 +122,7 @@ def notify_reignitions(suspects, state_path=STATE_PATH, now=None):
     for s in suspects:
         code = s.get("code")
         for bar in s.get("reignition_bars") or []:
-            if not _bar_complete(bar.get("time", ""), now):
+            if not _bar_complete(bar.get("time", ""), now, span_min):
                 continue  # 아직 형성 중인 봉 → 다음 회차에
             key = f"{code}:{bar['time']}"
             if key in sent:

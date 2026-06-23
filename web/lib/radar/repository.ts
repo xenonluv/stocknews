@@ -1,5 +1,5 @@
 import radarData from "@/data/radar.json";
-import type { NewsItem, RadarData } from "@/types/radar";
+import type { Explosion, RadarData } from "@/types/radar";
 
 /**
  * 레이더 저장소 (단일 출처).
@@ -12,13 +12,7 @@ export function getRadar(): RadarData {
   return RADAR;
 }
 
-/** 종목코드 → 관련 뉴스. /forecast 종가베팅 카드에서 재사용한다. */
-export function newsByStockCode(): Record<string, NewsItem[]> {
-  const map: Record<string, NewsItem[]> = {};
-  for (const s of RADAR.suspects) {
-    if (s.code && s.news.length > 0 && !map[s.code]) {
-      map[s.code] = s.news;
-    }
-  }
-  return map;
+/** 당일 폭발 종목 (/forecast 페이지). 회전율 내림차순 정렬은 publish 단계에서 완료. */
+export function getExplosions(): Explosion[] {
+  return RADAR.explosions ?? [];
 }

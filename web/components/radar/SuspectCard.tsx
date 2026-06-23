@@ -1,10 +1,9 @@
-import { BrainCircuit, Newspaper, TrendingDown, Zap } from "lucide-react";
+import { Newspaper, TrendingDown } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SuspicionGauge } from "./SuspicionGauge";
-import { SparkTimeline } from "./SparkTimeline";
 import { ScoreBreakdownBars } from "./ScoreBreakdownBars";
 import { DisclaimerNote } from "./DisclaimerNote";
 import type { Suspect } from "@/types/radar";
@@ -24,16 +23,6 @@ function sentimentDotClass(sentiment?: string | null) {
   return "bg-muted-foreground/50";
 }
 
-function aiBadge(v: Suspect["ai_verdict"]) {
-  if (!v || v.status === "not_configured") return { label: "AI 미설정", variant: "neutral" as const };
-  if (v.status === "disabled") return { label: "AI 꺼짐", variant: "neutral" as const };
-  if (v.status === "outside_window") return { label: "AI 대기", variant: "neutral" as const };
-  if (v.status === "unavailable") return { label: "AI 미검증", variant: "outline" as const };
-  if (v.verdict === "CONFIRM") return { label: "AI 확인", variant: "outline" as const, className: "border-up/50 text-up" };
-  if (v.verdict === "REJECT") return { label: "AI 경고", variant: "outline" as const, className: "border-down/50 text-down" };
-  return { label: "AI 관망", variant: "warning" as const };
-}
-
 function peakDaysAgo(yyyymmdd?: string) {
   if (!yyyymmdd || yyyymmdd.length !== 8) return null;
   const y = Number(yyyymmdd.slice(0, 4));
@@ -51,18 +40,15 @@ function peakDaysAgo(yyyymmdd?: string) {
  */
 export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string }) {
   const change = fmtChange(s.change_pct);
-  const highChange = fmtChange(s.high_pct);
-  const trendMargin = fmtChange(
-    s.pattern === "reaccum" && s.reaccum?.ma20_margin_pct != null
-      ? s.reaccum.ma20_margin_pct
-      : s.ma10_margin_pct
-  );
-  const trendLabel =
-    s.pattern === "reaccum" && s.reaccum?.ma20_margin_pct != null ? "20일선 위" : "10일선 위";
+  // MA20 생존 게이트가 폐지돼 ma20_margin_pct는 음수일 수 있다 → 라벨에 위/아래를 부호로 반영.
+  const ma20Margin = s.pattern === "reaccum" ? s.reaccum?.ma20_margin_pct ?? null : null;
+  const trendVal = ma20Margin != null ? ma20Margin : s.ma10_margin_pct;
+  const trendMargin = fmtChange(trendVal);
+  const trendLabel = `${ma20Margin != null ? "20일선" : "10일선"} ${trendVal >= 0 ? "위" : "아래"}`;
   const strong = s.suspicion_score >= 75;
-  // 페이드 바: 0% = 전일종가, 100% = 당일 고가. 현재 위치 = 100 - fade_pct.
-  const curPos = Math.max(0, Math.min(100, 100 - s.fade_pct));
-  const flowBuyDays = s.flow.net_days; // 서버(publish) 계산값 — 클라이언트 재계산 금지
+  // 식음 깊이: 폭발 후 고점 대비 현재가 하락률(%). 마커는 100−drawdown 위치(고점에 가까울수록 우측).
+  const drawdown = s.drawdown_pct ?? s.reaccum?.drawdown_pct ?? null;
+  const ddPos = drawdown != null ? Math.max(0, Math.min(100, 100 - drawdown)) : null;
 
   return (
     <Card
@@ -82,29 +68,9 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
       <CardHeader className="gap-3 pb-3">
         <div className="flex items-center justify-between gap-2">
           <div className="flex flex-wrap items-center gap-1.5">
-            {s.prime && (
-              <Badge
-                className="border-transparent bg-up px-2.5 py-1 text-sm font-bold text-up-foreground"
-                title="폭등 후 식음 + 분봉 스파크 + 투자자 수급 — 핵심 조건이 모두 정렬된 1순위 관찰 후보 (매수 추천 아님)"
-              >
-                🎯 유력
-              </Badge>
-            )}
-            {s.pattern === "shakeout" && (
-              <Badge variant="warning" title="장중 고점에서 크게 눌렀다가 다시 끌어올리는 패턴">
-                눌림 후 재상승
-              </Badge>
-            )}
-            {s.pattern === "deep_shakeout" && (
-              <Badge variant="warning" title="고점 대비 급락 후 종가에 저가 방어와 흡수 흔적이 있는 패턴">
-                급락 흡수
-              </Badge>
-            )}
-            {(s.pattern === "reaccum" || s.reaccum_badge) && (
-              <Badge variant="warning" title="최근 6거래일 내 1천억·고가+13% 폭발 후 식은 구간 + 투신 매집 — 15분봉 120선 재돌파를 직접 확인하고 진입(매수 추천 아님)">
-                재매집 감시
-              </Badge>
-            )}
+            <Badge variant="warning" title="최근 6거래일 내 고가+22%·거래량 90%+ 폭발 후 고점 대비 −15~−40% 식음 + 오늘 15분 양봉 2회+ — 직접 확인하고 진입(매수 추천 아님)">
+              반등조짐
+            </Badge>
             {s.reaccum?.source === "telegram" && (
               <Badge
                 variant="outline"
@@ -119,23 +85,6 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
                 검증중
               </Badge>
             )}
-            {s.mega_flow && (
-              <Badge
-                variant="outline"
-                className="border-up/60 font-semibold text-up"
-                title="초대형 분봉 스파크에 당일 외인·기관 순매수가 동반 — 강한 회복력 가설로 최대 +12점 가점"
-              >
-                메가스파크 {s.spark_max_x}배 × 수급매수
-              </Badge>
-            )}
-            {!s.visible_experimental && (() => {
-              const b = aiBadge(s.ai_verdict);
-              return (
-                <Badge variant={b.variant} className={b.className} title={s.ai_verdict?.reason ?? undefined}>
-                  {b.label}
-                </Badge>
-              );
-            })()}
             {s.sector && <Badge variant="neutral">{s.sector}</Badge>}
             {s.theme && s.theme !== s.sector && (
               <Badge variant="outline" title="원인 테마(뉴스·업종 기반)">#{s.theme}</Badge>
@@ -167,7 +116,7 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
           <span className="text-xs text-muted-foreground tabular-nums">
             거래대금 {s.value_eok.toLocaleString()}억
             {s.turnover_pct != null && (
-              <span title="거래대금/시총 — 시총 대비 손바뀜 강도(높을수록 큰돈 집중)">
+              <span title="당일 거래량/유통주식수 — 유통주식 대비 손바뀜 강도(높을수록 큰돈 집중)">
                 {" · 회전 "}
                 {s.turnover_pct}%
               </span>
@@ -197,70 +146,53 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
         <div className="flex items-center gap-5">
           <SuspicionGauge value={s.suspicion_score} size={104} />
           <div className="flex-1 space-y-3">
-            {/* 고가 → 현재 페이드 바 */}
-            <div>
-              <div className="mb-1 flex items-center justify-between text-[11px] text-muted-foreground">
-                <span className="flex items-center gap-1">
-                  <TrendingDown className="size-3" aria-hidden />
-                  고가 <span className={`font-semibold tabular-nums ${highChange.cls}`}>{highChange.text}</span>
-                  {" → "}현재 후퇴 <span className="tabular-nums">{s.fade_pct.toFixed(0)}%</span>
-                </span>
+            {/* 폭발 고점 → 현재 식음 바 */}
+            {ddPos != null && drawdown != null && (
+              <div>
+                <div className="mb-1 flex items-center justify-between text-[11px] text-muted-foreground">
+                  <span className="flex items-center gap-1">
+                    <TrendingDown className="size-3" aria-hidden />
+                    폭발 고점 대비{" "}
+                    <span className="font-semibold tabular-nums text-down">-{drawdown.toFixed(1)}%</span> 식음
+                  </span>
+                </div>
+                <div className="relative h-2 rounded-full bg-gradient-to-r from-down/50 to-white/10">
+                  <span
+                    className="absolute top-1/2 size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-background bg-foreground"
+                    style={{ left: `${ddPos}%` }}
+                    title={`폭발 고점 대비 -${drawdown.toFixed(1)}% (현재 ${change.text})`}
+                  />
+                </div>
               </div>
-              <div className="relative h-2 rounded-full bg-gradient-to-r from-white/10 to-up/50">
-                <span
-                  className="absolute top-1/2 size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-background bg-foreground"
-                  style={{ left: `${curPos}%` }}
-                  title={`현재 ${change.text} (고가 상승분의 ${s.fade_pct.toFixed(0)}% 반납)`}
-                />
-              </div>
-            </div>
-            {s.shake && (
-              <p className="text-[11px] text-warning">
-                흔들기: {s.shake.high_time} 고점 → {s.shake.trough_time} 저점 −
-                <span className="tabular-nums">{s.shake.depth_pct.toFixed(1)}%</span> 눌림 후 낙폭{" "}
-                <span className="tabular-nums">{s.shake.recovery_pct}%</span> 회복
-              </p>
-            )}
-            {s.deep_shake && (
-              <p className="text-[11px] text-warning">
-                급락흡수: {s.deep_shake.high_time} 고점 → {s.deep_shake.low_time} 저점 −
-                <span className="tabular-nums">{s.deep_shake.drop_low_from_high_pct.toFixed(1)}%</span>
-                {" · "}IBS <span className="tabular-nums">{Math.round(s.deep_shake.ibs * 100)}</span>
-                {" · "}회복 <span className="tabular-nums">{s.deep_shake.recovery_pct}%</span>
-                {s.deep_shake.late_reclaim && <span> · 막판회복</span>}
-              </p>
             )}
             {s.reaccum && (
               <p className="text-[11px] text-warning">
-                재매집 감시: {peakDaysAgo(s.reaccum.peak_date) ?? "-"}일 전{" "}
-                <span className="tabular-nums">{s.reaccum.peak_value_eok.toLocaleString()}억</span>
-                {s.peak_turnover_pct != null && (
-                  <span className="tabular-nums" title="폭발일 거래대금/시총 — 시총 대비 폭발의 자명함">
+                반등조짐: {peakDaysAgo(s.reaccum.peak_date) ?? "-"}일 전{" "}
+                고가 <span className="tabular-nums">+{s.reaccum.peak_high_pct.toFixed(1)}%</span> 폭발
+                {(s.peak_turnover_pct ?? s.reaccum.peak_turnover_pct) != null && (
+                  <span className="tabular-nums" title="폭발일 거래량/유통주식수 — 유통주식 손바뀜 강도">
                     {" (회전 "}
-                    {s.peak_turnover_pct}%{")"}
+                    {s.peak_turnover_pct ?? s.reaccum.peak_turnover_pct}%{")"}
                   </span>
                 )}
-                {" · "}고가{" "}
-                <span className="tabular-nums">+{s.reaccum.peak_high_pct.toFixed(1)}%</span>
-                {" 폭발"}
-                {s.reaccum.ivtr_days != null && (
+                {drawdown != null && (
                   <>
-                    {" · 투신 "}
-                    <span className="tabular-nums text-up">{s.reaccum.ivtr_days}일</span>
-                    {s.reaccum.ivtr_eok != null && (
-                      <span className="tabular-nums text-up"> +{s.reaccum.ivtr_eok.toLocaleString()}억</span>
-                    )}
-                    {" 매집"}
+                    {" → 고점 대비 "}
+                    <span className="tabular-nums text-down">-{drawdown.toFixed(1)}%</span>
+                    {" 식음"}
                   </>
                 )}
               </p>
             )}
             {s.reignition && (
               <p className="text-[11px] text-up">
-                오늘 재반등: {s.reignition.time} 10분봉 몸통{" "}
+                오늘 반등: 15분 양봉{" "}
+                <span className="tabular-nums">{s.reignition.count ?? "-"}회</span>
+                {" · 최대 몸통 "}
                 <span className="tabular-nums">{s.reignition.body_pct}%</span>
-                {" · "}거래대금{" "}
-                <span className="tabular-nums">{s.reignition.value_10m_eok.toLocaleString()}억</span>
+                {" ("}
+                {s.reignition.time}
+                {")"}
               </p>
             )}
             {s.reaccum?.cause_summary && (
@@ -291,40 +223,17 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
                 (표본 {s.leader_cohort_prob.n}건) · 코호트 통계·보장 아님
               </p>
             )}
-            {s.ai_verdict?.status === "ok" && s.ai_verdict.reason && (
-              <p className="flex items-start gap-1 text-[11px] text-muted-foreground">
-                <BrainCircuit className="mt-0.5 size-3 shrink-0" aria-hidden />
-                <span>
-                  Kimi {s.ai_verdict.confidence ?? 0}% · {s.ai_verdict.reason}
-                </span>
-              </p>
-            )}
             <p className="text-[11px] text-muted-foreground">
               {trendLabel} <span className={`tabular-nums ${trendMargin.cls}`}>{trendMargin.text}</span>
-              {" · "}외인·기관 순매수 <span className="text-foreground/90 tabular-nums">{flowBuyDays}/5일</span>
-              {s.flow.streak >= 2 && (
-                <span className="text-up"> ({s.flow.streak}일 연속)</span>
+              {s.turnover_pct != null && (
+                <>
+                  {" · 당일 회전 "}
+                  <span className="text-foreground/90 tabular-nums">{s.turnover_pct}%</span>
+                </>
               )}
             </p>
           </div>
         </div>
-
-        {/* 분봉 스파크 타임라인 (구 fade 카드 전용 — reaccum은 클러스터 없음) */}
-        {s.spark.clusters.length > 0 && (
-          <div className="rounded-md border border-white/10 bg-white/[0.04] p-3">
-            <p className="mb-1.5 flex items-center gap-1 text-xs font-medium text-muted-foreground">
-              <Zap className="size-3 text-warning" aria-hidden />
-              당일 분봉 스파크{" "}
-              <span className="tabular-nums">{s.spark.clusters.length}회</span>
-              {s.spark.clusters[0] && (
-                <span className="tabular-nums">
-                  · 최대 {Math.max(...s.spark.clusters.map((c) => c.vol_x))}배
-                </span>
-              )}
-            </p>
-            <SparkTimeline clusters={s.spark.clusters} />
-          </div>
-        )}
 
         {/* 점수 해부도 */}
         <ScoreBreakdownBars breakdown={s.score_breakdown} />

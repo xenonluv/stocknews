@@ -1,27 +1,27 @@
 #!/usr/bin/env python3
-"""이벤트 매집 레이더 — "과거 폭등 → 식음 → 오늘 재반등" 스캐너.
+"""이벤트 매집 레이더 — "당일 폭발 → 식음 → 반등조짐" 스캐너 (2026-06 정의 전면 개편).
 
-목적: 과거 어느 날 큰돈이 들어와 폭등(1,500억+고가+13%, UN 통합거래대금)했다가 식은 종목이,
-      오늘 거래대금을 동반해 다시 상승 초입에 들어선(재매집 의심) 것을 탐지.
+목적: 당일 큰 폭발(고가 +22% AND 거래량이 유통주식수의 90%+)이 난 종목이, 며칠 안에 고점 대비
+      −15%~−40% 폭락(식음)한 뒤, 당일 15분봉 양봉으로 다시 살아나는(반등조짐) 것을 탐지.
 
 파이프라인:
-  [폭등 캐치] 매 회차 시장별 거래대금·등락률 랭킹을 훑어 1,500억 + 고가 +13% 폭발을
-              레지스트리(.explosion_registry.json)에 기록 → 최근 6거래일 폭발만 후보.
+  [폭발 캐치] 매 회차 시장별 네이버 up(등락률) 랭킹을 훑어 '고가 +22% AND 당일 거래량/유통주식수 ≥90%'
+              폭발을 레지스트리(.explosion_registry.json)에 기록 → 최근 6거래일 폭발만 추적.
+              (거래대금 순위·등락률 합집합 유니버스는 폐지. 당일 폭발은 /forecast 페이지에 게시.)
    ▼
-  [식음(중간)] 신호일(오늘) 현재가 ≥ MA20 생존 + 폭발 전후 창에서 투신 순매수(매집).
+  [식음] 폭발 후 고점(폭발일 이후 일봉 최고가) 대비 현재가가 −15%~−40% 폭락한 상태.
    ▼
-  [재반등(오늘)] 당일 종가/현재 등락률 −4~+10% + 10분봉 몸통%≥2%(당일 한 번이라도)
-                + 그 10분봉 1개의 거래대금 ≥ 30억.   ← KIS 현재가·일봉·분봉·수급
+  [반등조짐] 당일 15분봉 양봉(몸통%≥2%)이 2회 이상.   ← KIS 현재가·일봉·분봉
    ▼
   [조건1·5] 이벤트 캘린더 × 뉴스 민감도 → event_calendar/theme_map (표시 가점)
 
-reaccum 후보는 고정 표시 점수(REACCUM_SCORE)로 게시(검증중, raw 통계와 분리).
+reaccum/explosion 트랙은 고정 표시 점수(REACCUM_SCORE base)로 게시(검증중, score_raw=0으로 통계 격리).
 빈 레이더(후보 0)도 정상 상태.
 
-사용 (WSL):
+사용:
   python3 scripts/radar.py                          # 기본 임계값
   python3 scripts/radar.py --names 한온시스템        # 특정 종목 강제 시드
-출력: stdout JSON {generated_at, params, suspects[]}
+출력: stdout JSON {generated_at, params, events[], explosions[], suspects[]}
 """
 import os
 import sys
@@ -35,7 +35,6 @@ from team2_relevance import score_news, make_aliases
 from event_calendar import upcoming_events
 from theme_map import match_events, match_sensitivity, THEMES
 import kis_client as kis
-import kimi_client
 import float_ratio
 
 KST = timezone(timedelta(hours=9))
@@ -44,28 +43,22 @@ EXPLOSION_REGISTRY_PATH = os.path.join(REPO, ".explosion_registry.json")
 REACCUM_SEED_PATH = os.path.join(REPO, "data", "reaccum_seed.json")
 PERFORMANCE_PATH = os.path.join(REPO, "web", "data", "performance.json")
 
-# ---- 기본 임계값 ----
-# 거래대금은 KRX+NXT 통합(UN) 기준(kis_client.MONEY_MARKET, 가격은 항상 J 공식). NXT 포함으로 J 단독 대비 게이트
-# 구간(700~1000억)에서 실측 중앙값 ~1.5배 커져, J기준 1천억을 1,500억으로 ×1.5 재산정(통계 격리·드리프트
-# 방지: 같은 '진짜 큰돈' 엄격도를 통합 기준으로 정합. 신규 포착은 유니버스 J∪NX 합집합이 담당).
-EXPLOSION_VALUE = 150_000_000_000  # 재매집 폭발 거래대금 하한: 1,500억(원, UN 통합기준 = J 1천억×1.5)
-EXPLOSION_HIGH_PCT = 13.0          # 재매집 폭발 당일 고가 등락률 하한(%)
-# 폭발 게이트 OR 조건: 절대 1,500억 미달이어도 '폭발일 유통 회전율 ≥ 100%'(유통주식 완전회전=자명한 매집)면
-# 폭발 인정 → 시총 작은데 유통이 통째로 손바뀐 저유동 폭발주(위더스제약類) 포착. 임계 100%는 데이터 캘리브
-# 근거(float_gate_calibration: 확정 폭발 중 6%만 도달하는 극단·신규등록 ~1종목/일=flood 없음). 유동비율 없으면 미적용.
-EXPLOSION_TURNOVER_PCT = 100.0
-# OR 조건도 '큰돈' 전제는 유지 — 유통 회전율만 높고 거래대금이 소액(품절주 호가공백 소량체결로 상한가 근접)인
-# 노이즈를 배제하기 위해, 회전율 OR 분기도 거래대금 ≥ 300억은 요구한다(위더스683·화신정공957 등 실제 폭발은 통과).
-EXPLOSION_TURNOVER_MIN_VALUE = 30_000_000_000  # 300억(원)
-EXPLOSION_WINDOW = 6               # 최근 6거래일 폭발만 재매집 후보
-EXPLOSION_RANK_N = 30              # 시장별 거래대금 상위 N에서 라이브 폭발 감시
-REACCUM_SCORE = 62                 # 검증중 노출용 고정 표시 점수(raw 통계와 분리)
-REACCUM_PRE_DAYS = 4               # 투신 매집 창: 폭발일 −N칼렌더일 ~ 신호일(폭발 전후 — 백테스트 검증)
-# 재반등(오늘) 트리거 — 과거 폭등 종목이 식었다가 오늘 거래대금 동반 재상승 초입인지 판정
-REACCUM_CHANGE_MIN = -4.0          # 당일 종가/현재 등락률 하한(%) — 폭등이 아닌 "살짝 반등"
-REACCUM_CHANGE_MAX = 10.0          # 당일 종가/현재 등락률 상한(%)
-REIGNITION_BODY_PCT = 2.0          # 10분봉 몸통%(|종가−시가|/시가) 하한 — 당일 한 번이라도
-REIGNITION_VALUE_10M = 4_500_000_000  # 해당 10분봉 1개의 거래대금 하한(원, 45억 = UN 통합기준, J 30억×1.5)
+# ---- 기본 임계값 (2026-06 폭발 정의 전면 개편) ----
+# 가격(OHLC)은 항상 J(KRX 공식), 거래대금·거래량·수급만 UN(KRX+NXT 통합, kis_client.MONEY_MARKET).
+# ── 폭발 정의: 당일 고가등락률 ≥22% AND 당일 거래량 / 유통주식수 ≥90%(유통주식이 통째로 손바뀜).
+#    거래대금 순위·등락률 합집합 유니버스는 폐지 — 폭발 스캔 소스는 네이버 up(등락률) 랭킹뿐.
+EXPLOSION_HIGH_PCT = 22.0          # 폭발 당일 고가 등락률 하한(%)
+EXPLOSION_VOL_TURNOVER = 90.0      # 폭발 당일 거래량 / 유통주식수 회전율 하한(%) — 유동비율 없으면 미확정(스킵)
+EXPLOSION_WINDOW = 6               # 최근 6거래일 폭발만 식음·반등 후보로 추적
+EXPLOSION_SCAN_N = 50              # 시장별 네이버 up(등락률) 상위 N에서 폭발 감시(22%+ 누락 방지)
+# ── 식음 정의: 폭발 후 윈도 내 고점(폭발일 이후 최고가) 대비 현재가가 −15%~−40% 폭락한 상태.
+FADE_DRAWDOWN_MIN = 15.0           # 고점 대비 하락률 하한(%) — 최소 이만큼은 빠져야 '식음'
+FADE_DRAWDOWN_MAX = 40.0           # 고점 대비 하락률 상한(%) — 이보다 깊으면 추세 이탈로 제외
+# ── 반등조짐 정의: 식음 상태에서 당일 15분봉 '양봉 몸통%≥2%'가 2회 이상(거래대금 게이트 없음).
+REIGNITION_SPAN_MIN = 15           # 재반등 판정 분봉 합성 단위(분)
+REIGNITION_BODY_PCT = 2.0          # 15분 양봉 몸통%(|종가−시가|/시가) 하한
+REIGNITION_MIN_COUNT = 2           # 당일 자격 양봉이 이 수 이상이어야 반등조짐 인정
+REACCUM_SCORE = 62                 # 검증중 노출용 고정 표시 점수 base(raw 통계와 분리, score_raw=0)
 # "예전 대장"(was_theme_leader) 판정 — regex 테마가 아니라 권위 업종(sector) 기준.
 LEADER_MIN_GROUP = 3               # 같은 (폭발일, 업종) 폭발군이 이 수 이상일 때만 대장 판정
 LEADER_MARGIN = 1.5               # 1위 거래대금이 2위의 이 배 이상이어야 대장 인정(근소차 가짜 대장 방지)
@@ -76,33 +69,7 @@ def log(msg):
 
 
 
-# ---------- 수급: 외국인/기관 매집 신호 ----------
-
-def accumulation_signal(inv, days=5):
-    """최근 N일 외국인+기관 순매수 → {days_net_buy, today, streak}."""
-    if not inv:
-        return {"net_days": 0, "today_buy": False, "streak": 0, "detail": []}
-    recent = inv[-days:]
-
-    def _fo(r):  # 외국인+기관 순매수(키 결측에도 안전)
-        return (r.get("frgn") or 0) + (r.get("orgn") or 0)
-
-    detail = [{"date": (r.get("date") or "")[4:],
-               "frgn": int(r.get("frgn") or 0), "orgn": int(r.get("orgn") or 0)}
-              for r in recent]
-    net_days = sum(1 for r in recent if _fo(r) > 0)
-    streak = 0
-    for r in reversed(recent):
-        if _fo(r) > 0:
-            streak += 1
-        else:
-            break
-    today_buy = bool(recent) and _fo(recent[-1]) > 0
-    return {"net_days": net_days, "today_buy": today_buy, "streak": streak,
-            "detail": detail}
-
-
-# ---------- 재반등 신호: 10분봉 몸통 + 10분봉 거래대금 ----------
+# ---------- 재반등 신호: 15분봉 양봉 몸통(거래대금 게이트 없음) ----------
 
 def aggregate_minute_bars(bars, span_min):
     """당일 1분봉을 장 시작(09:00) 기준 span_min분봉으로 합성.
@@ -141,25 +108,25 @@ def aggregate_minute_bars(bars, span_min):
 
 
 def reignition_bars(bars, body_pct_min=REIGNITION_BODY_PCT,
-                    value_min=REIGNITION_VALUE_10M):
-    """오늘 재반등 자격 10분봉 '전체'를 시각순으로.
+                    span_min=REIGNITION_SPAN_MIN):
+    """오늘 재반등 자격 15분봉 '전체'를 시각순으로.
 
-    자격: 당일 '상승' 10분봉(종가>시가) 중 몸통%((종가−시가)/시가×100) ≥ body_pct_min 이고
-    그 10분봉 1개의 거래대금(Σ종가×거래량) ≥ value_min(원) 인 봉. → "큰 상승 몸통 + 실거래대금
-    동반" = 돈이 다시 들어오는 재상승. 하락·도지 봉은 제외(폭락 중 오탐 방지).
-    각 봉 {body_pct, time("HH:MM"=버킷 시작), value_eok, close, open}. 게이트·표시(대표봉)와
-    텔레그램 봉단위 알림이 공용으로 쓴다(1분봉이 1개의 10분봉도 못 채우면 빈 리스트)."""
+    자격: 당일 '상승' 15분봉(종가>시가) 중 몸통%((종가−시가)/시가×100) ≥ body_pct_min 인 봉.
+    → "큰 상승 몸통"이 식음 구간에서 다시 살아나는 신호. 거래대금 게이트는 없다(횟수만으로 판정).
+    하락·도지 봉은 제외(폭락 중 오탐 방지). 각 봉 {body_pct, time("HH:MM"=버킷 시작), value_eok,
+    close, open}. 게이트(2회+)·표시(대표봉)와 텔레그램 봉단위 알림이 공용으로 쓴다(value_eok는 표시용).
+    """
     out = []
-    for b10 in aggregate_minute_bars(bars, 10):
-        if b10["open"] <= 0 or b10["close"] <= b10["open"]:
+    for b15 in aggregate_minute_bars(bars, span_min):
+        if b15["open"] <= 0 or b15["close"] <= b15["open"]:
             continue  # 상승 몸통만 (하락·도지 제외)
-        body = (b10["close"] - b10["open"]) / b10["open"] * 100
-        if body < body_pct_min or b10["value"] < value_min:
+        body = (b15["close"] - b15["open"]) / b15["open"] * 100
+        if body < body_pct_min:
             continue
         out.append({"body_pct": round(body, 2),
-                    "time": f"{b10['time'][:2]}:{b10['time'][2:4]}",
-                    "value_eok": round(b10["value"] / 1e8),
-                    "close": b10["close"], "open": b10["open"]})
+                    "time": f"{b15['time'][:2]}:{b15['time'][2:4]}",
+                    "value_eok": round(b15["value"] / 1e8),
+                    "close": b15["close"], "open": b15["open"]})
     return out
 
 
@@ -214,6 +181,12 @@ def _upsert_explosion(reg, rec):
                                    float(rec.get("peak_high_pct", 0) or 0))
         rec["peak_change_pct"] = max(float(old.get("peak_change_pct", 0) or 0),
                                      float(rec.get("peak_change_pct", 0) or 0))
+        # 폭발일 고가(절대값)·거래량 회전율도 max 병합 — 장중 누적이라 단조증가지만, 부분 회차·소스
+        # 혼용(seed 종일 vs live 장중)에서 더 큰(완결된) 값을 보존(식음 drawdown 기준·회전율 점수 안정).
+        rec["peak_high"] = max(float(old.get("peak_high", 0) or 0),
+                               float(rec.get("peak_high", 0) or 0)) or None
+        rec["vol_turnover_pct"] = max(float(old.get("vol_turnover_pct", 0) or 0),
+                                      float(rec.get("vol_turnover_pct", 0) or 0)) or None
         # source는 권위 순(live>seed>telegram)으로 승격 — 텔레그램 시드가 bootstrap에서 먼저
         # 기록돼도, 같은 폭발이 이후 live 랭킹/seed로 확인되면 그쪽이 이김(가짜 '채널포착' 배지 방지).
         _SRC_RANK = {"live": 3, "seed": 2, "telegram": 1}
@@ -332,7 +305,8 @@ def _telegram_seed_items(p):
 
 
 def bootstrap_seed_explosions(reg, p):
-    """지정 종목 + 텔레그램 채널 언급 종목의 최근 일봉으로 과거 1,500억+고가13% 폭발을 즉시 부트스트랩."""
+    """지정 종목 + 텔레그램 채널 언급 종목의 최근 일봉으로 과거 폭발(고가22%+거래량/유통주식수90%)을
+    즉시 부트스트랩. 유동비율(발행주식수)이 없는 종목은 회전율 확정 불가 → 폭발 인정 안 함."""
     count = 0
     resolved = _resolve_seed_items(p.names, p.reaccum_seed)
     seen = {r["code"] for r in resolved}
@@ -342,7 +316,7 @@ def bootstrap_seed_explosions(reg, p):
             resolved.append(it)
     for item in resolved:
         try:
-            daily = kis.daily_prices_jmoney_un(item["code"], days=max(12, p.explosion_window + 6))  # 폭발 게이트=UN 거래대금
+            daily = kis.daily_prices_jmoney_un(item["code"], days=max(12, p.explosion_window + 6))  # 거래량=UN 통합
         except Exception as e:
             log(f"[warn] seed 일봉 실패 {item['name']}: {e}")
             continue
@@ -351,6 +325,8 @@ def bootstrap_seed_explosions(reg, p):
         _merge_trading_days(reg, [d["date"] for d in daily[-p.explosion_window:]])
         recent_dates = {d["date"] for d in daily[-p.explosion_window:]}
         fratio, flisted = float_ratio.get_float_and_listed(item["code"])  # 유통비율·발행주식수(보통주만)
+        if not (fratio and fratio > 0 and flisted and flisted > 0):
+            continue  # 유통주식수 미상 → 90% 회전율 확정 불가, 폭발 미인정(fail-safe)
         qualifying = []
         for i, bar in enumerate(daily):
             if bar["date"] not in recent_dates or i == 0:
@@ -359,22 +335,20 @@ def bootstrap_seed_explosions(reg, p):
             if prev_close <= 0:
                 continue
             high_pct = (bar["high"] / prev_close - 1) * 100
-            if high_pct < p.explosion_high_pct:
+            if high_pct < p.explosion_high_pct:    # 게이트 ①: 고가등락률 ≥22%
                 continue
-            # 폭발 = 절대 거래대금 ≥ 게이트 OR 폭발일 유통 회전율 ≥ 임계(저유동 폭발주 포착).
-            # 폭발일 시총 = 발행주식수 × 폭발일종가, 유통시총 = ×유동비율. 유동비율 없으면 절대 게이트만.
-            ft = (bar["value"] / 1e8 / (flisted * bar["close"] / 1e8 * fratio) * 100
-                  if (fratio and flisted and bar.get("close")) else None)
-            or_ok = ft and ft >= p.explosion_turnover_pct and bar["value"] >= EXPLOSION_TURNOVER_MIN_VALUE
-            if bar["value"] < p.explosion_value and not or_ok:
+            vol_turnover = float_ratio.vol_turnover(float(bar.get("volume") or 0), fratio, flisted)
+            if vol_turnover is None or vol_turnover < p.explosion_vol_turnover:  # 게이트 ②: 거래량/유통주식수 ≥90%
                 continue
             qualifying.append({
                 "code": item["code"],
                 "name": item["name"],
                 "peak_date": bar["date"],
                 "peak_value_eok": round(bar["value"] / 1e8),
+                "peak_high": round(float(bar["high"]), 2),
                 "peak_high_pct": round(high_pct, 2),
                 "peak_change_pct": round((bar["close"] / prev_close - 1) * 100, 2),
+                "vol_turnover_pct": round(vol_turnover, 1),
                 "source": item.get("source", "seed"),
             })
         if not qualifying:
@@ -405,17 +379,20 @@ def _known_sector(reg, code):
 
 
 def update_live_explosions(reg, p):
-    """당일 1,500억+고가13% 폭발을 감시해 registry에 적재.
+    """당일 폭발(고가등락률 ≥22% AND 거래량/유통주식수 ≥90%)을 감시해 registry에 적재.
 
-    유니버스 = 시장별 거래대금 순위 ∪ 등락률(네이버 up) 순위. 거래대금 순위만 보면
-    등락률로만 잡힌 종목이 누락돼 6일 재매집 윈도에서 사라지므로 합집합으로 본다.
-    폭발 거래대금 게이트는 사전필터 없이 KIS price_now 실거래대금(권위)으로 판정. price_now
-    value가 0/결측인 일시 글리치일 때만 랭킹값으로 폴백해 확정 폭발 누락을 막고, 비-KIS(네이버)
-    랭킹값이 정상 경로에서 폭발 거래대금 하한을 단독 충족해 sub-하한을 오기록하지 않게 한다.
+    유니버스(스캔 소스) = 시장별 네이버 up(등락률) 랭킹뿐(거래대금 순위·합집합 유니버스는 폐지).
+    ⚠ up 랭킹은 '현재 등락률' 정렬이라, 장중 고가 +22%를 찍고 종가로 크게 밀린 종목은 순위 하위로
+    내려가 상위 explosion_scan_n(기본 50) 밖이면 누락될 수 있다(기본값으로 대부분 커버되나 한계 존재).
+    게이트는 KIS price_now(가격=J 공식,
+    거래량=UN 통합)와 float_ratio(유통비율·발행주식수)로 판정한다. 유동비율이 없으면 90% 회전율을
+    확정할 수 없어 폭발 미확정으로 스킵한다(22% 단독으로는 폭발로 보지 않음).
+
+    반환 (count, scan_ok, today_explosions) — today_explosions는 /forecast '당일 폭발 종목' 리스트.
     """
     rows = []
     seen_codes = set()
-    value_rank_total = 0  # KIS 거래대금 랭킹이 양 시장에서 돌려준 행 수 (KIS 도달성 신호)
+    up_rank_total = 0  # 네이버 up 랭킹이 양 시장에서 돌려준 행 수 (스캔 소스 도달성 신호)
 
     def _add(row):
         code = row.get("code")
@@ -425,25 +402,23 @@ def update_live_explosions(reg, p):
         rows.append(row)
 
     for market in ("KOSPI", "KOSDAQ"):
-        vr = list(kis.value_rank_union(market, p.explosion_rank_n))  # 거래대금 순위 J∪NX 합집합(NXT-헤비 누락 방지)
-        value_rank_total += len(vr)
-        for row in vr:
-            _add(row)
-        try:                                                         # 등락률 순위(네이버 up) 합집합
-            up_rows, _ = _rank_page("up", market, 1)
-            for row in up_rows[:p.explosion_rank_n]:
+        try:
+            up_rows, _ = _rank_page("up", market, 1)   # 등락률(네이버 up) 랭킹 = 유일 스캔 소스
+            up_rank_total += len(up_rows)
+            for row in up_rows[:p.explosion_scan_n]:
                 _add(row)
-        except Exception as e:                                       # 네이버 실패 시 거래대금만으로 계속
-            log(f"[warn] {market} 등락률 랭킹 폭발 감시 실패(거래대금만 사용): {e}")
+        except Exception as e:
+            log(f"[warn] {market} 등락률 랭킹 폭발 감시 실패: {e}")
     count = 0
     attempted = price_errors = 0  # price_now 도달성 — 전수 실패면 KIS 부분장애 신호
+    high_pass = float_missing = 0  # 22% 고가 게이트 통과 수 / 그중 유동비율 결측으로 탈락한 수
     live_dates = set()
+    today_explosions = []
     today = _today_yyyymmdd()
     for row in rows:
-        rank_value_won = float(row.get("value_mn") or 0) * 1e6
         attempted += 1
         try:
-            now = kis.price_now_jmoney_un(row["code"])  # 가격=J 공식 / 거래대금=UN 통합(폭발 게이트)
+            now = kis.price_now_jmoney_un(row["code"])  # 가격=J 공식 / 거래량=UN 통합(회전율 게이트)
         except Exception as e:
             price_errors += 1
             log(f"[warn] 폭발 현재가 조회 실패 {row.get('name')}: {e}")
@@ -454,33 +429,37 @@ def update_live_explosions(reg, p):
         if not now.get("high") or not now.get("prev_close"):
             continue
         high_pct = (now["high"] / now["prev_close"] - 1) * 100
-        if high_pct < p.explosion_high_pct:
+        if high_pct < p.explosion_high_pct:    # 게이트 ①: 고가등락률 ≥22%
             continue
-        # 폭발 거래대금 게이트: KIS price_now 실거래대금(권위)으로 판정 — scan_one 거래대금 하한과 동일 철학.
-        # price_now value가 0/결측인 일시 글리치일 때만 랭킹값으로 폴백해 확정 폭발 누락을 막고,
-        # 비-KIS(네이버) 랭킹값이 정상 경로에서 폭발 거래대금 하한을 단독 충족해 sub-하한을 오기록하지 않게 한다.
-        now_value = float(now.get("value") or 0)
-        value_won = now_value if now_value > 0 else rank_value_won
-        if value_won < p.explosion_value:
-            # 절대 미달이어도 폭발일(=당일) 유통 회전율 ≥ 임계면 폭발 인정(저유동 폭발주). 유동비율 없으면 탈락.
-            cap_eok = float(now.get("market_cap_eok") or 0)
-            frl = float_ratio.get_float_ratio(row["code"])
-            ft = (value_won / 1e8 / (cap_eok * frl) * 100) if (frl and cap_eok > 0) else None
-            # 유통 회전율 ≥ 임계 AND 거래대금 ≥ 300억(품절주 소액거래 노이즈 배제) 둘 다일 때만 OR 통과
-            if not (ft and ft >= p.explosion_turnover_pct and value_won >= EXPLOSION_TURNOVER_MIN_VALUE):
-                continue
+        high_pass += 1
+        # 게이트 ②: 당일 거래량 / 유통주식수 ≥ 90%. 유통주식수 = 발행주식수 × 유동비율.
+        # 유동비율(또는 발행주식수)이 없으면 회전율 확정 불가 → 폭발 미확정으로 스킵(fail-safe).
+        volume = float(now.get("volume") or 0)
+        fr, flisted = float_ratio.get_float_and_listed(row["code"])
+        vt = float_ratio.vol_turnover(volume, fr, flisted)  # 공유 산식(거래량/유통주식수 %)
+        if vt is None:
+            # 거래량 0/결측은 게이트 미충족일 뿐 — 유동비율(wisereport) 결측만 '소스 장애' 카운트.
+            if not (fr and fr > 0 and flisted and flisted > 0):
+                float_missing += 1
+            continue
+        if vt < p.explosion_vol_turnover:
+            continue
+        vol_turnover = vt
+        value_won = float(now.get("value") or 0)   # 당일 거래대금(UN, 표시용)
         rec_new = {
             "code": row["code"],
             "name": row["name"],
             "peak_date": trade_date,
             "peak_value_eok": round(value_won / 1e8),
+            "peak_high": round(float(now["high"]), 2),      # 폭발일 고가 절대값 — 식음 drawdown 기준
             "peak_high_pct": round(high_pct, 2),
             "peak_change_pct": round(float(now.get("change_pct") or 0), 2),
+            "vol_turnover_pct": round(vol_turnover, 1),     # 폭발일 거래량 회전율(유통주식수 대비 %)
             "source": "live",
             "sector": now.get("sector", ""),  # 0 API
         }
         # 신규 폭발만 catalyst 1회 캡처(폭발 당일=신선). 시도하면 cause_done=True로 동결 →
-        # 무뉴스 종목(cause_summary="")도 매 15분 재fetch 안 함. cause_titles는 재매집 시점
+        # 무뉴스 종목(cause_summary="")도 매 회차 재fetch 안 함. cause_titles는 재매집 시점
         # match_events 0 API 재계산용. dry-run은 생략(저장 안 하므로 무의미한 fetch 방지).
         key = f"{trade_date}:{row['code']}"
         if not p.dry_run and not (reg["records"].get(key) or {}).get("cause_done"):
@@ -492,36 +471,82 @@ def update_live_explosions(reg, p):
             rec_new["cause_done"] = True
         _upsert_explosion(reg, rec_new)
         live_dates.add(trade_date)
+        today_explosions.append({
+            "code": row["code"],
+            "name": row["name"],
+            "sector": now.get("sector", ""),
+            "high_pct": round(high_pct, 2),
+            "vol_turnover_pct": round(vol_turnover, 1),
+            "value_eok": round(value_won / 1e8),
+            "price": now.get("price"),
+            "change_pct": round(float(now.get("change_pct") or 0), 2),
+        })
         count += 1
     _merge_trading_days(reg, live_dates)
-    # KIS 도달성: 거래대금 랭킹이 양 시장 모두 빈손이거나 price_now가 절반 이상 실패하면
-    # 'KIS 부분장애'로 본다(value_rank만 성공하고 price_now 전수 실패하는 케이스 포착).
-    scan_ok = value_rank_total > 0 and not (
+    # 유동비율 소스(wisereport) 광역 장애 가드: 22% 고가를 통과한 종목이 다수인데 전부 유동비율
+    # 결측으로 폭발 0건이면, '조용한 깨끗한 레이더'가 실은 float 소스 장애일 수 있다 → 로그로 surface
+    # (캐시 7일 보호로 흔치 않아 exit은 하지 않고 경고만 — 운영자가 cron 로그에서 인지).
+    if count == 0 and high_pass >= 3 and float_missing == high_pass:
+        log(f"[warn] 22% 고가 통과 {high_pass}종목 전부 유동비율 결측 → 폭발 0건. "
+            f"wisereport(float) 소스 장애 의심(캐시 만료/차단). data/float_ratio.json 확인 권장.")
+    # KIS 도달성: 네이버 up 랭킹이 양 시장 모두 빈손이거나 price_now가 절반 이상 실패하면
+    # 'KIS/네이버 부분장애'로 본다(스캔 소스는 성공했는데 price_now 전수 실패하는 케이스 포착).
+    scan_ok = up_rank_total > 0 and not (
         attempted > 0 and price_errors >= max(2, (attempted + 1) // 2))
-    return count, scan_ok
+    return count, scan_ok, today_explosions
+
+
+def _backfill_today_explosions(today_explosions, reg, today):
+    """/forecast '당일 폭발' 리스트 안정화: 오전에 폭발해 registry에 든 종목이 오후 네이버 up 랭킹
+    상위에서 밀려 이번 회차 라이브 스캔에 안 잡혀도(또는 스캔이 예외로 실패해도), registry의
+    오늘(peak_date==today) 레코드로 백필해 리스트가 장중에 깜빡이지 않게 한다(저장된 폭발 시점 값
+    사용 — 현재가는 표시 안 함). 회전율 내림차순 정렬한 리스트를 반환. 라이브 스캔 try 밖에서 호출."""
+    seen_today = {e["code"] for e in today_explosions}
+    for r in reg.get("records", {}).values():
+        if r.get("peak_date") != today or r.get("code") in seen_today:
+            continue
+        if r.get("vol_turnover_pct") is None:  # 새 정의로 적재된 레코드만(구 게이트 레코드 제외)
+            continue
+        today_explosions.append({
+            "code": r["code"],
+            "name": r.get("name") or r["code"],
+            "sector": r.get("sector", ""),
+            "high_pct": round(float(r.get("peak_high_pct") or 0), 2),
+            "vol_turnover_pct": r.get("vol_turnover_pct"),
+            "value_eok": int(float(r.get("peak_value_eok") or 0)),
+            "price": None,  # 랭킹에서 밀린 백필 종목 — 현재가는 미표시(폭발 사실만)
+            "change_pct": round(float(r.get("peak_change_pct") or 0), 2),
+        })
+        seen_today.add(r["code"])
+    today_explosions.sort(key=lambda e: -(e.get("vol_turnover_pct") or 0))
+    return today_explosions
 
 
 def prepare_reaccum_registry(p):
-    """(active_explosions, live_scan_ok) 반환. live_scan_ok=False면 폭발감시(KIS 랭킹)
-    자체가 전면 실패 = KIS 장애 신호 → 호출부의 수집장애 가드가 사용한다."""
+    """(active_explosions, live_scan_ok, today_explosions) 반환. live_scan_ok=False면 폭발감시
+    자체가 전면 실패 = KIS/네이버 장애 신호 → 호출부의 수집장애 가드가 사용한다.
+    today_explosions = 당일 폭발 종목 리스트(/forecast 게시용)."""
     if not p.reaccum_enabled:
-        return {}, True
+        return {}, True, []
     reg = load_explosion_registry()
     seed_count = bootstrap_seed_explosions(reg, p)
     live_scan_ok = True
+    today_explosions = []
     try:
-        live_count, live_scan_ok = update_live_explosions(reg, p)
+        live_count, live_scan_ok, today_explosions = update_live_explosions(reg, p)
     except Exception as e:
         live_count = 0
-        live_scan_ok = False  # 랭킹 스캔 전면 실패(raise) — KIS 장애 의심
+        live_scan_ok = False  # 폭발 스캔 전면 실패(raise) — KIS/네이버 장애 의심
         log(f"[warn] 라이브 폭발 감시 실패(기존 registry/seed만 사용): {e}")
+    # 라이브 스캔 성공/예외 무관하게 registry 기반 백필 — 예외 경로에서도 /forecast가 비지 않게(try 밖).
+    today_explosions = _backfill_today_explosions(today_explosions, reg, _today_yyyymmdd())
     if not p.dry_run:
         save_explosion_registry(reg)
     elif seed_count or live_count:
         log("[radar] dry-run: 폭발 레지스트리 저장 생략")
     active = _recent_active_explosions(reg, p.explosion_window)
-    log(f"[radar] reaccum registry active={len(active)} seed={seed_count} live={live_count}")
-    return active, live_scan_ok
+    log(f"[radar] reaccum registry active={len(active)} seed={seed_count} live={live_count} 당일폭발={len(today_explosions)}")
+    return active, live_scan_ok, today_explosions
 
 
 # ── 익일~3일 상승확률 예측(동결 모델) — 전종목 6개월 백테스트로 보정, holdout 검증치 ──
@@ -551,10 +576,16 @@ def forecast_prob(mom3, mom5, ma20_gap, vol_surge):
 
 
 def scan_reaccum_candidate(rec, p, events):
-    """폭발 이후 식은 구간에서 기관 순매수+MA20 생존 재매집 후보를 만든다."""
+    """폭발 이후 식음(고점 대비 −15%~−40% 폭락) 구간에서 당일 15분봉 양봉(몸통%≥2%)이 2회 이상
+    나온 '반등조짐' 후보를 만든다. 등락률·MA20·투신 수급 게이트는 모두 폐지(차트 게이트만)."""
     code, name = rec["code"], rec.get("name") or rec["code"]
     peak_date = rec.get("peak_date")
     if not peak_date:
+        return None
+    # 새 폭발 정의(고가≥22% AND 거래량/유통주식수≥90%)로 적재된 레코드만 후보로 본다. 개편 전(거래대금
+    # 1,500억/13% 게이트) 레코드는 vol_turnover_pct가 없어 — 재검증 없이 식음·반등 후보로 새는 걸 차단
+    # (마이그레이션 윈도 ~6일간 정의 불일치 후보 방지. 구 레코드는 윈도 만료로 자가 소거).
+    if rec.get("vol_turnover_pct") is None or float(rec.get("peak_high_pct") or 0) < p.explosion_high_pct:
         return None
     try:
         now = kis.price_now_jmoney_un(code)  # 가격=J 공식 / 거래대금·거래량=UN 통합(표시·vsurge)
@@ -563,14 +594,11 @@ def scan_reaccum_candidate(rec, p, events):
         return "ERR"
     if not now.get("price") or not now.get("prev_close"):
         return None
-    # 재반등 게이트 ①: 당일 종가/현재 등락률 [−4,+10].
-    # 고가는 폭발 후 표시·fade 계산용으로만 쓰고, 재반등 허용 범위는 종가/현재가 기준이다.
-    if not (p.reaccum_change_min <= now["change_pct"] <= p.reaccum_change_max):
-        return None
     high = now.get("high") or now["price"]
     high_pct = (high / now["prev_close"] - 1) * 100
     try:
-        daily = kis.daily_prices_jmoney_un(code, days=25)  # MA=J 종가 / 거래대금=UN(vsurge·표시)
+        # 25봉 + 폭발 윈도 여유 — 식음 고점(peak_date 이후 최고가)이 윈도를 넓혀도 창에서 누락되지 않게.
+        daily = kis.daily_prices_jmoney_un(code, days=max(25, p.explosion_window + 5))  # 가격=J 종가 / 거래대금=UN
     except Exception as e:
         log(f"  [skip] {name}: reaccum 일봉 실패 {e}")
         return "ERR"
@@ -582,92 +610,51 @@ def scan_reaccum_candidate(rec, p, events):
         return None
     ma20 = sum(closes[-20:]) / 20
     ma10 = sum(closes[-10:]) / 10
-    if now["price"] < ma20:
+    # ── 식음 게이트: 폭발일 이후 고점(일봉 최고가) 대비 현재가가 −15%~−40% 폭락한 상태여야 한다.
+    #    폭발일 절대고가(rec["peak_high"])를 기준에 포함해 폭발 당일이 최고점인 경우도 포착.
+    highs_after = [d["high"] for d in daily if d.get("high") and d.get("date", "") >= peak_date]
+    peak_high = max(highs_after) if highs_after else float(rec.get("peak_high") or 0)
+    peak_high = max(peak_high, float(rec.get("peak_high") or 0))
+    if peak_high <= 0:
         return None
-    try:
-        inv = kis.investor_trade_daily(code)   # 투신(ivtr) 포함 일별 수급
-    except Exception as e:
-        log(f"  [skip] {name}: reaccum 수급 실패 {e}")
-        return "ERR"
-    # 투신 매집: 폭발 '전후' 창(폭발일 −REACCUM_PRE_DAYS ~ 신호일)에서 투신 순매수 합.
-    # (백테스트: '폭발 이후'만 보면 매집 놓침 / 기관계보다 투신이 깨끗 / 일수·금액 임계는
-    #  역효과라 느슨하게 순매수>0만 조건. 일수·금액은 카드 정보로만 표시.)
-    lo = (datetime.strptime(peak_date, "%Y%m%d") - timedelta(days=REACCUM_PRE_DAYS)).strftime("%Y%m%d")
-    # 커버리지 가드: 수급 응답이 창 시작(lo)까지 못 닿으면 투신 합이 과소계산 → unknown 처리(탈락)
-    if not inv or min(r.get("date", "") for r in inv) > lo:
-        return None
-    win = [r for r in inv if lo <= r.get("date", "") <= signal_date]
-    ivtr_net = sum(float(r.get("ivtr") or 0) for r in win)
-    ivtr_days = sum(1 for r in win if (r.get("ivtr") or 0) > 0)
-    ivtr_eok = round(sum(float(r.get("ivtr_won") or 0) for r in win) / 100)  # 백만원→억
-    if ivtr_net <= 0:
+    drawdown = (peak_high - now["price"]) / peak_high * 100
+    if not (p.fade_drawdown_min <= drawdown <= p.fade_drawdown_max):
         return None
 
-    # 재반등 게이트 ②③: 10분봉 몸통%≥2% + 그 10분봉 거래대금≥45억(UN 통합)
-    # 분봉도 거래대금·수급과 동일하게 MONEY_MARKET(기본 UN) — KIS_MARKET=J 롤백 시 분봉도 함께 J로 환원
-    # (호출부 리터럴 대신 상수로 묶어 일관 롤백). 정규장 시간창 가드(kis_client)로 NXT 장 밖 봉 배제.
+    # ── 반등 게이트: 당일 15분봉 양봉 몸통%≥2%가 REIGNITION_MIN_COUNT(2)회 이상.
+    # 분봉도 거래대금·수급과 동일하게 MONEY_MARKET(기본 UN). 정규장 시간창 가드(kis_client)로 NXT 장 밖 봉 배제.
     try:
         bars = kis.minute_bars_today(code, market=kis.MONEY_MARKET)
     except Exception as e:
         log(f"  [skip] {name}: reaccum 분봉 실패 {e}")
         return "ERR"
-    rbars = reignition_bars(bars, p.reignition_body_pct, p.reignition_value_10m)
-    if not rbars:
+    rbars = reignition_bars(bars, p.reignition_body_pct, p.reignition_span_min)
+    if len(rbars) < p.reignition_min_count:
         return None
-    reignition = max(rbars, key=lambda b: b["body_pct"])  # 대표(최대 몸통) 봉 — 게이트·표시용
+    reignition = max(rbars, key=lambda b: b["body_pct"])  # 대표(최대 몸통) 봉 — 표시용
 
-    acc = accumulation_signal(inv)
-    denom = now["high"] - now["prev_close"] if now.get("high") else 0.0
-    fade_pct = (now["high"] - now["price"]) / denom * 100 if denom > 0 else 0.0
     ma10_margin = (now["price"] / ma10 - 1) * 100 if ma10 else 0.0
     ma20_margin = (now["price"] / ma20 - 1) * 100 if ma20 else 0.0
     # ── 변별 점수(표시 전용 '강도') — 검증된 적중확률이 아니라 셋업을 얼마나 강하게 충족했나의
-    #    순위. raw(score_raw)는 0 유지 = 실험 격리라 코어 튜닝에 미반영(B: 표본 쌓이면 데이터로 검증).
-    re_value_max = max((b["value_eok"] for b in rbars), default=0)
+    #    순위. raw(score_raw)는 0 유지 = 실험 격리라 코어 튜닝에 미반영(표본 쌓이면 데이터로 검증).
     re_body_max = max((b["body_pct"] for b in rbars), default=0.0)
-    peak_eok = int(float(rec.get("peak_value_eok") or 0))
-    # 거래대금회전율 = 당일 거래대금(UN)/시총 — 시총 대비 손바뀜 강도. 절대 거래대금 게이트가 못 보는
-    # '소형 시총인데 거래대금 폭발'(화신류 초고회전)을 가점으로 반영. 게이트(절대액)는 불변 → flood 없음.
-    cap_eok = float(now.get("market_cap_eok") or 0)
-    # 유동비율(free float, 0~1) — wisereport 스크랩(캐시). 회전율을 '유통주식수 대비'로 정밀화: 최대주주
-    # 지분이 묶인 소형주는 유통시총이 작아 진짜 손바뀜 강도가 드러난다(화신 유동49%→유통회전율 ~2배).
-    # None(스크랩 실패·미상장)이면 전체 시총 기준으로 폴백(basis="cap") — 조용히 죽지 않게 아래서 분기.
+    # 회전율(유통주식수 대비, 거래량 기준) — 폭발일 회전율은 registry 저장값(vol_turnover_pct, 위 게이트로
+    # 항상 존재). 당일 회전율 = 당일 거래량 / 유통주식수(float_ratio.vol_turnover 공유 산식).
     fr, flisted = float_ratio.get_float_and_listed(code)  # 유동비율·발행주식수(보통주만, 캐시)
-    turnover_basis = "float" if (fr and fr > 0) else "cap"
-    eff = fr if (fr and fr > 0) else 1.0   # 유통시총 = 시총 × 유동비율 (폴백 시 전체 시총)
-    turnover_pct = round((now.get("value") or 0) / 1e8 / (cap_eok * eff) * 100, 1) if cap_eok > 0 else None
-    # 폭발일 회전율 = 폭발일 거래대금 / 폭발일 (유통)시총. 폭발일 시총 = 발행주식수 × 폭발일종가 —
-    # **폭발 게이트(bootstrap)와 동일 분모**로 통일(게이트 통과 ft와 게시 peak_turnover_pct 정합). 발행주식수
-    # 결측 시 현재시총 proxy로 폴백. 화신류(폭발일 고회전) 강변별.
-    peak_close = next((b["close"] for b in daily if b.get("date") == rec.get("peak_date")), None)
-    cur_close = closes[-1] if closes else None
-    # 폭발일 시총 우선순위: ① 발행주식수×폭발일종가(정확) ② 발행주식수 결측 시 현재시총을 가격비로
-    # 폭발일까지 역산(식음으로 가격 빠진 종목의 회전율 과대평가 교정) ③ 둘 다 안되면 현재시총 proxy.
-    if flisted and peak_close:
-        peak_cap_eok = flisted * peak_close / 1e8
-    elif peak_close and cur_close and cur_close > 0 and cap_eok > 0:
-        peak_cap_eok = cap_eok * (peak_close / cur_close)
-    else:
-        peak_cap_eok = cap_eok
-    peak_turnover_pct = round(peak_eok / (peak_cap_eok * eff) * 100, 1) if peak_cap_eok > 0 else None
-    if cap_eok <= 0:  # 시총 결측(KIS hts_avls 누락·일부 ETF/지주) → 회전율 가점 0이 되는 걸 조용히 두지 않음
-        log(f"  [warn] {code} {name} 시총 결측 → 회전율 가점 0(폭발 절대규모만 반영)")
-    # 밴드는 기준에 따라 스케일 다름 — 유통 회전율은 시총 기준의 ~2배라 구간을 ~2배로(폴백 시 시총 구간 유지).
-    pt_lo, pt_span = (40, 160) if turnover_basis == "float" else (20, 80)   # peak_turnover 0~10 구간
-    rt_lo, rt_span = (20, 100) if turnover_basis == "float" else (10, 50)   # re_turnover 0~6 구간
+    turnover_basis = "float" if (fr and fr > 0 and flisted) else "cap"
+    turnover_pct = float_ratio.vol_turnover(float(now.get("volume") or 0), fr, flisted)
+    peak_turnover_pct = rec.get("vol_turnover_pct")  # 새 게이트 통과 레코드라 항상 non-None
     breakdown = {
         "base": REACCUM_SCORE,
-        "re_value": round(min(12, max(0, (re_value_max - 45) / 405 * 12))),   # 재반등 거래대금(UN) 45~450억→0~12
-        "re_body": round(min(6, max(0, (re_body_max - 2) / 4 * 6))),          # 재반등 몸통% 2~6%→0~6
-        "re_count": min(6, max(0, (len(rbars) - 1) * 3)),                     # 자격 봉 1→0·2→3·3+→6
-        "flow": round(min(8, max(0, ivtr_eok / 500 * 8))),                    # 투신 매집 ~500억→8 (UN/J≈1.0 실측 → 불변)
-        "explosion": round(min(3, max(0, (peak_eok - 1500) / 13500 * 3))),    # 폭발 절대규모(보조 축소) 1,500억~1.5조→0~3
-        "peak_turnover": round(min(10, max(0, ((peak_turnover_pct or 0) - pt_lo) / pt_span * 10))),  # 폭발일 회전율(주신호)
-        "re_turnover": round(min(6, max(0, ((turnover_pct or 0) - rt_lo) / rt_span * 6))),  # 재반등 당일 회전율
+        "drawdown": round(min(10, max(0, (drawdown - p.fade_drawdown_min)
+                       / max(1e-9, p.fade_drawdown_max - p.fade_drawdown_min) * 10))),  # 식음 깊이 15~40%→0~10
+        "re_count": min(8, max(0, (len(rbars) - 1) * 2)),                  # 양봉 2→2·3→4·4→6·5+→8
+        "re_body": round(min(6, max(0, (re_body_max - 2) / 4 * 6))),       # 최대 몸통% 2~6%→0~6
+        "peak_turnover": round(min(10, max(0, ((peak_turnover_pct or 0) - 90) / 110 * 10))),  # 폭발일 회전율 90~200%→0~10
+        "re_turnover": round(min(6, max(0, ((turnover_pct or 0) - 30) / 70 * 6))),  # 당일 회전율 30~100%→0~6
     }
-    score = min(95, REACCUM_SCORE + breakdown["re_value"] + breakdown["re_body"]
-                + breakdown["re_count"] + breakdown["flow"] + breakdown["explosion"]
-                + breakdown["peak_turnover"] + breakdown["re_turnover"])
+    score = min(95, REACCUM_SCORE + breakdown["drawdown"] + breakdown["re_count"]
+                + breakdown["re_body"] + breakdown["peak_turnover"] + breakdown["re_turnover"])
     raw_breakdown = {k: 0 for k in breakdown}
     # 익일~3일 상승확률 라벨(표시 전용·보장 아님) — 동결 모델. daily/now에서 0 API로 피처 산출.
     vals_d = [d.get("value") or 0 for d in daily]
@@ -706,28 +693,28 @@ def scan_reaccum_candidate(rec, p, events):
         "price": now["price"],
         "change_pct": round(now["change_pct"], 2),
         "high_pct": round(high_pct, 2),
-        "fade_pct": round(fade_pct, 1),
+        "drawdown_pct": round(drawdown, 1),   # 식음 깊이 — 폭발 후 고점 대비 현재가 하락률(%)
         "value_eok": round(float(now.get("value") or 0) / 1e8),
-        "turnover_pct": turnover_pct,   # 당일 회전율(거래대금/유통시총 %, 폴백 시 시총) — 손바뀜 강도
-        "peak_turnover_pct": peak_turnover_pct,  # 폭발일 회전율(폭발일 거래대금/유통시총 %) — 폭발의 자명함
-        "float_ratio": fr,              # 유동비율(0~1) — None이면 전체 시총 기준 폴백
-        "turnover_basis": turnover_basis,  # "float"(유통 기준) | "cap"(시총 폴백)
+        "turnover_pct": turnover_pct,   # 당일 회전율(거래량/유통주식수 %) — 손바뀜 강도
+        "peak_turnover_pct": peak_turnover_pct,  # 폭발일 회전율(거래량/유통주식수 %) — 폭발의 자명함
+        "float_ratio": fr,              # 유동비율(0~1) — None이면 회전율 미산출
+        "turnover_basis": turnover_basis,  # "float"(유통 기준) | "cap"(미상)
         "ma10": round(ma10, 1),
         "ma10_margin_pct": round(ma10_margin, 2),
         "spark": {"clusters": []},
         "spark_max_x": 0.0,
         "spark_max_pct": None,
         "mega_flow": False,
-        # 재반등(오늘) 신호 — 10분봉 몸통% + 그 10분봉 거래대금(억) + 시각
+        # 재반등(오늘) 신호 — 대표(최대 몸통) 15분봉
         "reignition": {
             "body_pct": reignition["body_pct"],
             "time": reignition["time"],
-            "value_10m_eok": reignition["value_eok"],
+            "value_15m_eok": reignition["value_eok"],
+            "count": len(rbars),   # 당일 자격 양봉 수(게이트 ≥2)
         },
-        # 당일 자격 10분봉 전체 — 텔레그램 봉단위 알림용(표시는 reignition 대표봉만 사용)
+        # 당일 자격 15분봉 전체 — 텔레그램 봉단위 알림용(표시는 reignition 대표봉만 사용)
         "reignition_bars": [{"time": b["time"], "body_pct": b["body_pct"], "value_eok": b["value_eok"]}
                             for b in rbars],
-        "flow": acc,
         "news": news_items,
         "matched_events": matched_events,
         "theme": theme,
@@ -735,13 +722,12 @@ def scan_reaccum_candidate(rec, p, events):
         "reaccum": {
             "peak_date": peak_date,
             "peak_value_eok": int(float(rec.get("peak_value_eok") or 0)),
+            "peak_high": round(float(rec.get("peak_high") or peak_high), 2),  # 폭발 후 고점(식음 기준)
             "peak_high_pct": round(float(rec.get("peak_high_pct") or 0), 2),
+            "peak_turnover_pct": peak_turnover_pct,  # 폭발일 거래량 회전율(유통주식수 대비 %)
+            "drawdown_pct": round(drawdown, 1),   # 고점 대비 식음 하락률(%)
             "ma20": round(ma20, 1),
             "ma20_margin_pct": round(ma20_margin, 2),
-            # 투신 매집 (조건=순매수>0 느슨, 일수·금액은 정보 표시용)
-            "ivtr_net": int(ivtr_net),
-            "ivtr_days": ivtr_days,
-            "ivtr_eok": ivtr_eok,
             "cause_summary": cause_summary,  # 폭발 catalyst 한 줄("왜 올랐나")
         },
     }
@@ -812,16 +798,17 @@ def _leader_cohort_prob(path=PERFORMANCE_PATH):
 
 
 def attach_reaccum_candidates(suspects, active_explosions, p, events):
+    """반등조짐 후보를 suspects에 추가한다(반환: (추가 수, 조회실패 수)). reaccum이 유일 산출물이라
+    호출 시 suspects는 비어 있어 항상 신규 append — 구 fade 트랙과의 뱃지 병합 경로는 폐지."""
     if not p.reaccum_enabled or not p.reaccum_visible or not active_explosions:
-        return 0, 0, 0
+        return 0, 0
     try:  # 대장 판정 실패가 게시 자체를 막지 않게 격리(표시 전용 뱃지) — 모듈 설계 계약
         leader_codes = _theme_leader_codes(active_explosions)
     except Exception as e:
         log(f"  [warn] 예전 대장 판정 실패(뱃지 생략): {e}")
         leader_codes = set()
     cohort_prob = _leader_cohort_prob()  # 대장 코호트 실측률(표본 충분할 때만, 표시 전용)
-    by_code = {s["code"]: s for s in suspects}
-    added = badges = err_count = 0
+    added = err_count = 0
     for code, rec in active_explosions.items():
         try:
             r = scan_reaccum_candidate(rec, p, events)
@@ -838,15 +825,9 @@ def attach_reaccum_candidates(suspects, active_explosions, p, events):
         r["reaccum"]["source"] = rec.get("source", "live")  # live|seed|telegram(채널 언급發)
         # 예전 대장이면 코호트 실측률 한 줄 표시(표본 충분할 때만, 표시 전용·점수 무관)
         r["leader_cohort_prob"] = cohort_prob if is_leader else None
-        if code in by_code:
-            by_code[code]["reaccum_badge"] = True
-            by_code[code]["reaccum"] = r["reaccum"]
-            by_code[code]["leader_cohort_prob"] = r["leader_cohort_prob"]
-            badges += 1
-        else:
-            suspects.append(r)
-            added += 1
-    return added, badges, err_count
+        suspects.append(r)
+        added += 1
+    return added, err_count
 
 
 # ---------- 메인 깔때기 ----------
@@ -878,62 +859,6 @@ def _explain_cause(code, name, sector=""):
         return news_items, theme, cause_summary, raw_titles
     except Exception:
         return [], "", "", []
-
-
-
-def _parse_hhmmss(v):
-    s = str(v or "").replace(":", "").strip()
-    if len(s) == 4:
-        s += "00"
-    if len(s) != 6 or not s.isdigit():
-        raise ValueError(f"invalid HHMMSS value: {v}")
-    return s
-
-
-def _kimi_in_auto_window(now=None, start="144500", end="153000"):
-    now = now or datetime.now(KST)
-    hm = now.strftime("%H%M%S")
-    return _parse_hhmmss(start) <= hm <= _parse_hhmmss(end)
-
-
-def apply_kimi_verification(suspects, mode="auto", max_items=5, timeout=60,
-                            window_start="144500", window_end="153000"):
-    """상위 후보에 Kimi 검증을 붙인다. 실패해도 후보 게시는 유지한다."""
-    if mode == "auto" and not _kimi_in_auto_window(start=window_start, end=window_end):
-        for s in suspects:
-            if s.get("pattern") == "deep_shakeout":
-                s["ai_verdict"] = {"status": "outside_window",
-                                   "window": [window_start, window_end]}
-        return
-    if not kimi_client.enabled(mode):
-        status = "disabled" if mode == "off" or os.environ.get("RADAR_KIMI_VERIFY") == "0" else "not_configured"
-        for s in suspects:
-            if s.get("pattern") == "deep_shakeout":
-                s["ai_verdict"] = {"status": status}
-        return
-    eligible = [s for s in suspects if not s.get("visible_experimental")]
-    targets = [s for s in eligible if s.get("pattern") == "deep_shakeout"]
-    targets += [s for s in eligible if s.get("pattern") != "deep_shakeout"]
-    seen, unique = set(), []
-    for s in targets:
-        if s["code"] in seen:
-            continue
-        seen.add(s["code"])
-        unique.append(s)
-        if len(unique) >= max_items:
-            break
-    for s in unique:
-        try:
-            verdict = kimi_client.verify_candidate(s, timeout=timeout)
-            s["ai_verdict"] = verdict
-            if verdict["verdict"] == "CONFIRM":
-                s["suspicion_score"] = min(100, s["suspicion_score"] + 5)
-                s["score_breakdown"]["ai"] = 5
-            elif verdict["verdict"] == "REJECT":
-                s["suspicion_score"] = max(0, s["suspicion_score"] - 10)
-                s["score_breakdown"]["ai"] = -10
-        except Exception as e:
-            s["ai_verdict"] = {"status": "unavailable", "error": str(e)[:120]}
 
 
 _RANK_CACHE = {}  # per-run 캐시: (direction,market,page)→(rows,total). radar는 1회성 프로세스라 stale 무관.
@@ -968,27 +893,17 @@ def _rank_page(direction, market, page):
 def main():
     ap = argparse.ArgumentParser(
         description="이벤트 매집 레이더 — 과거 폭등 → 식음 → 오늘 재반등 탐지")
-    # 재반등(오늘) 트리거 — 과거 폭등 종목이 식었다가 오늘 거래대금 동반 재상승 초입인지
-    ap.add_argument("--reaccum-change-min", "--reaccum-high-min",
-                    dest="reaccum_change_min", type=float, default=REACCUM_CHANGE_MIN,
-                    help="당일 종가/현재 등락률 하한(%%, 기본 -4). --reaccum-high-min은 하위호환 별칭")
-    ap.add_argument("--reaccum-change-max", "--reaccum-high-max",
-                    dest="reaccum_change_max", type=float, default=REACCUM_CHANGE_MAX,
-                    help="당일 종가/현재 등락률 상한(%%, 기본 +10). --reaccum-high-max는 하위호환 별칭")
+    # 식음(고점 대비 폭락) + 반등(15분 양봉) 게이트 — 등락률·MA20·투신 게이트는 폐지
+    ap.add_argument("--fade-drawdown-min", type=float, default=FADE_DRAWDOWN_MIN,
+                    help="식음 하한: 폭발 후 고점 대비 최소 하락률(%%, 기본 15)")
+    ap.add_argument("--fade-drawdown-max", type=float, default=FADE_DRAWDOWN_MAX,
+                    help="식음 상한: 폭발 후 고점 대비 최대 하락률(%%, 기본 40)")
     ap.add_argument("--reignition-body-pct", type=float, default=REIGNITION_BODY_PCT,
-                    help="10분봉 몸통%% 하한 — 당일 한 번이라도(기본 2)")
-    ap.add_argument("--reignition-value-10m", type=float, default=REIGNITION_VALUE_10M,
-                    help="해당 10분봉 1개의 거래대금 하한(원, 기본 45억 = UN 통합기준)")
-    ap.add_argument("--kimi-mode", choices=("auto", "on", "off"), default="auto",
-                    help="Kimi 상위 후보 검증 모드(auto=키 있으면 자동)")
-    ap.add_argument("--kimi-max", type=int, default=5,
-                    help="Kimi 검증 최대 후보 수")
-    ap.add_argument("--kimi-timeout", type=int, default=60,
-                    help="Kimi 후보별 타임아웃(초)")
-    ap.add_argument("--kimi-window-start", default="144500",
-                    help="Kimi auto 검증 시작 시각(HHMMSS, 기본 14:45)")
-    ap.add_argument("--kimi-window-end", default="153000",
-                    help="Kimi auto 검증 종료 시각(HHMMSS, 기본 15:30)")
+                    help="15분 양봉 몸통%% 하한(기본 2)")
+    ap.add_argument("--reignition-span-min", type=int, default=REIGNITION_SPAN_MIN,
+                    help="재반등 판정 분봉 합성 단위(분, 기본 15)")
+    ap.add_argument("--reignition-min-count", type=int, default=REIGNITION_MIN_COUNT,
+                    help="당일 자격 양봉 최소 횟수(기본 2)")
     ap.add_argument("--names", nargs="*", default=[], help="watchlist 강제 포함")
     ap.add_argument("--no-reaccum", dest="reaccum_enabled", action="store_false",
                     help="재매집(reaccum) registry 감시와 후보 생성을 비활성화")
@@ -998,16 +913,14 @@ def main():
     ap.set_defaults(reaccum_visible=True)
     ap.add_argument("--reaccum-max", type=int, default=12,
                     help="게시 단계에서 예약할 재매집 후보 슬롯 수(파라미터 기록용)")
-    ap.add_argument("--explosion-value", type=float, default=EXPLOSION_VALUE,
-                    help="재매집 폭발 거래대금 하한(원, 기본 1,500억=UN 통합기준)")
-    ap.add_argument("--explosion-turnover-pct", type=float, default=EXPLOSION_TURNOVER_PCT,
-                    help="폭발 OR 조건: 폭발일 유통 회전율 하한(%%, 기본 100=유통 완전회전). 절대 거래대금 미달이어도 통과")
+    ap.add_argument("--explosion-vol-turnover", type=float, default=EXPLOSION_VOL_TURNOVER,
+                    help="폭발 게이트: 당일 거래량/유통주식수 회전율 하한(%%, 기본 90)")
     ap.add_argument("--explosion-high-pct", type=float, default=EXPLOSION_HIGH_PCT,
-                    help="재매집 폭발 당일 고가 등락률 하한(%%)")
+                    help="폭발 당일 고가 등락률 하한(%%, 기본 22)")
     ap.add_argument("--explosion-window", type=int, default=EXPLOSION_WINDOW,
-                    help="재매집 폭발 유효 거래일 수")
-    ap.add_argument("--explosion-rank-n", type=int, default=EXPLOSION_RANK_N,
-                    help="시장별 거래대금 상위 N종목에서 라이브 폭발 감시")
+                    help="폭발 유효 거래일 수(식음·반등 추적 윈도)")
+    ap.add_argument("--explosion-scan-n", type=int, default=EXPLOSION_SCAN_N,
+                    help="시장별 네이버 up(등락률) 상위 N종목에서 폭발 감시")
     ap.add_argument("--reaccum-seed", default=REACCUM_SEED_PATH,
                     help="즉시 부트스트랩용 재매집 seed JSON 경로")
     ap.add_argument("--no-telegram-seed", dest="telegram_seed", action="store_false",
@@ -1023,9 +936,11 @@ def main():
                     help="폭발 레지스트리를 저장하지 않고 stdout만 생성")
     p = ap.parse_args()
     p.explosion_window = max(1, int(p.explosion_window))
-    p.explosion_rank_n = max(1, int(p.explosion_rank_n))
+    p.explosion_scan_n = max(1, int(p.explosion_scan_n))
+    p.reignition_span_min = max(1, int(p.reignition_span_min))
+    p.reignition_min_count = max(1, int(p.reignition_min_count))
     p.reaccum_max = max(0, int(p.reaccum_max))
-    active_explosions, live_scan_ok = prepare_reaccum_registry(p)
+    active_explosions, live_scan_ok, today_explosions = prepare_reaccum_registry(p)
 
     # 조건 1: D-10 이벤트 캘린더 (재반등 후보의 이벤트 민감도 표시용)
     events = upcoming_events(10)
@@ -1033,7 +948,7 @@ def main():
 
     # 유일 산출물 = 재매집 후보 (과거 폭등 → 식음 → 오늘 재반등)
     suspects = []
-    reaccum_added, reaccum_badges, err_count = attach_reaccum_candidates(
+    reaccum_added, err_count = attach_reaccum_candidates(
         suspects, active_explosions, p, events)
     total = len(active_explosions)
     log(f"[radar] reaccum 후보 {reaccum_added}건 (폭발감시 {total}종목, 조회실패 {err_count}, live_ok={live_scan_ok})")
@@ -1047,32 +962,26 @@ def main():
         log(f"[error] 데이터 수집 장애 의심(live_ok={live_scan_ok}, 실패 {err_count}/{total}, 후보 {reaccum_added}) — 게시 중단")
         sys.exit(3)
     suspects.sort(key=lambda x: -x["suspicion_score"])
-    apply_kimi_verification(suspects, p.kimi_mode, p.kimi_max, p.kimi_timeout,
-                            p.kimi_window_start, p.kimi_window_end)
-    suspects.sort(key=lambda x: -x["suspicion_score"])
 
     out = {
         "generated_at": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST"),
         "params": {"market": kis.MONEY_MARKET,  # 거래대금/수급 시장구분: UN=KRX+NXT 통합 / J=KRX 단독(가격은 항상 J)
-                   "reaccum_change_range": [p.reaccum_change_min, p.reaccum_change_max],
+                   "fade_drawdown_range": [p.fade_drawdown_min, p.fade_drawdown_max],
                    "reignition_body_pct": p.reignition_body_pct,
-                   "reignition_value_10m_eok": round(p.reignition_value_10m / 1e8),
-                   "kimi_mode": p.kimi_mode,
-                   "kimi_max": p.kimi_max,
-                   "kimi_window": [p.kimi_window_start, p.kimi_window_end],
+                   "reignition_span_min": p.reignition_span_min,
+                   "reignition_min_count": p.reignition_min_count,
                    "reaccum_enabled": p.reaccum_enabled,
                    "reaccum_visible": p.reaccum_visible,
                    "reaccum_max": p.reaccum_max,
-                   "explosion_value_eok": round(p.explosion_value / 1e8),
-                   "explosion_turnover_pct": p.explosion_turnover_pct,  # 폭발 OR 조건: 폭발일 유통 회전율 하한
-                   "explosion_turnover_min_value_eok": round(EXPLOSION_TURNOVER_MIN_VALUE / 1e8),  # OR 분기 거래대금 floor
+                   "explosion_vol_turnover": p.explosion_vol_turnover,  # 폭발 게이트: 거래량/유통주식수 회전율 하한(%)
                    "explosion_high_pct": p.explosion_high_pct,
                    "explosion_window": p.explosion_window,
-                   "explosion_rank_n": p.explosion_rank_n,
+                   "explosion_scan_n": p.explosion_scan_n,
                    "telegram_seed": p.telegram_seed,
                    "telegram_channel": p.telegram_channel if p.telegram_seed else None},
         "universe_count": len(active_explosions),
         "events": events,
+        "explosions": today_explosions,   # 당일 폭발 종목(/forecast 게시용)
         "suspects": suspects,
     }
     print(json.dumps(out, ensure_ascii=False, indent=1))

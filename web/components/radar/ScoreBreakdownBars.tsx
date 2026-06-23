@@ -2,39 +2,23 @@ import type { ScoreBreakdown } from "@/types/radar";
 
 type Item = { key: keyof ScoreBreakdown; label: string; max: number };
 
-const FADE_ITEMS: Item[] = [
-  { key: "spark", label: "분봉 스파크", max: 15 },
-  { key: "fade", label: "고점 후퇴·흔들기 패턴", max: 15 },
-  { key: "flow", label: "외인·기관 수급", max: 15 },
-  { key: "event", label: "이벤트 민감도", max: 15 },
-  { key: "ma10", label: "10일선 여유", max: 10 },
-  { key: "mega", label: "메가스파크×수급", max: 12 },
-  { key: "ai", label: "AI 검증 보정", max: 10 },
-];
-
-// 재매집(reaccum) 변별 가산점 — 표시 전용 '강도'(검증된 확률 아님)
+// 반등조짐(reaccum) 변별 가산점 — 표시 전용 '강도'(검증된 확률 아님). 현 파이프라인의 유일 산출물.
 const REACCUM_ITEMS: Item[] = [
-  { key: "re_value", label: "재반등 거래대금", max: 12 },
-  { key: "re_body", label: "재반등 몸통%", max: 6 },
-  { key: "re_count", label: "재반등 봉 수", max: 6 },
-  { key: "flow", label: "투신 매집", max: 8 },
+  { key: "drawdown", label: "식음 깊이", max: 10 },
+  { key: "re_count", label: "15분 양봉 수", max: 8 },
+  { key: "re_body", label: "양봉 몸통%", max: 6 },
   { key: "peak_turnover", label: "폭발일 회전율", max: 10 },
-  { key: "explosion", label: "폭발 절대규모", max: 3 },
   { key: "re_turnover", label: "당일 회전율", max: 6 },
-  { key: "ai", label: "AI 검증 보정", max: 10 },
 ];
 
 /**
  * 수상함 점수 해부도 — 각 가점 항목의 기여를 막대로 투명 공개.
- * (base 점수는 전 조건 통과 자체의 기본 점수라 생략) 재매집 카드는 재매집 항목으로 표시.
+ * (base 점수는 전 조건 통과 자체의 기본 점수라 생략.)
  */
 export function ScoreBreakdownBars({ breakdown }: { breakdown: ScoreBreakdown }) {
-  const isReaccum =
-    breakdown != null && (breakdown.re_value != null || breakdown.re_count != null);
-  const ITEMS = isReaccum ? REACCUM_ITEMS : FADE_ITEMS;
   return (
     <ul className="space-y-1">
-      {ITEMS.map(({ key, label, max }) => {
+      {REACCUM_ITEMS.map(({ key, label, max }) => {
         const v = breakdown[key] ?? 0;
         const w = Math.min(100, Math.max(0, (Math.abs(v) / max) * 100));
         return (

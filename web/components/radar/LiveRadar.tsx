@@ -12,12 +12,6 @@ import type { RadarData } from "@/types/radar";
 /** 자동 갱신 주기(ms). 데이터는 cron 15분 주기로 바뀌므로 60초면 충분. */
 const POLL_MS = 60_000;
 
-function fmtHHMM(v?: string) {
-  if (!v) return "";
-  const s = v.replace(/:/g, "");
-  return s.length >= 4 ? `${s.slice(0, 2)}:${s.slice(2, 4)}` : v;
-}
-
 function LiveStatusBar({ data, justUpdated }: { data: RadarData; justUpdated: boolean }) {
   const open = data.market_session === "open";
   return (
@@ -125,7 +119,7 @@ export function LiveRadar({ initial }: { initial: RadarData }) {
       (!selectedEvent || s.matched_events.some((m) => m.id === selectedEvent)) &&
       (!selectedTheme || inSelectedTheme(s))
   );
-  const reaccumChangeRange = data.params.reaccum_change_range ?? data.params.reaccum_high_range;
+  const fadeRange = data.params.fade_drawdown_range;
 
   return (
     <>
@@ -142,18 +136,15 @@ export function LiveRadar({ initial }: { initial: RadarData }) {
             </span>
           </h2>
           <p className="text-xs text-muted-foreground">
-            과거 폭등({data.params.explosion_value_eok?.toLocaleString() ?? "1,000"}억+ · 고가 +
-            {data.params.explosion_high_pct ?? 13}%, 최근 {data.params.explosion_window ?? 6}거래일) → 식음(MA20 위 · 투신 매집) → 오늘 재반등
-            {reaccumChangeRange &&
-              ` (종가/현재 ${reaccumChangeRange[0]}~${reaccumChangeRange[1]}%`}
+            폭발(고가 +{data.params.explosion_high_pct ?? 22}% · 거래량 유통주식수의{" "}
+            {data.params.explosion_vol_turnover ?? 90}%+, 최근 {data.params.explosion_window ?? 6}거래일) → 식음
+            {fadeRange && ` (고점 대비 -${fadeRange[0]}~-${fadeRange[1]}%)`} → 오늘 반등
             {data.params.reignition_body_pct != null &&
-              ` · 10분봉 몸통 ${data.params.reignition_body_pct}%+`}
-            {data.params.reignition_value_10m_eok != null &&
-              ` · 10분봉 거래대금 ${data.params.reignition_value_10m_eok}억+`}
-            {reaccumChangeRange && ")"}
-            {data.params.kimi_mode != null &&
-              data.params.kimi_mode !== "off" &&
-              ` · Kimi ${fmtHHMM(data.params.kimi_window?.[0])}~${fmtHHMM(data.params.kimi_window?.[1])}`}
+              ` (15분 양봉 몸통 ${data.params.reignition_body_pct}%+${
+                data.params.reignition_min_count != null
+                  ? ` · ${data.params.reignition_min_count}회+`
+                  : ""
+              })`}
           </p>
         </div>
 

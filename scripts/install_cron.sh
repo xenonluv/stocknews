@@ -12,18 +12,11 @@ DRY=0; [ "${1:-}" = "--dry-run" ] && DRY=1
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
 PY="$(command -v python3 || echo /usr/bin/python3)"
 
-# ── 설정(필요 시 수정) ─────────────────────────────
-TOP=30; BET=5
-# ───────────────────────────────────────────────
-
 # 레이더 publish는 인자 불필요(전수 스캔이라 watchlist 없어도 누락 없음).
-# 10분 간격 + 1분 오프셋(:01,:11,…) — 재반등 신호가 10분봉 기준이라 갱신 주기를 맞추고,
-# 봉 마감 1분 후 실행해 갓 닫힌 봉을 잡는다(랙 ~1분). analyzer(:07,:22,…)와 근접할 수 있으나
-# 두 푸셔 모두 공용 git 락(/tmp/stocknews_git.lock)으로 push를 직렬화 → 충돌 없음(시차는 최적화).
+# 10분 간격 + 1분 오프셋(:01,:11,…). 당일 폭발 종목(/forecast) + 식음·반등 수상종목(메인)을 함께 게시.
+# (구 analyzer 종가베팅 잡은 폐지 — /forecast는 이제 publish.py가 만든 당일 폭발 리스트를 보여준다.)
 L_PUBLISH="1,11,21,31,41,51 9-15 * * 1-5 cd $REPO && $PY scripts/publish.py >> /tmp/publish.log 2>&1"
-L_FORECAST="7,22,37,52 9-15 * * 1-5 cd $REPO && $PY analyzer/run.py --push --top $TOP --bet $BET >> /tmp/forecast.log 2>&1"
-L_BACKTEST="10 17 * * 1-5 cd $REPO && $PY analyzer/backtest.py --push >> /tmp/backtest.log 2>&1"
-# 레이더 자가 검증(익일 적중 채점 + 가중치 튜닝 + /performance 데이터) — backtest와 10분 시차
+# 레이더 자가 검증(익일 적중 채점 + 가중치 튜닝 + /performance 데이터)
 L_RADAR_BT="20 17 * * 1-5 cd $REPO && $PY scripts/radar_backtest.py --push >> /tmp/radar_backtest.log 2>&1"
 # 추적 종목(검색 후 📌 추적) 일일 검증 — 종합판정(룰) vs Kimi(AI), radar_backtest와 10분 시차
 L_TRACK_EVAL="30 17 * * 1-5 cd $REPO && $PY scripts/track_eval.py --push >> /tmp/track_eval.log 2>&1"
@@ -40,8 +33,6 @@ NEW_CRON="$(
   crontab -l 2>/dev/null | grep -v -E "scripts/publish.py|scripts/radar_backtest.py|scripts/track_eval.py|scripts/ai_click_eval.py|scripts/phase_eval.py|scripts/night_alert.py|analyzer/run.py|analyzer/backtest.py|^PATH=/usr/local/bin:/usr/bin:/bin$" || true
   echo "PATH=/usr/local/bin:/usr/bin:/bin"
   echo "$L_PUBLISH"
-  echo "$L_FORECAST"
-  echo "$L_BACKTEST"
   echo "$L_RADAR_BT"
   echo "$L_TRACK_EVAL"
   echo "$L_AI_CLICK"
@@ -64,7 +55,7 @@ echo "$NEW_CRON" | crontab -
 
 echo "✅ cron 설치 완료 (repo=$REPO, python=$PY)"
 echo "── 설치된 프로젝트 cron ──"
-crontab -l | grep -E "publish.py|radar_backtest.py|analyzer/" || true
+crontab -l | grep -E "publish.py|radar_backtest.py|track_eval.py|ai_click_eval.py|phase_eval.py|night_alert.py" || true
 
 echo
 echo "── 점검(중요) ──"
@@ -75,4 +66,4 @@ case "$(date +%Z)" in
   *) echo "  ⚠️  시간대 $(date +%Z) — KST 아님! Mac: sudo systemsetup -settimezone Asia/Seoul (또는 cron 시(hour) 조정)";;
 esac
 echo "  ⚠️  PC가 켜져 있어야 동작 — Mac: sudo pmset -a sleep 0"
-echo "  ℹ️  로그: tail -f /tmp/publish.log /tmp/forecast.log /tmp/backtest.log"
+echo "  ℹ️  로그: tail -f /tmp/publish.log /tmp/radar_backtest.log"

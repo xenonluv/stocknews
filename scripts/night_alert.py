@@ -53,14 +53,18 @@ def _get_json(url, timeout=8):
 
 
 def radar_codes():
-    """오늘 레이더가 게시한 수상종목 코드·이름. radar.json 없거나 손상이면 빈 dict."""
+    """오늘 레이더가 게시한 수상종목 + 당일 폭발 종목 코드·이름. radar.json 없거나 손상이면 빈 dict.
+    당일 폭발(explosions[])도 포함 — 헤드라인 폭발주가 야간 급락하면 익일 갭다운 경고 대상."""
     try:
         d = json.load(open(RADAR_JSON, encoding="utf-8"))
     except Exception as e:
         tg.log(f"[night] radar.json 읽기 실패: {e}")
         return {}
-    return {s["code"]: s.get("name") or s["code"]
-            for s in d.get("suspects", []) if s.get("code")}
+    out = {}
+    for s in (d.get("suspects", []) or []) + (d.get("explosions", []) or []):
+        if s.get("code"):
+            out.setdefault(s["code"], s.get("name") or s["code"])
+    return out
 
 
 def watchlist_codes():

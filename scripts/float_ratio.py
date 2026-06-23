@@ -38,6 +38,18 @@ def _load_cache():
         return {}
 
 
+_SHARED = None  # 프로세스 1회 로드 공유 캐시 — 한 radar 실행에서 코드별 디스크 재로드/재저장 제거.
+
+
+def _shared_cache():
+    """프로세스 전역 공유 캐시(최초 1회만 디스크 로드). 신규 스크랩만 즉시 저장(아래 get_*),
+    캐시 히트는 디스크 I/O 0 — 한 회차에 같은 파일을 수십 번 load/dump 하던 낭비 제거."""
+    global _SHARED
+    if _SHARED is None:
+        _SHARED = _load_cache()
+    return _SHARED
+
+
 def _save_cache(cache):
     try:
         os.makedirs(os.path.dirname(CACHE_PATH), exist_ok=True)
@@ -93,7 +105,7 @@ def get_float_ratio(code, cache=None):
         return None
     own = cache is None
     if own:
-        cache = _load_cache()
+        cache = _shared_cache()
     today = datetime.now(KST).strftime("%Y%m%d")
     rec = cache.get(code)
     # 캐시 값은 반환 전 밴드 검증 — _fetch만 밴드를 체크하므로, 구버전 코드가 쓴/손상된 밴드 밖
@@ -120,16 +132,26 @@ def get_float_ratio(code, cache=None):
 
 
 def get_float_and_listed(code, cache=None):
-    """(유동비율 0~1 | None, 발행주식수 int | None) — 폭발일 시총 복원(과거 봉)용. get_float_ratio와 동일 경로."""
-    own = cache is None
-    if own:
-        cache = _load_cache()
-    r = get_float_ratio(code, cache=cache)
-    if own:
-        _save_cache(cache)  # 콜드/만료 스크랩분을 디스크에 영속(없으면 bootstrap이 매 회차 재스크랩)
+    """(유동비율 0~1 | None, 발행주식수 int | None) — 폭발일 시총 복원(과거 봉)용. get_float_ratio와 동일 경로.
+    캐시 미지정 시 get_float_ratio가 공유 캐시(_shared_cache)를 소유해 신규 스크랩만 디스크에 영속하고,
+    여기선 그 공유 캐시에서 listed만 읽는다(캐시 히트 디스크 I/O 0 — 회차당 수십 번 load/dump 제거)."""
+    if cache is None:
+        r = get_float_ratio(code)        # own=True → 공유 캐시 사용 + 스크랩 시에만 저장
+        c = _shared_cache()
+    else:
+        r = get_float_ratio(code, cache=cache)
+        c = cache
     if r is None:
         return None, None
-    return r, (cache.get(code) or {}).get("listed")
+    return r, (c.get(code) or {}).get("listed")
+
+
+def vol_turnover(volume, fr, flisted):
+    """거래량 회전율(거래량/유통주식수 %, 유통주식수=발행주식수×유동비율). 폭발 게이트·당일/폭발일
+    회전율의 단일 산식 — bootstrap·live·reaccum 세 경로가 공유(중복 제거). 산출 불가면 None."""
+    if not (fr and fr > 0 and flisted and flisted > 0 and volume and volume > 0):
+        return None
+    return round(volume / (flisted * fr) * 100, 1)
 
 
 if __name__ == "__main__":

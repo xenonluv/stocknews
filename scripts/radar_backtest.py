@@ -210,9 +210,6 @@ def collect_samples():
                                 "sector": s.get("sector") or "unknown",
                                 "theme": s.get("theme") or "unknown",  # 구표본 미영속 → unknown
                                 "theme_leader": s.get("theme_leader", False),  # 그날 테마 거래대금 1위
-                                "ai_verdict": ((s.get("ai_verdict") or {}).get("verdict")
-                                               or (s.get("ai_verdict") or {}).get("status")
-                                               or "none"),
                                 # 마감 시 게시 카드 잔존 여부(= 종가 매수 가능했던 종목).
                                 # 키 없는 과거(장후 실행) 기록은 True
                                 "final": s.get("final", True),
@@ -235,9 +232,10 @@ def collect_samples():
                                 "mega_flow": s.get("mega_flow", False),
                                 # 신호일 당일 등락률 — 등락률 구간별 익일 상승확률 분석용
                                 "change_pct": s.get("change_pct"),
-                                # 폭발일 회전율(폭발일 거래대금/유통시총 %) — 구간별 익일 상승확률 검증용
+                                # 폭발일 회전율(폭발일 거래량/유통주식수 %) — 구간별 익일 상승확률 검증용
                                 "peak_turnover_pct": s.get("peak_turnover_pct"),
-                                "turnover_basis": s.get("turnover_basis"),  # float|cap — 밴드는 float만
+                                "turnover_basis": s.get("turnover_basis"),  # float|cap — 당일 회전율 산출 기준
+                                "turnover_metric": s.get("turnover_metric"),  # "vol_float" — 밴드 필터(구 척도 분리)
                                 "eval_date": r.get("date"),
                                 "hit": r.get("hit", False),
                                 "high3": r.get("high3", False),
@@ -414,9 +412,10 @@ def spark_flow_matrix(samples):
             "unknown_n": len(samples) - len(known), "cells": cells}
 
 
-# 신호일 당일 등락률 구간 — 레이더 게이트(−4~+10%) 내에서 어느 구간 종가매수가 익일 더 오르나
-CHANGE_BANDS = [("−4~0%", -100.0, 0.0), ("0~+3%", 0.0, 3.0),
-                ("+3~+6%", 3.0, 6.0), ("+6~+10%", 6.0, 100.0)]
+# 신호일 당일 등락률 구간 — 반등 게이트에 등락률 제한이 없어졌으므로(개편) 음수~상한가 전 구간을 커버.
+# '식음 후 반등 신호일에 몇 % 구간 종가매수가 익일 더 오르나'를 구간별로 검증(표시 전용).
+CHANGE_BANDS = [("≤−5%", -100.0, -5.0), ("−5~0%", -5.0, 0.0), ("0~+5%", 0.0, 5.0),
+                ("+5~+15%", 5.0, 15.0), ("+15%+", 15.0, 100.0)]
 
 
 def change_band_stats(samples):
@@ -440,18 +439,21 @@ def change_band_stats(samples):
     return {"min_n": FEATURE_MIN_N, "unknown_n": len(samples) - len(known), "cells": cells}
 
 
-# 폭발일 회전율은 '유통' 기준(거래대금/유통시총)이라 시총 기준의 ~2배 스케일 → 구간도 ~2배로.
-TURNOVER_BANDS = [("<40%", 0.0, 40.0), ("40~80%", 40.0, 80.0), ("80~120%", 80.0, 120.0),
-                  ("120~200%", 120.0, 200.0), ("200%+", 200.0, 1e9)]
+# 폭발일 회전율 = 폭발일 거래량/유통주식수(%). 폭발 게이트가 ≥90%를 강제하므로 분포는 90%+에서 시작 →
+# 구간을 90% 이상에서 변별. (구 메트릭=거래대금/유통시총 ~40~200% 표본은 90% 미만이면 자연 배제, 90%+면
+# 섞이나 25일 만료로 자가 소거 — 표시 전용·score_raw=0 격리 풀이라 코어 통계·튜닝엔 무영향.)
+TURNOVER_BANDS = [("90~120%", 90.0, 120.0), ("120~160%", 120.0, 160.0), ("160~220%", 160.0, 220.0),
+                  ("220~300%", 220.0, 300.0), ("300%+", 300.0, 1e9)]
 
 
 def peak_turnover_band_stats(samples):
-    """폭발일 회전율(폭발일 거래대금/폭발일 유통시총) 구간별 익일 상승확률·평균수익 — '유통 대비 폭발이
-    클수록 익일 더 오르나'를 데이터로 검증(재매집 실험 풀, 코어 통계·튜닝과 격리). peak_turnover_pct
+    """폭발일 회전율(폭발일 거래량/유통주식수 %) 구간별 익일 상승확률·평균수익 — '유통주식이 더 크게
+    손바뀐 폭발일수록 익일 더 오르나'를 데이터로 검증(재매집 실험 풀, 코어 통계·튜닝과 격리). peak_turnover_pct
     미기록 구표본은 제외. change_band_stats와 동일 셀 구조(웹 ChangeBandStats 타입 재사용).
-    ⚠ 밴드는 유통 스케일이라 turnover_basis=="float" 표본만 — 시총 기준 폴백(cap)·구표본을 섞지 않는다."""
+    ⚠ 메트릭 버전 표본(turnover_metric=="vol_float")만 — 개편 전 거래대금/유통시총 척도(태그 없음)와
+    섞지 않는다. turnover_basis(당일 회전율의 float/cap)가 라이브 스크랩 실패로 흔들려도 영향 없음."""
     known = [s for s in samples
-             if s.get("peak_turnover_pct") is not None and s.get("turnover_basis") == "float"]
+             if s.get("peak_turnover_pct") is not None and s.get("turnover_metric") == "vol_float"]
     cells = []
     for label, lo, hi in TURNOVER_BANDS:
         grp = [s for s in known if lo <= s["peak_turnover_pct"] < hi]
@@ -693,7 +695,6 @@ def write_performance(samples, series, bins, weights, dropouts=None,
         # 테마/섹터별 성과 — "어느 테마가 강한 반등인가" 데이터 근거. valid 게이트로 소표본 단정 방지.
         "by_sector": group_stats_gated(samples, "sector"),
         "by_theme": fill_theme_leaders(group_stats_gated(samples, "theme"), samples),
-        "by_ai_verdict": group_stats(samples, "ai_verdict"),
         # AI 익일 예측(prob_up) 검증 루프 — ai_predict()가 기록한 표본의 적중·보정 통계
         "ai": ai_stats(samples),
         # 메가스파크×수급 가설 검증 표 (스파크 배율 구간 × 당일 수급매수)
