@@ -90,8 +90,8 @@ export interface ReaccumInfo {
   cause_summary?: string; // 폭발 catalyst 한 줄("왜 올랐나") — 구버전 JSON엔 없음
   /** 폭발일에 같은 업종 거래대금 1위(업종 대장)였는지 — '예전 대장 재등장' 의심 신호. 구버전 JSON엔 없음 */
   was_theme_leader?: boolean;
-  /** 진입 경로 — "live"(랭킹) | "seed"(시드파일) | "telegram"(채널 언급發). 구버전 JSON엔 없음 */
-  source?: "live" | "seed" | "telegram";
+  /** 진입 경로 — "live"(랭킹) | "seed"(시드파일) | "telegram"(채널發) | "backfill"(6일 소급). 구버전 JSON엔 없음 */
+  source?: "live" | "seed" | "telegram" | "backfill";
 }
 
 /** 재매집(오늘) 신호 — 폭발 종목이 오늘 5분봉 양봉으로 다시 분출(스파크)하는지 */

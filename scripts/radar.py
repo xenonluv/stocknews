@@ -134,7 +134,7 @@ def _today_yyyymmdd():
 
 
 def _empty_registry():
-    return {"trading_days": [], "records": {}}
+    return {"trading_days": [], "records": {}, "window_scanned": {}}
 
 
 def load_explosion_registry(path=EXPLOSION_REGISTRY_PATH):
@@ -150,8 +150,11 @@ def load_explosion_registry(path=EXPLOSION_REGISTRY_PATH):
         return _empty_registry()
     data.setdefault("trading_days", [])
     data.setdefault("records", {})
+    data.setdefault("window_scanned", {})  # 6일 백필 비용 가드(code→YYYYMMDD)
     if not isinstance(data["trading_days"], list) or not isinstance(data["records"], dict):
         return _empty_registry()
+    if not isinstance(data["window_scanned"], dict):
+        data["window_scanned"] = {}
     return data
 
 
@@ -299,9 +302,71 @@ def _telegram_seed_items(p):
     return out
 
 
+def _scan_code_window(reg, code, name, source, p):
+    """code의 최근 윈도(explosion_window 거래일) 일봉을 훑어 새 정의(고가≥22% AND 거래량/유통주식수≥90%)
+    폭발일을 찾아 registry에 upsert(vol_turnover_pct 포함). seed 부트스트랩·6일 소급 백필 공용 per-stock 스캔.
+
+    반환: 완료된 스캔이면 등록 폭발일 수(≥0). **일봉 fetch 실패(KIS 장애)면 None** — 스캔 미완료이므로
+    호출부(백필)가 'scanned' 마킹을 건너뛰고 다음 회차 재시도하게 한다(일시 장애가 그날 종일 스킵으로 굳는 것 방지).
+    유동비율 스크랩은 윈도에 22% 고가 날이 있을 때만(비용 절감 — 라이브 경로처럼 22% 게이트 후 유동비율 조회)."""
+    try:
+        daily = kis.daily_prices_jmoney_un(code, days=max(12, p.explosion_window + 6))  # 거래량=UN 통합
+    except Exception as e:
+        log(f"[warn] {name} 일봉 실패: {e}")
+        return None   # 스캔 미완료(일시 장애) — 재시도 대상
+    if len(daily) < 2:
+        return 0
+    _merge_trading_days(reg, [d["date"] for d in daily[-p.explosion_window:]])
+    recent_dates = {d["date"] for d in daily[-p.explosion_window:]}
+    # 사전패스(cheap): 윈도 내 고가≥22% 날 후보 추출 — 없으면 유동비율 스크랩 없이 종료(비용 절감).
+    cand = []
+    for i, bar in enumerate(daily):
+        if bar["date"] not in recent_dates or i == 0:
+            continue
+        prev_close = daily[i - 1].get("close") or 0
+        if prev_close <= 0:
+            continue
+        high_pct = (bar["high"] / prev_close - 1) * 100
+        if high_pct >= p.explosion_high_pct:    # 게이트 ①: 고가등락률 ≥22%
+            cand.append((bar, prev_close, high_pct))
+    if not cand:
+        return 0   # 22% 날 없음 — 자격 없음(완료된 스캔, 유동비율 불필요)
+    fratio, flisted = float_ratio.get_float_and_listed(code)  # 22% 날이 있는 코드만 유동비율 조회
+    if not (fratio and fratio > 0 and flisted and flisted > 0):
+        return 0  # 유통주식수 미상 → 90% 회전율 확정 불가, 폭발 미인정(fail-safe)
+    qualifying = []
+    for bar, prev_close, high_pct in cand:
+        vol_turnover = float_ratio.vol_turnover(float(bar.get("volume") or 0), fratio, flisted)
+        if vol_turnover is None or vol_turnover < p.explosion_vol_turnover:  # 게이트 ②: 거래량/유통주식수 ≥90%
+            continue
+        qualifying.append({
+            "code": code, "name": name, "peak_date": bar["date"],
+            "peak_value_eok": round(bar["value"] / 1e8),
+            "peak_high_pct": round(high_pct, 2),
+            "peak_change_pct": round((bar["close"] / prev_close - 1) * 100, 2),
+            "vol_turnover_pct": round(vol_turnover, 1),
+            "source": source,
+        })
+    if not qualifying:
+        return 0
+    # 업종(sector) 백필: '예전 대장' 판정이 권위 업종으로 묶이려면 레코드도 sector 필요.
+    # 레지스트리에 이미 있으면 재사용(중복 price_now 회피), 없을 때만 1콜. dry-run은 저장 안 하므로 생략.
+    sector = _known_sector(reg, code)
+    if not sector and not p.dry_run:
+        try:
+            sector = (kis.price_now(code) or {}).get("sector", "") or ""
+        except Exception as e:
+            log(f"[warn] {name} 업종 조회 실패: {e}")
+            sector = ""
+    for rec in qualifying:
+        rec["sector"] = sector
+        _upsert_explosion(reg, rec)
+    return len(qualifying)
+
+
 def bootstrap_seed_explosions(reg, p):
     """지정 종목 + 텔레그램 채널 언급 종목의 최근 일봉으로 과거 폭발(고가22%+거래량/유통주식수90%)을
-    즉시 부트스트랩. 유동비율(발행주식수)이 없는 종목은 회전율 확정 불가 → 폭발 인정 안 함."""
+    즉시 부트스트랩. per-stock 스캔은 _scan_code_window 공용 헬퍼."""
     count = 0
     resolved = _resolve_seed_items(p.names, p.reaccum_seed)
     seen = {r["code"] for r in resolved}
@@ -310,57 +375,7 @@ def bootstrap_seed_explosions(reg, p):
             seen.add(it["code"])
             resolved.append(it)
     for item in resolved:
-        try:
-            daily = kis.daily_prices_jmoney_un(item["code"], days=max(12, p.explosion_window + 6))  # 거래량=UN 통합
-        except Exception as e:
-            log(f"[warn] seed 일봉 실패 {item['name']}: {e}")
-            continue
-        if len(daily) < 2:
-            continue
-        _merge_trading_days(reg, [d["date"] for d in daily[-p.explosion_window:]])
-        recent_dates = {d["date"] for d in daily[-p.explosion_window:]}
-        fratio, flisted = float_ratio.get_float_and_listed(item["code"])  # 유통비율·발행주식수(보통주만)
-        if not (fratio and fratio > 0 and flisted and flisted > 0):
-            continue  # 유통주식수 미상 → 90% 회전율 확정 불가, 폭발 미인정(fail-safe)
-        qualifying = []
-        for i, bar in enumerate(daily):
-            if bar["date"] not in recent_dates or i == 0:
-                continue
-            prev_close = daily[i - 1].get("close") or 0
-            if prev_close <= 0:
-                continue
-            high_pct = (bar["high"] / prev_close - 1) * 100
-            if high_pct < p.explosion_high_pct:    # 게이트 ①: 고가등락률 ≥22%
-                continue
-            vol_turnover = float_ratio.vol_turnover(float(bar.get("volume") or 0), fratio, flisted)
-            if vol_turnover is None or vol_turnover < p.explosion_vol_turnover:  # 게이트 ②: 거래량/유통주식수 ≥90%
-                continue
-            qualifying.append({
-                "code": item["code"],
-                "name": item["name"],
-                "peak_date": bar["date"],
-                "peak_value_eok": round(bar["value"] / 1e8),
-                "peak_high_pct": round(high_pct, 2),
-                "peak_change_pct": round((bar["close"] / prev_close - 1) * 100, 2),
-                "vol_turnover_pct": round(vol_turnover, 1),
-                "source": item.get("source", "seed"),
-            })
-        if not qualifying:
-            continue
-        # 업종(sector) 백필: '예전 대장' 판정이 권위 업종으로 묶이려면 seed 레코드도 sector 필요.
-        # 레지스트리에 이미 있으면 재사용(중복 price_now 회피), 없을 때만 1콜.
-        # dry-run은 레지스트리를 저장하지 않으므로 fetch 무의미 → 생략(live cause 캡처와 동일 철학).
-        sector = _known_sector(reg, item["code"])
-        if not sector and not p.dry_run:
-            try:
-                sector = (kis.price_now(item["code"]) or {}).get("sector", "") or ""
-            except Exception as e:
-                log(f"[warn] seed 업종 조회 실패 {item['name']}: {e}")
-                sector = ""
-        for rec in qualifying:
-            rec["sector"] = sector
-            _upsert_explosion(reg, rec)
-            count += 1
+        count += _scan_code_window(reg, item["code"], item["name"], item.get("source", "seed"), p) or 0
     return count
 
 
@@ -370,6 +385,63 @@ def _known_sector(reg, code):
         if rec.get("code") == code and rec.get("sector"):
             return rec["sector"]
     return ""
+
+
+def _up_ranking_rows(p):
+    """시장별 네이버 up(등락률) 랭킹 상위 explosion_scan_n을 code 기준 dedup → (rows, 총행수).
+    폭발 라이브 감시·6일 소급 백필이 공용으로 쓰는 스캔 유니버스(현 등락률 정렬)."""
+    rows, seen, total = [], set(), 0
+    for market in ("KOSPI", "KOSDAQ"):
+        try:
+            up_rows, _ = _rank_page("up", market, 1)
+            total += len(up_rows)
+            for row in up_rows[:p.explosion_scan_n]:
+                c = row.get("code")
+                if c and c not in seen:
+                    seen.add(c)
+                    rows.append(row)
+        except Exception as e:
+            log(f"[warn] {market} 등락률 랭킹 수집 실패: {e}")
+    return rows, total
+
+
+def backfill_window_explosions(reg, p):
+    """6일 소급 폭발 백필 — 오늘 등락률 상위 ∪ 기존 레지스트리 활성 코드(재검증)의 지난 윈도 일봉을 스캔해
+    새 정의(22%/90%) 폭발일을 registry에 채운다(vol_turnover_pct). 라이브 스캔(오늘)으로만 쌓이던 후보 풀을
+    소급 보강 → 전일 폭발 종목이 오늘 5분 양봉 3회면 즉시 수상종목으로 노출. 등록한 폭발일 수 반환.
+
+    비용 가드: ① 이미 검증된(활성 vol_turnover_pct 있는) code 스킵 ② reg['window_scanned'][code]==오늘이면
+    재스캔 안 함(10분 cron 매 회차 전체 재스캔 방지 — 첫 회차만 풀, 이후 신규 진입분만)."""
+    today = _today_yyyymmdd()
+    scanned = reg.setdefault("window_scanned", {})
+    if not isinstance(scanned, dict):
+        scanned = reg["window_scanned"] = {}
+    active = _recent_active_explosions(reg, p.explosion_window)
+    validated = {c for c, r in active.items() if r.get("vol_turnover_pct") is not None}
+    # 유니버스: 오늘 등락률 상위 + 활성 레지스트리 코드(이름은 레코드/랭킹에서). 시드는 bootstrap이 이미 처리.
+    universe = {}  # code -> name
+    try:
+        for row in _up_ranking_rows(p)[0]:
+            if row.get("code"):
+                universe[row["code"]] = row.get("name") or row["code"]
+    except Exception as e:
+        log(f"[warn] 백필 등락률 유니버스 수집 실패: {e}")
+    for c, r in active.items():
+        universe.setdefault(c, r.get("name") or c)
+    count = scanned_now = 0
+    for code, name in universe.items():
+        if code in validated or scanned.get(code) == today:
+            continue  # 이미 검증됨 / 오늘 이미 스캔함 → 재스캔 비용 절약
+        n = _scan_code_window(reg, code, name, "backfill", p)
+        if n is None:
+            continue  # 일봉 fetch 실패(일시 장애) — scanned 마킹 안 함, 다음 회차 재시도
+        scanned[code] = today
+        scanned_now += 1
+        count += n
+    # window_scanned는 오늘 것만 유지(과거 자동 정리 — 다음 거래일 재스캔 허용)
+    reg["window_scanned"] = {c: d for c, d in scanned.items() if d == today}
+    log(f"[radar] 6일 소급 백필: 신규 폭발 {count}건(스캔 {scanned_now}코드, 검증완료 {len(validated)} 스킵)")
+    return count
 
 
 def update_live_explosions(reg, p):
@@ -384,25 +456,7 @@ def update_live_explosions(reg, p):
 
     반환 (count, scan_ok, today_explosions) — today_explosions는 /forecast '당일 폭발 종목' 리스트.
     """
-    rows = []
-    seen_codes = set()
-    up_rank_total = 0  # 네이버 up 랭킹이 양 시장에서 돌려준 행 수 (스캔 소스 도달성 신호)
-
-    def _add(row):
-        code = row.get("code")
-        if not code or code in seen_codes:
-            return
-        seen_codes.add(code)
-        rows.append(row)
-
-    for market in ("KOSPI", "KOSDAQ"):
-        try:
-            up_rows, _ = _rank_page("up", market, 1)   # 등락률(네이버 up) 랭킹 = 유일 스캔 소스
-            up_rank_total += len(up_rows)
-            for row in up_rows[:p.explosion_scan_n]:
-                _add(row)
-        except Exception as e:
-            log(f"[warn] {market} 등락률 랭킹 폭발 감시 실패: {e}")
+    rows, up_rank_total = _up_ranking_rows(p)  # 네이버 up(등락률) 상위 dedup + 도달성 카운트
     count = 0
     attempted = price_errors = 0  # price_now 도달성 — 전수 실패면 KIS 부분장애 신호
     high_pass = float_missing = 0  # 22% 고가 게이트 통과 수 / 그중 유동비율 결측으로 탈락한 수
@@ -531,6 +585,12 @@ def prepare_reaccum_registry(p):
         live_count = 0
         live_scan_ok = False  # 폭발 스캔 전면 실패(raise) — KIS/네이버 장애 의심
         log(f"[warn] 라이브 폭발 감시 실패(기존 registry/seed만 사용): {e}")
+    # 6일 소급 폭발 백필 — 등락률 상위∪레지스트리 재검증으로 prior-day 폭발 후보 풀을 채운다(오늘 수상종목용).
+    # 실패해도 본작업 안 깨지게 격리(표시 전용 후보 풀 보강).
+    try:
+        backfill_window_explosions(reg, p)
+    except Exception as e:
+        log(f"[warn] 6일 소급 백필 실패(라이브/시드만 사용): {e}")
     # 라이브 스캔 성공/예외 무관하게 registry 기반 백필 — 예외 경로에서도 /forecast가 비지 않게(try 밖).
     today_explosions = _backfill_today_explosions(today_explosions, reg, _today_yyyymmdd())
     if not p.dry_run:
