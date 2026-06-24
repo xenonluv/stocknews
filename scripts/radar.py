@@ -761,6 +761,15 @@ def scan_reaccum_candidate(rec, p, events):
     # 분봉도 거래대금·수급과 동일하게 MONEY_MARKET(기본 UN). 정규장 시간창 가드(kis_client)로 NXT 장 밖 봉 배제.
     try:
         bars = kis.minute_bars_today(code, market=kis.MONEY_MARKET)
+        # UN(통합) 분봉이 비었거나 전부 0이면 J(KRX) 분봉으로 폴백. 일부 종목은 UN 일봉/거래대금은
+        # 정상인데 UN '분봉' 피드만 결측이라 전부 0으로 온다(NXT 분봉 미제공 — 키스트론류 실측). 그대로 두면
+        # KRX엔 명백한 5분봉 재분출이 있어도 reignition 0회로 계산돼 수상종목에서 누락된다. UN 분봉이 있으면
+        # UN 유지(기존 동작·NXT 봉 반영 불변) — 결측일 때만 J 폴백. 폴백 fetch도 같은 try 안(예외→ERR 일관).
+        if kis.MONEY_MARKET != "J" and not any((b.get("close") or 0) > 0 for b in bars):
+            jbars = kis.minute_bars_today(code, market="J")
+            if any((b.get("close") or 0) > 0 for b in jbars):
+                log(f"  [info] {name}: UN 분봉 결측(전부 0) → J(KRX) 분봉 폴백")
+                bars = jbars
     except Exception as e:
         log(f"  [skip] {name}: reaccum 분봉 실패 {e}")
         return "ERR"
