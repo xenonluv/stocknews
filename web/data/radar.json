@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-24 16:06:07 KST",
+ "generated_at": "2026-06-24 16:41:59 KST",
  "market_session": "closed",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -17,7 +17,7 @@
   "telegram_seed": true,
   "telegram_channel": "FastStockNews"
  },
- "universe_count": 52,
+ "universe_count": 53,
  "events": [
   {
    "id": "2026-07-03_미국 고용보고서 (7월",
@@ -39,20 +39,22 @@
    "name": "삼익제약",
    "sector": "제약",
    "high_pct": 23.58,
-   "vol_turnover_pct": 242.4,
-   "value_eok": 841,
+   "vol_turnover_pct": 242.6,
+   "value_eok": 842,
    "price": 8600.0,
-   "change_pct": 13.91
+   "change_pct": 13.91,
+   "backfill": false
   },
   {
    "code": "006920",
    "name": "모헨즈",
    "sector": "비금속",
    "high_pct": 29.84,
-   "vol_turnover_pct": 137.1,
+   "vol_turnover_pct": 137.2,
    "value_eok": 458,
    "price": 5570.0,
-   "change_pct": 29.84
+   "change_pct": 29.84,
+   "backfill": false
   },
   {
    "code": "413630",
@@ -62,7 +64,19 @@
    "vol_turnover_pct": 107.5,
    "value_eok": 358,
    "price": 3520.0,
-   "change_pct": 29.89
+   "change_pct": 29.89,
+   "backfill": false
+  },
+  {
+   "code": "037710",
+   "name": "광주신세계",
+   "sector": "유통",
+   "high_pct": 25.84,
+   "vol_turnover_pct": 95.9,
+   "value_eok": 1019,
+   "price": 42900.0,
+   "change_pct": 25.26,
+   "backfill": false
   },
   {
    "code": "026940",
@@ -71,8 +85,9 @@
    "high_pct": 24.9,
    "vol_turnover_pct": 306.9,
    "value_eok": 1293,
-   "price": null,
-   "change_pct": null
+   "price": 3455.0,
+   "change_pct": -7.99,
+   "backfill": true
   },
   {
    "code": "002070",
@@ -81,8 +96,9 @@
    "high_pct": 29.96,
    "vol_turnover_pct": 112.2,
    "value_eok": 196,
-   "price": null,
-   "change_pct": null
+   "price": 11130.0,
+   "change_pct": 1.37,
+   "backfill": true
   },
   {
    "code": "034940",
@@ -91,8 +107,9 @@
    "high_pct": 25.0,
    "vol_turnover_pct": 111.9,
    "value_eok": 270,
-   "price": null,
-   "change_pct": null
+   "price": 900.0,
+   "change_pct": 5.14,
+   "backfill": true
   },
   {
    "code": "043650",
@@ -101,8 +118,9 @@
    "high_pct": 24.18,
    "vol_turnover_pct": 111.6,
    "value_eok": 425,
-   "price": null,
-   "change_pct": null
+   "price": 4400.0,
+   "change_pct": 6.93,
+   "backfill": true
   },
   {
    "code": "900270",
@@ -111,8 +129,9 @@
    "high_pct": 29.97,
    "vol_turnover_pct": 101.0,
    "value_eok": 124,
-   "price": null,
-   "change_pct": null
+   "price": 750.0,
+   "change_pct": 3.59,
+   "backfill": true
   }
  ],
  "suspects": [
@@ -151,8 +170,8 @@
    "price": 22350.0,
    "change_pct": 13.51,
    "high_pct": 20.37,
-   "value_eok": 5030,
-   "turnover_pct": 175.9,
+   "value_eok": 5060,
+   "turnover_pct": 177.0,
    "peak_turnover_pct": 159.3,
    "float_ratio": 0.45530000000000004,
    "turnover_basis": "float",
@@ -272,8 +291,8 @@
    "price": 37500.0,
    "change_pct": -2.6,
    "high_pct": 4.81,
-   "value_eok": 1294,
-   "turnover_pct": 21.7,
+   "value_eok": 1301,
+   "turnover_pct": 21.8,
    "peak_turnover_pct": 110.6,
    "float_ratio": 0.7117,
    "turnover_basis": "float",

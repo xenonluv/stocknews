@@ -112,10 +112,12 @@ export interface Explosion {
   high_pct: number; // 당일 고가 등락률(%)
   vol_turnover_pct: number; // 당일 거래량 / 유통주식수 회전율(%)
   value_eok: number; // 당일 거래대금(억)
-  /** 현재가 — 랭킹에서 밀려 registry로 백필된 종목은 null(현재가 미표시) */
+  /** 현재가(실시간 조회) — 조회 실패 시에만 null */
   price: number | null;
-  /** 현재 등락률(라이브 행). 백필 행(price=null)은 신뢰할 등락률이 없어 null — 미표시 */
+  /** 현재 등락률(실시간 조회) — 조회 실패 시에만 null(그때만 미표시) */
   change_pct: number | null;
+  /** 랭킹에서 밀린 백필 행(폭발은 오늘, 고가·회전율은 폭발 시점값·현재가는 실시간). undefined=라이브 행 */
+  backfill?: boolean;
 }
 
 /** 3일내 +7% 상승확률 라벨 — 6개월 백테스트 보정(과거 실측·보장 아님) */

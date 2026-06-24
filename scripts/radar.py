@@ -549,6 +549,7 @@ def update_live_explosions(reg, p):
             "value_eok": round(value_won / 1e8),
             "price": now.get("price"),
             "change_pct": round(float(now.get("change_pct") or 0), 2),
+            "backfill": False,   # 랭킹 잔류(라이브) 행 — 현재가/등락률 실시간
         })
         count += 1
     _merge_trading_days(reg, live_dates)
@@ -569,14 +570,24 @@ def update_live_explosions(reg, p):
 def _backfill_today_explosions(today_explosions, reg, today):
     """/forecast '당일 폭발' 리스트 안정화: 오전에 폭발해 registry에 든 종목이 오후 네이버 up 랭킹
     상위에서 밀려 이번 회차 라이브 스캔에 안 잡혀도(또는 스캔이 예외로 실패해도), registry의
-    오늘(peak_date==today) 레코드로 백필해 리스트가 장중에 깜빡이지 않게 한다(저장된 폭발 시점 값
-    사용 — 현재가는 표시 안 함). 회전율 내림차순 정렬한 리스트를 반환. 라이브 스캔 try 밖에서 호출."""
+    오늘(peak_date==today) 레코드로 백필해 리스트가 장중에 깜빡이지 않게 한다. 고가·회전율은 폭발
+    시점(stored)값이지만 **현재가·현재 등락률은 종목별 price_now로 실시간 조회**해 카드에 채운다
+    (registry의 peak_change_pct는 장중 스냅샷 max 병합이라 '현재 등락률'이 아니므로 쓰지 않는다 —
+    조회 실패 시에만 None). 라이브 행 우선·회전율 내림차순 정렬. 라이브 스캔 try 밖에서 호출."""
     seen_today = {e["code"] for e in today_explosions}
     for r in reg.get("records", {}).values():
         if r.get("peak_date") != today or r.get("code") in seen_today:
             continue
         if r.get("vol_turnover_pct") is None:  # 새 정의로 적재된 레코드만(구 게이트 레코드 제외)
             continue
+        price = change_pct = None   # 현재가/현재 등락률 — 종목별 실시간 조회(실패 시 None, 미표시)
+        try:
+            now = kis.price_now(r["code"])  # 가격·등락률은 J(KRX 공식) 1콜이면 충분(거래대금 미사용)
+            price = now.get("price")
+            cp = now.get("change_pct")
+            change_pct = round(float(cp), 2) if cp is not None else None
+        except Exception as e:
+            log(f"  [warn] 백필 현재가 조회 실패 {r.get('name') or r['code']}: {e}")
         today_explosions.append({
             "code": r["code"],
             "name": r.get("name") or r["code"],
@@ -584,15 +595,14 @@ def _backfill_today_explosions(today_explosions, reg, today):
             "high_pct": round(float(r.get("peak_high_pct") or 0), 2),
             "vol_turnover_pct": r.get("vol_turnover_pct"),
             "value_eok": int(float(r.get("peak_value_eok") or 0)),
-            "price": None,   # 랭킹에서 밀린 백필 종목 — 현재가 미표시(폭발 사실만)
-            # 백필 행은 등락률 미표시(None) — 폭발 후 랭킹에서 밀려 신뢰할 현재가/종가가 없다(price=None).
-            # 거짓 등락률 표기를 막으려 아예 노출 안 함. 폭발 사실은 high_pct·회전율로 충분히 전달.
-            "change_pct": None,
+            "price": price,            # 현재가(실시간 조회) — 고가·회전율은 폭발 시점값
+            "change_pct": change_pct,  # 현재 등락률(실시간 조회) — 조회 실패 시에만 None
+            "backfill": True,          # 랭킹에서 밀린 종목(폭발은 오늘, 현재가는 실시간)
         })
         seen_today.add(r["code"])
-    # 회전율 내림차순, 단 라이브 행(price!=None) 우선 — 밀려난 백필 행(stale)이 활발히 거래되는
-    # 라이브 폭발보다 #1 자리(Flame 배지)를 차지하지 않게(시각적 위계 = 현재 거래 우선).
-    today_explosions.sort(key=lambda e: (e.get("price") is None, -(e.get("vol_turnover_pct") or 0)))
+    # 회전율 내림차순, 단 라이브(랭킹 잔류) 행 우선 — 밀려난 백필 행이 활발히 거래되는 라이브 폭발보다
+    # #1 자리(Flame 배지)를 차지하지 않게(시각적 위계 = 현재 랭킹 잔류 우선).
+    today_explosions.sort(key=lambda e: (bool(e.get("backfill")), -(e.get("vol_turnover_pct") or 0)))
     return today_explosions
 
 

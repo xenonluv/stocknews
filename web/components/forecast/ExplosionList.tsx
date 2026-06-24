@@ -35,13 +35,13 @@ function ExplosionCard({ e, rank }: { e: Explosion; rank: number }) {
                 <Flame className="mr-1 size-3.5" aria-hidden /> #{rank}
               </Badge>
               {e.sector && <Badge variant="neutral">{e.sector}</Badge>}
-              {e.price == null && (
+              {e.backfill && (
                 <Badge
                   variant="outline"
                   className="border-muted-foreground/40 text-muted-foreground"
-                  title="장중 폭발 후 등락률 상위에서 밀려 실시간 갱신 대상이 아닌 종목. 폭발 사실(고가·회전율)만 표시하고 등락률은 생략합니다(실시간/종가 미확정)."
+                  title="장중 폭발 후 등락률 상위 랭킹에서 밀려난 종목. 고가·회전율은 폭발 시점 기준, 현재가·등락률은 실시간 조회값입니다."
                 >
-                  장중 폭발(폭발일 기준)
+                  장중 폭발(랭킹 밀림)
                 </Badge>
               )}
             </div>
@@ -51,7 +51,7 @@ function ExplosionCard({ e, rank }: { e: Explosion; rank: number }) {
           </div>
           <h2 className="flex items-baseline gap-2 text-2xl font-bold tracking-tight">
             <span>{e.name}</span>
-            {/* 라이브 행만 현재 등락률 표기. 백필(price=null) 행은 신뢰할 등락률이 없어(폭발 후 밀려난 종목) 생략 — 거짓 표기 방지 */}
+            {/* 현재 등락률(라이브·백필 모두 실시간 조회값). 조회 실패로 null인 경우에만 생략 — 거짓 표기 방지 */}
             {e.change_pct != null && (
               <span className={`text-base font-semibold tabular-nums ${changeClass(e.change_pct)}`}>
                 {e.change_pct > 0 ? "+" : ""}
