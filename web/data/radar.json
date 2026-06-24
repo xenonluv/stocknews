@@ -1,16 +1,12 @@
 {
- "generated_at": "2026-06-24 09:01:54 KST",
+ "generated_at": "2026-06-24 10:21:52 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
   "market": "UN",
-  "fade_drawdown_range": [
-   15.0,
-   40.0
-  ],
   "reignition_body_pct": 2.0,
-  "reignition_span_min": 15,
-  "reignition_min_count": 2,
+  "reignition_span_min": 5,
+  "reignition_min_count": 3,
   "reaccum_enabled": true,
   "reaccum_visible": true,
   "reaccum_max": 12,
