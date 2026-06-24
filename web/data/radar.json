@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-24 15:32:34 KST",
+ "generated_at": "2026-06-24 15:42:36 KST",
  "market_session": "closed",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -49,7 +49,7 @@
    "name": "삼익제약",
    "sector": "제약",
    "high_pct": 23.58,
-   "vol_turnover_pct": 242.3,
+   "vol_turnover_pct": 242.4,
    "value_eok": 841,
    "price": 8600.0,
    "change_pct": 13.91
@@ -111,8 +111,8 @@
    "high_pct": 29.97,
    "vol_turnover_pct": 101.0,
    "value_eok": 124,
-   "price": 828.0,
-   "change_pct": 14.36
+   "price": null,
+   "change_pct": 15.06
   }
  ],
  "suspects": [
@@ -151,8 +151,8 @@
    "price": 22350.0,
    "change_pct": 13.51,
    "high_pct": 20.37,
-   "value_eok": 4983,
-   "turnover_pct": 174.3,
+   "value_eok": 4995,
+   "turnover_pct": 174.7,
    "peak_turnover_pct": 159.3,
    "float_ratio": 0.45530000000000004,
    "turnover_basis": "float",
@@ -161,7 +161,7 @@
    "spark": {
     "clusters": []
    },
-   "spark_max_x": 0.0,
+   "spark_max_x": null,
    "spark_max_pct": null,
    "mega_flow": false,
    "reignition": {
