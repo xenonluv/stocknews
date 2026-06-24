@@ -225,6 +225,14 @@ def main():
                 print(f"[telegram] 재반등 봉 알림 {n}건 전송")
         except Exception as e:
             print(f"[warn] 텔레그램 알림 실패(무시): {e}", file=sys.stderr)
+        # 곧 폭발 후보(youtong) 진입 알림 — 종목·일자 1회 디둡(.youtong_notified.json, 재매집과 별도).
+        # 별도 try로 격리(youtong 알림 실패가 재매집 알림/게시를 막지 않게).
+        try:
+            ny = telegram_notify.notify_youtong(radar.get("youtong", []))
+            if ny:
+                print(f"[telegram] 곧 폭발 후보 알림 {ny}건 전송")
+        except Exception as e:
+            print(f"[warn] youtong 텔레그램 알림 실패(무시): {e}", file=sys.stderr)
     out = {
         "generated_at": radar.get("generated_at"),
         "market_session": market_session(),

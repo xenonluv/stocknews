@@ -17,6 +17,7 @@ from datetime import datetime, timezone, timedelta
 KST = timezone(timedelta(hours=9))
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE_PATH = os.path.join(REPO, ".telegram_notified.json")  # gitignore
+YOUTONG_STATE_PATH = os.path.join(REPO, ".youtong_notified.json")  # gitignore — youtong 알림 디둡(별도)
 BASE = "https://stocknews-cyan.vercel.app"
 
 
@@ -130,6 +131,44 @@ def notify_reignitions(suspects, state_path=STATE_PATH, now=None, span_min=5):
             if send(_format(s, bar)):
                 sent.add(key)
                 n_sent += 1
+    if n_sent:
+        _save_state(state_path, {today: sorted(sent)})  # 오늘 것만 유지(과거 자동 정리)
+    return n_sent
+
+
+def _format_youtong(y):
+    """곧 폭발 후보(/youtong) 알림 — 재매집('🚨 재반등 봉')과 제목·이모지·지표를 달리해 한 채팅에서 구분."""
+    code = y.get("code") or ""
+    name = y.get("name") or code
+    parts = [f"현재 {y.get('change_pct')}%", f"유통 회전율 {y.get('vol_turnover_pct')}%"]
+    if (y.get("value_eok") or 0) > 0:
+        parts.append(f"거래대금 {y.get('value_eok')}억")
+    return "\n".join([
+        f"⚡ {name} ({code}) 곧 폭발 후보",
+        " · ".join(parts),
+        f"{BASE}/stock/{code}",
+    ])
+
+
+def notify_youtong(youtong, state_path=YOUTONG_STATE_PATH, now=None):
+    """곧 폭발 후보(youtong) 진입 알림 — 종목·일자당 1회(디둡). 보낸 건수 반환.
+    youtong은 라이브 스냅샷(밴드 들락날락)이라 봉 완성 판정 없이 '오늘 처음 뜨면 1통'. 재매집 알림과
+    상태 파일(.youtong_notified.json)·메시지 형식을 분리해 구분. 토큰 미설정/실패는 조용히 skip."""
+    load_env()
+    if not os.environ.get("TELEGRAM_BOT_TOKEN") or not os.environ.get("TELEGRAM_CHAT_ID"):
+        return 0  # 미설정 → 조용히 skip(Mac만 실송)
+    now = now or datetime.now(KST)
+    today = now.strftime("%Y%m%d")
+    state = _load_state(state_path)
+    sent = set(state.get(today, []))  # 오늘 보낸 종목코드 집합(종목·일자 1회)
+    n_sent = 0
+    for y in youtong or []:
+        code = y.get("code")
+        if not code or code in sent:
+            continue
+        if send(_format_youtong(y)):
+            sent.add(code)
+            n_sent += 1
     if n_sent:
         _save_state(state_path, {today: sorted(sent)})  # 오늘 것만 유지(과거 자동 정리)
     return n_sent
