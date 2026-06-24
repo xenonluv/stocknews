@@ -132,6 +132,11 @@ def reignition_bars(bars, body_pct_min=REIGNITION_BODY_PCT,
     return out
 
 
+def _has_live_bars(bars):
+    """유효(비제로 종가) 분봉이 하나라도 있나 — UN 분봉 결측(빈 리스트/전부 0) 판별용."""
+    return any((b.get("close") or 0) > 0 for b in bars)
+
+
 # ---------- 재매집: 거래대금 폭발 레지스트리 ----------
 
 def _today_yyyymmdd():
@@ -765,9 +770,9 @@ def scan_reaccum_candidate(rec, p, events):
         # 정상인데 UN '분봉' 피드만 결측이라 전부 0으로 온다(NXT 분봉 미제공 — 키스트론류 실측). 그대로 두면
         # KRX엔 명백한 5분봉 재분출이 있어도 reignition 0회로 계산돼 수상종목에서 누락된다. UN 분봉이 있으면
         # UN 유지(기존 동작·NXT 봉 반영 불변) — 결측일 때만 J 폴백. 폴백 fetch도 같은 try 안(예외→ERR 일관).
-        if kis.MONEY_MARKET != "J" and not any((b.get("close") or 0) > 0 for b in bars):
+        if kis.MONEY_MARKET != "J" and not _has_live_bars(bars):
             jbars = kis.minute_bars_today(code, market="J")
-            if any((b.get("close") or 0) > 0 for b in jbars):
+            if _has_live_bars(jbars):
                 log(f"  [info] {name}: UN 분봉 결측(전부 0) → J(KRX) 분봉 폴백")
                 bars = jbars
     except Exception as e:
