@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-24 14:52:32 KST",
+ "generated_at": "2026-06-24 15:12:20 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -17,7 +17,7 @@
   "telegram_seed": true,
   "telegram_channel": "FastStockNews"
  },
- "universe_count": 51,
+ "universe_count": 52,
  "events": [
   {
    "id": "2026-07-03_미국 고용보고서 (7월",
@@ -51,16 +51,16 @@
    "high_pct": 23.58,
    "vol_turnover_pct": 235.2,
    "value_eok": 816,
-   "price": 8250.0,
-   "change_pct": 9.27
+   "price": null,
+   "change_pct": 19.07
   },
   {
    "code": "006920",
    "name": "모헨즈",
    "sector": "비금속",
    "high_pct": 29.84,
-   "vol_turnover_pct": 136.4,
-   "value_eok": 456,
+   "vol_turnover_pct": 137.0,
+   "value_eok": 458,
    "price": 5570.0,
    "change_pct": 29.84
   },
@@ -71,8 +71,8 @@
    "high_pct": 29.96,
    "vol_turnover_pct": 112.2,
    "value_eok": 196,
-   "price": 12030.0,
-   "change_pct": 9.56
+   "price": null,
+   "change_pct": 21.58
   },
   {
    "code": "034940",
@@ -81,8 +81,8 @@
    "high_pct": 25.0,
    "vol_turnover_pct": 111.9,
    "value_eok": 270,
-   "price": 953.0,
-   "change_pct": 11.33
+   "price": null,
+   "change_pct": 19.74
   },
   {
    "code": "043650",
@@ -99,10 +99,20 @@
    "name": "씨피시스템",
    "sector": "화학",
    "high_pct": 29.89,
-   "vol_turnover_pct": 95.9,
-   "value_eok": 317,
-   "price": 3405.0,
-   "change_pct": 25.65
+   "vol_turnover_pct": 106.0,
+   "value_eok": 352,
+   "price": 3520.0,
+   "change_pct": 29.89
+  },
+  {
+   "code": "900270",
+   "name": "헝셩그룹",
+   "sector": "외국증권",
+   "high_pct": 29.97,
+   "vol_turnover_pct": 97.6,
+   "value_eok": 119,
+   "price": 833.0,
+   "change_pct": 15.06
   }
  ],
  "suspects": [
@@ -138,16 +148,16 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 22500.0,
-   "change_pct": 14.27,
+   "price": 22275.0,
+   "change_pct": 13.13,
    "high_pct": 20.37,
-   "value_eok": 4792,
-   "turnover_pct": 167.8,
+   "value_eok": 4934,
+   "turnover_pct": 172.6,
    "peak_turnover_pct": 159.3,
    "float_ratio": 0.45530000000000004,
    "turnover_basis": "float",
-   "ma10": 17930.0,
-   "ma10_margin_pct": 25.49,
+   "ma10": 17907.5,
+   "ma10_margin_pct": 24.39,
    "spark": {
     "clusters": []
    },
@@ -218,8 +228,8 @@
     "peak_turnover_pct": 159.3,
     "peak_ibs": 0.69,
     "peak_uppertail": 5.6,
-    "ma20": 19055.0,
-    "ma20_margin_pct": 18.08,
+    "ma20": 19043.8,
+    "ma20_margin_pct": 16.97,
     "cause_summary": "엑스게이트, 양자암호·AI 앞세워 방산 보안 시장 공략",
     "was_theme_leader": false,
     "source": "live"
