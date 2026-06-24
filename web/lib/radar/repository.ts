@@ -12,7 +12,8 @@ export function getRadar(): RadarData {
   return RADAR;
 }
 
-/** 당일 폭발 종목 (/forecast 페이지). 회전율 내림차순 정렬은 publish 단계에서 완료. */
+/** 당일 폭발 종목 (/forecast 페이지). 정렬(회전율 90~130 밴드+거래대금 우선, 130초과 후순위)은
+ * radar.py `_forecast_rank_key`에서 완료 — 웹은 배열순 그대로 렌더(rank=i+1). */
 export function getExplosions(): Explosion[] {
   return RADAR.explosions ?? [];
 }
@@ -23,7 +24,7 @@ export function getExplosionThresholds(): { highPct: number; volTurnover: number
   return { highPct: p.explosion_high_pct ?? 22, volTurnover: p.explosion_vol_turnover ?? 90 };
 }
 
-/** 곧 폭발할 후보 (/youtong 페이지). 회전율 내림차순 정렬은 publish 단계에서 완료. */
+/** 곧 폭발할 후보 (/youtong 페이지). 회전율 내림차순 정렬은 radar.py main에서 완료 — 웹은 배열순 그대로 렌더(rank=i+1). */
 export function getYoutong(): Youtong[] {
   return RADAR.youtong ?? [];
 }

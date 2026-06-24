@@ -531,7 +531,8 @@ def update_live_explosions(reg, p):
                 "high_pct": round(high_pct, 2),      # 당일 고가 등락률(참고)
                 "vol_turnover_pct": round(vt, 1),    # 유통주식 회전율(70~100)
                 "value_eok": round(value_won / 1e8),
-                "price": now.get("price"),
+                # KIS _f()가 결측가를 0.0으로 강제 → 0/음수는 미상으로 보고 null(타입 계약: number|null=미상 null).
+                "price": (now.get("price") if (now.get("price") or 0) > 0 else None),
             })
         # ── 폭발(explosion) 경로 — 고가 게이트 통과분만(high_pass·float_missing 회계·게이트 동작 불변) ──
         if not want_explosion:
@@ -622,12 +623,15 @@ def _backfill_today_explosions(today_explosions, reg, today):
             continue
         if r.get("vol_turnover_pct") is None:  # 새 정의로 적재된 레코드만(구 게이트 레코드 제외)
             continue
-        price = change_pct = None   # 현재가/현재 등락률 — 종목별 실시간 조회(실패 시 None, 미표시)
+        price = change_pct = None   # 현재가/현재 등락률 — 유효 조회 시에만 채움(실패·결측·0이면 None=미표시)
         try:
             now = kis.price_now(r["code"])  # 가격·등락률은 J(KRX 공식) 1콜이면 충분(거래대금 미사용)
-            price = now.get("price")
-            cp = now.get("change_pct")
-            change_pct = round(float(cp), 2) if cp is not None else None
+            pr = now.get("price")
+            # KIS _f()가 결측 필드를 0.0으로 강제하므로 'price is None'으론 글리치를 못 거른다 →
+            # 0/음수 현재가(거래정지·응답 글리치)는 유효가로 보지 않고 미표시(거짓 '0.00%' 방지).
+            if pr and pr > 0:
+                price = pr
+                change_pct = round(float(now.get("change_pct") or 0), 2)
         except Exception as e:
             log(f"  [warn] 백필 현재가 조회 실패 {r.get('name') or r['code']}: {e}")
         today_explosions.append({
