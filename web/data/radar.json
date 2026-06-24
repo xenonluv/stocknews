@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-24 13:12:15 KST",
+ "generated_at": "2026-06-24 13:22:11 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -17,7 +17,7 @@
   "telegram_seed": true,
   "telegram_channel": "FastStockNews"
  },
- "universe_count": 49,
+ "universe_count": 50,
  "events": [
   {
    "id": "2026-07-03_미국 고용보고서 (7월",
@@ -39,40 +39,50 @@
    "name": "부국철강",
    "sector": "금속",
    "high_pct": 24.9,
-   "vol_turnover_pct": 273.0,
-   "value_eok": 1152,
-   "price": 4335.0,
-   "change_pct": 15.45
+   "vol_turnover_pct": 276.5,
+   "value_eok": 1167,
+   "price": 4310.0,
+   "change_pct": 14.78
   },
   {
    "code": "014950",
    "name": "삼익제약",
    "sector": "제약",
    "high_pct": 23.58,
-   "vol_turnover_pct": 194.8,
-   "value_eok": 674,
-   "price": 8990.0,
-   "change_pct": 19.07
+   "vol_turnover_pct": 201.2,
+   "value_eok": 697,
+   "price": 8810.0,
+   "change_pct": 16.69
   },
   {
    "code": "006920",
    "name": "모헨즈",
    "sector": "비금속",
    "high_pct": 29.84,
-   "vol_turnover_pct": 126.0,
-   "value_eok": 420,
-   "price": 5370.0,
-   "change_pct": 25.17
+   "vol_turnover_pct": 127.1,
+   "value_eok": 423,
+   "price": 5320.0,
+   "change_pct": 24.01
   },
   {
    "code": "002070",
    "name": "비비안",
    "sector": "섬유·의류",
    "high_pct": 29.96,
-   "vol_turnover_pct": 98.8,
-   "value_eok": 173,
-   "price": 12760.0,
-   "change_pct": 16.21
+   "vol_turnover_pct": 99.4,
+   "value_eok": 174,
+   "price": 12800.0,
+   "change_pct": 16.58
+  },
+  {
+   "code": "034940",
+   "name": "조아제약",
+   "sector": "제약",
+   "high_pct": 25.0,
+   "vol_turnover_pct": 90.9,
+   "value_eok": 218,
+   "price": 1023.0,
+   "change_pct": 19.51
   }
  ],
  "suspects": [
@@ -108,16 +118,16 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 22250.0,
-   "change_pct": 13.0,
+   "price": 23100.0,
+   "change_pct": 17.32,
    "high_pct": 18.84,
-   "value_eok": 3826,
-   "turnover_pct": 134.8,
+   "value_eok": 3992,
+   "turnover_pct": 140.4,
    "peak_turnover_pct": 159.3,
    "float_ratio": 0.45530000000000004,
    "turnover_basis": "float",
-   "ma10": 17905.0,
-   "ma10_margin_pct": 24.27,
+   "ma10": 17990.0,
+   "ma10_margin_pct": 28.4,
    "spark": {
     "clusters": []
    },
@@ -128,7 +138,7 @@
     "body_pct": 8.01,
     "time": "09:00",
     "value_eok": 211,
-    "count": 8
+    "count": 9
    },
    "reignition_bars": [
     {
@@ -170,6 +180,11 @@
      "time": "12:10",
      "body_pct": 2.07,
      "value_eok": 17
+    },
+    {
+     "time": "13:15",
+     "body_pct": 3.6,
+     "value_eok": 84
     }
    ],
    "news": [],
@@ -181,8 +196,8 @@
     "peak_value_eok": 3960,
     "peak_high_pct": 28.4,
     "peak_turnover_pct": 159.3,
-    "ma20": 19042.5,
-    "ma20_margin_pct": 16.84,
+    "ma20": 19085.0,
+    "ma20_margin_pct": 21.04,
     "cause_summary": "엑스게이트, 양자암호·AI 앞세워 방산 보안 시장 공략",
     "was_theme_leader": false,
     "source": "live"
