@@ -120,6 +120,18 @@ export interface Explosion {
   backfill?: boolean;
 }
 
+/** 곧 폭발할 후보 — 당일 현재 등락률 ≥10% AND 유통주식 회전율 70~100% (폭발 종목 제외, /youtong 게시) */
+export interface Youtong {
+  code: string;
+  name: string;
+  sector: string;
+  change_pct: number; // 현재 등락률(%) — 실시간
+  high_pct: number; // 당일 고가 등락률(%) — 참고
+  vol_turnover_pct: number; // 당일 거래량 / 유통주식수 회전율(%, 70~100)
+  value_eok: number; // 당일 거래대금(억)
+  price: number | null; // 현재가(실시간)
+}
+
 /** 3일내 +7% 상승확률 라벨 — 6개월 백테스트 보정(과거 실측·보장 아님) */
 export interface ForecastInfo {
   horizon: string; // "3일 내 +7%"
@@ -224,10 +236,18 @@ export interface RadarData {
     reaccum_max?: number;
     explosion_high_pct?: number;
     explosion_window?: number;
+    /** /youtong: 당일 현재 등락률 하한(%) */
+    youtong_change_pct?: number;
+    /** /youtong: 유통 회전율 하한(%) */
+    youtong_turnover_min?: number;
+    /** /youtong: 유통 회전율 상한(%) */
+    youtong_turnover_max?: number;
   };
   universe_count: number;
   events: RadarEvent[];
   /** 당일 폭발 종목 (/forecast 게시용) */
   explosions?: Explosion[];
+  /** 곧 폭발할 후보 (/youtong 게시용) */
+  youtong?: Youtong[];
   suspects: Suspect[];
 }

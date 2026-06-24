@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-24 16:41:59 KST",
+ "generated_at": "2026-06-24 20:20:04 KST",
  "market_session": "closed",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -14,6 +14,9 @@
   "explosion_high_pct": 22.0,
   "explosion_window": 6,
   "explosion_scan_n": 50,
+  "youtong_change_pct": 10.0,
+  "youtong_turnover_min": 70.0,
+  "youtong_turnover_max": 100.0,
   "telegram_seed": true,
   "telegram_channel": "FastStockNews"
  },
@@ -39,8 +42,8 @@
    "name": "삼익제약",
    "sector": "제약",
    "high_pct": 23.58,
-   "vol_turnover_pct": 242.6,
-   "value_eok": 842,
+   "vol_turnover_pct": 243.3,
+   "value_eok": 844,
    "price": 8600.0,
    "change_pct": 13.91,
    "backfill": false
@@ -51,20 +54,9 @@
    "sector": "비금속",
    "high_pct": 29.84,
    "vol_turnover_pct": 137.2,
-   "value_eok": 458,
+   "value_eok": 459,
    "price": 5570.0,
    "change_pct": 29.84,
-   "backfill": false
-  },
-  {
-   "code": "413630",
-   "name": "씨피시스템",
-   "sector": "화학",
-   "high_pct": 29.89,
-   "vol_turnover_pct": 107.5,
-   "value_eok": 358,
-   "price": 3520.0,
-   "change_pct": 29.89,
    "backfill": false
   },
   {
@@ -72,10 +64,21 @@
    "name": "광주신세계",
    "sector": "유통",
    "high_pct": 25.84,
-   "vol_turnover_pct": 95.9,
-   "value_eok": 1019,
+   "vol_turnover_pct": 115.6,
+   "value_eok": 1243,
    "price": 42900.0,
    "change_pct": 25.26,
+   "backfill": false
+  },
+  {
+   "code": "413630",
+   "name": "씨피시스템",
+   "sector": "화학",
+   "high_pct": 29.89,
+   "vol_turnover_pct": 107.6,
+   "value_eok": 358,
+   "price": 3520.0,
+   "change_pct": 29.89,
    "backfill": false
   },
   {
@@ -134,6 +137,7 @@
    "backfill": true
   }
  ],
+ "youtong": [],
  "suspects": [
   {
    "code": "356680",
@@ -170,8 +174,8 @@
    "price": 22350.0,
    "change_pct": 13.51,
    "high_pct": 20.37,
-   "value_eok": 5060,
-   "turnover_pct": 177.0,
+   "value_eok": 5236,
+   "turnover_pct": 183.3,
    "peak_turnover_pct": 159.3,
    "float_ratio": 0.45530000000000004,
    "turnover_basis": "float",
@@ -291,8 +295,8 @@
    "price": 37500.0,
    "change_pct": -2.6,
    "high_pct": 4.81,
-   "value_eok": 1301,
-   "turnover_pct": 21.8,
+   "value_eok": 1355,
+   "turnover_pct": 22.8,
    "peak_turnover_pct": 110.6,
    "float_ratio": 0.7117,
    "turnover_basis": "float",

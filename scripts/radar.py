@@ -50,6 +50,11 @@ EXPLOSION_HIGH_PCT = 22.0          # 폭발 당일 고가 등락률 하한(%)
 EXPLOSION_VOL_TURNOVER = 90.0      # 폭발 당일 거래량 / 유통주식수 회전율 하한(%) — 유동비율 없으면 미확정(스킵)
 EXPLOSION_WINDOW = 6               # 최근 6거래일 폭발만 재매집(반등) 후보로 추적
 EXPLOSION_SCAN_N = 50              # 시장별 네이버 up(등락률) 상위 N에서 폭발 감시(22%+ 누락 방지)
+# ── /youtong '곧 폭발할 후보' 게이트: 당일 현재 등락률 ≥10% AND 유통주식 회전율 70~100%,
+#    단 이미 폭발(고가≥22% AND 회전율≥90%)한 종목은 제외(forecast와 역할 분리). 라이브 스냅샷 전용·표시용.
+YOUTONG_CHANGE_PCT = 10.0          # /youtong 게이트: 당일 현재 등락률 하한(%)
+YOUTONG_TURNOVER_MIN = 70.0        # /youtong 유통주식 회전율 하한(%)
+YOUTONG_TURNOVER_MAX = 100.0       # /youtong 유통주식 회전율 상한(%) — 초과(>100, 전량 손바뀜)는 사실상 폭발권
 # ── 반등(재매집) 정의: 최근 6거래일 폭발 종목이 (하락 여부 무관) 당일 5분봉 '양봉 몸통%≥2%'가 3회 이상
 #    스파크. 식음(고점 대비 하락) 게이트는 폐지 — 하락 등락률 퍼센트는 보지 않는다.
 REIGNITION_SPAN_MIN = 5            # 재반등 스파크 판정 분봉 합성 단위(분)
@@ -475,7 +480,8 @@ def update_live_explosions(reg, p):
     거래량=UN 통합)와 float_ratio(유통비율·발행주식수)로 판정한다. 유동비율이 없으면 90% 회전율을
     확정할 수 없어 폭발 미확정으로 스킵한다(22% 단독으로는 폭발로 보지 않음).
 
-    반환 (count, scan_ok, today_explosions) — today_explosions는 /forecast '당일 폭발 종목' 리스트.
+    반환 (count, scan_ok, today_explosions, today_youtong) — today_explosions=/forecast 당일 폭발,
+    today_youtong=/youtong '곧 폭발할 후보'(현재 등락률≥10 AND 유통회전율 70~100, 폭발 종목은 제외).
     """
     rows, up_rank_total, rank_fail = _up_ranking_rows(p)  # 네이버 up(등락률) 상위 dedup + 도달성·실패시장 카운트
     count = 0
@@ -483,6 +489,7 @@ def update_live_explosions(reg, p):
     high_pass = float_missing = 0  # 22% 고가 게이트 통과 수 / 그중 유동비율 결측으로 탈락한 수
     live_dates = set()
     today_explosions = []
+    today_youtong = []   # /youtong '곧 폭발할 후보'(라이브 스냅샷 전용 — registry 미적재·백필 없음)
     today = _today_yyyymmdd()
     for row in rows:
         attempted += 1
@@ -498,23 +505,46 @@ def update_live_explosions(reg, p):
         if not now.get("high") or not now.get("prev_close"):
             continue
         high_pct = (now["high"] / now["prev_close"] - 1) * 100
-        if high_pct < p.explosion_high_pct:    # 게이트 ①: 고가등락률 ≥22%
+        change_pct = round(float(now.get("change_pct") or 0), 2)  # 현재 등락률(전일 종가 대비)
+        want_explosion = high_pct >= p.explosion_high_pct          # 폭발 후보(고가 게이트 ①: ≥22%)
+        want_youtong = change_pct >= p.youtong_change_pct          # /youtong 후보(현재 등락률 ≥10%)
+        if not (want_explosion or want_youtong):
             continue
-        high_pass += 1
-        # 게이트 ②: 당일 거래량 / 유통주식수 ≥ 90%. 유통주식수 = 발행주식수 × 유동비율.
-        # 유동비율(또는 발행주식수)이 없으면 회전율 확정 불가 → 폭발 미확정으로 스킵(fail-safe).
+        value_won = float(now.get("value") or 0)   # 당일 거래대금(UN, 표시용)
+        # 게이트 ②(회전율)용 유동비율 — 폭발·youtong 어느 한쪽이라도 후보면 1회 조회(공유). 유통주식수 =
+        # 발행주식수 × 유동비율, 없으면 회전율 확정 불가(fail-safe). 조회 대상이 high≥22 → 'high≥22 OR
+        # change≥10'으로 넓어지나 float_ratio 7일 캐시로 완충(price_now는 이미 전 행 조회 — 추가 KIS 콜 없음).
         volume = float(now.get("volume") or 0)
         fr, flisted = float_ratio.get_float_and_listed(row["code"])
-        vt = float_ratio.vol_turnover(volume, fr, flisted)  # 공유 산식(거래량/유통주식수 %)
+        vt = float_ratio.vol_turnover(volume, fr, flisted)  # 공유 산식(거래량/유통주식수 %), 결측 시 None
+        float_ok = bool(fr and fr > 0 and flisted and flisted > 0)
+        is_explosion = want_explosion and vt is not None and vt >= p.explosion_vol_turnover
+        # /youtong '곧 폭발할 후보': 현재 등락률≥10 AND 회전율 70~100 AND (아직) 폭발 아님. 라이브 스냅샷
+        # 전용(registry 미적재·백필 없음) — 표시·참고용, score_raw/통계 무관.
+        if (want_youtong and vt is not None and not is_explosion
+                and p.youtong_turnover_min <= vt <= p.youtong_turnover_max):
+            today_youtong.append({
+                "code": row["code"],
+                "name": row["name"],
+                "sector": now.get("sector", ""),
+                "change_pct": change_pct,            # 현재 등락률(실시간)
+                "high_pct": round(high_pct, 2),      # 당일 고가 등락률(참고)
+                "vol_turnover_pct": round(vt, 1),    # 유통주식 회전율(70~100)
+                "value_eok": round(value_won / 1e8),
+                "price": now.get("price"),
+            })
+        # ── 폭발(explosion) 경로 — 고가 게이트 통과분만(high_pass·float_missing 회계·게이트 동작 불변) ──
+        if not want_explosion:
+            continue
+        high_pass += 1
         if vt is None:
             # 거래량 0/결측은 게이트 미충족일 뿐 — 유동비율(wisereport) 결측만 '소스 장애' 카운트.
-            if not (fr and fr > 0 and flisted and flisted > 0):
+            if not float_ok:
                 float_missing += 1
             continue
         if vt < p.explosion_vol_turnover:
             continue
         vol_turnover = vt
-        value_won = float(now.get("value") or 0)   # 당일 거래대금(UN, 표시용)
         # 마감강도(peak_ibs)는 장중 현재가로 산출하면 종가와 달라 오염되므로 여기서 저장하지 않는다.
         # 수상종목(전일 폭발)으로 노출될 때 scan_reaccum_candidate가 '완결된 폭발일 일봉'에서 산출(EOD 정확).
         rec_new = {
@@ -564,7 +594,7 @@ def update_live_explosions(reg, p):
     # 게시(그 시장 폭발 누락)되는 것을 방지(개편 전 단일시장 실패 전파 동작 복원).
     scan_ok = up_rank_total > 0 and rank_fail == 0 and not (
         attempted > 0 and price_errors >= max(2, (attempted + 1) // 2))
-    return count, scan_ok, today_explosions
+    return count, scan_ok, today_explosions, today_youtong
 
 
 def _backfill_today_explosions(today_explosions, reg, today):
@@ -607,17 +637,18 @@ def _backfill_today_explosions(today_explosions, reg, today):
 
 
 def prepare_reaccum_registry(p):
-    """(active_explosions, live_scan_ok, today_explosions) 반환. live_scan_ok=False면 폭발감시
-    자체가 전면 실패 = KIS/네이버 장애 신호 → 호출부의 수집장애 가드가 사용한다.
-    today_explosions = 당일 폭발 종목 리스트(/forecast 게시용)."""
+    """(active_explosions, live_scan_ok, today_explosions, today_youtong) 반환. live_scan_ok=False면
+    폭발감시 자체가 전면 실패 = KIS/네이버 장애 신호 → 호출부의 수집장애 가드가 사용한다.
+    today_explosions=/forecast 당일 폭발, today_youtong=/youtong '곧 폭발할 후보'(라이브 스냅샷)."""
     if not p.reaccum_enabled:
-        return {}, True, []
+        return {}, True, [], []
     reg = load_explosion_registry()
     seed_count = bootstrap_seed_explosions(reg, p)
     live_scan_ok = True
     today_explosions = []
+    today_youtong = []
     try:
-        live_count, live_scan_ok, today_explosions = update_live_explosions(reg, p)
+        live_count, live_scan_ok, today_explosions, today_youtong = update_live_explosions(reg, p)
     except Exception as e:
         live_count = 0
         live_scan_ok = False  # 폭발 스캔 전면 실패(raise) — KIS/네이버 장애 의심
@@ -635,8 +666,9 @@ def prepare_reaccum_registry(p):
     elif seed_count or live_count:
         log("[radar] dry-run: 폭발 레지스트리 저장 생략")
     active = _recent_active_explosions(reg, p.explosion_window)
-    log(f"[radar] reaccum registry active={len(active)} seed={seed_count} live={live_count} 당일폭발={len(today_explosions)}")
-    return active, live_scan_ok, today_explosions
+    log(f"[radar] reaccum registry active={len(active)} seed={seed_count} live={live_count} "
+        f"당일폭발={len(today_explosions)} youtong={len(today_youtong)}")
+    return active, live_scan_ok, today_explosions, today_youtong
 
 
 # ── 익일~3일 상승확률 예측(동결 모델) — 전종목 6개월 백테스트로 보정, holdout 검증치 ──
@@ -1010,6 +1042,12 @@ def main():
                     help="폭발 유효 거래일 수(식음·반등 추적 윈도)")
     ap.add_argument("--explosion-scan-n", type=int, default=EXPLOSION_SCAN_N,
                     help="시장별 네이버 up(등락률) 상위 N종목에서 폭발 감시")
+    ap.add_argument("--youtong-change-pct", type=float, default=YOUTONG_CHANGE_PCT,
+                    help="/youtong 게이트: 당일 현재 등락률 하한(%%, 기본 10)")
+    ap.add_argument("--youtong-turnover-min", type=float, default=YOUTONG_TURNOVER_MIN,
+                    help="/youtong 유통주식 회전율 하한(%%, 기본 70)")
+    ap.add_argument("--youtong-turnover-max", type=float, default=YOUTONG_TURNOVER_MAX,
+                    help="/youtong 유통주식 회전율 상한(%%, 기본 100)")
     ap.add_argument("--reaccum-seed", default=REACCUM_SEED_PATH,
                     help="즉시 부트스트랩용 재매집 seed JSON 경로")
     ap.add_argument("--no-telegram-seed", dest="telegram_seed", action="store_false",
@@ -1029,7 +1067,7 @@ def main():
     p.reignition_span_min = max(1, int(p.reignition_span_min))
     p.reignition_min_count = max(1, int(p.reignition_min_count))
     p.reaccum_max = max(0, int(p.reaccum_max))
-    active_explosions, live_scan_ok, today_explosions = prepare_reaccum_registry(p)
+    active_explosions, live_scan_ok, today_explosions, today_youtong = prepare_reaccum_registry(p)
 
     # 조건 1: D-10 이벤트 캘린더 (재반등 후보의 이벤트 민감도 표시용)
     events = upcoming_events(10)
@@ -1070,11 +1108,16 @@ def main():
                    "explosion_high_pct": p.explosion_high_pct,
                    "explosion_window": p.explosion_window,
                    "explosion_scan_n": p.explosion_scan_n,
+                   "youtong_change_pct": p.youtong_change_pct,        # /youtong: 당일 현재 등락률 하한(%)
+                   "youtong_turnover_min": p.youtong_turnover_min,    # /youtong: 유통 회전율 하한(%)
+                   "youtong_turnover_max": p.youtong_turnover_max,    # /youtong: 유통 회전율 상한(%)
                    "telegram_seed": p.telegram_seed,
                    "telegram_channel": p.telegram_channel if p.telegram_seed else None},
         "universe_count": len(active_explosions),
         "events": events,
         "explosions": today_explosions,   # 당일 폭발 종목(/forecast 게시용)
+        # /youtong '곧 폭발할 후보' — 회전율 내림차순(폭발 임박순). 라이브 스냅샷·표시용(통계 무관).
+        "youtong": sorted(today_youtong, key=lambda e: -(e.get("vol_turnover_pct") or 0)),
         "suspects": suspects,
     }
     print(json.dumps(out, ensure_ascii=False, indent=1))

@@ -233,6 +233,7 @@ def main():
         "universe_count": radar.get("universe_count", 0),
         "events": radar.get("events", []),
         "explosions": radar.get("explosions", []),  # 당일 폭발 종목(/forecast 게시용)
+        "youtong": radar.get("youtong", []),         # 곧 폭발할 후보(/youtong 게시용)
         "suspects": suspects,
     }
     new = json.dumps(out, ensure_ascii=False, indent=1)
