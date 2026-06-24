@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-24 11:11:53 KST",
+ "generated_at": "2026-06-24 11:22:32 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -17,7 +17,7 @@
   "telegram_seed": true,
   "telegram_channel": "FastStockNews"
  },
- "universe_count": 46,
+ "universe_count": 48,
  "events": [
   {
    "id": "2026-07-03_미국 고용보고서 (7월",
@@ -39,21 +39,121 @@
    "name": "부국철강",
    "sector": "금속",
    "high_pct": 24.9,
-   "vol_turnover_pct": 207.2,
-   "value_eok": 872,
-   "price": 4575.0,
-   "change_pct": 21.84
+   "vol_turnover_pct": 214.8,
+   "value_eok": 906,
+   "price": 4315.0,
+   "change_pct": 14.91
   },
   {
    "code": "006920",
    "name": "모헨즈",
    "sector": "비금속",
    "high_pct": 29.84,
-   "vol_turnover_pct": 94.5,
-   "value_eok": 316,
-   "price": 4840.0,
-   "change_pct": 12.82
+   "vol_turnover_pct": 95.4,
+   "value_eok": 319,
+   "price": 4765.0,
+   "change_pct": 11.07
   }
  ],
- "suspects": []
+ "suspects": [
+  {
+   "code": "356680",
+   "name": "엑스게이트",
+   "sector": "IT 서비스",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 86,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_count": 6,
+    "re_body": 6,
+    "peak_turnover": 6,
+    "re_turnover": 6
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_count": 0,
+    "re_body": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "price": 21450.0,
+   "change_pct": 8.94,
+   "high_pct": 18.84,
+   "value_eok": 3223,
+   "turnover_pct": 113.9,
+   "peak_turnover_pct": 159.3,
+   "float_ratio": 0.45530000000000004,
+   "turnover_basis": "float",
+   "ma10": 17825.0,
+   "ma10_margin_pct": 20.34,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": 0.0,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 8.01,
+    "time": "09:00",
+    "value_eok": 211,
+    "count": 5
+   },
+   "reignition_bars": [
+    {
+     "time": "09:00",
+     "body_pct": 8.01,
+     "value_eok": 211
+    },
+    {
+     "time": "09:20",
+     "body_pct": 5.26,
+     "value_eok": 111
+    },
+    {
+     "time": "09:30",
+     "body_pct": 2.36,
+     "value_eok": 38
+    },
+    {
+     "time": "09:55",
+     "body_pct": 2.32,
+     "value_eok": 159
+    },
+    {
+     "time": "10:05",
+     "body_pct": 3.58,
+     "value_eok": 146
+    }
+   ],
+   "news": [],
+   "matched_events": [],
+   "theme": "반도체",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260623",
+    "peak_value_eok": 3960,
+    "peak_high_pct": 28.4,
+    "peak_turnover_pct": 159.3,
+    "ma20": 19002.5,
+    "ma20_margin_pct": 12.88,
+    "cause_summary": "엑스게이트, 양자암호·AI 앞세워 방산 보안 시장 공략",
+    "was_theme_leader": false,
+    "source": "live"
+   },
+   "leader_cohort_prob": null,
+   "theme_leader": false
+  }
+ ]
 }
