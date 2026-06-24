@@ -165,6 +165,9 @@ python3 scripts/event_calendar.py 10           # D-10 이벤트 확인
   `reignition`(5분 스파크·count)·`forecast` 포함.
 - `/forecast` — **당일 폭발 종목** 페이지(SSG + 60초 폴링). 데이터 = `radar.json`의 `explosions[]`. 라이브 행은 현재가/등락률
   실시간, 백필 행(랭킹 밀림)은 현재가 실시간 조회·"장중 폭발(랭킹 밀림)" 배지. UI=`components/forecast/ExplosionList.tsx`.
+  **순위(폭발순위기준.md, `radar.py` `_forecast_rank_key` SSOT)**: ① 회전율 90~130 밴드를 최상위(밴드 내 당일 거래대금
+  내림차순) ② 130 초과는 그 아래, 회전율 오름차순(클수록 뒤로 — 저유동 품절주 펌프)·거래대금 보조. 라이브/백필 구분 없이
+  순수 기준만(웹은 배열순 렌더 `rank=i+1`). 게이트(고가≥22 AND 회전율≥90)는 불변 — 90~130/130초과는 순위만 가름.
 - `/youtong` — **곧 폭발할 후보** 페이지(SSG + 60초 폴링). 데이터 = `radar.json`의 `youtong[]`(현재 등락률≥10% AND
   유통회전율 70~100%, 폭발 제외). 회전율 내림차순, 앰버(곧 폭발) 액센트. 빈 상태도 유효. UI=`components/youtong/YoutongList.tsx`.
   임계 문구는 `params.youtong_*`를 따름. **10분 publish cron 재사용**(별도 잡 없음 — 실질 ≤10분 갱신).
