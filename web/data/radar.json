@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-24 12:22:26 KST",
+ "generated_at": "2026-06-24 12:32:29 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -39,30 +39,30 @@
    "name": "부국철강",
    "sector": "금속",
    "high_pct": 24.9,
-   "vol_turnover_pct": 254.2,
-   "value_eok": 1071,
-   "price": 4170.0,
-   "change_pct": 11.05
+   "vol_turnover_pct": 258.4,
+   "value_eok": 1089,
+   "price": 4225.0,
+   "change_pct": 12.52
   },
   {
    "code": "006920",
    "name": "모헨즈",
    "sector": "비금속",
    "high_pct": 29.84,
-   "vol_turnover_pct": 111.0,
-   "value_eok": 369,
-   "price": 5350.0,
-   "change_pct": 24.71
+   "vol_turnover_pct": 115.6,
+   "value_eok": 385,
+   "price": 5340.0,
+   "change_pct": 24.48
   },
   {
    "code": "002070",
    "name": "비비안",
    "sector": "섬유·의류",
    "high_pct": 29.96,
-   "vol_turnover_pct": 90.6,
-   "value_eok": 159,
-   "price": 12900.0,
-   "change_pct": 17.49
+   "vol_turnover_pct": 93.5,
+   "value_eok": 164,
+   "price": 12830.0,
+   "change_pct": 16.85
   }
  ],
  "suspects": [
@@ -98,16 +98,16 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 22300.0,
-   "change_pct": 13.26,
+   "price": 21900.0,
+   "change_pct": 11.22,
    "high_pct": 18.84,
-   "value_eok": 3655,
-   "turnover_pct": 128.9,
+   "value_eok": 3697,
+   "turnover_pct": 130.4,
    "peak_turnover_pct": 159.3,
    "float_ratio": 0.45530000000000004,
    "turnover_basis": "float",
-   "ma10": 17905.0,
-   "ma10_margin_pct": 24.55,
+   "ma10": 17870.0,
+   "ma10_margin_pct": 22.55,
    "spark": {
     "clusters": []
    },
@@ -171,8 +171,8 @@
     "peak_value_eok": 3960,
     "peak_high_pct": 28.4,
     "peak_turnover_pct": 159.3,
-    "ma20": 19042.5,
-    "ma20_margin_pct": 17.11,
+    "ma20": 19025.0,
+    "ma20_margin_pct": 15.11,
     "cause_summary": "엑스게이트, 양자암호·AI 앞세워 방산 보안 시장 공략",
     "was_theme_leader": false,
     "source": "live"
