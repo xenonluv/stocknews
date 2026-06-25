@@ -234,6 +234,7 @@ def collect_samples():
                                 "mega_flow": s.get("mega_flow", False),
                                 # 신호일 당일 등락률 — 등락률 구간별 익일 상승확률 분석용
                                 "change_pct": s.get("change_pct"),
+                                "change_basis": s.get("change_basis"),  # "NXT"면 야간가 기준 — change_band 필터로 제외(KRX hit과 기준 불일치)
                                 # 폭발일 회전율(폭발일 거래량/유통주식수 %) — 구간별 익일 상승확률 검증용
                                 "peak_turnover_pct": s.get("peak_turnover_pct"),
                                 "turnover_basis": s.get("turnover_basis"),  # float|cap — 당일 회전율 산출 기준
@@ -424,9 +425,13 @@ def change_band_stats(samples):
     """등락률 구간별 익일 상승확률(적중률)·평균수익 — '몇 % 구간 종가베팅이 익일 더 오르나'.
 
     hit_rate = 익일 종가 > 신호일 종가 비율 = 실측 상승확률. change_pct 미기록 구표본은 제외.
+    ⚠ change_basis=="NXT"(마감 후 NXT 야간가로 재평가된 등락률) 표본도 제외 — hit은 KRX 정규장 종가 기준이라
+       야간가 등락률을 같은 구간에 넣으면 x축(등락률)·결과축(KRX hit)의 가격 기준이 어긋난다. 구표본은
+       change_basis 미기록(None)=KRX로 간주해 유지(turnover_metric=="vol_float" 필터와 동일한 분리 원칙).
     valid 게이트(n>=FEATURE_MIN_N)로 소표본 단정 방지.
     """
-    known = [s for s in samples if s.get("change_pct") is not None]
+    known = [s for s in samples
+             if s.get("change_pct") is not None and s.get("change_basis") in (None, "KRX")]
     cells = []
     for label, lo, hi in CHANGE_BANDS:
         grp = [s for s in known if lo <= s["change_pct"] < hi]
@@ -826,7 +831,8 @@ def push_state():
 
 def main():
     # 추적 파일(history·weights·performance) 쓰기 전 공용 git 락 — 락 밖 미커밋 변경을
-    # 타 푸셔 autostash가 스태시/충돌로 날리는 것 방지. 17:20 단독 실행이라 대기 비용 없음.
+    # 타 푸셔 autostash가 스태시/충돌로 날리는 것 방지. publish가 9~20시로 확장돼 17:2x publish와
+    # 락이 겹칠 수 있으나 공용 블로킹 락이라 정합성 보존(겹치면 publish가 잠깐 대기 후 다음 회차 자가복구).
     git_lock = acquire_git_lock()  # noqa: F841 — 프로세스 종료까지 유지
     evaluate()
     ai_predict()  # 당일 마감 카드의 AI 예측 기록 (익일 evaluate가 채점)

@@ -26,6 +26,7 @@ RADAR_JSON = os.path.join(REPO, "web", "data", "radar.json")
 HISTORY_DIR = os.path.join(REPO, "data", "radar_history")
 DISCLAIMER = "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다."
 RADAR_PASSTHRU = ("--reignition-body-pct", "--reignition-span-min", "--reignition-min-count",
+                  "--reignition-start", "--reaccum-change-min", "--reaccum-change-max",
                   "--reaccum-max", "--explosion-vol-turnover", "--explosion-high-pct",
                   "--explosion-window", "--explosion-scan-n", "--reaccum-seed")
 RADAR_BOOL_PASSTHRU = ("--no-reaccum", "--no-reaccum-visible")
@@ -103,6 +104,9 @@ def record_history(out):
             "score_breakdown_display": s.get("score_breakdown", {}),
             "rank": rank,                 # 이번 회차 게시 순위(1=최상단). 매 회차 덮어써 마지막 회차 확정값
             "change_pct": s.get("change_pct"),
+            # 마감 후 NXT 시간외가로 재평가된 등락률이면 "NXT"(없거나 "KRX"=정규장). change_band_stats가
+            # KRX 종가 기준 hit과 기준이 어긋나는 NXT 표본을 거르도록 기록(없으면 KRX로 간주 — 구표본 호환).
+            "change_basis": s.get("change_basis"),
             "high_pct": s.get("high_pct"),
             "pattern": s.get("pattern"),
             "prime": s.get("prime", False),  # 핵심 조건 모두 충족(유력) — 향후 적중률 분리 검증용

@@ -171,6 +171,8 @@ def _nxt_change_pct(code, prev_close):
         b = json.loads(get_bytes(f"https://m.stock.naver.com/api/stock/{code}/basic", UA))
     except Exception:
         return None
+    if not isinstance(b, dict):
+        return None  # 네이버가 200에 비-dict(JSON null/list/에러봉투)를 줘도 KRX 등락률로 폴백(fail-safe)
     if str(b.get("marketStatus") or "") == "OPEN":
         return None  # 정규장 중엔 보정 안 함(전일 시간외 혼동 방지) — KIS 실시간 등락률 사용
     om = b.get("overMarketPriceInfo") or {}
@@ -490,7 +492,7 @@ def _up_ranking_rows(p):
 def backfill_window_explosions(reg, p):
     """6일 소급 폭발 백필 — 오늘 등락률 상위 ∪ 기존 레지스트리 활성 코드(재검증)의 지난 윈도 일봉을 스캔해
     새 정의(22%/90%) 폭발일을 registry에 채운다(vol_turnover_pct). 라이브 스캔(오늘)으로만 쌓이던 후보 풀을
-    소급 보강 → 전일 폭발 종목이 오늘 5분 양봉 3회면 즉시 수상종목으로 노출. 등록한 폭발일 수 반환.
+    소급 보강 → 전일 폭발 종목이 오늘 14:30↑ 5분 양봉 2회+ AND 현재 등락률 −5~+7%면 수상종목으로 노출. 등록한 폭발일 수 반환.
 
     비용 가드: ① 이미 검증된(활성 vol_turnover_pct 있는) code 스킵 ② reg['window_scanned'][code]==오늘이면
     재스캔 안 함(10분 cron 매 회차 전체 재스캔 방지 — 첫 회차만 풀, 이후 신규 진입분만)."""

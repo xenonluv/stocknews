@@ -75,15 +75,25 @@ def _save_state(path, state):
         log(f"[telegram] 상태 저장 실패: {e}")
 
 
-def _bar_complete(bar_time_hhmm, now=None, span_min=5):
-    """버킷 시작 'HH:MM'의 분봉이 완성됐나(now ≥ 시작+span_min분). 형성 중 봉은 알림 보류."""
+REIGNITION_MAX_AGE_MIN = 30  # 완성 후 이만큼 지난 봉은 알림 안 함(뒷북 방지). publish 10분 주기라 1~2회차 여유.
+
+
+def _bar_complete(bar_time_hhmm, now=None, span_min=5, max_age_min=REIGNITION_MAX_AGE_MIN):
+    """버킷 시작 'HH:MM'의 분봉이 '완성됐고 아직 신선한가'. 형성 중 봉은 보류(완성 전).
+    max_age_min 지정 시 완성 후 그만큼 지난 '오래된' 봉도 False — 마감 후 NXT로 새로 밴드 진입한 종목의
+    14:30~15:30 옛 스파크 봉이 90분 뒤 무더기 발송되는 회귀를 차단(완성 직후 1~2회차 안에만 알림)."""
     now = now or datetime.now(KST)
     try:
         hh, mm = bar_time_hhmm.split(":")
         start = int(hh) * 60 + int(mm)
     except Exception:
         return False
-    return (now.hour * 60 + now.minute) >= start + span_min
+    age = (now.hour * 60 + now.minute) - (start + span_min)  # 완성 시점 대비 경과(분)
+    if age < 0:
+        return False  # 아직 형성 중
+    if max_age_min is not None and age > max_age_min:
+        return False  # 완성 후 너무 오래됨 → 뒷북 알림 방지
+    return True
 
 
 def _format(s, bar):
@@ -92,7 +102,9 @@ def _format(s, bar):
     r = s.get("reaccum") or {}
     pt = r.get("peak_turnover_pct")
     cnt = (s.get("reignition") or {}).get("count")
-    line3 = f"등락 {s.get('change_pct')}%"
+    # 마감 후엔 change_pct가 NXT 시간외 야간가 기준(change_basis=="NXT") — 정규장 스파크 봉 옆이라 라벨로 구분.
+    nxt = " (NXT 시간외)" if s.get("change_basis") == "NXT" else ""
+    line3 = f"등락 {s.get('change_pct')}%{nxt}"
     if cnt is not None:
         line3 += f" · 5분 스파크 {cnt}회"
     if pt is not None:
