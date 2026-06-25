@@ -13,7 +13,7 @@ import type { Youtong } from "@/types/radar";
 const POLL_MS = 60_000;
 
 const PHASE_MSG: Record<MarketPhase, { dot: string; text: string }> = {
-  pre: { dot: "bg-muted-foreground/50", text: "개장 전 · 10:30부터 감시 시작" },
+  pre: { dot: "bg-muted-foreground/50", text: "개장 전 · 09:30부터 감시 시작" },
   intraday: { dot: "bg-warning animate-pulse", text: "곧 폭발 후보 감시 (실시간 갱신)" },
   locked: { dot: "bg-warning animate-pulse", text: "곧 폭발 후보 감시 (실시간 갱신)" },
   closed: { dot: "bg-muted-foreground/50", text: "장 마감 · 다음 거래일 갱신" },
@@ -24,7 +24,7 @@ function changeClass(v: number) {
   return v > 0 ? "text-up" : v < 0 ? "text-down" : "text-muted-foreground";
 }
 
-/** "1030" → "10:30" */
+/** "0930" → "09:30" */
 function hhmm(s: string) {
   return s.length === 4 ? `${s.slice(0, 2)}:${s.slice(2)}` : s;
 }

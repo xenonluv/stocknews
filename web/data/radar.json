@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-25 18:52:04 KST",
+ "generated_at": "2026-06-25 19:04:38 KST",
  "market_session": "closed",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -16,7 +16,7 @@
   "explosion_scan_n": 50,
   "youtong_change_pct": 7.0,
   "youtong_turnover_min": 50.0,
-  "youtong_start": "1030",
+  "youtong_start": "0930",
   "youtong_spark_min": 1,
   "telegram_seed": true,
   "telegram_channel": "FastStockNews"
@@ -94,6 +94,17 @@
    "value_eok": 1141,
    "price": 6280.0,
    "first_seen": "18:50"
+  },
+  {
+   "code": "419050",
+   "name": "삼기에너지솔루션즈",
+   "sector": "운송장비·부품",
+   "change_pct": 29.96,
+   "high_pct": 29.96,
+   "vol_turnover_pct": 83.2,
+   "value_eok": 418,
+   "price": 1887.0,
+   "first_seen": "19:03"
   }
  ],
  "suspects": [
@@ -961,8 +972,8 @@
    "price": 40700.0,
    "change_pct": -5.13,
    "high_pct": 17.48,
-   "value_eok": 2277,
-   "turnover_pct": 191.3,
+   "value_eok": 2301,
+   "turnover_pct": 193.4,
    "peak_turnover_pct": 115.6,
    "float_ratio": 0.3444,
    "turnover_basis": "float",

@@ -10,7 +10,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "곧 폭발할 후보 · 위로 올라오며 분출",
   description:
-    "10:30 이후 현재 등락률 +7% 이상 · 유통주식 회전율 50%+ · 5분봉 양봉 분출(스파크)이 뜬 종목(폭발 직전). 종일 유지·표시 참고용.",
+    "09:30 이후 현재 등락률 +7% 이상 · 유통주식 회전율 50%+ · 5분봉 양봉 분출(스파크)이 뜬 종목(폭발 직전). 종일 유지·표시 참고용.",
 };
 
 export default function YoutongPage() {

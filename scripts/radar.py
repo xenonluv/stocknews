@@ -51,12 +51,12 @@ EXPLOSION_HIGH_PCT = 22.0          # 폭발 당일 고가 등락률 하한(%)
 EXPLOSION_VOL_TURNOVER = 90.0      # 폭발 당일 거래량 / 유통주식수 회전율 하한(%) — 유동비율 없으면 미확정(스킵)
 EXPLOSION_WINDOW = 6               # 최근 6거래일 폭발만 재매집(반등) 후보로 추적
 EXPLOSION_SCAN_N = 50              # 시장별 네이버 up(등락률) 상위 N에서 폭발 감시(22%+ 누락 방지)
-# ── /youtong '곧 폭발할 후보'(위로 올라오며 분출): 10:30 이후, 현재 등락률 ≥7% AND 유통주식 회전율 ≥50%
-#    (상한 없음) AND 10:30 이후 5분봉 양봉(몸통%≥2%) 스파크 ≥1회. 이미 폭발(고가≥22% AND 회전율≥90%)은 제외
+# ── /youtong '곧 폭발할 후보'(위로 올라오며 분출): 09:30 이후, 현재 등락률 ≥7% AND 유통주식 회전율 ≥50%
+#    (상한 없음) AND 09:30 이후 5분봉 양봉(몸통%≥2%) 스파크 ≥1회. 이미 폭발(고가≥22% AND 회전율≥90%)은 제외
 #    (forecast로 분리). 한 번 포착되면 종일 지속(registry, 현재가 실시간 갱신). 표시·알림 전용(통계 무관).
 YOUTONG_CHANGE_PCT = 7.0           # /youtong 게이트: 현재 등락률 하한(%)
 YOUTONG_TURNOVER_MIN = 50.0        # /youtong 유통주식 회전율 하한(%) — 상한 없음
-YOUTONG_START_HHMM = "1030"        # /youtong 감지 시작 시각(그 전 무시) + 스파크 시각 하한
+YOUTONG_START_HHMM = "0930"        # /youtong 감지 시작 시각(그 전 무시) + 스파크 시각 하한
 YOUTONG_SPARK_MIN = 1              # /youtong: 시작시각 이후 5분 양봉 스파크 최소 수(몸통%·span은 REIGNITION_* 재사용)
 # ── 반등(재매집) 정의: 최근 6거래일 폭발 종목이 (하락 여부 무관) 당일 5분봉 '양봉 몸통%≥2%'가 3회 이상
 #    스파크. 식음(고점 대비 하락) 게이트는 폐지 — 하락 등락률 퍼센트는 보지 않는다.
@@ -699,14 +699,14 @@ def _save_youtong_registry(reg, path=YOUTONG_REGISTRY_PATH):
 
 def prepare_youtong(candidates, p, now=None, registry_path=None):
     """/youtong '곧 폭발할 후보'(위로 올라오며 분출) — 싼 게이트(등락률≥7·회전율≥50·미폭발) 통과 후보 중
-    '시작시각(10:30) 이후 5분봉 양봉(몸통%≥2%) 스파크 ≥1회'를 만족하면 당일 registry에 적재 → **종일 지속**.
+    '시작시각(09:30) 이후 5분봉 양봉(몸통%≥2%) 스파크 ≥1회'를 만족하면 당일 registry에 적재 → **종일 지속**.
     한 번 들면 장 마감까지 유지(현재가/등락률은 매 회차 갱신, first_seen='처음 포착 HH:MM' 보존). 분봉은
     신규 후보만 1회 조회(이미 적재면 스킵 — 비용 가드). 시작시각 전엔 빈 목록(감지 시작 전).
     now/registry_path는 테스트 주입용(기본 실시각·기본 경로)."""
     now = now or datetime.now(KST)
-    if now.strftime("%H%M") < p.youtong_start:   # 감지 시작 시각(예 1030) 전 — 아무것도 포착 안 함
+    if now.strftime("%H%M") < p.youtong_start:   # 감지 시작 시각(예 0930) 전 — 아무것도 포착 안 함
         return []
-    start_colon = p.youtong_start[:2] + ":" + p.youtong_start[2:]  # "1030" → "10:30"(스파크 time 비교용)
+    start_colon = p.youtong_start[:2] + ":" + p.youtong_start[2:]  # "0930" → "09:30"(스파크 time 비교용)
     path = registry_path or YOUTONG_REGISTRY_PATH
     reg = _load_youtong_registry(path, now.strftime("%Y%m%d"))
     codes = reg["codes"]
@@ -1175,7 +1175,7 @@ def main():
     ap.add_argument("--youtong-turnover-min", type=float, default=YOUTONG_TURNOVER_MIN,
                     help="/youtong 유통주식 회전율 하한(%%, 기본 50, 상한 없음)")
     ap.add_argument("--youtong-start", default=YOUTONG_START_HHMM,
-                    help="/youtong 감지 시작 시각 HHMM(그 전 무시·스파크 시각 하한, 기본 1030)")
+                    help="/youtong 감지 시작 시각 HHMM(그 전 무시·스파크 시각 하한, 기본 0930)")
     ap.add_argument("--youtong-spark-min", type=int, default=YOUTONG_SPARK_MIN,
                     help="/youtong: 시작시각 이후 5분 양봉 스파크 최소 수(기본 1)")
     ap.add_argument("--reaccum-seed", default=REACCUM_SEED_PATH,
