@@ -67,8 +67,15 @@
    },
    "matched_events": [],
    "first_seen": "2026-06-24 11:22:32 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260625",
+    "next_close": 18590.0,
+    "next_high": 21000.0,
+    "hit": false,
+    "high3": false,
+    "return_pct": -16.82
+   },
    "final": true,
    "ai_pred": {
     "prob_up": 49,

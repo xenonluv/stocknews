@@ -69,7 +69,16 @@
    "first_seen": "2026-06-25 09:33:50 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 34,
+    "model_prob": 25,
+    "direction": "하락",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-25 17:20 KST",
+    "verdict_score": 54,
+    "verdict_level": "중립"
+   }
   },
   "034940": {
    "name": "조아제약",
@@ -141,7 +150,16 @@
    "first_seen": "2026-06-25 09:33:50 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 36,
+    "model_prob": 35,
+    "direction": "하락",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-25 17:21 KST",
+    "verdict_score": 49,
+    "verdict_level": "중립"
+   }
   },
   "079650": {
    "name": "서산",
@@ -281,7 +299,16 @@
    "first_seen": "2026-06-25 09:42:49 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 39,
+    "model_prob": 35,
+    "direction": "하락",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-25 17:21 KST",
+    "verdict_score": 66,
+    "verdict_level": "매수 우위"
+   }
   },
   "900270": {
    "name": "헝셩그룹",
@@ -353,7 +380,16 @@
    "first_seen": "2026-06-25 09:42:49 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 38,
+    "model_prob": 35,
+    "direction": "하락",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-25 17:22 KST",
+    "verdict_score": 51,
+    "verdict_level": "중립"
+   }
   },
   "043650": {
    "name": "국순당",
@@ -493,7 +529,16 @@
    "first_seen": "2026-06-25 10:22:35 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 32,
+    "model_prob": 25,
+    "direction": "하락",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-25 17:23 KST",
+    "verdict_score": 59,
+    "verdict_level": "중립"
+   }
   },
   "413630": {
    "name": "씨피시스템",
@@ -563,7 +608,16 @@
    "first_seen": "2026-06-25 10:22:35 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 36,
+    "model_prob": 35,
+    "direction": "하락",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-25 17:23 KST",
+    "verdict_score": 65,
+    "verdict_level": "매수 우위"
+   }
   },
   "002070": {
    "name": "비비안",
@@ -635,7 +689,16 @@
    "first_seen": "2026-06-25 10:22:35 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 36,
+    "model_prob": 25,
+    "direction": "하락",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-25 17:24 KST",
+    "verdict_score": 70,
+    "verdict_level": "매수 우위"
+   }
   },
   "014950": {
    "name": "삼익제약",
@@ -705,7 +768,16 @@
    "first_seen": "2026-06-25 10:32:39 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 38,
+    "model_prob": 35,
+    "direction": "하락",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-25 17:25 KST",
+    "verdict_score": 68,
+    "verdict_level": "매수 우위"
+   }
   },
   "006920": {
    "name": "모헨즈",
@@ -775,7 +847,16 @@
    "first_seen": "2026-06-25 10:32:39 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 32,
+    "model_prob": 25,
+    "direction": "하락",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-25 17:25 KST",
+    "verdict_score": 71,
+    "verdict_level": "매수 우위"
+   }
   },
   "320000": {
    "name": "한울반도체",
@@ -847,7 +928,16 @@
    "first_seen": "2026-06-25 11:22:22 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 36,
+    "model_prob": 35,
+    "direction": "하락",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-25 17:26 KST",
+    "verdict_score": 75,
+    "verdict_level": "관망·과열"
+   }
   },
   "475430": {
    "name": "키스트론",
@@ -919,7 +1009,16 @@
    "first_seen": "2026-06-25 12:02:32 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 47,
+    "model_prob": 42,
+    "direction": "관망",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-25 17:26 KST",
+    "verdict_score": 67,
+    "verdict_level": "매수 우위"
+   }
   },
   "091590": {
    "name": "남화토건",
@@ -991,7 +1090,16 @@
    "first_seen": "2026-06-25 12:22:33 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 41,
+    "model_prob": 35,
+    "direction": "하락",
+    "model": "kimi-k2.6",
+    "as_of": "2026-06-25 17:27 KST",
+    "verdict_score": 91,
+    "verdict_level": "강한 매수신호"
+   }
   }
  },
  "as_of": "2026-06-25 15:53:00 KST"
