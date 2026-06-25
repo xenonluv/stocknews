@@ -123,7 +123,8 @@ def reignition_bars(bars, body_pct_min=REIGNITION_BODY_PCT,
     자격: 당일 '상승' 5분봉(종가>시가) 중 몸통%((종가−시가)/시가×100) ≥ body_pct_min 인 봉.
     → "큰 상승 몸통" 스파크 = 폭발 종목에 돈이 다시 들어오는 재매집 신호. 거래대금 게이트는 없다(횟수만으로 판정).
     하락·도지 봉은 제외(폭락 중 오탐 방지). 각 봉 {body_pct, time("HH:MM"=버킷 시작), value_eok,
-    close, open}. 게이트(3회+)·표시(대표봉)와 텔레그램 봉단위 알림이 공용으로 쓴다(value_eok는 표시용).
+    close, open}. **전체 양봉 스파크를 반환** — scan_reaccum_candidate가 호출부에서 14:30↑로 후필터하고 ≥2회
+    게이트를 적용한다(표시·대표봉·텔레그램 봉단위 알림도 그 필터된 집합 공용). value_eok는 표시용.
     """
     out = []
     for bar in aggregate_minute_bars(bars, span_min):
@@ -1226,10 +1227,10 @@ def main():
     p.reignition_span_min = max(1, int(p.reignition_span_min))
     p.reignition_min_count = max(1, int(p.reignition_min_count))
     _rs = str(p.reignition_start).strip()  # "HHMM" 4자리 숫자만 — 오입력은 기본값(시각 비교 깨짐 방지)
-    p.reignition_start = _rs.zfill(4)[:4] if _rs.isdigit() else REIGNITION_START_HHMM
+    p.reignition_start = _rs if (len(_rs) == 4 and _rs.isdigit()) else REIGNITION_START_HHMM  # 정확히 4자리 HHMM만(짧은/긴 숫자 오변환 방지)
     p.youtong_spark_min = max(1, int(p.youtong_spark_min))
     _ys = str(p.youtong_start).strip()  # "HHMM" 4자리 숫자만 — 비숫자/콜론 등 오입력은 기본값으로(시각 비교 깨짐 방지)
-    p.youtong_start = _ys.zfill(4)[:4] if _ys.isdigit() else YOUTONG_START_HHMM
+    p.youtong_start = _ys if (len(_ys) == 4 and _ys.isdigit()) else YOUTONG_START_HHMM  # 정확히 4자리 HHMM만
     p.reaccum_max = max(0, int(p.reaccum_max))
     active_explosions, live_scan_ok, today_explosions, today_youtong = prepare_reaccum_registry(p)
 

@@ -65,7 +65,7 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
       <CardHeader className="gap-3 pb-3">
         <div className="flex items-center justify-between gap-2">
           <div className="flex flex-wrap items-center gap-1.5">
-            <Badge variant="warning" title="최근 6거래일 고가+22%·거래량 90%+ 폭발 종목이 오늘 5분 양봉 몸통2%+ 스파크 3회+ 재분출 — 직접 확인하고 진입(매수 추천 아님)">
+            <Badge variant="warning" title="최근 6거래일 고가+22%·거래량 90%+ 폭발 종목이 14:30~장종료 5분 양봉 몸통2%+ 스파크 2회+ AND 현재 등락률 −5~+7% 재분출 — 직접 확인하고 진입(매수 추천 아님)">
               재매집
             </Badge>
             {s.reaccum?.source === "telegram" && (

@@ -492,8 +492,9 @@ def _hit_band_cells(known, keyfn, bands):
 
 
 def reignition_count_band_stats(samples):
-    """당일 5분봉 양봉 스파크 횟수 구간별 익일 상승확률 — '스파크가 많을수록 익일 더 오르나'(주식분석.md ③
-    전진 검증). 게이트가 3회+라 분포는 3 이상. ChangeBandStats 구조 재사용(웹 패널 공용)."""
+    """14:30~장종료 5분봉 양봉 스파크 횟수 구간별 익일 상승확률 — '마감 직전 재분출이 많을수록 익일 더 오르나'
+    전진 검증. 게이트가 14:30↑ ≥2회라 분포는 2 이상(구표본=당일 전체 count는 정의가 달라 만료까지 혼재).
+    ChangeBandStats 구조 재사용(웹 패널 공용)."""
     known = [s for s in samples if (s.get("reignition") or {}).get("count") is not None]
     return {"min_n": FEATURE_MIN_N, "unknown_n": len(samples) - len(known),
             "cells": _hit_band_cells(known, lambda s: s["reignition"]["count"], REIGNITION_COUNT_BANDS)}

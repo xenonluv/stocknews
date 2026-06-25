@@ -134,13 +134,10 @@ export function LiveRadar({ initial }: { initial: RadarData }) {
           </h2>
           <p className="text-xs text-muted-foreground">
             폭발(고가 +{data.params.explosion_high_pct ?? 22}% · 거래량 유통주식수의{" "}
-            {data.params.explosion_vol_turnover ?? 90}%+, 최근 {data.params.explosion_window ?? 6}거래일) → 오늘 재분출
-            {data.params.reignition_body_pct != null &&
-              ` (5분 양봉 몸통 ${data.params.reignition_body_pct}%+${
-                data.params.reignition_min_count != null
-                  ? ` · ${data.params.reignition_min_count}회+`
-                  : ""
-              } 스파크)`}
+            {data.params.explosion_vol_turnover ?? 90}%+, 최근 {data.params.explosion_window ?? 6}거래일) →{" "}
+            {(data.params.reignition_start ?? "1430").replace(/^(\d\d)(\d\d)$/, "$1:$2")}↑ 재분출 (5분 양봉 몸통{" "}
+            {data.params.reignition_body_pct ?? 2}%+ · {data.params.reignition_min_count ?? 2}회+ 스파크 · 현재 등락률{" "}
+            {data.params.reaccum_change_min ?? -5}~+{data.params.reaccum_change_max ?? 7}%)
           </p>
         </div>
 

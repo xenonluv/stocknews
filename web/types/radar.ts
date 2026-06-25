@@ -206,8 +206,14 @@ export interface RadarData {
     reignition_body_pct?: number;
     /** 반등: 분봉 합성 단위(분) */
     reignition_span_min?: number;
-    /** 반등: 당일 자격 양봉 스파크 최소 횟수 */
+    /** 반등: 시작시각 이후 자격 양봉 스파크 최소 횟수 */
     reignition_min_count?: number;
+    /** 반등: 스파크 집계 시작 시각 HHMM(예 "1430") */
+    reignition_start?: string;
+    /** 반등: 현재 등락률 하한(%) */
+    reaccum_change_min?: number;
+    /** 반등: 현재 등락률 상한(%) */
+    reaccum_change_max?: number;
     /** 폭발: 거래량/유통주식수 회전율 하한(%) */
     explosion_vol_turnover?: number;
     /** 폭발: 시장별 네이버 up 스캔 상위 N */
