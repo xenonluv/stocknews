@@ -891,8 +891,8 @@ def scan_reaccum_candidate(rec, p, events):
     ma20 = sum(closes[-20:]) / 20
     ma10 = sum(closes[-10:]) / 10
     # ── 반등 게이트: **14:30~장종료** 5분봉 양봉 몸통%≥2% 스파크가 REIGNITION_MIN_COUNT(2)회 이상(마감 직전
-    #    재분출). 시작시각(reignition_start) 이전 양봉은 미집계. **각 스파크는 그 봉 시점 등락률(봉종가/전일종가)이
-    #    −5~+7% 밴드 안일 때만 카운트** — −12%에서 튕긴 깊은 식음 반등(밴드 밖)은 제외(현재 등락률 게이트와 동일 밴드).
+    #    재분출). 시작시각(reignition_start) 이전 양봉은 미집계. 스파크는 **그 봉의 절대 등락률과 무관하게** 센다 —
+    #    −9%에서 양봉으로 회복해 −5% 마감한 깊은 식음 반등도 잡아야 하므로(현재 등락률 게이트[−5~+7]가 최종 위치만 판정).
     # 분봉도 거래대금·수급과 동일하게 MONEY_MARKET(기본 UN). 정규장 시간창 가드(kis_client)로 NXT 장 밖 봉 배제.
     try:
         bars = _minute_bars_with_fallback(code, name)  # UN 우선, 결측 시 J 폴백(공용 헬퍼)
@@ -900,12 +900,8 @@ def scan_reaccum_candidate(rec, p, events):
         log(f"  [skip] {name}: reaccum 분봉 실패 {e}")
         return "ERR"
     reign_start_colon = p.reignition_start[:2] + ":" + p.reignition_start[2:]  # "1430" → "14:30"
-    prev_close = now["prev_close"]
-    def _bar_in_band(b):  # 그 5분봉 종가 시점 등락률(전일 종가 대비)이 재매집 밴드 안인가
-        bar_chg = (b["close"] / prev_close - 1) * 100 if prev_close else 0.0
-        return p.reaccum_change_min <= bar_chg <= p.reaccum_change_max
     rbars = [b for b in reignition_bars(bars, p.reignition_body_pct, p.reignition_span_min)
-             if b["time"] >= reign_start_colon and _bar_in_band(b)]  # 14:30↑ 양봉 AND 봉시점 밴드 안
+             if b["time"] >= reign_start_colon]  # 14:30↑ 양봉 스파크(봉 절대 등락률 무관 — 회복분도 카운트)
     if len(rbars) < p.reignition_min_count:
         return None
     reignition = max(rbars, key=lambda b: b["body_pct"])  # 대표(최대 몸통) 봉 — 표시용
