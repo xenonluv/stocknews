@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-25 10:42:18 KST",
+ "generated_at": "2026-06-25 10:52:24 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -42,21 +42,21 @@
    "name": "서산",
    "sector": "비금속",
    "high_pct": 26.85,
-   "vol_turnover_pct": 120.8,
-   "value_eok": 716,
-   "price": 8550.0,
-   "change_pct": 5.3,
-   "backfill": true
+   "vol_turnover_pct": 129.2,
+   "value_eok": 763,
+   "price": 8710.0,
+   "change_pct": 7.27,
+   "backfill": false
   },
   {
    "code": "111710",
    "name": "남화산업",
    "sector": "오락·문화",
    "high_pct": 29.63,
-   "vol_turnover_pct": 92.0,
-   "value_eok": 157,
-   "price": 5680.0,
-   "change_pct": 18.95,
+   "vol_turnover_pct": 95.4,
+   "value_eok": 162,
+   "price": 5530.0,
+   "change_pct": 15.81,
    "backfill": false
   }
  ],
@@ -69,14 +69,14 @@
    "pattern": "reaccum",
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 81,
+   "suspicion_score": 82,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 62,
     "re_count": 10,
     "re_body": 6,
     "peak_turnover": 2,
-    "re_turnover": 1
+    "re_turnover": 2
    },
    "score_raw": 0,
    "score_breakdown_raw": {
@@ -94,16 +94,16 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 1113.0,
-   "change_pct": 23.67,
-   "high_pct": 23.89,
-   "value_eok": 111,
-   "turnover_pct": 44.5,
+   "price": 1086.0,
+   "change_pct": 20.67,
+   "high_pct": 26.56,
+   "value_eok": 131,
+   "turnover_pct": 51.7,
    "peak_turnover_pct": 111.9,
    "float_ratio": 0.8,
    "turnover_basis": "float",
-   "ma10": 721.0,
-   "ma10_margin_pct": 54.37,
+   "ma10": 718.6,
+   "ma10_margin_pct": 51.13,
    "spark": {
     "clusters": []
    },
@@ -159,8 +159,8 @@
     },
     {
      "time": "10:40",
-     "body_pct": 4.31,
-     "value_eok": 8
+     "body_pct": 5.44,
+     "value_eok": 17
     }
    ],
    "news": [],
@@ -184,8 +184,8 @@
     "peak_turnover_pct": 111.9,
     "peak_ibs": 0.5,
     "peak_uppertail": 18.9,
-    "ma20": 697.8,
-    "ma20_margin_pct": 59.51,
+    "ma20": 696.5,
+    "ma20_margin_pct": 55.91,
     "cause_summary": "",
     "was_theme_leader": false,
     "source": "live"
@@ -225,16 +225,16 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 1858.0,
-   "change_pct": -14.18,
+   "price": 1869.0,
+   "change_pct": -13.67,
    "high_pct": 0.69,
-   "value_eok": 89,
-   "turnover_pct": 24.8,
+   "value_eok": 91,
+   "turnover_pct": 25.2,
    "peak_turnover_pct": 185.9,
    "float_ratio": 0.306,
    "turnover_basis": "float",
-   "ma10": 1752.7,
-   "ma10_margin_pct": 6.01,
+   "ma10": 1753.8,
+   "ma10_margin_pct": 6.57,
    "spark": {
     "clusters": []
    },
@@ -275,9 +275,130 @@
     "peak_turnover_pct": 185.9,
     "peak_ibs": 0.47,
     "peak_uppertail": 16.9,
-    "ma20": 1377.3,
-    "ma20_margin_pct": 34.9,
+    "ma20": 1377.8,
+    "ma20_margin_pct": 35.65,
     "cause_summary": "",
+    "was_theme_leader": false,
+    "source": "live"
+   },
+   "leader_cohort_prob": null,
+   "theme_leader": false
+  },
+  {
+   "code": "900270",
+   "name": "헝셩그룹",
+   "sector": "외국증권",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 79,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_count": 10,
+    "re_body": 6,
+    "peak_turnover": 1,
+    "re_turnover": 0
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_count": 0,
+    "re_body": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "price": 862.0,
+   "change_pct": 14.93,
+   "high_pct": 19.47,
+   "value_eok": 35,
+   "turnover_pct": 28.6,
+   "peak_turnover_pct": 101.0,
+   "float_ratio": 0.579,
+   "turnover_basis": "float",
+   "ma10": 673.2,
+   "ma10_margin_pct": 28.05,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": null,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 8.18,
+    "time": "09:35",
+    "value_eok": 1,
+    "count": 7
+   },
+   "reignition_bars": [
+    {
+     "time": "09:05",
+     "body_pct": 3.27,
+     "value_eok": 1
+    },
+    {
+     "time": "09:10",
+     "body_pct": 7.98,
+     "value_eok": 1
+    },
+    {
+     "time": "09:35",
+     "body_pct": 8.18,
+     "value_eok": 1
+    },
+    {
+     "time": "09:55",
+     "body_pct": 7.05,
+     "value_eok": 6
+    },
+    {
+     "time": "10:10",
+     "body_pct": 4.45,
+     "value_eok": 2
+    },
+    {
+     "time": "10:40",
+     "body_pct": 4.61,
+     "value_eok": 1
+    },
+    {
+     "time": "10:45",
+     "body_pct": 3.0,
+     "value_eok": 2
+    }
+   ],
+   "news": [],
+   "matched_events": [
+    {
+     "id": "2026-07-03_미국 고용보고서 (7월",
+     "title": "미국 고용보고서 (7월 발표)",
+     "dday": 8,
+     "categories": [
+      "금리"
+     ],
+     "score": 0.7
+    }
+   ],
+   "theme": "금리",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260624",
+    "peak_value_eok": 124,
+    "peak_high_pct": 29.97,
+    "peak_turnover_pct": 101.0,
+    "peak_ibs": 0.32,
+    "peak_uppertail": 25.5,
+    "ma20": 694.8,
+    "ma20_margin_pct": 24.06,
+    "cause_summary": "헝셩그룹, 168억원 규모 제3자배정 유상증자 결정",
     "was_theme_leader": false,
     "source": "live"
    },
@@ -316,16 +437,16 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 47500.0,
-   "change_pct": 10.72,
+   "price": 47050.0,
+   "change_pct": 9.67,
    "high_pct": 17.48,
-   "value_eok": 1473,
-   "turnover_pct": 120.3,
+   "value_eok": 1486,
+   "turnover_pct": 121.3,
    "peak_turnover_pct": 115.6,
    "float_ratio": 0.3444,
    "turnover_basis": "float",
-   "ma10": 37930.0,
-   "ma10_margin_pct": 25.23,
+   "ma10": 37885.0,
+   "ma10_margin_pct": 24.19,
    "spark": {
     "clusters": []
    },
@@ -376,8 +497,8 @@
     "peak_turnover_pct": 115.6,
     "peak_ibs": 0.98,
     "peak_uppertail": 0.5,
-    "ma20": 36290.0,
-    "ma20_margin_pct": 30.89,
+    "ma20": 36267.5,
+    "ma20_margin_pct": 29.73,
     "cause_summary": "주식으로 번 '돈'이 움직인다…줄줄이 '신고가' 뚫었다",
     "was_theme_leader": false,
     "source": "live"
@@ -417,16 +538,16 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 8630.0,
-   "change_pct": 0.35,
+   "price": 8560.0,
+   "change_pct": -0.47,
    "high_pct": 5.93,
-   "value_eok": 109,
-   "turnover_pct": 30.9,
+   "value_eok": 112,
+   "turnover_pct": 31.7,
    "peak_turnover_pct": 243.3,
    "float_ratio": 0.40700000000000003,
    "turnover_basis": "float",
-   "ma10": 7593.0,
-   "ma10_margin_pct": 13.66,
+   "ma10": 7586.0,
+   "ma10_margin_pct": 12.84,
    "spark": {
     "clusters": []
    },
@@ -467,8 +588,8 @@
     "peak_turnover_pct": 243.3,
     "peak_ibs": 0.68,
     "peak_uppertail": 8.5,
-    "ma20": 6815.0,
-    "ma20_margin_pct": 26.63,
+    "ma20": 6811.5,
+    "ma20_margin_pct": 25.67,
     "cause_summary": "시지메드텍, 최대주주 PE 인수에 ‘上’…탈모주 삼익제약·JW신약도↑...",
     "was_theme_leader": false,
     "source": "live"
@@ -508,16 +629,16 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 2680.0,
-   "change_pct": 1.9,
+   "price": 2545.0,
+   "change_pct": -3.23,
    "high_pct": 10.27,
-   "value_eok": 188,
-   "turnover_pct": 17.8,
+   "value_eok": 202,
+   "turnover_pct": 19.2,
    "peak_turnover_pct": 177.1,
    "float_ratio": 0.6898000000000001,
    "turnover_basis": "float",
-   "ma10": 2281.9,
-   "ma10_margin_pct": 17.45,
+   "ma10": 2268.4,
+   "ma10_margin_pct": 12.19,
    "spark": {
     "clusters": []
    },
@@ -558,211 +679,9 @@
     "peak_turnover_pct": 177.1,
     "peak_ibs": 0.47,
     "peak_uppertail": 11.6,
-    "ma20": 1822.5,
-    "ma20_margin_pct": 47.05,
+    "ma20": 1815.8,
+    "ma20_margin_pct": 40.16,
     "cause_summary": "시지메드텍, 최대주주 PE 인수에 ‘上’…탈모주 삼익제약·JW신약도↑...",
-    "was_theme_leader": false,
-    "source": "live"
-   },
-   "leader_cohort_prob": null,
-   "theme_leader": false
-  },
-  {
-   "code": "900270",
-   "name": "헝셩그룹",
-   "sector": "외국증권",
-   "pattern": "reaccum",
-   "shake": null,
-   "deep_shake": null,
-   "suspicion_score": 75,
-   "calibrated_prob": null,
-   "score_breakdown": {
-    "base": 62,
-    "re_count": 6,
-    "re_body": 6,
-    "peak_turnover": 1,
-    "re_turnover": 0
-   },
-   "score_raw": 0,
-   "score_breakdown_raw": {
-    "base": 0,
-    "re_count": 0,
-    "re_body": 0,
-    "peak_turnover": 0,
-    "re_turnover": 0
-   },
-   "forecast": {
-    "horizon": "3일 내 +7%",
-    "prob_pct": 52,
-    "base_pct": 46,
-    "strong": true,
-    "next_day_7_pct": 25,
-    "note": "과거 실측 확률·보장 아님"
-   },
-   "price": 837.0,
-   "change_pct": 11.6,
-   "high_pct": 18.4,
-   "value_eok": 29,
-   "turnover_pct": 24.4,
-   "peak_turnover_pct": 101.0,
-   "float_ratio": 0.579,
-   "turnover_basis": "float",
-   "ma10": 670.7,
-   "ma10_margin_pct": 24.79,
-   "spark": {
-    "clusters": []
-   },
-   "spark_max_x": null,
-   "spark_max_pct": null,
-   "mega_flow": false,
-   "reignition": {
-    "body_pct": 8.18,
-    "time": "09:35",
-    "value_eok": 1,
-    "count": 5
-   },
-   "reignition_bars": [
-    {
-     "time": "09:05",
-     "body_pct": 3.27,
-     "value_eok": 1
-    },
-    {
-     "time": "09:10",
-     "body_pct": 7.98,
-     "value_eok": 1
-    },
-    {
-     "time": "09:35",
-     "body_pct": 8.18,
-     "value_eok": 1
-    },
-    {
-     "time": "09:55",
-     "body_pct": 7.05,
-     "value_eok": 6
-    },
-    {
-     "time": "10:10",
-     "body_pct": 4.45,
-     "value_eok": 2
-    }
-   ],
-   "news": [],
-   "matched_events": [
-    {
-     "id": "2026-07-03_미국 고용보고서 (7월",
-     "title": "미국 고용보고서 (7월 발표)",
-     "dday": 8,
-     "categories": [
-      "금리"
-     ],
-     "score": 0.7
-    }
-   ],
-   "theme": "금리",
-   "visible_experimental": true,
-   "reaccum": {
-    "peak_date": "20260624",
-    "peak_value_eok": 124,
-    "peak_high_pct": 29.97,
-    "peak_turnover_pct": 101.0,
-    "peak_ibs": 0.32,
-    "peak_uppertail": 25.5,
-    "ma20": 693.5,
-    "ma20_margin_pct": 20.68,
-    "cause_summary": "헝셩그룹, 168억원 규모 제3자배정 유상증자 결정",
-    "was_theme_leader": false,
-    "source": "live"
-   },
-   "leader_cohort_prob": null,
-   "theme_leader": false
-  },
-  {
-   "code": "006920",
-   "name": "모헨즈",
-   "sector": "비금속",
-   "pattern": "reaccum",
-   "shake": null,
-   "deep_shake": null,
-   "suspicion_score": 74,
-   "calibrated_prob": null,
-   "score_breakdown": {
-    "base": 62,
-    "re_count": 2,
-    "re_body": 5,
-    "peak_turnover": 4,
-    "re_turnover": 1
-   },
-   "score_raw": 0,
-   "score_breakdown_raw": {
-    "base": 0,
-    "re_count": 0,
-    "re_body": 0,
-    "peak_turnover": 0,
-    "re_turnover": 0
-   },
-   "forecast": {
-    "horizon": "3일 내 +7%",
-    "prob_pct": 52,
-    "base_pct": 46,
-    "strong": true,
-    "next_day_7_pct": 25,
-    "note": "과거 실측 확률·보장 아님"
-   },
-   "price": 4665.0,
-   "change_pct": -16.25,
-   "high_pct": 0.36,
-   "value_eok": 148,
-   "turnover_pct": 45.5,
-   "peak_turnover_pct": 137.2,
-   "float_ratio": 0.5756,
-   "turnover_basis": "float",
-   "ma10": 4054.0,
-   "ma10_margin_pct": 15.07,
-   "spark": {
-    "clusters": []
-   },
-   "spark_max_x": null,
-   "spark_max_pct": null,
-   "mega_flow": false,
-   "reignition": {
-    "body_pct": 5.38,
-    "time": "09:00",
-    "value_eok": 53,
-    "count": 3
-   },
-   "reignition_bars": [
-    {
-     "time": "09:00",
-     "body_pct": 5.38,
-     "value_eok": 53
-    },
-    {
-     "time": "09:45",
-     "body_pct": 2.73,
-     "value_eok": 3
-    },
-    {
-     "time": "10:25",
-     "body_pct": 2.69,
-     "value_eok": 2
-    }
-   ],
-   "news": [],
-   "matched_events": [],
-   "theme": "",
-   "visible_experimental": true,
-   "reaccum": {
-    "peak_date": "20260624",
-    "peak_value_eok": 459,
-    "peak_high_pct": 29.84,
-    "peak_turnover_pct": 137.2,
-    "peak_ibs": 1.0,
-    "peak_uppertail": 0.0,
-    "ma20": 3825.0,
-    "ma20_margin_pct": 21.96,
-    "cause_summary": "모헨즈, 작년 영업손실 29억 '적자전환'",
     "was_theme_leader": false,
     "source": "live"
    },
@@ -776,14 +695,14 @@
    "pattern": "reaccum",
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 73,
+   "suspicion_score": 74,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 62,
     "re_count": 4,
     "re_body": 3,
     "peak_turnover": 2,
-    "re_turnover": 2
+    "re_turnover": 3
    },
    "score_raw": 0,
    "score_breakdown_raw": {
@@ -801,16 +720,16 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 3570.0,
-   "change_pct": 1.42,
+   "price": 3400.0,
+   "change_pct": -3.41,
    "high_pct": 7.95,
-   "value_eok": 203,
-   "turnover_pct": 54.0,
+   "value_eok": 222,
+   "turnover_pct": 59.4,
    "peak_turnover_pct": 107.6,
    "float_ratio": 0.2802,
    "turnover_basis": "float",
-   "ma10": 2844.0,
-   "ma10_margin_pct": 25.53,
+   "ma10": 2826.5,
+   "ma10_margin_pct": 20.29,
    "spark": {
     "clusters": []
    },
@@ -856,9 +775,196 @@
     "peak_turnover_pct": 107.6,
     "peak_ibs": 1.0,
     "peak_uppertail": 0.0,
-    "ma20": 2798.2,
-    "ma20_margin_pct": 27.58,
+    "ma20": 2789.5,
+    "ma20_margin_pct": 21.89,
     "cause_summary": "씨피시스템, 1분기 매출 52억…순이익 전년比 83.2%↑",
+    "was_theme_leader": false,
+    "source": "live"
+   },
+   "leader_cohort_prob": null,
+   "theme_leader": false
+  },
+  {
+   "code": "006920",
+   "name": "모헨즈",
+   "sector": "비금속",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 74,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_count": 2,
+    "re_body": 5,
+    "peak_turnover": 4,
+    "re_turnover": 1
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_count": 0,
+    "re_body": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "price": 4670.0,
+   "change_pct": -16.16,
+   "high_pct": 0.36,
+   "value_eok": 149,
+   "turnover_pct": 45.8,
+   "peak_turnover_pct": 137.2,
+   "float_ratio": 0.5756,
+   "turnover_basis": "float",
+   "ma10": 4054.5,
+   "ma10_margin_pct": 15.18,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": null,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 5.38,
+    "time": "09:00",
+    "value_eok": 53,
+    "count": 3
+   },
+   "reignition_bars": [
+    {
+     "time": "09:00",
+     "body_pct": 5.38,
+     "value_eok": 53
+    },
+    {
+     "time": "09:45",
+     "body_pct": 2.73,
+     "value_eok": 3
+    },
+    {
+     "time": "10:25",
+     "body_pct": 2.69,
+     "value_eok": 2
+    }
+   ],
+   "news": [],
+   "matched_events": [],
+   "theme": "",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260624",
+    "peak_value_eok": 459,
+    "peak_high_pct": 29.84,
+    "peak_turnover_pct": 137.2,
+    "peak_ibs": 1.0,
+    "peak_uppertail": 0.0,
+    "ma20": 3825.2,
+    "ma20_margin_pct": 22.08,
+    "cause_summary": "모헨즈, 작년 영업손실 29억 '적자전환'",
+    "was_theme_leader": false,
+    "source": "live"
+   },
+   "leader_cohort_prob": null,
+   "theme_leader": false
+  },
+  {
+   "code": "043650",
+   "name": "국순당",
+   "sector": "음식료·담배",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 70,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_count": 4,
+    "re_body": 2,
+    "peak_turnover": 2,
+    "re_turnover": 0
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_count": 0,
+    "re_body": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "price": 4415.0,
+   "change_pct": 0.34,
+   "high_pct": 12.05,
+   "value_eok": 58,
+   "turnover_pct": 15.7,
+   "peak_turnover_pct": 111.6,
+   "float_ratio": 0.45299999999999996,
+   "turnover_basis": "float",
+   "ma10": 3663.0,
+   "ma10_margin_pct": 20.53,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": null,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 3.56,
+    "time": "09:10",
+    "value_eok": 2,
+    "count": 4
+   },
+   "reignition_bars": [
+    {
+     "time": "09:10",
+     "body_pct": 3.56,
+     "value_eok": 2
+    },
+    {
+     "time": "09:30",
+     "body_pct": 2.22,
+     "value_eok": 3
+    },
+    {
+     "time": "09:35",
+     "body_pct": 3.04,
+     "value_eok": 15
+    },
+    {
+     "time": "10:40",
+     "body_pct": 2.95,
+     "value_eok": 4
+    }
+   ],
+   "news": [],
+   "matched_events": [],
+   "theme": "",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260624",
+    "peak_value_eok": 425,
+    "peak_high_pct": 24.18,
+    "peak_turnover_pct": 111.6,
+    "peak_ibs": 0.47,
+    "peak_uppertail": 16.1,
+    "ma20": 3603.0,
+    "ma20_margin_pct": 22.54,
+    "cause_summary": "호텔 뷔페서 즐기는 전통주…국순당, 페어몬트 앰배서더 서울과 협업",
     "was_theme_leader": false,
     "source": "live"
    },
@@ -897,16 +1003,16 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 9860.0,
-   "change_pct": -11.41,
+   "price": 9880.0,
+   "change_pct": -11.23,
    "high_pct": 3.32,
    "value_eok": 16,
-   "turnover_pct": 12.0,
+   "turnover_pct": 12.1,
    "peak_turnover_pct": 112.2,
    "float_ratio": 0.5524,
    "turnover_basis": "float",
-   "ma10": 8205.0,
-   "ma10_margin_pct": 20.17,
+   "ma10": 8207.0,
+   "ma10_margin_pct": 20.39,
    "spark": {
     "clusters": []
    },
@@ -957,100 +1063,9 @@
     "peak_turnover_pct": 112.2,
     "peak_ibs": 0.04,
     "peak_uppertail": 28.2,
-    "ma20": 7832.5,
-    "ma20_margin_pct": 25.89,
+    "ma20": 7833.5,
+    "ma20_margin_pct": 26.12,
     "cause_summary": "[ET특징주]비비안, 250억 유상증자에 상승세",
-    "was_theme_leader": false,
-    "source": "live"
-   },
-   "leader_cohort_prob": null,
-   "theme_leader": false
-  },
-  {
-   "code": "043650",
-   "name": "국순당",
-   "sector": "음식료·담배",
-   "pattern": "reaccum",
-   "shake": null,
-   "deep_shake": null,
-   "suspicion_score": 68,
-   "calibrated_prob": null,
-   "score_breakdown": {
-    "base": 62,
-    "re_count": 2,
-    "re_body": 2,
-    "peak_turnover": 2,
-    "re_turnover": 0
-   },
-   "score_raw": 0,
-   "score_breakdown_raw": {
-    "base": 0,
-    "re_count": 0,
-    "re_body": 0,
-    "peak_turnover": 0,
-    "re_turnover": 0
-   },
-   "forecast": {
-    "horizon": "3일 내 +7%",
-    "prob_pct": 52,
-    "base_pct": 46,
-    "strong": true,
-    "next_day_7_pct": 25,
-    "note": "과거 실측 확률·보장 아님"
-   },
-   "price": 4425.0,
-   "change_pct": 0.57,
-   "high_pct": 12.05,
-   "value_eok": 51,
-   "turnover_pct": 14.0,
-   "peak_turnover_pct": 111.6,
-   "float_ratio": 0.45299999999999996,
-   "turnover_basis": "float",
-   "ma10": 3664.0,
-   "ma10_margin_pct": 20.77,
-   "spark": {
-    "clusters": []
-   },
-   "spark_max_x": null,
-   "spark_max_pct": null,
-   "mega_flow": false,
-   "reignition": {
-    "body_pct": 3.56,
-    "time": "09:10",
-    "value_eok": 2,
-    "count": 3
-   },
-   "reignition_bars": [
-    {
-     "time": "09:10",
-     "body_pct": 3.56,
-     "value_eok": 2
-    },
-    {
-     "time": "09:30",
-     "body_pct": 2.22,
-     "value_eok": 3
-    },
-    {
-     "time": "09:35",
-     "body_pct": 3.04,
-     "value_eok": 15
-    }
-   ],
-   "news": [],
-   "matched_events": [],
-   "theme": "",
-   "visible_experimental": true,
-   "reaccum": {
-    "peak_date": "20260624",
-    "peak_value_eok": 425,
-    "peak_high_pct": 24.18,
-    "peak_turnover_pct": 111.6,
-    "peak_ibs": 0.47,
-    "peak_uppertail": 16.1,
-    "ma20": 3603.5,
-    "ma20_margin_pct": 22.8,
-    "cause_summary": "호텔 뷔페서 즐기는 전통주…국순당, 페어몬트 앰배서더 서울과 협업",
     "was_theme_leader": false,
     "source": "live"
    },
