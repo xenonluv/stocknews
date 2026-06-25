@@ -1,0 +1,41 @@
+{
+ "date": "20260624",
+ "tracks": {
+  "122640": {
+   "phase": "중립",
+   "confidence": 55,
+   "evaluated": false,
+   "result": null
+  },
+  "356680": {
+   "phase": "중립",
+   "confidence": 55,
+   "evaluated": false,
+   "result": null
+  },
+  "002070": {
+   "phase": "중립",
+   "confidence": 55,
+   "evaluated": false,
+   "result": null
+  },
+  "010690": {
+   "phase": "재매집",
+   "confidence": 72,
+   "evaluated": false,
+   "result": null
+  },
+  "037710": {
+   "phase": "중립",
+   "confidence": 55,
+   "evaluated": false,
+   "result": null
+  },
+  "043650": {
+   "phase": "중립",
+   "confidence": 58,
+   "evaluated": false,
+   "result": null
+  }
+ }
+}

@@ -4,8 +4,15 @@
   "010690": {
    "phase": "재매집",
    "confidence": 72,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260624",
+    "next_close": 12100.0,
+    "entry_close": 12000.0,
+    "rose": true,
+    "hit": true,
+    "return_pct": 0.83
+   }
   }
  }
 }
