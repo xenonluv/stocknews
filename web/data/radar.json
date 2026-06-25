@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-25 10:12:34 KST",
+ "generated_at": "2026-06-25 10:22:35 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -44,8 +44,8 @@
    "high_pct": 26.85,
    "vol_turnover_pct": 97.6,
    "value_eok": 587,
-   "price": 8280.0,
-   "change_pct": 1.97,
+   "price": 8950.0,
+   "change_pct": 10.22,
    "backfill": true
   }
  ],
@@ -54,14 +54,105 @@
    "code": "111710",
    "name": "남화산업",
    "sector": "오락·문화",
-   "change_pct": 28.59,
+   "change_pct": 23.56,
    "high_pct": 29.63,
-   "vol_turnover_pct": 83.8,
-   "value_eok": 142,
-   "price": 6140.0
+   "vol_turnover_pct": 87.6,
+   "value_eok": 149,
+   "price": 5900.0
   }
  ],
  "suspects": [
+  {
+   "code": "198440",
+   "name": "강동씨앤엘",
+   "sector": "비금속",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 79,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_count": 2,
+    "re_body": 6,
+    "peak_turnover": 9,
+    "re_turnover": 0
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_count": 0,
+    "re_body": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 46,
+    "base_pct": 46,
+    "strong": false,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "price": 1932.0,
+   "change_pct": -10.76,
+   "high_pct": 0.69,
+   "value_eok": 82,
+   "turnover_pct": 22.7,
+   "peak_turnover_pct": 185.9,
+   "float_ratio": 0.306,
+   "turnover_basis": "float",
+   "ma10": 1760.1,
+   "ma10_margin_pct": 9.77,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": null,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 8.7,
+    "time": "10:15",
+    "value_eok": 6,
+    "count": 3
+   },
+   "reignition_bars": [
+    {
+     "time": "09:00",
+     "body_pct": 4.27,
+     "value_eok": 9
+    },
+    {
+     "time": "10:10",
+     "body_pct": 4.84,
+     "value_eok": 4
+    },
+    {
+     "time": "10:15",
+     "body_pct": 8.7,
+     "value_eok": 6
+    }
+   ],
+   "news": [],
+   "matched_events": [],
+   "theme": "반도체",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260623",
+    "peak_value_eok": 819,
+    "peak_high_pct": 27.36,
+    "peak_turnover_pct": 185.9,
+    "peak_ibs": 0.47,
+    "peak_uppertail": 16.9,
+    "ma20": 1381.0,
+    "ma20_margin_pct": 39.9,
+    "cause_summary": "",
+    "was_theme_leader": false,
+    "source": "live"
+   },
+   "leader_cohort_prob": null,
+   "theme_leader": true
+  },
   {
    "code": "037710",
    "name": "광주신세계",
@@ -94,16 +185,16 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 46100.0,
-   "change_pct": 7.46,
+   "price": 47300.0,
+   "change_pct": 10.26,
    "high_pct": 17.48,
-   "value_eok": 1391,
-   "turnover_pct": 113.7,
+   "value_eok": 1419,
+   "turnover_pct": 116.0,
    "peak_turnover_pct": 115.6,
    "float_ratio": 0.3444,
    "turnover_basis": "float",
-   "ma10": 37790.0,
-   "ma10_margin_pct": 21.99,
+   "ma10": 37910.0,
+   "ma10_margin_pct": 24.77,
    "spark": {
     "clusters": []
    },
@@ -154,14 +245,14 @@
     "peak_turnover_pct": 115.6,
     "peak_ibs": 0.98,
     "peak_uppertail": 0.5,
-    "ma20": 36220.0,
-    "ma20_margin_pct": 27.28,
+    "ma20": 36280.0,
+    "ma20_margin_pct": 30.37,
     "cause_summary": "주식으로 번 '돈'이 움직인다…줄줄이 '신고가' 뚫었다",
     "was_theme_leader": false,
     "source": "live"
    },
    "leader_cohort_prob": null,
-   "theme_leader": false
+   "theme_leader": true
   },
   {
    "code": "034940",
@@ -170,11 +261,11 @@
    "pattern": "reaccum",
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 76,
+   "suspicion_score": 78,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 62,
-    "re_count": 6,
+    "re_count": 8,
     "re_body": 6,
     "peak_turnover": 2,
     "re_turnover": 0
@@ -195,16 +286,16 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 1030.0,
-   "change_pct": 14.44,
+   "price": 1009.0,
+   "change_pct": 12.11,
    "high_pct": 17.78,
-   "value_eok": 58,
-   "turnover_pct": 24.2,
+   "value_eok": 68,
+   "turnover_pct": 28.4,
    "peak_turnover_pct": 111.9,
    "float_ratio": 0.8,
    "turnover_basis": "float",
-   "ma10": 712.8,
-   "ma10_margin_pct": 44.5,
+   "ma10": 710.7,
+   "ma10_margin_pct": 41.97,
    "spark": {
     "clusters": []
    },
@@ -215,7 +306,7 @@
     "body_pct": 10.76,
     "time": "10:00",
     "value_eok": 13,
-    "count": 5
+    "count": 6
    },
    "reignition_bars": [
     {
@@ -242,6 +333,11 @@
      "time": "10:00",
      "body_pct": 10.76,
      "value_eok": 13
+    },
+    {
+     "time": "10:15",
+     "body_pct": 2.97,
+     "value_eok": 4
     }
    ],
    "news": [],
@@ -265,8 +361,8 @@
     "peak_turnover_pct": 111.9,
     "peak_ibs": 0.5,
     "peak_uppertail": 18.9,
-    "ma20": 693.6,
-    "ma20_margin_pct": 48.49,
+    "ma20": 692.6,
+    "ma20_margin_pct": 45.68,
     "cause_summary": "",
     "was_theme_leader": false,
     "source": "live"
@@ -306,16 +402,16 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 2780.0,
-   "change_pct": 5.7,
+   "price": 2770.0,
+   "change_pct": 5.32,
    "high_pct": 10.27,
-   "value_eok": 165,
-   "turnover_pct": 15.7,
+   "value_eok": 173,
+   "turnover_pct": 16.4,
    "peak_turnover_pct": 177.1,
    "float_ratio": 0.6898000000000001,
    "turnover_basis": "float",
-   "ma10": 2292.4,
-   "ma10_margin_pct": 21.27,
+   "ma10": 2290.9,
+   "ma10_margin_pct": 20.91,
    "spark": {
     "clusters": []
    },
@@ -356,8 +452,8 @@
     "peak_turnover_pct": 177.1,
     "peak_ibs": 0.47,
     "peak_uppertail": 11.6,
-    "ma20": 1827.8,
-    "ma20_margin_pct": 52.1,
+    "ma20": 1827.0,
+    "ma20_margin_pct": 51.61,
     "cause_summary": "시지메드텍, 최대주주 PE 인수에 ‘上’…탈모주 삼익제약·JW신약도↑...",
     "was_theme_leader": false,
     "source": "live"
@@ -372,11 +468,11 @@
    "pattern": "reaccum",
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 73,
+   "suspicion_score": 75,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 62,
-    "re_count": 4,
+    "re_count": 6,
     "re_body": 6,
     "peak_turnover": 1,
     "re_turnover": 0
@@ -397,16 +493,16 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 841.0,
-   "change_pct": 12.13,
+   "price": 835.0,
+   "change_pct": 11.33,
    "high_pct": 18.4,
-   "value_eok": 25,
-   "turnover_pct": 20.7,
+   "value_eok": 27,
+   "turnover_pct": 22.6,
    "peak_turnover_pct": 101.0,
    "float_ratio": 0.579,
    "turnover_basis": "float",
-   "ma10": 671.1,
-   "ma10_margin_pct": 25.32,
+   "ma10": 670.5,
+   "ma10_margin_pct": 24.53,
    "spark": {
     "clusters": []
    },
@@ -417,7 +513,7 @@
     "body_pct": 8.18,
     "time": "09:35",
     "value_eok": 1,
-    "count": 4
+    "count": 5
    },
    "reignition_bars": [
     {
@@ -439,6 +535,11 @@
      "time": "09:55",
      "body_pct": 7.05,
      "value_eok": 6
+    },
+    {
+     "time": "10:10",
+     "body_pct": 4.45,
+     "value_eok": 2
     }
    ],
    "news": [],
@@ -462,9 +563,201 @@
     "peak_turnover_pct": 101.0,
     "peak_ibs": 0.32,
     "peak_uppertail": 25.5,
-    "ma20": 693.8,
-    "ma20_margin_pct": 21.23,
+    "ma20": 693.5,
+    "ma20_margin_pct": 20.41,
     "cause_summary": "헝셩그룹, 168억원 규모 제3자배정 유상증자 결정",
+    "was_theme_leader": false,
+    "source": "live"
+   },
+   "leader_cohort_prob": null,
+   "theme_leader": false
+  },
+  {
+   "code": "413630",
+   "name": "씨피시스템",
+   "sector": "화학",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 70,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_count": 2,
+    "re_body": 3,
+    "peak_turnover": 2,
+    "re_turnover": 1
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_count": 0,
+    "re_body": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "price": 3630.0,
+   "change_pct": 3.12,
+   "high_pct": 7.95,
+   "value_eok": 161,
+   "turnover_pct": 42.8,
+   "peak_turnover_pct": 107.6,
+   "float_ratio": 0.2802,
+   "turnover_basis": "float",
+   "ma10": 2850.0,
+   "ma10_margin_pct": 27.37,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": null,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 3.87,
+    "time": "10:15",
+    "value_eok": 40,
+    "count": 3
+   },
+   "reignition_bars": [
+    {
+     "time": "09:10",
+     "body_pct": 2.37,
+     "value_eok": 20
+    },
+    {
+     "time": "09:50",
+     "body_pct": 2.27,
+     "value_eok": 2
+    },
+    {
+     "time": "10:15",
+     "body_pct": 3.87,
+     "value_eok": 40
+    }
+   ],
+   "news": [],
+   "matched_events": [],
+   "theme": "유가",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260624",
+    "peak_value_eok": 358,
+    "peak_high_pct": 29.89,
+    "peak_turnover_pct": 107.6,
+    "peak_ibs": 1.0,
+    "peak_uppertail": 0.0,
+    "ma20": 2801.2,
+    "ma20_margin_pct": 29.59,
+    "cause_summary": "씨피시스템, 1분기 매출 52억…순이익 전년比 83.2%↑",
+    "was_theme_leader": false,
+    "source": "live"
+   },
+   "leader_cohort_prob": null,
+   "theme_leader": false
+  },
+  {
+   "code": "002070",
+   "name": "비비안",
+   "sector": "섬유·의류",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 68,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_count": 2,
+    "re_body": 2,
+    "peak_turnover": 2,
+    "re_turnover": 0
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_count": 0,
+    "re_body": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "price": 9890.0,
+   "change_pct": -11.14,
+   "high_pct": 3.32,
+   "value_eok": 16,
+   "turnover_pct": 11.6,
+   "peak_turnover_pct": 112.2,
+   "float_ratio": 0.5524,
+   "turnover_basis": "float",
+   "ma10": 8208.0,
+   "ma10_margin_pct": 20.49,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": null,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 3.16,
+    "time": "10:10",
+    "value_eok": 0,
+    "count": 3
+   },
+   "reignition_bars": [
+    {
+     "time": "09:10",
+     "body_pct": 2.03,
+     "value_eok": 1
+    },
+    {
+     "time": "10:00",
+     "body_pct": 2.0,
+     "value_eok": 0
+    },
+    {
+     "time": "10:10",
+     "body_pct": 3.16,
+     "value_eok": 0
+    }
+   ],
+   "news": [],
+   "matched_events": [
+    {
+     "id": "2026-07-03_미국 고용보고서 (7월",
+     "title": "미국 고용보고서 (7월 발표)",
+     "dday": 8,
+     "categories": [
+      "금리"
+     ],
+     "score": 0.7
+    }
+   ],
+   "theme": "실적",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260624",
+    "peak_value_eok": 196,
+    "peak_high_pct": 29.96,
+    "peak_turnover_pct": 112.2,
+    "peak_ibs": 0.04,
+    "peak_uppertail": 28.2,
+    "ma20": 7834.0,
+    "ma20_margin_pct": 26.24,
+    "cause_summary": "[ET특징주]비비안, 250억 유상증자에 상승세",
     "was_theme_leader": false,
     "source": "live"
    },
@@ -503,16 +796,16 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 4335.0,
-   "change_pct": -1.48,
+   "price": 4360.0,
+   "change_pct": -0.91,
    "high_pct": 12.05,
-   "value_eok": 49,
-   "turnover_pct": 13.3,
+   "value_eok": 50,
+   "turnover_pct": 13.5,
    "peak_turnover_pct": 111.6,
    "float_ratio": 0.45299999999999996,
    "turnover_basis": "float",
-   "ma10": 3655.0,
-   "ma10_margin_pct": 18.6,
+   "ma10": 3657.5,
+   "ma10_margin_pct": 19.21,
    "spark": {
     "clusters": []
    },
@@ -553,8 +846,8 @@
     "peak_turnover_pct": 111.6,
     "peak_ibs": 0.47,
     "peak_uppertail": 16.1,
-    "ma20": 3599.0,
-    "ma20_margin_pct": 20.45,
+    "ma20": 3600.2,
+    "ma20_margin_pct": 21.1,
     "cause_summary": "호텔 뷔페서 즐기는 전통주…국순당, 페어몬트 앰배서더 서울과 협업",
     "was_theme_leader": false,
     "source": "live"
