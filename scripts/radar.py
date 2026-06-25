@@ -697,23 +697,26 @@ def _save_youtong_registry(reg, path=YOUTONG_REGISTRY_PATH):
         log(f"[warn] youtong registry 저장 실패: {e}")
 
 
-def prepare_youtong(candidates, p, now=None, registry_path=None):
+def prepare_youtong(candidates, p, explosion_codes=None, now=None, registry_path=None):
     """/youtong '곧 폭발할 후보'(위로 올라오며 분출) — 싼 게이트(등락률≥7·회전율≥50·미폭발) 통과 후보 중
     '시작시각(09:30) 이후 5분봉 양봉(몸통%≥2%) 스파크 ≥1회'를 만족하면 당일 registry에 적재 → **종일 지속**.
-    한 번 들면 장 마감까지 유지(현재가/등락률은 매 회차 갱신, first_seen='처음 포착 HH:MM' 보존). 분봉은
-    신규 후보만 1회 조회(이미 적재면 스킵 — 비용 가드). 시작시각 전엔 빈 목록(감지 시작 전).
-    now/registry_path는 테스트 주입용(기본 실시각·기본 경로)."""
+    한 번 들면 장 마감까지 유지(현재가/등락률은 매 회차 갱신, first_seen='처음 포착 HH:MM' 보존). 단 그 사이
+    **폭발(고가≥22 AND 회전율≥90)로 승격한 종목은 /forecast로 분류되므로 youtong에서 제거**(explosion_codes, 역할 분리).
+    분봉은 신규 후보만 조회(이미 적재면 스킵). 단 스파크 미발생 후보는 매 회차 재조회된다 — 스파크는 누적이라
+    '나중에 떴나' 확인이 필요(미발생 풀=change≥7 AND 회전율≥50 교집합이라 작음, 지연만 영향·정합성 무관).
+    시작시각 전엔 빈 목록. now/registry_path/explosion_codes는 주입용(기본 실시각·기본 경로·빈 집합)."""
     now = now or datetime.now(KST)
     if now.strftime("%H%M") < p.youtong_start:   # 감지 시작 시각(예 0930) 전 — 아무것도 포착 안 함
         return []
+    explosion_codes = explosion_codes or set()
     start_colon = p.youtong_start[:2] + ":" + p.youtong_start[2:]  # "0930" → "09:30"(스파크 time 비교용)
     path = registry_path or YOUTONG_REGISTRY_PATH
     reg = _load_youtong_registry(path, now.strftime("%Y%m%d"))
     codes = reg["codes"]
     cand_by_code = {c["code"]: c for c in candidates}
-    # 1) 신규 후보만 5분봉 스파크 확정 → registry 적재(이미 있으면 분봉 재조회 스킵)
+    # 1) 신규 후보만 5분봉 스파크 확정 → registry 적재(이미 있으면 분봉 재조회 스킵). 폭발 승격 종목은 적재 안 함.
     for code, c in cand_by_code.items():
-        if code in codes:
+        if code in codes or code in explosion_codes:
             continue
         try:
             bars = _minute_bars_with_fallback(code, c.get("name"))
@@ -731,7 +734,10 @@ def prepare_youtong(candidates, p, now=None, registry_path=None):
             }
     # 2) registry(오늘 적재분) 전체를 youtong[]로 렌더 — 종일 지속. 현재가는 실시간 갱신.
     out = []
-    for code, rec in codes.items():
+    for code, rec in list(codes.items()):
+        if code in explosion_codes:   # youtong 후보였다가 폭발 승격 → /forecast로, youtong서 제거(역할 분리)
+            codes.pop(code, None)
+            continue
         c = cand_by_code.get(code)
         if c:   # 이번 회차 랭킹에 다시 잡힘 — fresh 값
             price, change_pct = c.get("price"), c.get("change_pct")
@@ -784,8 +790,10 @@ def prepare_reaccum_registry(p):
     # 라이브 스캔 성공/예외 무관하게 registry 기반 백필 — 예외 경로에서도 /forecast가 비지 않게(try 밖).
     today_explosions = _backfill_today_explosions(today_explosions, reg, _today_yyyymmdd())
     # youtong: 싼 게이트 통과분(candidates)을 5분봉 스파크로 확정 + 종일 지속(별도 registry). try 밖(격리).
+    # 폭발(/forecast)로 승격한 종목은 youtong서 제거하도록 today_explosions 코드를 넘긴다(역할 분리).
     try:
-        today_youtong = prepare_youtong(youtong_candidates, p)
+        explosion_codes = {e.get("code") for e in today_explosions}
+        today_youtong = prepare_youtong(youtong_candidates, p, explosion_codes)
     except Exception as e:
         today_youtong = []
         log(f"[warn] youtong 처리 실패(빈 목록): {e}")
@@ -1197,7 +1205,8 @@ def main():
     p.reignition_span_min = max(1, int(p.reignition_span_min))
     p.reignition_min_count = max(1, int(p.reignition_min_count))
     p.youtong_spark_min = max(1, int(p.youtong_spark_min))
-    p.youtong_start = str(p.youtong_start).strip().zfill(4)[:4]  # "HHMM"(비교용 4자리 보정)
+    _ys = str(p.youtong_start).strip()  # "HHMM" 4자리 숫자만 — 비숫자/콜론 등 오입력은 기본값으로(시각 비교 깨짐 방지)
+    p.youtong_start = _ys.zfill(4)[:4] if _ys.isdigit() else YOUTONG_START_HHMM
     p.reaccum_max = max(0, int(p.reaccum_max))
     active_explosions, live_scan_ok, today_explosions, today_youtong = prepare_reaccum_registry(p)
 

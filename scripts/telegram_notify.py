@@ -140,7 +140,10 @@ def _format_youtong(y):
     """곧 폭발 후보(/youtong) 알림 — 재매집('🚨 재반등 봉')과 제목·이모지·지표를 달리해 한 채팅에서 구분."""
     code = y.get("code") or ""
     name = y.get("name") or code
-    parts = [f"현재 {y.get('change_pct')}%", f"유통 회전율 {y.get('vol_turnover_pct')}%"]
+    parts = []
+    if y.get("change_pct") is not None:   # 지속 행 현재가 재조회 실패 시 None — "현재 None%" 방지
+        parts.append(f"현재 {y.get('change_pct')}%")
+    parts.append(f"유통 회전율 {y.get('vol_turnover_pct')}%")
     if (y.get("value_eok") or 0) > 0:
         parts.append(f"거래대금 {y.get('value_eok')}억")
     lines = [f"⚡ {name} ({code}) 곧 폭발 후보", " · ".join(parts)]

@@ -52,7 +52,7 @@ export default function Home() {
           <div>
             <p className="text-base font-bold">⚡ 곧 폭발할 후보</p>
             <p className="text-xs text-muted-foreground">
-              현재 +10% AND 유통주식 70~100% 회전 중 — 폭발 직전 보기
+              09:30↑ 현재 +7% · 유통 50%+ · 5분봉 분출 — 위로 올라오는 종목 보기
             </p>
           </div>
           <ArrowRight className="size-5 shrink-0 text-warning" aria-hidden />

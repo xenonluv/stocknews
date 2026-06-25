@@ -35,6 +35,6 @@ export function getYoutongThresholds(): { changePct: number; turnoverMin: number
   return {
     changePct: p.youtong_change_pct ?? 7,
     turnoverMin: p.youtong_turnover_min ?? 50,
-    startHhmm: p.youtong_start ?? "1030",
+    startHhmm: p.youtong_start ?? "0930",
   };
 }
