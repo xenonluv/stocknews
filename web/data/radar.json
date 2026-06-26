@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-06-25 20:59:02 KST",
- "market_session": "closed",
+ "generated_at": "2026-06-26 09:01:54 KST",
+ "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
   "market": "UN",
@@ -24,12 +24,12 @@
   "telegram_seed": true,
   "telegram_channel": "FastStockNews"
  },
- "universe_count": 51,
+ "universe_count": 44,
  "events": [
   {
    "id": "2026-07-03_미국 고용보고서 (7월",
    "date": "2026-07-03",
-   "dday": 8,
+   "dday": 7,
    "title": "미국 고용보고서 (7월 발표)",
    "category": [
     "금리",
@@ -40,75 +40,7 @@
    "estimated": true
   }
  ],
- "explosions": [
-  {
-   "code": "079650",
-   "name": "서산",
-   "sector": "비금속",
-   "high_pct": 26.85,
-   "vol_turnover_pct": 129.2,
-   "value_eok": 763,
-   "price": 5690.0,
-   "change_pct": -29.93,
-   "backfill": true
-  },
-  {
-   "code": "228340",
-   "name": "동양파일",
-   "sector": "비금속",
-   "high_pct": 29.88,
-   "vol_turnover_pct": 96.5,
-   "value_eok": 217,
-   "price": 2190.0,
-   "change_pct": -9.13,
-   "backfill": true
-  },
-  {
-   "code": "111710",
-   "name": "남화산업",
-   "sector": "오락·문화",
-   "high_pct": 29.63,
-   "vol_turnover_pct": 117.2,
-   "value_eok": 196,
-   "price": 3770.0,
-   "change_pct": -21.05,
-   "backfill": true
-  },
-  {
-   "code": "058730",
-   "name": "다스코",
-   "sector": "금속",
-   "high_pct": 29.91,
-   "vol_turnover_pct": 197.2,
-   "value_eok": 854,
-   "price": 4105.0,
-   "change_pct": 29.91,
-   "backfill": false
-  }
- ],
- "youtong": [
-  {
-   "code": "475430",
-   "name": "키스트론",
-   "sector": "전기·전자",
-   "change_pct": 10.76,
-   "high_pct": 21.16,
-   "vol_turnover_pct": 273.9,
-   "value_eok": 1141,
-   "price": 6280.0,
-   "first_seen": "18:50"
-  },
-  {
-   "code": "419050",
-   "name": "삼기에너지솔루션즈",
-   "sector": "운송장비·부품",
-   "change_pct": 29.96,
-   "high_pct": 29.96,
-   "vol_turnover_pct": 83.2,
-   "value_eok": 418,
-   "price": 1887.0,
-   "first_seen": "19:03"
-  }
- ],
+ "explosions": [],
+ "youtong": [],
  "suspects": []
 }
