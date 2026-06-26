@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-26 12:22:08 KST",
+ "generated_at": "2026-06-26 12:32:14 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -57,10 +57,10 @@
    "name": "키스트론",
    "sector": "전기·전자",
    "high_pct": 24.52,
-   "vol_turnover_pct": 261.9,
-   "value_eok": 1234,
-   "price": 6980.0,
-   "change_pct": 11.15,
+   "vol_turnover_pct": 267.4,
+   "value_eok": 1259,
+   "price": 6750.0,
+   "change_pct": 7.48,
    "backfill": false
   },
   {
@@ -68,10 +68,10 @@
    "name": "서산",
    "sector": "비금속",
    "high_pct": 25.83,
-   "vol_turnover_pct": 435.2,
-   "value_eok": 1641,
-   "price": 6980.0,
-   "change_pct": 22.67,
+   "vol_turnover_pct": 452.3,
+   "value_eok": 1716,
+   "price": 6760.0,
+   "change_pct": 18.8,
    "backfill": false
   }
  ],
@@ -99,13 +99,24 @@
    "first_seen": "09:41"
   },
   {
+   "code": "419050",
+   "name": "삼기에너지솔루션즈",
+   "sector": "운송장비·부품",
+   "change_pct": 7.05,
+   "high_pct": 18.44,
+   "vol_turnover_pct": 114.6,
+   "value_eok": 660,
+   "price": 2020.0,
+   "first_seen": "09:41"
+  },
+  {
    "code": "026940",
    "name": "부국철강",
    "sector": "금속",
    "change_pct": 7.08,
    "high_pct": 11.43,
-   "vol_turnover_pct": 94.9,
-   "value_eok": 266,
+   "vol_turnover_pct": 80.3,
+   "value_eok": 224,
    "price": 2950.0,
    "first_seen": "11:51"
   },
@@ -113,11 +124,11 @@
    "code": "006920",
    "name": "모헨즈",
    "sector": "비금속",
-   "change_pct": 9.78,
+   "change_pct": 7.82,
    "high_pct": 17.11,
-   "vol_turnover_pct": 68.4,
-   "value_eok": 190,
-   "price": 4490.0,
+   "vol_turnover_pct": 69.4,
+   "value_eok": 193,
+   "price": 4410.0,
    "first_seen": "12:11"
   },
   {
@@ -135,34 +146,23 @@
    "code": "389260",
    "name": "대명에너지",
    "sector": "건설",
-   "change_pct": 18.7,
+   "change_pct": 16.14,
    "high_pct": 19.78,
-   "vol_turnover_pct": 57.5,
-   "value_eok": 473,
-   "price": 17580.0,
+   "vol_turnover_pct": 64.0,
+   "value_eok": 530,
+   "price": 17200.0,
    "first_seen": "12:21"
   },
   {
    "code": "014950",
    "name": "삼익제약",
    "sector": "제약",
-   "change_pct": 2.15,
+   "change_pct": 2.99,
    "high_pct": 15.91,
    "vol_turnover_pct": 57.1,
    "value_eok": 214,
-   "price": 8540.0,
+   "price": 8610.0,
    "first_seen": "10:01"
-  },
-  {
-   "code": "419050",
-   "name": "삼기에너지솔루션즈",
-   "sector": "운송장비·부품",
-   "change_pct": 5.99,
-   "high_pct": 18.44,
-   "vol_turnover_pct": 55.0,
-   "value_eok": 326,
-   "price": 2000.0,
-   "first_seen": "09:41"
   }
  ],
  "suspects": []
