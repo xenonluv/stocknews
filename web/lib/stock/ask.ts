@@ -211,13 +211,18 @@ export async function answerQuestion(code: string, question: string): Promise<St
   // ⚠ %는 무조건 플래그하지 않는다 — /ask가 유통회전율 전문가가 되며 거의 모든 답이 "회전율 119%" 같은
   //   '데이터에 있는 %'를 그대로 인용하므로, 데이터에 존재하는 %는 통과시키고 데이터 밖 %만 미검증 처리.
   const answerNums = (answer.match(/\d[\d,]{3,}/g) ?? []).map((x) => x.replace(/\D/g, ""));
-  // %는 '값 단위' 정확 대조: 데이터에 등장한 % 토큰 집합을 만들고, 답변의 각 % 값이 그 집합에 있으면 통과.
-  // (substring 대조는 "9%"가 "19%"에 매칭되는 거짓통과 + "1,800%"vs"1800%" 콤마 거짓경고가 생겨 폐기.)
-  // 부호·콤마·공백 제거 후 비교 — 데이터 "+30%"/"-5.81%" 와 답변 "30%"/"5.81%"를 같은 값으로 인정.
-  const normPct = (s: string) => s.replace(/[,\s+\-]/g, "");
+  // %는 '값 단위'로 대조하되 정수 반올림 허용오차 — 모델이 데이터 "119.3%"를 "119%"로 반올림 인용해도 통과.
+  // (substring 대조는 "9%"가 "19%"에 거짓통과 → 폐기 / verbatim 정확대조는 반올림을 거짓경고 → 폐기.)
+  // 부호·콤마·공백·% 제거 후 수치화, 양쪽 정수 반올림 후 집합 비교. 데이터 밖 %(생짜 계산)만 미검증 처리.
   const PCT_RE = /-?\d[\d,]*(?:\.\d+)?\s*%/g;
-  const dataPcts = new Set((dataText.match(PCT_RE) ?? []).map(normPct));
-  const pctUngrounded = (answer.match(PCT_RE) ?? []).some((p) => !dataPcts.has(normPct(p)));
+  const pctVal = (s: string) => parseFloat(s.replace(/[,\s%]/g, "").replace(/^[+\-]/, "")); // 부호 무시(크기 비교)
+  const dataPctInts = new Set(
+    (dataText.match(PCT_RE) ?? []).map((p) => Math.round(pctVal(p))).filter(Number.isFinite)
+  );
+  const pctUngrounded = (answer.match(PCT_RE) ?? []).some((p) => {
+    const v = pctVal(p);
+    return Number.isFinite(v) && !dataPctInts.has(Math.round(v));
+  });
   const calcUnverified =
     answerNums.some((d) => d.length >= 4 && !dataDigits.includes(d)) || pctUngrounded;
 
