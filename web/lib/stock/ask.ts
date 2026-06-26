@@ -206,11 +206,16 @@ export async function answerQuestion(code: string, question: string): Promise<St
     else facts.push(item);
   }
 
-  // 서술(answer) 속 모델 계산 수치 백스톱: 데이터에 없는 4자리+ 숫자나 비율(%)이 있으면
-  // "검증 안 됨"으로 표시 — 모델이 지시를 어기고 계산해 틀린 비율을 내도 사용자가 안 믿게.
+  // 서술(answer) 속 모델 계산 수치 백스톱: 데이터에 '없는' 4자리+ 숫자나 비율(%)이 있으면
+  // "검증 안 됨"으로 표시 — 모델이 지시를 어기고 계산해 틀린 값을 내도 사용자가 안 믿게.
+  // ⚠ %는 무조건 플래그하지 않는다 — /ask가 유통회전율 전문가가 되며 거의 모든 답이 "회전율 119%" 같은
+  //   '데이터에 있는 %'를 그대로 인용하므로, 데이터에 존재하는 %는 통과시키고 데이터 밖 %만 미검증 처리.
   const answerNums = (answer.match(/\d[\d,]{3,}/g) ?? []).map((x) => x.replace(/\D/g, ""));
+  const dataNorm = dataText.replace(/\s+/g, "");
+  const answerPcts = answer.match(/\d[\d,]*(?:\.\d+)?\s*%/g) ?? [];
+  const pctUngrounded = answerPcts.some((p) => !dataNorm.includes(p.replace(/\s+/g, "")));
   const calcUnverified =
-    answerNums.some((d) => d.length >= 4 && !dataDigits.includes(d)) || /\d(?:\.\d+)?\s*%/.test(answer);
+    answerNums.some((d) => d.length >= 4 && !dataDigits.includes(d)) || pctUngrounded;
 
   return {
     code,

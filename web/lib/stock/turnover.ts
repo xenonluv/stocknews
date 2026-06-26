@@ -20,7 +20,8 @@ const r1 = (n: number) => Math.round(n * 10) / 10;
 /** 일별 회전율 시계열(%, candles와 같은 순서). floatSharesEff<=0이면 전부 null. */
 function turnoverSeries(candles: Candle[], floatSharesEff: number | null): (number | null)[] {
   return candles.map((c) =>
-    floatSharesEff && floatSharesEff > 0 ? r1((c.volume / floatSharesEff) * 100) : null
+    // 거래량 0(거래정지 등)은 null로 drop — scripts/float_ratio.py:vol_turnover(`volume and volume>0`)와 동일.
+    floatSharesEff && floatSharesEff > 0 && c.volume > 0 ? r1((c.volume / floatSharesEff) * 100) : null
   );
 }
 
@@ -98,18 +99,18 @@ export function computeDownCandles(
   const hpAll: (number | null)[] = candles.map((c, i) =>
     i > 0 && candles[i - 1].close > 0 ? (c.high / candles[i - 1].close - 1) * 100 : null
   );
+  // 폭발 = 고가등락률≥15% AND 종가 상승(전일 대비). 종가 하락(윗꼬리 큰 음봉)은 '실패한 분출'이라 폭발에서 제외 —
+  // 안 그러면 판정 당일 음봉이 자신을 '직전 폭발'로 자기지목하거나 explodedBefore가 오탐(폭발→눌림 맥락 왜곡).
+  const isExplosion = (j: number): boolean =>
+    j > 0 && hpAll[j] != null && hpAll[j]! >= EXPLOSION_HIGH_PCT && candles[j].close >= candles[j - 1].close;
   // 표시용 '최근 폭발' = lookback 창 안에서 가장 최근(날짜 max) 폭발일
   let recentExplosion: { date: string; highPct: number } | null = null;
   for (let i = start; i < candles.length; i++) {
-    if (hpAll[i] != null && hpAll[i]! >= EXPLOSION_HIGH_PCT) {
-      recentExplosion = { date: candles[i].date, highPct: r1(hpAll[i]!) };
-    }
+    if (isExplosion(i)) recentExplosion = { date: candles[i].date, highPct: r1(hpAll[i]!) };
   }
   // 그 날보다 '이른' 거래일(직전 lookback 내)에 폭발이 있었나 — 폭발→눌림→재분출 맥락
   const explodedBefore = (i: number): boolean => {
-    for (let j = Math.max(1, i - lookback); j < i; j++) {
-      if (hpAll[j] != null && hpAll[j]! >= EXPLOSION_HIGH_PCT) return true;
-    }
+    for (let j = Math.max(1, i - lookback); j < i; j++) if (isExplosion(j)) return true;
     return false;
   };
 
@@ -120,8 +121,11 @@ export function computeDownCandles(
     const highPct = prev.close > 0 ? r1((c.high / prev.close - 1) * 100) : null;
     const isDown = c.close < prev.close;
     const span = c.high - c.low;
-    const upperWickPct = span > 0 ? Math.round(((c.high - c.close) / span) * 100) / 100 : null;
-    const lowerWickPct = span > 0 ? Math.round(((c.close - c.low) / span) * 100) / 100 : null;
+    // 실제 꼬리(시가·종가 몸통 기준): 윗꼬리=(고가−몸통상단)/레인지, 아래꼬리=(몸통하단−저가)/레인지.
+    // 아래꼬리 큰 음봉 = 저가에서 받힘(매수 흔적), 윗꼬리 큰 = 상단 거부 — '아래꼬리' 라벨이 실제 꼬리와 일치.
+    const bodyTop = Math.max(c.open, c.close), bodyBot = Math.min(c.open, c.close);
+    const upperWickPct = span > 0 ? Math.round(((c.high - bodyTop) / span) * 100) / 100 : null;
+    const lowerWickPct = span > 0 ? Math.round(((bodyBot - c.low) / span) * 100) / 100 : null;
     const ftPct = series[i];
     const f = flowByDate.get(c.date);
     const foreignNet = f ? f.foreign : null;
@@ -133,7 +137,7 @@ export function computeDownCandles(
 
     let label: DownCandleSignal["label"] = "중립";
     if (isDown && extreme && afterExplosion) label = "재분출후보";
-    else if (isDown && instNet != null && instNet > 0 && lowerWickPct != null && lowerWickPct >= BIG_WICK && ftPct != null && avg20 != null && ftPct >= avg20) label = "매집후보";
+    else if (isDown && instNet != null && instNet > 0 && lowerWickPct != null && lowerWickPct >= BIG_WICK && ftPct != null && avg20 != null && avg20 > 0 && ftPct >= avg20) label = "매집후보";
     else if (isDown && ftPct != null && avg20 != null && ftPct < avg20 && instNet != null && instNet < 0) label = "분산우려";
 
     days.push({ date: c.date, isDown, changePct, highPct, upperWickPct, lowerWickPct, floatTurnoverPct: ftPct, foreignNet, organNet, label });

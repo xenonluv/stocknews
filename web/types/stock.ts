@@ -165,8 +165,8 @@ export interface DownCandleSignal {
   isDown: boolean; // close < prevClose
   changePct: number;
   highPct: number | null; // high/prevClose-1 (%, 폭발 감지)
-  upperWickPct: number | null; // (high-close)/(high-low)
-  lowerWickPct: number | null; // (close-low)/(high-low) = closeStrength
+  upperWickPct: number | null; // (고가-몸통상단)/레인지 — 윗꼬리(상단 거부)
+  lowerWickPct: number | null; // (몸통하단-저가)/레인지 — 아래꼬리(저점 받힘)
   floatTurnoverPct: number | null;
   foreignNet: number | null;
   organNet: number | null;
@@ -176,7 +176,7 @@ export interface DownCandleSignal {
 export interface DownCandleSection {
   days: DownCandleSignal[]; // 최근 lookback 거래일(오름차순)
   overall: DownCandleSignal["label"] | "정보부족";
-  recentExplosion: { date: string; highPct: number } | null; // 최근 lookback 내 폭발(highPct 최대)
+  recentExplosion: { date: string; highPct: number } | null; // 최근 lookback 내 폭발(가장 최근 날짜, 종가 상승일)
 }
 
 export interface FinancialSection {

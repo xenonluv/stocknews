@@ -228,8 +228,15 @@ python3 scripts/event_calendar.py 10           # D-10 이벤트 확인
   저평가+성장이면 분산 단정 금지) ②재료·테마 ③수급·차트.** 주봉 구조(`technical.weeklyStructure` — 일봉을
   주차 집계: 직전 8주 신고가 돌파%·종가 주봉레인지 위치(윗꼬리)·거래량 배수·이번주 진행 거래일수)도 입력
   (serializeForPrompt 공유라 `/ai`에도 반영). 펀더멘털 근거는 데이터 있을 때만(환각 금지).
-- `POST /api/stock/{code}/ask` — **AI 자유질문(찌라시 RAG + 근거 종합추론)**. 사용자 질문을 그 종목의
+- `POST /api/stock/{code}/ask` — **AI 자유질문(유통물량·재료 전문가 + 찌라시 RAG)**. 사용자 질문을 그 종목의
   실제 데이터 + 수집 글(뉴스·토론방·텔레그램)을 근거로 Kimi가 답함(`/ai`와 별개 엔드포인트).
+  ⚠️ **음봉(하락)일 때 매집/흔들기/분산 판별이 핵심** — 꼬리·수급 교과서 판정은 개인 주도 테마(폭발→음봉눌림→익일 급등)를
+  거꾸로 보므로, **유통회전율 역대급 + 직전 폭발 연속성 + 재료 생존**을 최우선 신호로 둠. SYSTEM_PROMPT 페르소나·판별 프레임 +
+  `serializeForPrompt`(공용)의 신규 3섹션 **[시장 레짐]**(코스피/코스닥 당일 등락 — 음봉이 시장 탓인지 구분)·
+  **[유통·회전율 정밀]**(거래량/유통주식수 회전율·역대 순위·백분위·누적손바뀜)·**[음봉 판별 신호]**(음봉별 꼬리·회전·수급·
+  직전폭발 → 재분출후보/매집후보/분산우려/중립 라벨)로 구현. 엔진 = `lib/stock/turnover.ts`(`computeFloatTurnover`·
+  `computeDownCandles`, **`scripts/float_ratio.py:vol_turnover`와 회전율 산식 동기화**) + `naver.ts`의 `fetchFloat`(유동비율+
+  상장주식수)·`fetchIndex`(지수). `/ai`·`/phase`도 같은 섹션 공유.
   body `{question}`(2~300자) → `{answerable, answer, facts[], rumors[], calcUnverified, droppedCount,
   caveat, sourceCounts}`. 질문마다 답이 달라 **CDN 캐시 불가**(`force-dynamic`·`no-store`·POST),
   `maxDuration=300`. **answer는 수집 자료를 종합한 추론·결론 허용**(자료 밖 새 사실 날조는 금지) —
