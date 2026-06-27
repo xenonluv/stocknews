@@ -89,7 +89,14 @@ function MoverCard({ m }: { m: AlphaMover }) {
   return (
     <div className="space-y-2 rounded-lg border border-white/10 bg-white/[0.045] p-4">
       <div className="flex items-baseline justify-between gap-2">
-        <h3 className="text-lg font-bold tracking-tight">{m.name}</h3>
+        <h3 className="text-lg font-bold tracking-tight">
+          {m.name}
+          {m.date && (
+            <span className="ml-1.5 text-[10px] font-normal text-muted-foreground tabular-nums">
+              {m.date.length === 8 ? `${m.date.slice(4, 6)}/${m.date.slice(6)}` : m.date}
+            </span>
+          )}
+        </h3>
         <span className={`text-sm font-semibold tabular-nums ${chgClass(m.change_pct)}`}>
           {pct(m.change_pct)} {m.is_eumbong ? "음봉" : ""}
         </span>

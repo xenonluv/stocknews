@@ -5,6 +5,7 @@ export interface AlphaMover {
   name: string;
   sector?: string;
   mover_type?: string; // explosion | youtong | reaccum
+  date?: string; // 신호일(YYYYMMDD) — 최근 며칠 합쳐 게시
   change_pct?: number | null;
   is_eumbong?: boolean;
   below_prev?: boolean;

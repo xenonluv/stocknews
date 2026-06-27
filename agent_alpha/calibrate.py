@@ -72,18 +72,29 @@ def run():
     for lo, hi in config.TURNOVER_2D_BANDS:
         key = f"{int(lo)}~{'inf' if hi > 1e8 else int(hi)}"
         out["by_turnover2d_eumbong"][key] = _stat([r for r in eumbong if _band(r.get("turnover_2d_pct"), config.TURNOVER_2D_BANDS) == key])
-    hi_turn = [r for r in eumbong if (r.get("turnover_2d_pct") or 0) >= 200]
+    # ⚠ 스파크축은 '측정된'(spark_source != none) 행만 — 미측정(분봉 결측·백필)을 '0'에 섞으면 0버킷 오염.
+    def _measured(r):
+        return r.get("spark_source") not in (None, "none")
+    hi_turn = [r for r in eumbong if (r.get("turnover_2d_pct") or 0) >= 200 and _measured(r)]
     for sb in ("0", f"1~{config.SPARK_MIN - 1}", f">={config.SPARK_MIN}"):
         out["by_spark_eumbong_hi_turnover"][sb] = _stat([r for r in hi_turn if _spark_band(r.get("spark_1430_count")) == sb])
+
+    def _cs_band(cs):  # 단일축·셀 동일 라벨(원시 float 경계) — 라벨 불일치 제거
+        if cs is None:
+            return None
+        for lo, hi in config.CLOSE_STRENGTH_BANDS:
+            if lo <= cs < hi:
+                return f"{lo}~{hi}"
+        return None
     for lo, hi in config.CLOSE_STRENGTH_BANDS:
         key = f"{lo}~{hi}"
-        out["by_close_strength_eumbong"][key] = _stat([r for r in eumbong if (r.get("close_strength") is not None and lo <= r["close_strength"] < hi)])
-    # 결합 셀(전 셀 보고)
+        out["by_close_strength_eumbong"][key] = _stat([r for r in eumbong if _cs_band(r.get("close_strength")) == key])
+    # 결합 셀(전 셀 보고). 미측정 스파크는 'none' 버킷으로 분리(0과 섞지 않음).
     seen = {}
     for r in eumbong:
         tb = _band(r.get("turnover_2d_pct"), config.TURNOVER_2D_BANDS)
-        sb = _spark_band(r.get("spark_1430_count"))
-        cb = _band((r.get("close_strength") or 0) * 100, [(lo * 100, hi * 100) for lo, hi in config.CLOSE_STRENGTH_BANDS])
+        sb = _spark_band(r.get("spark_1430_count")) if _measured(r) else "none(미측정)"
+        cb = _cs_band(r.get("close_strength"))
         if tb is None:
             continue
         seen.setdefault((tb, sb, cb), []).append(r)

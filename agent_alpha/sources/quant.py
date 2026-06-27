@@ -44,7 +44,11 @@ def build(mover, fcache, reg):
         "volume": t.get("volume"),
         "value_eok": round((t.get("value") or 0) / 1e8),
     })
-    cs, uw, lw = _wick(o or 0, h or 0, l or 0, c or 0)
+    # OHLC가 모두 유효(양수)하고 high>low일 때만 꼬리 산출 — 결측(_f→0.0)을 0으로 강제하면 종가강도 오염.
+    if all(isinstance(x, (int, float)) and x > 0 for x in (o, h, l, c)) and h > l:
+        cs, uw, lw = _wick(o, h, l, c)
+    else:
+        cs, uw, lw = None, None, None
     row["close_strength"], row["upper_wick_pct"], row["lower_wick_pct"] = cs, uw, lw
 
     # ── 유통회전율(1순위) ── float 자체캐시 전달 → 코어 data/float_ratio.json 디스크쓰기 회피
@@ -61,7 +65,7 @@ def build(mover, fcache, reg):
     row.update({"spark_1430_count": cnt, "spark_max_body_pct": mx,
                 "spark_bars": bars, "spark_source": src})
 
-    # ── 투자자별(당일; 결측 시 null, T+1 label에서 보강) ──
+    # ── 투자자별(당일; 결측 시 null — 날조 금지. label.py는 익일봉만 채우고 수급은 보강하지 않음) ──
     try:
         inv = kis.investor_daily(code)
     except Exception:

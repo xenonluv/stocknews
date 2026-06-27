@@ -63,10 +63,16 @@ def run(dry=False, max_movers=None):
               f"외인+기관 {(r.get('frgn_net') or 0) + (r.get('orgn_net') or 0) if r.get('frgn_net') is not None else 'n/a'} · "
               f"키움{r.get('kiwoom_buy_concentration')} · {'음봉' if r.get('is_eumbong') else '양봉'}")
     _save_fcache(fcache)
+    rows = [r for r in rows if r.get("data_ok")]   # 일봉<2 퇴화행 제외(신호일 어긋남·degenerate 방지)
+    if not rows:
+        print("[alpha-collect] 유효 행 0(일봉 결측) — 스킵")
+        return []
     if dry:
         print(f"[alpha-collect] DRY {len(rows)}행(미기록)")
         return rows
-    sig_date = rows[0].get("date") or date    # 신호일(마지막 일봉) 기준으로 파일 키
+    # 신호일 = 다수결(대부분 동일한 마지막 거래일). 첫 행이 과거일이어도 과거 파일 덮어쓰기 방지.
+    from collections import Counter
+    sig_date = Counter(r["date"] for r in rows).most_common(1)[0][0]
     daymap = {r["code"]: r for r in rows}
     tmp = os.path.join(config.FORWARD_DIR, f"{sig_date}.json.tmp")
     json.dump({"date": sig_date, "rows": daymap}, open(tmp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)

@@ -10,7 +10,7 @@ import news as news_mod
 import rumors as rumors_mod
 import quant as quant_mod
 import regime as regime_mod
-import float_ratio
+import collect as collect_mod   # float 캐시 로드/저장 헬퍼 재사용(자체 파일, 코어 미오염)
 import analyst
 import redteam
 import notify as notify_mod
@@ -23,10 +23,7 @@ def run(dry=False, max_movers=None):
     if not mv:
         print(f"[alpha-loop] {date} movers 0")
         return {}
-    try:
-        fcache = dict(float_ratio._shared_cache())
-    except Exception:
-        fcache = {}
+    fcache = collect_mod._load_fcache()    # 자체 캐시(영속) — 10분 루프마다 재스크랩 방지
     reg = regime_mod.regime()
     judg = {}
     rows = []
@@ -42,6 +39,7 @@ def run(dry=False, max_movers=None):
         rows.append(row)
         print(f"  {m['code']} {m['name']}: {j.get('catalyst', '(LLM없음)')} · "
               f"conf {j.get('confidence')} · 작전 {j.get('redteam_flag')}")
+    collect_mod._save_fcache(fcache)   # 스크랩한 float 자체 캐시에 영속
     tmp = os.path.join(config.JUDGMENTS_DIR, f"{date}.json.tmp")
     json.dump(judg, open(tmp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     os.replace(tmp, os.path.join(config.JUDGMENTS_DIR, f"{date}.json"))

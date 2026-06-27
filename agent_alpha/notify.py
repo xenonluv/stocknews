@@ -53,5 +53,6 @@ def notify(rows):
             sent.add(code)
             n += 1
     if n:
-        _save({date: sorted(sent)})
+        st[date] = sorted(sent)   # 다른 날짜 키 보존(전체 덮어쓰기 금지)
+        _save(st)
     return n
