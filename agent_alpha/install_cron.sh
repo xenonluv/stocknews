@@ -10,13 +10,17 @@ BEGIN="# AGENT_ALPHA_BEGIN"
 END="# AGENT_ALPHA_END"
 
 BLOCK="$BEGIN
+# 장중 LLM 루프(재료·찌라시·조작 판단 → judgments). 10분 간격.
+1,11,21,31,41,51 9-15 * * 1-5 cd $REPO && $PY agent_alpha/loop.py >> /tmp/agent_alpha_loop.log 2>&1
 # 전진수집(EOD, 마감 후 — 당일 분봉 필요). 코어 publish(9-20)와 KIS 레이트만 공유, 별개 프로세스.
 40 15 * * 1-5 cd $REPO && $PY agent_alpha/collect.py >> /tmp/agent_alpha_collect.log 2>&1
 # 익일 라벨(다음 거래일 아침)
 10 9 * * 1-5 cd $REPO && $PY agent_alpha/label.py >> /tmp/agent_alpha_label.log 2>&1
 # 채점·보정(장후)
 45 17 * * 1-5 cd $REPO && $PY agent_alpha/calibrate.py >> /tmp/agent_alpha_calibrate.log 2>&1
-# (LLM loop·publish_alpha 줄은 해당 파일 추가 시 함께 등록)
+# 웹 /alpha 게시(수집 후·보정 후 — alpha.json 변경 시에만 push)
+50 15 * * 1-5 cd $REPO && $PY agent_alpha/publish_alpha.py >> /tmp/agent_alpha_publish.log 2>&1
+47 17 * * 1-5 cd $REPO && $PY agent_alpha/publish_alpha.py >> /tmp/agent_alpha_publish.log 2>&1
 $END"
 
 # 기존 블록 제거
