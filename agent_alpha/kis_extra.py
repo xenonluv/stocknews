@@ -33,14 +33,19 @@ def inquire_member(code, market="J"):
         return rows
 
     buy, sell = _rows("shnu"), _rows("seln")
+    if not buy and not sell:
+        return None   # rt_cd=0이어도 거래원 행 전무(장외·미공개·EOD 미정산) → 0.0 날조 대신 결측(원칙3)
     kiwoom = next((b for b in buy if "키움" in b["name"]), None)
+    gq, gr = o.get("glob_ntby_qty"), o.get("glob_shnu_rlim")
     return {
         "top_buyers": buy,
         "top_sellers": sell,
+        # 키움이 매수창구에 없으면 진짜 0집중(결측 아님) — buy 행이 존재하므로 0.0 유효
         "kiwoom_buy_concentration": round((kiwoom["rlim"] or 0) / 100, 4) if kiwoom else 0.0,
         "kiwoom_is_top_buyer": bool(buy and "키움" in buy[0]["name"]),
-        "glob_net_qty": kis._f(o.get("glob_ntby_qty")),
-        "glob_buy_rlim": round(kis._f(o.get("glob_shnu_rlim")) / 100, 4),
+        # 외국계 필드는 '키 부재'를 0순매수로 날조하지 않게 presence 가드
+        "glob_net_qty": kis._f(gq) if gq not in (None, "") else None,
+        "glob_buy_rlim": round(kis._f(gr) / 100, 4) if gr not in (None, "") else None,
     }
 
 

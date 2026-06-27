@@ -34,11 +34,19 @@ def _ctx(row, news_list, rumors):
 
 
 def _p01(v):
+    """0~1로 정규화. 프롬프트는 0~1을 요구하나 kimi가 0~100으로 답하는 경우가 잦아(코어 ai.ts validate와
+    동일 사실) 1<f<=100은 /100으로 구제 — 유효 LLM 표본을 통째로 버리지 않게. 음수·100초과·NaN만 None."""
     try:
         f = float(v)
-        return round(f, 3) if 0.0 <= f <= 1.0 else None
     except Exception:
         return None
+    if f != f:   # NaN
+        return None
+    if 0.0 <= f <= 1.0:
+        return round(f, 3)
+    if 1.0 < f <= 100.0:
+        return round(f / 100, 3)
+    return None
 
 
 def analyze(row, news_list, rumors):

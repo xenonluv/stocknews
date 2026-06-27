@@ -19,4 +19,15 @@ def review(row, rumors):
     out = llm.call_json(SYS, ctx)
     if not isinstance(out, dict):
         return {"redteam_flag": False, "reason": ""}
-    return {"redteam_flag": bool(out.get("redteam_flag")), "reason": str(out.get("reason") or "")[:160]}
+    return {"redteam_flag": _as_flag(out.get("redteam_flag")), "reason": str(out.get("reason") or "")[:160]}
+
+
+def _as_flag(v):
+    """json_object는 bool 타입을 보증 안 함 — 문자열 'false'는 bool()로 True가 되므로 안전 파싱."""
+    if isinstance(v, bool):
+        return v
+    if isinstance(v, (int, float)):
+        return v == 1
+    if isinstance(v, str):
+        return v.strip().lower() in ("true", "1", "yes", "y", "예", "의심", "위험")
+    return False

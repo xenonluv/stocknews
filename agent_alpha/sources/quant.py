@@ -39,8 +39,10 @@ def build(mover, fcache, reg):
         "open": o, "high": h, "low": l, "close": c, "prev_close": pc,
         "change_pct": round((c / pc - 1) * 100, 2) if (pc and c) else None,
         "high_pct": round((h / pc - 1) * 100, 2) if (pc and h) else None,
-        "is_eumbong": bool(c is not None and o is not None and c < o),
-        "below_prev": bool(c is not None and pc is not None and c < pc),
+        # ⚠ daily_prices는 결측 OHLC를 _f→0.0으로 통과시켜 c/o/pc가 None이 안 됨 → `is not None` 가드는 사장.
+        # 0(=결측)을 가짜 음봉/하락으로 날조하지 않도록 truthy 가드로 판정.
+        "is_eumbong": bool(o and c and c < o),
+        "below_prev": bool(pc and c and c < pc),
         "volume": t.get("volume"),
         "value_eok": round((t.get("value") or 0) / 1e8),
     })
@@ -72,7 +74,12 @@ def build(mover, fcache, reg):
         inv = []
     last = inv[-1] if inv else None
     if last and last.get("date") == row["date"]:
-        row.update({"frgn_net": last.get("frgn"), "orgn_net": last.get("orgn"), "prsn_net": last.get("prsn")})
+        f_, o_, p_ = last.get("frgn"), last.get("orgn"), last.get("prsn")
+        # 당일 행이 있어도 셋 다 정확히 0이면 미정산(마감 직후 캡처) 의심 → 0 날조 대신 null(원칙3)
+        if (f_ or 0) == 0 and (o_ or 0) == 0 and (p_ or 0) == 0:
+            row.update({"frgn_net": None, "orgn_net": None, "prsn_net": None})
+        else:
+            row.update({"frgn_net": f_, "orgn_net": o_, "prsn_net": p_})
     else:
         row.update({"frgn_net": None, "orgn_net": None, "prsn_net": None})
 

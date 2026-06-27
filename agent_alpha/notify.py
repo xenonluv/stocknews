@@ -10,7 +10,8 @@ CONF_GATE = 0.6
 
 def _load():
     try:
-        return json.load(open(config.NOTIFIED, encoding="utf-8"))
+        d = json.load(open(config.NOTIFIED, encoding="utf-8"))
+        return d if isinstance(d, dict) else {}   # 유효 JSON이나 비-dict('[]'·'5')면 .get 크래시 방지
     except Exception:
         return {}
 

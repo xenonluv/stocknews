@@ -175,7 +175,7 @@ export function AlphaList({ initial }: { initial: AlphaData }) {
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {movers.map((m) => (
-            <MoverCard key={m.code} m={m} />
+            <MoverCard key={`${m.code}-${m.date ?? ""}`} m={m} />
           ))}
         </div>
       )}

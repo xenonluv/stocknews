@@ -18,8 +18,9 @@ BLOCK="$BEGIN
 10 9 * * 1-5 cd $REPO && $PY agent_alpha/label.py >> /tmp/agent_alpha_label.log 2>&1
 # 채점·보정(장후)
 45 17 * * 1-5 cd $REPO && $PY agent_alpha/calibrate.py >> /tmp/agent_alpha_calibrate.log 2>&1
-# 웹 /alpha 게시(수집 후·보정 후 — alpha.json 변경 시에만 push)
-50 15 * * 1-5 cd $REPO && $PY agent_alpha/publish_alpha.py >> /tmp/agent_alpha_publish.log 2>&1
+# 웹 /alpha 1차 게시(수집 여유 후 — calibration은 전일값, 변경 시에만 push). collect(40)와 15분차로 지연 흡수.
+55 15 * * 1-5 cd $REPO && $PY agent_alpha/publish_alpha.py >> /tmp/agent_alpha_publish.log 2>&1
+# 웹 /alpha 2차 게시(보정 후 — 당일 calibration 반영)
 47 17 * * 1-5 cd $REPO && $PY agent_alpha/publish_alpha.py >> /tmp/agent_alpha_publish.log 2>&1
 $END"
 

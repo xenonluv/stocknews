@@ -109,19 +109,26 @@ def run(dry=False):
             os.replace(tmp, config.ALPHA_JSON)
             try:
                 subprocess.run(["git", "add", "web/data/alpha.json"], cwd=config.REPO, check=True)
-                subprocess.run(["git", "commit", "-m", f"data(alpha): {data['date']} movers {len(data['movers'])}"],
-                               cwd=config.REPO, check=True)
+                # pathspec 한정 commit — 인덱스에 남은 코어/타 푸셔의 staged 엔트리를 alpha 커밋에 섞지 않음(격리).
+                subprocess.run(["git", "commit", "-m", f"data(alpha): {data['date']} movers {len(data['movers'])}",
+                                "--", "web/data/alpha.json"], cwd=config.REPO, check=True)
             except subprocess.CalledProcessError as e:
-                print(f"[alpha-publish] commit 실패(무시): {e}")
+                # commit 실패(신원 미설정·훅 거부 등) → staged 해제하고 push 진행 금지(거짓 '성공' 로그·staged 누수 방지)
+                print(f"[alpha-publish] commit 실패 — 스테이징 해제·push 생략(다음 회차 재시도): {e}")
+                subprocess.run(["git", "reset", "-q", "HEAD", "--", "web/data/alpha.json"], cwd=config.REPO, check=False)
+                return
         if not (need_commit or _ahead_of_origin()):
             print("[alpha-publish] 변경 없음·이미 동기화 — push 생략")
             return
         for _ in range(2):
-            subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=config.REPO, check=False)
+            pl = subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=config.REPO)
+            if pl.returncode != 0:   # rebase 충돌 → 진행중 상태 정리하고 다음 회차 재시도(코어 publish.py와 동일)
+                subprocess.run(["git", "rebase", "--abort"], cwd=config.REPO, check=False)
+                print("[alpha-publish] pull --rebase 충돌 — abort·다음 회차 재시도")
+                return
             if subprocess.run(["git", "push", "origin", "main"], cwd=config.REPO).returncode == 0:
                 print(f"[alpha-publish] alpha.json push (movers {len(data['movers'])})")
                 return
-        subprocess.run(["git", "rebase", "--abort"], cwd=config.REPO, check=False)
         print("[alpha-publish] push 실패(2회) — 다음 회차 재시도")
 
 
