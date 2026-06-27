@@ -21,12 +21,13 @@ _MOVER_FIELDS = ("code", "name", "sector", "mover_type", "date", "change_pct", "
                  "labeled", "hit", "next_return_pct", "next_date")
 
 
-def _recent_forward(n=RECENT_DAYS):
-    """최근 n개 forward 파일의 행을 합쳐 코드별 최신(date max)만 — 오늘 미라벨 + 어제 라벨(익일결과) 동시 노출."""
+def _recent_forward(n=RECENT_DAYS, cap=60):
+    """최근 n개 forward 파일의 행을 '전부' 합침(코드 디둡 안 함) — 같은 코드의 오늘 미라벨 + 어제 라벨(익일결과)
+    행이 각각 날짜와 함께 보이게(디둡하면 최신 미라벨이 어제 라벨 결과를 가려 목적 위배). 날짜·회전율 내림차순, cap개."""
     files = sorted(glob.glob(os.path.join(config.FORWARD_DIR, "*.json")))[-n:]
     if not files:
         return None, []
-    by_code = {}
+    rows = []
     latest = None
     for fp in files:
         try:
@@ -34,13 +35,9 @@ def _recent_forward(n=RECENT_DAYS):
         except Exception:
             continue
         latest = day.get("date") or latest
-        for code, r in (day.get("rows") or {}).items():
-            cur = by_code.get(code)
-            if cur is None or (r.get("date") or "") >= (cur.get("date") or ""):
-                by_code[code] = r
-    rows = sorted(by_code.values(),
-                  key=lambda r: ((r.get("date") or ""), (r.get("turnover_2d_pct") or 0)), reverse=True)
-    return latest, rows
+        rows.extend((day.get("rows") or {}).values())
+    rows.sort(key=lambda r: ((r.get("date") or ""), (r.get("turnover_2d_pct") or 0)), reverse=True)
+    return latest, rows[:cap]
 
 
 def build_alpha():
@@ -68,38 +65,58 @@ def _cmp_key(data):
     return json.dumps({"movers": data.get("movers"), "calibration": calib}, ensure_ascii=False, sort_keys=True)
 
 
+def _committed_key():
+    """git HEAD에 커밋된 alpha.json의 변경키(내용 기준). 미존재/실패 시 None."""
+    try:
+        out = subprocess.run(["git", "show", "HEAD:web/data/alpha.json"],
+                             cwd=config.REPO, capture_output=True, text=True)
+        if out.returncode != 0 or not out.stdout.strip():
+            return None
+        return _cmp_key(json.loads(out.stdout))
+    except Exception:
+        return None
+
+
+def _ahead_of_origin():
+    """origin/main보다 앞선 로컬 커밋이 있나(이전 회차 push 실패로 묶인 커밋 재시도용)."""
+    try:
+        out = subprocess.run(["git", "rev-list", "--count", "origin/main..HEAD"],
+                             cwd=config.REPO, capture_output=True, text=True)
+        return out.returncode == 0 and int((out.stdout or "0").strip() or "0") > 0
+    except Exception:
+        return False
+
+
 def run(dry=False):
     data = build_alpha()
     if dry:
         print(f"[alpha-publish] DRY movers={len(data['movers'])} date={data['date']} (미기록)")
         print(json.dumps(data, ensure_ascii=False, indent=1)[:600])
         return
-    os.makedirs(os.path.dirname(config.ALPHA_JSON), exist_ok=True)
     new_key = _cmp_key(data)
-    try:
-        old = json.load(open(config.ALPHA_JSON, encoding="utf-8"))
-        old_key = _cmp_key(old)
-    except Exception:
-        old_key = None
-    if old_key == new_key:
-        print("[alpha-publish] 변경 없음 — 비기록·push 생략")   # 무변경 시 파일도 안 건드림(working tree 청결)
-        return
-    tmp = config.ALPHA_JSON + ".tmp"
-    open(tmp, "w", encoding="utf-8").write(json.dumps(data, ensure_ascii=False, indent=1))
-    os.replace(tmp, config.ALPHA_JSON)
+    # 변경 판정은 'on-disk'가 아니라 'git HEAD 커밋본' 기준 — 이전 회차가 썼지만 commit/push 못 한 변경이
+    # 묶여도(on-disk만 갱신) 다음 회차가 재커밋/재푸시하도록(상태 드리프트 방지). 내용 동일하면 파일도 안 씀(청결).
+    need_commit = (new_key != _committed_key())
     with open(GIT_LOCK, "w") as lk:
         try:
             fcntl.flock(lk, fcntl.LOCK_EX)
         except Exception:
             pass
-        try:
-            subprocess.run(["git", "add", "web/data/alpha.json"], cwd=config.REPO, check=True)
-            subprocess.run(["git", "commit", "-m", f"data(alpha): {data['date']} movers {len(data['movers'])}"],
-                           cwd=config.REPO, check=True)
-        except subprocess.CalledProcessError as e:
-            print(f"[alpha-publish] commit 실패(무시): {e}")
+        if need_commit:
+            os.makedirs(os.path.dirname(config.ALPHA_JSON), exist_ok=True)
+            tmp = config.ALPHA_JSON + ".tmp"
+            open(tmp, "w", encoding="utf-8").write(json.dumps(data, ensure_ascii=False, indent=1))
+            os.replace(tmp, config.ALPHA_JSON)
+            try:
+                subprocess.run(["git", "add", "web/data/alpha.json"], cwd=config.REPO, check=True)
+                subprocess.run(["git", "commit", "-m", f"data(alpha): {data['date']} movers {len(data['movers'])}"],
+                               cwd=config.REPO, check=True)
+            except subprocess.CalledProcessError as e:
+                print(f"[alpha-publish] commit 실패(무시): {e}")
+        if not (need_commit or _ahead_of_origin()):
+            print("[alpha-publish] 변경 없음·이미 동기화 — push 생략")
             return
-        for attempt in range(2):
+        for _ in range(2):
             subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=config.REPO, check=False)
             if subprocess.run(["git", "push", "origin", "main"], cwd=config.REPO).returncode == 0:
                 print(f"[alpha-publish] alpha.json push (movers {len(data['movers'])})")
