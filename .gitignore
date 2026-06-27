@@ -44,6 +44,9 @@ out/
 *.log
 .DS_Store
 
+# agent_alpha 사이드카 자체 출력(전부 재생성/실험 — 코어 무관, 삭제안전)
+agent_alpha/data/
+
 # 로컬 도구 상태 (bkit)
 .bkit/
 
