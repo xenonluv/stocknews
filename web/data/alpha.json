@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-28T16:42:20+09:00",
+ "generated_at": "2026-06-28T20:00:17+09:00",
  "date": "20260626",
  "movers": [
   {
@@ -596,7 +596,7 @@
   }
  ],
  "calibration": {
-  "generated_at": "2026-06-28T16:40:56+09:00",
+  "generated_at": "2026-06-28T19:59:06+09:00",
   "total_labeled": 0,
   "overall": {
    "n": 0,
@@ -720,6 +720,36 @@
     "status": "관찰중"
    },
    "미해당": {
+    "n": 0,
+    "hit_rate": null,
+    "avg_return": null,
+    "valid": false,
+    "status": "관찰중"
+   }
+  },
+  "by_combined_score": {
+   "<=1": {
+    "n": 0,
+    "hit_rate": null,
+    "avg_return": null,
+    "valid": false,
+    "status": "관찰중"
+   },
+   "2~3": {
+    "n": 0,
+    "hit_rate": null,
+    "avg_return": null,
+    "valid": false,
+    "status": "관찰중"
+   },
+   "4~5": {
+    "n": 0,
+    "hit_rate": null,
+    "avg_return": null,
+    "valid": false,
+    "status": "관찰중"
+   },
+   ">=6": {
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
