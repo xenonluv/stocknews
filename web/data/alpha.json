@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-28T20:08:54+09:00",
+ "generated_at": "2026-06-29T08:45:05+09:00",
  "date": "20260626",
  "movers": [
   {
@@ -39,6 +39,7 @@
    "labeled": false,
    "hit": null,
    "next_return_pct": null,
+   "next_high_pct": null,
    "next_date": null
   },
   {
@@ -78,6 +79,7 @@
    "labeled": false,
    "hit": null,
    "next_return_pct": null,
+   "next_high_pct": null,
    "next_date": null
   },
   {
@@ -117,6 +119,7 @@
    "labeled": false,
    "hit": null,
    "next_return_pct": null,
+   "next_high_pct": null,
    "next_date": null
   },
   {
@@ -156,6 +159,7 @@
    "labeled": false,
    "hit": null,
    "next_return_pct": null,
+   "next_high_pct": null,
    "next_date": null
   },
   {
@@ -195,6 +199,7 @@
    "labeled": false,
    "hit": null,
    "next_return_pct": null,
+   "next_high_pct": null,
    "next_date": null
   },
   {
@@ -234,6 +239,7 @@
    "labeled": false,
    "hit": null,
    "next_return_pct": null,
+   "next_high_pct": null,
    "next_date": null
   },
   {
@@ -273,6 +279,7 @@
    "labeled": false,
    "hit": null,
    "next_return_pct": null,
+   "next_high_pct": null,
    "next_date": null
   },
   {
@@ -312,6 +319,7 @@
    "labeled": false,
    "hit": null,
    "next_return_pct": null,
+   "next_high_pct": null,
    "next_date": null
   },
   {
@@ -351,6 +359,7 @@
    "labeled": false,
    "hit": null,
    "next_return_pct": null,
+   "next_high_pct": null,
    "next_date": null
   },
   {
@@ -390,6 +399,7 @@
    "labeled": false,
    "hit": null,
    "next_return_pct": null,
+   "next_high_pct": null,
    "next_date": null
   },
   {
@@ -429,6 +439,7 @@
    "labeled": false,
    "hit": null,
    "next_return_pct": null,
+   "next_high_pct": null,
    "next_date": null
   },
   {
@@ -468,6 +479,7 @@
    "labeled": false,
    "hit": null,
    "next_return_pct": null,
+   "next_high_pct": null,
    "next_date": null
   },
   {
@@ -507,6 +519,7 @@
    "labeled": false,
    "hit": null,
    "next_return_pct": null,
+   "next_high_pct": null,
    "next_date": null
   },
   {
@@ -546,6 +559,7 @@
    "labeled": false,
    "hit": null,
    "next_return_pct": null,
+   "next_high_pct": null,
    "next_date": null
   },
   {
@@ -585,6 +599,7 @@
    "labeled": false,
    "hit": null,
    "next_return_pct": null,
+   "next_high_pct": null,
    "next_date": null
   },
   {
@@ -624,16 +639,19 @@
    "labeled": false,
    "hit": null,
    "next_return_pct": null,
+   "next_high_pct": null,
    "next_date": null
   }
  ],
  "calibration": {
-  "generated_at": "2026-06-28T19:59:06+09:00",
+  "generated_at": "2026-06-29T08:43:53+09:00",
   "total_labeled": 0,
   "overall": {
    "n": 0,
    "hit_rate": null,
    "avg_return": null,
+   "avg_high": null,
+   "touch7_rate": null,
    "valid": false,
    "status": "관찰중"
   },
@@ -641,6 +659,8 @@
    "n": 0,
    "hit_rate": null,
    "avg_return": null,
+   "avg_high": null,
+   "touch7_rate": null,
    "valid": false,
    "status": "관찰중"
   },
@@ -649,6 +669,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    },
@@ -656,6 +678,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    },
@@ -663,6 +687,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    },
@@ -670,6 +696,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    }
@@ -679,6 +707,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    },
@@ -686,6 +716,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    },
@@ -693,6 +725,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    }
@@ -702,6 +736,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    },
@@ -709,6 +745,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    },
@@ -716,6 +754,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    }
@@ -725,6 +765,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    },
@@ -732,6 +774,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    },
@@ -739,6 +783,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    }
@@ -748,6 +794,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    },
@@ -755,6 +803,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    }
@@ -764,6 +814,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    },
@@ -771,6 +823,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    },
@@ -778,6 +832,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    },
@@ -785,6 +841,8 @@
     "n": 0,
     "hit_rate": null,
     "avg_return": null,
+    "avg_high": null,
+    "touch7_rate": null,
     "valid": false,
     "status": "관찰중"
    }
