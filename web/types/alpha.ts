@@ -58,6 +58,8 @@ export interface AlphaCalibration {
   by_turnover2d_eumbong?: Record<string, AlphaCalibCell>;
   by_spark_eumbong_hi_turnover?: Record<string, AlphaCalibCell>;
   by_close_strength_eumbong?: Record<string, AlphaCalibCell>;
+  by_spark_count?: Record<string, AlphaCalibCell>; // 14:30 스파크 횟수 단독(전체)
+  by_hidden_foreign?: Record<string, AlphaCalibCell>; // 키움 속 외인매집 해당/미해당
   cells?: AlphaCalibCell[];
   llm?: { n: number; brier: number; by_prob_band?: Record<string, AlphaCalibCell> } | null;
   note?: string;

@@ -81,6 +81,8 @@ function CalibrationPanel({ data }: { data: AlphaData }) {
   }
   const byT = cal.by_turnover2d_eumbong ?? {};
   const byS = cal.by_spark_eumbong_hi_turnover ?? {};
+  const bySC = cal.by_spark_count ?? {};
+  const byHF = cal.by_hidden_foreign ?? {};
   return (
     <div className="space-y-3 rounded-lg border border-white/10 bg-white/[0.03] p-4">
       <div className="flex items-baseline justify-between">
@@ -102,6 +104,22 @@ function CalibrationPanel({ data }: { data: AlphaData }) {
         <div className="space-y-1">
           {Object.entries(byS).map(([k, c]) => (
             <CalibCellRow key={k} label={`스파크 ${k}`} c={c} />
+          ))}
+        </div>
+      </div>
+      <div>
+        <p className="mb-1 text-xs font-medium text-muted-foreground">14:30 스파크 횟수별 (전체)</p>
+        <div className="space-y-1">
+          {Object.entries(bySC).map(([k, c]) => (
+            <CalibCellRow key={k} label={`스파크 ${k}`} c={c} />
+          ))}
+        </div>
+      </div>
+      <div>
+        <p className="mb-1 text-xs font-medium text-muted-foreground">🕵 키움 속 외인매집</p>
+        <div className="space-y-1">
+          {Object.entries(byHF).map(([k, c]) => (
+            <CalibCellRow key={k} label={k} c={c} />
           ))}
         </div>
       </div>

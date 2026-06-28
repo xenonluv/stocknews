@@ -64,6 +64,8 @@ def run():
         "by_turnover2d_eumbong": {},     # 1순위축: 2일회전율(음봉)
         "by_spark_eumbong_hi_turnover": {},  # 음봉 + 고회전(200%+) 중 스파크별
         "by_close_strength_eumbong": {},
+        "by_spark_count": {},            # 14:30 스파크 횟수 단독(측정행 전체·음봉/회전 무관) — 회장님 핵심신호 직접검증
+        "by_hidden_foreign": {},         # 키움 속 숨은 외국인 매집(해당/미해당) — frgn+>0·외국계≈0·키움≥30%
         "cells": [],                     # turnover2d × spark × close_strength × 음봉 (min_n 게이트)
         "llm": None,
         "min_n": config.CALIB_MIN_N,
@@ -102,6 +104,23 @@ def run():
         st = _stat(grp)
         st.update({"turnover2d": tb, "spark": sb, "close_strength": cb})
         out["cells"].append(st)
+
+    # 14:30 스파크 횟수 단독(측정행 전체 — 음봉/회전 조건 없이. 회장님 핵심신호 직접 검증)
+    measured = [r for r in rows if _measured(r)]
+    for sb in ("0", f"1~{config.SPARK_MIN - 1}", f">={config.SPARK_MIN}"):
+        out["by_spark_count"][sb] = _stat([r for r in measured if _spark_band(r.get("spark_1430_count")) == sb])
+
+    # 키움 속 숨은 외국인 매집(해당/미해당) — ⚠ 웹 AlphaList.hiddenForeign과 산식 동기화 필수.
+    # frgn_net>0 AND |glob_net_qty|<|frgn|×10% AND kiwoom_buy_concentration≥0.3. 결측(None)이면 분류 제외(날조 방지).
+    def _hidden_foreign(r):
+        fn, gq, kc = r.get("frgn_net"), r.get("glob_net_qty"), r.get("kiwoom_buy_concentration")
+        if fn is None or gq is None or kc is None:
+            return None
+        if fn <= 0 or abs(gq) >= abs(fn) * 0.1 or kc < 0.3:
+            return False
+        return True
+    out["by_hidden_foreign"]["해당"] = _stat([r for r in rows if _hidden_foreign(r) is True])
+    out["by_hidden_foreign"]["미해당"] = _stat([r for r in rows if _hidden_foreign(r) is False])
 
     # LLM Brier(있으면)
     llm_rows = [r for r in rows if isinstance(r.get("prob_up"), (int, float))]
