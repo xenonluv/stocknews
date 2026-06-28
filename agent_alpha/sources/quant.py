@@ -91,5 +91,19 @@ def build(mover, fcache, reg):
                 "top_buyers": mem.get("top_buyers"), "top_sellers": mem.get("top_sellers")})
 
     row.update(reg or {})
+
+    # ── 키움 속 숨은 외국인 매집 강도 + 합산 종합점수 (SSOT — 웹 AlphaList·calibrate가 이 저장값을 읽음) ──
+    # ⚠ 이 산식이 정본. 웹 hiddenForeign·calibrate _hidden_foreign은 이 필드 우선·결측 시에만 동일식 재계산.
+    fn, gq, kc = row.get("frgn_net"), row.get("glob_net_qty"), row.get("kiwoom_buy_concentration")
+    if fn is None or gq is None or kc is None:
+        hf = None                                              # 결측 → 판정 불가(날조 금지)
+    elif fn <= 0 or abs(gq) >= abs(fn) * 0.1 or kc < 0.3:
+        hf = 0                                                 # 미해당
+    else:
+        hf = 3 if fn >= 100000 else 2 if fn >= 30000 else 1    # 외인 순매수 규모로 강도
+    row["hidden_foreign_level"] = hf
+    sr = -1 if row.get("spark_source") == "none" else (row.get("spark_1430_count") or 0)  # 미측정 -1
+    row["combined_score"] = sr + (hf or 0)                     # 스파크 횟수 + 외인매집 강도
+
     row["data_ok"] = True
     return row

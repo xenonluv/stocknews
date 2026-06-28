@@ -36,10 +36,11 @@ function sparkRank(m: AlphaMover) {
 // 외국계 창구 순매수는 거의 0(<외인순매수×10%) AND 키움 매수집중≥30% → 외국인이 외국계 창구를
 // 안 거치고 키움 등 리테일 창구로 숨어 매집한 흔적(의심). 데이터 결측(null)이면 판정 안 함.
 function hiddenForeign(m: AlphaMover): number {
+  if (m.hidden_foreign_level != null) return m.hidden_foreign_level; // SSOT: quant 저장값 우선
   const fn = m.frgn_net,
     gq = m.glob_net_qty,
     kc = m.kiwoom_buy_concentration;
-  if (fn == null || gq == null || kc == null) return 0;
+  if (fn == null || gq == null || kc == null) return 0; // 결측(옛 행) 재계산 fallback
   if (fn <= 0 || Math.abs(gq) >= Math.abs(fn) * 0.1 || kc < 0.3) return 0;
   return fn >= 100000 ? 3 : fn >= 30000 ? 2 : 1; // 외인 순매수 규모로 강도
 }
@@ -83,6 +84,7 @@ function CalibrationPanel({ data }: { data: AlphaData }) {
   const byS = cal.by_spark_eumbong_hi_turnover ?? {};
   const bySC = cal.by_spark_count ?? {};
   const byHF = cal.by_hidden_foreign ?? {};
+  const byCB = cal.by_combined_score ?? {};
   return (
     <div className="space-y-3 rounded-lg border border-white/10 bg-white/[0.03] p-4">
       <div className="flex items-baseline justify-between">
@@ -120,6 +122,14 @@ function CalibrationPanel({ data }: { data: AlphaData }) {
         <div className="space-y-1">
           {Object.entries(byHF).map(([k, c]) => (
             <CalibCellRow key={k} label={k} c={c} />
+          ))}
+        </div>
+      </div>
+      <div>
+        <p className="mb-1 text-xs font-medium text-muted-foreground">종합점수(스파크+외인매집)별 — 정렬 순위 검증</p>
+        <div className="space-y-1">
+          {Object.entries(byCB).map(([k, c]) => (
+            <CalibCellRow key={k} label={`점수 ${k}`} c={c} />
           ))}
         </div>
       </div>
@@ -219,8 +229,9 @@ export function AlphaList({ initial }: { initial: AlphaData }) {
     };
   }, []);
 
-  // 종합점수 = 스파크 횟수(미측정 -1) + 키움 속 외인매집 강도(0~3). 둘 다 강한 종목이 최상위. 동점은 2일회전율.
-  const combined = (m: AlphaMover) => sparkRank(m) + hiddenForeign(m);
+  // 종합점수 = 스파크 횟수(미측정 -1) + 키움 속 외인매집 강도(0~3). SSOT: quant 저장값(combined_score) 우선,
+  // 없으면(옛 행) 재구성. 둘 다 강한 종목이 최상위. 동점은 2일회전율.
+  const combined = (m: AlphaMover) => m.combined_score ?? sparkRank(m) + hiddenForeign(m);
   const movers = [...(data.movers ?? [])].sort((a, b) => {
     const d = combined(b) - combined(a);
     return d !== 0 ? d : (b.turnover_2d_pct ?? 0) - (a.turnover_2d_pct ?? 0);

@@ -23,6 +23,8 @@ export interface AlphaMover {
   kiwoom_buy_concentration?: number | null; // 0~1
   kiwoom_is_top_buyer?: boolean;
   glob_net_qty?: number | null;
+  hidden_foreign_level?: number | null; // 키움 속 외인매집 강도 0~3 (quant SSOT), null=결측
+  combined_score?: number; // 스파크 횟수 + 외인매집 강도 합산(정렬 순위, quant SSOT)
   kospi_chg?: number | null;
   kosdaq_chg?: number | null;
   catalyst?: string;
@@ -60,6 +62,7 @@ export interface AlphaCalibration {
   by_close_strength_eumbong?: Record<string, AlphaCalibCell>;
   by_spark_count?: Record<string, AlphaCalibCell>; // 14:30 스파크 횟수 단독(전체)
   by_hidden_foreign?: Record<string, AlphaCalibCell>; // 키움 속 외인매집 해당/미해당
+  by_combined_score?: Record<string, AlphaCalibCell>; // 합산 종합점수(스파크+외인매집) 밴드
   cells?: AlphaCalibCell[];
   llm?: { n: number; brier: number; by_prob_band?: Record<string, AlphaCalibCell> } | null;
   note?: string;
