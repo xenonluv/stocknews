@@ -44,9 +44,9 @@ function hiddenForeign(m: AlphaMover): number {
   return fn >= 100000 ? 3 : fn >= 30000 ? 2 : 1; // 외인 순매수 규모로 강도
 }
 const HF_BADGE: Record<number, string> = {
-  1: "bg-violet-500/10 text-violet-300",
-  2: "bg-violet-500/20 text-violet-200",
-  3: "bg-violet-500/30 text-violet-100 font-semibold",
+  1: "bg-orange-400/15 text-orange-300",
+  2: "bg-orange-400/25 text-orange-300 font-medium",
+  3: "bg-orange-400/40 text-orange-200 font-bold",
 };
 
 function CalibCellRow({ label, c }: { label: string; c?: AlphaCalibCell }) {
