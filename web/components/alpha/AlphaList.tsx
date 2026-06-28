@@ -27,9 +27,9 @@ function sparkClass(count?: number | null, source?: string) {
   return "text-muted-foreground"; // 측정됐으나 0회
 }
 
-// 스파크 큰 순 정렬값 — 미측정(none)은 맨 뒤(-1), 측정 0은 0.
+// 스파크 큰 순 정렬값 — 미측정(none)은 맨 뒤(-1), 측정 행은 count(결측 0 — quant/calibrate `(count or 0)`와 정합).
 function sparkRank(m: AlphaMover) {
-  return m.spark_source === "none" ? -1 : m.spark_1430_count ?? -1;
+  return m.spark_source === "none" ? -1 : m.spark_1430_count ?? 0;
 }
 
 // '키움 속 숨은 외국인 매집' 흔적 강도(0=없음, 1~3 강). 정의: 투자자별 외국인 순매수(+)인데
