@@ -32,6 +32,23 @@ function sparkRank(m: AlphaMover) {
   return m.spark_source === "none" ? -1 : m.spark_1430_count ?? -1;
 }
 
+// '키움 속 숨은 외국인 매집' 흔적 강도(0=없음, 1~3 강). 정의: 투자자별 외국인 순매수(+)인데
+// 외국계 창구 순매수는 거의 0(<외인순매수×10%) AND 키움 매수집중≥30% → 외국인이 외국계 창구를
+// 안 거치고 키움 등 리테일 창구로 숨어 매집한 흔적(의심). 데이터 결측(null)이면 판정 안 함.
+function hiddenForeign(m: AlphaMover): number {
+  const fn = m.frgn_net,
+    gq = m.glob_net_qty,
+    kc = m.kiwoom_buy_concentration;
+  if (fn == null || gq == null || kc == null) return 0;
+  if (fn <= 0 || Math.abs(gq) >= Math.abs(fn) * 0.1 || kc < 0.3) return 0;
+  return fn >= 100000 ? 3 : fn >= 30000 ? 2 : 1; // 외인 순매수 규모로 강도
+}
+const HF_BADGE: Record<number, string> = {
+  1: "bg-violet-500/10 text-violet-300",
+  2: "bg-violet-500/20 text-violet-200",
+  3: "bg-violet-500/30 text-violet-100 font-semibold",
+};
+
 function CalibCellRow({ label, c }: { label: string; c?: AlphaCalibCell }) {
   return (
     <div className="flex items-center justify-between gap-2 text-xs tabular-nums">
@@ -100,6 +117,7 @@ function CalibrationPanel({ data }: { data: AlphaData }) {
 
 function MoverCard({ m }: { m: AlphaMover }) {
   const danger = m.redteam_flag || (m.manipulation_risk ?? 0) >= 0.6;
+  const hf = hiddenForeign(m);
   return (
     <div className="space-y-2 rounded-lg border border-white/10 bg-white/[0.045] p-4">
       <div className="flex items-baseline justify-between gap-2">
@@ -136,6 +154,14 @@ function MoverCard({ m }: { m: AlphaMover }) {
           </span>
         )}
         {danger && <span className="rounded bg-warning/15 px-1.5 py-0.5 text-warning">⚠ 작전/조작 의심</span>}
+        {hf > 0 && (
+          <span
+            className={`rounded px-1.5 py-0.5 ${HF_BADGE[hf]}`}
+            title="투자자별 외국인 순매수(+)인데 외국계 창구 순매수는 0 → 외국인이 외국계 창구를 안 거치고 키움 등 리테일 창구로 숨어 매집한 흔적(의심·창구≠주체)"
+          >
+            🕵 키움 속 외인매집 +{Math.round((m.frgn_net ?? 0) / 1000)}k
+          </span>
+        )}
         {m.labeled && m.hit != null && (
           <span className={`rounded px-1.5 py-0.5 ${m.hit ? "bg-up/15 text-up" : "bg-down/15 text-down"}`}>
             익일 {m.hit ? "↑" : "↓"} {pct(m.next_return_pct, 1)}
