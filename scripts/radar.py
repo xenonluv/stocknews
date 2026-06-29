@@ -656,7 +656,10 @@ def update_live_explosions(reg, p):
     # KIS/네이버 도달성: 한 시장이라도 랭킹 수집이 실패(rank_fail>0)했거나, 양 시장 모두 빈손이거나,
     # price_now가 절반 이상 실패하면 '부분장애'로 본다 — 한 시장만 죽고 다른 시장 행이 있어 거짓 '깨끗'
     # 게시(그 시장 폭발 누락)되는 것을 방지(개편 전 단일시장 실패 전파 동작 복원).
-    scan_ok = up_rank_total > 0 and rank_fail == 0 and not (
+    # ⚠ rank_fail==0이면 네이버 랭킹 수집은 정상 — up_rank_total==0(200+빈 stocks: 휴장일/장전/빈 랭킹)도
+    # '정상 빈 상태'로 통과시켜 거짓 수집장애 exit(3)·stale 미게시를 막는다. 실제 장애는 랭킹 예외(rank_fail>0)
+    # 또는 price_now 과반 실패만으로 본다(휴장일은 분봉 날짜필터로 어차피 0건 안전 게시).
+    scan_ok = rank_fail == 0 and not (
         attempted > 0 and price_errors >= max(2, (attempted + 1) // 2))
     return count, scan_ok, today_explosions, youtong_candidates
 

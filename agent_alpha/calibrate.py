@@ -137,8 +137,11 @@ def run():
         c = r.get("combined_score")
         if c is not None:
             return c
+        lv = _hf_level(r)
+        if lv is None:
+            return None   # 외인매집 결측 → 종합점수 미정(밴드 제외, 결측을 0으로 섞지 않음)
         sr = -1 if r.get("spark_source") == "none" else (r.get("spark_1430_count") or 0)
-        return sr + (_hf_level(r) or 0)
+        return sr + lv
 
     def _combined_band(c):
         if c is None:

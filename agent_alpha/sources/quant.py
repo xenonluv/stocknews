@@ -103,7 +103,7 @@ def build(mover, fcache, reg):
         hf = 3 if fn >= 100000 else 2 if fn >= 30000 else 1    # 외인 순매수 규모로 강도
     row["hidden_foreign_level"] = hf
     sr = -1 if row.get("spark_source") == "none" else (row.get("spark_1430_count") or 0)  # 미측정 -1
-    row["combined_score"] = sr + (hf or 0)                     # 스파크 횟수 + 외인매집 강도
+    row["combined_score"] = (sr + hf) if hf is not None else None  # 외인매집 결측(None)이면 종합점수도 None(calibrate 밴드 오염 방지)
 
     row["data_ok"] = True
     return row
