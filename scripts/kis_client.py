@@ -509,8 +509,9 @@ if __name__ == "__main__":
                     rv = revoke_token(_old)
                     print("[kis] 기존 토큰 폐기:", rv.get("code") or rv.get("message") or rv.get("_error") or rv)
             except Exception as e:
-                print("[kis] revoke 시도 실패:", e)
-                rv = {"_error": str(e)}
+                # 캐시 읽기 실패(손상 JSON 등) = 'revoke 미시도'일 뿐 드리프트 신호 아님 — rv는 None 유지.
+                # (get_token(force=True)가 손상 캐시를 흡수하고 fresh 토큰을 정상 발급하므로 07:00 고정은 달성됨)
+                print("[kis] 캐시 읽기 실패 — revoke 생략(신규 발급 진행):", e)
         # ⚠ 캐시를 미리 지우지 않는다 — force=True가 어차피 tokenP를 호출하고, 선삭제 시 발급 실패면
         # 07:00~09시 토큰 공백이 생긴다. 기존 캐시 보존이 안전(폐기된 토큰이면 09시 publish가 401→자동 재발급).
         try:
