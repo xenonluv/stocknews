@@ -18,10 +18,13 @@ def _age_days(signal_date):
 
 
 def _next_bar(code, signal_date):
-    """signal_date '바로 다음' 완성 거래일 일봉(J 공식) | None. 오늘(미완성)·정지봉(close==0) 제외.
-    ⚠ 윈도(최근 40거래일)가 신호일을 못 덮으면(너무 오래된 행) after[0]가 진짜 익일봉이 아니므로 None 반환 —
-    그래야 신호일이 윈도 안일 때 첫 '신호일<봉<오늘' 봉이 곧 T+1임이 보장된다(aged 행 far-future 오라벨 방지)."""
-    today = config.today_yyyymmdd()
+    """signal_date '바로 다음' 완성 거래일 일봉(J 공식) | None. 정지봉(close==0) 제외.
+    ⚠ 장 마감(15:30) 후면 '오늘 일봉'도 완성이므로 익일결과로 포함 — 신호 익일 결과를 그날 마감 후 16시에
+    바로 라벨(다음날 아침까지 안 기다림, 회장님 지시 2026-06-29). 장중이면 오늘봉 미완성이라 제외.
+    ⚠ 윈도(최근 40거래일)가 신호일을 못 덮으면 after[0]가 진짜 익일봉이 아니므로 None(aged 행 far-future 오라벨 방지)."""
+    now = datetime.now(config.KST)
+    today = now.strftime("%Y%m%d")
+    inc_today = now.strftime("%H%M") >= "1530"   # 마감 후 = 오늘봉 완성 → 익일결과로 채택
     try:
         d = kis.daily_prices(code, days=40, market="J")
     except Exception:
@@ -29,7 +32,8 @@ def _next_bar(code, signal_date):
     dates = [x["date"] for x in d if x.get("date")]
     if not dates or min(dates) > signal_date:
         return None  # 윈도가 신호일 이전까지 못 내려감 → 익일봉 보장 불가 → 보류(run에서 만료 처리)
-    after = [x for x in d if signal_date < x["date"] < today and (x.get("close") or 0) > 0]
+    after = [x for x in d if signal_date < x["date"] and (x["date"] < today or (inc_today and x["date"] == today))
+             and (x.get("close") or 0) > 0]
     return after[0] if after else None
 
 
