@@ -501,6 +501,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "--issue-token":
         # 매일 아침 07:00 cron 고정 발행 — KIS는 유효 토큰 있으면 tokenP가 기존을 반환(force 무시)하므로,
         # 기존 토큰을 revoke(폐기)한 뒤 새로 발급해야 만료시각이 07:00 기준으로 고정된다.
+        rv = None
         if os.path.exists(TOKEN_CACHE):
             try:
                 _old = json.load(open(TOKEN_CACHE, encoding="utf-8")).get("token")
@@ -508,14 +509,24 @@ if __name__ == "__main__":
                     rv = revoke_token(_old)
                     print("[kis] 기존 토큰 폐기:", rv.get("code") or rv.get("message") or rv.get("_error") or rv)
             except Exception as e:
-                print("[kis] revoke 스킵:", e)
-            _invalidate_token()  # 로컬 캐시 삭제 → 다음 get_token이 새로 발급
-        get_token(force=True)
+                print("[kis] revoke 시도 실패:", e)
+                rv = {"_error": str(e)}
+        # ⚠ 캐시를 미리 지우지 않는다 — force=True가 어차피 tokenP를 호출하고, 선삭제 시 발급 실패면
+        # 07:00~09시 토큰 공백이 생긴다. 기존 캐시 보존이 안전(폐기된 토큰이면 09시 publish가 401→자동 재발급).
         try:
-            print("[kis] 토큰 신규 발급 완료(07:00 고정) — 만료:",
-                  json.load(open(TOKEN_CACHE, encoding="utf-8")).get("expired"))
+            get_token(force=True)
+        except Exception as e:
+            print(f"[kis] ⚠ 토큰 발급 실패 — 기존 캐시 유지, 09시 publish가 자가복구: {e}")
+            sys.exit(1)
+        try:
+            exp = json.load(open(TOKEN_CACHE, encoding="utf-8")).get("expired")
         except Exception:
-            print("[kis] 토큰 신규 발급 완료(07:00 고정)")
+            exp = None
+        # revoke 실패면 KIS가 기존(드리프트) 토큰을 반환했을 수 있어 '07:00 고정' 미달성 → 경고+비0(cron 로그 식별).
+        if rv is not None and rv.get("_error"):
+            print(f"[kis] ⚠ revoke 실패로 07:00 고정 미달성 가능(만료: {exp}) — 다음 회차 재시도")
+            sys.exit(1)
+        print(f"[kis] 토큰 발급 완료(07:00 고정) — 만료: {exp}")
         sys.exit(0)
     if len(sys.argv) > 1 and sys.argv[1] == "rank":
         markets = [sys.argv[2]] if len(sys.argv) > 2 else ["KOSPI", "KOSDAQ"]
