@@ -262,6 +262,26 @@ export function AlphaList({ initial }: { initial: AlphaData }) {
           ))}
         </div>
       )}
+      {(data.yesterday_results?.length ?? 0) > 0 && (
+        <div className="space-y-3 border-t border-white/10 pt-5">
+          <h2 className="text-sm font-bold">
+            📋 어제
+            {data.yesterday_date && data.yesterday_date.length === 8
+              ? ` (${data.yesterday_date.slice(4, 6)}/${data.yesterday_date.slice(6)})`
+              : ""}{" "}
+            결과 → 익일
+            <span className="ml-2 text-xs font-normal text-muted-foreground tabular-nums">
+              익일상승 {data.yesterday_results!.filter((m) => m.hit).length}/{data.yesterday_results!.length} · 고가 +7%터치{" "}
+              {data.yesterday_results!.filter((m) => (m.next_high_pct ?? 0) >= 7).length}/{data.yesterday_results!.length}
+            </span>
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {data.yesterday_results!.map((m, i) => (
+              <MoverCard key={`y-${m.code}-${i}`} m={m} />
+            ))}
+          </div>
+        </div>
+      )}
       <p className="text-xs text-warning">{data.disclaimer}</p>
     </div>
   );

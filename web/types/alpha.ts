@@ -76,6 +76,8 @@ export interface AlphaData {
   generated_at: string;
   date: string | null;
   movers: AlphaMover[];
+  yesterday_date?: string | null; // 어제(직전 거래일) 신호일
+  yesterday_results?: AlphaMover[]; // 어제 종목 + 익일결과(라벨 완료) — '어제 결과' 섹션
   calibration: AlphaCalibration | null;
   disclaimer: string;
 }

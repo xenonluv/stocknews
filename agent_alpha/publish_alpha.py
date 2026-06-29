@@ -50,9 +50,28 @@ def _recent_forward(n=RECENT_DAYS, cap=120):
     return latest, rows[:cap]
 
 
+def _yesterday_results(cap=60):
+    """'오늘 movers'의 직전 거래일 forward 중 라벨 완료 행(익일결과 있음) — /alpha '어제 결과' 섹션용.
+    movers(최신 1파일)와 분리해 별도 노출(회장님 지시 2026-06-29). 익일 등락 내림차순."""
+    files = sorted(glob.glob(os.path.join(config.FORWARD_DIR, "*.json")))
+    if len(files) < 2:
+        return None, []
+    fp = files[-2]   # movers=files[-1](최신)의 바로 직전 거래일
+    try:
+        day = json.load(open(fp, encoding="utf-8"))
+    except Exception:
+        return None, []
+    rows = [r for r in (day.get("rows") or {}).values()
+            if r.get("labeled") and r.get("hit") is not None and r.get("next_return_pct") is not None]
+    rows.sort(key=lambda r: -(r.get("next_return_pct") if r.get("next_return_pct") is not None else -999))
+    return day.get("date"), rows[:cap]
+
+
 def build_alpha():
     date, rows = _recent_forward()
     movers = [{k: r.get(k) for k in _MOVER_FIELDS} for r in rows]
+    y_date, y_rows = _yesterday_results()
+    yesterday = [{k: r.get(k) for k in _MOVER_FIELDS} for r in y_rows]
     try:
         calib = json.load(open(config.CALIBRATION, encoding="utf-8"))
     except Exception:
@@ -61,6 +80,8 @@ def build_alpha():
         "generated_at": config.now_iso(),
         "date": date,
         "movers": movers,
+        "yesterday_date": y_date,
+        "yesterday_results": yesterday,   # 직전 거래일 종목 + 익일결과(어제 결과 섹션)
         "calibration": calib,
         "disclaimer": ("측정·실험용 — 매수 추천이 아닙니다. 스파크/거래원은 약신호(창구≠주체)이며, "
                        "전진검증 표본이 충분(min_n)할 때까지 calibration은 '관찰중'입니다."),
