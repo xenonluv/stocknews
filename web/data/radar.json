@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-29 10:02:15 KST",
+ "generated_at": "2026-06-29 10:12:43 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -83,11 +83,11 @@
    "code": "111710",
    "name": "남화산업",
    "sector": "오락·문화",
-   "change_pct": 26.53,
+   "change_pct": 23.47,
    "high_pct": 28.16,
-   "vol_turnover_pct": 77.0,
-   "value_eok": 135,
-   "price": 6200.0,
+   "vol_turnover_pct": 79.9,
+   "value_eok": 140,
+   "price": 6050.0,
    "first_seen": "09:41"
   }
  ],
