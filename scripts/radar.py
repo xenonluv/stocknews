@@ -838,6 +838,19 @@ def prepare_reaccum_registry(p):
     # 폭발(/forecast)로 승격한 종목은 youtong서 제거하도록 today_explosions 코드를 넘긴다(역할 분리).
     try:
         explosion_codes = {e.get("code") for e in today_explosions}
+        # 폭발(라이브+백필) 종목을 youtong 후보로 보강 — scan(update_live_explosions)이 간헐/구조적으로
+        # 종목을 누락해도(예: price 조회 실패) 폭발 종목은 today_explosions(registry 백필)에 남으므로,
+        # 그걸 youtong 후보로 흡수해 '한 번 폭발=적중이면 youtong 유지'(회장님 지시)를 보장. 스파크는 prepare가 확정.
+        _yt_codes = {c["code"] for c in youtong_candidates}
+        for e in today_explosions:
+            if e.get("code") in _yt_codes:
+                continue
+            youtong_candidates.append({
+                "code": e["code"], "name": e.get("name"), "sector": e.get("sector", ""),
+                "change_pct": e.get("change_pct"), "high_pct": e.get("high_pct"),
+                "vol_turnover_pct": e.get("vol_turnover_pct"), "value_eok": e.get("value_eok"),
+                "price": e.get("price"), "exploded": True,
+            })
         today_youtong = prepare_youtong(youtong_candidates, p, explosion_codes)
     except Exception as e:
         today_youtong = []
