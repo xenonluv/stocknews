@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-29T15:43:00+09:00",
+ "generated_at": "2026-06-29T16:51:52+09:00",
  "date": "20260629",
  "movers": [
   {
@@ -250,23 +250,23 @@
   }
  ],
  "calibration": {
-  "generated_at": "2026-06-29T08:43:53+09:00",
-  "total_labeled": 0,
+  "generated_at": "2026-06-29T16:36:38+09:00",
+  "total_labeled": 16,
   "overall": {
-   "n": 0,
-   "hit_rate": null,
-   "avg_return": null,
-   "avg_high": null,
-   "touch7_rate": null,
+   "n": 16,
+   "hit_rate": 62.5,
+   "avg_return": 4.8,
+   "avg_high": 17.18,
+   "touch7_rate": 87.5,
    "valid": false,
    "status": "관찰중"
   },
   "eumbong_overall": {
-   "n": 0,
-   "hit_rate": null,
-   "avg_return": null,
-   "avg_high": null,
-   "touch7_rate": null,
+   "n": 8,
+   "hit_rate": 62.5,
+   "avg_return": 2.85,
+   "avg_high": 18.91,
+   "touch7_rate": 100.0,
    "valid": false,
    "status": "관찰중"
   },
@@ -281,40 +281,40 @@
     "status": "관찰중"
    },
    "100~200": {
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
-    "avg_high": null,
-    "touch7_rate": null,
+    "n": 2,
+    "hit_rate": 100.0,
+    "avg_return": 14.43,
+    "avg_high": 28.76,
+    "touch7_rate": 100.0,
     "valid": false,
     "status": "관찰중"
    },
    "200~400": {
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
-    "avg_high": null,
-    "touch7_rate": null,
+    "n": 4,
+    "hit_rate": 50.0,
+    "avg_return": -3.11,
+    "avg_high": 11.77,
+    "touch7_rate": 100.0,
     "valid": false,
     "status": "관찰중"
    },
    "400~inf": {
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
-    "avg_high": null,
-    "touch7_rate": null,
+    "n": 2,
+    "hit_rate": 50.0,
+    "avg_return": 3.19,
+    "avg_high": 23.34,
+    "touch7_rate": 100.0,
     "valid": false,
     "status": "관찰중"
    }
   },
   "by_spark_eumbong_hi_turnover": {
    "0": {
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
-    "avg_high": null,
-    "touch7_rate": null,
+    "n": 2,
+    "hit_rate": 50.0,
+    "avg_return": -0.37,
+    "avg_high": 10.16,
+    "touch7_rate": 100.0,
     "valid": false,
     "status": "관찰중"
    },
@@ -328,31 +328,31 @@
     "status": "관찰중"
    },
    ">=2": {
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
-    "avg_high": null,
-    "touch7_rate": null,
+    "n": 4,
+    "hit_rate": 50.0,
+    "avg_return": -1.33,
+    "avg_high": 18.36,
+    "touch7_rate": 100.0,
     "valid": false,
     "status": "관찰중"
    }
   },
   "by_close_strength_eumbong": {
    "0.0~0.3": {
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
-    "avg_high": null,
-    "touch7_rate": null,
+    "n": 6,
+    "hit_rate": 66.7,
+    "avg_return": 5.85,
+    "avg_high": 17.48,
+    "touch7_rate": 100.0,
     "valid": false,
     "status": "관찰중"
    },
    "0.3~0.6": {
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
-    "avg_high": null,
-    "touch7_rate": null,
+    "n": 2,
+    "hit_rate": 50.0,
+    "avg_return": -6.15,
+    "avg_high": 23.2,
+    "touch7_rate": 100.0,
     "valid": false,
     "status": "관찰중"
    },
@@ -368,92 +368,165 @@
   },
   "by_spark_count": {
    "0": {
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
-    "avg_high": null,
-    "touch7_rate": null,
+    "n": 3,
+    "hit_rate": 66.7,
+    "avg_return": 9.76,
+    "avg_high": 16.78,
+    "touch7_rate": 100.0,
     "valid": false,
     "status": "관찰중"
    },
    "1~1": {
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
-    "avg_high": null,
-    "touch7_rate": null,
+    "n": 2,
+    "hit_rate": 100.0,
+    "avg_return": 16.65,
+    "avg_high": 25.46,
+    "touch7_rate": 100.0,
     "valid": false,
     "status": "관찰중"
    },
    ">=2": {
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
-    "avg_high": null,
-    "touch7_rate": null,
+    "n": 11,
+    "hit_rate": 54.5,
+    "avg_return": 1.29,
+    "avg_high": 15.78,
+    "touch7_rate": 81.8,
     "valid": false,
     "status": "관찰중"
    }
   },
   "by_hidden_foreign": {
    "해당": {
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
-    "avg_high": null,
-    "touch7_rate": null,
+    "n": 3,
+    "hit_rate": 66.7,
+    "avg_return": 6.09,
+    "avg_high": 18.91,
+    "touch7_rate": 100.0,
     "valid": false,
     "status": "관찰중"
    },
    "미해당": {
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
-    "avg_high": null,
-    "touch7_rate": null,
+    "n": 13,
+    "hit_rate": 61.5,
+    "avg_return": 4.5,
+    "avg_high": 16.78,
+    "touch7_rate": 84.6,
     "valid": false,
     "status": "관찰중"
    }
   },
   "by_combined_score": {
    "<=1": {
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
-    "avg_high": null,
-    "touch7_rate": null,
+    "n": 5,
+    "hit_rate": 80.0,
+    "avg_return": 12.51,
+    "avg_high": 20.25,
+    "touch7_rate": 100.0,
     "valid": false,
     "status": "관찰중"
    },
    "2~3": {
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
-    "avg_high": null,
-    "touch7_rate": null,
+    "n": 5,
+    "hit_rate": 60.0,
+    "avg_return": -2.07,
+    "avg_high": 13.41,
+    "touch7_rate": 60.0,
     "valid": false,
     "status": "관찰중"
    },
    "4~5": {
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
-    "avg_high": null,
-    "touch7_rate": null,
+    "n": 5,
+    "hit_rate": 60.0,
+    "avg_return": 8.29,
+    "avg_high": 18.55,
+    "touch7_rate": 100.0,
     "valid": false,
     "status": "관찰중"
    },
    ">=6": {
-    "n": 0,
-    "hit_rate": null,
-    "avg_return": null,
-    "avg_high": null,
-    "touch7_rate": null,
+    "n": 1,
+    "hit_rate": 0.0,
+    "avg_return": -16.9,
+    "avg_high": 13.76,
+    "touch7_rate": 100.0,
     "valid": false,
     "status": "관찰중"
    }
   },
-  "cells": [],
+  "cells": [
+   {
+    "n": 1,
+    "hit_rate": 100.0,
+    "avg_return": 17.56,
+    "avg_high": 27.8,
+    "touch7_rate": 100.0,
+    "valid": false,
+    "status": "관찰중",
+    "turnover2d": "100~200",
+    "spark": "1~1",
+    "close_strength": "0.0~0.3"
+   },
+   {
+    "n": 1,
+    "hit_rate": 100.0,
+    "avg_return": 11.3,
+    "avg_high": 29.71,
+    "touch7_rate": 100.0,
+    "valid": false,
+    "status": "관찰중",
+    "turnover2d": "100~200",
+    "spark": ">=2",
+    "close_strength": "0.3~0.6"
+   },
+   {
+    "n": 2,
+    "hit_rate": 50.0,
+    "avg_return": -0.37,
+    "avg_high": 10.16,
+    "touch7_rate": 100.0,
+    "valid": false,
+    "status": "관찰중",
+    "turnover2d": "200~400",
+    "spark": "0",
+    "close_strength": "0.0~0.3"
+   },
+   {
+    "n": 2,
+    "hit_rate": 50.0,
+    "avg_return": -5.85,
+    "avg_high": 13.38,
+    "touch7_rate": 100.0,
+    "valid": false,
+    "status": "관찰중",
+    "turnover2d": "200~400",
+    "spark": ">=2",
+    "close_strength": "0.0~0.3"
+   },
+   {
+    "n": 1,
+    "hit_rate": 100.0,
+    "avg_return": 29.99,
+    "avg_high": 29.99,
+    "touch7_rate": 100.0,
+    "valid": false,
+    "status": "관찰중",
+    "turnover2d": "400~inf",
+    "spark": ">=2",
+    "close_strength": "0.0~0.3"
+   },
+   {
+    "n": 1,
+    "hit_rate": 0.0,
+    "avg_return": -23.61,
+    "avg_high": 16.7,
+    "touch7_rate": 100.0,
+    "valid": false,
+    "status": "관찰중",
+    "turnover2d": "400~inf",
+    "spark": ">=2",
+    "close_strength": "0.3~0.6"
+   }
+  ],
   "llm": null,
   "min_n": 20,
   "note": "전진검증 — 표본 부족 셀은 관찰중. 스파크는 거래일 수집분만(과거 불가). 매수추천 아님."
