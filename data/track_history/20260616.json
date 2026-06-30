@@ -17,13 +17,14 @@
     "high3": false,
     "return_pct": -0.78,
     "fwd": {
-     "n_bars": 9,
+     "n_bars": 10,
      "d5_return": -2.83,
-     "d10_return": null,
+     "d10_return": 6.64,
      "mfe": 18.02,
      "mae": -7.18
     }
-   }
+   },
+   "fwd_final": true
   },
   "089030": {
    "name": "테크윙",
@@ -41,13 +42,14 @@
     "high3": true,
     "return_pct": 3.67,
     "fwd": {
-     "n_bars": 9,
+     "n_bars": 10,
      "d5_return": -12.35,
-     "d10_return": null,
+     "d10_return": -10.52,
      "mfe": 7.51,
      "mae": -18.53
     }
-   }
+   },
+   "fwd_final": true
   },
   "204320": {
    "name": "HL만도",
@@ -65,13 +67,14 @@
     "high3": false,
     "return_pct": -3.9,
     "fwd": {
-     "n_bars": 9,
+     "n_bars": 10,
      "d5_return": -35.83,
-     "d10_return": null,
+     "d10_return": -36.28,
      "mfe": 2.86,
      "mae": -43.24
     }
-   }
+   },
+   "fwd_final": true
   },
   "279570": {
    "name": "케이뱅크",
@@ -89,13 +92,14 @@
     "high3": true,
     "return_pct": 4.65,
     "fwd": {
-     "n_bars": 9,
+     "n_bars": 10,
      "d5_return": -12.06,
-     "d10_return": null,
+     "d10_return": -17.44,
      "mfe": 7.41,
      "mae": -19.62
     }
-   }
+   },
+   "fwd_final": true
   }
  }
 }
