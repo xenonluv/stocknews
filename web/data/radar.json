@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-30 14:22:27 KST",
+ "generated_at": "2026-06-30 14:32:19 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -85,8 +85,8 @@
    "high_pct": 22.65,
    "vol_turnover_pct": 133.3,
    "value_eok": 1301,
-   "price": 16410.0,
-   "change_pct": -6.39,
+   "price": 16350.0,
+   "change_pct": -6.73,
    "backfill": true
   },
   {
@@ -94,8 +94,8 @@
    "name": "금호건설",
    "sector": "건설",
    "high_pct": 29.97,
-   "vol_turnover_pct": 161.6,
-   "value_eok": 3042,
+   "vol_turnover_pct": 161.8,
+   "value_eok": 3046,
    "price": 11190.0,
    "change_pct": 29.97,
    "backfill": false
@@ -105,10 +105,10 @@
    "name": "금호전기",
    "sector": "전기·전자",
    "high_pct": 26.96,
-   "vol_turnover_pct": 236.4,
-   "value_eok": 1149,
-   "price": 1361.0,
-   "change_pct": 23.95,
+   "vol_turnover_pct": 238.0,
+   "value_eok": 1158,
+   "price": 1348.0,
+   "change_pct": 22.77,
    "backfill": false
   },
   {
@@ -118,8 +118,8 @@
    "high_pct": 22.76,
    "vol_turnover_pct": 255.0,
    "value_eok": 493,
-   "price": 6830.0,
-   "change_pct": 7.22,
+   "price": 6680.0,
+   "change_pct": 4.87,
    "backfill": true
   }
  ],
@@ -128,11 +128,11 @@
    "code": "111710",
    "name": "남화산업",
    "sector": "오락·문화",
-   "change_pct": 7.22,
+   "change_pct": 4.87,
    "high_pct": 22.76,
    "vol_turnover_pct": 255.0,
    "value_eok": 493,
-   "price": 6830.0,
+   "price": 6680.0,
    "first_seen": "13:21",
    "exploded": true
   },
@@ -140,11 +140,11 @@
    "code": "001210",
    "name": "금호전기",
    "sector": "전기·전자",
-   "change_pct": 23.95,
+   "change_pct": 22.77,
    "high_pct": 26.96,
-   "vol_turnover_pct": 236.4,
-   "value_eok": 1149,
-   "price": 1361.0,
+   "vol_turnover_pct": 238.0,
+   "value_eok": 1158,
+   "price": 1348.0,
    "first_seen": "10:01",
    "exploded": true
   },
@@ -154,8 +154,8 @@
    "sector": "건설",
    "change_pct": 29.97,
    "high_pct": 29.97,
-   "vol_turnover_pct": 161.6,
-   "value_eok": 3042,
+   "vol_turnover_pct": 161.8,
+   "value_eok": 3046,
    "price": 11190.0,
    "first_seen": "09:41",
    "exploded": true
@@ -164,11 +164,11 @@
    "code": "153890",
    "name": "져스텍",
    "sector": "전기·전자",
-   "change_pct": -6.39,
+   "change_pct": -6.73,
    "high_pct": 22.65,
    "vol_turnover_pct": 133.3,
    "value_eok": 1301,
-   "price": 16410.0,
+   "price": 16350.0,
    "first_seen": "09:41",
    "exploded": true
   },
@@ -178,7 +178,7 @@
    "sector": "전기·전자",
    "change_pct": 29.88,
    "high_pct": 29.88,
-   "vol_turnover_pct": 64.0,
+   "vol_turnover_pct": 64.1,
    "value_eok": 188,
    "price": 3195.0,
    "first_seen": "11:21",
@@ -188,11 +188,11 @@
    "code": "475430",
    "name": "키스트론",
    "sector": "전기·전자",
-   "change_pct": -2.85,
+   "change_pct": -0.9,
    "high_pct": 10.94,
    "vol_turnover_pct": 52.9,
    "value_eok": 244,
-   "price": 6480.0,
+   "price": 6610.0,
    "first_seen": "09:41",
    "exploded": false
   }
