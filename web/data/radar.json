@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-06-30 15:52:22 KST",
+ "generated_at": "2026-06-30 16:02:25 KST",
  "market_session": "closed",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -235,7 +235,7 @@
    "change_basis": "KRX",
    "high_pct": 9.05,
    "value_eok": 614,
-   "turnover_pct": 225.4,
+   "turnover_pct": 225.6,
    "peak_turnover_pct": 712.6,
    "float_ratio": 0.32130000000000003,
    "turnover_basis": "float",
