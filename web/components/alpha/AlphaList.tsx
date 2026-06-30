@@ -18,18 +18,48 @@ function inst(m: AlphaMover) {
   return `외인+기관 ${v > 0 ? "+" : ""}${v.toLocaleString()}`;
 }
 
-// 14:30 스파크 강도별 색(한국 관례: 빨강=강함). 미측정/0=회색 → 앰버 → 주황 → 빨강(굵게).
-function sparkClass(count?: number | null, source?: string) {
-  if (source === "none" || count == null) return "text-muted-foreground";
-  if (count >= 5) return "text-up font-bold";
-  if (count >= 3) return "text-orange-400 font-semibold";
-  if (count >= 1) return "text-amber-400 font-medium";
-  return "text-muted-foreground"; // 측정됐으나 0회
+// 종가베팅 적합도 점수(0~100, 잠정 휴리스틱). 이번 전진검증 분석(22표본·2거래일) 근거 — 통계 확정 아님.
+// 기준 50 + 가감: youtong/reaccum·적정회전(80~150%)·당일 0~+8%(또는 깊은 눌림)·14:30 스파크 1~2회는 가점,
+// explosion(이미 폭발=식음)·극단/어중간 회전·이미 강세(+8~+20%)·스파크 3회+(과열)·숨은외인(역신호)은 감점.
+function closeBetFitness(m: AlphaMover): { score: number; reasons: { k: string; v: number }[] } {
+  const reasons: { k: string; v: number }[] = [];
+  let s = 50;
+  const add = (k: string, v: number) => {
+    s += v;
+    reasons.push({ k, v });
+  };
+  // ① mover 유형 — explosion은 익일종가 평균 -9.5%(맨 아래로), reaccum 최선
+  if (m.mover_type === "reaccum") add("재매집", 10);
+  else if (m.mover_type === "explosion") add("폭발(식음)", -45);
+  else reasons.push({ k: "후보", v: 0 }); // youtong = 기준
+  // ② 2일 누적 유통회전율 — 80~150%가 최적, 어중간 높음(150~250) 골짜기, 극단(250+) 약감점
+  const t = m.turnover_2d_pct;
+  if (t != null) {
+    const v = t >= 80 && t < 150 ? 15 : t >= 40 && t < 80 ? 8 : t < 40 ? 3 : t < 250 ? -10 : -5;
+    add(`회전${Math.round(t)}`, v);
+  }
+  // ③ 당일 등락률 — 0~+8% 최적(아직 안 터짐), 깊은 눌림(≤-10%) 반등, +8~+20% 최악(그날 다 오름)
+  const c = m.change_pct;
+  if (c != null) {
+    const v = c >= 0 && c < 8 ? 15 : c <= -10 ? 12 : c < 0 ? 3 : c < 20 ? -15 : -5;
+    add(`당일${c > 0 ? "+" : ""}${Math.round(c)}%`, v);
+  }
+  // ④ 14:30 스파크 — 1~2회 스윗스팟, 3회+ 과열(장중 털림). 미측정(none)은 판정 보류
+  if (m.spark_source !== "none" && m.spark_1430_count != null) {
+    const sc = m.spark_1430_count;
+    add(`스파크${sc}`, sc >= 1 && sc <= 2 ? 12 : sc === 0 ? 2 : -8);
+  }
+  // ⑤ 숨은 외인매집 — 현 표본에선 역신호(소표본)
+  if (hiddenForeign(m) >= 1) add("외인매집", -5);
+  return { score: Math.max(0, Math.min(100, s)), reasons };
 }
 
-// 스파크 큰 순 정렬값 — 미측정(none)은 맨 뒤(-1), 측정 행은 count(결측 0 — quant/calibrate `(count or 0)`와 정합).
-function sparkRank(m: AlphaMover) {
-  return m.spark_source === "none" ? -1 : m.spark_1430_count ?? 0;
+// 적합도 등급별 색(한국 관례: 빨강=좋음/강함). 높음=빨강·굵게 → 주황 → 앰버 → 회색(부적합·explosion).
+function fitnessTier(score: number): { cls: string; label: string } {
+  if (score >= 75) return { cls: "bg-up/20 text-up font-bold", label: "적합" };
+  if (score >= 60) return { cls: "bg-orange-400/20 text-orange-300 font-semibold", label: "중간" };
+  if (score >= 45) return { cls: "bg-amber-400/15 text-amber-300", label: "약" };
+  return { cls: "bg-white/5 text-muted-foreground", label: "부적합" };
 }
 
 // '키움 속 숨은 외국인 매집' 흔적 강도(0=없음, 1~3 강). 정의: 투자자별 외국인 순매수(+)인데
@@ -150,6 +180,9 @@ function CalibrationPanel({ data }: { data: AlphaData }) {
 function MoverCard({ m }: { m: AlphaMover }) {
   const danger = m.redteam_flag || (m.manipulation_risk ?? 0) >= 0.6;
   const hf = hiddenForeign(m);
+  const { score, reasons } = closeBetFitness(m);
+  const tier = fitnessTier(score);
+  const reasonText = reasons.map((r) => `${r.k}${r.v !== 0 ? ` ${r.v > 0 ? "+" : ""}${r.v}` : ""}`).join(" · ");
   return (
     <div className="space-y-2 rounded-lg border border-white/10 bg-white/[0.045] p-4">
       <div className="flex items-baseline justify-between gap-2">
@@ -161,14 +194,30 @@ function MoverCard({ m }: { m: AlphaMover }) {
             </span>
           )}
         </h3>
-        <span className={`text-sm font-semibold tabular-nums ${chgClass(m.change_pct)}`}>
-          {pct(m.change_pct)} {m.is_eumbong ? "음봉" : ""}
-        </span>
+        <div className="flex shrink-0 items-center gap-1.5">
+          <span
+            className={`rounded px-1.5 py-0.5 text-[11px] tabular-nums ${tier.cls}`}
+            title={`종가베팅 적합도(잠정 휴리스틱) ${score}/100 · ${tier.label}\n${reasonText}`}
+          >
+            종베 {score}
+          </span>
+          <span className={`text-sm font-semibold tabular-nums ${chgClass(m.change_pct)}`}>
+            {pct(m.change_pct)} {m.is_eumbong ? "음봉" : ""}
+          </span>
+        </div>
+      </div>
+      <div className="flex flex-wrap gap-x-1.5 text-[10px] tabular-nums text-muted-foreground">
+        {reasons.map((r) => (
+          <span key={r.k} className={r.v > 0 ? "text-up/80" : r.v < 0 ? "text-down/80" : ""}>
+            {r.k}
+            {r.v !== 0 ? ` ${r.v > 0 ? "+" : ""}${r.v}` : ""}
+          </span>
+        ))}
       </div>
       <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-xs tabular-nums text-muted-foreground">
         <span>회전2d <b className="text-foreground">{m.turnover_2d_pct ?? "—"}%</b></span>
         <span>종가강도 {m.close_strength ?? "—"}</span>
-        <span>14:30스파크 <b className={sparkClass(m.spark_1430_count, m.spark_source)}>{m.spark_source === "none" ? "— 미측정" : (m.spark_1430_count ?? "—")}</b></span>
+        <span>14:30스파크 <b className="text-foreground">{m.spark_source === "none" ? "— 미측정" : (m.spark_1430_count ?? "—")}</b></span>
         <span>{inst(m)}</span>
         <span>키움 {m.kiwoom_buy_concentration != null ? Math.round(m.kiwoom_buy_concentration * 100) + "%" : "—"}</span>
       </div>
@@ -235,17 +284,21 @@ export function AlphaList({ initial }: { initial: AlphaData }) {
     };
   }, []);
 
-  // 종합점수 = 스파크 횟수(미측정 -1) + 키움 속 외인매집 강도(0~3). SSOT: quant 저장값(combined_score) 우선,
-  // 없으면(옛 행) 재구성. 둘 다 강한 종목이 최상위. 동점은 2일회전율.
-  const combined = (m: AlphaMover) => m.combined_score ?? sparkRank(m) + hiddenForeign(m);
-  const movers = [...(data.movers ?? [])].sort((a, b) => {
-    const d = combined(b) - combined(a);
-    return d !== 0 ? d : (b.turnover_2d_pct ?? 0) - (a.turnover_2d_pct ?? 0);
-  });
+  // 종가베팅 적합도(잠정 휴리스틱) 내림차순 — explosion·과열(스파크3+)·극단/어중간 회전·이미강세(+8~20%)는
+  // 하위로, youtong/reaccum·적정회전(80~150%)·당일 0~+8%·스파크 1~2는 상위로. 동점은 회전율이 스윗스팟
+  // 중심(115%)에 가까운 순. ⚠ 22표본·2거래일 기반 잠정 — calibration 패널(combined_score 검증)과는 별개 축.
+  const scored = (data.movers ?? []).map((m) => ({ m, fit: closeBetFitness(m).score }));
+  scored.sort((a, b) =>
+    b.fit !== a.fit
+      ? b.fit - a.fit
+      : Math.abs((a.m.turnover_2d_pct ?? 9999) - 115) - Math.abs((b.m.turnover_2d_pct ?? 9999) - 115),
+  );
+  const movers = scored.map((x) => x.m);
   return (
     <div className="space-y-6">
       <p className="text-xs text-muted-foreground tabular-nums">
-        기준 {data.date ?? "—"} · 갱신 {data.generated_at} · {movers.length}종목
+        기준 {data.date ?? "—"} · 갱신 {data.generated_at} · {movers.length}종목 · 정렬=
+        <span className="text-foreground">종가베팅 적합도</span>순(잠정 휴리스틱·22표본)
         {movers.some((m) => m.provisional) && (
           <span className="ml-2 rounded bg-warning/15 px-1.5 py-0.5 text-warning">🕒 장중 잠정(15:15 기준 · 마감 후 확정)</span>
         )}
