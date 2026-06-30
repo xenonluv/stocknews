@@ -1,5 +1,79 @@
 {
  "date": "20260630",
- "suspects": {},
- "as_of": "2026-06-30 15:12:17 KST"
+ "suspects": {
+  "079650": {
+   "name": "서산",
+   "sector": "비금속",
+   "entry": 4140.0,
+   "score": 0,
+   "breakdown": {
+    "base": 0,
+    "re_count": 0,
+    "re_body": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "suspicion_score": 82,
+   "score_breakdown_display": {
+    "base": 62,
+    "re_count": 2,
+    "re_body": 2,
+    "peak_turnover": 10,
+    "re_turnover": 6
+   },
+   "rank": 1,
+   "change_pct": -2.7,
+   "change_basis": "KRX",
+   "high_pct": 9.05,
+   "pattern": "reaccum",
+   "prime": false,
+   "theme": "반도체",
+   "value_eok": 608,
+   "turnover_pct": 223.4,
+   "peak_turnover_pct": 712.6,
+   "turnover_basis": "float",
+   "turnover_metric": "vol_float",
+   "theme_leader": false,
+   "spark_max_x": null,
+   "mega_flow": false,
+   "flow_today_buy": false,
+   "deep_shake": null,
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260626",
+    "peak_value_eok": 2691,
+    "peak_high_pct": 25.83,
+    "peak_turnover_pct": 712.6,
+    "peak_ibs": 0.35,
+    "peak_uppertail": 28.5,
+    "ma20": 3500.8,
+    "ma20_margin_pct": 18.26,
+    "cause_summary": "",
+    "was_theme_leader": false,
+    "source": "live"
+   },
+   "reignition": {
+    "body_pct": 2.74,
+    "time": "15:15",
+    "value_eok": 4,
+    "count": 2
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 46,
+    "base_pct": 46,
+    "strong": false,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "matched_events": [
+    "2026-07-07_삼성전자 2분기 잠정실"
+   ],
+   "first_seen": "2026-06-30 15:22:18 KST",
+   "evaluated": false,
+   "result": null,
+   "final": true
+  }
+ },
+ "as_of": "2026-06-30 15:22:18 KST"
 }
