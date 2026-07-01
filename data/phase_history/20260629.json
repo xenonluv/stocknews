@@ -4,8 +4,15 @@
   "122350": {
    "phase": "중립",
    "confidence": 55,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260630",
+    "next_close": 1550.0,
+    "entry_close": 1907.0,
+    "rose": false,
+    "hit": null,
+    "return_pct": -18.72
+   }
   }
  }
 }
