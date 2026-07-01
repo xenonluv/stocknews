@@ -54,7 +54,11 @@
     "high3": true,
     "return_pct": -2.42
    },
-   "final": true
+   "final": true,
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
+   }
   },
   "036930": {
    "name": "주성엔지니어링",
@@ -109,7 +113,11 @@
     "high3": true,
     "return_pct": 0.67
    },
-   "final": false
+   "final": false,
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
+   }
   },
   "039030": {
    "name": "이오테크닉스",
@@ -163,7 +171,11 @@
     "high3": false,
     "return_pct": -6.78
    },
-   "final": false
+   "final": false,
+   "strategy": {
+    "outcome": "stop",
+    "ret_net": -7.08
+   }
   },
   "042700": {
    "name": "한미반도체",
@@ -218,7 +230,11 @@
     "high3": true,
     "return_pct": -5.33
    },
-   "final": true
+   "final": true,
+   "strategy": {
+    "outcome": "stop",
+    "ret_net": -5.63
+   }
   },
   "089030": {
    "name": "테크윙",
@@ -379,7 +395,11 @@
     "high3": true,
     "return_pct": -1.57
    },
-   "final": true
+   "final": true,
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
+   }
   }
  },
  "as_of": "2026-06-15 15:45:49 KST"

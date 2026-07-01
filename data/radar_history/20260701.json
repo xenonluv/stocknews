@@ -74,7 +74,16 @@
    "first_seen": "2026-07-01 14:52:25 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 39,
+    "model_prob": 35,
+    "direction": "하락",
+    "model": "kimi-k2.6",
+    "as_of": "2026-07-01 17:20 KST",
+    "verdict_score": 83,
+    "verdict_level": "매수 우위"
+   }
   },
   "413630": {
    "name": "씨피시스템",
@@ -147,7 +156,16 @@
    "first_seen": "2026-07-01 15:12:33 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": true,
+   "ai_pred": {
+    "prob_up": 43,
+    "model_prob": 42,
+    "direction": "하락",
+    "model": "kimi-k2.6",
+    "as_of": "2026-07-01 17:21 KST",
+    "verdict_score": 79,
+    "verdict_level": "강한 매수신호"
+   }
   }
  },
  "as_of": "2026-07-01 17:12:28 KST"
