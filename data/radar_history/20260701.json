@@ -28,8 +28,8 @@
    "pattern": "reaccum",
    "prime": false,
    "theme": "반도체",
-   "value_eok": 1186,
-   "turnover_pct": 102.3,
+   "value_eok": 1192,
+   "turnover_pct": 102.8,
    "peak_turnover_pct": 300.9,
    "turnover_basis": "float",
    "turnover_metric": "vol_float",
@@ -104,7 +104,7 @@
    "prime": false,
    "theme": "유가",
    "value_eok": 30,
-   "turnover_pct": 10.1,
+   "turnover_pct": 10.2,
    "peak_turnover_pct": 107.6,
    "turnover_basis": "float",
    "turnover_metric": "vol_float",
@@ -150,5 +150,5 @@
    "final": true
   }
  },
- "as_of": "2026-07-01 17:32:44 KST"
+ "as_of": "2026-07-01 17:52:28 KST"
 }
