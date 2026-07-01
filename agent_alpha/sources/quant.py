@@ -5,6 +5,7 @@ import kis_client as kis
 import float_ratio
 import sparks_min
 import kis_extra
+import fitness
 
 
 def _wick(o, h, l, c):
@@ -104,6 +105,10 @@ def build(mover, fcache, reg):
     row["hidden_foreign_level"] = hf
     sr = -1 if row.get("spark_source") == "none" else (row.get("spark_1430_count") or 0)  # 미측정 -1
     row["combined_score"] = (sr + hf) if hf is not None else None  # 외인매집 결측(None)이면 종합점수도 None(calibrate 밴드 오염 방지)
+
+    # ── 종가베팅 적합도 점수 (SSOT 산식=fitness.close_bet_fitness). 참고·투명 노출용 저장 —
+    #    /alpha 정렬(AlphaList.tsx closeBetFitness)·calibrate 검증(_cbf)은 저장값을 신뢰하지 않고 현행 산식으로 재계산.
+    row["close_bet_fitness"] = fitness.close_bet_fitness(row)
 
     row["data_ok"] = True
     return row

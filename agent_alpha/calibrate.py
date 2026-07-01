@@ -4,6 +4,7 @@
 import json
 import os
 import config
+import fitness
 
 
 def _load_labeled():
@@ -17,6 +18,24 @@ def _load_labeled():
                 r = json.loads(line)
                 if r.get("labeled") and r.get("hit") is not None and r.get("next_return_pct") is not None:
                     rows.append(r)
+    except Exception:
+        pass
+    return rows
+
+
+def _load_all():
+    """라벨 무관 전체 행 — 종베 '순위' 축은 그날 전체 movers로 순위를 매겨야 정확(라벨된 것만으로 순위 왜곡 방지)."""
+    rows = []
+    try:
+        with open(config.FORWARD_JSONL, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    rows.append(json.loads(line))
+                except Exception:
+                    continue
     except Exception:
         pass
     return rows
@@ -72,7 +91,11 @@ def run():
         "by_close_strength_eumbong": {},
         "by_spark_count": {},            # 14:30 스파크 횟수 단독(측정행 전체·음봉/회전 무관) — 회장님 핵심신호 직접검증
         "by_hidden_foreign": {},         # 키움 속 숨은 외국인 매집(해당/미해당) — frgn+>0·외국계≈0·키움≥30%
-        "by_combined_score": {},         # 합산 종합점수(스파크 횟수 + 외인매집 강도) 밴드 — /alpha 정렬 순위 자체의 적중률
+        "by_combined_score": {},         # (레거시) 합산 종합점수(스파크 횟수 + 외인매집 강도) 밴드
+        "by_change_pct": {},             # 당일 등락률 밴드별 — 종베 핵심(0~+8% 최적 vs 이미 오른 종목)
+        "by_mover_type": {},             # reaccum/youtong/explosion별 익일 성과
+        "by_close_bet_band": {},         # 종베 적합도 점수대별(적합/중간/약/부적합) — /alpha 현행 정렬축 검증
+        "by_close_bet_rank": {},         # 종베 정렬 순위별(1위/2위/… — '1·2위만 종베' 실전 검증)
         "cells": [],                     # turnover2d × spark × close_strength × 음봉 (min_n 게이트)
         "llm": None,
         "min_n": config.CALIB_MIN_N,
@@ -150,6 +173,58 @@ def run():
     for k in ("<=1", "2~3", "4~5", ">=6"):
         out["by_combined_score"][k] = _stat([r for r in rows if _combined_band(_combined(r)) == k])
 
+    # ── 종가베팅 적합도(SSOT=fitness.close_bet_fitness) 검증 축 ──
+    # ⚠ 저장된 close_bet_fitness는 신뢰하지 않고 '항상 재계산' — 산식(fitness.py) 변경 시 옛 forward 행의
+    #    저장값이 stale해져 검증축이 옛 산식으로 채점되는 것을 방지(웹 AlphaList도 매번 재계산하므로 기준 일치).
+    def _cbf(r):
+        return fitness.close_bet_fitness(r)
+
+    # 당일 등락률 밴드별(전체) — 종베 핵심축(0~+8% 최적, +8%↑는 단조 강등)
+    def _change_band(c):
+        if c is None:
+            return None
+        return "≤-10" if c <= -10 else "-10~0" if c < 0 else "0~8" if c < 8 else "8~15" if c < 15 else "15~22" if c < 22 else "22+"
+    for b in ("≤-10", "-10~0", "0~8", "8~15", "15~22", "22+"):
+        out["by_change_pct"][b] = _stat([r for r in rows if _change_band(r.get("change_pct")) == b])
+
+    # mover 유형별
+    for mt in ("reaccum", "youtong", "explosion"):
+        out["by_mover_type"][mt] = _stat([r for r in rows if r.get("mover_type") == mt])
+
+    # 종베 점수대별
+    def _cbf_band(s):
+        return "적합(75+)" if s >= 75 else "중간(60~74)" if s >= 60 else "약(45~59)" if s >= 45 else "부적합(<45)"
+    for b in ("적합(75+)", "중간(60~74)", "약(45~59)", "부적합(<45)"):
+        out["by_close_bet_band"][b] = _stat([r for r in rows if _cbf_band(_cbf(r)) == b])
+
+    # 종베 순위별 — 그날 전체 movers(라벨 무관)로 순위 산정 후 라벨 행만 채점.
+    # ⚠ 정렬키는 웹 AlphaList.tsx sort와 **1:1 동기화**해야 순위축이 화면 순위를 정확히 검증한다:
+    #    점수 desc · |회전2d-115| asc(회전2d None은 9999, 0은 그대로) · 회전2d desc · code asc (완전 결정·잔여순서 의존 제거).
+    # 같은 날 같은 코드가 여러 행이면(정지종목 stale date 등) 첫 행만 — 순위 유니버스를 code 단위로 유일화(중복 카운트/덮어쓰기 방지).
+    def _t2(r):
+        v = r.get("turnover_2d_pct")
+        return v if v is not None else 9999
+    by_date = {}
+    for r in _load_all():
+        if r.get("data_ok") is False or not r.get("date"):
+            continue
+        by_date.setdefault(r["date"], {}).setdefault(r.get("code"), r)
+    rank_of = {}
+    for dt, bycode in by_date.items():
+        ordered = sorted(bycode.values(),
+                         key=lambda r: (-_cbf(r), abs(_t2(r) - 115), -(r.get("turnover_2d_pct") or 0), r.get("code") or ""))
+        for i, r in enumerate(ordered, 1):
+            rank_of[(r.get("code"), dt)] = i
+    rank_groups = {"1위": [], "2위": [], "3위": [], "4~5위": [], "6위+": []}
+    for r in rows:
+        rk = rank_of.get((r.get("code"), r.get("date")))
+        if rk is None:
+            continue
+        b = "1위" if rk == 1 else "2위" if rk == 2 else "3위" if rk == 3 else "4~5위" if rk <= 5 else "6위+"
+        rank_groups[b].append(r)
+    for b in ("1위", "2위", "3위", "4~5위", "6위+"):
+        out["by_close_bet_rank"][b] = _stat(rank_groups[b])
+
     # LLM Brier(있으면)
     llm_rows = [r for r in rows if isinstance(r.get("prob_up"), (int, float))]
     if llm_rows:
@@ -165,6 +240,7 @@ def run():
     os.replace(tmp, config.CALIBRATION)
     print(f"[alpha-calibrate] 라벨표본 {len(rows)} · 음봉 {len(eumbong)} → {config.CALIBRATION}")
     print(f"  음봉 2일회전율별: " + " · ".join(f"{k}:{v['hit_rate']}%({v['n']},{v['status']})" for k, v in out["by_turnover2d_eumbong"].items()))
+    print(f"  종베 순위별 익일고가: " + " · ".join(f"{k}:{v['avg_high']}%({v['n']})" for k, v in out["by_close_bet_rank"].items()))
     return out
 
 

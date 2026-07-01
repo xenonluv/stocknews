@@ -47,7 +47,8 @@ function closeBetFitness(m: AlphaMover): { score: number; reasons: { k: string; 
     add(`당일${c > 0 ? "+" : ""}${Math.round(c)}%`, v);
   }
   // ④ 14:30 스파크 — 1~2회 스윗스팟, 3회+ 과열(장중 털림). 미측정(none)은 판정 보류
-  if (m.spark_source !== "none" && m.spark_1430_count != null) {
+  // ⚠ spark_source 결측(null) 시 미반영 — fitness.py `not in (None,"none")` 와 동기화(측정 안 된 행에 점수 부여 방지).
+  if (m.spark_source != null && m.spark_source !== "none" && m.spark_1430_count != null) {
     const sc = m.spark_1430_count;
     add(`스파크${sc}`, sc >= 1 && sc <= 2 ? 12 : sc === 0 ? 2 : -8);
   }
@@ -133,6 +134,10 @@ function CalibrationPanel({ data }: { data: AlphaData }) {
   const bySC = cal.by_spark_count ?? {};
   const byHF = cal.by_hidden_foreign ?? {};
   const byCB = cal.by_combined_score ?? {};
+  const byRank = cal.by_close_bet_rank ?? {};
+  const byBand = cal.by_close_bet_band ?? {};
+  const byChg = cal.by_change_pct ?? {};
+  const byMT = cal.by_mover_type ?? {};
   return (
     <div className="space-y-3 rounded-lg border border-white/10 bg-white/[0.03] p-4">
       <div className="flex items-baseline justify-between">
@@ -140,6 +145,42 @@ function CalibrationPanel({ data }: { data: AlphaData }) {
         <span className="text-xs text-muted-foreground">
           라벨표본 {cal.total_labeled} · min_n {cal.min_n}
         </span>
+      </div>
+      {/* 🎯 종베 정렬 검증 — 현행 /alpha 정렬(종베 적합도)이 실제 익일 성과를 맞추는지 */}
+      <div className="rounded-md bg-up/[0.04] p-2">
+        <p className="mb-1 text-xs font-bold text-foreground">🎯 종가베팅 정렬 검증 (현행 순위축)</p>
+        <div>
+          <p className="mb-0.5 text-[11px] font-medium text-muted-foreground">종베 순위별 (1위/2위/…)</p>
+          <div className="space-y-1">
+            {Object.entries(byRank).map(([k, c]) => (
+              <CalibCellRow key={k} label={k} c={c} />
+            ))}
+          </div>
+        </div>
+        <div className="mt-2">
+          <p className="mb-0.5 text-[11px] font-medium text-muted-foreground">종베 적합도 점수대별</p>
+          <div className="space-y-1">
+            {Object.entries(byBand).map(([k, c]) => (
+              <CalibCellRow key={k} label={k} c={c} />
+            ))}
+          </div>
+        </div>
+        <div className="mt-2">
+          <p className="mb-0.5 text-[11px] font-medium text-muted-foreground">당일 등락률별 (0~+8% 최적 가설)</p>
+          <div className="space-y-1">
+            {Object.entries(byChg).map(([k, c]) => (
+              <CalibCellRow key={k} label={`당일 ${k}%`} c={c} />
+            ))}
+          </div>
+        </div>
+        <div className="mt-2">
+          <p className="mb-0.5 text-[11px] font-medium text-muted-foreground">mover 유형별</p>
+          <div className="space-y-1">
+            {Object.entries(byMT).map(([k, c]) => (
+              <CalibCellRow key={k} label={k} c={c} />
+            ))}
+          </div>
+        </div>
       </div>
       <div>
         <p className="mb-1 text-xs font-medium text-muted-foreground">음봉 · 2일 유통회전율별</p>
@@ -311,11 +352,16 @@ export function AlphaList({ initial }: { initial: AlphaData }) {
   // 종가베팅 적합도(잠정 휴리스틱) 내림차순 — explosion·과열(스파크3+)·극단/어중간 회전·이미강세(+8~20%)는
   // 하위로, youtong/reaccum·적정회전(80~150%)·당일 0~+8%·스파크 1~2는 상위로. 동점은 회전율이 스윗스팟
   // 중심(115%)에 가까운 순. ⚠ 22표본·2거래일 기반 잠정 — calibration 패널(combined_score 검증)과는 별개 축.
+  // ⚠ 정렬키는 calibrate.py by_close_bet_rank 정렬과 **1:1 동기화** (순위축이 이 화면 순위를 검증하므로):
+  //    점수 desc · |회전2d-115| asc(회전2d null은 9999, 0은 그대로) · 회전2d desc · code asc (완전 결정).
+  const t2 = (m: AlphaMover) => m.turnover_2d_pct ?? 9999;
   const scored = (data.movers ?? []).map((m) => ({ m, fit: closeBetFitness(m).score }));
-  scored.sort((a, b) =>
-    b.fit !== a.fit
-      ? b.fit - a.fit
-      : Math.abs((a.m.turnover_2d_pct ?? 9999) - 115) - Math.abs((b.m.turnover_2d_pct ?? 9999) - 115),
+  scored.sort(
+    (a, b) =>
+      b.fit - a.fit ||
+      Math.abs(t2(a.m) - 115) - Math.abs(t2(b.m) - 115) ||
+      (b.m.turnover_2d_pct ?? 0) - (a.m.turnover_2d_pct ?? 0) ||
+      (a.m.code ?? "").localeCompare(b.m.code ?? ""),
   );
   const movers = scored.map((x) => x.m);
   return (

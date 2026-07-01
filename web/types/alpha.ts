@@ -25,7 +25,8 @@ export interface AlphaMover {
   kiwoom_is_top_buyer?: boolean;
   glob_net_qty?: number | null;
   hidden_foreign_level?: number | null; // 키움 속 외인매집 강도 0~3 (quant SSOT), null=결측
-  combined_score?: number; // 스파크 횟수 + 외인매집 강도 합산(정렬 순위, quant SSOT)
+  combined_score?: number; // (레거시) 스파크 횟수 + 외인매집 강도 합산, quant SSOT
+  close_bet_fitness?: number; // 종가베팅 적합도 0~100 (quant 저장·참고용). /alpha 정렬·calibrate 검증은 저장값 대신 현행 산식으로 재계산 — fitness.py 변경 시 AlphaList.tsx closeBetFitness도 1:1 동기화 필수.
   kospi_chg?: number | null;
   kosdaq_chg?: number | null;
   catalyst?: string;
@@ -66,7 +67,11 @@ export interface AlphaCalibration {
   by_close_strength_eumbong?: Record<string, AlphaCalibCell>;
   by_spark_count?: Record<string, AlphaCalibCell>; // 14:30 스파크 횟수 단독(전체)
   by_hidden_foreign?: Record<string, AlphaCalibCell>; // 키움 속 외인매집 해당/미해당
-  by_combined_score?: Record<string, AlphaCalibCell>; // 합산 종합점수(스파크+외인매집) 밴드
+  by_combined_score?: Record<string, AlphaCalibCell>; // (레거시) 합산 종합점수 밴드
+  by_change_pct?: Record<string, AlphaCalibCell>; // 당일 등락률 밴드별 — 종베 핵심(0~+8% 최적)
+  by_mover_type?: Record<string, AlphaCalibCell>; // reaccum/youtong/explosion별
+  by_close_bet_band?: Record<string, AlphaCalibCell>; // 종베 적합도 점수대별 — 현행 정렬축 검증
+  by_close_bet_rank?: Record<string, AlphaCalibCell>; // 종베 정렬 순위별(1위/2위/…)
   cells?: AlphaCalibCell[];
   llm?: { n: number; brier: number; by_prob_band?: Record<string, AlphaCalibCell> } | null;
   note?: string;
