@@ -27,7 +27,7 @@ def build(mover, fcache, reg):
            "captured_at": config.now_iso(), "labeled": False}
 
     try:
-        d = kis.daily_prices_jmoney_un(code, days=3)   # 가격=J / 거래량·거래대금=UN
+        d = kis.daily_prices_jmoney_un(code, days=10)  # 가격=J / 거래량·거래대금=UN. 10일 = 과확장·연속하락 맥락 계산용
     except Exception:
         d = []
     if len(d) < 2:
@@ -47,6 +47,26 @@ def build(mover, fcache, reg):
         "volume": t.get("volume"),
         "value_eok": round((t.get("value") or 0) / 1e8),
     })
+    # ── 급등/폭락 맥락 (2026-07-02 회장님 지시: 5연상 붕괴·연속 하락 종목이 눌림 가점으로 상위 오는 것 차단) ──
+    # run_6d_pct = 6세션 전 종가 대비 누적 상승률(과확장 판정). 이력 4세션 미만(신규상장 등)이면 None(날조 금지).
+    idx = len(d) - 1
+    if idx >= 4 and d[max(0, idx - 6)].get("close"):
+        row["run_6d_pct"] = round((c / d[max(0, idx - 6)]["close"] - 1) * 100, 1) if c else None
+    else:
+        row["run_6d_pct"] = None
+    # peak_dd_pct = 직전 7세션 최고종가 대비 낙폭(표시·관찰 전용 — 승자들도 -26~-47%에서 나와 점수 미반영).
+    prev_closes = [b.get("close") for b in d[max(0, idx - 7):idx] if b.get("close")]
+    row["peak_dd_pct"] = round((c / max(prev_closes) - 1) * 100, 1) if (prev_closes and c) else None
+    # down_streak = 신호일 포함 종가 기준 연속 하락 일수.
+    ds = 0
+    for i in range(idx, 0, -1):
+        ci, pi = d[i].get("close"), d[i - 1].get("close")
+        if ci and pi and ci < pi:
+            ds += 1
+        else:
+            break
+    row["down_streak"] = ds if idx >= 1 else None
+
     # OHLC가 모두 유효(양수)하고 high>low일 때만 꼬리 산출 — 결측(_f→0.0)을 0으로 강제하면 종가강도 오염.
     if all(isinstance(x, (int, float)) and x > 0 for x in (o, h, l, c)) and h > l:
         cs, uw, lw = _wick(o, h, l, c)

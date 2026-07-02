@@ -55,6 +55,12 @@ function closeBetFitness(m: AlphaMover): { score: number; reasons: { k: string; 
   if (m.close_strength != null && m.close_strength >= 0.6) add("강마감", -5);
   // ⑦ 숨은 외인매집 — 미약 역신호, 관찰축 재판정 전까지 유지
   if (hiddenForeign(m) >= 1) add("외인매집", -5);
+  // ⑧ 폭락 제외(회장님 지시 2026-07-02) — 5연상 붕괴·연속하락 종목이 눌림 가점으로 상위 오는 것 차단.
+  //    과확장붕괴: 6일 누적 +100%↑ & 당일 음수 −30 (금호건설형, 39표본 오폭 0건).
+  //    연속하락: 종가 기준 4일 연속 하락 −15 (광주신세계형 — 승자군 최대 3일이라 4일이 안전선).
+  const r6 = m.run_6d_pct;
+  if (r6 != null && r6 >= 100 && c != null && c < 0) add("과확장붕괴", -30);
+  if (m.down_streak != null && m.down_streak >= 4) add(`연속하락${m.down_streak}일`, -15);
   return { score: Math.max(0, Math.min(100, s)), reasons };
 }
 

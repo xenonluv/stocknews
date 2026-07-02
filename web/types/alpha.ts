@@ -14,6 +14,9 @@ export interface AlphaMover {
   turnover_pct?: number | null;
   turnover_2d_pct?: number | null; // 2일 누적 유통회전율
   value_eok?: number | null; // 당일 거래대금(억) — v4 채점축(≥1000억 +10·유동성결핍)·정렬 타이브레이크
+  run_6d_pct?: number | null; // 6세션 전 종가 대비 누적 상승률 — 과확장붕괴(≥100%&당일음수 −30) 판정
+  peak_dd_pct?: number | null; // 직전 7세션 최고종가 대비 낙폭 — 표시·관찰 전용(점수 미반영)
+  down_streak?: number | null; // 종가 기준 연속 하락 일수 — ≥4일 −15 (연속하락 벌점)
   close_strength?: number | null; // 종가강도(받힘) 0~1
   upper_wick_pct?: number | null;
   lower_wick_pct?: number | null;
@@ -77,6 +80,7 @@ export interface AlphaCalibration {
   by_value_band?: Record<string, AlphaCalibCell>; // 거래대금 밴드별 — v4 ≥1000억 +10 전진검증
   by_spark_strength?: Record<string, AlphaCalibCell>; // 스파크 세기(무/약/강) — 무>강 관측 서열 판정
   by_liquidity_deficit?: Record<string, AlphaCalibCell>; // 유동성결핍 해당/미해당 — v4 −15 검증
+  by_crash_state?: Record<string, AlphaCalibCell>; // 폭락제외(과확장붕괴/연속하락/정상) 전진검증
   cells?: AlphaCalibCell[];
   llm?: { n: number; brier: number; by_prob_band?: Record<string, AlphaCalibCell> } | null;
   note?: string;
