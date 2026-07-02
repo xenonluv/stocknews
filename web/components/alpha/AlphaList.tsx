@@ -18,9 +18,11 @@ function inst(m: AlphaMover) {
   return `외인+기관 ${v > 0 ? "+" : ""}${v.toLocaleString()}`;
 }
 
-// 종가베팅 적합도 점수(0~100, 잠정 휴리스틱). 이번 전진검증 분석(22표본·2거래일) 근거 — 통계 확정 아님.
-// 기준 50 + 가감: youtong/reaccum·적정회전(80~150%)·당일 0~+8%(또는 깊은 눌림)·14:30 스파크 1~2회는 가점,
-// explosion(이미 폭발=식음)·극단/어중간 회전·이미 강세(+8~+20%)·스파크 3회+(과열)·숨은외인(역신호)은 감점.
+// 종가베팅 적합도 점수 v4 (0~100, 잠정 휴리스틱) — agent_alpha/fitness.py `close_bet_fitness` 와 1:1 동기화 필수.
+// 2026-07-02 4각도 감사+2인 심판 "수정승인" 판결 반영(39표본·4거래일 — 순열검정 우연통과율 97.9%,
+// 날짜내 순위상관≈0: 정밀 순위가 아니라 하위권(함정) 회피가 실효. ~07/25 표본 성숙 전 튜닝 동결).
+// 기준 50 + 가감: 깊은눌림(≤-10%)·조용(0~+8%)·대금1000억↑·재매집 가점 /
+// explosion(체결불가·갭 리스크)·이미 오른 놈(+8%↑)·유동성결핍·약스파크(찔끔 불꽃)·강마감·숨은외인 감점.
 function closeBetFitness(m: AlphaMover): { score: number; reasons: { k: string; v: number }[] } {
   const reasons: { k: string; v: number }[] = [];
   let s = 50;
@@ -28,31 +30,30 @@ function closeBetFitness(m: AlphaMover): { score: number; reasons: { k: string; 
     s += v;
     reasons.push({ k, v });
   };
-  // ① mover 유형 — explosion은 익일종가 평균 -9.5%(맨 아래로), reaccum 최선
+  // ① mover 유형 — explosion −50은 실행성(상한가류 종가 체결불가·익일 갭) 벌점, 고가터치 통계(67%=기저급) 아님.
   if (m.mover_type === "reaccum") add("재매집", 10);
-  else if (m.mover_type === "explosion") add("폭발(식음)", -45);
+  else if (m.mover_type === "explosion") add("폭발(추격불가)", -50);
   else reasons.push({ k: "후보", v: 0 }); // youtong = 기준
-  // ② 2일 누적 유통회전율 — 80~150%가 최적, 어중간 높음(150~250) 골짜기, 극단(250+) 약감점
+  // ② 유동성 결핍(통합) — 대금<50억 OR 2일회전<40% → 한 번만 −15 (씨피시스템 함정 차단, 이중처벌 금지)
+  const v = m.value_eok;
   const t = m.turnover_2d_pct;
-  if (t != null) {
-    const v = t >= 80 && t < 150 ? 15 : t >= 40 && t < 80 ? 8 : t < 40 ? 3 : t < 250 ? -10 : -5;
-    add(`회전${Math.round(t)}`, v);
-  }
-  // ③ 당일 등락률 — 0~+8% 최적(아직 안 터진 조용한 매집), 깊은 눌림(≤-10%) 반등여지.
-  //    ⚠ 올라갈수록 강하게·단조 감점: 이미 많이 오른 종목은 종가에 추격 매수 불가 + 익일 갭 위험이라
-  //    종베 부적합(회장님 지시 2026-07-01). +20%+가 +8~20%보다 덜 감점되던 역전 버그 제거.
+  if ((v != null && v < 50) || (t != null && t < 40)) add("유동성결핍", -15);
+  // ③ 거래대금 대형 가점 — 실증 최강(날짜보정 +13.2%p·LODO 4/4)
+  if (v != null && v >= 1000) add("대금1000억↑", 10);
+  // ④ 당일 등락률 — ≤−10% 깊은눌림이 유일한 실증 가점(터치 100%). 8~15%는 실증 데드존(−41.7%p).
+  //    +15%↑ 벌점은 실행성(종가 추격매수 불가·갭 위험 — 회장님 지시 2026-07-01) 근거.
   const c = m.change_pct;
   if (c != null) {
-    const v = c >= 0 && c < 8 ? 15 : c <= -10 ? 12 : c < 0 ? 3 : c < 15 ? -20 : c < 22 ? -30 : -40;
-    add(`당일${c > 0 ? "+" : ""}${Math.round(c)}%`, v);
+    const cv = c <= -10 ? 15 : c < 0 ? 8 : c < 8 ? 12 : c < 15 ? -20 : c < 22 ? -30 : -40;
+    add(`당일${c > 0 ? "+" : ""}${Math.round(c)}%`, cv);
   }
-  // ④ 14:30 스파크 — 1~2회 스윗스팟, 3회+ 과열(장중 털림). 미측정(none)은 판정 보류
-  // ⚠ spark_source 결측(null) 시 미반영 — fitness.py `not in (None,"none")` 와 동기화(측정 안 된 행에 점수 부여 방지).
-  if (m.spark_source != null && m.spark_source !== "none" && m.spark_1430_count != null) {
-    const sc = m.spark_1430_count;
-    add(`스파크${sc}`, sc >= 1 && sc <= 2 ? 12 : sc === 0 ? 2 : -8);
-  }
-  // ⑤ 숨은 외인매집 — 현 표본에선 역신호(소표본)
+  // ⑤ 약스파크 벌점 — 최대몸통 0<x<3% '찔끔 불꽃'=가짜 모멘텀(최견고 음신호 −16.8%p·LODO 0/4).
+  //    강스파크(3%↑)·무스파크는 0 — 서열은 by_spark_strength 관찰축 성숙 후 판정(무>강 관측됨).
+  const mx = m.spark_max_body_pct;
+  if (mx != null && mx > 0 && mx < 3.0) add("약스파크", -8);
+  // ⑥ 강마감 — 연료 소진(실증 −4.5%p·코어 peak_ibs 방향 정합)
+  if (m.close_strength != null && m.close_strength >= 0.6) add("강마감", -5);
+  // ⑦ 숨은 외인매집 — 미약 역신호, 관찰축 재판정 전까지 유지
   if (hiddenForeign(m) >= 1) add("외인매집", -5);
   return { score: Math.max(0, Math.min(100, s)), reasons };
 }
@@ -66,7 +67,9 @@ function fitnessTier(score: number): { cls: string; label: string } {
 }
 
 // 종베 적합도 정렬 순위 배지 색 (한국 관례: 빨강=상위). 1위 최강조 → 하위 회색.
-function rankClass(rank: number): string {
+// ⚠ 부적합(<45) 종목은 그날 풀이 약해 상대순위로 1~3위에 올라도 강조색 미적용(티어 우선 — 과신 방지, 감사 판결).
+function rankClass(rank: number, score: number): string {
+  if (score < 45) return "bg-white/5 text-muted-foreground";
   if (rank === 1) return "bg-up text-white font-bold";
   if (rank === 2) return "bg-orange-400/40 text-orange-100 font-bold";
   if (rank === 3) return "bg-amber-400/30 text-amber-100 font-semibold";
@@ -138,6 +141,9 @@ function CalibrationPanel({ data }: { data: AlphaData }) {
   const byBand = cal.by_close_bet_band ?? {};
   const byChg = cal.by_change_pct ?? {};
   const byMT = cal.by_mover_type ?? {};
+  const byVal = cal.by_value_band ?? {};
+  const bySS = cal.by_spark_strength ?? {};
+  const byLQ = cal.by_liquidity_deficit ?? {};
   return (
     <div className="space-y-3 rounded-lg border border-white/10 bg-white/[0.03] p-4">
       <div className="flex items-baseline justify-between">
@@ -177,6 +183,30 @@ function CalibrationPanel({ data }: { data: AlphaData }) {
           <p className="mb-0.5 text-[11px] font-medium text-muted-foreground">mover 유형별</p>
           <div className="space-y-1">
             {Object.entries(byMT).map(([k, c]) => (
+              <CalibCellRow key={k} label={k} c={c} />
+            ))}
+          </div>
+        </div>
+        <div className="mt-2">
+          <p className="mb-0.5 text-[11px] font-medium text-muted-foreground">거래대금별 (v4 ≥1000억 가점 검증)</p>
+          <div className="space-y-1">
+            {Object.entries(byVal).map(([k, c]) => (
+              <CalibCellRow key={k} label={k} c={c} />
+            ))}
+          </div>
+        </div>
+        <div className="mt-2">
+          <p className="mb-0.5 text-[11px] font-medium text-muted-foreground">스파크 세기별 (무/약/강 — 서열 관찰중)</p>
+          <div className="space-y-1">
+            {Object.entries(bySS).map(([k, c]) => (
+              <CalibCellRow key={k} label={k} c={c} />
+            ))}
+          </div>
+        </div>
+        <div className="mt-2">
+          <p className="mb-0.5 text-[11px] font-medium text-muted-foreground">유동성결핍(대금&lt;50억·회전2d&lt;40%) 검증</p>
+          <div className="space-y-1">
+            {Object.entries(byLQ).map(([k, c]) => (
               <CalibCellRow key={k} label={k} c={c} />
             ))}
           </div>
@@ -243,7 +273,7 @@ function MoverCard({ m, rank }: { m: AlphaMover; rank?: number }) {
       <div className="flex items-baseline justify-between gap-2">
         <h3 className="flex items-baseline gap-1.5 text-lg font-bold tracking-tight">
           {rank != null && (
-            <span className={`shrink-0 rounded px-1.5 py-0.5 text-xs tabular-nums ${rankClass(rank)}`}>
+            <span className={`shrink-0 rounded px-1.5 py-0.5 text-xs tabular-nums ${rankClass(rank, score)}`}>
               {rank}위
             </span>
           )}
@@ -353,14 +383,13 @@ export function AlphaList({ initial }: { initial: AlphaData }) {
   // 하위로, youtong/reaccum·적정회전(80~150%)·당일 0~+8%·스파크 1~2는 상위로. 동점은 회전율이 스윗스팟
   // 중심(115%)에 가까운 순. ⚠ 22표본·2거래일 기반 잠정 — calibration 패널(combined_score 검증)과는 별개 축.
   // ⚠ 정렬키는 calibrate.py by_close_bet_rank 정렬과 **1:1 동기화** (순위축이 이 화면 순위를 검증하므로):
-  //    점수 desc · |회전2d-115| asc(회전2d null은 9999, 0은 그대로) · 회전2d desc · code asc (완전 결정).
-  const t2 = (m: AlphaMover) => m.turnover_2d_pct ?? 9999;
+  //    점수 desc · 거래대금(value_eok) desc · code asc (완전 결정).
+  //    (구 |회전2d-115| 타이브레이크는 폐기된 스윗스팟 유산 — v4에서 제거. value_eok desc가 유일한 양(+0.161)의 순위상관.)
   const scored = (data.movers ?? []).map((m) => ({ m, fit: closeBetFitness(m).score }));
   scored.sort(
     (a, b) =>
       b.fit - a.fit ||
-      Math.abs(t2(a.m) - 115) - Math.abs(t2(b.m) - 115) ||
-      (b.m.turnover_2d_pct ?? 0) - (a.m.turnover_2d_pct ?? 0) ||
+      (b.m.value_eok ?? 0) - (a.m.value_eok ?? 0) ||
       (a.m.code ?? "").localeCompare(b.m.code ?? ""),
   );
   const movers = scored.map((x) => x.m);
@@ -368,7 +397,8 @@ export function AlphaList({ initial }: { initial: AlphaData }) {
     <div className="space-y-6">
       <p className="text-xs text-muted-foreground tabular-nums">
         기준 {data.date ?? "—"} · 갱신 {data.generated_at} · {movers.length}종목 · 정렬=
-        <span className="text-foreground">종가베팅 적합도</span>순(잠정 휴리스틱·22표본)
+        <span className="text-foreground">종가베팅 적합도 v4</span>순 · ⚠ 순위상관≈0(감사 실측) —
+        정밀 순위가 아니라 <span className="text-foreground">하위권(함정) 회피용</span>·잠정 휴리스틱
         {movers.some((m) => m.provisional) && (
           <span className="ml-2 rounded bg-warning/15 px-1.5 py-0.5 text-warning">🕒 장중 잠정(15:15 기준 · 마감 후 확정)</span>
         )}

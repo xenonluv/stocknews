@@ -1,16 +1,25 @@
-"""종가베팅 적합도 점수 (SSOT — quant 저장·calibrate 검증이 공유하는 단일 파이썬 산식).
+"""종가베팅 적합도 점수 v4 (SSOT — quant 저장·calibrate 검증이 공유하는 단일 파이썬 산식).
 
 ⚠ web/components/alpha/AlphaList.tsx 의 `closeBetFitness` 와 **1:1 동기화**한다(산식 변경 시 양쪽 같이).
-회장님 종가베팅 전략(22표본·2거래일) 근거 — 잠정 휴리스틱, 표시·전진검증 전용(core 통계 무관).
+목표 지표 = 익일 고가 도달(+7% 익절 터치). 2026-07-02 4각도 감사 + 2인 심판 "수정승인" 판결 반영
+(39표본·4거래일 — 순열검정상 우연 통과율 97.9%라 어떤 축도 '검증됨' 아님. 재앙회피용 잠정 휴리스틱이며,
+날짜 내 순위상관 ≈0 — 상위 정밀 서열이 아니라 하위권(함정) 회피가 실효. ~07/25 라벨 성숙 전 튜닝 동결).
 
-기준 50 + 가감:
-  유형    reaccum +10 / youtong 0 / explosion -45(이미 폭발=식음, 하위로)
-  2일회전 80~150% +15 / 40~80 +8 / <40 +3 / 150~250 -10 / 250%+ -5
-  당일등락 0~+8% +15 / ≤-10%(깊은눌림) +12 / -10~0 +3 / +8~15 -20 / +15~22 -30 / +22%+ -40
-          (올라갈수록 단조 강등 — 이미 오른 종목은 종가 추격 매수 불가·익일 갭 위험)
-  14:30스파크 1~2회 +12 / 0회 +2 / 3회+ -8(과열) / 미측정(none) 미반영
-  숨은외인매집 lv≥1 -5(현 표본 역신호)
-결측 필드는 가점/감점 없이 통과(날조 금지). 최종 0~100 클램프.
+기준 50 + 가감 (0~100 클램프):
+  유형        reaccum +10 / youtong 0 / explosion −50
+              ⚠ explosion −50은 실증(고가터치 67%=기저급) 아닌 **실행성** 벌점 — 상한가류 종가 체결불가·익일 갭 리스크.
+  유동성결핍   (거래대금<50억 OR 2일회전율<40%) → −15 **한 번만** (같은 현상 이중처벌 금지 — 감사 판결)
+  거래대금     ≥1000억 +10 (실증 최강: 날짜보정 +13.2%p·LODO 4/4. 50~150억 벌점은 부호 반대로 삭제됨)
+  2일회전율    유동성결핍 외 가감 없음 (밴드 지그재그=노이즈 판정, 전삭제)
+  당일등락     ≤−10% +15(유일한 실증 가점: 터치 100%·+12.9%p) / 0~+8% +12 / −10~0 +8
+              / +8~15 −20(실증 데드존 −41.7%p) / +15~22 −30 / +22↑ −40
+              ⚠ +15↑ 벌점은 실증(해당 밴드 고가터치는 오히려 기저 상회) 아닌 **실행성** — 종가 추격매수 불가·갭 위험.
+  스파크       약스파크(0<최대몸통<3%) −8만 (최견고 음신호: −16.8%p·LODO 0/4 — '찔끔 불꽃'=가짜 모멘텀)
+              강스파크(3%↑)·무스파크 = 0. ⚠ 관측상 무스파크(+19.6%p)가 강스파크(+6.4%p)보다 우위였으나
+              소표본·교락으로 서열 판정 유보 — by_spark_strength 관찰축 성숙 후 재평가.
+  마감강도     강마감(close_strength≥0.6) −5 (실증 −4.5%p·LODO 0/4 + 코어 peak_ibs 관찰과 방향 정합)
+  숨은외인     lv≥1 −5 (미약 −1.5%p이나 제거 시 백테스트 개악 — 유지, by_hidden_foreign 관찰축 재판정)
+결측 필드는 가점/감점 없이 통과(날조 금지).
 """
 
 
@@ -28,22 +37,33 @@ def _hidden_foreign(row):
 
 
 def close_bet_fitness(row):
-    """정량 행(dict) → 종베 적합도 점수(int 0~100)."""
+    """정량 행(dict) → 종베 적합도 점수(int 0~100). v4."""
     s = 50
     mt = row.get("mover_type")
     if mt == "reaccum":
         s += 10
     elif mt == "explosion":
-        s -= 45
+        s -= 50
+    # 유동성 결핍(통합) — 둘 다 해당해도 한 번만 −15
+    v = row.get("value_eok")
     t = row.get("turnover_2d_pct")
-    if t is not None:
-        s += 15 if 80 <= t < 150 else 8 if 40 <= t < 80 else 3 if t < 40 else -10 if t < 250 else -5
+    if (v is not None and v < 50) or (t is not None and t < 40):
+        s -= 15
+    # 거래대금 대형 가점
+    if v is not None and v >= 1000:
+        s += 10
+    # 당일등락
     c = row.get("change_pct")
     if c is not None:
-        s += 15 if 0 <= c < 8 else 12 if c <= -10 else 3 if c < 0 else -20 if c < 15 else -30 if c < 22 else -40
-    if row.get("spark_source") not in (None, "none") and row.get("spark_1430_count") is not None:
-        sc = row["spark_1430_count"]
-        s += 12 if 1 <= sc <= 2 else 2 if sc == 0 else -8
+        s += 15 if c <= -10 else 8 if c < 0 else 12 if c < 8 else -20 if c < 15 else -30 if c < 22 else -40
+    # 약스파크 벌점 (최대몸통 0<x<3% — 강/무스파크는 중립)
+    mx = row.get("spark_max_body_pct")
+    if mx is not None and 0 < mx < 3.0:
+        s -= 8
+    # 강마감
+    cs = row.get("close_strength")
+    if cs is not None and cs >= 0.6:
+        s -= 5
     if _hidden_foreign(row) >= 1:
         s -= 5
     return max(0, min(100, s))

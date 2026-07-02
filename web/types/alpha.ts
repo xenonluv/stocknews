@@ -12,11 +12,13 @@ export interface AlphaMover {
   is_eumbong?: boolean;
   below_prev?: boolean;
   turnover_pct?: number | null;
-  turnover_2d_pct?: number | null; // 2일 누적 유통회전율(1순위 신호)
+  turnover_2d_pct?: number | null; // 2일 누적 유통회전율
+  value_eok?: number | null; // 당일 거래대금(억) — v4 채점축(≥1000억 +10·유동성결핍)·정렬 타이브레이크
   close_strength?: number | null; // 종가강도(받힘) 0~1
   upper_wick_pct?: number | null;
   lower_wick_pct?: number | null;
-  spark_1430_count?: number | null; // 14:30↑ 5분 양봉 스파크 수
+  spark_1430_count?: number | null; // 14:30↑ 5분 양봉 스파크 수(몸통 1.5%↑ 탐지 기준)
+  spark_max_body_pct?: number | null; // 스파크 최대 몸통% — v4 약스파크(0<x<3%) 벌점 입력
   spark_source?: string;
   frgn_net?: number | null;
   orgn_net?: number | null;
@@ -72,6 +74,9 @@ export interface AlphaCalibration {
   by_mover_type?: Record<string, AlphaCalibCell>; // reaccum/youtong/explosion별
   by_close_bet_band?: Record<string, AlphaCalibCell>; // 종베 적합도 점수대별 — 현행 정렬축 검증
   by_close_bet_rank?: Record<string, AlphaCalibCell>; // 종베 정렬 순위별(1위/2위/…)
+  by_value_band?: Record<string, AlphaCalibCell>; // 거래대금 밴드별 — v4 ≥1000억 +10 전진검증
+  by_spark_strength?: Record<string, AlphaCalibCell>; // 스파크 세기(무/약/강) — 무>강 관측 서열 판정
+  by_liquidity_deficit?: Record<string, AlphaCalibCell>; // 유동성결핍 해당/미해당 — v4 −15 검증
   cells?: AlphaCalibCell[];
   llm?: { n: number; brier: number; by_prob_band?: Record<string, AlphaCalibCell> } | null;
   note?: string;

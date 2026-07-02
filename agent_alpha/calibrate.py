@@ -96,6 +96,9 @@ def run():
         "by_mover_type": {},             # reaccum/youtong/explosion별 익일 성과
         "by_close_bet_band": {},         # 종베 적합도 점수대별(적합/중간/약/부적합) — /alpha 현행 정렬축 검증
         "by_close_bet_rank": {},         # 종베 정렬 순위별(1위/2위/… — '1·2위만 종베' 실전 검증)
+        "by_value_band": {},             # 거래대금 밴드별(채점축 대칭 검증 — v4 ≥1000억 +10의 전진검증)
+        "by_spark_strength": {},         # 스파크 세기(무/약<3%/강≥3%) — '무>강' 관측의 서열 판정용
+        "by_liquidity_deficit": {},      # 유동성결핍(대금<50억 or 회전2d<40%) 해당/미해당 — v4 −15 검증
         "cells": [],                     # turnover2d × spark × close_strength × 음봉 (min_n 게이트)
         "llm": None,
         "min_n": config.CALIB_MIN_N,
@@ -199,11 +202,10 @@ def run():
 
     # 종베 순위별 — 그날 전체 movers(라벨 무관)로 순위 산정 후 라벨 행만 채점.
     # ⚠ 정렬키는 웹 AlphaList.tsx sort와 **1:1 동기화**해야 순위축이 화면 순위를 정확히 검증한다:
-    #    점수 desc · |회전2d-115| asc(회전2d None은 9999, 0은 그대로) · 회전2d desc · code asc (완전 결정·잔여순서 의존 제거).
+    #    점수 desc · 거래대금(value_eok) desc · code asc (완전 결정·잔여순서 의존 제거).
+    #    (구 |회전2d-115| 타이브레이크는 폐기된 80~150 스윗스팟의 유산이라 v4에서 제거 — 감사 판결.
+    #     value_eok desc는 39표본에서 유일한 양(+0.161)의 날짜내 순위상관 신호.)
     # 같은 날 같은 코드가 여러 행이면(정지종목 stale date 등) 첫 행만 — 순위 유니버스를 code 단위로 유일화(중복 카운트/덮어쓰기 방지).
-    def _t2(r):
-        v = r.get("turnover_2d_pct")
-        return v if v is not None else 9999
     by_date = {}
     for r in _load_all():
         if r.get("data_ok") is False or not r.get("date"):
@@ -212,7 +214,7 @@ def run():
     rank_of = {}
     for dt, bycode in by_date.items():
         ordered = sorted(bycode.values(),
-                         key=lambda r: (-_cbf(r), abs(_t2(r) - 115), -(r.get("turnover_2d_pct") or 0), r.get("code") or ""))
+                         key=lambda r: (-_cbf(r), -(r.get("value_eok") or 0), r.get("code") or ""))
         for i, r in enumerate(ordered, 1):
             rank_of[(r.get("code"), dt)] = i
     rank_groups = {"1위": [], "2위": [], "3위": [], "4~5위": [], "6위+": []}
@@ -224,6 +226,35 @@ def run():
         rank_groups[b].append(r)
     for b in ("1위", "2위", "3위", "4~5위", "6위+"):
         out["by_close_bet_rank"][b] = _stat(rank_groups[b])
+
+    # ── v4 채점축 대칭 관찰축 (감사 판결: "채점하는 축은 검증축 대칭") ──
+    # 거래대금 밴드별 — ≥1000억 +10의 전진검증
+    def _val_band(v):
+        if v is None:
+            return None
+        return "<50억" if v < 50 else "50~150억" if v < 150 else "150~1000억" if v < 1000 else "1000억+"
+    for b in ("<50억", "50~150억", "150~1000억", "1000억+"):
+        out["by_value_band"][b] = _stat([r for r in rows if _val_band(r.get("value_eok")) == b])
+
+    # 스파크 세기(무/약/강) — '무스파크>강스파크' 관측의 서열 판정용(성숙 후 v4 재평가)
+    def _spark_strength(r):
+        if r.get("spark_source") in (None, "none"):
+            return None                       # 미측정 — 분류 제외
+        mx = r.get("spark_max_body_pct")
+        if not mx or mx <= 0:
+            return "무스파크"
+        return "약(<3%)" if mx < 3.0 else "강(3%+)"
+    for b in ("무스파크", "약(<3%)", "강(3%+)"):
+        out["by_spark_strength"][b] = _stat([r for r in rows if _spark_strength(r) == b])
+
+    # 유동성결핍(대금<50억 or 회전2d<40%) — v4 통합 −15 검증
+    def _liq_deficit(r):
+        v, t = r.get("value_eok"), r.get("turnover_2d_pct")
+        if v is None and t is None:
+            return None
+        return "결핍" if ((v is not None and v < 50) or (t is not None and t < 40)) else "정상"
+    for b in ("결핍", "정상"):
+        out["by_liquidity_deficit"][b] = _stat([r for r in rows if _liq_deficit(r) == b])
 
     # LLM Brier(있으면)
     llm_rows = [r for r in rows if isinstance(r.get("prob_up"), (int, float))]
