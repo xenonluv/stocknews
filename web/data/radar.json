@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-02 09:12:13 KST",
+ "generated_at": "2026-07-02 09:52:08 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -78,6 +78,55 @@
   }
  ],
  "explosions": [],
- "youtong": [],
+ "youtong": [
+  {
+   "code": "037710",
+   "name": "광주신세계",
+   "sector": "유통",
+   "change_pct": 8.16,
+   "high_pct": 15.86,
+   "vol_turnover_pct": 102.2,
+   "value_eok": 1279,
+   "price": 47050.0,
+   "first_seen": "09:52",
+   "exploded": false
+  },
+  {
+   "code": "091590",
+   "name": "남화토건",
+   "sector": "건설",
+   "change_pct": 8.83,
+   "high_pct": 26.58,
+   "vol_turnover_pct": 51.7,
+   "value_eok": 270,
+   "price": 10480.0,
+   "first_seen": "09:52",
+   "exploded": false
+  },
+  {
+   "code": "010960",
+   "name": "삼호개발",
+   "sector": "건설",
+   "change_pct": 22.79,
+   "high_pct": 27.27,
+   "vol_turnover_pct": 50.8,
+   "value_eok": 369,
+   "price": 5200.0,
+   "first_seen": "09:52",
+   "exploded": false
+  },
+  {
+   "code": "002990",
+   "name": "금호건설",
+   "sector": "건설",
+   "change_pct": 19.6,
+   "high_pct": 29.99,
+   "vol_turnover_pct": 50.8,
+   "value_eok": 1744,
+   "price": 17390.0,
+   "first_seen": "09:52",
+   "exploded": false
+  }
+ ],
  "suspects": []
 }
