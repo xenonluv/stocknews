@@ -1,5 +1,81 @@
 {
  "date": "20260702",
- "suspects": {},
- "as_of": "2026-07-02 15:11:50 KST"
+ "suspects": {
+  "091590": {
+   "name": "남화토건",
+   "sector": "건설",
+   "entry": 9650.0,
+   "score": 0,
+   "breakdown": {
+    "base": 0,
+    "re_count": 0,
+    "re_body": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "suspicion_score": 86,
+   "score_breakdown_display": {
+    "base": 62,
+    "re_count": 4,
+    "re_body": 6,
+    "peak_turnover": 8,
+    "re_turnover": 6
+   },
+   "rank": 1,
+   "change_pct": 0.21,
+   "change_basis": "KRX",
+   "high_pct": 26.58,
+   "pattern": "reaccum",
+   "prime": false,
+   "theme": "반도체",
+   "value_eok": 488,
+   "turnover_pct": 102.3,
+   "peak_turnover_pct": 180.8,
+   "turnover_basis": "float",
+   "turnover_metric": "vol_float",
+   "theme_leader": false,
+   "spark_max_x": null,
+   "mega_flow": false,
+   "flow_today_buy": false,
+   "deep_shake": null,
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260625",
+    "peak_value_eok": 543,
+    "peak_high_pct": 29.93,
+    "peak_turnover_pct": 180.8,
+    "peak_ibs": 0.16,
+    "peak_uppertail": 51.2,
+    "ma20": 5158.5,
+    "ma20_margin_pct": 87.07,
+    "cause_summary": "과열 경고에도 '호남 반도체' 테마주 상한가 행렬…변동성 주의보[핫...",
+    "was_theme_leader": false,
+    "source": "backfill"
+   },
+   "reignition": {
+    "body_pct": 9.63,
+    "time": "15:15",
+    "value_eok": 5,
+    "count": 3
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "matched_events": [
+    "2026-07-03_미국 고용보고서 (7월",
+    "2026-07-07_삼성전자 2분기 잠정실",
+    "2026-07-09_한국은행 금통위 기준금"
+   ],
+   "first_seen": "2026-07-02 15:21:56 KST",
+   "evaluated": false,
+   "result": null,
+   "final": true
+  }
+ },
+ "as_of": "2026-07-02 15:21:56 KST"
 }
