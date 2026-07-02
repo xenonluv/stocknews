@@ -72,8 +72,15 @@
     "2026-07-09_한국은행 금통위 기준금"
    ],
    "first_seen": "2026-07-01 14:52:25 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260702",
+    "next_close": 39850.0,
+    "next_high": 50400.0,
+    "hit": false,
+    "high3": true,
+    "return_pct": -8.39
+   },
    "final": true
   },
   "413630": {
@@ -145,8 +152,15 @@
     "2026-07-09_한국 옵션·선물 동시만"
    ],
    "first_seen": "2026-07-01 15:12:33 KST",
-   "evaluated": false,
-   "result": null,
+   "evaluated": true,
+   "result": {
+    "date": "20260702",
+    "next_close": 2555.0,
+    "next_high": 2890.0,
+    "hit": false,
+    "high3": false,
+    "return_pct": -14.12
+   },
    "final": true
   }
  },

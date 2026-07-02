@@ -56,7 +56,11 @@
     "high3": false,
     "return_pct": 0.62
    },
-   "final": false
+   "final": false,
+   "strategy": {
+    "outcome": "stop",
+    "ret_net": -13.63
+   }
   },
   "039030": {
    "name": "이오테크닉스",
@@ -113,7 +117,11 @@
     "high3": true,
     "return_pct": 2.63
    },
-   "final": false
+   "final": false,
+   "strategy": {
+    "outcome": "stop",
+    "ret_net": -7.76
+   }
   },
   "042700": {
    "name": "한미반도체",
@@ -168,7 +176,11 @@
     "high3": false,
     "return_pct": -2.74
    },
-   "final": false
+   "final": false,
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
+   }
   },
   "272210": {
    "name": "한화시스템",
@@ -327,7 +339,11 @@
     "high3": true,
     "return_pct": 1.2
    },
-   "final": true
+   "final": true,
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
+   }
   },
   "010820": {
    "name": "퍼스텍",
@@ -701,7 +717,11 @@
     "high3": false,
     "return_pct": 1.02
    },
-   "final": false
+   "final": false,
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
+   }
   },
   "319660": {
    "name": "피에스케이",
@@ -761,7 +781,11 @@
     "high3": true,
     "return_pct": 0.19
    },
-   "final": true
+   "final": true,
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
+   }
   },
   "353200": {
    "name": "대덕전자",
@@ -821,7 +845,11 @@
     "high3": true,
     "return_pct": 2.53
    },
-   "final": true
+   "final": true,
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
+   }
   },
   "011070": {
    "name": "LG이노텍",
@@ -881,7 +909,11 @@
     "high3": true,
     "return_pct": 0.97
    },
-   "final": true
+   "final": true,
+   "strategy": {
+    "outcome": "stop",
+    "ret_net": -7.66
+   }
   },
   "034730": {
    "name": "SK",
@@ -943,7 +975,11 @@
     "high3": true,
     "return_pct": 5.2
    },
-   "final": true
+   "final": true,
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
+   }
   },
   "001820": {
    "name": "삼화콘덴서",
@@ -1003,7 +1039,11 @@
     "high3": true,
     "return_pct": 2.37
    },
-   "final": true
+   "final": true,
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
+   }
   },
   "028050": {
    "name": "삼성E&A",
@@ -1065,7 +1105,11 @@
     "high3": true,
     "return_pct": -7.41
    },
-   "final": true
+   "final": true,
+   "strategy": {
+    "outcome": "stop",
+    "ret_net": -7.71
+   }
   },
   "204320": {
    "name": "HL만도",
@@ -1125,7 +1169,11 @@
     "high3": false,
     "return_pct": -3.9
    },
-   "final": true
+   "final": true,
+   "strategy": {
+    "outcome": "stop",
+    "ret_net": -8.69
+   }
   }
  },
  "as_of": "2026-06-16 23:33:06 KST"
