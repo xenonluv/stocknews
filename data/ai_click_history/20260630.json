@@ -5,190 +5,352 @@
    "ai_prob": 37,
    "ai_dir": "하락",
    "verdict_score": 54,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 58400.0,
+    "entry_close": 53600.0,
+    "hit": true,
+    "return_pct": 8.96
+   }
   },
   "356680": {
    "ai_prob": 43,
    "ai_dir": "하락",
    "verdict_score": 70,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 15500.0,
+    "entry_close": 17140.0,
+    "hit": false,
+    "return_pct": -9.57
+   }
   },
   "413630": {
    "ai_prob": 49,
    "ai_dir": "관망",
    "verdict_score": 70,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 2975.0,
+    "entry_close": 2850.0,
+    "hit": true,
+    "return_pct": 4.39
+   }
   },
   "240810": {
    "ai_prob": 52,
    "ai_dir": "관망",
    "verdict_score": 71,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 165600.0,
+    "entry_close": 168100.0,
+    "hit": false,
+    "return_pct": -1.49
+   }
   },
   "279570": {
    "ai_prob": 34,
    "ai_dir": "하락",
    "verdict_score": 60,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 5600.0,
+    "entry_close": 5680.0,
+    "hit": false,
+    "return_pct": -1.41
+   }
   },
   "002070": {
    "ai_prob": 33,
    "ai_dir": "하락",
    "verdict_score": 74,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 6660.0,
+    "entry_close": 6670.0,
+    "hit": false,
+    "return_pct": -0.15
+   }
   },
   "010690": {
    "ai_prob": 45,
    "ai_dir": "하락",
    "verdict_score": 62,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 10230.0,
+    "entry_close": 10450.0,
+    "hit": false,
+    "return_pct": -2.11
+   }
   },
   "011070": {
    "ai_prob": 39,
    "ai_dir": "하락",
    "verdict_score": 69,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 907000.0,
+    "entry_close": 981000.0,
+    "hit": false,
+    "return_pct": -7.54
+   }
   },
   "037710": {
    "ai_prob": 36,
    "ai_dir": "하락",
    "verdict_score": 75,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 43500.0,
+    "entry_close": 44750.0,
+    "hit": false,
+    "return_pct": -2.79
+   }
   },
   "079650": {
    "ai_prob": 34,
    "ai_dir": "하락",
    "verdict_score": 51,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 4765.0,
+    "entry_close": 4265.0,
+    "hit": true,
+    "return_pct": 11.72
+   }
   },
   "204320": {
    "ai_prob": 36,
    "ai_dir": "하락",
    "verdict_score": 51,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 48100.0,
+    "entry_close": 49000.0,
+    "hit": false,
+    "return_pct": -1.84
+   }
   },
   "017670": {
    "ai_prob": 39,
    "ai_dir": "하락",
    "verdict_score": 58,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 88600.0,
+    "entry_close": 88400.0,
+    "hit": true,
+    "return_pct": 0.23
+   }
   },
   "043650": {
    "ai_prob": 47,
    "ai_dir": "관망",
    "verdict_score": 81,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 4150.0,
+    "entry_close": 4010.0,
+    "hit": true,
+    "return_pct": 3.49
+   }
   },
   "080220": {
    "ai_prob": 49,
    "ai_dir": "관망",
    "verdict_score": 66,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 103300.0,
+    "entry_close": 103900.0,
+    "hit": false,
+    "return_pct": -0.58
+   }
   },
   "319660": {
    "ai_prob": 47,
    "ai_dir": "관망",
    "verdict_score": 78,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 211500.0,
+    "entry_close": 196100.0,
+    "hit": true,
+    "return_pct": 7.85
+   }
   },
   "009150": {
    "ai_prob": 50,
    "ai_dir": "관망",
    "verdict_score": 86,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 2205000.0,
+    "entry_close": 2184000.0,
+    "hit": true,
+    "return_pct": 0.96
+   }
   },
   "028050": {
    "ai_prob": 45,
    "ai_dir": "하락",
    "verdict_score": 73,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 51700.0,
+    "entry_close": 47600.0,
+    "hit": true,
+    "return_pct": 8.61
+   }
   },
   "058730": {
    "ai_prob": 41,
    "ai_dir": "하락",
    "verdict_score": 68,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 4320.0,
+    "entry_close": 4205.0,
+    "hit": true,
+    "return_pct": 2.73
+   }
   },
   "153890": {
    "ai_prob": 31,
    "ai_dir": "하락",
    "verdict_score": null,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 14860.0,
+    "entry_close": 16640.0,
+    "hit": false,
+    "return_pct": -10.7
+   }
   },
   "004710": {
    "ai_prob": 41,
    "ai_dir": "하락",
    "verdict_score": 72,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 10820.0,
+    "entry_close": 11260.0,
+    "hit": false,
+    "return_pct": -3.91
+   }
   },
   "028260": {
    "ai_prob": 44,
    "ai_dir": "하락",
    "verdict_score": 73,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 434000.0,
+    "entry_close": 468500.0,
+    "hit": false,
+    "return_pct": -7.36
+   }
   },
   "085620": {
    "ai_prob": 36,
    "ai_dir": "하락",
    "verdict_score": 52,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 20650.0,
+    "entry_close": 21000.0,
+    "hit": false,
+    "return_pct": -1.67
+   }
   },
   "095610": {
    "ai_prob": 48,
    "ai_dir": "관망",
    "verdict_score": 86,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 213000.0,
+    "entry_close": 208000.0,
+    "hit": true,
+    "return_pct": 2.4
+   }
   },
   "122640": {
    "ai_prob": 43,
    "ai_dir": "하락",
    "verdict_score": 95,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 39250.0,
+    "entry_close": 34800.0,
+    "hit": true,
+    "return_pct": 12.79
+   }
   },
   "043260": {
    "ai_prob": 50,
    "ai_dir": "관망",
    "verdict_score": 68,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 30600.0,
+    "entry_close": 29650.0,
+    "hit": true,
+    "return_pct": 3.2
+   }
   },
   "111710": {
    "ai_prob": 38,
    "ai_dir": "하락",
    "verdict_score": 68,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 7080.0,
+    "entry_close": 5450.0,
+    "hit": true,
+    "return_pct": 29.91
+   }
   },
   "034730": {
    "ai_prob": 48,
    "ai_dir": "관망",
    "verdict_score": 89,
-   "evaluated": false,
-   "result": null
+   "evaluated": true,
+   "result": {
+    "date": "20260701",
+    "next_close": 763000.0,
+    "entry_close": 834000.0,
+    "hit": false,
+    "return_pct": -8.51
+   }
   }
  }
 }

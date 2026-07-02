@@ -1,39 +1,39 @@
 {
- "as_of": "2026-07-01 17:49 KST",
- "n": 147,
- "hit_rate": 41.5,
- "avg_prob": 40.7,
- "brier": 0.2547,
+ "as_of": "2026-07-02 17:49 KST",
+ "n": 174,
+ "hit_rate": 42.5,
+ "avg_prob": 40.9,
+ "brier": 0.2526,
  "min_n": 20,
  "prob_bands": [
   {
    "lo": 0,
    "hi": 40,
-   "n": 81,
-   "avg_prob": 36.2,
-   "actual_rate": 44.4,
+   "n": 92,
+   "avg_prob": 36.1,
+   "actual_rate": 43.5,
    "valid": true
   },
   {
    "lo": 40,
    "hi": 46,
-   "n": 29,
-   "avg_prob": 42.3,
-   "actual_rate": 48.3,
+   "n": 36,
+   "avg_prob": 42.4,
+   "actual_rate": 47.2,
    "valid": true
   },
   {
    "lo": 46,
    "hi": 50,
-   "n": 22,
-   "avg_prob": 47.7,
-   "actual_rate": 22.7,
+   "n": 28,
+   "avg_prob": 47.8,
+   "actual_rate": 32.1,
    "valid": true
   },
   {
    "lo": 50,
    "hi": 54,
-   "n": 9,
+   "n": 12,
    "avg_prob": 50.7,
    "actual_rate": 66.7,
    "valid": false
@@ -59,48 +59,48 @@
   "rows": [
    {
     "t": 46,
-    "n_pred_up": 37,
-    "precision": 29.7,
-    "recall": 18.0,
-    "tnr": 69.8,
-    "balanced_acc": 43.9,
-    "accuracy": 48.3
+    "n_pred_up": 46,
+    "precision": 37.0,
+    "recall": 23.0,
+    "tnr": 71.0,
+    "balanced_acc": 47.0,
+    "accuracy": 50.6
    },
    {
     "t": 48,
-    "n_pred_up": 24,
-    "precision": 37.5,
-    "recall": 14.8,
-    "tnr": 82.6,
-    "balanced_acc": 48.7,
-    "accuracy": 54.4
+    "n_pred_up": 31,
+    "precision": 41.9,
+    "recall": 17.6,
+    "tnr": 82.0,
+    "balanced_acc": 49.8,
+    "accuracy": 54.6
    },
    {
     "t": 50,
-    "n_pred_up": 15,
-    "precision": 40.0,
-    "recall": 9.8,
-    "tnr": 89.5,
-    "balanced_acc": 49.7,
-    "accuracy": 56.5
+    "n_pred_up": 18,
+    "precision": 44.4,
+    "recall": 10.8,
+    "tnr": 90.0,
+    "balanced_acc": 50.4,
+    "accuracy": 56.3
    },
    {
     "t": 52,
-    "n_pred_up": 9,
-    "precision": 22.2,
-    "recall": 3.3,
-    "tnr": 91.9,
-    "balanced_acc": 47.6,
-    "accuracy": 55.1
+    "n_pred_up": 10,
+    "precision": 20.0,
+    "recall": 2.7,
+    "tnr": 92.0,
+    "balanced_acc": 47.4,
+    "accuracy": 54.0
    },
    {
     "t": 54,
     "n_pred_up": 6,
     "precision": 0.0,
     "recall": 0.0,
-    "tnr": 93.0,
-    "balanced_acc": 46.5,
-    "accuracy": 54.4
+    "tnr": 94.0,
+    "balanced_acc": 47.0,
+    "accuracy": 54.0
    },
    {
     "t": 56,
@@ -109,7 +109,7 @@
     "recall": 0.0,
     "tnr": 100.0,
     "balanced_acc": 50.0,
-    "accuracy": 58.5
+    "accuracy": 57.5
    },
    {
     "t": 58,
@@ -118,7 +118,7 @@
     "recall": 0.0,
     "tnr": 100.0,
     "balanced_acc": 50.0,
-    "accuracy": 58.5
+    "accuracy": 57.5
    },
    {
     "t": 60,
@@ -127,17 +127,206 @@
     "recall": 0.0,
     "tnr": 100.0,
     "balanced_acc": 50.0,
-    "accuracy": 58.5
+    "accuracy": 57.5
    }
   ],
-  "recommended_up_min": 56,
+  "recommended_up_min": 50,
   "current_up_min": 54,
   "current_down_max": 46,
   "min_n": 30,
-  "pos": 61,
-  "neg": 86
+  "pos": 74,
+  "neg": 100
  },
  "recent": [
+  {
+   "date": "20260630",
+   "code": "413630",
+   "ai_prob": 49,
+   "hit": true,
+   "return_pct": 4.39
+  },
+  {
+   "date": "20260630",
+   "code": "356680",
+   "ai_prob": 43,
+   "hit": false,
+   "return_pct": -9.57
+  },
+  {
+   "date": "20260630",
+   "code": "319660",
+   "ai_prob": 47,
+   "hit": true,
+   "return_pct": 7.85
+  },
+  {
+   "date": "20260630",
+   "code": "279570",
+   "ai_prob": 34,
+   "hit": false,
+   "return_pct": -1.41
+  },
+  {
+   "date": "20260630",
+   "code": "240810",
+   "ai_prob": 52,
+   "hit": false,
+   "return_pct": -1.49
+  },
+  {
+   "date": "20260630",
+   "code": "204320",
+   "ai_prob": 36,
+   "hit": false,
+   "return_pct": -1.84
+  },
+  {
+   "date": "20260630",
+   "code": "153890",
+   "ai_prob": 31,
+   "hit": false,
+   "return_pct": -10.7
+  },
+  {
+   "date": "20260630",
+   "code": "122640",
+   "ai_prob": 43,
+   "hit": true,
+   "return_pct": 12.79
+  },
+  {
+   "date": "20260630",
+   "code": "111710",
+   "ai_prob": 38,
+   "hit": true,
+   "return_pct": 29.91
+  },
+  {
+   "date": "20260630",
+   "code": "095610",
+   "ai_prob": 48,
+   "hit": true,
+   "return_pct": 2.4
+  },
+  {
+   "date": "20260630",
+   "code": "089030",
+   "ai_prob": 37,
+   "hit": true,
+   "return_pct": 8.96
+  },
+  {
+   "date": "20260630",
+   "code": "085620",
+   "ai_prob": 36,
+   "hit": false,
+   "return_pct": -1.67
+  },
+  {
+   "date": "20260630",
+   "code": "080220",
+   "ai_prob": 49,
+   "hit": false,
+   "return_pct": -0.58
+  },
+  {
+   "date": "20260630",
+   "code": "079650",
+   "ai_prob": 34,
+   "hit": true,
+   "return_pct": 11.72
+  },
+  {
+   "date": "20260630",
+   "code": "058730",
+   "ai_prob": 41,
+   "hit": true,
+   "return_pct": 2.73
+  },
+  {
+   "date": "20260630",
+   "code": "043650",
+   "ai_prob": 47,
+   "hit": true,
+   "return_pct": 3.49
+  },
+  {
+   "date": "20260630",
+   "code": "043260",
+   "ai_prob": 50,
+   "hit": true,
+   "return_pct": 3.2
+  },
+  {
+   "date": "20260630",
+   "code": "037710",
+   "ai_prob": 36,
+   "hit": false,
+   "return_pct": -2.79
+  },
+  {
+   "date": "20260630",
+   "code": "034730",
+   "ai_prob": 48,
+   "hit": false,
+   "return_pct": -8.51
+  },
+  {
+   "date": "20260630",
+   "code": "028260",
+   "ai_prob": 44,
+   "hit": false,
+   "return_pct": -7.36
+  },
+  {
+   "date": "20260630",
+   "code": "028050",
+   "ai_prob": 45,
+   "hit": true,
+   "return_pct": 8.61
+  },
+  {
+   "date": "20260630",
+   "code": "017670",
+   "ai_prob": 39,
+   "hit": true,
+   "return_pct": 0.23
+  },
+  {
+   "date": "20260630",
+   "code": "011070",
+   "ai_prob": 39,
+   "hit": false,
+   "return_pct": -7.54
+  },
+  {
+   "date": "20260630",
+   "code": "010690",
+   "ai_prob": 45,
+   "hit": false,
+   "return_pct": -2.11
+  },
+  {
+   "date": "20260630",
+   "code": "009150",
+   "ai_prob": 50,
+   "hit": true,
+   "return_pct": 0.96
+  },
+  {
+   "date": "20260630",
+   "code": "004710",
+   "ai_prob": 41,
+   "hit": false,
+   "return_pct": -3.91
+  },
+  {
+   "date": "20260630",
+   "code": "002070",
+   "ai_prob": 33,
+   "hit": false,
+   "return_pct": -0.15
+  },
   {
    "date": "20260629",
    "code": "413630",
@@ -158,195 +347,6 @@
    "ai_prob": 49,
    "hit": true,
    "return_pct": 10.29
-  },
-  {
-   "date": "20260629",
-   "code": "279570",
-   "ai_prob": 36,
-   "hit": true,
-   "return_pct": 0.71
-  },
-  {
-   "date": "20260629",
-   "code": "240810",
-   "ai_prob": 49,
-   "hit": true,
-   "return_pct": 5.72
-  },
-  {
-   "date": "20260629",
-   "code": "204320",
-   "ai_prob": 37,
-   "hit": false,
-   "return_pct": -1.01
-  },
-  {
-   "date": "20260629",
-   "code": "122640",
-   "ai_prob": 39,
-   "hit": true,
-   "return_pct": 7.91
-  },
-  {
-   "date": "20260629",
-   "code": "122350",
-   "ai_prob": 36,
-   "hit": false,
-   "return_pct": -18.72
-  },
-  {
-   "date": "20260629",
-   "code": "111710",
-   "ai_prob": 39,
-   "hit": false,
-   "return_pct": -14.44
-  },
-  {
-   "date": "20260629",
-   "code": "095610",
-   "ai_prob": 50,
-   "hit": true,
-   "return_pct": 15.75
-  },
-  {
-   "date": "20260629",
-   "code": "089030",
-   "ai_prob": 39,
-   "hit": true,
-   "return_pct": 3.88
-  },
-  {
-   "date": "20260629",
-   "code": "085620",
-   "ai_prob": 39,
-   "hit": true,
-   "return_pct": 1.45
-  },
-  {
-   "date": "20260629",
-   "code": "080220",
-   "ai_prob": 41,
-   "hit": true,
-   "return_pct": 7.22
-  },
-  {
-   "date": "20260629",
-   "code": "058730",
-   "ai_prob": 55,
-   "hit": false,
-   "return_pct": -5.82
-  },
-  {
-   "date": "20260629",
-   "code": "043650",
-   "ai_prob": 38,
-   "hit": false,
-   "return_pct": -3.02
-  },
-  {
-   "date": "20260629",
-   "code": "043260",
-   "ai_prob": 43,
-   "hit": true,
-   "return_pct": 4.22
-  },
-  {
-   "date": "20260629",
-   "code": "037710",
-   "ai_prob": 47,
-   "hit": false,
-   "return_pct": -11.21
-  },
-  {
-   "date": "20260629",
-   "code": "034730",
-   "ai_prob": 52,
-   "hit": true,
-   "return_pct": 6.24
-  },
-  {
-   "date": "20260629",
-   "code": "028260",
-   "ai_prob": 39,
-   "hit": false,
-   "return_pct": -0.53
-  },
-  {
-   "date": "20260629",
-   "code": "028050",
-   "ai_prob": 47,
-   "hit": false,
-   "return_pct": -0.1
-  },
-  {
-   "date": "20260629",
-   "code": "017670",
-   "ai_prob": 45,
-   "hit": false,
-   "return_pct": -2.0
-  },
-  {
-   "date": "20260629",
-   "code": "011070",
-   "ai_prob": 38,
-   "hit": true,
-   "return_pct": 7.21
-  },
-  {
-   "date": "20260629",
-   "code": "010690",
-   "ai_prob": 54,
-   "hit": false,
-   "return_pct": -4.83
-  },
-  {
-   "date": "20260629",
-   "code": "009150",
-   "ai_prob": 46,
-   "hit": true,
-   "return_pct": 7.16
-  },
-  {
-   "date": "20260629",
-   "code": "004710",
-   "ai_prob": 39,
-   "hit": true,
-   "return_pct": 6.53
-  },
-  {
-   "date": "20260629",
-   "code": "002070",
-   "ai_prob": 36,
-   "hit": false,
-   "return_pct": -7.23
-  },
-  {
-   "date": "20260626",
-   "code": "413630",
-   "ai_prob": 38,
-   "hit": true,
-   "return_pct": 8.89
-  },
-  {
-   "date": "20260626",
-   "code": "356680",
-   "ai_prob": 36,
-   "hit": true,
-   "return_pct": 1.03
-  },
-  {
-   "date": "20260626",
-   "code": "319660",
-   "ai_prob": 47,
-   "hit": false,
-   "return_pct": -5.53
-  },
-  {
-   "date": "20260626",
-   "code": "279570",
-   "ai_prob": 36,
-   "hit": true,
-   "return_pct": 0.53
   }
  ],
  "disclaimer": "사용자가 'AI분석하기'를 누른 모든 종목의 AI 상승확률을 익일 등락으로 채점한 기록입니다. 확률 구간별 실측 상승률·최적 임계는 표시·참고용이며 자동 적용되지 않습니다(권고치 확인 후 수동 조정). 약세 단일 레짐 표본 한계."
