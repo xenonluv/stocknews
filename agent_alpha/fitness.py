@@ -14,9 +14,11 @@
   당일등락     ≤−10% +15(유일한 실증 가점: 터치 100%·+12.9%p) / 0~+8% +12 / −10~0 +8
               / +8~15 −20(실증 데드존 −41.7%p) / +15~22 −30 / +22↑ −40
               ⚠ +15↑ 벌점은 실증(해당 밴드 고가터치는 오히려 기저 상회) 아닌 **실행성** — 종가 추격매수 불가·갭 위험.
-  스파크       약스파크(0<최대몸통<3%) −8만 (최견고 음신호: −16.8%p·LODO 0/4 — '찔끔 불꽃'=가짜 모멘텀)
-              강스파크(3%↑)·무스파크 = 0. ⚠ 관측상 무스파크(+19.6%p)가 강스파크(+6.4%p)보다 우위였으나
-              소표본·교락으로 서열 판정 유보 — by_spark_strength 관찰축 성숙 후 재평가.
+  스파크       약스파크(0<최대몸통<3%) −8 (최견고 음신호: −16.8%p·LODO 0/4 — '찔끔 불꽃'=가짜 모멘텀)
+              **강스파크(3%↑) 2회 이상 +8** (회장님 지시 2026-07-02 "이 프로그램은 고가를 먹는 것" —
+              과거 4/4 익일 +7% 고가 터치·날짜보정 +21.9%p. 단 종가는 2/4가 −23~−29% 참사 = 순수 익절용 신호.
+              n=4 소표본 경고 유지, by_spark_strength 관찰축으로 계속 검증)
+              강스파크 1회·무스파크 = 0 (1회 가점은 감사 기각 — 무스파크 우위 관측, 서열 판정 유보).
   마감강도     강마감(close_strength≥0.6) −5 (실증 −4.5%p·LODO 0/4 + 코어 peak_ibs 관찰과 방향 정합)
   숨은외인     lv≥1 −5 (미약 −1.5%p이나 제거 시 백테스트 개악 — 유지, by_hidden_foreign 관찰축 재판정)
   ── 폭락 제외 (2026-07-02 회장님 직접 지시 "당장 폭락하는 종목은 감점으로 제외" — 동결 예외) ──
@@ -62,10 +64,16 @@ def close_bet_fitness(row):
     c = row.get("change_pct")
     if c is not None:
         s += 15 if c <= -10 else 8 if c < 0 else 12 if c < 8 else -20 if c < 15 else -30 if c < 22 else -40
-    # 약스파크 벌점 (최대몸통 0<x<3% — 강/무스파크는 중립)
+    # 약스파크 벌점 (최대몸통 0<x<3% — 강1회/무스파크는 중립)
     mx = row.get("spark_max_body_pct")
     if mx is not None and 0 < mx < 3.0:
         s -= 8
+    # 강스파크(3%↑) 2회 이상 +8 — 저장값(spark_strong_count) 우선, 옛 행은 spark_bars로 재계산(웹 미러와 1:1)
+    ssc = row.get("spark_strong_count")
+    if ssc is None and row.get("spark_source") not in (None, "none") and row.get("spark_bars") is not None:
+        ssc = sum(1 for b in row["spark_bars"] if (b.get("body_pct") or 0) >= 3.0)
+    if ssc is not None and ssc >= 2:
+        s += 8
     # 강마감
     cs = row.get("close_strength")
     if cs is not None and cs >= 0.6:

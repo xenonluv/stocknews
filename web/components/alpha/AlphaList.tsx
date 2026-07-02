@@ -48,9 +48,15 @@ function closeBetFitness(m: AlphaMover): { score: number; reasons: { k: string; 
     add(`당일${c > 0 ? "+" : ""}${Math.round(c)}%`, cv);
   }
   // ⑤ 약스파크 벌점 — 최대몸통 0<x<3% '찔끔 불꽃'=가짜 모멘텀(최견고 음신호 −16.8%p·LODO 0/4).
-  //    강스파크(3%↑)·무스파크는 0 — 서열은 by_spark_strength 관찰축 성숙 후 판정(무>강 관측됨).
   const mx = m.spark_max_body_pct;
   if (mx != null && mx > 0 && mx < 3.0) add("약스파크", -8);
+  // ⑤-2 강스파크(3%↑) 2회 이상 +8 — 회장님 지시 2026-07-02("고가를 먹는 프로그램"): 과거 4/4 익일 +7% 터치.
+  //     저장값(spark_strong_count) 우선, 옛 행은 spark_bars로 재계산(fitness.py와 1:1). 1회·무스파크는 0.
+  let ssc = m.spark_strong_count;
+  if (ssc == null && m.spark_source != null && m.spark_source !== "none" && m.spark_bars != null) {
+    ssc = m.spark_bars.filter((b) => (b.body_pct ?? 0) >= 3.0).length;
+  }
+  if (ssc != null && ssc >= 2) add("강스파크x2", 8);
   // ⑥ 강마감 — 연료 소진(실증 −4.5%p·코어 peak_ibs 방향 정합)
   if (m.close_strength != null && m.close_strength >= 0.6) add("강마감", -5);
   // ⑦ 숨은 외인매집 — 미약 역신호, 관찰축 재판정 전까지 유지

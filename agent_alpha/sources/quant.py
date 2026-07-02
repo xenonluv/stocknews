@@ -87,6 +87,9 @@ def build(mover, fcache, reg):
     cnt, mx, bars, src = sparks_min.spark_1430(code)
     row.update({"spark_1430_count": cnt, "spark_max_body_pct": mx,
                 "spark_bars": bars, "spark_source": src})
+    # 강스파크(몸통 3%↑) 개수 — 2회↑ +8 가점 입력(회장님 지시 2026-07-02: 고가 사냥 프로그램, 과거 4/4 +7%터치).
+    row["spark_strong_count"] = (sum(1 for b in (bars or []) if (b.get("body_pct") or 0) >= 3.0)
+                                 if src not in (None, "none") else None)
 
     # ── 투자자별(당일; 결측 시 null — 날조 금지. label.py는 익일봉만 채우고 수급은 보강하지 않음) ──
     try:

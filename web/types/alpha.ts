@@ -22,6 +22,8 @@ export interface AlphaMover {
   lower_wick_pct?: number | null;
   spark_1430_count?: number | null; // 14:30↑ 5분 양봉 스파크 수(몸통 1.5%↑ 탐지 기준)
   spark_max_body_pct?: number | null; // 스파크 최대 몸통% — v4 약스파크(0<x<3%) 벌점 입력
+  spark_strong_count?: number | null; // 몸통 3%↑ 강스파크 개수 — 2회↑ +8 가점(고가 사냥, 과거 4/4 터치)
+  spark_bars?: { time?: string; body_pct?: number }[] | null; // 원천 스파크 봉(옛 행 재계산 폴백용)
   spark_source?: string;
   frgn_net?: number | null;
   orgn_net?: number | null;

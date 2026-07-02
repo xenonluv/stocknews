@@ -237,15 +237,25 @@ def run():
     for b in ("<50억", "50~150억", "150~1000억", "1000억+"):
         out["by_value_band"][b] = _stat([r for r in rows if _val_band(r.get("value_eok")) == b])
 
-    # 스파크 세기(무/약/강) — '무스파크>강스파크' 관측의 서열 판정용(성숙 후 v4 재평가)
+    # 스파크 세기(무/약/강1/강2+) — '무>강' 서열 판정 + 강2회+ 가점(+8, 회장님 지시) 전진검증
+    def _strong_cnt(r):
+        c = r.get("spark_strong_count")
+        if c is not None:
+            return c
+        if r.get("spark_bars") is not None:
+            return sum(1 for b in r["spark_bars"] if (b.get("body_pct") or 0) >= 3.0)
+        return None
     def _spark_strength(r):
         if r.get("spark_source") in (None, "none"):
             return None                       # 미측정 — 분류 제외
         mx = r.get("spark_max_body_pct")
         if not mx or mx <= 0:
             return "무스파크"
-        return "약(<3%)" if mx < 3.0 else "강(3%+)"
-    for b in ("무스파크", "약(<3%)", "강(3%+)"):
+        if mx < 3.0:
+            return "약(<3%)"
+        sc = _strong_cnt(r)
+        return "강2회+" if (sc is not None and sc >= 2) else "강1회"
+    for b in ("무스파크", "약(<3%)", "강1회", "강2회+"):
         out["by_spark_strength"][b] = _stat([r for r in rows if _spark_strength(r) == b])
 
     # 유동성결핍(대금<50억 or 회전2d<40%) — v4 통합 −15 검증
