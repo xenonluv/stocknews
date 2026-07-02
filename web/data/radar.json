@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-02 17:52:00 KST",
+ "generated_at": "2026-07-02 18:01:58 KST",
  "market_session": "closed",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -83,8 +83,8 @@
    "name": "계룡건설",
    "sector": "건설",
    "high_pct": 29.41,
-   "vol_turnover_pct": 92.4,
-   "value_eok": 1399,
+   "vol_turnover_pct": 92.5,
+   "value_eok": 1401,
    "price": 25800.0,
    "change_pct": 8.4,
    "backfill": false
@@ -94,8 +94,8 @@
    "name": "선도전기",
    "sector": "전기·전자",
    "high_pct": 29.94,
-   "vol_turnover_pct": 103.8,
-   "value_eok": 805,
+   "vol_turnover_pct": 103.9,
+   "value_eok": 806,
    "price": 6300.0,
    "change_pct": 23.29,
    "backfill": false
@@ -105,8 +105,8 @@
    "name": "남화토건",
    "sector": "건설",
    "high_pct": 26.58,
-   "vol_turnover_pct": 106.9,
-   "value_eok": 512,
+   "vol_turnover_pct": 107.2,
+   "value_eok": 514,
    "price": 10360.0,
    "change_pct": 7.58,
    "backfill": false
@@ -123,6 +123,17 @@
    "backfill": false
   },
   {
+   "code": "025950",
+   "name": "동신건설",
+   "sector": "건설",
+   "high_pct": 29.97,
+   "vol_turnover_pct": 97.8,
+   "value_eok": 467,
+   "price": 15800.0,
+   "change_pct": 14.66,
+   "backfill": false
+  },
+  {
    "code": "001260",
    "name": "남광토건",
    "sector": "건설",
@@ -132,17 +143,6 @@
    "price": 10270.0,
    "change_pct": -0.68,
    "backfill": true
-  },
-  {
-   "code": "025950",
-   "name": "동신건설",
-   "sector": "건설",
-   "high_pct": 29.97,
-   "vol_turnover_pct": 97.7,
-   "value_eok": 466,
-   "price": 15800.0,
-   "change_pct": 14.66,
-   "backfill": false
   },
   {
    "code": "010960",
@@ -175,8 +175,8 @@
    "sector": "건설",
    "change_pct": 7.58,
    "high_pct": 26.58,
-   "vol_turnover_pct": 106.9,
-   "value_eok": 512,
+   "vol_turnover_pct": 107.2,
+   "value_eok": 514,
    "price": 10360.0,
    "first_seen": "09:52",
    "exploded": true
@@ -199,8 +199,8 @@
    "sector": "전기·전자",
    "change_pct": 23.29,
    "high_pct": 29.94,
-   "vol_turnover_pct": 103.8,
-   "value_eok": 805,
+   "vol_turnover_pct": 103.9,
+   "value_eok": 806,
    "price": 6300.0,
    "first_seen": "10:21",
    "exploded": true
@@ -223,8 +223,8 @@
    "sector": "건설",
    "change_pct": 14.66,
    "high_pct": 29.97,
-   "vol_turnover_pct": 97.7,
-   "value_eok": 466,
+   "vol_turnover_pct": 97.8,
+   "value_eok": 467,
    "price": 15800.0,
    "first_seen": "10:21",
    "exploded": true
@@ -247,8 +247,8 @@
    "sector": "건설",
    "change_pct": 8.4,
    "high_pct": 29.41,
-   "vol_turnover_pct": 92.4,
-   "value_eok": 1399,
+   "vol_turnover_pct": 92.5,
+   "value_eok": 1401,
    "price": 25800.0,
    "first_seen": "13:51",
    "exploded": true
@@ -271,7 +271,7 @@
    "sector": "건설",
    "change_pct": 15.83,
    "high_pct": 29.98,
-   "vol_turnover_pct": 74.7,
+   "vol_turnover_pct": 74.8,
    "value_eok": 345,
    "price": 3805.0,
    "first_seen": "13:41",
@@ -283,8 +283,8 @@
    "sector": "IT 서비스",
    "change_pct": 9.94,
    "high_pct": 29.82,
-   "vol_turnover_pct": 63.1,
-   "value_eok": 719,
+   "vol_turnover_pct": 63.4,
+   "value_eok": 722,
    "price": 4700.0,
    "first_seen": "15:21",
    "exploded": false
@@ -314,6 +314,18 @@
    "exploded": false
   },
   {
+   "code": "094360",
+   "name": "칩스앤미디어",
+   "sector": "전기·전자",
+   "change_pct": 18.91,
+   "high_pct": 25.82,
+   "vol_turnover_pct": 51.1,
+   "value_eok": 874,
+   "price": 14460.0,
+   "first_seen": "17:51",
+   "exploded": false
+  },
+  {
    "code": "002990",
    "name": "금호건설",
    "sector": "건설",
@@ -335,18 +347,6 @@
    "value_eok": 265,
    "price": 8550.0,
    "first_seen": "11:41",
-   "exploded": false
-  },
-  {
-   "code": "094360",
-   "name": "칩스앤미디어",
-   "sector": "전기·전자",
-   "change_pct": 18.91,
-   "high_pct": 25.82,
-   "vol_turnover_pct": 50.3,
-   "value_eok": 860,
-   "price": 14460.0,
-   "first_seen": "17:51",
    "exploded": false
   }
  ],
