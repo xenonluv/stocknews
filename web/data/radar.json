@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-02 16:21:53 KST",
+ "generated_at": "2026-07-02 16:31:51 KST",
  "market_session": "closed",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -83,8 +83,8 @@
    "name": "계룡건설",
    "sector": "건설",
    "high_pct": 29.41,
-   "vol_turnover_pct": 92.0,
-   "value_eok": 1394,
+   "vol_turnover_pct": 92.1,
+   "value_eok": 1395,
    "price": 25800.0,
    "change_pct": 8.4,
    "backfill": false
@@ -95,7 +95,7 @@
    "sector": "전기·전자",
    "high_pct": 29.94,
    "vol_turnover_pct": 103.3,
-   "value_eok": 801,
+   "value_eok": 802,
    "price": 6300.0,
    "change_pct": 23.29,
    "backfill": false
@@ -138,8 +138,8 @@
    "name": "동신건설",
    "sector": "건설",
    "high_pct": 29.97,
-   "vol_turnover_pct": 96.7,
-   "value_eok": 462,
+   "vol_turnover_pct": 96.9,
+   "value_eok": 463,
    "price": 15800.0,
    "change_pct": 14.66,
    "backfill": false
@@ -200,7 +200,7 @@
    "change_pct": 23.29,
    "high_pct": 29.94,
    "vol_turnover_pct": 103.3,
-   "value_eok": 801,
+   "value_eok": 802,
    "price": 6300.0,
    "first_seen": "10:21",
    "exploded": true
@@ -223,8 +223,8 @@
    "sector": "건설",
    "change_pct": 14.66,
    "high_pct": 29.97,
-   "vol_turnover_pct": 96.7,
-   "value_eok": 462,
+   "vol_turnover_pct": 96.9,
+   "value_eok": 463,
    "price": 15800.0,
    "first_seen": "10:21",
    "exploded": true
@@ -247,8 +247,8 @@
    "sector": "건설",
    "change_pct": 8.4,
    "high_pct": 29.41,
-   "vol_turnover_pct": 92.0,
-   "value_eok": 1394,
+   "vol_turnover_pct": 92.1,
+   "value_eok": 1395,
    "price": 25800.0,
    "first_seen": "13:51",
    "exploded": true
@@ -283,8 +283,8 @@
    "sector": "IT 서비스",
    "change_pct": 9.94,
    "high_pct": 29.82,
-   "vol_turnover_pct": 59.8,
-   "value_eok": 683,
+   "vol_turnover_pct": 60.1,
+   "value_eok": 687,
    "price": 4700.0,
    "first_seen": "15:21",
    "exploded": false
