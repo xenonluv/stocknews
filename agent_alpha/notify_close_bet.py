@@ -76,7 +76,9 @@ def build_message(movers):
         chg = m.get("change_pct")
         val = m.get("value_eok")
         ssc = m.get("spark_strong_count")
-        lines.append(f"{i}위 {m.get('name')} ({m.get('code')}) — {s}점({_tier(s)})")
+        lines.append("")                     # 순위 블록 사이 빈 줄(가독성 — 회장님 지시)
+        medal = ["🥇", "🥈", "🥉"][i - 1] if i <= 3 else "▫️"
+        lines.append(f"{medal} {i}위 {m.get('name')} ({m.get('code')}) — {s}점({_tier(s)})")
         lines.append(
             f"   당일 {'' if chg is None else f'{chg:+.1f}%'} · 대금 {val if val is not None else '—'}억"
             f" · 강스파크 {ssc if ssc is not None else '—'}개"
@@ -85,6 +87,7 @@ def build_message(movers):
         chips = " · ".join(f"{k}({v:+d})" for k, v in fitness.close_bet_breakdown(m)[1] if v)
         if chips:
             lines.append(f"   {chips}")
+    lines.append("")
     if crash_n:
         lines.append(f"(폭락제외 벌점 발동 {crash_n}종 — 하위 강등)")
     lines.append("전략: 익일 장중 +7% 익절 / −5% 손절 · 잠정 휴리스틱·매수추천 아님")
