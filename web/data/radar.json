@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-02 15:11:50 KST",
+ "generated_at": "2026-07-02 15:21:56 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -24,7 +24,7 @@
   "telegram_seed": true,
   "telegram_channel": "FastStockNews"
  },
- "universe_count": 17,
+ "universe_count": 18,
  "events": [
   {
    "id": "2026-07-03_미국 고용보고서 (7월",
@@ -79,14 +79,36 @@
  ],
  "explosions": [
   {
+   "code": "013580",
+   "name": "계룡건설",
+   "sector": "건설",
+   "high_pct": 29.41,
+   "vol_turnover_pct": 91.2,
+   "value_eok": 1382,
+   "price": 25950.0,
+   "change_pct": 9.03,
+   "backfill": false
+  },
+  {
    "code": "007610",
    "name": "선도전기",
    "sector": "전기·전자",
    "high_pct": 29.94,
-   "vol_turnover_pct": 99.2,
-   "value_eok": 769,
-   "price": 6210.0,
-   "change_pct": 21.53,
+   "vol_turnover_pct": 102.6,
+   "value_eok": 796,
+   "price": 6130.0,
+   "change_pct": 19.96,
+   "backfill": false
+  },
+  {
+   "code": "419050",
+   "name": "삼기에너지솔루션즈",
+   "sector": "운송장비·부품",
+   "high_pct": 29.95,
+   "vol_turnover_pct": 94.3,
+   "value_eok": 469,
+   "price": 1944.0,
+   "change_pct": 29.95,
    "backfill": false
   },
   {
@@ -96,30 +118,19 @@
    "high_pct": 29.59,
    "vol_turnover_pct": 106.0,
    "value_eok": 467,
-   "price": 10290.0,
-   "change_pct": -0.48,
+   "price": 10130.0,
+   "change_pct": -2.03,
    "backfill": true
-  },
-  {
-   "code": "419050",
-   "name": "삼기에너지솔루션즈",
-   "sector": "운송장비·부품",
-   "high_pct": 29.95,
-   "vol_turnover_pct": 92.2,
-   "value_eok": 458,
-   "price": 1944.0,
-   "change_pct": 29.95,
-   "backfill": false
   },
   {
    "code": "025950",
    "name": "동신건설",
    "sector": "건설",
    "high_pct": 29.97,
-   "vol_turnover_pct": 90.1,
-   "value_eok": 432,
-   "price": 17910.0,
-   "change_pct": 29.97,
+   "vol_turnover_pct": 94.3,
+   "value_eok": 452,
+   "price": 16130.0,
+   "change_pct": 17.05,
    "backfill": false
   },
   {
@@ -129,8 +140,8 @@
    "high_pct": 29.87,
    "vol_turnover_pct": 185.6,
    "value_eok": 1334,
-   "price": 4365.0,
-   "change_pct": 3.07,
+   "price": 4335.0,
+   "change_pct": 2.36,
    "backfill": true
   }
  ],
@@ -139,11 +150,11 @@
    "code": "010960",
    "name": "삼호개발",
    "sector": "건설",
-   "change_pct": 3.07,
+   "change_pct": 2.36,
    "high_pct": 29.87,
    "vol_turnover_pct": 185.6,
    "value_eok": 1334,
-   "price": 4365.0,
+   "price": 4335.0,
    "first_seen": "09:52",
    "exploded": true
   },
@@ -151,35 +162,47 @@
    "code": "001260",
    "name": "남광토건",
    "sector": "건설",
-   "change_pct": -0.48,
+   "change_pct": -2.03,
    "high_pct": 29.59,
    "vol_turnover_pct": 106.0,
    "value_eok": 467,
-   "price": 10290.0,
+   "price": 10130.0,
    "first_seen": "10:01",
+   "exploded": true
+  },
+  {
+   "code": "007610",
+   "name": "선도전기",
+   "sector": "전기·전자",
+   "change_pct": 19.96,
+   "high_pct": 29.94,
+   "vol_turnover_pct": 102.6,
+   "value_eok": 796,
+   "price": 6130.0,
+   "first_seen": "10:21",
    "exploded": true
   },
   {
    "code": "037710",
    "name": "광주신세계",
    "sector": "유통",
-   "change_pct": -9.2,
+   "change_pct": -8.97,
    "high_pct": 15.86,
    "vol_turnover_pct": 102.2,
    "value_eok": 1279,
-   "price": 39500.0,
+   "price": 39600.0,
    "first_seen": "09:52",
    "exploded": false
   },
   {
-   "code": "007610",
-   "name": "선도전기",
-   "sector": "전기·전자",
-   "change_pct": 21.53,
-   "high_pct": 29.94,
-   "vol_turnover_pct": 99.2,
-   "value_eok": 769,
-   "price": 6210.0,
+   "code": "025950",
+   "name": "동신건설",
+   "sector": "건설",
+   "change_pct": 17.05,
+   "high_pct": 29.97,
+   "vol_turnover_pct": 94.3,
+   "value_eok": 452,
+   "price": 16130.0,
    "first_seen": "10:21",
    "exploded": true
   },
@@ -189,82 +212,58 @@
    "sector": "운송장비·부품",
    "change_pct": 29.95,
    "high_pct": 29.95,
-   "vol_turnover_pct": 92.2,
-   "value_eok": 458,
+   "vol_turnover_pct": 94.3,
+   "value_eok": 469,
    "price": 1944.0,
    "first_seen": "11:51",
-   "exploded": true
-  },
-  {
-   "code": "025950",
-   "name": "동신건설",
-   "sector": "건설",
-   "change_pct": 29.97,
-   "high_pct": 29.97,
-   "vol_turnover_pct": 90.1,
-   "value_eok": 432,
-   "price": 17910.0,
-   "first_seen": "10:21",
    "exploded": true
   },
   {
    "code": "013580",
    "name": "계룡건설",
    "sector": "건설",
-   "change_pct": 14.5,
+   "change_pct": 9.03,
    "high_pct": 29.41,
-   "vol_turnover_pct": 88.2,
-   "value_eok": 1339,
-   "price": 27250.0,
+   "vol_turnover_pct": 91.2,
+   "value_eok": 1382,
+   "price": 25950.0,
    "first_seen": "13:51",
-   "exploded": false
+   "exploded": true
   },
   {
    "code": "037440",
    "name": "희림",
    "sector": "일반서비스",
-   "change_pct": 7.03,
+   "change_pct": 7.93,
    "high_pct": 26.6,
-   "vol_turnover_pct": 83.9,
-   "value_eok": 386,
-   "price": 4185.0,
+   "vol_turnover_pct": 84.6,
+   "value_eok": 389,
+   "price": 4220.0,
    "first_seen": "13:41",
-   "exploded": false
-  },
-  {
-   "code": "042940",
-   "name": "상지건설",
-   "sector": "건설",
-   "change_pct": 7.76,
-   "high_pct": 28.36,
-   "vol_turnover_pct": 74.3,
-   "value_eok": 391,
-   "price": 8890.0,
-   "first_seen": "11:41",
    "exploded": false
   },
   {
    "code": "046940",
    "name": "우원개발",
    "sector": "건설",
-   "change_pct": 15.98,
+   "change_pct": 16.89,
    "high_pct": 29.98,
-   "vol_turnover_pct": 72.3,
-   "value_eok": 334,
-   "price": 3810.0,
+   "vol_turnover_pct": 73.8,
+   "value_eok": 340,
+   "price": 3840.0,
    "first_seen": "13:41",
    "exploded": false
   },
   {
-   "code": "091590",
-   "name": "남화토건",
-   "sector": "건설",
-   "change_pct": -8.93,
-   "high_pct": 26.58,
-   "vol_turnover_pct": 51.7,
-   "value_eok": 270,
-   "price": 8770.0,
-   "first_seen": "09:52",
+   "code": "101730",
+   "name": "위메이드맥스",
+   "sector": "IT 서비스",
+   "change_pct": 9.59,
+   "high_pct": 29.82,
+   "vol_turnover_pct": 53.4,
+   "value_eok": 611,
+   "price": 4685.0,
+   "first_seen": "15:21",
    "exploded": false
   },
   {
@@ -273,24 +272,186 @@
    "sector": "건설",
    "change_pct": 29.94,
    "high_pct": 29.94,
-   "vol_turnover_pct": 51.7,
+   "vol_turnover_pct": 51.8,
    "value_eok": 145,
    "price": 3190.0,
    "first_seen": "11:32",
    "exploded": false
   },
   {
+   "code": "091590",
+   "name": "남화토건",
+   "sector": "건설",
+   "change_pct": 0.21,
+   "high_pct": 26.58,
+   "vol_turnover_pct": 51.7,
+   "value_eok": 270,
+   "price": 9650.0,
+   "first_seen": "09:52",
+   "exploded": false
+  },
+  {
    "code": "002990",
    "name": "금호건설",
    "sector": "건설",
-   "change_pct": -29.16,
+   "change_pct": -21.46,
    "high_pct": 29.99,
    "vol_turnover_pct": 50.8,
    "value_eok": 1744,
-   "price": 10300.0,
+   "price": 11420.0,
    "first_seen": "09:52",
+   "exploded": false
+  },
+  {
+   "code": "042940",
+   "name": "상지건설",
+   "sector": "건설",
+   "change_pct": 4.36,
+   "high_pct": 28.36,
+   "vol_turnover_pct": 50.3,
+   "value_eok": 265,
+   "price": 8610.0,
+   "first_seen": "11:41",
    "exploded": false
   }
  ],
- "suspects": []
+ "suspects": [
+  {
+   "code": "091590",
+   "name": "남화토건",
+   "sector": "건설",
+   "pattern": "reaccum",
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 86,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_count": 4,
+    "re_body": 6,
+    "peak_turnover": 8,
+    "re_turnover": 6
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_count": 0,
+    "re_body": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "price": 9650.0,
+   "change_pct": 0.21,
+   "change_basis": "KRX",
+   "high_pct": 26.58,
+   "value_eok": 488,
+   "turnover_pct": 102.3,
+   "peak_turnover_pct": 180.8,
+   "float_ratio": 0.4113,
+   "turnover_basis": "float",
+   "ma10": 6759.5,
+   "ma10_margin_pct": 42.76,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": null,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 9.63,
+    "time": "15:15",
+    "value_eok": 5,
+    "count": 3
+   },
+   "reignition_bars": [
+    {
+     "time": "14:40",
+     "body_pct": 3.3,
+     "value_eok": 1
+    },
+    {
+     "time": "14:45",
+     "body_pct": 2.85,
+     "value_eok": 5
+    },
+    {
+     "time": "15:15",
+     "body_pct": 9.63,
+     "value_eok": 5
+    }
+   ],
+   "news": [
+    {
+     "title": "과열 경고에도 '호남 반도체' 테마주 상한가 행렬…변동성 주의보[핫...",
+     "summary": "'반도체 클러스터 조성' 기대감에 호남권에 기반을 둔 기업 주가가 테마성 강세를 이어가고 있다. 1일 한국거래소에 따르면 금호건설(002990)과 금호건설우선주(002995)는 이날 모두 상한가로 마감했다. 남화토건(091590)도 상한가를 기록했고,",
+     "office": "뉴스1",
+     "datetime": "202607011602",
+     "url": "https://n.news.naver.com/mnews/article/421/0009035410",
+     "sentiment": "호재"
+    },
+    {
+     "title": "[특징주] 서남권 반도체 투자 확정에 ‘재료 소멸’…지역 건설주 하...",
+     "summary": "30일 장 초반 광주·전남 지역 건설주가 일제히 약세를 보이고 있다. 전날 정부와 삼성전자, SK하이닉스의 서남권 반도체 클러스터 조성 계획 발표 이후 차익실현 매물이 출회된 영향으로 풀이된다. 이날 오전 9시 27분 기준 남화토건은 코스닥...",
+     "office": "조선비즈",
+     "datetime": "202606300938",
+     "url": "https://n.news.naver.com/mnews/article/366/0001175394",
+     "sentiment": "호재"
+    }
+   ],
+   "matched_events": [
+    {
+     "id": "2026-07-03_미국 고용보고서 (7월",
+     "title": "미국 고용보고서 (7월 발표)",
+     "dday": 1,
+     "categories": [
+      "금리"
+     ],
+     "score": 6.5
+    },
+    {
+     "id": "2026-07-07_삼성전자 2분기 잠정실",
+     "title": "삼성전자 2분기 잠정실적",
+     "dday": 5,
+     "categories": [
+      "반도체"
+     ],
+     "score": 4.4
+    },
+    {
+     "id": "2026-07-09_한국은행 금통위 기준금",
+     "title": "한국은행 금통위 기준금리 결정",
+     "dday": 7,
+     "categories": [
+      "금리"
+     ],
+     "score": 2.6
+    }
+   ],
+   "theme": "반도체",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260625",
+    "peak_value_eok": 543,
+    "peak_high_pct": 29.93,
+    "peak_turnover_pct": 180.8,
+    "peak_ibs": 0.16,
+    "peak_uppertail": 51.2,
+    "ma20": 5158.5,
+    "ma20_margin_pct": 87.07,
+    "cause_summary": "과열 경고에도 '호남 반도체' 테마주 상한가 행렬…변동성 주의보[핫...",
+    "was_theme_leader": false,
+    "source": "backfill"
+   },
+   "leader_cohort_prob": null,
+   "theme_leader": false
+  }
+ ]
 }
