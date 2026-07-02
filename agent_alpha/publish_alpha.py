@@ -128,6 +128,15 @@ def run(dry=False):
         print(f"[alpha-publish] DRY movers={len(data['movers'])} date={data['date']} (미기록)")
         print(json.dumps(data, ensure_ascii=False, indent=1)[:600])
         return
+    # 🎯 종베 TOP 후보 텔레그램(15:15 잠정·15:43 확정변경) — fail-safe: 실패해도 게시 진행.
+    # git 성공 여부와 무관하게 게시 데이터 기준으로 발송(시간게이트 14:55~16:00 + 구성 디둡은 모듈 내부).
+    try:
+        import notify_close_bet
+        n = notify_close_bet.notify(data)
+        if n:
+            print(f"[alpha-publish] 🎯 종베 알림 {n}건 전송")
+    except Exception as e:
+        print(f"[alpha-publish] 종베 알림 실패(무시): {e}")
     new_key = _cmp_key(data)
     # 변경 판정은 'on-disk'가 아니라 'git HEAD 커밋본' 기준 — 이전 회차가 썼지만 commit/push 못 한 변경이
     # 묶여도(on-disk만 갱신) 다음 회차가 재커밋/재푸시하도록(상태 드리프트 방지). 내용 동일하면 파일도 안 씀(청결).

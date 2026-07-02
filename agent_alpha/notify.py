@@ -27,8 +27,12 @@ def _save(s):
 
 
 def notify(rows):
-    """rows: collect/loop의 행(_judgment 포함 가능). 고신뢰 알파만 발송. 보낸 수 반환."""
-    tg.load_env()
+    """rows: collect/loop의 행(_judgment 포함 가능). 고신뢰 알파만 발송. 보낸 수 반환.
+    ⚠ 기본 OFF(2026-07-02 텔레그램 개편 — 장중 소음 제거, 15:15 🎯 종베 알림으로 대체).
+      부활하려면 Mac .env에 ALPHA_LLM_TELEGRAM=1."""
+    tg.load_env()   # .env 스위치를 읽기 위해 게이트보다 먼저
+    if os.environ.get("ALPHA_LLM_TELEGRAM", "0") != "1":
+        return 0
     if not (os.environ.get("TELEGRAM_BOT_TOKEN") and os.environ.get("TELEGRAM_CHAT_ID")):
         return 0
     date = config.today_yyyymmdd()

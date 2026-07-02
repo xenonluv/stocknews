@@ -173,8 +173,12 @@ def _format_youtong(y):
 def notify_youtong(youtong, state_path=YOUTONG_STATE_PATH, now=None):
     """곧 폭발 후보(youtong) 진입 알림 — 종목·일자당 1회(디둡). 보낸 건수 반환.
     youtong은 라이브 스냅샷(밴드 들락날락)이라 봉 완성 판정 없이 '오늘 처음 뜨면 1통'. 재매집 알림과
-    상태 파일(.youtong_notified.json)·메시지 형식을 분리해 구분. 토큰 미설정/실패는 조용히 skip."""
-    load_env()
+    상태 파일(.youtong_notified.json)·메시지 형식을 분리해 구분. 토큰 미설정/실패는 조용히 skip.
+    ⚠ 기본 OFF(2026-07-02 텔레그램 개편 — 포착 시점에 이미 +20% 고위험군이 대부분이라 소음.
+      15:15 🎯 종베 알림으로 대체). 부활하려면 Mac .env에 TELEGRAM_YOUTONG=1."""
+    load_env()   # .env의 TELEGRAM_YOUTONG 스위치를 읽기 위해 게이트보다 먼저
+    if os.environ.get("TELEGRAM_YOUTONG", "0") != "1":
+        return 0
     if not os.environ.get("TELEGRAM_BOT_TOKEN") or not os.environ.get("TELEGRAM_CHAT_ID"):
         return 0  # 미설정 → 조용히 skip(Mac만 실송)
     now = now or datetime.now(KST)
