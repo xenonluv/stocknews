@@ -114,6 +114,10 @@ def notify(data, now=None):
     if not movers:
         return 0
     date = data.get("date") or now.strftime("%Y%m%d")
+    # 신선도 가드(크리티컬 리뷰 2026-07-03) — 15:10 collect 실패·지연·휴장으로 최신 forward가 전일분이면
+    # 어제 종목을 "오늘의 후보 (마감 확정)"으로 오발송하는 경로 차단. 테스트(CLOSE_BET_FORCE=1)는 우회.
+    if os.environ.get("CLOSE_BET_FORCE") != "1" and date != now.strftime("%Y%m%d"):
+        return 0
     msg, sig = build_message(movers)
     st = _load()
     prev = st.get(date) or {}

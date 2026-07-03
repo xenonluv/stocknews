@@ -75,6 +75,10 @@ def forecast_warning(closes, idx=None, level=None):
         long_ok = r15 >= 1.00 and high15 and (i15 is None or i15 <= 0 or r15 >= 3 * i15)
         if (short_ok or long_ok) and level in ("주의", "경고"):
             return "경고지정 요건충족"      # 이미 경보 단계 진입 종목이 지정 요건까지 충족
+        # 이미 경고/위험으로 '지정된' 종목에 하위 단계 '경고예고 예상'을 표기하면 단계 역전(오도) —
+        # 다음 단계(위험예고·매매정지)는 미모델링이라 정직하게 침묵(크리티컬 리뷰 2026-07-03).
+        if level in ("경고", "위험"):
+            return None
         if short_ok or long_ok or r3 >= 1.00 or r5 >= 0.60 or r15 >= 1.00:
             return "경고예고 예상"
         return None
