@@ -67,6 +67,9 @@ function closeBetFitness(m: AlphaMover): { score: number; reasons: { k: string; 
   const r6 = m.run_6d_pct;
   if (r6 != null && r6 >= 100 && c != null && c < 0) add("과확장붕괴", -30);
   if (m.down_streak != null && m.down_streak >= 4) add(`연속하락${m.down_streak}일`, -15);
+  // ⑨ 20일선 아래(역배열) −20 — 회장님 지시 2026-07-03 "적어도 20일선 위에는 있어야"(희림 사례).
+  //    과거 38표본 전원 20일선 위 = 오폭 0건. 역배열=위쪽 매물벽.
+  if (m.ma20_gap_pct != null && m.ma20_gap_pct < 0) add("20일선아래", -20);
   return { score: Math.max(0, Math.min(100, s)), reasons };
 }
 

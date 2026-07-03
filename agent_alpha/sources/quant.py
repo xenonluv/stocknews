@@ -66,6 +66,10 @@ def build(mover, fcache, reg):
         else:
             break
     row["down_streak"] = ds if idx >= 1 else None
+    # ma20_gap_pct = 종가의 일봉 20일선 대비 위치(%) — 음수=역배열(회장님 지시 2026-07-03: 20일선 아래는 하위로).
+    # 종가 20개 미만(신규상장 등)이면 None(날조 금지).
+    closes20 = [b.get("close") for b in d[max(0, idx - 19):idx + 1] if b.get("close")]
+    row["ma20_gap_pct"] = round((c / (sum(closes20) / 20) - 1) * 100, 1) if (len(closes20) == 20 and c) else None
 
     # OHLC가 모두 유효(양수)하고 high>low일 때만 꼬리 산출 — 결측(_f→0.0)을 0으로 강제하면 종가강도 오염.
     if all(isinstance(x, (int, float)) and x > 0 for x in (o, h, l, c)) and h > l:

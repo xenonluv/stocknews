@@ -17,6 +17,7 @@ export interface AlphaMover {
   run_6d_pct?: number | null; // 6세션 전 종가 대비 누적 상승률 — 과확장붕괴(≥100%&당일음수 −30) 판정
   peak_dd_pct?: number | null; // 직전 7세션 최고종가 대비 낙폭 — 표시·관찰 전용(점수 미반영)
   down_streak?: number | null; // 종가 기준 연속 하락 일수 — ≥4일 −15 (연속하락 벌점)
+  ma20_gap_pct?: number | null; // 일봉 20일선 대비 위치% — 음수(역배열) −20 (희림 사례, 회장님 지시 2026-07-03)
   close_strength?: number | null; // 종가강도(받힘) 0~1
   upper_wick_pct?: number | null;
   lower_wick_pct?: number | null;
@@ -85,6 +86,7 @@ export interface AlphaCalibration {
   by_spark_strength?: Record<string, AlphaCalibCell>; // 스파크 세기(무/약/강) — 무>강 관측 서열 판정
   by_liquidity_deficit?: Record<string, AlphaCalibCell>; // 유동성결핍 해당/미해당 — v4 −15 검증
   by_crash_state?: Record<string, AlphaCalibCell>; // 폭락제외(과확장붕괴/연속하락/정상) 전진검증
+  by_ma20?: Record<string, AlphaCalibCell>; // 20일선 위/아래 — 역배열 벌점 전진검증
   cells?: AlphaCalibCell[];
   llm?: { n: number; brier: number; by_prob_band?: Record<string, AlphaCalibCell> } | null;
   note?: string;
