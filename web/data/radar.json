@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-03 18:03:47 KST",
+ "generated_at": "2026-07-03 18:14:07 KST",
  "market_session": "closed",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -248,6 +248,18 @@
    "value_eok": 1296,
    "price": 23400.0,
    "first_seen": "10:01",
+   "exploded": false
+  },
+  {
+   "code": "095500",
+   "name": "미래나노텍",
+   "sector": "화학",
+   "change_pct": 24.13,
+   "high_pct": 26.21,
+   "vol_turnover_pct": 50.9,
+   "value_eok": 1007,
+   "price": 8950.0,
+   "first_seen": "18:12",
    "exploded": false
   },
   {
