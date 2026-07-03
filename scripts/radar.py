@@ -71,6 +71,10 @@ GEUPSO_BODY_PCT = 2.0              # 🎯 매수급소: 14:30↑ 5분 양봉 몸
                                    # 덕신 5.67/3.11% 2개=폭락에도 안심 vs 상지 1.51% 찔끔=받침 없음)
 GEUPSO_MIN_COUNT = 2               # 🎯 매수급소: 2%+ 양봉 최소 개수. 급소는 등락률 밴드 무제한(폭락 중이든 급등 중이든)
 REACCUM_TRACK_DAYS = 30            # 폭발 후 장기 추적 상한(거래일) — 6일 지나도 '20일선 위인 동안' 계속 추적(급소 감시)
+LOWACCUM_CHANGE_MAX = -10.0        # 🧲 저점매집: 당일 등락 상한(이하 폭락 중일 때만 판정. 회장님 지시 2026-07-03)
+LOWACCUM_BODY_PCT = 2.0            # 🧲 저점매집: 시간 무관 5분 양봉 몸통% 하한
+LOWACCUM_MIN_COUNT = 3             # 🧲 저점매집: 2%+ 양봉 최소 개수 (덕신 7/3: −16% 폭락 바닥 4방 실측)
+YOUTONG_TRACK_DAYS = 10            # youtong 이력 추적 일수 — 폭발 미등록(회전율 게이트 탈락) 종목도 급소/저점매집 감시
 NXT_REEVAL_START_HHMM = "1600"     # NXT 시간외가로 '현재 등락률' 재평가 시작(=15:30+신선도상한 30분). 그 전엔
                                    # 정규장 막판 양봉 텔레그램이 신선하게 나가도록 KRX 유지 + NXT 단일가도 ~16:00 체결.
 REACCUM_SCORE = 62                 # 검증중 노출용 고정 표시 점수 base(raw 통계와 분리, score_raw=0)
@@ -738,10 +742,19 @@ def _load_youtong_registry(path=YOUTONG_REGISTRY_PATH, today=None):
     try:
         d = json.load(open(path, encoding="utf-8"))
         if isinstance(d, dict) and d.get("date") == today and isinstance(d.get("codes"), dict):
+            d.setdefault("history", {})
             return d
+        if isinstance(d, dict) and isinstance(d.get("codes"), dict):
+            # 날짜 교체 — 지난 날 youtong 코드를 이력으로 롤링(폭발 미등록 종목의 급소/저점매집 추적 풀,
+            # 회장님 지시 2026-07-03: 덕신·가온처럼 고가 폭발인데 회전율 게이트 탈락한 종목 커버).
+            hist = d.get("history") if isinstance(d.get("history"), dict) else {}
+            if d.get("date") and d["codes"]:
+                hist[d["date"]] = {c: (v.get("name") or c) for c, v in d["codes"].items()}
+            hist = {k: hist[k] for k in sorted(hist)[-YOUTONG_TRACK_DAYS:]}   # 최근 N일만 보관
+            return {"date": today, "codes": {}, "history": hist}
     except Exception:
         pass
-    return {"date": today, "codes": {}}
+    return {"date": today, "codes": {}, "history": {}}
 
 
 def _save_youtong_registry(reg, path=YOUTONG_REGISTRY_PATH):
@@ -876,7 +889,17 @@ def prepare_reaccum_registry(p):
     elif seed_count or live_count:
         log("[radar] dry-run: 폭발 레지스트리 저장 생략")
     active = _recent_active_explosions(reg, p.explosion_window, p.reaccum_track_days)
-    n_ext = sum(1 for r in active.values() if r.get("_extended_track"))
+    # youtong 이력(폭발 미등록·회전율 게이트 탈락 종목) 병합 — 급소/저점매집 전용 추적(_yt_track).
+    # 덕신(고가 4일 연속 +22%인데 회전 미달)·가온전선 사각지대 커버(회장님 지시 2026-07-03).
+    try:
+        yreg = _load_youtong_registry(YOUTONG_REGISTRY_PATH, _today_yyyymmdd())
+        for ydate in sorted(yreg.get("history", {})):
+            for ycode, yname in yreg["history"][ydate].items():
+                if ycode not in active:
+                    active[ycode] = {"code": ycode, "name": yname, "peak_date": ydate, "_yt_track": True}
+    except Exception as e:
+        log(f"[warn] youtong 이력 풀 병합 실패(무시): {e}")
+    n_ext = sum(1 for r in active.values() if r.get("_extended_track") or r.get("_yt_track"))
     log(f"[radar] reaccum registry active={len(active)}(장기추적 {n_ext}) seed={seed_count} live={live_count} "
         f"당일폭발={len(today_explosions)} youtong={len(today_youtong)}")
     return active, live_scan_ok, today_explosions, today_youtong
@@ -927,8 +950,8 @@ def scan_reaccum_candidate(rec, p, events):
     # 새 폭발 정의(고가≥22% AND 거래량/유통주식수≥90%)로 적재된 레코드만 후보로 본다. 개편 전(거래대금
     # 1,500억/13% 게이트) 레코드는 vol_turnover_pct가 없어 — 재검증 없이 식음·반등 후보로 새는 걸 차단
     # (마이그레이션 윈도 ~6일간 정의 불일치 후보 방지. 구 레코드는 윈도 만료로 자가 소거).
-    if not _reaccum_eligible(rec, p):
-        return None
+    if not _reaccum_eligible(rec, p) and not rec.get("_yt_track"):
+        return None   # youtong 이력 추적분은 폭발 검증 필드가 없어도 급소/저점매집 감시 대상
     try:
         now = kis.price_now_jmoney_un(code)  # 가격=J 공식 / 거래대금·거래량=UN 통합(표시·vsurge)
     except Exception as e:
@@ -951,11 +974,12 @@ def scan_reaccum_candidate(rec, p, events):
     # 급소는 14:30 이후에만 발동 가능 → 그 전엔 밴드 밖 후보를 기존처럼 조기 컷(비용 절감 유지).
     in_band = (p.reaccum_change_min <= change_pct <= p.reaccum_change_max)
     _hhmm = datetime.now(KST).strftime("%H%M")
-    if not in_band and _hhmm < p.reignition_start:
-        return None
+    if not in_band and _hhmm < p.reignition_start and change_pct > p.lowaccum_change_max:
+        return None   # 예외: ≤−10% 폭락 중이면 🧲 저점매집 후보라 오전에도 판정 진행
     # 장기 추적분(폭발 후 6일 초과, _extended_track)은 '🎯 매수급소 전용' — 급소는 14:30 이후에만 발동
     # 가능하므로 그 전엔 스킵(풀 ~100종목 × 일봉·분봉 조회를 오전 내내 하지 않는 비용 가드).
-    if rec.get("_extended_track") and _hhmm < p.reignition_start:
+    if ((rec.get("_extended_track") or rec.get("_yt_track")) and _hhmm < p.reignition_start
+            and change_pct > p.lowaccum_change_max):
         return None
     high = now.get("high") or now["price"]
     high_pct = (high / now["prev_close"] - 1) * 100
@@ -973,7 +997,7 @@ def scan_reaccum_candidate(rec, p, events):
     ma20 = sum(closes[-20:]) / 20
     ma10 = sum(closes[-10:]) / 10
     # 장기 추적(폭발 후 6일 초과) 후보는 '20일선 위인 동안만' 유지 — 깨지면 추적 종료(추세 사망, 회장님 정의).
-    if rec.get("_extended_track") and now["price"] < ma20:
+    if (rec.get("_extended_track") or rec.get("_yt_track")) and now["price"] < ma20:
         return None
     # ── 반등 게이트: **14:30~장종료** 5분봉 양봉 몸통%≥1.5% 스파크가 REIGNITION_MIN_COUNT(2)회 이상(마감 직전
     #    재분출). 시작시각(reignition_start) 이전 양봉은 미집계. 스파크는 **그 봉의 절대 등락률과 무관하게** 센다 —
@@ -985,20 +1009,28 @@ def scan_reaccum_candidate(rec, p, events):
         log(f"  [skip] {name}: reaccum 분봉 실패 {e}")
         return "ERR"
     reign_start_colon = p.reignition_start[:2] + ":" + p.reignition_start[2:]  # "1430" → "14:30"
-    rbars = [b for b in reignition_bars(bars, p.reignition_body_pct, p.reignition_span_min)
-             if b["time"] >= reign_start_colon]  # 14:30↑ 양봉 스파크(봉 절대 등락률 무관 — 회복분도 카운트)
-    if len(rbars) < p.reignition_min_count:
-        return None
-    # 🎯 매수급소 판정 — 몸통 2%+ 양봉 ≥2회(회장님 15년 신호: '큰손이 아직 받치고 있다'는 지문.
-    # 덕신 7/2 5.67/3.11% 2개=익일 폭락에도 안심 vs 상지 1.51% 1개=받침 없음). 밴드 밖 후보는 급소만 통과.
+    all_bars = reignition_bars(bars, p.reignition_body_pct, p.reignition_span_min)  # 전 시간대 1.5%+ 양봉
+    rbars = [b for b in all_bars if b["time"] >= reign_start_colon]  # 14:30↑(기존 재매집·급소 판정용)
+    # 🧲 저점매집 판정 — 폭락(≤−10%) 중인데 20일선 사수 + '시간 무관' 몸통 2%+ 양봉 ≥3회(회장님 지시 2026-07-03:
+    # 덕신 7/3 −16% 폭락 바닥에서 11시부터 2%+ 스파크 4방 = 주포가 눌러놓고 밑에서 받는 지문).
+    labars = [b for b in all_bars if b["body_pct"] >= p.lowaccum_body_pct]
+    low_accum = (change_pct <= p.lowaccum_change_max and now["price"] >= ma20
+                 and len(labars) >= p.lowaccum_min_count)
+    # 🎯 매수급소 판정 — 14:30↑ 몸통 2%+ 양봉 ≥2회(회장님 15년 신호: '큰손이 아직 받치고 있다'는 지문.
+    # 덕신 7/2 5.67/3.11% 2개=익일 폭락에도 안심 vs 상지 1.51% 1개=받침 없음).
     gbars = [b for b in rbars if b["body_pct"] >= p.geupso_body_pct]
     geupso = len(gbars) >= p.geupso_min_count
-    if not in_band and not geupso:
+    # 통과 조건: ①기존 재매집(14:30↑ 1.5% ≥2회) ②급소 ③저점매집 중 하나. 밴드 밖·장기추적·youtong이력분은
+    # 급소/저점매집일 때만(기존 6일 폭발 재매집 의미론 불변 — 순수 확장).
+    reignition_ok = len(rbars) >= p.reignition_min_count
+    if not (reignition_ok or geupso or low_accum):
         return None
-    # 장기 추적분은 급소일 때만 노출 — 6일 이내 폭발만 기존 '재매집' 의미론 유지(순수 확장, 기존 동작 불변).
-    if rec.get("_extended_track") and not geupso:
+    if not in_band and not (geupso or low_accum):
         return None
-    reignition = max(rbars, key=lambda b: b["body_pct"])  # 대표(최대 몸통) 봉 — 표시용
+    if (rec.get("_extended_track") or rec.get("_yt_track")) and not (geupso or low_accum):
+        return None
+    # 대표(최대 몸통) 봉 — 표시용. 저점매집 전용(14:30 봉 없음)이면 저점매집 봉에서 선정.
+    reignition = max(rbars or labars, key=lambda b: b["body_pct"])
 
     ma10_margin = (now["price"] / ma10 - 1) * 100 if ma10 else 0.0
     ma20_margin = (now["price"] / ma20 - 1) * 100 if ma20 else 0.0
@@ -1087,9 +1119,12 @@ def scan_reaccum_candidate(rec, p, events):
             "value_eok": reignition["value_eok"],
             "count": len(rbars),   # 14:30 이후 자격 양봉 스파크 수(게이트 ≥2)
         },
-        # 당일 자격 5분 스파크 전체 — 텔레그램 봉단위 알림용(표시는 reignition 대표봉만 사용)
+        # 당일 자격 5분 스파크 전체 — 텔레그램 봉단위 알림용(표시는 reignition 대표봉만 사용).
+        # 저점매집 전용(14:30 봉 없음)이면 저점매집 2%+ 봉을 실어 신선봉 텔레그램이 그대로 작동.
         "reignition_bars": [{"time": b["time"], "body_pct": b["body_pct"], "value_eok": b["value_eok"]}
-                            for b in rbars],
+                            for b in (rbars or labars)],
+        "low_accum": low_accum,          # 🧲 저점매집 — 폭락(≤−10%)+20일선 사수+시간무관 2%+ 스파크 ≥3회
+        "low_accum_bars": [{"time": b["time"], "body_pct": b["body_pct"]} for b in labars] if low_accum else [],
         "news": news_items,
         "matched_events": matched_events,
         "theme": theme,
@@ -1287,6 +1322,12 @@ def main():
                     help="🎯 매수급소 최소 양봉 수(기본 2)")
     ap.add_argument("--reaccum-track-days", type=int, default=REACCUM_TRACK_DAYS,
                     help="폭발 후 장기 추적 상한 거래일(기본 30 — 6일 초과분은 20일선 위인 동안만 유지)")
+    ap.add_argument("--lowaccum-change-max", type=float, default=LOWACCUM_CHANGE_MAX,
+                    help="🧲 저점매집: 당일 등락 상한(기본 -10 — 이하 폭락 중일 때만 판정)")
+    ap.add_argument("--lowaccum-body-pct", type=float, default=LOWACCUM_BODY_PCT,
+                    help="🧲 저점매집: 시간 무관 5분 양봉 몸통%% 하한(기본 2.0)")
+    ap.add_argument("--lowaccum-min-count", type=int, default=LOWACCUM_MIN_COUNT,
+                    help="🧲 저점매집: 최소 양봉 수(기본 3)")
     ap.add_argument("--names", nargs="*", default=[], help="watchlist 강제 포함")
     ap.add_argument("--no-reaccum", dest="reaccum_enabled", action="store_false",
                     help="재매집(reaccum) registry 감시와 후보 생성을 비활성화")
@@ -1339,6 +1380,9 @@ def main():
     p.geupso_body_pct = max(0.5, float(p.geupso_body_pct))
     p.geupso_min_count = max(1, int(p.geupso_min_count))
     p.reaccum_track_days = max(p.explosion_window, int(p.reaccum_track_days))  # 최소 기존 윈도(6) 이상
+    p.lowaccum_body_pct = max(0.5, float(p.lowaccum_body_pct))
+    p.lowaccum_min_count = max(1, int(p.lowaccum_min_count))
+    p.lowaccum_change_max = float(p.lowaccum_change_max)
     active_explosions, live_scan_ok, today_explosions, today_youtong = prepare_reaccum_registry(p)
 
     # 조건 1: D-10 이벤트 캘린더 (재반등 후보의 이벤트 민감도 표시용)
@@ -1365,7 +1409,7 @@ def main():
     if collection_dead or high_fail:
         log(f"[error] 데이터 수집 장애 의심(live_ok={live_scan_ok}, 실패 {err_count}/{eligible}적격, 후보 {reaccum_added}) — 게시 중단")
         sys.exit(3)
-    suspects.sort(key=lambda x: (not x.get("geupso"), -x["suspicion_score"]))  # 🎯 매수급소 최상단
+    suspects.sort(key=lambda x: (not x.get("geupso"), not x.get("low_accum"), -x["suspicion_score"]))  # 🎯급소 > 🧲저점매집 최상단
 
     out = {
         "generated_at": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST"),
@@ -1390,6 +1434,9 @@ def main():
                    "geupso_body_pct": p.geupso_body_pct,              # 🎯 매수급소: 5분 양봉 몸통% 하한(2.0)
                    "geupso_min_count": p.geupso_min_count,            # 🎯 매수급소: 최소 양봉 수(2)
                    "reaccum_track_days": p.reaccum_track_days,        # 폭발 후 장기 추적 상한(거래일)
+                   "lowaccum_change_max": p.lowaccum_change_max,      # 🧲 저점매집: 당일 등락 상한(-10)
+                   "lowaccum_body_pct": p.lowaccum_body_pct,          # 🧲 저점매집: 양봉 몸통% 하한(2.0)
+                   "lowaccum_min_count": p.lowaccum_min_count,        # 🧲 저점매집: 최소 양봉 수(3)
                    "telegram_seed": p.telegram_seed,
                    "telegram_channel": p.telegram_channel if p.telegram_seed else None},
         "universe_count": len(active_explosions),

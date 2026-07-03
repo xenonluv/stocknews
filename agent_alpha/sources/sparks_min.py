@@ -111,6 +111,16 @@ def _minute_bars(code):
     return bars, src
 
 
+def spark_allday_strong(code, body_min=2.0):
+    """시간 무관(세션 전체) 몸통 ≥body_min% 5분 양봉 — 🧲 저점매집 판정용(회장님 지시 2026-07-03).
+    반환 (count, bars, source). 미측정(source=='none')이면 (None, [], 'none')."""
+    bars, src = _minute_bars(code)
+    if src == "none":
+        return None, [], src
+    rb = [b for b in reignition_bars(bars, body_min, config.SPARK_SPAN_MIN)]
+    return len(rb), rb, src
+
+
 def spark_1430(code):
     """(count, max_body_pct, bars[], source) — 14:30↑ 5분 양봉 몸통%≥SPARK_BODY_PCT(1.5) 스파크.
     분봉 결측(과거일·미체결)이면 (0,0,[],"none") — 날조 금지."""

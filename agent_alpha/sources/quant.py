@@ -94,6 +94,13 @@ def build(mover, fcache, reg):
     # 강스파크(몸통 3%↑) 개수 — 2회↑ +8 가점 입력(회장님 지시 2026-07-02: 고가 사냥 프로그램, 과거 4/4 +7%터치).
     row["spark_strong_count"] = (sum(1 for b in (bars or []) if (b.get("body_pct") or 0) >= 3.0)
                                  if src not in (None, "none") else None)
+    # 🧲 저점매집(회장님 지시 2026-07-03) — 시간 무관 2%+ 양봉 ≥3 AND 당일 ≤−10% AND 20일선 위.
+    # 주포가 눌러놓고 밑에서 받는 지문(덕신 7/3: −18%·MA20 +7%·2%+ 4방 실측). 점수 무반영 — 배지·관찰축 전용.
+    ad_cnt, ad_bars, ad_src = sparks_min.spark_allday_strong(code, body_min=2.0)
+    row["spark_allday_strong"] = ad_cnt   # 시간 무관(세션 전체) 2%+ 양봉 수. None=미측정
+    row["low_accum"] = bool(row.get("change_pct") is not None and row["change_pct"] <= -10
+                            and row.get("ma20_gap_pct") is not None and row["ma20_gap_pct"] >= 0
+                            and (ad_cnt or 0) >= 3)
 
     # ── 투자자별(당일; 결측 시 null — 날조 금지. label.py는 익일봉만 채우고 수급은 보강하지 않음) ──
     try:

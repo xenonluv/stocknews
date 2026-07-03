@@ -126,6 +126,10 @@ def record_history(out):
             "visible_experimental": s.get("visible_experimental", False),
             "reaccum": s.get("reaccum"),
             "reignition": s.get("reignition"),  # 재반등(오늘) 신호: 5분 스파크 몸통%·시각·스파크수
+            "geupso": s.get("geupso", False),          # 🎯 매수급소 — 전진검증용(분봉은 당일만이라 소급 불가)
+            "geupso_bars": s.get("geupso_bars"),
+            "low_accum": s.get("low_accum", False),    # 🧲 저점매집 — 전진검증용
+            "low_accum_bars": s.get("low_accum_bars"),
             "forecast": s.get("forecast"),  # 3일내+7% 확률 라벨 — 라이브 calibration 누적용
 
             "matched_events": [m.get("id") for m in s.get("matched_events", [])],

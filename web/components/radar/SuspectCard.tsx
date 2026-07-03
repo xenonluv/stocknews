@@ -73,6 +73,14 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
                 🎯 매수급소
               </Badge>
             )}
+            {s.low_accum && (
+              <Badge
+                className="bg-orange-500 px-2 py-0.5 text-sm font-bold text-white"
+                title="🧲 저점매집 의심 — 당일 −10% 이상 폭락 중인데 20일선을 사수하고 시간 무관 몸통 2%+ 5분 양봉이 3회 이상(주포가 눌러놓고 밑에서 받는 지문 — 덕신 7/3: −16%에 11시부터 4방). 매수 추천 아님"
+              >
+                🧲 저점매집
+              </Badge>
+            )}
             <Badge variant="warning" title="최근 6거래일 고가+22%·거래량 90%+ 폭발 종목이 14:30~장종료 5분 양봉 몸통2%+ 스파크 2회+ AND 현재 등락률 −5~+7% 재분출 — 직접 확인하고 진입(매수 추천 아님)">
               재매집
             </Badge>
@@ -197,6 +205,11 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
             {s.geupso && (s.geupso_bars?.length ?? 0) > 0 && (
               <p className="text-[11px] font-semibold text-up tabular-nums">
                 🎯 2%+ 급소 스파크: {s.geupso_bars!.map((b) => `${b.time} ${b.body_pct}%`).join(" · ")}
+              </p>
+            )}
+            {s.low_accum && (s.low_accum_bars?.length ?? 0) > 0 && (
+              <p className="text-[11px] font-semibold text-orange-400 tabular-nums">
+                🧲 저점 매집봉(2%+): {s.low_accum_bars!.map((b) => `${b.time} ${b.body_pct}%`).join(" · ")}
               </p>
             )}
             {s.reaccum?.cause_summary && (

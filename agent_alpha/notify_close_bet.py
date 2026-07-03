@@ -84,6 +84,8 @@ def build_message(movers):
             alerts.append(f"⚠️투자{m['alert_now']}")
         if m.get("alert_forecast"):
             alerts.append(f"🚨{m['alert_forecast']}")
+        if m.get("low_accum"):
+            alerts.append("🧲저점매집")   # 폭락 중 MA20 사수 + 2%+ 양봉 ≥3 — 주포 저점매집 지문(회장님 지시 2026-07-03)
         badge = (" " + " ".join(alerts)) if alerts else ""
         lines.append(f"{medal} {i}위 {m.get('name')} ({m.get('code')}) — {s}점({_tier(s)}){badge}")
         lines.append(

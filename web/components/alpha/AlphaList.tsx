@@ -336,6 +336,14 @@ function MoverCard({ m, rank }: { m: AlphaMover; rank?: number }) {
             🚨{m.alert_forecast}
           </span>
         )}
+        {m.low_accum && (
+          <span
+            className="rounded bg-orange-500/30 px-1.5 py-0.5 text-xs font-bold text-orange-300"
+            title="🧲 저점매집 의심 — 당일 −10%+ 폭락 중 20일선 사수 + 시간 무관 몸통 2%+ 5분 양봉 3회 이상(주포가 눌러놓고 밑에서 받는 지문 — 덕신 7/3 사례). 점수 무반영·관찰축(by_low_accum)으로 익일 성과 전진검증 중"
+          >
+            🧲 저점매집{m.spark_allday_strong != null ? ` ${m.spark_allday_strong}방` : ""}
+          </span>
+        )}
       </div>
       <div className="flex flex-wrap gap-x-1.5 text-[10px] tabular-nums text-muted-foreground">
         {reasons.map((r) => (

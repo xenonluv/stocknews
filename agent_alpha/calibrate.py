@@ -101,6 +101,7 @@ def run():
         "by_liquidity_deficit": {},      # 유동성결핍(대금<50억 or 회전2d<40%) 해당/미해당 — v4 −15 검증
         "by_crash_state": {},            # 폭락제외(과확장붕괴/연속하락4일+/정상) — 회장님 지시 벌점 전진검증
         "by_ma20": {},                   # 20일선 위/아래 — 역배열 벌점(−20) 전진검증(회장님 지시 2026-07-03)
+        "by_low_accum": {},              # 🧲 저점매집(폭락+MA20사수+전일 2%+스파크≥3) 해당/미해당 — 익일 성과 전진검증
         "cells": [],                     # turnover2d × spark × close_strength × 음봉 (min_n 게이트)
         "llm": None,
         "min_n": config.CALIB_MIN_N,
@@ -284,6 +285,10 @@ def run():
     # 20일선 위/아래 — 역배열 벌점 전진검증 (필드 없는 옛 행은 분류 제외)
     out["by_ma20"]["20일선 위"] = _stat([r for r in rows if (r.get("ma20_gap_pct") or -1) >= 0 and r.get("ma20_gap_pct") is not None])
     out["by_ma20"]["20일선 아래"] = _stat([r for r in rows if r.get("ma20_gap_pct") is not None and r["ma20_gap_pct"] < 0])
+
+    # 🧲 저점매집 전진검증 — "저점매집 뜬 날이 진짜 매수 급소였나"(익일 고가로 채점). 필드 없는 옛 행 제외.
+    out["by_low_accum"]["해당"] = _stat([r for r in rows if r.get("low_accum") is True])
+    out["by_low_accum"]["미해당"] = _stat([r for r in rows if r.get("low_accum") is False])
 
     # LLM Brier(있으면)
     llm_rows = [r for r in rows if isinstance(r.get("prob_up"), (int, float))]
