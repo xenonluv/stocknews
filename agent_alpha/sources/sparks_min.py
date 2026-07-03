@@ -113,10 +113,15 @@ def _minute_bars(code):
 
 def spark_allday_strong(code, body_min=2.0):
     """시간 무관(세션 전체) 몸통 ≥body_min% 5분 양봉 — 🧲 저점매집 판정용(회장님 지시 2026-07-03).
-    반환 (count, bars, source). 미측정(source=='none')이면 (None, [], 'none')."""
-    bars, src = _minute_bars(code)
-    if src == "none":
-        return None, [], src
+    반환 (count, bars, source). 미측정이면 (None, [], 'none') — None=미측정(0으로 날조 금지).
+    ⚠ spark_1430과 동일한 try/except + 라이브봉 가드 필수 — KIS 예외(정지·상폐·일시장애) 1건이
+    collect cron 전체를 죽여 forward 미생성→종베 알림 무발송되는 경로 차단(크리티컬 리뷰 2026-07-03)."""
+    try:
+        bars, src = _minute_bars(code)
+    except Exception:
+        return None, [], "none"
+    if not _has_live_bars(bars):
+        return None, [], "none"
     rb = [b for b in reignition_bars(bars, body_min, config.SPARK_SPAN_MIN)]
     return len(rb), rb, src
 
