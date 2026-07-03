@@ -81,6 +81,18 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
                 🧲 저점매집
               </Badge>
             )}
+            {s.alert_now && (
+              <Badge
+                className={
+                  s.alert_now === "주의"
+                    ? "bg-amber-500/30 px-2 py-0.5 text-sm font-bold text-amber-200"
+                    : "bg-[rgba(41,98,255,0.25)] px-2 py-0.5 text-sm font-bold text-[color:var(--down,#2962FF)]"
+                }
+                title="KRX 시장경보 현재 지정 — 경고/위험 지정은 재상승 시 매매정지 지정 리스크가 있어 게시 순위 최후순위로 강등(회장님 지시). 주의는 표시만"
+              >
+                {s.alert_now === "주의" ? "⚠️투자주의" : s.alert_now === "경고" ? "🚨투자경고" : "⛔투자위험"}
+              </Badge>
+            )}
             <Badge variant="warning" title="최근 6거래일 고가+22%·거래량 90%+ 폭발 종목이 14:30~장종료 5분 양봉 몸통2%+ 스파크 2회+ AND 현재 등락률 −5~+7% 재분출 — 직접 확인하고 진입(매수 추천 아님)">
               재매집
             </Badge>

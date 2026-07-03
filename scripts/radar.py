@@ -200,6 +200,26 @@ def _nxt_change_pct(code, prev_close):
     return round((over / prev_close - 1) * 100, 2)
 
 
+_ALERT_CACHE = {}   # 실행당 종목별 시장경보 캐시(수상종목 ≤reaccum_max이라 회당 소수 콜)
+
+
+def _alert_level(code):
+    """KRX 시장경보 현재 지정 — 네이버 basic marketAlertType(01/02/03) → "주의"/"경고"/"위험"/None.
+    경고/위험 지정 수상종목은 게시 정렬 최후순위(회장님 지시 2026-07-03 — 경고 후 재상승=매매정지 지정 리스크).
+    네이버 공개 API(시크릿 불필요)·실패 None(fail-safe=무경보 취급, 정렬만 영향이라 안전)."""
+    if code in _ALERT_CACHE:
+        return _ALERT_CACHE[code]
+    level = None
+    try:
+        b = json.loads(get_bytes(f"https://m.stock.naver.com/api/stock/{code}/basic", UA))
+        m = b.get("marketAlertType") if isinstance(b, dict) else None
+        level = {"01": "주의", "02": "경고", "03": "위험"}.get((m or {}).get("code") if isinstance(m, dict) else None)
+    except Exception:
+        level = None
+    _ALERT_CACHE[code] = level
+    return level
+
+
 # ---------- 재매집: 거래대금 폭발 레지스트리 ----------
 
 def _today_yyyymmdd():
@@ -1409,7 +1429,12 @@ def main():
     if collection_dead or high_fail:
         log(f"[error] 데이터 수집 장애 의심(live_ok={live_scan_ok}, 실패 {err_count}/{eligible}적격, 후보 {reaccum_added}) — 게시 중단")
         sys.exit(3)
-    suspects.sort(key=lambda x: (not x.get("geupso"), not x.get("low_accum"), -x["suspicion_score"]))  # 🎯급소 > 🧲저점매집 최상단
+    # KRX 시장경보 지정 조회(최종 수상종목만 ≤reaccum_max·회당 1콜) — 경고/위험 지정은 무조건 후순위 강등
+    # (회장님 지시 2026-07-03: 투자경고 종목이 상위 추천됨. 경고 후 재상승=매매정지 지정 리스크). fail-safe(None=무경보 취급).
+    for s in suspects:
+        s["alert_now"] = _alert_level(s["code"])
+    suspects.sort(key=lambda x: (x.get("alert_now") in ("경고", "위험"),  # 경고/위험 지정 → 급소여도 최후순위
+                                 not x.get("geupso"), not x.get("low_accum"), -x["suspicion_score"]))  # 🎯급소 > 🧲저점매집 최상단
 
     out = {
         "generated_at": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST"),

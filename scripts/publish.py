@@ -130,6 +130,7 @@ def record_history(out):
             "geupso_bars": s.get("geupso_bars"),
             "low_accum": s.get("low_accum", False),    # 🧲 저점매집 — 전진검증용
             "low_accum_bars": s.get("low_accum_bars"),
+            "alert_now": s.get("alert_now"),           # KRX 시장경보 지정(주의/경고/위험) — 경고/위험 후순위 강등
             "forecast": s.get("forecast"),  # 3일내+7% 확률 라벨 — 라이브 calibration 누적용
 
             "matched_events": [m.get("id") for m in s.get("matched_events", [])],

@@ -168,6 +168,8 @@ export interface Suspect {
   /** 🧲 저점매집 의심 — 당일 ≤−10% 폭락 중 MA20 사수 + 시간무관 몸통 2%+ 양봉 ≥3(덕신 7/3: −16%에 11시부터 4방). */
   low_accum?: boolean;
   low_accum_bars?: { time: string; body_pct: number }[];
+  /** KRX 시장경보 현재 지정: "주의"/"경고"/"위험" — 경고/위험은 게시 정렬 최후순위(회장님 지시 2026-07-03) */
+  alert_now?: string | null;
   /** 3일내 +7% 과거 실측 확률 라벨 — 표시 전용·보장 아님. 구버전 JSON엔 없음 */
   forecast?: ForecastInfo | null;
   suspicion_score: number; // 0~100
