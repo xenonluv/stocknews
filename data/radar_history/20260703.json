@@ -28,8 +28,8 @@
    "pattern": "reaccum",
    "prime": false,
    "theme": "반도체",
-   "value_eok": 1683,
-   "turnover_pct": 82.1,
+   "value_eok": 1686,
+   "turnover_pct": 82.2,
    "peak_turnover_pct": 165.1,
    "turnover_basis": "float",
    "turnover_metric": "vol_float",
@@ -151,8 +151,8 @@
    "pattern": "reaccum",
    "prime": false,
    "theme": "금리",
-   "value_eok": 299,
-   "turnover_pct": 52.7,
+   "value_eok": 300,
+   "turnover_pct": 52.8,
    "peak_turnover_pct": 185.6,
    "turnover_basis": "float",
    "turnover_metric": "vol_float",
@@ -363,8 +363,8 @@
    "pattern": "reaccum",
    "prime": false,
    "theme": "금리",
-   "value_eok": 186,
-   "turnover_pct": 65.6,
+   "value_eok": 187,
+   "turnover_pct": 65.9,
    "peak_turnover_pct": 96.5,
    "turnover_basis": "float",
    "turnover_metric": "vol_float",
@@ -478,7 +478,7 @@
    "prime": false,
    "theme": "금리",
    "value_eok": 152,
-   "turnover_pct": 37.9,
+   "turnover_pct": 38.0,
    "peak_turnover_pct": 97.8,
    "turnover_basis": "float",
    "turnover_metric": "vol_float",
@@ -576,7 +576,7 @@
    "prime": false,
    "theme": "금리",
    "value_eok": 440,
-   "turnover_pct": 31.5,
+   "turnover_pct": 31.6,
    "peak_turnover_pct": 92.5,
    "turnover_basis": "float",
    "turnover_metric": "vol_float",
@@ -1061,5 +1061,5 @@
    "final": false
   }
  },
- "as_of": "2026-07-03 17:54:05 KST"
+ "as_of": "2026-07-03 18:03:47 KST"
 }
