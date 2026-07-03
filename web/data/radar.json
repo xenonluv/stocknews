@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-03 14:43:36 KST",
+ "generated_at": "2026-07-03 14:54:00 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -85,25 +85,14 @@
  ],
  "explosions": [
   {
-   "code": "153890",
-   "name": "져스텍",
-   "sector": "전기·전자",
-   "high_pct": 29.96,
-   "vol_turnover_pct": 128.2,
-   "value_eok": 947,
-   "price": 15140.0,
-   "change_pct": 24.61,
-   "backfill": false
-  },
-  {
    "code": "046940",
    "name": "우원개발",
    "sector": "건설",
    "high_pct": 22.08,
    "vol_turnover_pct": 110.1,
    "value_eok": 556,
-   "price": 4125.0,
-   "change_pct": 8.41,
+   "price": 4075.0,
+   "change_pct": 7.1,
    "backfill": true
   },
   {
@@ -111,10 +100,21 @@
    "name": "삼화전자",
    "sector": "전기·전자",
    "high_pct": 30.0,
-   "vol_turnover_pct": 124.3,
-   "value_eok": 417,
+   "vol_turnover_pct": 124.4,
+   "value_eok": 418,
    "price": 3575.0,
    "change_pct": 30.0,
+   "backfill": false
+  },
+  {
+   "code": "153890",
+   "name": "져스텍",
+   "sector": "전기·전자",
+   "high_pct": 29.96,
+   "vol_turnover_pct": 131.0,
+   "value_eok": 968,
+   "price": 14760.0,
+   "change_pct": 21.48,
    "backfill": false
   },
   {
@@ -124,8 +124,8 @@
    "high_pct": 26.8,
    "vol_turnover_pct": 188.6,
    "value_eok": 1176,
-   "price": 1704.0,
-   "change_pct": -12.35,
+   "price": 1696.0,
+   "change_pct": -12.76,
    "backfill": true
   }
  ],
@@ -134,11 +134,11 @@
    "code": "419050",
    "name": "삼기에너지솔루션즈",
    "sector": "운송장비·부품",
-   "change_pct": -12.35,
+   "change_pct": -12.76,
    "high_pct": 26.8,
    "vol_turnover_pct": 188.6,
    "value_eok": 1176,
-   "price": 1704.0,
+   "price": 1696.0,
    "first_seen": "09:42",
    "exploded": true
   },
@@ -146,11 +146,11 @@
    "code": "153890",
    "name": "져스텍",
    "sector": "전기·전자",
-   "change_pct": 24.61,
+   "change_pct": 21.48,
    "high_pct": 29.96,
-   "vol_turnover_pct": 128.2,
-   "value_eok": 947,
-   "price": 15140.0,
+   "vol_turnover_pct": 131.0,
+   "value_eok": 968,
+   "price": 14760.0,
    "first_seen": "10:12",
    "exploded": true
   },
@@ -160,8 +160,8 @@
    "sector": "전기·전자",
    "change_pct": 30.0,
    "high_pct": 30.0,
-   "vol_turnover_pct": 124.3,
-   "value_eok": 417,
+   "vol_turnover_pct": 124.4,
+   "value_eok": 418,
    "price": 3575.0,
    "first_seen": "10:51",
    "exploded": true
@@ -170,11 +170,11 @@
    "code": "046940",
    "name": "우원개발",
    "sector": "건설",
-   "change_pct": 8.41,
+   "change_pct": 7.1,
    "high_pct": 22.08,
    "vol_turnover_pct": 110.1,
    "value_eok": 556,
-   "price": 4125.0,
+   "price": 4075.0,
    "first_seen": "13:22",
    "exploded": true
   },
@@ -182,11 +182,11 @@
    "code": "037070",
    "name": "파세코",
    "sector": "전기·전자",
-   "change_pct": 14.41,
+   "change_pct": 13.4,
    "high_pct": 24.29,
-   "vol_turnover_pct": 75.7,
-   "value_eok": 301,
-   "price": 6830.0,
+   "vol_turnover_pct": 76.8,
+   "value_eok": 305,
+   "price": 6770.0,
    "first_seen": "11:21",
    "exploded": false
   },
@@ -194,11 +194,11 @@
    "code": "079650",
    "name": "서산",
    "sector": "비금속",
-   "change_pct": -8.67,
+   "change_pct": -8.25,
    "high_pct": 13.15,
    "vol_turnover_pct": 58.2,
    "value_eok": 133,
-   "price": 3265.0,
+   "price": 3280.0,
    "first_seen": "12:32",
    "exploded": false
   },
@@ -206,11 +206,11 @@
    "code": "002780",
    "name": "진흥기업",
    "sector": "건설",
-   "change_pct": -19.79,
+   "change_pct": -20.67,
    "high_pct": 26.27,
    "vol_turnover_pct": 55.6,
    "value_eok": 541,
-   "price": 916.0,
+   "price": 906.0,
    "first_seen": "09:42",
    "exploded": false
   },
@@ -218,11 +218,11 @@
    "code": "477850",
    "name": "마키나락스",
    "sector": "IT 서비스",
-   "change_pct": 1.17,
+   "change_pct": 2.11,
    "high_pct": 19.72,
    "vol_turnover_pct": 55.5,
    "value_eok": 1296,
-   "price": 21550.0,
+   "price": 21750.0,
    "first_seen": "10:01",
    "exploded": false
   },
@@ -230,11 +230,11 @@
    "code": "006340",
    "name": "대원전선",
    "sector": "전기·전자",
-   "change_pct": 7.17,
+   "change_pct": 5.67,
    "high_pct": 13.18,
-   "vol_turnover_pct": 55.1,
-   "value_eok": 3892,
-   "price": 12850.0,
+   "vol_turnover_pct": 54.5,
+   "value_eok": 3849,
+   "price": 12670.0,
    "first_seen": "14:32",
    "exploded": false
   }
@@ -246,15 +246,20 @@
    "sector": "건설",
    "pattern": "reaccum",
    "geupso": false,
-   "geupso_bars": [],
+   "geupso_bars": [
+    {
+     "time": "14:45",
+     "body_pct": 3.58
+    }
+   ],
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 73,
+   "suspicion_score": 76,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 62,
     "re_count": 0,
-    "re_body": 0,
+    "re_body": 3,
     "peak_turnover": 7,
     "re_turnover": 4
    },
@@ -274,17 +279,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 9340.0,
-   "change_pct": -20.38,
+   "price": 9480.0,
+   "change_pct": -19.18,
    "change_basis": "KRX",
    "high_pct": 14.58,
-   "value_eok": 1610,
-   "turnover_pct": 78.1,
+   "value_eok": 1629,
+   "turnover_pct": 79.1,
    "peak_turnover_pct": 165.1,
    "float_ratio": 0.52,
    "turnover_basis": "float",
-   "ma10": 7974.5,
-   "ma10_margin_pct": 17.12,
+   "ma10": 7988.5,
+   "ma10_margin_pct": 18.67,
    "spark": {
     "clusters": []
    },
@@ -292,41 +297,16 @@
    "spark_max_pct": null,
    "mega_flow": false,
    "reignition": {
-    "body_pct": 9.97,
-    "time": "09:00",
-    "value_eok": 153,
-    "count": 0
+    "body_pct": 3.58,
+    "time": "14:45",
+    "value_eok": 10,
+    "count": 1
    },
    "reignition_bars": [
     {
-     "time": "09:00",
-     "body_pct": 9.97,
-     "value_eok": 153
-    },
-    {
-     "time": "10:30",
-     "body_pct": 2.4,
-     "value_eok": 15
-    },
-    {
-     "time": "11:55",
-     "body_pct": 2.03,
-     "value_eok": 19
-    },
-    {
-     "time": "12:20",
-     "body_pct": 4.11,
-     "value_eok": 21
-    },
-    {
-     "time": "12:30",
-     "body_pct": 3.28,
-     "value_eok": 41
-    },
-    {
-     "time": "13:00",
-     "body_pct": 3.49,
-     "value_eok": 15
+     "time": "14:45",
+     "body_pct": 3.58,
+     "value_eok": 10
     }
    ],
    "low_accum": true,
@@ -354,6 +334,10 @@
     {
      "time": "13:00",
      "body_pct": 3.49
+    },
+    {
+     "time": "14:45",
+     "body_pct": 3.58
     }
    ],
    "news": [],
@@ -395,8 +379,8 @@
     "peak_turnover_pct": 165.1,
     "peak_ibs": 1.0,
     "peak_uppertail": 0.0,
-    "ma20": 5975.2,
-    "ma20_margin_pct": 56.31,
+    "ma20": 5982.2,
+    "ma20_margin_pct": 58.47,
     "cause_summary": "[특징주] '호남 반도체' 테마주에 잇단 투자경고…장 초반 혼조",
     "was_theme_leader": false,
     "source": "live"
@@ -438,17 +422,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 3730.0,
-   "change_pct": -14.65,
+   "price": 3755.0,
+   "change_pct": -14.07,
    "change_basis": "KRX",
    "high_pct": 5.15,
-   "value_eok": 286,
-   "turnover_pct": 50.3,
+   "value_eok": 291,
+   "turnover_pct": 51.1,
    "peak_turnover_pct": 185.6,
    "float_ratio": 0.6053999999999999,
    "turnover_basis": "float",
-   "ma10": 3547.0,
-   "ma10_margin_pct": 5.16,
+   "ma10": 3549.5,
+   "ma10_margin_pct": 5.79,
    "spark": {
     "clusters": []
    },
@@ -577,8 +561,8 @@
     "peak_turnover_pct": 185.6,
     "peak_ibs": 0.18,
     "peak_uppertail": 25.9,
-    "ma20": 3362.0,
-    "ma20_margin_pct": 10.95,
+    "ma20": 3363.2,
+    "ma20_margin_pct": 11.65,
     "cause_summary": "삼호개발, 276억 충추 드림파크산단 공사 수주 [공시pick]",
     "was_theme_leader": false,
     "source": "live"
@@ -620,17 +604,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 728.0,
-   "change_pct": -25.94,
+   "price": 743.0,
+   "change_pct": -24.42,
    "change_basis": "KRX",
    "high_pct": 9.26,
-   "value_eok": 211,
-   "turnover_pct": 60.6,
+   "value_eok": 212,
+   "turnover_pct": 61.1,
    "peak_turnover_pct": 159.5,
    "float_ratio": 0.6665000000000001,
    "turnover_basis": "float",
-   "ma10": 833.3,
-   "ma10_margin_pct": -12.64,
+   "ma10": 834.8,
+   "ma10_margin_pct": -11.0,
    "spark": {
     "clusters": []
    },
@@ -724,8 +708,8 @@
     "peak_turnover_pct": 159.5,
     "peak_ibs": 0.77,
     "peak_uppertail": 7.1,
-    "ma20": 667.6,
-    "ma20_margin_pct": 9.04,
+    "ma20": 668.4,
+    "ma20_margin_pct": 11.16,
     "cause_summary": "",
     "was_theme_leader": false,
     "source": "live"
@@ -742,14 +726,14 @@
    "geupso_bars": [],
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 69,
+   "suspicion_score": 70,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 62,
     "re_count": 0,
     "re_body": 0,
     "peak_turnover": 2,
-    "re_turnover": 5
+    "re_turnover": 6
    },
    "score_raw": 0,
    "score_breakdown_raw": {
@@ -767,17 +751,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 9000.0,
-   "change_pct": -13.13,
+   "price": 9260.0,
+   "change_pct": -10.62,
    "change_basis": "KRX",
    "high_pct": 15.83,
-   "value_eok": 457,
-   "turnover_pct": 93.2,
+   "value_eok": 465,
+   "turnover_pct": 95.0,
    "peak_turnover_pct": 107.2,
    "float_ratio": 0.4113,
    "turnover_basis": "float",
-   "ma10": 7212.5,
-   "ma10_margin_pct": 24.78,
+   "ma10": 7238.5,
+   "ma10_margin_pct": 27.93,
    "spark": {
     "clusters": []
    },
@@ -942,8 +926,8 @@
     "peak_turnover_pct": 107.2,
     "peak_ibs": 0.57,
     "peak_uppertail": 17.7,
-    "ma20": 5474.5,
-    "ma20_margin_pct": 64.4,
+    "ma20": 5487.5,
+    "ma20_margin_pct": 68.75,
     "cause_summary": "과열 경고에도 '호남 반도체' 테마주 상한가 행렬…변동성 주의보[핫...",
     "was_theme_leader": false,
     "source": "live"
@@ -985,17 +969,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 3210.0,
-   "change_pct": -26.54,
+   "price": 3195.0,
+   "change_pct": -26.89,
    "change_basis": "KRX",
    "high_pct": -0.69,
-   "value_eok": 173,
-   "turnover_pct": 60.5,
+   "value_eok": 174,
+   "turnover_pct": 61.0,
    "peak_turnover_pct": 96.5,
    "float_ratio": 0.4,
    "turnover_basis": "float",
-   "ma10": 3336.4,
-   "ma10_margin_pct": -3.79,
+   "ma10": 3334.9,
+   "ma10_margin_pct": -4.2,
    "spark": {
     "clusters": []
    },
@@ -1097,8 +1081,8 @@
     "peak_turnover_pct": 96.5,
     "peak_ibs": 0.19,
     "peak_uppertail": 42.9,
-    "ma20": 2558.2,
-    "ma20_margin_pct": 25.48,
+    "ma20": 2557.5,
+    "ma20_margin_pct": 24.93,
     "cause_summary": "동양파일 480억 묶인 사이…한림건설 김상수 골프장 확장에 주주 '부글...",
     "was_theme_leader": false,
     "source": "live"
@@ -1140,17 +1124,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 14100.0,
-   "change_pct": -10.76,
+   "price": 14010.0,
+   "change_pct": -11.33,
    "change_basis": "KRX",
    "high_pct": 6.27,
-   "value_eok": 145,
-   "turnover_pct": 36.3,
+   "value_eok": 146,
+   "turnover_pct": 36.5,
    "peak_turnover_pct": 97.8,
    "float_ratio": 0.3265,
    "turnover_basis": "float",
-   "ma10": 11846.0,
-   "ma10_margin_pct": 19.03,
+   "ma10": 11837.0,
+   "ma10_margin_pct": 18.36,
    "spark": {
     "clusters": []
    },
@@ -1243,8 +1227,8 @@
     "peak_turnover_pct": 97.8,
     "peak_ibs": 0.33,
     "peak_uppertail": 13.4,
-    "ma20": 11994.5,
-    "ma20_margin_pct": 17.55,
+    "ma20": 11990.0,
+    "ma20_margin_pct": 16.85,
     "cause_summary": "반도체 메가 프로젝트 수혜 기대감에…지역 건설주 상한가",
     "was_theme_leader": false,
     "source": "live"
@@ -1286,17 +1270,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 9190.0,
-   "change_pct": -10.52,
+   "price": 9160.0,
+   "change_pct": -10.81,
    "change_basis": "KRX",
    "high_pct": 12.56,
-   "value_eok": 86,
-   "turnover_pct": 23.4,
+   "value_eok": 87,
+   "turnover_pct": 23.7,
    "peak_turnover_pct": 106.0,
    "float_ratio": 0.37549999999999994,
    "turnover_basis": "float",
-   "ma10": 8520.0,
-   "ma10_margin_pct": 7.86,
+   "ma10": 8517.0,
+   "ma10_margin_pct": 7.55,
    "spark": {
     "clusters": []
    },
@@ -1398,8 +1382,8 @@
     "peak_turnover_pct": 106.0,
     "peak_ibs": 0.08,
     "peak_uppertail": 30.5,
-    "ma20": 8176.5,
-    "ma20_margin_pct": 12.4,
+    "ma20": 8175.0,
+    "ma20_margin_pct": 12.05,
     "cause_summary": "“매출 절반 넘는 1883억 수주”…남광토건, LH 양주회천 공공주택사...",
     "was_theme_leader": false,
     "source": "live"
@@ -1441,17 +1425,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 23100.0,
-   "change_pct": -10.47,
+   "price": 23050.0,
+   "change_pct": -10.66,
    "change_basis": "KRX",
    "high_pct": 12.02,
-   "value_eok": 426,
-   "turnover_pct": 30.4,
+   "value_eok": 427,
+   "turnover_pct": 30.5,
    "peak_turnover_pct": 92.5,
    "float_ratio": 0.6175,
    "turnover_basis": "float",
-   "ma10": 21169.0,
-   "ma10_margin_pct": 9.12,
+   "ma10": 21164.0,
+   "ma10_margin_pct": 8.91,
    "spark": {
     "clusters": []
    },
@@ -1535,8 +1519,8 @@
     "peak_turnover_pct": 92.5,
     "peak_ibs": 0.34,
     "peak_uppertail": 19.4,
-    "ma20": 20564.0,
-    "ma20_margin_pct": 12.33,
+    "ma20": 20561.5,
+    "ma20_margin_pct": 12.1,
     "cause_summary": "계룡건설, 국토부 '건설사업자간 상호협력평가' 7년 연속 '최우수'",
     "was_theme_leader": false,
     "source": "live"
@@ -1578,17 +1562,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 2650.0,
-   "change_pct": -16.93,
+   "price": 2640.0,
+   "change_pct": -17.24,
    "change_basis": "KRX",
    "high_pct": 6.11,
-   "value_eok": 87,
-   "turnover_pct": 32.9,
+   "value_eok": 88,
+   "turnover_pct": 33.1,
    "peak_turnover_pct": null,
    "float_ratio": 0.7968000000000001,
    "turnover_basis": "float",
-   "ma10": 2409.0,
-   "ma10_margin_pct": 10.0,
+   "ma10": 2408.0,
+   "ma10_margin_pct": 9.63,
    "spark": {
     "clusters": []
    },
@@ -1681,8 +1665,8 @@
     "peak_turnover_pct": null,
     "peak_ibs": 1.0,
     "peak_uppertail": 0.0,
-    "ma20": 2414.0,
-    "ma20_margin_pct": 9.78,
+    "ma20": 2413.5,
+    "ma20_margin_pct": 9.38,
     "cause_summary": "신원종합개발, 2286억 리조트 신축공사 1년 연장",
     "was_theme_leader": false,
     "source": "live"
@@ -1724,17 +1708,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 940.0,
-   "change_pct": -18.26,
+   "price": 930.0,
+   "change_pct": -19.13,
    "change_basis": "KRX",
    "high_pct": -2.61,
-   "value_eok": 29,
-   "turnover_pct": 9.6,
+   "value_eok": 30,
+   "turnover_pct": 9.8,
    "peak_turnover_pct": null,
    "float_ratio": 0.6607999999999999,
    "turnover_basis": "float",
-   "ma10": 844.2,
-   "ma10_margin_pct": 11.35,
+   "ma10": 843.2,
+   "ma10_margin_pct": 10.29,
    "spark": {
     "clusters": []
    },
@@ -1842,8 +1826,8 @@
     "peak_turnover_pct": null,
     "peak_ibs": 0.53,
     "peak_uppertail": 17.3,
-    "ma20": 878.4,
-    "ma20_margin_pct": 7.01,
+    "ma20": 877.9,
+    "ma20_margin_pct": 5.93,
     "cause_summary": "덕신EPC, 美 반도체 공장 본 시공 착수",
     "was_theme_leader": false,
     "source": "live"
