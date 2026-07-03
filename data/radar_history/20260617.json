@@ -59,7 +59,11 @@
     "high3": true,
     "return_pct": -5.41
    },
-   "final": false
+   "final": false,
+   "strategy": {
+    "outcome": "stop",
+    "ret_net": -5.71
+   }
   },
   "204320": {
    "name": "HL만도",
@@ -119,7 +123,11 @@
     "high3": true,
     "return_pct": -6.9
    },
-   "final": false
+   "final": false,
+   "strategy": {
+    "outcome": "stop",
+    "ret_net": -7.2
+   }
   },
   "240810": {
    "name": "원익IPS",
@@ -179,7 +187,11 @@
     "high3": true,
     "return_pct": 0.93
    },
-   "final": false
+   "final": false,
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
+   }
   },
   "402340": {
    "name": "SK스퀘어",
@@ -250,6 +262,10 @@
     "as_of": "2026-06-17 17:21 KST",
     "verdict_score": 71,
     "verdict_level": "관망·과열"
+   },
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
    }
   },
   "011070": {
@@ -319,6 +335,10 @@
     "as_of": "2026-06-17 17:21 KST",
     "verdict_score": 57,
     "verdict_level": "중립"
+   },
+   "strategy": {
+    "outcome": "stop",
+    "ret_net": -8.55
    }
   },
   "319660": {
@@ -388,6 +408,10 @@
     "as_of": "2026-06-17 17:22 KST",
     "verdict_score": 68,
     "verdict_level": "매수 우위"
+   },
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
    }
   },
   "067310": {
@@ -457,6 +481,10 @@
     "as_of": "2026-06-17 17:23 KST",
     "verdict_score": 64,
     "verdict_level": "관망·과열"
+   },
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
    }
   },
   "095610": {
@@ -528,6 +556,10 @@
     "as_of": "2026-06-17 17:24 KST",
     "verdict_score": 76,
     "verdict_level": "매수 우위"
+   },
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
    }
   },
   "353200": {
@@ -597,6 +629,10 @@
     "as_of": "2026-06-17 17:24 KST",
     "verdict_score": 82,
     "verdict_level": "매수 우위"
+   },
+   "strategy": {
+    "outcome": "stop",
+    "ret_net": -8.49
    }
   },
   "034730": {
@@ -668,6 +704,10 @@
     "as_of": "2026-06-17 17:25 KST",
     "verdict_score": 95,
     "verdict_level": "매수 우위"
+   },
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
    }
   },
   "357780": {
@@ -739,6 +779,10 @@
     "as_of": "2026-06-17 17:26 KST",
     "verdict_score": 75,
     "verdict_level": "매수 우위"
+   },
+   "strategy": {
+    "outcome": "stop",
+    "ret_net": -9.84
    }
   },
   "089970": {
@@ -801,7 +845,11 @@
     "high3": true,
     "return_pct": 6.74
    },
-   "final": false
+   "final": false,
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
+   }
   },
   "039030": {
    "name": "이오테크닉스",
@@ -870,6 +918,10 @@
     "as_of": "2026-06-17 17:27 KST",
     "verdict_score": 70,
     "verdict_level": "매수 우위"
+   },
+   "strategy": {
+    "outcome": "stop",
+    "ret_net": -8.72
    }
   },
   "001820": {
@@ -939,6 +991,10 @@
     "as_of": "2026-06-17 17:28 KST",
     "verdict_score": 84,
     "verdict_level": "매수 우위"
+   },
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
    }
   },
   "093370": {
@@ -999,7 +1055,11 @@
     "high3": true,
     "return_pct": 7.17
    },
-   "final": false
+   "final": false,
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
+   }
   },
   "475150": {
    "name": "SK이터닉스",
@@ -1059,7 +1119,11 @@
     "high3": true,
     "return_pct": -7.06
    },
-   "final": false
+   "final": false,
+   "strategy": {
+    "outcome": "win",
+    "ret_net": 6.7
+   }
   },
   "043260": {
    "name": "성호전자",
@@ -1128,6 +1192,10 @@
     "as_of": "2026-06-17 17:29 KST",
     "verdict_score": 68,
     "verdict_level": "매수 우위"
+   },
+   "strategy": {
+    "outcome": "stop",
+    "ret_net": -6.62
    }
   },
   "089030": {
@@ -1197,6 +1265,10 @@
     "as_of": "2026-06-17 17:30 KST",
     "verdict_score": 85,
     "verdict_level": "강한 매수신호"
+   },
+   "strategy": {
+    "outcome": "stop",
+    "ret_net": -13.77
    }
   }
  },
