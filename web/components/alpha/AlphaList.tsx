@@ -137,6 +137,10 @@ function CalibCellRow({ label, c }: { label: string; c?: AlphaCalibCell }) {
           <span className={c.touch7_rate != null && c.touch7_rate >= 50 ? "text-up" : ""}>
             {c.touch7_rate != null ? `${c.touch7_rate}%` : "—"}
           </span>{" "}
+          · <span className="text-muted-foreground">+13%터치</span>{" "}
+          <span className={c.touch13_rate != null && c.touch13_rate >= 40 ? "font-semibold text-up" : ""}>
+            {c.touch13_rate != null ? `${c.touch13_rate}%` : "—"}
+          </span>{" "}
           · n={c.n}{" "}
           <span className={c.valid ? "text-foreground" : "text-warning"}>
             {c.valid ? "" : "(관찰중)"}
@@ -168,6 +172,7 @@ function CalibrationPanel({ data }: { data: AlphaData }) {
   const byVal = cal.by_value_band ?? {};
   const bySS = cal.by_spark_strength ?? {};
   const byLQ = cal.by_liquidity_deficit ?? {};
+  const shakeoutCell = byMT["shakeout"];
   return (
     <div className="space-y-3 rounded-lg border border-white/10 bg-white/[0.03] p-4">
       <div className="flex items-baseline justify-between">
@@ -175,6 +180,14 @@ function CalibrationPanel({ data }: { data: AlphaData }) {
         <span className="text-xs text-muted-foreground">
           라벨표본 {cal.total_labeled} · min_n {cal.min_n}
         </span>
+      </div>
+      {/* 💥 흔들기 — 이번 주 신설 최우선 검증 대상(레이더 최상단 신호). 익일 +13% 고가 터치가 실제 전략 목표 */}
+      <div className="rounded-md border border-up/30 bg-up/[0.06] p-2">
+        <p className="mb-1 text-xs font-bold text-foreground">💥 흔들기 셀 검증 (레이더 최상단 신호 · 익일 +13% 고가 터치가 목표)</p>
+        <CalibCellRow label="흔들기 종목 종베→익일" c={shakeoutCell} />
+        <p className="mt-1 text-[10px] text-muted-foreground">
+          백테스트(1개월·소표본) 익일 고가 +13% ~75% — 이 라이브 표본이 그 수치를 재현하는지 전진검증 중.
+        </p>
       </div>
       {/* 🎯 종베 정렬 검증 — 현행 /alpha 정렬(종베 적합도)이 실제 익일 성과를 맞추는지 */}
       <div className="rounded-md bg-up/[0.04] p-2">

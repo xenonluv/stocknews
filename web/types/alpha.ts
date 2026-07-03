@@ -62,6 +62,7 @@ export interface AlphaCalibCell {
   avg_return: number | null;
   avg_high?: number | null; // 평균 익일 고가 등락(종가 대비)
   touch7_rate?: number | null; // 익일 +7% 고가 터치율(익절 도달%)
+  touch13_rate?: number | null; // 익일 +13% 고가 터치율 — 회장님 실제 익절선(흔들기 고회전 tp_hint도 +13)
   valid: boolean;
   status: string; // "입증가능" | "관찰중"
   turnover2d?: string;
