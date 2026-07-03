@@ -65,6 +65,14 @@ export function SuspectCard({ s, disclaimer }: { s: Suspect; disclaimer?: string
       <CardHeader className="gap-3 pb-3">
         <div className="flex items-center justify-between gap-2">
           <div className="flex flex-wrap items-center gap-1.5">
+            {s.shakeout && (
+              <Badge
+                className="bg-up px-2.5 py-1 text-base font-black text-white"
+                title="💥 흔들기 — 당일 상한권(고가 +20%↑) 터치 후 크게 밀리며(페이드 15%p↑) 유통물량 40%↑ 손바뀜, MA20 사수(경고 지정·과확장 붕괴 제외). 금호건설·동양파일 6/25 원형 — 실측 38건 익일 고가 +13% 터치 68%·평균 +18%. 예측·매수추천 아님"
+              >
+                💥 흔들기
+              </Badge>
+            )}
             {s.alert_release && (
               <Badge
                 className="bg-up px-2.5 py-1 text-base font-black text-white"

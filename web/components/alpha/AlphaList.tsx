@@ -102,7 +102,7 @@ function rankClass(rank: number, score: number): string {
 }
 
 // mover 유형 한글 라벨 (표시용).
-const MTYPE_LABEL: Record<string, string> = { reaccum: "재매집", youtong: "후보", explosion: "폭발" };
+const MTYPE_LABEL: Record<string, string> = { reaccum: "재매집", youtong: "후보", explosion: "폭발", shakeout: "💥흔들기" };
 
 // '키움 속 숨은 외국인 매집' 흔적 강도(0=없음, 1~3 강). 정의: 투자자별 외국인 순매수(+)인데
 // 외국계 창구 순매수는 거의 0(<외인순매수×10%) AND 키움 매수집중≥30% → 외국인이 외국계 창구를

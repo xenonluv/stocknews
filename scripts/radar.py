@@ -76,6 +76,13 @@ LOWACCUM_CHANGE_MAX = -10.0        # 🧲 저점매집: 당일 등락 상한(이
 LOWACCUM_BODY_PCT = 2.0            # 🧲 저점매집: 시간 무관 5분 양봉 몸통% 하한
 LOWACCUM_MIN_COUNT = 3             # 🧲 저점매집: 2%+ 양봉 최소 개수 (덕신 7/3: −16% 폭락 바닥 4방 실측)
 YOUTONG_TRACK_DAYS = 10            # youtong 이력 추적 일수 — 폭발 미등록(회전율 게이트 탈락) 종목도 급소/저점매집 감시
+# 💥 흔들기(폭발 직후 고회전 페이드) — 회장님 지시 2026-07-03. 원형: 금호건설·동양파일 6/25(상한 터치 후
+# 대폭 밀림+유통 한 바퀴 손바뀜+MA20 사수 → 익일 상한). 실측(6~7월 폭발풀 n=38): 익일 고가 +13% 터치 68.4%
+# ·+7% 78.9%·평균 +18.0%·EV +4.63%/회. 기존 폭발(고가22·회전90)·youtong(+7%·50%) 게이트 사이로 빠지는 별도 그물.
+SHAKEOUT_HIGH_PCT = 20.0           # 💥 당일 고가등락 하한(%) — 상한 터치권까지 갔어야
+SHAKEOUT_FADE_PCT = 15.0           # 💥 페이드(고가등락 − 현재등락) 하한(%p) — 크게 밀렸어야(흔들기)
+SHAKEOUT_TURNOVER_MIN = 40.0       # 💥 당일 유통회전율 하한(%) — 흔들기 속 대량 손바뀜(흡수)
+SHAKEOUT_RUN6D_MAX = 100.0         # 💥 6일 누적 +100% 이상 & 당일 음수 = 과확장 붕괴 → 제외(동양파일 7/2형 실패 차단)
 NXT_REEVAL_START_HHMM = "1600"     # NXT 시간외가로 '현재 등락률' 재평가 시작(=15:30+신선도상한 30분). 그 전엔
                                    # 정규장 막판 양봉 텔레그램이 신선하게 나가도록 KRX 유지 + NXT 단일가도 ~16:00 체결.
 REACCUM_SCORE = 62                 # 검증중 노출용 고정 표시 점수 base(raw 통계와 분리, score_raw=0)
@@ -1321,6 +1328,95 @@ def _rank_page(direction, market, page):
     return result
 
 
+def scan_shakeout(p):
+    """💥 흔들기(폭발 직후 고회전 페이드) 스캔 — 회장님 지시 2026-07-03.
+
+    셀: 당일 고가등락 ≥+20% AND 페이드(고가등락−현재등락) ≥15%p AND 당일 유통회전율 ≥40% AND MA20 위
+        AND 경고/위험 미지정 AND 과확장 붕괴 아님. 원형 = 금호건설·동양파일 6/25(익일 상한 + 연상).
+    소스 = up ∪ down 랭킹(음봉 마감 흔들기는 up에 없음 — 동양파일 6/25 −9.1%가 사각지대였음).
+    기존 폭발·youtong 게이트는 불변 — 둘 사이로 빠지는 종목(금호 6/25 회전 66%<90·종가 +5.3%<7%)의 전용 그물.
+    표시·전진검증 전용(score_raw=0 통계 격리). 실패는 종목 단위 skip(fail-safe)."""
+    cand, seen = [], set()
+    for direction in ("up", "down"):
+        for market in ("KOSPI", "KOSDAQ"):
+            try:
+                rows, _ = _rank_page(direction, market, 1)
+            except Exception as e:
+                log(f"[warn] 흔들기 {direction}/{market} 랭킹 실패: {e}")
+                continue
+            for row in rows[:p.explosion_scan_n]:
+                c, r = row.get("code"), row.get("change_pct")
+                if not c or c in seen or r is None:
+                    continue
+                # 산술 프리필터(KIS 콜 절감): fade≥15 & 고가≤+30(가격제한) → 현재등락 ≤ +15.5 / 고가≥+20 → ≥ −26
+                if r > SHAKEOUT_HIGH_PCT - SHAKEOUT_FADE_PCT + 0.5 or r < -26:
+                    continue
+                seen.add(c)
+                cand.append(row)
+    out = []
+    for row in cand:
+        code = row["code"]
+        try:
+            now = kis.price_now_jmoney_un(code)   # 가격=J 공식 / 거래량=UN 통합
+        except Exception:
+            continue
+        if not (now.get("high") and now.get("prev_close") and now.get("price")):
+            continue
+        high_pct = (now["high"] / now["prev_close"] - 1) * 100
+        change_pct = round(float(now.get("change_pct") or 0), 2)
+        fade = high_pct - change_pct
+        if high_pct < SHAKEOUT_HIGH_PCT or fade < SHAKEOUT_FADE_PCT:
+            continue
+        fr, listed = float_ratio.get_float_and_listed(code)
+        fs = (listed * fr) if (fr and listed) else None
+        if not fs:
+            continue                                  # 유동비율 미상 → 회전율 확정 불가(미인정, fail-safe)
+        turnover = float(now.get("volume") or 0) / fs * 100
+        if turnover < SHAKEOUT_TURNOVER_MIN:
+            continue
+        try:
+            daily = kis.daily_prices(code, days=25)
+        except Exception:
+            continue
+        closes = [b.get("close") for b in daily if b.get("close")]
+        if len(closes) < 20:
+            continue                                  # 신규상장 등 MA20 판정 불가 — 미인정
+        ma20 = sum(closes[-20:]) / 20
+        if now["price"] < ma20:
+            continue                                  # 추세 사수 실패
+        run6 = (closes[-1] / closes[-7] - 1) * 100 if (len(closes) >= 7 and closes[-7]) else None
+        if run6 is not None and run6 >= SHAKEOUT_RUN6D_MAX and change_pct < 0:
+            continue                                  # 과확장 붕괴(5연상 붕괴류) — 실측 실패 유형 차단
+        if _alert_level(code) in ("경고", "위험"):
+            continue                                  # 경고 지정 재급등 = 매매정지 코스 — 실측 실패 유형 차단
+        ma10 = sum(closes[-10:]) / 10
+        out.append({
+            "code": code, "name": row.get("name") or code, "sector": now.get("sector", ""),
+            "pattern": "shakeout",
+            "shakeout": True,
+            "fade_pct": round(fade, 1),               # 고가 대비 밀림 폭(%p)
+            "suspicion_score": int(min(95, 55 + fade * 0.6 + min(turnover, 200) * 0.08)),  # 표시 전용
+            "score_raw": 0, "score_breakdown": {}, "score_breakdown_raw": {},  # 통계 격리
+            "calibrated_prob": None, "forecast": None, "shake": None, "deep_shake": None,
+            "price": now["price"], "change_pct": change_pct, "change_basis": "KRX",
+            "high_pct": round(high_pct, 2),
+            "value_eok": round(float(now.get("value") or 0) / 1e8),
+            "turnover_pct": round(turnover, 1), "float_ratio": fr, "turnover_basis": "float",
+            "run_6d_pct": round(run6, 1) if run6 is not None else None,
+            "ma20_gap_pct": round((now["price"] / ma20 - 1) * 100, 1),
+            "ma10": round(ma10, 1), "ma10_margin_pct": round((now["price"] / ma10 - 1) * 100, 2),
+            "spark": {"clusters": []}, "spark_max_x": None, "spark_max_pct": None, "mega_flow": False,
+            "reignition": None, "reignition_bars": [],
+            "geupso": False, "geupso_bars": [], "low_accum": False, "low_accum_bars": [],
+            "news": [], "matched_events": [], "theme": "",
+            "visible_experimental": True,
+        })
+    if out:
+        log("[radar] 💥 흔들기 " + ", ".join(
+            f"{r['name']}(고가{r['high_pct']:+.0f}→{r['change_pct']:+.0f}%·회전{r['turnover_pct']:.0f}%)" for r in out))
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser(
         description="이벤트 매집 레이더 — 과거 폭발 → 오늘 5분 양봉 스파크(재매집) 탐지")
@@ -1430,6 +1526,18 @@ def main():
     if collection_dead or high_fail:
         log(f"[error] 데이터 수집 장애 의심(live_ok={live_scan_ok}, 실패 {err_count}/{eligible}적격, 후보 {reaccum_added}) — 게시 중단")
         sys.exit(3)
+    # 💥 흔들기 스캔(별도 그물) — 기존 suspects와 코드 중복 시 기존 레코드에 플래그만 병합(이중 카드 방지)
+    try:
+        shakeouts = scan_shakeout(p)
+    except Exception as e:
+        log(f"[warn] 흔들기 스캔 실패(무시): {e}")
+        shakeouts = []
+    existing = {s["code"]: s for s in suspects}
+    for r in shakeouts:
+        if r["code"] in existing:
+            existing[r["code"]].update({"shakeout": True, "fade_pct": r["fade_pct"]})
+        else:
+            suspects.append(r)
     # KRX 시장경보 지정 조회(최종 수상종목만 ≤reaccum_max·회당 1콜) — 경고/위험 지정은 무조건 후순위 강등
     # (회장님 지시 2026-07-03: 투자경고 종목이 상위 추천됨. 경고 후 재상승=매매정지 지정 리스크). fail-safe(None=무경보 취급).
     # 단 경고 종목이 '내일 해제 예정'(KRX 해제공식 충족 예측, alert_release.py)이면 반대로 최상단 승격(해제=재료).
@@ -1442,8 +1550,9 @@ def main():
             except Exception:
                 s["alert_release"] = None
     suspects.sort(key=lambda x: (
-        not x.get("alert_release"),                                             # 🔓 경고 해제 예정 최상단
-        (x.get("alert_now") in ("경고", "위험")) and not x.get("alert_release"),  # 경고/위험 지정 → 급소여도 최후순위
+        (x.get("alert_now") in ("경고", "위험")) and not x.get("alert_release"),  # 경고/위험 지정 → 무조건 최후순위
+        not x.get("shakeout"),                                                  # 💥 흔들기 최상단(실측 68%·EV+4.6)
+        not x.get("alert_release"),                                             # 🔓 경고 해제 예정
         not x.get("geupso"), not x.get("low_accum"),                            # 🎯급소 > 🧲저점매집 상단
         # 🧲 그룹 내부는 '폭락일 회전율 오름차순' — 회전이 작을수록(아무도 안 던짐+지문만 남음) 진짜 매집
         # (회장님 지시 2026-07-03: 덕신 10.3% vs 삼호개발 52.8% — 저회전 폭락+지문이 종가 1위여야).

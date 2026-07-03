@@ -195,7 +195,7 @@ def run():
         out["by_change_pct"][b] = _stat([r for r in rows if _change_band(r.get("change_pct")) == b])
 
     # mover 유형별
-    for mt in ("reaccum", "youtong", "explosion"):
+    for mt in ("reaccum", "youtong", "explosion", "shakeout"):
         out["by_mover_type"][mt] = _stat([r for r in rows if r.get("mover_type") == mt])
 
     # 종베 점수대별
