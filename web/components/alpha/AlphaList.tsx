@@ -282,55 +282,57 @@ function MoverCard({ m, rank }: { m: AlphaMover; rank?: number }) {
   const reasonText = reasons.map((r) => `${r.k}${r.v !== 0 ? ` ${r.v > 0 ? "+" : ""}${r.v}` : ""}`).join(" · ");
   return (
     <div className="space-y-2 rounded-lg border border-white/10 bg-white/[0.045] p-4">
+      {/* 1줄: 순위 + 종목명(전폭 사용, 안 뭉개짐) + 등락률. 배지류는 2줄로 분리(회장님 지시 2026-07-03 — 긴 종목명 세로 뭉개짐 해소) */}
       <div className="flex items-baseline justify-between gap-2">
-        <h3 className="flex items-baseline gap-1.5 text-lg font-bold tracking-tight">
+        <h3 className="flex min-w-0 items-baseline gap-1.5 text-lg font-bold tracking-tight">
           {rank != null && (
             <span className={`shrink-0 rounded px-1.5 py-0.5 text-xs tabular-nums ${rankClass(rank, score)}`}>
               {rank}위
             </span>
           )}
-          <span>{m.name}</span>
-          {m.mover_type && (
-            <span className="shrink-0 rounded bg-white/10 px-1 py-0.5 text-[10px] font-normal text-muted-foreground">
-              {MTYPE_LABEL[m.mover_type] ?? m.mover_type}
-            </span>
-          )}
-          {/* KRX 시장경보 대형 배지(회장님 지시 2026-07-03) — 점수 무반영 정보 배지. 폭락 시 추가매수 기회 관점 */}
-          {m.alert_now && (
-            <span
-              className={`shrink-0 rounded px-1.5 py-0.5 text-xs font-bold ${
-                m.alert_now === "주의" ? "bg-amber-500/30 text-amber-200" : "bg-down/30 text-down"
-              }`}
-              title="KRX 시장경보 현재 지정 상태 — 익일 급락·변동성 확대 가능(계획된 추가매수 기회 관점)"
-            >
-              {m.alert_now === "주의" ? "⚠️투자주의" : m.alert_now === "경고" ? "🚨투자경고" : "⛔투자위험"}
-            </span>
-          )}
-          {m.alert_forecast && (
-            <span
-              className="shrink-0 rounded bg-down/30 px-1.5 py-0.5 text-xs font-bold text-down"
-              title="장마감 직전 KRX 공식(5일+60%·15일+100%·신고가·지수배수) 계산 예측 — 지정 시 익일 급락·변동 주의(=기회). 보장 아님"
-            >
-              🚨{m.alert_forecast}
-            </span>
-          )}
+          <span className="break-keep">{m.name}</span>
           {m.date && (
-            <span className="text-[10px] font-normal text-muted-foreground tabular-nums">
+            <span className="shrink-0 text-[10px] font-normal text-muted-foreground tabular-nums">
               {m.date.length === 8 ? `${m.date.slice(4, 6)}/${m.date.slice(6)}` : m.date}
             </span>
           )}
         </h3>
-        <div className="flex shrink-0 items-center gap-1.5">
+        <span className={`shrink-0 text-sm font-semibold tabular-nums ${chgClass(m.change_pct)}`}>
+          {pct(m.change_pct)} {m.is_eumbong ? "음봉" : ""}
+        </span>
+      </div>
+      {/* 2줄: 유형·종베·시장경보 배지 — 넓게 wrap */}
+      <div className="flex flex-wrap items-center gap-1.5">
+        {m.mover_type && (
+          <span className="rounded bg-white/10 px-1.5 py-0.5 text-[11px] text-muted-foreground">
+            {MTYPE_LABEL[m.mover_type] ?? m.mover_type}
+          </span>
+        )}
+        <span
+          className={`rounded px-1.5 py-0.5 text-[11px] tabular-nums ${tier.cls}`}
+          title={`종가베팅 적합도(잠정 휴리스틱) ${score}/100 · ${tier.label}\n${reasonText}`}
+        >
+          종베 {score}
+        </span>
+        {/* KRX 시장경보 대형 배지 — 점수 무반영 정보 배지. 폭락 시 추가매수 기회 관점 */}
+        {m.alert_now && (
           <span
-            className={`rounded px-1.5 py-0.5 text-[11px] tabular-nums ${tier.cls}`}
-            title={`종가베팅 적합도(잠정 휴리스틱) ${score}/100 · ${tier.label}\n${reasonText}`}
+            className={`rounded px-1.5 py-0.5 text-xs font-bold ${
+              m.alert_now === "주의" ? "bg-amber-500/30 text-amber-200" : "bg-down/30 text-down"
+            }`}
+            title="KRX 시장경보 현재 지정 상태 — 익일 급락·변동성 확대 가능(계획된 추가매수 기회 관점)"
           >
-            종베 {score}
+            {m.alert_now === "주의" ? "⚠️투자주의" : m.alert_now === "경고" ? "🚨투자경고" : "⛔투자위험"}
           </span>
-          <span className={`text-sm font-semibold tabular-nums ${chgClass(m.change_pct)}`}>
-            {pct(m.change_pct)} {m.is_eumbong ? "음봉" : ""}
+        )}
+        {m.alert_forecast && (
+          <span
+            className="rounded bg-down/30 px-1.5 py-0.5 text-xs font-bold text-down"
+            title="장마감 직전 KRX 공식(5일+60%·15일+100%·신고가·지수배수) 계산 예측 — 지정 시 익일 급락·변동 주의(=기회). 보장 아님"
+          >
+            🚨{m.alert_forecast}
           </span>
-        </div>
+        )}
       </div>
       <div className="flex flex-wrap gap-x-1.5 text-[10px] tabular-nums text-muted-foreground">
         {reasons.map((r) => (
@@ -439,7 +441,7 @@ export function AlphaList({ initial }: { initial: AlphaData }) {
           아직 적재된 알파 movers가 없습니다 — 거래일 마감 후 수집됩니다.
         </div>
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2">
           {movers.map((m, i) => (
             <MoverCard key={`${m.code}-${m.file_date ?? m.date ?? i}`} m={m} rank={i + 1} />
           ))}
@@ -458,7 +460,7 @@ export function AlphaList({ initial }: { initial: AlphaData }) {
               {data.yesterday_results!.filter((m) => (m.next_high_pct ?? 0) >= 7).length}/{data.yesterday_results!.length}
             </span>
           </h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2">
             {data.yesterday_results!.map((m, i) => (
               <MoverCard key={`y-${m.code}-${i}`} m={m} />
             ))}
