@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-03 09:42:09 KST",
+ "generated_at": "2026-07-03 09:52:02 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -77,29 +77,41 @@
    "estimated": false
   }
  ],
- "explosions": [],
+ "explosions": [
+  {
+   "code": "419050",
+   "name": "삼기에너지솔루션즈",
+   "sector": "운송장비·부품",
+   "high_pct": 26.8,
+   "vol_turnover_pct": 95.6,
+   "value_eok": 613,
+   "price": 2220.0,
+   "change_pct": 14.2,
+   "backfill": false
+  }
+ ],
  "youtong": [
   {
    "code": "419050",
    "name": "삼기에너지솔루션즈",
    "sector": "운송장비·부품",
-   "change_pct": 18.06,
+   "change_pct": 14.2,
    "high_pct": 26.8,
-   "vol_turnover_pct": 87.4,
-   "value_eok": 561,
-   "price": 2295.0,
+   "vol_turnover_pct": 95.6,
+   "value_eok": 613,
+   "price": 2220.0,
    "first_seen": "09:42",
-   "exploded": false
+   "exploded": true
   },
   {
    "code": "002780",
    "name": "진흥기업",
    "sector": "건설",
-   "change_pct": 10.77,
+   "change_pct": 8.41,
    "high_pct": 26.27,
-   "vol_turnover_pct": 55.6,
-   "value_eok": 541,
-   "price": 1265.0,
+   "vol_turnover_pct": 59.3,
+   "value_eok": 575,
+   "price": 1238.0,
    "first_seen": "09:42",
    "exploded": false
   }
