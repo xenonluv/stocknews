@@ -56,6 +56,26 @@ def rank(movers):
     return scored
 
 
+def _shakeout_lines():
+    """radar.json(READ ONLY)의 💥 흔들기 종목 — 종베 알림 별도 섹션(회장님 전용 셀, 실측 익일 고가 +13% 68~80%).
+    당일 게시분만(스테일 가드) · 최대 3종."""
+    try:
+        d = json.load(open(config.RADAR_JSON, encoding="utf-8"))
+        today = datetime.datetime.now(config.KST).strftime("%Y-%m-%d")
+        if not str(d.get("generated_at", "")).startswith(today):
+            return []
+        out = []
+        for s in d.get("suspects") or []:
+            if s.get("shakeout"):
+                line = f"💥 {s.get('name')} — 회전 {s.get('turnover_pct')}%·페이드 {s.get('fade_pct')}%p"
+                if s.get("tp_hint"):
+                    line += f" · 익절힌트 {s['tp_hint']}"
+                out.append(line)
+        return out[:3]
+    except Exception:
+        return []
+
+
 def build_message(movers):
     """movers → (발송문자열, 구성서명). 후보 0/전원 부적합이면 '없음' 메시지."""
     scored = rank(movers)
@@ -98,6 +118,11 @@ def build_message(movers):
         chips = " · ".join(f"{k}({v:+d})" for k, v in fitness.close_bet_breakdown(m)[1] if v)
         if chips:
             lines.append(f"   {chips}")
+    shk = _shakeout_lines()
+    if shk:
+        lines.append("")
+        lines.append("💥 흔들기 셀(상한 터치 후 대회전 밀림·MA20 사수 — 익일 고가 +13% 실측 68~80%):")
+        lines += ["  " + x for x in shk]
     lines.append("")
     if crash_n:
         lines.append(f"(폭락제외 벌점 발동 {crash_n}종 — 하위 강등)")
