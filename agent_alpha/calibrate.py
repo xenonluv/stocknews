@@ -196,9 +196,14 @@ def run():
     for b in ("≤-10", "-10~0", "0~8", "8~15", "15~22", "22+"):
         out["by_change_pct"][b] = _stat([r for r in rows if _change_band(r.get("change_pct")) == b])
 
-    # mover 유형별
-    for mt in ("reaccum", "youtong", "explosion", "shakeout"):
+    # mover 유형별 — reaccum은 저점매집(low_accum) 분리 (2026-07-05 회장님 지시: 저점매집 성적이
+    # 재매집 성적을 오염시키는 것 방지. 통계만 2분할·탐지/순위 무변경. geupso는 forward 미저장이라
+    # 재매집·급소는 아직 한 칸.)
+    for mt in ("youtong", "explosion", "shakeout"):
         out["by_mover_type"][mt] = _stat([r for r in rows if r.get("mover_type") == mt])
+    _re = [r for r in rows if r.get("mover_type") == "reaccum"]
+    out["by_mover_type"]["reaccum(재매집·급소)"] = _stat([r for r in _re if r.get("low_accum") is not True])
+    out["by_mover_type"]["reaccum(저점매집)"] = _stat([r for r in _re if r.get("low_accum") is True])
 
     # 종베 점수대별
     def _cbf_band(s):
