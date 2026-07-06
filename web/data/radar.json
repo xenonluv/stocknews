@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-06 09:03:13 KST",
+ "generated_at": "2026-07-06 09:53:13 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -84,6 +84,31 @@
   }
  ],
  "explosions": [],
- "youtong": [],
+ "youtong": [
+  {
+   "code": "037070",
+   "name": "파세코",
+   "sector": "전기·전자",
+   "change_pct": 24.3,
+   "high_pct": 29.87,
+   "vol_turnover_pct": 80.1,
+   "value_eok": 378,
+   "price": 8490.0,
+   "first_seen": "09:52",
+   "exploded": false
+  },
+  {
+   "code": "011230",
+   "name": "삼화전자",
+   "sector": "전기·전자",
+   "change_pct": 14.55,
+   "high_pct": 20.84,
+   "vol_turnover_pct": 78.5,
+   "value_eok": 312,
+   "price": 4095.0,
+   "first_seen": "09:52",
+   "exploded": false
+  }
+ ],
  "suspects": []
 }
