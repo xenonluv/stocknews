@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-06 10:02:58 KST",
+ "generated_at": "2026-07-06 10:22:57 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -83,29 +83,41 @@
    "estimated": true
   }
  ],
- "explosions": [],
+ "explosions": [
+  {
+   "code": "037070",
+   "name": "파세코",
+   "sector": "전기·전자",
+   "high_pct": 29.87,
+   "vol_turnover_pct": 96.3,
+   "value_eok": 456,
+   "price": 8590.0,
+   "change_pct": 25.77,
+   "backfill": false
+  }
+ ],
  "youtong": [
   {
    "code": "037070",
    "name": "파세코",
    "sector": "전기·전자",
-   "change_pct": 23.28,
+   "change_pct": 25.77,
    "high_pct": 29.87,
-   "vol_turnover_pct": 88.3,
-   "value_eok": 417,
-   "price": 8420.0,
+   "vol_turnover_pct": 96.3,
+   "value_eok": 456,
+   "price": 8590.0,
    "first_seen": "09:52",
-   "exploded": false
+   "exploded": true
   },
   {
    "code": "011230",
    "name": "삼화전자",
    "sector": "전기·전자",
-   "change_pct": 11.75,
+   "change_pct": 9.79,
    "high_pct": 20.84,
-   "vol_turnover_pct": 83.1,
-   "value_eok": 330,
-   "price": 3995.0,
+   "vol_turnover_pct": 89.3,
+   "value_eok": 354,
+   "price": 3925.0,
    "first_seen": "09:52",
    "exploded": false
   }
