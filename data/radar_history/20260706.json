@@ -4,7 +4,7 @@
   "091590": {
    "name": "남화토건",
    "sector": "건설",
-   "entry": 8020.0,
+   "entry": 8450.0,
    "score": 0,
    "breakdown": {
     "base": 0,
@@ -21,15 +21,15 @@
     "peak_turnover": 2,
     "re_turnover": 3
    },
-   "rank": 3,
-   "change_pct": -15.58,
+   "rank": 2,
+   "change_pct": -11.05,
    "change_basis": "KRX",
    "high_pct": 2.42,
    "pattern": "reaccum",
    "prime": false,
    "theme": "반도체",
-   "value_eok": 268,
-   "turnover_pct": 64.6,
+   "value_eok": 286,
+   "turnover_pct": 69.0,
    "peak_turnover_pct": 107.2,
    "turnover_basis": "float",
    "turnover_metric": "vol_float",
@@ -46,8 +46,8 @@
     "peak_turnover_pct": 107.2,
     "peak_ibs": 0.57,
     "peak_uppertail": 17.7,
-    "ma20": 5739.0,
-    "ma20_margin_pct": 39.75,
+    "ma20": 5760.5,
+    "ma20_margin_pct": 46.69,
     "cause_summary": "과열 경고에도 '호남 반도체' 테마주 상한가 행렬…변동성 주의보[핫...",
     "was_theme_leader": false,
     "source": "live"
@@ -102,9 +102,9 @@
    "tp_hint": null,
    "forecast": {
     "horizon": "3일 내 +7%",
-    "prob_pct": 46,
+    "prob_pct": 52,
     "base_pct": 46,
-    "strong": false,
+    "strong": true,
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
@@ -165,20 +165,20 @@
   "001260": {
    "name": "남광토건",
    "sector": "건설",
-   "entry": 9900.0,
+   "entry": 10130.0,
    "score": 0,
    "breakdown": {},
-   "suspicion_score": 71,
+   "suspicion_score": 69,
    "score_breakdown_display": {},
    "rank": 1,
-   "change_pct": 6.22,
+   "change_pct": 8.69,
    "change_basis": "KRX",
    "high_pct": 26.39,
    "pattern": "shakeout",
    "prime": false,
    "theme": "",
-   "value_eok": 194,
-   "turnover_pct": 48.8,
+   "value_eok": 202,
+   "turnover_pct": 50.8,
    "peak_turnover_pct": null,
    "turnover_basis": "float",
    "turnover_metric": "vol_float",
@@ -197,7 +197,7 @@
    "alert_now": null,
    "alert_release": null,
    "shakeout": true,
-   "fade_pct": 20.2,
+   "fade_pct": 17.7,
    "tp_hint": "+15% (양극단·표본소)",
    "forecast": null,
    "matched_events": [],
@@ -248,8 +248,8 @@
    "first_seen": "2026-07-06 13:43:20 KST",
    "evaluated": false,
    "result": null,
-   "final": true
+   "final": false
   }
  },
- "as_of": "2026-07-06 13:43:20 KST"
+ "as_of": "2026-07-06 14:23:23 KST"
 }
