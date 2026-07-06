@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-06 12:23:05 KST",
+ "generated_at": "2026-07-06 12:43:13 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -89,8 +89,8 @@
    "name": "파세코",
    "sector": "전기·전자",
    "high_pct": 29.87,
-   "vol_turnover_pct": 116.0,
-   "value_eok": 553,
+   "vol_turnover_pct": 116.4,
+   "value_eok": 555,
    "price": 8870.0,
    "change_pct": 29.87,
    "backfill": false
@@ -103,8 +103,8 @@
    "sector": "전기·전자",
    "change_pct": 29.87,
    "high_pct": 29.87,
-   "vol_turnover_pct": 116.0,
-   "value_eok": 553,
+   "vol_turnover_pct": 116.4,
+   "value_eok": 555,
    "price": 8870.0,
    "first_seen": "09:52",
    "exploded": true
@@ -113,11 +113,11 @@
    "code": "011230",
    "name": "삼화전자",
    "sector": "전기·전자",
-   "change_pct": 0.56,
+   "change_pct": 4.76,
    "high_pct": 20.84,
    "vol_turnover_pct": 78.5,
    "value_eok": 312,
-   "price": 3595.0,
+   "price": 3745.0,
    "first_seen": "09:52",
    "exploded": false
   },
@@ -127,8 +127,8 @@
    "sector": "건설",
    "change_pct": 18.21,
    "high_pct": 24.93,
-   "vol_turnover_pct": 68.9,
-   "value_eok": 441,
+   "vol_turnover_pct": 71.7,
+   "value_eok": 460,
    "price": 4480.0,
    "first_seen": "11:41",
    "exploded": false
@@ -137,23 +137,11 @@
    "code": "046940",
    "name": "우원개발",
    "sector": "건설",
-   "change_pct": 12.45,
+   "change_pct": 12.83,
    "high_pct": 21.26,
-   "vol_turnover_pct": 68.0,
-   "value_eok": 353,
-   "price": 4470.0,
-   "first_seen": "11:41",
-   "exploded": false
-  },
-  {
-   "code": "228340",
-   "name": "동양파일",
-   "sector": "비금속",
-   "change_pct": 2.62,
-   "high_pct": 21.73,
-   "vol_turnover_pct": 60.2,
-   "value_eok": 172,
-   "price": 3330.0,
+   "vol_turnover_pct": 69.8,
+   "value_eok": 362,
+   "price": 4485.0,
    "first_seen": "11:41",
    "exploded": false
   },
@@ -161,14 +149,223 @@
    "code": "025950",
    "name": "동신건설",
    "sector": "건설",
-   "change_pct": 15.24,
+   "change_pct": 12.91,
    "high_pct": 21.31,
-   "vol_turnover_pct": 59.4,
-   "value_eok": 262,
-   "price": 16330.0,
+   "vol_turnover_pct": 60.5,
+   "value_eok": 267,
+   "price": 16000.0,
    "first_seen": "11:41",
+   "exploded": false
+  },
+  {
+   "code": "228340",
+   "name": "동양파일",
+   "sector": "비금속",
+   "change_pct": 3.24,
+   "high_pct": 21.73,
+   "vol_turnover_pct": 60.2,
+   "value_eok": 172,
+   "price": 3350.0,
+   "first_seen": "11:41",
+   "exploded": false
+  },
+  {
+   "code": "002700",
+   "name": "신일전자",
+   "sector": "유통",
+   "change_pct": 17.14,
+   "high_pct": 22.54,
+   "vol_turnover_pct": 50.4,
+   "value_eok": 374,
+   "price": 1367.0,
+   "first_seen": "12:41",
    "exploded": false
   }
  ],
- "suspects": []
+ "suspects": [
+  {
+   "code": "091590",
+   "name": "남화토건",
+   "sector": "건설",
+   "pattern": "reaccum",
+   "geupso": false,
+   "geupso_bars": [],
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 67,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_count": 0,
+    "re_body": 0,
+    "peak_turnover": 2,
+    "re_turnover": 3
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_count": 0,
+    "re_body": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "price": 8290.0,
+   "change_pct": -12.74,
+   "change_basis": "KRX",
+   "high_pct": 2.42,
+   "value_eok": 251,
+   "turnover_pct": 60.1,
+   "peak_turnover_pct": 107.2,
+   "float_ratio": 0.4113,
+   "turnover_basis": "float",
+   "ma10": 7627.0,
+   "ma10_margin_pct": 8.69,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": null,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 7.5,
+    "time": "09:55",
+    "value_eok": 11,
+    "count": 0
+   },
+   "reignition_bars": [
+    {
+     "time": "09:30",
+     "body_pct": 4.72,
+     "value_eok": 9
+    },
+    {
+     "time": "09:45",
+     "body_pct": 3.73,
+     "value_eok": 6
+    },
+    {
+     "time": "09:55",
+     "body_pct": 7.5,
+     "value_eok": 11
+    },
+    {
+     "time": "10:00",
+     "body_pct": 4.39,
+     "value_eok": 12
+    },
+    {
+     "time": "10:10",
+     "body_pct": 2.13,
+     "value_eok": 6
+    },
+    {
+     "time": "10:15",
+     "body_pct": 2.97,
+     "value_eok": 15
+    },
+    {
+     "time": "10:55",
+     "body_pct": 3.2,
+     "value_eok": 4
+    },
+    {
+     "time": "11:15",
+     "body_pct": 2.45,
+     "value_eok": 3
+    }
+   ],
+   "low_accum": true,
+   "low_accum_bars": [
+    {
+     "time": "09:30",
+     "body_pct": 4.72
+    },
+    {
+     "time": "09:45",
+     "body_pct": 3.73
+    },
+    {
+     "time": "09:55",
+     "body_pct": 7.5
+    },
+    {
+     "time": "10:00",
+     "body_pct": 4.39
+    },
+    {
+     "time": "10:10",
+     "body_pct": 2.13
+    },
+    {
+     "time": "10:15",
+     "body_pct": 2.97
+    },
+    {
+     "time": "10:55",
+     "body_pct": 3.2
+    },
+    {
+     "time": "11:15",
+     "body_pct": 2.45
+    }
+   ],
+   "news": [],
+   "matched_events": [
+    {
+     "id": "2026-07-07_삼성전자 2분기 잠정실",
+     "title": "삼성전자 2분기 잠정실적",
+     "dday": 1,
+     "categories": [
+      "반도체"
+     ],
+     "score": 7.4
+    },
+    {
+     "id": "2026-07-09_한국은행 금통위 기준금",
+     "title": "한국은행 금통위 기준금리 결정",
+     "dday": 3,
+     "categories": [
+      "금리"
+     ],
+     "score": 5.2
+    },
+    {
+     "id": "2026-07-14_미국 CPI 발표 (6",
+     "title": "미국 CPI 발표 (6월분)",
+     "dday": 8,
+     "categories": [
+      "금리"
+     ],
+     "score": 2.2
+    }
+   ],
+   "theme": "반도체",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260702",
+    "peak_value_eok": 514,
+    "peak_high_pct": 26.58,
+    "peak_turnover_pct": 107.2,
+    "peak_ibs": 0.57,
+    "peak_uppertail": 17.7,
+    "ma20": 5752.5,
+    "ma20_margin_pct": 44.11,
+    "cause_summary": "과열 경고에도 '호남 반도체' 테마주 상한가 행렬…변동성 주의보[핫...",
+    "was_theme_leader": false,
+    "source": "live"
+   },
+   "leader_cohort_prob": null,
+   "alert_now": "경고",
+   "alert_release": false,
+   "theme_leader": false
+  }
+ ]
 }
