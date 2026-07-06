@@ -1,5 +1,115 @@
 {
  "date": "20260706",
- "suspects": {},
- "as_of": "2026-07-06 10:22:57 KST"
+ "suspects": {
+  "091590": {
+   "name": "남화토건",
+   "sector": "건설",
+   "entry": 8520.0,
+   "score": 0,
+   "breakdown": {
+    "base": 0,
+    "re_count": 0,
+    "re_body": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "suspicion_score": 66,
+   "score_breakdown_display": {
+    "base": 62,
+    "re_count": 0,
+    "re_body": 0,
+    "peak_turnover": 2,
+    "re_turnover": 2
+   },
+   "rank": 1,
+   "change_pct": -10.32,
+   "change_basis": "KRX",
+   "high_pct": 2.42,
+   "pattern": "reaccum",
+   "prime": false,
+   "theme": "반도체",
+   "value_eok": 199,
+   "turnover_pct": 47.7,
+   "peak_turnover_pct": 107.2,
+   "turnover_basis": "float",
+   "turnover_metric": "vol_float",
+   "theme_leader": false,
+   "spark_max_x": null,
+   "mega_flow": false,
+   "flow_today_buy": false,
+   "deep_shake": null,
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260702",
+    "peak_value_eok": 514,
+    "peak_high_pct": 26.58,
+    "peak_turnover_pct": 107.2,
+    "peak_ibs": 0.57,
+    "peak_uppertail": 17.7,
+    "ma20": 5763.5,
+    "ma20_margin_pct": 47.83,
+    "cause_summary": "과열 경고에도 '호남 반도체' 테마주 상한가 행렬…변동성 주의보[핫...",
+    "was_theme_leader": false,
+    "source": "live"
+   },
+   "reignition": {
+    "body_pct": 7.5,
+    "time": "09:55",
+    "value_eok": 11,
+    "count": 0
+   },
+   "geupso": false,
+   "geupso_bars": [],
+   "low_accum": true,
+   "low_accum_bars": [
+    {
+     "time": "09:30",
+     "body_pct": 4.72
+    },
+    {
+     "time": "09:45",
+     "body_pct": 3.73
+    },
+    {
+     "time": "09:55",
+     "body_pct": 7.5
+    },
+    {
+     "time": "10:00",
+     "body_pct": 4.39
+    },
+    {
+     "time": "10:10",
+     "body_pct": 2.13
+    },
+    {
+     "time": "10:15",
+     "body_pct": 2.97
+    }
+   ],
+   "alert_now": "경고",
+   "alert_release": false,
+   "shakeout": false,
+   "fade_pct": null,
+   "tp_hint": null,
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "matched_events": [
+    "2026-07-07_삼성전자 2분기 잠정실",
+    "2026-07-09_한국은행 금통위 기준금",
+    "2026-07-14_미국 CPI 발표 (6"
+   ],
+   "first_seen": "2026-07-06 10:53:01 KST",
+   "evaluated": false,
+   "result": null,
+   "final": true
+  }
+ },
+ "as_of": "2026-07-06 10:53:01 KST"
 }
