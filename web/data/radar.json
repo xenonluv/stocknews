@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-06 14:54:12 KST",
+ "generated_at": "2026-07-06 15:24:01 KST",
  "market_session": "open",
  "disclaimer": "본 정보는 투자 참고용이며 매수 추천이 아닙니다. 투자 판단과 책임은 본인에게 있습니다.",
  "params": {
@@ -89,10 +89,21 @@
    "name": "금호건설",
    "sector": "건설",
    "high_pct": 30.0,
-   "vol_turnover_pct": 102.9,
-   "value_eok": 2037,
+   "vol_turnover_pct": 103.8,
+   "value_eok": 2059,
    "price": 12350.0,
    "change_pct": 30.0,
+   "backfill": false
+  },
+  {
+   "code": "037710",
+   "name": "광주신세계",
+   "sector": "유통",
+   "high_pct": 29.82,
+   "vol_turnover_pct": 104.2,
+   "value_eok": 1242,
+   "price": 50500.0,
+   "change_pct": 29.82,
    "backfill": false
   },
   {
@@ -100,21 +111,32 @@
    "name": "삼호개발",
    "sector": "건설",
    "high_pct": 24.93,
-   "vol_turnover_pct": 93.9,
-   "value_eok": 599,
-   "price": 4290.0,
-   "change_pct": 13.19,
+   "vol_turnover_pct": 98.0,
+   "value_eok": 625,
+   "price": 4320.0,
+   "change_pct": 13.98,
+   "backfill": false
+  },
+  {
+   "code": "079650",
+   "name": "서산",
+   "sector": "비금속",
+   "high_pct": 23.03,
+   "vol_turnover_pct": 94.5,
+   "value_eok": 213,
+   "price": 3700.0,
+   "change_pct": 14.37,
    "backfill": false
   },
   {
    "code": "091590",
    "name": "남화토건",
    "sector": "건설",
-   "high_pct": 24.21,
-   "vol_turnover_pct": 106.4,
-   "value_eok": 475,
-   "price": 11360.0,
-   "change_pct": 19.58,
+   "high_pct": 25.26,
+   "vol_turnover_pct": 133.8,
+   "value_eok": 625,
+   "price": 10920.0,
+   "change_pct": 14.95,
    "backfill": false
   },
   {
@@ -122,10 +144,10 @@
    "name": "파세코",
    "sector": "전기·전자",
    "high_pct": 29.87,
-   "vol_turnover_pct": 136.0,
-   "value_eok": 652,
-   "price": 8650.0,
-   "change_pct": 26.65,
+   "vol_turnover_pct": 145.3,
+   "value_eok": 698,
+   "price": 8870.0,
+   "change_pct": 29.87,
    "backfill": false
   }
  ],
@@ -134,11 +156,11 @@
    "code": "037070",
    "name": "파세코",
    "sector": "전기·전자",
-   "change_pct": 26.65,
+   "change_pct": 29.87,
    "high_pct": 29.87,
-   "vol_turnover_pct": 136.0,
-   "value_eok": 652,
-   "price": 8650.0,
+   "vol_turnover_pct": 145.3,
+   "value_eok": 698,
+   "price": 8870.0,
    "first_seen": "09:52",
    "exploded": true
   },
@@ -146,11 +168,23 @@
    "code": "091590",
    "name": "남화토건",
    "sector": "건설",
-   "change_pct": 19.58,
-   "high_pct": 24.21,
-   "vol_turnover_pct": 106.4,
-   "value_eok": 475,
-   "price": 11360.0,
+   "change_pct": 14.95,
+   "high_pct": 25.26,
+   "vol_turnover_pct": 133.8,
+   "value_eok": 625,
+   "price": 10920.0,
+   "first_seen": "14:51",
+   "exploded": true
+  },
+  {
+   "code": "037710",
+   "name": "광주신세계",
+   "sector": "유통",
+   "change_pct": 29.82,
+   "high_pct": 29.82,
+   "vol_turnover_pct": 104.2,
+   "value_eok": 1242,
+   "price": 50500.0,
    "first_seen": "14:51",
    "exploded": true
   },
@@ -160,8 +194,8 @@
    "sector": "건설",
    "change_pct": 30.0,
    "high_pct": 30.0,
-   "vol_turnover_pct": 102.9,
-   "value_eok": 2037,
+   "vol_turnover_pct": 103.8,
+   "value_eok": 2059,
    "price": 12350.0,
    "first_seen": "14:51",
    "exploded": true
@@ -170,23 +204,71 @@
    "code": "010960",
    "name": "삼호개발",
    "sector": "건설",
-   "change_pct": 13.19,
+   "change_pct": 13.98,
    "high_pct": 24.93,
-   "vol_turnover_pct": 93.9,
-   "value_eok": 599,
-   "price": 4290.0,
+   "vol_turnover_pct": 98.0,
+   "value_eok": 625,
+   "price": 4320.0,
    "first_seen": "11:41",
    "exploded": true
+  },
+  {
+   "code": "228340",
+   "name": "동양파일",
+   "sector": "비금속",
+   "change_pct": 14.79,
+   "high_pct": 21.73,
+   "vol_turnover_pct": 96.1,
+   "value_eok": 272,
+   "price": 3725.0,
+   "first_seen": "11:41",
+   "exploded": false
+  },
+  {
+   "code": "079650",
+   "name": "서산",
+   "sector": "비금속",
+   "change_pct": 14.37,
+   "high_pct": 23.03,
+   "vol_turnover_pct": 94.5,
+   "value_eok": 213,
+   "price": 3700.0,
+   "first_seen": "14:51",
+   "exploded": true
+  },
+  {
+   "code": "001210",
+   "name": "금호전기",
+   "sector": "전기·전자",
+   "change_pct": 29.96,
+   "high_pct": 29.96,
+   "vol_turnover_pct": 89.4,
+   "value_eok": 308,
+   "price": 963.0,
+   "first_seen": "14:51",
+   "exploded": false
   },
   {
    "code": "122350",
    "name": "삼기",
    "sector": "운송장비·부품",
-   "change_pct": 5.39,
+   "change_pct": 2.28,
    "high_pct": 22.15,
    "vol_turnover_pct": 87.4,
    "value_eok": 432,
-   "price": 1898.0,
+   "price": 1842.0,
+   "first_seen": "14:21",
+   "exploded": false
+  },
+  {
+   "code": "006660",
+   "name": "삼성공조",
+   "sector": "운송장비·부품",
+   "change_pct": 14.86,
+   "high_pct": 25.69,
+   "vol_turnover_pct": 80.6,
+   "value_eok": 344,
+   "price": 10820.0,
    "first_seen": "14:21",
    "exploded": false
   },
@@ -194,60 +276,48 @@
    "code": "011230",
    "name": "삼화전자",
    "sector": "전기·전자",
-   "change_pct": -2.94,
+   "change_pct": -5.45,
    "high_pct": 20.84,
    "vol_turnover_pct": 78.5,
    "value_eok": 312,
-   "price": 3470.0,
+   "price": 3380.0,
    "first_seen": "09:52",
-   "exploded": false
-  },
-  {
-   "code": "006660",
-   "name": "삼성공조",
-   "sector": "운송장비·부품",
-   "change_pct": 15.5,
-   "high_pct": 25.69,
-   "vol_turnover_pct": 76.9,
-   "value_eok": 329,
-   "price": 10880.0,
-   "first_seen": "14:21",
-   "exploded": false
-  },
-  {
-   "code": "001210",
-   "name": "금호전기",
-   "sector": "전기·전자",
-   "change_pct": 28.74,
-   "high_pct": 29.96,
-   "vol_turnover_pct": 75.2,
-   "value_eok": 252,
-   "price": 954.0,
-   "first_seen": "14:51",
-   "exploded": false
-  },
-  {
-   "code": "079650",
-   "name": "서산",
-   "sector": "비금속",
-   "change_pct": 15.15,
-   "high_pct": 23.03,
-   "vol_turnover_pct": 72.5,
-   "value_eok": 162,
-   "price": 3725.0,
-   "first_seen": "14:51",
    "exploded": false
   },
   {
    "code": "025950",
    "name": "동신건설",
    "sector": "건설",
-   "change_pct": 12.84,
+   "change_pct": 15.53,
    "high_pct": 21.31,
-   "vol_turnover_pct": 67.9,
-   "value_eok": 299,
-   "price": 15990.0,
+   "vol_turnover_pct": 71.7,
+   "value_eok": 316,
+   "price": 16370.0,
    "first_seen": "11:41",
+   "exploded": false
+  },
+  {
+   "code": "001260",
+   "name": "남광토건",
+   "sector": "건설",
+   "change_pct": 27.47,
+   "high_pct": 28.76,
+   "vol_turnover_pct": 70.9,
+   "value_eok": 285,
+   "price": 11880.0,
+   "first_seen": "14:21",
+   "exploded": false
+  },
+  {
+   "code": "013360",
+   "name": "일성건설",
+   "sector": "건설",
+   "change_pct": 26.01,
+   "high_pct": 29.74,
+   "vol_turnover_pct": 69.4,
+   "value_eok": 287,
+   "price": 2025.0,
+   "first_seen": "14:51",
    "exploded": false
   },
   {
@@ -256,229 +326,209 @@
    "sector": "IT 서비스",
    "change_pct": 29.91,
    "high_pct": 29.91,
-   "vol_turnover_pct": 67.3,
-   "value_eok": 1738,
+   "vol_turnover_pct": 67.4,
+   "value_eok": 1743,
    "price": 30400.0,
    "first_seen": "13:42",
-   "exploded": false
-  },
-  {
-   "code": "037710",
-   "name": "광주신세계",
-   "sector": "유통",
-   "change_pct": 18.64,
-   "high_pct": 21.98,
-   "vol_turnover_pct": 64.0,
-   "value_eok": 728,
-   "price": 46150.0,
-   "first_seen": "14:51",
    "exploded": false
   },
   {
    "code": "002700",
    "name": "신일전자",
    "sector": "유통",
-   "change_pct": 9.6,
+   "change_pct": 9.68,
    "high_pct": 22.54,
-   "vol_turnover_pct": 61.3,
-   "value_eok": 453,
-   "price": 1279.0,
+   "vol_turnover_pct": 62.8,
+   "value_eok": 463,
+   "price": 1280.0,
    "first_seen": "12:41",
-   "exploded": false
-  },
-  {
-   "code": "228340",
-   "name": "동양파일",
-   "sector": "비금속",
-   "change_pct": 9.4,
-   "high_pct": 21.73,
-   "vol_turnover_pct": 60.2,
-   "value_eok": 172,
-   "price": 3550.0,
-   "first_seen": "11:41",
-   "exploded": false
-  },
-  {
-   "code": "001260",
-   "name": "남광토건",
-   "sector": "건설",
-   "change_pct": 15.99,
-   "high_pct": 26.39,
-   "vol_turnover_pct": 60.0,
-   "value_eok": 238,
-   "price": 10810.0,
-   "first_seen": "14:21",
    "exploded": false
   },
   {
    "code": "046940",
    "name": "우원개발",
    "sector": "건설",
-   "change_pct": 5.79,
+   "change_pct": 4.65,
    "high_pct": 21.26,
    "vol_turnover_pct": 59.6,
    "value_eok": 309,
-   "price": 4205.0,
+   "price": 4160.0,
    "first_seen": "11:41",
    "exploded": false
   },
   {
-   "code": "013360",
-   "name": "일성건설",
+   "code": "002780",
+   "name": "진흥기업",
    "sector": "건설",
-   "change_pct": 23.96,
-   "high_pct": 29.74,
-   "vol_turnover_pct": 53.8,
-   "value_eok": 219,
-   "price": 1992.0,
-   "first_seen": "14:51",
+   "change_pct": 11.0,
+   "high_pct": 29.91,
+   "vol_turnover_pct": 53.7,
+   "value_eok": 453,
+   "price": 1039.0,
+   "first_seen": "15:21",
    "exploded": false
   }
  ],
  "suspects": [
   {
-   "code": "037710",
-   "name": "광주신세계",
-   "sector": "유통",
-   "pattern": "reaccum",
-   "geupso": true,
-   "geupso_bars": [
-    {
-     "time": "14:30",
-     "body_pct": 3.84
-    },
-    {
-     "time": "14:40",
-     "body_pct": 4.57
-    }
-   ],
+   "code": "065770",
+   "name": "CS",
+   "sector": "전기·전자",
+   "pattern": "shakeout",
+   "shakeout": true,
+   "tp_hint": "+15% (양극단·표본소)",
+   "fade_pct": 43.0,
+   "suspicion_score": 84,
+   "score_raw": 0,
+   "score_breakdown": {},
+   "score_breakdown_raw": {},
+   "calibrated_prob": null,
+   "forecast": null,
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 81,
-   "calibrated_prob": null,
-   "score_breakdown": {
-    "base": 62,
-    "re_count": 2,
-    "re_body": 4,
-    "peak_turnover": 10,
-    "re_turnover": 3
-   },
-   "score_raw": 0,
-   "score_breakdown_raw": {
-    "base": 0,
-    "re_count": 0,
-    "re_body": 0,
-    "peak_turnover": 0,
-    "re_turnover": 0
-   },
-   "forecast": {
-    "horizon": "3일 내 +7%",
-    "prob_pct": 46,
-    "base_pct": 46,
-    "strong": false,
-    "next_day_7_pct": 25,
-    "note": "과거 실측 확률·보장 아님"
-   },
-   "price": 46400.0,
-   "change_pct": 19.28,
+   "price": 1624.0,
+   "change_pct": -13.29,
    "change_basis": "KRX",
-   "high_pct": 21.98,
-   "value_eok": 739,
-   "turnover_pct": 64.9,
-   "peak_turnover_pct": 300.9,
-   "float_ratio": 0.3444,
+   "high_pct": 29.74,
+   "value_eok": 69,
+   "turnover_pct": 46.2,
+   "float_ratio": 0.7012999999999999,
    "turnover_basis": "float",
-   "ma10": 43455.0,
-   "ma10_margin_pct": 6.78,
+   "run_6d_pct": 21.2,
+   "ma20_gap_pct": 3.4,
+   "ma10": 1501.7,
+   "ma10_margin_pct": 8.14,
    "spark": {
     "clusters": []
    },
    "spark_max_x": null,
    "spark_max_pct": null,
    "mega_flow": false,
-   "reignition": {
-    "body_pct": 4.57,
-    "time": "14:40",
-    "value_eok": 152,
-    "count": 2
-   },
-   "reignition_bars": [
-    {
-     "time": "14:30",
-     "body_pct": 3.84,
-     "value_eok": 114
-    },
-    {
-     "time": "14:40",
-     "body_pct": 4.57,
-     "value_eok": 152
-    }
-   ],
+   "reignition": null,
+   "reignition_bars": [],
+   "geupso": false,
+   "geupso_bars": [],
    "low_accum": false,
    "low_accum_bars": [],
    "news": [],
-   "matched_events": [
-    {
-     "id": "2026-07-07_삼성전자 2분기 잠정실",
-     "title": "삼성전자 2분기 잠정실적",
-     "dday": 1,
-     "categories": [
-      "반도체"
-     ],
-     "score": 7.4
-    },
-    {
-     "id": "2026-07-09_한국은행 금통위 기준금",
-     "title": "한국은행 금통위 기준금리 결정",
-     "dday": 3,
-     "categories": [
-      "금리"
-     ],
-     "score": 1.7
-    },
-    {
-     "id": "2026-07-14_미국 CPI 발표 (6",
-     "title": "미국 CPI 발표 (6월분)",
-     "dday": 8,
-     "categories": [
-      "금리"
-     ],
-     "score": 0.7
-    }
-   ],
-   "theme": "반도체",
+   "matched_events": [],
+   "theme": "",
    "visible_experimental": true,
-   "reaccum": {
-    "peak_date": "20260626",
-    "peak_value_eok": 3871,
-    "peak_high_pct": 29.98,
-    "peak_turnover_pct": 300.9,
-    "peak_ibs": 1.0,
-    "peak_uppertail": 0.0,
-    "ma20": 39767.5,
-    "ma20_margin_pct": 16.68,
-    "cause_summary": "삼전닉스 호남권에 공장 건설한다는 소식에… 금호건설, 14%대 ↑",
-    "was_theme_leader": false,
-    "source": "live"
-   },
-   "leader_cohort_prob": null,
    "alert_now": null,
-   "theme_leader": true
+   "theme_leader": false
   },
   {
-   "code": "198440",
-   "name": "강동씨앤엘",
-   "sector": "비금속",
+   "code": "011230",
+   "name": "삼화전자",
+   "sector": "전기·전자",
+   "pattern": "shakeout",
+   "shakeout": true,
+   "tp_hint": "+13%",
+   "fade_pct": 26.3,
+   "suspicion_score": 83,
+   "score_raw": 0,
+   "score_breakdown": {},
+   "score_breakdown_raw": {},
+   "calibrated_prob": null,
+   "forecast": null,
+   "shake": null,
+   "deep_shake": null,
+   "price": 3380.0,
+   "change_pct": -5.45,
+   "change_basis": "KRX",
+   "high_pct": 20.84,
+   "value_eok": 627,
+   "turnover_pct": 162.1,
+   "float_ratio": 0.5161,
+   "turnover_basis": "float",
+   "run_6d_pct": 40.8,
+   "ma20_gap_pct": 17.5,
+   "ma10": 2875.5,
+   "ma10_margin_pct": 17.54,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": null,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": null,
+   "reignition_bars": [],
+   "geupso": false,
+   "geupso_bars": [],
+   "low_accum": false,
+   "low_accum_bars": [],
+   "news": [],
+   "matched_events": [],
+   "theme": "",
+   "visible_experimental": true,
+   "alert_now": null,
+   "theme_leader": false
+  },
+  {
+   "code": "002780",
+   "name": "진흥기업",
+   "sector": "건설",
+   "pattern": "shakeout",
+   "shakeout": true,
+   "tp_hint": "+15% (양극단·표본소)",
+   "fade_pct": 18.9,
+   "suspicion_score": 70,
+   "score_raw": 0,
+   "score_breakdown": {},
+   "score_breakdown_raw": {},
+   "calibrated_prob": null,
+   "forecast": null,
+   "shake": null,
+   "deep_shake": null,
+   "price": 1039.0,
+   "change_pct": 11.0,
+   "change_basis": "KRX",
+   "high_pct": 29.91,
+   "value_eok": 453,
+   "turnover_pct": 53.7,
+   "float_ratio": 0.5139,
+   "turnover_basis": "float",
+   "run_6d_pct": 44.3,
+   "ma20_gap_pct": 18.6,
+   "ma10": 857.9,
+   "ma10_margin_pct": 21.11,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": null,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": null,
+   "reignition_bars": [],
+   "geupso": false,
+   "geupso_bars": [],
+   "low_accum": false,
+   "low_accum_bars": [],
+   "news": [],
+   "matched_events": [],
+   "theme": "",
+   "visible_experimental": true,
+   "alert_now": null,
+   "theme_leader": false
+  },
+  {
+   "code": "001260",
+   "name": "남광토건",
+   "sector": "건설",
    "pattern": "reaccum",
    "geupso": true,
    "geupso_bars": [
     {
-     "time": "14:30",
-     "body_pct": 2.95
+     "time": "14:40",
+     "body_pct": 8.86
     },
     {
-     "time": "14:40",
-     "body_pct": 9.78
+     "time": "15:05",
+     "body_pct": 4.67
+    },
+    {
+     "time": "15:15",
+     "body_pct": 2.6
     }
    ],
    "shake": null,
@@ -487,10 +537,10 @@
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 62,
-    "re_count": 2,
+    "re_count": 6,
     "re_body": 6,
-    "peak_turnover": 9,
-    "re_turnover": 0
+    "peak_turnover": 1,
+    "re_turnover": 4
    },
    "score_raw": 0,
    "score_breakdown_raw": {
@@ -502,23 +552,23 @@
    },
    "forecast": {
     "horizon": "3일 내 +7%",
-    "prob_pct": 46,
+    "prob_pct": 52,
     "base_pct": 46,
-    "strong": false,
+    "strong": true,
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 1653.0,
-   "change_pct": 0.92,
+   "price": 11880.0,
+   "change_pct": 27.47,
    "change_basis": "KRX",
-   "high_pct": 8.0,
-   "value_eok": 55,
-   "turnover_pct": 18.3,
-   "peak_turnover_pct": 185.9,
-   "float_ratio": 0.306,
+   "high_pct": 28.76,
+   "value_eok": 285,
+   "turnover_pct": 70.9,
+   "peak_turnover_pct": 106.0,
+   "float_ratio": 0.37549999999999994,
    "turnover_basis": "float",
-   "ma10": 1794.9,
-   "ma10_margin_pct": -7.91,
+   "ma10": 8945.0,
+   "ma10_margin_pct": 32.81,
    "spark": {
     "clusters": []
    },
@@ -526,21 +576,31 @@
    "spark_max_pct": null,
    "mega_flow": false,
    "reignition": {
-    "body_pct": 9.78,
+    "body_pct": 8.86,
     "time": "14:40",
-    "value_eok": 5,
-    "count": 2
+    "value_eok": 18,
+    "count": 4
    },
    "reignition_bars": [
     {
-     "time": "14:30",
-     "body_pct": 2.95,
-     "value_eok": 2
+     "time": "14:40",
+     "body_pct": 8.86,
+     "value_eok": 18
     },
     {
-     "time": "14:40",
-     "body_pct": 9.78,
-     "value_eok": 5
+     "time": "14:55",
+     "body_pct": 1.73,
+     "value_eok": 8
+    },
+    {
+     "time": "15:05",
+     "body_pct": 4.67,
+     "value_eok": 8
+    },
+    {
+     "time": "15:15",
+     "body_pct": 2.6,
+     "value_eok": 12
     }
    ],
    "low_accum": false,
@@ -548,34 +608,180 @@
    "news": [],
    "matched_events": [
     {
+     "id": "2026-07-09_한국은행 금통위 기준금",
+     "title": "한국은행 금통위 기준금리 결정",
+     "dday": 3,
+     "categories": [
+      "금리"
+     ],
+     "score": 5.2
+    },
+    {
      "id": "2026-07-07_삼성전자 2분기 잠정실",
      "title": "삼성전자 2분기 잠정실적",
      "dday": 1,
      "categories": [
-      "반도체",
-      "실적"
+      "반도체"
      ],
      "score": 2.5
+    },
+    {
+     "id": "2026-07-14_미국 CPI 발표 (6",
+     "title": "미국 CPI 발표 (6월분)",
+     "dday": 8,
+     "categories": [
+      "금리"
+     ],
+     "score": 2.2
     }
    ],
-   "theme": "반도체",
+   "theme": "금리",
    "visible_experimental": true,
    "reaccum": {
-    "peak_date": "20260623",
-    "peak_value_eok": 819,
-    "peak_high_pct": 27.36,
-    "peak_turnover_pct": 185.9,
-    "peak_ibs": 0.47,
-    "peak_uppertail": 16.9,
-    "ma20": 1610.1,
-    "ma20_margin_pct": 2.66,
-    "cause_summary": "",
+    "peak_date": "20260702",
+    "peak_value_eok": 467,
+    "peak_high_pct": 29.59,
+    "peak_turnover_pct": 106.0,
+    "peak_ibs": 0.08,
+    "peak_uppertail": 30.5,
+    "ma20": 8426.0,
+    "ma20_margin_pct": 40.99,
+    "cause_summary": "“매출 절반 넘는 1883억 수주”…남광토건, LH 양주회천 공공주택사...",
     "was_theme_leader": false,
     "source": "live"
    },
    "leader_cohort_prob": null,
-   "alert_now": "주의",
+   "alert_now": null,
    "theme_leader": false
+  },
+  {
+   "code": "025950",
+   "name": "동신건설",
+   "sector": "건설",
+   "pattern": "reaccum",
+   "geupso": true,
+   "geupso_bars": [
+    {
+     "time": "14:40",
+     "body_pct": 5.23
+    },
+    {
+     "time": "14:55",
+     "body_pct": 2.24
+    }
+   ],
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 74,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_count": 2,
+    "re_body": 5,
+    "peak_turnover": 1,
+    "re_turnover": 4
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_count": 0,
+    "re_body": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 52,
+    "base_pct": 46,
+    "strong": true,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "price": 16370.0,
+   "change_pct": 15.53,
+   "change_basis": "KRX",
+   "high_pct": 21.31,
+   "value_eok": 316,
+   "turnover_pct": 71.7,
+   "peak_turnover_pct": 97.8,
+   "float_ratio": 0.3265,
+   "turnover_basis": "float",
+   "ma10": 12349.0,
+   "ma10_margin_pct": 32.56,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": null,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 5.23,
+    "time": "14:40",
+    "value_eok": 5,
+    "count": 2
+   },
+   "reignition_bars": [
+    {
+     "time": "14:40",
+     "body_pct": 5.23,
+     "value_eok": 5
+    },
+    {
+     "time": "14:55",
+     "body_pct": 2.24,
+     "value_eok": 6
+    }
+   ],
+   "low_accum": false,
+   "low_accum_bars": [],
+   "news": [],
+   "matched_events": [
+    {
+     "id": "2026-07-09_한국은행 금통위 기준금",
+     "title": "한국은행 금통위 기준금리 결정",
+     "dday": 3,
+     "categories": [
+      "금리"
+     ],
+     "score": 5.2
+    },
+    {
+     "id": "2026-07-07_삼성전자 2분기 잠정실",
+     "title": "삼성전자 2분기 잠정실적",
+     "dday": 1,
+     "categories": [
+      "반도체"
+     ],
+     "score": 4.9
+    },
+    {
+     "id": "2026-07-14_미국 CPI 발표 (6",
+     "title": "미국 CPI 발표 (6월분)",
+     "dday": 8,
+     "categories": [
+      "금리"
+     ],
+     "score": 2.2
+    }
+   ],
+   "theme": "금리",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260702",
+    "peak_value_eok": 467,
+    "peak_high_pct": 29.97,
+    "peak_turnover_pct": 97.8,
+    "peak_ibs": 0.33,
+    "peak_uppertail": 13.4,
+    "ma20": 12250.5,
+    "ma20_margin_pct": 33.63,
+    "cause_summary": "반도체 메가 프로젝트 수혜 기대감에…지역 건설주 상한가",
+    "was_theme_leader": false,
+    "source": "live"
+   },
+   "leader_cohort_prob": null,
+   "alert_now": null,
+   "theme_leader": true
   },
   {
    "code": "058730",
@@ -620,17 +826,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 3610.0,
-   "change_pct": 4.18,
+   "price": 3530.0,
+   "change_pct": 1.88,
    "change_basis": "KRX",
    "high_pct": 6.78,
-   "value_eok": 75,
-   "turnover_pct": 19.1,
+   "value_eok": 91,
+   "turnover_pct": 23.1,
    "peak_turnover_pct": 127.3,
    "float_ratio": 0.5677,
    "turnover_basis": "float",
-   "ma10": 3757.0,
-   "ma10_margin_pct": -3.91,
+   "ma10": 3749.5,
+   "ma10_margin_pct": -5.85,
    "spark": {
     "clusters": []
    },
@@ -696,125 +902,14 @@
     "peak_turnover_pct": 127.3,
     "peak_ibs": 1.0,
     "peak_uppertail": 0.0,
-    "ma20": 3256.8,
-    "ma20_margin_pct": 10.85,
+    "ma20": 3253.0,
+    "ma20_margin_pct": 8.52,
     "cause_summary": "",
     "was_theme_leader": false,
     "source": "live"
    },
    "leader_cohort_prob": null,
    "alert_now": null,
-   "theme_leader": false
-  },
-  {
-   "code": "079650",
-   "name": "서산",
-   "sector": "비금속",
-   "pattern": "reaccum",
-   "geupso": true,
-   "geupso_bars": [
-    {
-     "time": "14:40",
-     "body_pct": 7.48
-    },
-    {
-     "time": "14:45",
-     "body_pct": 2.59
-    }
-   ],
-   "shake": null,
-   "deep_shake": null,
-   "suspicion_score": 84,
-   "calibrated_prob": null,
-   "score_breakdown": {
-    "base": 62,
-    "re_count": 2,
-    "re_body": 6,
-    "peak_turnover": 10,
-    "re_turnover": 4
-   },
-   "score_raw": 0,
-   "score_breakdown_raw": {
-    "base": 0,
-    "re_count": 0,
-    "re_body": 0,
-    "peak_turnover": 0,
-    "re_turnover": 0
-   },
-   "forecast": {
-    "horizon": "3일 내 +7%",
-    "prob_pct": 46,
-    "base_pct": 46,
-    "strong": false,
-    "next_day_7_pct": 25,
-    "note": "과거 실측 확률·보장 아님"
-   },
-   "price": 3705.0,
-   "change_pct": 14.53,
-   "change_basis": "KRX",
-   "high_pct": 23.03,
-   "value_eok": 164,
-   "turnover_pct": 73.2,
-   "peak_turnover_pct": 199.3,
-   "float_ratio": 0.32130000000000003,
-   "turnover_basis": "float",
-   "ma10": 5129.5,
-   "ma10_margin_pct": -27.77,
-   "spark": {
-    "clusters": []
-   },
-   "spark_max_x": null,
-   "spark_max_pct": null,
-   "mega_flow": false,
-   "reignition": {
-    "body_pct": 7.48,
-    "time": "14:40",
-    "value_eok": 16,
-    "count": 2
-   },
-   "reignition_bars": [
-    {
-     "time": "14:40",
-     "body_pct": 7.48,
-     "value_eok": 16
-    },
-    {
-     "time": "14:45",
-     "body_pct": 2.59,
-     "value_eok": 36
-    }
-   ],
-   "low_accum": false,
-   "low_accum_bars": [],
-   "news": [],
-   "matched_events": [
-    {
-     "id": "2026-07-07_삼성전자 2분기 잠정실",
-     "title": "삼성전자 2분기 잠정실적",
-     "dday": 1,
-     "categories": [
-      "반도체"
-     ],
-     "score": 7.4
-    }
-   ],
-   "theme": "반도체",
-   "visible_experimental": true,
-   "reaccum": {
-    "peak_date": "20260701",
-    "peak_value_eok": 613,
-    "peak_high_pct": 24.5,
-    "peak_turnover_pct": 199.3,
-    "peak_ibs": 0.53,
-    "peak_uppertail": 11.4,
-    "ma20": 4058.3,
-    "ma20_margin_pct": -8.71,
-    "cause_summary": "",
-    "was_theme_leader": false,
-    "source": "live"
-   },
-   "leader_cohort_prob": null,
-   "alert_now": "위험",
    "theme_leader": false
   },
   {
@@ -839,14 +934,14 @@
    ],
    "shake": null,
    "deep_shake": null,
-   "suspicion_score": 84,
+   "suspicion_score": 87,
    "calibrated_prob": null,
    "score_breakdown": {
     "base": 62,
-    "re_count": 6,
+    "re_count": 8,
     "re_body": 6,
     "peak_turnover": 6,
-    "re_turnover": 4
+    "re_turnover": 5
    },
    "score_raw": 0,
    "score_breakdown_raw": {
@@ -864,17 +959,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 946.0,
-   "change_pct": 27.67,
+   "price": 963.0,
+   "change_pct": 29.96,
    "change_basis": "KRX",
    "high_pct": 29.96,
-   "value_eok": 260,
-   "turnover_pct": 77.1,
+   "value_eok": 308,
+   "turnover_pct": 89.4,
    "peak_turnover_pct": 159.5,
    "float_ratio": 0.6665000000000001,
    "turnover_basis": "float",
-   "ma10": 880.7,
-   "ma10_margin_pct": 7.41,
+   "ma10": 882.4,
+   "ma10_margin_pct": 9.13,
    "spark": {
     "clusters": []
    },
@@ -885,7 +980,7 @@
     "body_pct": 12.95,
     "time": "14:30",
     "value_eok": 32,
-    "count": 4
+    "count": 5
    },
    "reignition_bars": [
     {
@@ -907,6 +1002,11 @@
      "time": "14:45",
      "body_pct": 1.84,
      "value_eok": 18
+    },
+    {
+     "time": "15:05",
+     "body_pct": 1.8,
+     "value_eok": 22
     }
    ],
    "low_accum": false,
@@ -951,9 +1051,149 @@
     "peak_turnover_pct": 159.5,
     "peak_ibs": 0.77,
     "peak_uppertail": 7.1,
-    "ma20": 691.0,
-    "ma20_margin_pct": 36.9,
+    "ma20": 691.9,
+    "ma20_margin_pct": 39.19,
     "cause_summary": "",
+    "was_theme_leader": false,
+    "source": "live"
+   },
+   "leader_cohort_prob": null,
+   "alert_now": "경고",
+   "alert_release": false,
+   "theme_leader": false
+  },
+  {
+   "code": "228340",
+   "name": "동양파일",
+   "sector": "비금속",
+   "pattern": "reaccum",
+   "geupso": true,
+   "geupso_bars": [
+    {
+     "time": "14:40",
+     "body_pct": 6.89
+    },
+    {
+     "time": "15:10",
+     "body_pct": 2.57
+    },
+    {
+     "time": "15:15",
+     "body_pct": 2.09
+    }
+   ],
+   "shake": null,
+   "deep_shake": null,
+   "suspicion_score": 83,
+   "calibrated_prob": null,
+   "score_breakdown": {
+    "base": 62,
+    "re_count": 8,
+    "re_body": 6,
+    "peak_turnover": 1,
+    "re_turnover": 6
+   },
+   "score_raw": 0,
+   "score_breakdown_raw": {
+    "base": 0,
+    "re_count": 0,
+    "re_body": 0,
+    "peak_turnover": 0,
+    "re_turnover": 0
+   },
+   "forecast": {
+    "horizon": "3일 내 +7%",
+    "prob_pct": 46,
+    "base_pct": 46,
+    "strong": false,
+    "next_day_7_pct": 25,
+    "note": "과거 실측 확률·보장 아님"
+   },
+   "price": 3725.0,
+   "change_pct": 14.79,
+   "change_basis": "KRX",
+   "high_pct": 21.73,
+   "value_eok": 272,
+   "turnover_pct": 96.1,
+   "peak_turnover_pct": 96.5,
+   "float_ratio": 0.4,
+   "turnover_basis": "float",
+   "ma10": 3537.5,
+   "ma10_margin_pct": 5.3,
+   "spark": {
+    "clusters": []
+   },
+   "spark_max_x": null,
+   "spark_max_pct": null,
+   "mega_flow": false,
+   "reignition": {
+    "body_pct": 6.89,
+    "time": "14:40",
+    "value_eok": 20,
+    "count": 5
+   },
+   "reignition_bars": [
+    {
+     "time": "14:40",
+     "body_pct": 6.89,
+     "value_eok": 20
+    },
+    {
+     "time": "14:55",
+     "body_pct": 1.88,
+     "value_eok": 4
+    },
+    {
+     "time": "15:10",
+     "body_pct": 2.57,
+     "value_eok": 4
+    },
+    {
+     "time": "15:15",
+     "body_pct": 2.09,
+     "value_eok": 4
+    },
+    {
+     "time": "15:20",
+     "body_pct": 1.78,
+     "value_eok": 2
+    }
+   ],
+   "low_accum": false,
+   "low_accum_bars": [],
+   "news": [],
+   "matched_events": [
+    {
+     "id": "2026-07-09_한국은행 금통위 기준금",
+     "title": "한국은행 금통위 기준금리 결정",
+     "dday": 3,
+     "categories": [
+      "금리"
+     ],
+     "score": 1.7
+    },
+    {
+     "id": "2026-07-14_미국 CPI 발표 (6",
+     "title": "미국 CPI 발표 (6월분)",
+     "dday": 8,
+     "categories": [
+      "금리"
+     ],
+     "score": 0.7
+    }
+   ],
+   "theme": "금리",
+   "visible_experimental": true,
+   "reaccum": {
+    "peak_date": "20260625",
+    "peak_value_eok": 217,
+    "peak_high_pct": 29.88,
+    "peak_turnover_pct": 96.5,
+    "peak_ibs": 0.19,
+    "peak_uppertail": 42.9,
+    "ma20": 2660.8,
+    "ma20_margin_pct": 40.0,
+    "cause_summary": "동양파일 480억 묶인 사이…한림건설 김상수 골프장 확장에 주주 '부글...",
     "was_theme_leader": false,
     "source": "live"
    },
@@ -1005,17 +1245,17 @@
     "next_day_7_pct": 25,
     "note": "과거 실측 확률·보장 아님"
    },
-   "price": 1890.0,
-   "change_pct": 4.94,
+   "price": 1842.0,
+   "change_pct": 2.28,
    "change_basis": "KRX",
    "high_pct": 22.15,
-   "value_eok": 475,
-   "turnover_pct": 95.9,
+   "value_eok": 490,
+   "turnover_pct": 99.1,
    "peak_turnover_pct": null,
    "float_ratio": 0.6779000000000001,
    "turnover_basis": "float",
-   "ma10": 1550.7,
-   "ma10_margin_pct": 21.88,
+   "ma10": 1545.9,
+   "ma10_margin_pct": 19.15,
    "spark": {
     "clusters": []
    },
@@ -1097,8 +1337,8 @@
     "peak_turnover_pct": null,
     "peak_ibs": 0.02,
     "peak_uppertail": 30.2,
-    "ma20": 1272.5,
-    "ma20_margin_pct": 48.53,
+    "ma20": 1270.0,
+    "ma20_margin_pct": 45.03,
     "cause_summary": "삼기, 휴머노이드 로봇 부품 확대 기대에 연이틀 '상'[특징주]",
     "was_theme_leader": false,
     "source": "live"
@@ -1106,7 +1346,7 @@
    "leader_cohort_prob": null,
    "alert_now": "경고",
    "alert_release": false,
-   "theme_leader": false
+   "theme_leader": true
   }
  ]
 }
