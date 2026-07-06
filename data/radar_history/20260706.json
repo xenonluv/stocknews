@@ -4,7 +4,7 @@
   "091590": {
    "name": "남화토건",
    "sector": "건설",
-   "entry": 8520.0,
+   "entry": 8290.0,
    "score": 0,
    "breakdown": {
     "base": 0,
@@ -13,23 +13,23 @@
     "peak_turnover": 0,
     "re_turnover": 0
    },
-   "suspicion_score": 66,
+   "suspicion_score": 67,
    "score_breakdown_display": {
     "base": 62,
     "re_count": 0,
     "re_body": 0,
     "peak_turnover": 2,
-    "re_turnover": 2
+    "re_turnover": 3
    },
    "rank": 1,
-   "change_pct": -10.32,
+   "change_pct": -12.74,
    "change_basis": "KRX",
    "high_pct": 2.42,
    "pattern": "reaccum",
    "prime": false,
    "theme": "반도체",
-   "value_eok": 199,
-   "turnover_pct": 47.7,
+   "value_eok": 251,
+   "turnover_pct": 60.1,
    "peak_turnover_pct": 107.2,
    "turnover_basis": "float",
    "turnover_metric": "vol_float",
@@ -46,8 +46,8 @@
     "peak_turnover_pct": 107.2,
     "peak_ibs": 0.57,
     "peak_uppertail": 17.7,
-    "ma20": 5763.5,
-    "ma20_margin_pct": 47.83,
+    "ma20": 5752.5,
+    "ma20_margin_pct": 44.11,
     "cause_summary": "과열 경고에도 '호남 반도체' 테마주 상한가 행렬…변동성 주의보[핫...",
     "was_theme_leader": false,
     "source": "live"
@@ -85,6 +85,14 @@
     {
      "time": "10:15",
      "body_pct": 2.97
+    },
+    {
+     "time": "10:55",
+     "body_pct": 3.2
+    },
+    {
+     "time": "11:15",
+     "body_pct": 2.45
     }
    ],
    "alert_now": "경고",
@@ -108,7 +116,7 @@
    "first_seen": "2026-07-06 10:53:01 KST",
    "evaluated": false,
    "result": null,
-   "final": false
+   "final": true
   },
   "011230": {
    "name": "삼화전자",
@@ -155,5 +163,5 @@
    "final": false
   }
  },
- "as_of": "2026-07-06 12:23:05 KST"
+ "as_of": "2026-07-06 12:43:13 KST"
 }
