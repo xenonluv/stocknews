@@ -11,17 +11,28 @@ import movers as movers_mod
 import regime as regime_mod
 import quant as quant_mod
 
+JUDGMENT_FIELDS = (
+    "catalyst", "real_likelihood", "sustainability", "manipulation_risk",
+    "prob_up", "confidence", "redteam_flag", "evidence", "llm_model",
+)
+LABEL_FIELDS = (
+    "labeled", "hit", "next_date", "next_close", "next_open",
+    "next_high_pct", "next_return_pct", "label_basis",
+)
+
 
 def _load_judgments(date):
     try:
-        return json.load(open(os.path.join(config.JUDGMENTS_DIR, f"{date}.json"), encoding="utf-8"))
+        with open(os.path.join(config.JUDGMENTS_DIR, f"{date}.json"), encoding="utf-8") as f:
+            return json.load(f)
     except Exception:
         return {}
 
 
 def _load_fcache():
     try:
-        return json.load(open(config.FLOAT_CACHE, encoding="utf-8"))
+        with open(config.FLOAT_CACHE, encoding="utf-8") as f:
+            return json.load(f)
     except Exception:
         try:                      # 코어 캐시를 '읽기 시드'로(있으면). 쓰기는 우리 파일에만.
             return dict(float_ratio._shared_cache())
@@ -33,10 +44,61 @@ def _save_fcache(c):
     try:
         config.ensure_dirs()
         tmp = config.FLOAT_CACHE + ".tmp"
-        json.dump(c, open(tmp, "w", encoding="utf-8"), ensure_ascii=False)
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(c, f, ensure_ascii=False)
         os.replace(tmp, config.FLOAT_CACHE)
     except Exception:
         pass
+
+
+def _load_forward_day(sig_date):
+    path = os.path.join(config.FORWARD_DIR, f"{sig_date}.json")
+    try:
+        with open(path, encoding="utf-8") as f:
+            day = json.load(f)
+    except Exception:
+        return {}
+    rows = day.get("rows") if isinstance(day, dict) else None
+    return rows if isinstance(rows, dict) else {}
+
+
+def _apply_judgments(rows, sig_date):
+    judg = _load_judgments(sig_date)
+    if not judg:
+        return
+    for r in rows:
+        j = judg.get(r.get("code"))
+        if not j:
+            continue
+        for k in JUDGMENT_FIELDS:
+            r[k] = j.get(k)
+
+
+def _merge_existing_forward(sig_date, daymap):
+    """기존 forward 파일의 검증 결과를 보존하면서 새 수집 행을 반영한다.
+
+    collect는 장중 잠정 -> 마감 확정 수집에서는 최신 정량값으로 덮어써야 하지만,
+    label.py가 같은 forward 파일에 익일 결과를 기록한 뒤 과거 날짜가 재수집되면
+    라벨과 LLM 판단이 사라지면 안 된다.
+    """
+    existing = _load_forward_day(sig_date)
+    if not existing:
+        return daymap
+    for code, row in list(daymap.items()):
+        old = existing.get(code)
+        if not isinstance(old, dict):
+            continue
+        if old.get("labeled"):
+            for k in LABEL_FIELDS:
+                if k in old:
+                    row[k] = old[k]
+        for k in JUDGMENT_FIELDS:
+            if row.get(k) is None and old.get(k) is not None:
+                row[k] = old[k]
+    for code, old in existing.items():
+        if code not in daymap and isinstance(old, dict) and old.get("labeled"):
+            daymap[code] = old
+    return daymap
 
 
 def run(dry=False, max_movers=None):
@@ -53,16 +115,10 @@ def run(dry=False, max_movers=None):
         return []
     reg = regime_mod.regime()
     fcache = _load_fcache()
-    judg = _load_judgments(date)
     rows = []
     for m in mv:
         r = quant_mod.build(m, fcache, reg)
         r["provisional"] = provisional
-        j = judg.get(m["code"])
-        if j:
-            for k in ("catalyst", "real_likelihood", "sustainability", "manipulation_risk",
-                      "prob_up", "confidence", "redteam_flag", "evidence", "llm_model"):
-                r[k] = j.get(k)
         rows.append(r)
         print(f"  {m['code']} {r.get('name')}: 회전2d {r.get('turnover_2d_pct')}% · "
               f"스파크{r.get('spark_1430_count')}({r.get('spark_source')}) · 종가강도{r.get('close_strength')} · "
@@ -82,9 +138,12 @@ def run(dry=False, max_movers=None):
     # 신호일 = 다수결(대부분 동일한 마지막 거래일). 첫 행이 과거일이어도 과거 파일 덮어쓰기 방지.
     from collections import Counter
     sig_date = Counter(r["date"] for r in rows).most_common(1)[0][0]
+    _apply_judgments(rows, sig_date)
     daymap = {r["code"]: r for r in rows}
+    daymap = _merge_existing_forward(sig_date, daymap)
     tmp = os.path.join(config.FORWARD_DIR, f"{sig_date}.json.tmp")
-    json.dump({"date": sig_date, "rows": daymap}, open(tmp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump({"date": sig_date, "rows": daymap}, f, ensure_ascii=False, indent=1)
     os.replace(tmp, os.path.join(config.FORWARD_DIR, f"{sig_date}.json"))
     print(f"[alpha-collect] {sig_date} {len(rows)}행 기록 → {config.FORWARD_DIR}")
     return rows
