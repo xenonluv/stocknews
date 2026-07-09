@@ -2,6 +2,25 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## CRITICAL: retired repository
+
+`/Users/jinjin/stocknews` is **not the active production repository anymore**.
+Its cron jobs were retired on **2026-07-06**. The active production repository is:
+
+```bash
+cd /Users/jinjin/kiwoomnews
+```
+
+For current suspects, radar history, autotrade, backtests, and operational logs, use:
+
+- `/Users/jinjin/kiwoomnews/data/radar_history/YYYYMMDD.json`
+- `/Users/jinjin/kiwoomnews/web/data/radar.json`
+- `/tmp/kiwoom_publish.log`
+- `/tmp/kiwoom_backtest.log`
+- `/tmp/kiwoom_autotrade.log`
+
+Do not answer current production questions from this retired `stocknews` tree unless the user explicitly asks for historical `stocknews` data.
+
 > 최종 갱신: **2026-06-28 /alpha 개선**(스파크 임계 2.0→1.5·세션기반 분봉·강도색/정렬·키움 속 외인 배지) · 2026-06-27 agent_alpha 사이드카 추가 (이전: 2026-06-23 폭발 정의 전면 개편 / `패치0618.md`).
 > ⚠️ 폭발/식음/반등 정의는 "탐지 트랙"·"Architecture"가 현행. **격리 실험모듈 agent_alpha/·`/alpha`는 별도 섹션 참조.**
 
@@ -10,7 +29,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 **"이벤트 매집 레이더"** — 10일 내 자명한 글로벌 증시 이벤트(FOMC·CPI·실적)를 앞두고 **큰돈이
 들어와 매집·재반등이 의심되는 종목**을 자동 탐지해 웹에 게시하는 시스템. 순수 Python 파이프라인
 (레이더 본체는 LLM 미사용)이 데이터를 만들고, Next.js 사이트가 Vercel에 라이브
-(https://stocknews-cyan.vercel.app, `xenonluv/stocknews` push 시 자동 재배포, Root Directory=`web`).
+(historical only; production moved to `xenonluv/kiwoomnews` on 2026-07-06. Do not use this retired repo for current deployment or current suspects.)
 
 ⚠️ **환경 분리 (필독):**
 - **이 WSL은 백업·코드작업 사본.** 프로덕션 cron(게시·검증·푸시)과 텔레그램 실송은 **Mac에서** 돌아간다.

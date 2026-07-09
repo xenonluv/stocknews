@@ -1,5 +1,20 @@
 # stocknews
 
+## RETIRED 운영 저장소 아님
+
+이 저장소(`/Users/jinjin/stocknews`, `xenonluv/stocknews`)의 운영 cron은 **2026-07-06에 중지**되었습니다.
+현재 레이더 게시, suspects 이력, 자동매매, 익일 검증의 기준 저장소는
+`/Users/jinjin/kiwoomnews` (`xenonluv/kiwoomnews`)입니다.
+
+운영 데이터 확인 시 반드시 아래 경로를 사용하세요.
+
+```bash
+cd /Users/jinjin/kiwoomnews
+```
+
+특히 `data/radar_history/YYYYMMDD.json`, `web/data/radar.json`, `/tmp/kiwoom_*.log`는
+`kiwoomnews` 기준으로 확인해야 합니다. 이 저장소의 `data/radar_history`는 2026-07-06 이후 갱신되지 않습니다.
+
 국내 주식 매매 **사전정보 취합 사이트 + REST API**. 다중 AI 에이전트(Claude/Codex)가 실시간 뉴스를 수집·분석·검증하고, CEO 승인된 매매 시그널만 웹사이트와 공개 API로 게시합니다.
 
 ## 구성

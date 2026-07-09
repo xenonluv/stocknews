@@ -1,5 +1,8 @@
 # stocknews-web
 
+> ⚠️ RETIRED: 이 웹 문서는 구 `/Users/jinjin/stocknews` 기준입니다.
+> 현재 운영 웹 작업은 `/Users/jinjin/kiwoomnews/web`에서 진행하세요.
+
 게시 웹사이트 + 공개 REST API. **Next.js(App Router) + TS + Tailwind + shadcn/ui** 다크 금융 대시보드.
 
 ## ⚠️ 실행 환경 주의 (중요)

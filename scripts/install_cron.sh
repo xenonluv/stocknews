@@ -7,6 +7,13 @@
 # 평일 KST 기준. 시간대가 KST가 아니면 시(hour) 필드를 환경에 맞게 조정하세요.
 set -euo pipefail
 
+if [ "$(cd "$(dirname "$0")/.." && pwd)" = "/Users/jinjin/stocknews" ] && [ "${ALLOW_RETIRED_STOCKNEWS:-}" != "1" ]; then
+  echo "ERROR: /Users/jinjin/stocknews cron은 2026-07-06 retired 상태입니다." >&2
+  echo "현재 운영 저장소는 /Users/jinjin/kiwoomnews 입니다." >&2
+  echo "정말 이 구 저장소 cron을 설치하려면 ALLOW_RETIRED_STOCKNEWS=1 을 명시하세요." >&2
+  exit 2
+fi
+
 DRY=0; [ "${1:-}" = "--dry-run" ] && DRY=1
 
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
